@@ -1,0 +1,61 @@
+"""Central policy settings for the Gold/Diamond candidate.
+
+These are starting values, not claims of optimal play. Advanced tactics are
+disabled until a measured comparison establishes that they help.
+"""
+
+VERSION = 1
+MAX_GROUP_CODE = 223
+STATUS_UNKNOWN = 224
+STATUS_BANK = 225
+STATUS_RETREAT = 226
+STATUS_RECALL = 227
+STATUS_DEAD = 228
+STATUS_FIGHT = 229
+STATUS_ESCORT = 230
+STATUS_DENIAL = 231
+STATUS_SCOUT = 232
+STATUS_TRIBUTE = 233
+STATUS_TELEPORT = 234
+STATUS_RESPAWN_WAIT = 235
+STATUS_BLOCKED = 236
+
+OPENING_TOP_K = 8
+MISSION_MIN_COMMITMENT = 4
+SWITCH_GAIN = 1.25
+BANK_CONSIDER_GEMS = 30
+BANK_NEAR_ALTAR_STEPS = 3
+LOW_HEALTH_RATIO = 0.34
+SURVIVAL_MARGIN_RATIO = 0.15
+PAIR_EXTRA_MARGIN_RATIO = 0.10
+STELLAR_HARASS_EXIT_RATIO = 0.75
+FUEL_LOW = 350_000
+FUEL_EMERGENCY = 130_000
+GOLD_EQUIV = 0.08
+MONOLITH_MIN_ROUND = 180
+MONOLITH_MIN_STRENGTH = 90
+NO_PROGRESS_LIMIT = 3
+FAILED_TARGET_COOLDOWN = 10
+
+ENABLE_HARASSMENT = False
+ENABLE_CHOKEPOINT_TACTICS = False
+ENABLE_TELEPORT = False
+ENABLE_MONOLITH = False
+ENABLE_WARDS = True
+ENABLE_ALTAR_LOCK = True
+ENABLE_EXPERIMENTAL_POLICY = False
+
+# Engine ChampionDraft values and their corresponding ChampionType values.
+PICK_TO_TYPES = {
+    0: (0,), 1: (1,), 2: (2,), 3: (3, 4), 4: (5,), 5: (6,),
+    6: (7,), 7: (8,), 8: (9,), 9: (10,), 10: (11,),
+}
+DEFAULT_PICKS = (10, 3, 9, 4, 8, 2, 1, 6, 0, 5, 7)
+
+# Handbook starting values, used only for deterministic opening estimates.
+BASE_STRENGTH = (50, 45, 70, 30, 40, 35, 35, 45, 45, 40, 50, 35)
+BASE_FOCUS = (100, 100, 100, 70, 100, 100, 80, 50, 105, 100, 100, 100)
+BASE_HEALTH = (1200, 900, 800, 700, 900, 750, 700, 1200, 700, 900, 1000, 750)
+RANGED_TYPES = frozenset((1, 3, 5, 6, 8, 11))
+LINKED_TYPES = frozenset((3, 4))
+
