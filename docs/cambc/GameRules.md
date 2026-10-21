@@ -4,6 +4,24 @@ Event: cambc2026a. Exported from the current handbook, including all published c
 
 ## The game
 
+### Overview
+
+The map is populated with groups of monsters, called camps, that carry 2 valuable resources, gems  and gold
+
+Illustration: Sample map.
+
+In the game, you control a team of “champions” which are a set of combat units you will use to fight the monsters.
+
+Using code, you must clear the monsters away, obtaining their resources.
+
+The gems dropped are the main objective of the game.
+
+By taking gems collected from clearing camps, and tributing/offering them at altars, you obtain victory points.
+
+The most gems tributed by a team wins the game.
+
+Additionally to gems, camps can drop gold. Gold is a resource used to improve the combat power of your “champions” by giving them more damage, or health.
+
 ### How to win
 
 The first team to tribute 1,000 gems wins immediately. At the 2,000-round limit, compare tributed gems, then lifetime gold earned, then champion kills. If all tie, Team B wins.
@@ -24,39 +42,23 @@ The general flow of the game is to send your champions to defeat camps on the ma
 
 Camps can also drop gold, which can be used on the champions' spawn tiles to purchase items making them stronger.
 
-- **Gold**: Buy equipment and consumables to grow stronger.
-- **Carried gems**: Valuable but at risk: an enemy that kills you takes them.
-- **Tributed gems**: Permanent team score that nobody can take back.
-
-### Your code controls all your actions
-
-- **Draft your champions**: Pick your team before the match starts.
-- **One bot per champion**: Each champion runs its own copy of your program.
-- **Every round**: Observe, choose actions, then end the turn.
-
-The supported languages for this battlecode are C++, Python, Rust and OCaml
-
-## Understand a turn
-
-### Everything you can do
-
-In general, a champion can attack and/or walk (based on whether they are melee or ranged), use one ability, ward, shop or use consumables, and begin/continue a channel.
-
-Each turn normally allows one ordinary move, one basic attack, and one successful ability cast across both slots. Melee attack range is 1 tile; ranged attack range is 3. Movement and attacks share an allowance for ranged champions. Abilities have an 8-turn-end cooldown per slot. Some abilities exclude walking or reset attacks. Wards require their trinket charge; consumables require inventory. Shop on your spawn or while dead (subject to champion exceptions). Starting a channel prevents other actions until it finishes or is cancelled. Recall and tribute each have one start and one cancellation per turn. Priority changes affect the next round.
-
-The above table lays out the action space of a champion on one of its turns.
-
 ## Drafting
 
-Build your team's roster before gameplay begins. Each draft round adds one selection per team; both picks are revealed together.
+Before the match begins, you must select your team of “champions”.
 
 ### Choosing champions
 
-Depending on the map, each team will select between 3 and 5 champions. First, Team A submits one pick, then Team B submits one pick. Then the picks are revealed simultaneously. This process repeats until both champion rosters are complete. Note SDK draft-round indices start at 0.
+Before the match begins, you must select your team of “champions”.
 
-- **Team A picks**: A valid selection ends A's draft turn and hands control to B.
-- **Team B picks**: B selects without seeing A's pick for this round. Both picks then become public.
-- **Repeat or start**: Begin the next draft round, or create the champions when the final pair of picks is complete.
+The map is fully visible in the drafting phase. By looking at the map layout, and where the monsters/camps are, your code can make an informed decision on the best champions to tackle the job.
+
+Depending on the map, each team will select between 3 and 5 champions.
+
+Champions are picked one by one.
+
+For fairness, both teams select champions simultaneously, revealing their picks as they go.
+
+Champions are unique, so you may only pick one of each, though you can select the same champions as your opponent, see the table below:
 
 Selection rules
 
@@ -69,7 +71,11 @@ Selection rules
 
 ### Shared draft memory
 
-The code/bot used to draft is a separate instance to the bots used for gameplay. The draft bot has additional fuel and can see the entirety of the map layout, and what champions the opponent has drafted so far. Take this opportunity to precompute some information for your bots and write your opening plan into the 1024 byte draft memory, which can be read by your champion bots later.
+In addition to picking your champions, the drafting phase allows you to think carefully about your strategy and communicate it to your bots (code controlling the champions).
+
+This is achieved by writing your opening plan into the 1024 byte draft memory, which can be read by your champion bots later.
+
+The draft phase has additional fuel (compute) and can see the entire map layout, allowing for extra planning ahead.
 
 ### After the draft
 
@@ -79,17 +85,43 @@ After the draft, the selected champions are placed on each team's corresponding 
 
 If a draft bot yields, exhausts its fuel, or crashes without making a pick, the remaining selections are randomly selected by the game.
 
-## Rounds & turn order
+## A champion turn
 
-The world updates, then champions take their turns.
+Each turn a champion has a few options.
 
-### A round at a glance
+Every turn a champion can move one tile, in any 8 directions
+
+Make a basic attack, dealing damage equal to their strength to a target in range
+
+And use one of their two champion abilities, to activate a more powerful effect
+
+If you are a ranged champion, you may NOT move, and basic attack on the same turn. This same rule applies for damaging abilities that are ranged as well.
+
+Melee champions can walk and attack in the same turn. Ranged champions normally choose walking or a basic attack: either consumes the other allowance. Attack-reset abilities can restore the attack allowance.
+
+In addition to the basic combat, a champion has a few other options to interact.
+
+Each champion carries a ward, that grants them persistent vision of an area with a range of 6 tiles. They may leave this ward behind to keep watch of an area anywhere within 2 tiles of them, and can relocate it once its free ward charge has recharged over 10 owner turn ends.
+
+When a champion is low on health, or simply needs to travel to their spawn tiles, they can activate a recall. This cancellable action takes 5 turns, and will teleport the champion straight to their spawn tiles.
+
+On the spawn tiles, they may shop for items using gold an unlimited amount.
+
+When carrying the all important gems, and are directly next to an altar, a feature of the map, a champion may tribute gems, a cancellable action that takes a number of turns, equal to the number of gems being tributed divided by 10
+
+Additionally, you can use consumable items without limit (though you can only carry one of each at once).
+
+#### Everything you can do
+
+Each turn normally allows one ordinary move, one basic attack, and one successful ability cast across both slots. Melee attack range is 1 tile; ranged attack range is 3. Movement and attacks share an allowance for ranged champions. Abilities have an 8-turn-end cooldown per slot. Some abilities exclude walking or reset attacks. Wards require their trinket charge, which recharges over 10 owner turn ends; consumables require inventory. Shop on your spawn or while dead (subject to champion exceptions). Starting a channel prevents other actions until it finishes or is cancelled. Recall and tribute each have one start and one cancellation per turn. Priority changes affect the next round.
+
+#### The exact turn order
 
 The game engine runs each round's actions through phases, see the below graphic to understand the order of operations:
 
 At round start: camp respawns, existing spell/ward updates, camp captures, then camp actions. Champion turns follow, alternating teams; the starting team swaps each round. Each champion starts by resolving zero timers: respawn, ward recharge, buff/shield expiry, then channels. At turn end, timers decrement without triggering these effects; spawn recovery still happens at turn end. Recall arrives at turn start, so staying on spawn heals at that same turn's end.
 
-### Who goes first?
+##### Who goes first?
 
 - **Teams alternate**: The team that starts swaps every round.
 - **Priority, then draft order**: Within a team, higher priority acts first.
@@ -100,18 +132,29 @@ At round start: camp respawns, existing spell/ward updates, camp captures, then 
 
 A capture can add gems before a tribute completes. Camps attack before your next turn.
 
-### Game time ≠ compute time
-
-- **Game timers**: World updates happen once a round. Each champion’s timers advance at the end of that champion’s turn.
-- **Fuel**: Limits how much your program can compute.
-
 ## Maps & movement
 
 Find a free tile in range. Do not path onto the target itself.
 
+### Map features
+
+The map is a grid, between 30*30 to 100*100, built from 5 different tiles as shown below:
+
+
+
+| Feature | Description |
+| --- | --- |
+| Wall | Blocks line of sight, cannot be moved onto nor can it be dashed over. TP Crystal can reach walls. |
+| Holes | Can be seen over, cannot be moved onto but can be dashed over. |
+| Bush | Blocks line of sight, can be moved onto. If you are within a bush, you can see out of the bush. |
+| Altar | Cannot be moved onto, used to submit gems. |
+| Spawn Tile | Cannot be moved onto by opponents. Your team's champions spawns onto these tiles. While standing on these tiles you are healed. |
+
+The map also is populated with camps/monsters as outlined in the next section.
+
 ### Ways to move
 
-A champion can move 1 step every turn with their basic move action. Dashes move up to 2 steps, including diagonals, along a legal dash path. Teleport crystals reach up to 3 tiles horizontally and vertically, including diagonals, and ignore terrain between you and the destination.
+To traverse the map, a champion can move 1 step every turn with their basic move action. Dashes move up to 2 steps, including diagonals, along a legal dash path. Teleport crystals reach up to 3 tiles horizontally and vertically, including diagonals, and ignore terrain between you and the destination.
 
 Ordinary movement reaches an adjacent tile in any of eight directions. Melee champions can also attack; ranged champions ordinarily choose one. Dashes use a legal path of up to 2 steps and may cross holes; teleport crystals have range 3 and ignore intervening terrain. Landing cannot be on a wall, hole, altar, enemy spawn or occupied tile.
 
@@ -129,34 +172,39 @@ The main way to obtain resources is to defeat camps or monsters, on the map. The
 
 The main way to obtain resources is to defeat camps or monsters, on the map. They can spawn alone or in a group (any monsters that are cardinally connected).
 
+### Pick your target
+
+
+
+| Monster | Health | Strength | Range | Gold | Gems | Respawn |
+| --- | --- | --- | --- | --- | --- | --- |
+| Wolf | 1,350 | 20 | 3 | 40 | 4 | 40 rounds |
+| Elk | 2,400 | 60 | 4 | 90 | 15 | 60 rounds |
+| Golem | 5,000 | 120 | 4 | 160 | 36 | 80 rounds |
+| Gem cluster | 120 | 0 | 0 | 0 | 7 | 50 rounds |
+| Gold cluster | 120 | 0 | 0 | 20 | 0 | 50 rounds |
+| Monolith | 20,000 | 200 | 5 | 300 | 200 | 150 rounds |
+
+The map is populated with a variety of monsters. They vary in health, strength (damage dealt per turn) and the rewards they drop.
+
+The monsters are friendly until they are hit! When a champion strikes a monster, it will awaken attacking the nearest champion every turn, until it either dies or does not take damage for 2 turns.
+
 ### After defeating a camp, make sure to capture!
 
 After every monster in a group dies, occupy at least one of its spawn tiles uncontested. At a capture phase your team starts a five-round timer; later capture phases count it down. Leaving the region empty or admitting an enemy resets progress. More allies do not speed it up. Rewards are shared among allies present when it finishes; the lowest ID receives any integer remainder. The group respawns together after rewards are claimed, using the longest cooldown of its members. Any occupied spawn tile delays the entire group.
 
-After defeating an entire group, you can then capture the rewards by standing on one of the tiles a monster was underneath, and wait 5 turns (the capture timer). This will award the waiting champion the gold and gems from the camp. If there are multiple champions, the reward is split evenly among them.
-
-### Pick your target
-
-Base values per monster, before champion bonuses. Respawn timers begin after the reward is claimed.
-
-| Monster | Health | Strength | Gold | Gems | Respawn |
-| --- | --- | --- | --- | --- | --- |
-| Wolf | 1,350 | 20 | 90 | 22 | 40 rounds |
-| Elk | 2,400 | 60 | 160 | 36 | 60 rounds |
-| Gem cluster | 500 | 0 | 0 | 24 | 50 rounds |
-| Gold cluster | 500 | 0 | 35 | 0 | 50 rounds |
-| Monolith | 20,000 | 200 | 300 | 200 | 150 rounds |
+After defeating an entire group (cardinally connected monsters), you can then capture the rewards by standing on one of the tiles a monster was underneath, and wait 5 turns (the capture timer). This will award the waiting champion the gold and gems from the camp. If there are multiple champions, the reward is split evenly among them.
 
 ### What happens next?
 
-After a camp is defeated, its respawn timer begins. After the timer has finished (ticking down by 1 each round), the camp will respawn in the same location as before, full health, ready to drop rewards again.
+After a camp reward is captured, its respawn timer begins. After the timer has finished (ticking down by 1 each round), the camp will respawn in the same location as before, full health, ready to drop rewards again.
 
 #### Capture and monster details
 
 - Rewards combine every monster in the group.
 - Allies on the region split the reward; the lowest ID gets the remainder.
 - Extra allies do not speed capture. Empty or contested regions reset it.
-- All monsters have attack range 3 and vision 8, see through bushes and do not chase.
+- Wolf attacks at range 3, Elk and Golem at range 4, and Monolith at range 5. Monsters have vision 8, see through bushes and do not chase.
 - Damage wakes the group; two rounds without an in-range champion let it sleep.
 
 ## Gems & altars
@@ -185,9 +233,9 @@ Tribute duration is max(1, ceil(carried gems / 10)) owner turn ends. The startin
 
 ### Altar locks
 
-Altar locks are a consumable you can purchase for 10g, and carry one at a time. You can place them on altars if you are within range, cancelling enemy channels, or simply delaying them by leaving them there. It takes 3 basic attacks to clear the lock, which is also triggered by the tributing action in the engine.
+Altar locks are a consumable you can purchase for 10g, and carry one at a time. You can place them on altars if you are within range, cancelling enemy channels, or simply delaying them by leaving them there. It takes 5 basic attacks to clear the lock, which is also triggered by the tributing action in the engine.
 
-An altar lock blocks opposing tributes but allows its owner's team to tribute. Placing it cancels existing tribute channels at that altar. Three basic attacks remove it.
+An altar lock blocks opposing tributes but allows its owner's team to tribute. Placing it cancels existing tribute channels at that altar. Five basic attacks remove it.
 
 #### Tributing against a lock
 
@@ -207,14 +255,15 @@ Basic attacks deal Strength before modifiers and require a visible target. Range
 
 Abilities scale with focus by taking the champion's focus value, and multiplying by the ability multiplier.
 
+For example, Stellar starts with 85 focus, and has an ability dealing 2x focus damage. Therefore she can cast the ability on her turn dealing a burst of 170 damage, starting its 8 turn cooldown. After 8 turns, she can cast the ability again.
+
 Each champion has two ability slots but only one successful cast per turn. Casting starts an 8-turn-end cooldown for that slot. Spell effects scale with Focus as specified in the champion's kit.
 
 Ability details such as the range, targeting system, and whether you can cast and move are detailed on each champion's individual page
 
-#### Targets and charges
+#### Targets
 
 - Unit spells need a valid visible target. Ground spells affect an area.
-- Zero maximum charges means the spell is not charge-limited.
 - Self-targeted spells use the self-cast action.
 
 ### Channels
@@ -263,14 +312,14 @@ The shop also has some consumable items, each costing 10 gold. You may carry onl
 
 | Tool | Use |
 | --- | --- |
-| Altar lock | Place on an altar within two tiles. Blocks enemy tributes until removed by three basic attacks. |
-| Teleport crystal | Range: 3 tiles, including diagonals. Channel for three of your turn ends, including this turn. Reserves a legal free destination, then flashes there at your next turn start after the timer reaches zero, ignoring terrain in between. |
+| Altar lock | Place on an altar within two tiles. Blocks enemy tributes until removed by five basic attacks. |
+| Teleport crystal | Teleport crystal allows you to access otherwise unreachable areas by teleporting you 3 tiles, ignoring terrain. However, the teleport only activates after a channel of 3 turns. |
 
-### You should know:
+#### Extra item rules
 
 - **Stats stack**: Every shard counts, including those inside duplicate emblems.
 - **Emblem passives don’t**: A second emblem of a family adds no extra passive.
-- **Gold bonuses add**: Treasure with Vesper Vale: 20% + 20% = 40%.
+- **Gold bonuses add**: Treasure with Vesper Vale: 33% + 20% = 53%.
 - **Spawn purchases heal**: Buying Health on your spawn heals the amount gained; Tavi’s field purchases do not.
 - **Only Tavi can sell**: On spawn, for the full purchase value. Refunds are not earned gold.
 
@@ -295,14 +344,12 @@ Champions normally see up to 8 tiles using symmetric shadowcasting. Walls and bu
 
 ### Wards
 
-Each champion has a free ward, that can be placed to expand their personal vision. You may freely replace it, once per round, but note that you can/will only ever have one active.
+Each champion has a free ward, that can be placed to expand their personal vision. Its charge recharges over 10 owner turn ends. Placing a new ward replaces your existing ward, so you only ever have one active.
 
-- **Free ward**: One charge, recharging one round after use.
-- **Within 2 tiles**: It sees 6 tiles, with the same line-of-sight rules.
 - **One active ward**: A new ward replaces the old one.
 - **Permanent**: Wards do not expire or take damage.
 
-### Vision is not shared
+### Vision is not shared among allies
 
 Vision per champion is only their own, plus their own ward. You cannot see what your ally champions see, nor their wards. However, if you spot something of note, you can use the shared memory to try to communicate the information to your team.
 
@@ -312,13 +359,13 @@ Recall to heal safely. Die, and you lose your carried gems and sit out 60 rounds
 
 ### When a champion dies
 
-The killer receives all carried gems and 50 base gold; assists award no gold. Camp kills destroy carried gems. Dead champions retain shopping turns and respawn at their next turn start after 60 owner turn-end ticks, when a spawn tile is available, with full health and abilities reset.
+The killer receives all carried gems and 100 base gold; assists award no gold. Camp kills destroy carried gems. Dead champions retain shopping turns and respawn at their next turn start after 60 owner turn-end ticks, when a spawn tile is available, with full health and abilities reset.
 
-When a champion dies they respawn on their spawn tiles after 60 rounds, awarding their killer all the gems they were carrying in addition to 50 gold.
+When a champion dies they respawn on their spawn tiles after 60 rounds, awarding their killer all the gems they were carrying in addition to 100 gold.
 
 If a camp kills you, the carried gems are lost.
 
-Cassi and Issac die together, awarding the killer 50 gold, and all the gems that both of them were carrying.
+Cassi and Issac die together, awarding the killer 100 gold, and all the gems that both of them were carrying.
 
 ### Recalling
 
@@ -399,9 +446,9 @@ Target / range: Enemy or camp · 4. Walking: Compatible. Cooldown: 8 owner turn 
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 700 | 71.25 |
-| Strength | 30 | 3.5 |
-| Focus | 70 | 15 |
+| Health | 600 | 65 |
+| Strength | 30 | 3 |
+| Focus | 70 | 13 |
 
 Attack type: Ranged. Basic attack range: 3 tiles.
 
@@ -423,8 +470,8 @@ Target / range: Ground · 2 tiles. Walking: Compatible. Cooldown: 8 owner turn e
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 900 | 95 |
-| Strength | 40 | 4.75 |
+| Health | 900 | 80 |
+| Strength | 40 | 3 |
 | Focus | 100 | 10 |
 
 Attack type: Melee. Basic attack range: 1 tiles.
@@ -456,7 +503,7 @@ Target / range: Self. Walking: Compatible. Cooldown: 8 owner turn ends.
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
 | Health | 1200 | 100 |
-| Strength | 50 | 5 |
+| Strength | 45 | 5 |
 | Focus | 100 | 10 |
 
 Attack type: Melee. Basic attack range: 1 tiles.
@@ -469,7 +516,7 @@ A ranged champion with strong basic attacks, bonus gold and a short dash.
 
 **Vesper Vale**
 
-**Passive:** Vesper Vale gains 20% more gold. A Treasure emblem adds another 20 percentage points, for a combined 40% bonus.
+**Passive:** Vesper Vale gains 33% more gold. A Treasure emblem adds another 20 percentage points, for a combined 53% bonus.
 
 #### Slot 0: Attack reset
 
@@ -487,8 +534,8 @@ Target / range: Ground · 2 tiles. Walking: Compatible. Cooldown: 8 owner turn e
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 900 | 100 |
-| Strength | 45 | 5 |
+| Health | 1000 | 100 |
+| Strength | 55 | 5 |
 | Focus | 100 | 10 |
 
 Attack type: Ranged. Basic attack range: 3 tiles.
@@ -501,7 +548,7 @@ A ranged spellcaster who gains Focus from carried gems, trading safe tributes fo
 
 **Prism**
 
-**Passive:** Prism gains 0.2 Focus per carried gem. Ten carried gems add 2 Focus. Tributing or losing those gems removes that bonus.
+**Passive:** Prism gains 1.5 Focus per carried gem. Ten carried gems add 15 Focus. Tributing or losing those gems removes that bonus.
 
 #### Slot 0: Damage and stun
 
@@ -519,9 +566,9 @@ Target / range: Ground · 4. Walking: Excludes walking. Cooldown: 8 owner turn e
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 700 | 75 |
-| Strength | 35 | 3.5 |
-| Focus | 80 | 10 |
+| Health | 700 | 60 |
+| Strength | 35 | 2.5 |
+| Focus | 80 | 8 |
 
 Attack type: Ranged. Basic attack range: 3 tiles.
 
@@ -549,9 +596,9 @@ Target / range: Ground · 4. Walking: Excludes walking. Cooldown: 8 owner turn e
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 750 | 75 |
-| Strength | 35 | 3.5 |
-| Focus | 100 | 10 |
+| Health | 650 | 65 |
+| Strength | 30 | 3.5 |
+| Focus | 70 | 7 |
 
 Attack type: Ranged. Basic attack range: 3 tiles.
 
@@ -581,21 +628,21 @@ Target / range: Ground · 2 tiles. Walking: Compatible. Cooldown: 8 owner turn e
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 800 | 100 |
-| Strength | 70 | 5 |
+| Health | 1000 | 100 |
+| Strength | 70 | 6 |
 | Focus | 100 | 10 |
 
 Attack type: Melee. Basic attack range: 1 tiles.
 
 ## Marcella
 
-A melee champion immune to stuns, with a stunning enhanced attack and a ranged damage spell.
+A stun-immune melee champion who earns gold from tributes, with a stunning enhanced attack and a ranged damage spell.
 
 ### Kit
 
 **Marcella**
 
-**Passive:** Immune to stuns
+**Passive:** Immune to stuns. Gains 2 gold per gem tributed.
 
 #### Slot 0: Enhanced attack reset
 
@@ -615,7 +662,7 @@ Target / range: Enemy or camp · 4. Walking: Excludes walking. Cooldown: 8 owner
 | --- | --- | --- |
 | Health | 1200 | 100 |
 | Strength | 45 | 5 |
-| Focus | 50 | 10 |
+| Focus | 60 | 15 |
 
 Attack type: Melee. Basic attack range: 1 tiles.
 
@@ -637,7 +684,7 @@ Target / range: Self. Walking: Compatible. Cooldown: 8 owner turn ends.
 
 #### Slot 1: Damage and stun
 
-2.2 × Focus damage and a one-round stun.
+1.4 × Focus damage and a one-round stun.
 
 Target / range: Enemy or camp · 4. Walking: Excludes walking. Cooldown: 8 owner turn ends.
 
@@ -645,9 +692,9 @@ Target / range: Enemy or camp · 4. Walking: Excludes walking. Cooldown: 8 owner
 
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
-| Health | 750 | 75 |
-| Strength | 35 | 5 |
-| Focus | 100 | 10 |
+| Health | 900 | 75 |
+| Strength | 45 | 5 |
+| Focus | 110 | 10 |
 
 Attack type: Ranged. Basic attack range: 3 tiles.
 
@@ -676,8 +723,8 @@ Target / range: Self. Walking: Compatible. Cooldown: 8 owner turn ends.
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
 | Health | 700 | 50 |
-| Strength | 45 | 3 |
-| Focus | 105 | 5 |
+| Strength | 55 | 3 |
+| Focus | 120 | 5 |
 
 Attack type: Ranged. Basic attack range: 3 tiles.
 
@@ -693,7 +740,7 @@ A melee champion with retaliation damage, a targeted stun and a short dash.
 
 #### Slot 0: Damage and stun
 
-1.25 × Focus damage and a one-round stun.
+0.75 × Focus damage and a one-round stun.
 
 Target / range: Enemy or camp · 4. Walking: Excludes walking. Cooldown: 8 owner turn ends.
 
@@ -708,8 +755,8 @@ Target / range: Ground · 2 tiles. Walking: Compatible. Cooldown: 8 owner turn e
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
 | Health | 900 | 100 |
-| Strength | 40 | 5 |
-| Focus | 100 | 10 |
+| Strength | 35 | 5 |
+| Focus | 100 | 9 |
 
 Attack type: Melee. Basic attack range: 1 tiles.
 
@@ -740,7 +787,39 @@ Target / range: Self. Walking: Compatible. Cooldown: 8 owner turn ends.
 | Stat | Base | Growth per matching shard |
 | --- | --- | --- |
 | Health | 1000 | 100 |
-| Strength | 50 | 5 |
+| Strength | 40 | 5 |
 | Focus | 100 | 10 |
+
+Attack type: Melee. Basic attack range: 1 tiles.
+
+## Heart of Ruin
+
+A melee champion whose damage grows as health falls, with a self-shield and a stunning dash landing.
+
+### Kit
+
+**Heart of Ruin**
+
+**Passive:** Heart of Ruin gains up to 50% bonus damage based on missing % health. The bonus scales linearly: 0% at full health, 25% at half health, and up to 50% near zero health. Applies to all damage, including basic attacks and the dash landing; shields do not count as health.
+
+#### Slot 0: Self-shield
+
+Grants a 1.5 × Focus shield lasting five turns.
+
+Target / range: Self. Walking: Compatible. Cooldown: 8 owner turn ends.
+
+#### Slot 1: Dash
+
+Dash to a destination within 2 tiles. Does 1.5 × Focus to the surrounding tiles on arrival and stuns enemies/camps hit. Hits within a Chebyshev radius of 1, including diagonals; stun lasts one turn. Damage is increased by the missing-health passive.
+
+Target / range: Ground · 2 tiles. Walking: Compatible. Cooldown: 8 owner turn ends.
+
+### Starting stats
+
+| Stat | Base | Growth per matching shard |
+| --- | --- | --- |
+| Health | 1000 | 100 |
+| Strength | 30 | 3.5 |
+| Focus | 100 | 12 |
 
 Attack type: Melee. Basic attack range: 1 tiles.
