@@ -3,6 +3,93 @@
 Gameplay is intentionally a no-op. During draft, this bot searches for one loop
 for the entire squad and reports its five best distinct camp-set/altar combinations.
 
+## Code guide
+
+Start with `src/draft_planner.py:DraftPlanner.build()`. Its pipeline is:
+
+```text
+choose squad -> collect camps/altars -> prepare distances and risks
+             -> search loops -> publish report -> save/draw plan
+```
+
+Each source file has one main job:
+
+| File | Responsibility |
+| --- | --- |
+| `src/main.py` | Dispatch draft turns and drawing-only champion turns. |
+| `src/settings.py` | All tuning knobs: strategy, squad, search, fuel, combat approximations, colors. |
+| `src/draft.py` | Champion selection and the draft entry point: save plans, draw, and make picks. |
+| `src/draft_planner.py` | `DraftPlanner` owns the roster/config and connects SDK map preparation, search, and reports. |
+| `src/combat.py` | Estimate clearing time, healing, and survivability; never issue combat actions. |
+| `src/navigation.py` | Native BFS and spawn-risk distances; never move units. |
+| `src/planner.py` | `LoopPlanner` owns SDK-free search inputs and performs scoring and bounded beam search. |
+| `src/plan_memory.py` | Encode/decode compact `DraftPlan` and `RoutePlan` objects. |
+| `src/visualization.py` | Draw all group member tiles, arrows, and cycling loop overlays. |
+| `src/bot.py` | Unimplemented gameplay placeholder. |
+| `inspect_loops.py` | Host-side CLI: run match, read replay reports, print results, optionally open viewer. |
+
+The important data types make index/coordinate distinctions explicit:
+
+- `CampGroupInfo`: an entire camp group's rewards, anchor, and service/respawn times.
+- `CandidateCamp` / `CandidateAltar`: named map-preparation records, not positional tuples.
+- `PlanningData`: aligned distance matrices, candidate lists, and positional risks.
+- `DraftMapContext`: squad designs, camp groups, blocked terrain, and spawn-distance maps for one build.
+- `ScoredLoop`: **indices** into those candidate lists, plus its `LoopEvaluation`.
+- `RoutePlan`: actual **coordinates** used for saving and drawing.
+- `DraftPlan`: primary route, squad roster, and alternative drawing routes.
+
+### The two planner classes
+
+During draft, construct the SDK-facing planner once:
+
+```python
+from draft_planner import DraftPlanner
+
+planner = DraftPlanner(roster, settings.DEFAULT_SEARCH_CONFIG)
+fallback = planner.fallback_plan()
+plan = planner.build()
+```
+
+`DraftPlanner` stores the roster and configuration. Construction makes **no engine
+queries**. `build()` reads a fresh `DraftMapContext`, then calls its internal
+`_collect_camps()`, `_collect_altars()`, `_prepare_data()`, `_search()`,
+`_publish_report()`, and `_create_plan()` stages. There are no partially initialized
+map fields on the object. `play()` remains responsible for submitting the fallback
+and final plan, drawing, and picking a champion.
+
+The search receives only the prepared arrays, not SDK objects:
+
+```python
+search = LoopPlanner(
+    camps=data.camps,
+    distances=data.distances,
+    altar_distances=data.altar_distances,
+    spawn_distances=data.spawn_distances,
+    risk=data.risk,
+    config=config,
+)
+
+loops = search.find_loops()
+# To score a particular route: search.evaluate_loop(route, altar_index)
+# To return only the winner: search.find_best_loop()
+```
+
+This replaces passing the same six or seven arguments into every evaluation.
+`LoopPlanner` keeps inputs/configuration on `self`; search frontiers, finalists,
+and budget counters remain local to each `find_loops()` call. Reusing an instance
+doesn't carry over an exhausted budget or old search results. Input tables are
+read-only by convention and are not copied or mutated by search.
+
+Small stateless operations such as `positional_risk()`, `camp_insertions()`, and
+coordinate conversion remain functions. Drawing, memory encoding, scoring weights,
+risk tolerance (`0.2`), and the beam-search ordering are unchanged.
+
+`plan_memory.py` replaces the old `protocol.py` name. Its SQL2 byte format is
+unchanged and still reads SQL1 and zero-padded engine buffers. Reports likewise
+keep their existing fields and `SQUAD_LOOPS_DATA` marker. The bot prints a Python
+literal that the host reads with `ast.literal_eval`; this intentionally avoids
+importing a heavyweight JSON encoder into the fuel-metered game process.
+
 ## See the loops
 
 From the repository root:
@@ -51,7 +138,7 @@ risk_multiplier = 1 - (1 - RISK_TOLERANCE) * loop_risk
 score = base_score * risk_multiplier
 ```
 
-`RISK_TOLERANCE = 0.2` is defined in `src/planner.py`. It ranges from **0**
+`RISK_TOLERANCE = 0.2` is defined in `src/settings.py`. It ranges from **0**
 (strongest positional penalty) to **1** (ignore positional risk). At 0.2,
 a loop with risk 0.5 retains 60% of its original score. The text and JSON reports
 include tolerance, positional risk, multiplier, base score, and final score.
@@ -84,13 +171,17 @@ damage check excludes individually dangerous camps.
 
 This is **bounded heuristic search**, not a global optimality guarantee:
 
-- `src/draft.py`: `PICK_ORDER` sets the assumed squad and actual draft picks;
+- `src/settings.py`: `PREFERRED_PICKS` sets the assumed squad and actual draft picks;
   defaults to Varg, Willow, Vendetta, Marcella, then Tavi as team size permits.
 - `CANDIDATE_LIMIT = 24`: spawn-accessible, high-value candidate groups.
 - `ALTAR_LIMIT = 4`: nearest reachable altars to spawn.
 - Distance precomputation can reduce these counts on large maps to leave fuel
-  for searching and reporting.
-- `src/planner.py`: `SearchConfig` controls beam width, maximum route length,
+  for searching and reporting. It estimates the next native BFS's cost from the
+  previous one before starting it, since that call cannot be interrupted by the
+  Python search-budget callback. `PRECOMPUTE_RESERVE = 11_500_000` keeps the
+  refactor's faster distance lookups from spending all their savings on a wider
+  matrix and leaving too little fuel to explore multi-camp routes.
+- `src/settings.py`: `SearchConfig` controls beam width, maximum route length,
   expansion budget, gold weight, opening-time penalty, and risk tolerance.
 - Beam search inserts camps at every position, explores altars round-robin,
   keeps distinct camp sets, and saves finalists from every route length.
@@ -107,3 +198,14 @@ search so fuel exhaustion cannot leave draft memory empty.
 ```sh
 uv run python -m unittest discover -s bots/economy-bot/tests -v
 ```
+
+Tests are grouped by module: combat, draft, navigation, planner, plan memory,
+visualization, and the inspection CLI. `tests/sdk_fakes.py` supplies small SDK
+substitutes for host tests. `test_regression.py` pins the pre-refactor route
+rankings/scores and exact SQL2 bytes, rather than deriving expected values from
+the refactored implementation. Tests also cover SDK enum annotations, repeatable
+class-based searches, budget reset, and non-mutated input tables.
+
+SDK imports stay out of the search and settings modules. No third-party test or
+runtime dependencies are required. Under a fuel cutoff, search depth can still
+vary with implementation overhead; fixed-expansion searches are deterministic.
