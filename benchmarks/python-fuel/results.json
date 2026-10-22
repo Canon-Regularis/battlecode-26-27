@@ -1,0 +1,2195 @@
+{
+  "cambc_version": "3.0.4",
+  "datasets": [
+    {
+      "replay": "python-fuel-vs-python-fuel-1792676791814.repl26a",
+      "dimensions": [
+        41,
+        41
+      ],
+      "python_version": "3.13.7 (main, Oct 21 2026, 01:54:52) [Clang 22.1.0-wasi-sdk (https://github.com/llvm/llvm-project 4434dabb69916856b82",
+      "completed": {
+        "draft": 2,
+        "game": 6
+      },
+      "pair_count": 72,
+      "pairs": {
+        "intersection_count": {
+          "baseline_fuel": [
+            1576533.4333333333,
+            1576533.4333333333
+          ],
+          "alternative_fuel": [
+            4878.133333333333,
+            4878.133333333333
+          ],
+          "ratio": [
+            323.1837519816323,
+            323.1837519816323
+          ],
+          "observations": 2
+        },
+        "filter_positions": {
+          "baseline_fuel": [
+            1356845.8333333333,
+            1356845.8333333333
+          ],
+          "alternative_fuel": [
+            249188.66666666666,
+            249188.66666666666
+          ],
+          "ratio": [
+            5.445054349716279,
+            5.445054349716279
+          ],
+          "observations": 2
+        },
+        "overlap_any_early_cached_points": {
+          "baseline_fuel": [
+            7080.71,
+            7080.71
+          ],
+          "alternative_fuel": [
+            4265.715,
+            4265.715
+          ],
+          "ratio": [
+            1.6599116443550495,
+            1.6599116443550495
+          ],
+          "observations": 2
+        },
+        "overlap_any_none_cached_points": {
+          "baseline_fuel": [
+            1219574.5666666667,
+            1219574.5666666667
+          ],
+          "alternative_fuel": [
+            4371.633333333333,
+            4371.633333333333
+          ],
+          "ratio": [
+            278.97457853281384,
+            278.97457853281384
+          ],
+          "observations": 2
+        },
+        "union_chain_vs_copy_inplace": {
+          "baseline_fuel": [
+            7079.366666666667,
+            7079.366666666667
+          ],
+          "alternative_fuel": [
+            6450.866666666667,
+            6450.866666666667
+          ],
+          "ratio": [
+            1.0974287692609779,
+            1.0974287692609779
+          ],
+          "observations": 2
+        },
+        "union_chain_vs_reuse": {
+          "baseline_fuel": [
+            7070.633333333333,
+            7070.633333333333
+          ],
+          "alternative_fuel": [
+            7042.733333333334,
+            7042.733333333334
+          ],
+          "ratio": [
+            1.00396153008775,
+            1.00396153008775
+          ],
+          "observations": 2
+        },
+        "cache_static_terrain_union": {
+          "baseline_fuel": [
+            18462.866666666665,
+            18462.866666666665
+          ],
+          "alternative_fuel": [
+            7155.366666666667,
+            7155.366666666667
+          ],
+          "ratio": [
+            2.5802823987589734,
+            2.5802823987589734
+          ],
+          "observations": 2
+        },
+        "draw_chebyshev_r3": {
+          "baseline_fuel": [
+            32226.266666666666,
+            32226.266666666666
+          ],
+          "alternative_fuel": [
+            2660.5333333333333,
+            2660.5333333333333
+          ],
+          "ratio": [
+            12.112709231231833,
+            12.112709231231833
+          ],
+          "observations": 2
+        },
+        "draw_chebyshev_r8": {
+          "baseline_fuel": [
+            177666.26666666666,
+            177666.26666666666
+          ],
+          "alternative_fuel": [
+            2860.5333333333333,
+            2860.5333333333333
+          ],
+          "ratio": [
+            62.10949007178149,
+            62.10949007178149
+          ],
+          "observations": 2
+        },
+        "mask_scores_preconverted_int": {
+          "baseline_fuel": [
+            17306.8,
+            17306.8
+          ],
+          "alternative_fuel": [
+            20008.3,
+            20008.3
+          ],
+          "ratio": [
+            0.8649810328713584,
+            0.8649810328713584
+          ],
+          "observations": 2
+        },
+        "mask_scores_conversion_included": {
+          "baseline_fuel": [
+            17640.566666666666,
+            17640.566666666666
+          ],
+          "alternative_fuel": [
+            83662.53333333334,
+            83662.53333333334
+          ],
+          "ratio": [
+            0.21085384297869691,
+            0.21085384297869691
+          ],
+          "observations": 2
+        },
+        "distance_search_target_two_tiles_away": {
+          "baseline_fuel": [
+            35697.3,
+            35697.3
+          ],
+          "alternative_fuel": [
+            18755.3,
+            18755.3
+          ],
+          "ratio": [
+            1.9033179954466206,
+            1.9033179954466206
+          ],
+          "observations": 2
+        },
+        "distance_search_bound_three": {
+          "baseline_fuel": [
+            35697.3,
+            35697.3
+          ],
+          "alternative_fuel": [
+            19650.3,
+            19650.3
+          ],
+          "ratio": [
+            1.8166287537594847,
+            1.8166287537594847
+          ],
+          "observations": 2
+        },
+        "next_move_single": {
+          "baseline_fuel": [
+            4072.195,
+            4072.195
+          ],
+          "alternative_fuel": [
+            2184.195,
+            2184.195
+          ],
+          "ratio": [
+            1.8643916866397001,
+            1.8643916866397001
+          ],
+          "observations": 2
+        },
+        "distance_multisource_four_goals": {
+          "baseline_fuel": [
+            215945.3,
+            215945.3
+          ],
+          "alternative_fuel": [
+            35697.3,
+            35697.3
+          ],
+          "ratio": [
+            6.0493454687049155,
+            6.0493454687049155
+          ],
+          "observations": 2
+        },
+        "distance_export_q1": {
+          "baseline_fuel": [
+            3407.3,
+            3407.3
+          ],
+          "alternative_fuel": [
+            21293.3,
+            21293.3
+          ],
+          "ratio": [
+            0.16001747028407998,
+            0.16001747028407998
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q1": {
+          "baseline_fuel": [
+            3407.0333333333333,
+            3407.0333333333333
+          ],
+          "alternative_fuel": [
+            577041.8333333334,
+            577041.8333333334
+          ],
+          "ratio": [
+            0.0059043090752230265,
+            0.0059043090752230265
+          ],
+          "observations": 2
+        },
+        "distance_export_q8": {
+          "baseline_fuel": [
+            8434.3,
+            8434.3
+          ],
+          "alternative_fuel": [
+            26649.866666666665,
+            26649.866666666665
+          ],
+          "ratio": [
+            0.3164856359506489,
+            0.3164856359506489
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q8": {
+          "baseline_fuel": [
+            8268.533333333333,
+            8268.533333333333
+          ],
+          "alternative_fuel": [
+            581237.0666666667,
+            581237.0666666667
+          ],
+          "ratio": [
+            0.01422575022744592,
+            0.01422575022744592
+          ],
+          "observations": 2
+        },
+        "distance_export_q32": {
+          "baseline_fuel": [
+            31204.633333333335,
+            31204.633333333335
+          ],
+          "alternative_fuel": [
+            51927.2,
+            51927.2
+          ],
+          "ratio": [
+            0.6009304051312865,
+            0.6009304051312865
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q32": {
+          "baseline_fuel": [
+            30908.833333333332,
+            30908.833333333332
+          ],
+          "alternative_fuel": [
+            581144.4333333333,
+            581144.4333333333
+          ],
+          "ratio": [
+            0.05318614712705097,
+            0.05318614712705097
+          ],
+          "observations": 2
+        },
+        "distance_export_into_q32": {
+          "baseline_fuel": [
+            31142.066666666666,
+            31142.066666666666
+          ],
+          "alternative_fuel": [
+            49803.166666666664,
+            49803.166666666664
+          ],
+          "ratio": [
+            0.6253029425839722,
+            0.6253029425839722
+          ],
+          "observations": 2
+        },
+        "distance_export_q128": {
+          "baseline_fuel": [
+            117389.23333333334,
+            117389.23333333334
+          ],
+          "alternative_fuel": [
+            147768.56666666668,
+            147768.56666666668
+          ],
+          "ratio": [
+            0.7944127494864153,
+            0.7944127494864153
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q128": {
+          "baseline_fuel": [
+            117295.8,
+            117295.8
+          ],
+          "alternative_fuel": [
+            631324.4,
+            631324.4
+          ],
+          "ratio": [
+            0.18579323086514635,
+            0.18579323086514635
+          ],
+          "observations": 2
+        },
+        "distance_export_q1681": {
+          "baseline_fuel": [
+            1500968.3666666667,
+            1500968.3666666667
+          ],
+          "alternative_fuel": [
+            1742161.4,
+            1742161.4
+          ],
+          "ratio": [
+            0.8615552879696834,
+            0.8615552879696834
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q1681": {
+          "baseline_fuel": [
+            1504609.6333333333,
+            1504609.6333333333
+          ],
+          "alternative_fuel": [
+            1359496.3333333333,
+            1359496.3333333333
+          ],
+          "ratio": [
+            1.1067404864889914,
+            1.1067404864889914
+          ],
+          "observations": 2
+        },
+        "distance_export_into_q1681": {
+          "baseline_fuel": [
+            1512614.7333333334,
+            1512614.7333333334
+          ],
+          "alternative_fuel": [
+            1746174.4,
+            1746174.4
+          ],
+          "ratio": [
+            0.8662449371227373,
+            0.8662449371227373
+          ],
+          "observations": 2
+        },
+        "distance_vec2_creation": {
+          "baseline_fuel": [
+            388208.76666666666,
+            388208.76666666666
+          ],
+          "alternative_fuel": [
+            126493.96666666666,
+            126493.96666666666
+          ],
+          "ratio": [
+            3.0689903787242554,
+            3.0689903787242554
+          ],
+          "observations": 2
+        },
+        "distance_frozen_dense_cache_128": {
+          "baseline_fuel": [
+            126636.8,
+            126636.8
+          ],
+          "alternative_fuel": [
+            135233.83333333334,
+            135233.83333333334
+          ],
+          "ratio": [
+            0.9364283839226623,
+            0.9364283839226623
+          ],
+          "observations": 2
+        },
+        "distance_frozen_list_cache_128": {
+          "baseline_fuel": [
+            125942.53333333334,
+            125942.53333333334
+          ],
+          "alternative_fuel": [
+            64941.76666666667,
+            64941.76666666667
+          ],
+          "ratio": [
+            1.9393148631106945,
+            1.9393148631106945
+          ],
+          "observations": 2
+        },
+        "distance_row_sum": {
+          "baseline_fuel": [
+            181300.76666666666,
+            181300.76666666666
+          ],
+          "alternative_fuel": [
+            27015.533333333333,
+            27015.533333333333
+          ],
+          "ratio": [
+            6.710982323749547,
+            6.710982323749547
+          ],
+          "observations": 2
+        },
+        "distance_copy_from": {
+          "baseline_fuel": [
+            2113392.4,
+            2113392.4
+          ],
+          "alternative_fuel": [
+            17350.2,
+            17350.2
+          ],
+          "ratio": [
+            121.80795610425238,
+            121.80795610425238
+          ],
+          "observations": 2
+        },
+        "distance_copy_reuse": {
+          "baseline_fuel": [
+            6942.466666666666,
+            6942.466666666666
+          ],
+          "alternative_fuel": [
+            17107.533333333333,
+            17107.533333333333
+          ],
+          "ratio": [
+            0.405813423326176,
+            0.405813423326176
+          ],
+          "observations": 2
+        },
+        "distance_masked_copy": {
+          "baseline_fuel": [
+            1511098.3,
+            1511098.3
+          ],
+          "alternative_fuel": [
+            34609.2,
+            34609.2
+          ],
+          "ratio": [
+            43.66175178854178,
+            43.66175178854178
+          ],
+          "observations": 2
+        },
+        "distance_bulk_import": {
+          "baseline_fuel": [
+            2088318.4,
+            2088318.4
+          ],
+          "alternative_fuel": [
+            12560.2,
+            12560.2
+          ],
+          "ratio": [
+            166.26474100730877,
+            166.26474100730877
+          ],
+          "observations": 2
+        },
+        "real_distance_export_list_q128": {
+          "baseline_fuel": [
+            93400.9,
+            93400.9
+          ],
+          "alternative_fuel": [
+            267861.36666666664,
+            267861.36666666664
+          ],
+          "ratio": [
+            0.34869119486062505,
+            0.34869119486062505
+          ],
+          "observations": 2
+        },
+        "real_distance_export_list_q1681": {
+          "baseline_fuel": [
+            1169303.8333333333,
+            1169303.8333333333
+          ],
+          "alternative_fuel": [
+            1460248.5333333334,
+            1460248.5333333334
+          ],
+          "ratio": [
+            0.8007567250652491,
+            0.8007567250652491
+          ],
+          "observations": 2
+        },
+        "real_distance_frozen_list_cache_128": {
+          "baseline_fuel": [
+            99363.03333333334,
+            99363.03333333334
+          ],
+          "alternative_fuel": [
+            67175.03333333334,
+            67175.03333333334
+          ],
+          "ratio": [
+            1.479166118761385,
+            1.479166118761385
+          ],
+          "observations": 2
+        },
+        "reachable_bfs_r4": {
+          "baseline_fuel": [
+            1240662.4,
+            1240662.4
+          ],
+          "alternative_fuel": [
+            4186.4,
+            4186.4
+          ],
+          "ratio": [
+            296.35543665201607,
+            296.35543665201607
+          ],
+          "observations": 2
+        },
+        "reachable_scratch_r4": {
+          "baseline_fuel": [
+            4127.3,
+            4127.3
+          ],
+          "alternative_fuel": [
+            3765.3,
+            3765.3
+          ],
+          "ratio": [
+            1.0961410777361698,
+            1.0961410777361698
+          ],
+          "observations": 2
+        },
+        "reachable_bfs_r12": {
+          "baseline_fuel": [
+            13522621.4,
+            13522621.4
+          ],
+          "alternative_fuel": [
+            9184.4,
+            9184.4
+          ],
+          "ratio": [
+            1472.3467401245591,
+            1472.3467401245591
+          ],
+          "observations": 2
+        },
+        "reachable_scratch_r12": {
+          "baseline_fuel": [
+            9127.3,
+            9127.3
+          ],
+          "alternative_fuel": [
+            8765.3,
+            8765.3
+          ],
+          "ratio": [
+            1.0412992139459003,
+            1.0412992139459003
+          ],
+          "observations": 2
+        },
+        "field_min_native_callback": {
+          "baseline_fuel": [
+            222393.3,
+            222393.3
+          ],
+          "alternative_fuel": [
+            73202.26666666666,
+            73202.26666666666
+          ],
+          "ratio": [
+            3.0380657611695083,
+            3.0380657611695083
+          ],
+          "observations": 2
+        },
+        "min_itemgetter": {
+          "baseline_fuel": [
+            174859.3,
+            174859.3
+          ],
+          "alternative_fuel": [
+            57826.2,
+            57826.2
+          ],
+          "ratio": [
+            3.023876720240998,
+            3.023876720240998
+          ],
+          "observations": 2
+        },
+        "min_vs_sorted": {
+          "baseline_fuel": [
+            132888.2,
+            132888.2
+          ],
+          "alternative_fuel": [
+            57826.2,
+            57826.2
+          ],
+          "ratio": [
+            2.298062124089081,
+            2.298062124089081
+          ],
+          "observations": 2
+        },
+        "bisect_lower_bound": {
+          "baseline_fuel": [
+            4526481.8,
+            4526481.8
+          ],
+          "alternative_fuel": [
+            146200.8,
+            146200.8
+          ],
+          "ratio": [
+            30.960718409201593,
+            30.960718409201593
+          ],
+          "observations": 2
+        },
+        "vector_dot": {
+          "baseline_fuel": [
+            1911.195,
+            1911.195
+          ],
+          "alternative_fuel": [
+            1386.195,
+            1386.195
+          ],
+          "ratio": [
+            1.378734593617781,
+            1.378734593617781
+          ],
+          "observations": 2
+        },
+        "vector_length_squared": {
+          "baseline_fuel": [
+            2166.62,
+            2166.62
+          ],
+          "alternative_fuel": [
+            1544.23,
+            1544.23
+          ],
+          "ratio": [
+            1.4030422929226862,
+            1.4030422929226862
+          ],
+          "observations": 2
+        },
+        "binary_unpack_batch": {
+          "baseline_fuel": [
+            573672.0,
+            573672.0
+          ],
+          "alternative_fuel": [
+            13770.533333333333,
+            13770.533333333333
+          ],
+          "ratio": [
+            41.659388646288214,
+            41.659388646288214
+          ],
+          "observations": 2
+        },
+        "binary_iter_unpack": {
+          "baseline_fuel": [
+            136946.03333333333,
+            136946.03333333333
+          ],
+          "alternative_fuel": [
+            48599.53333333333,
+            48599.53333333333
+          ],
+          "ratio": [
+            2.8178466734248477,
+            2.8178466734248477
+          ],
+          "observations": 2
+        },
+        "binary_pack_into": {
+          "baseline_fuel": [
+            817150.7333333333,
+            817150.7333333333
+          ],
+          "alternative_fuel": [
+            281834.06666666665,
+            281834.06666666665
+          ],
+          "ratio": [
+            2.8994036916757873,
+            2.8994036916757873
+          ],
+          "observations": 2
+        },
+        "champion_state_snapshot_five": {
+          "baseline_fuel": [
+            27061.405,
+            27061.405
+          ],
+          "alternative_fuel": [
+            7759.52,
+            7759.52
+          ],
+          "ratio": [
+            3.487510181042126,
+            3.487510181042126
+          ],
+          "observations": 6
+        },
+        "flags_any_intersects": {
+          "baseline_fuel": [
+            3907.7,
+            3907.7
+          ],
+          "alternative_fuel": [
+            1868.495,
+            1868.495
+          ],
+          "ratio": [
+            2.091362299604762,
+            2.091362299604762
+          ],
+          "observations": 6
+        },
+        "flags_all_contains": {
+          "baseline_fuel": [
+            3885.195,
+            3885.195
+          ],
+          "alternative_fuel": [
+            1432.66,
+            1432.66
+          ],
+          "ratio": [
+            2.7118751134253767,
+            2.7118751134253767
+          ],
+          "observations": 6
+        },
+        "champion_position_xy": {
+          "baseline_fuel": [
+            5253.195,
+            5253.195
+          ],
+          "alternative_fuel": [
+            3544.195,
+            3544.195
+          ],
+          "ratio": [
+            1.4821969445812093,
+            1.4821969445812093
+          ],
+          "observations": 6
+        },
+        "retain_champion_ability_cache": {
+          "baseline_fuel": [
+            39446.36666666667,
+            39446.36666666667
+          ],
+          "alternative_fuel": [
+            11936.566666666668,
+            11936.566666666668
+          ],
+          "ratio": [
+            3.3046660541696804,
+            3.3046660541696804
+          ],
+          "observations": 6
+        },
+        "buff_snapshot_three": {
+          "baseline_fuel": [
+            27071.3,
+            27071.3
+          ],
+          "alternative_fuel": [
+            14841.3,
+            14841.3
+          ],
+          "ratio": [
+            1.8240518013920615,
+            1.8240518013920615
+          ],
+          "observations": 6
+        },
+        "ability_readiness_two": {
+          "baseline_fuel": [
+            43517.066666666666,
+            43517.066666666666
+          ],
+          "alternative_fuel": [
+            21911.766666666666,
+            21911.766666666666
+          ],
+          "ratio": [
+            1.9860136030412883,
+            1.9860136030412883
+          ],
+          "observations": 6
+        },
+        "ability_target_mask_five": {
+          "baseline_fuel": [
+            35865.3,
+            39015.3
+          ],
+          "alternative_fuel": [
+            19375.5,
+            20005.5
+          ],
+          "ratio": [
+            1.8510644886583574,
+            1.9502286871110446
+          ],
+          "observations": 6
+        },
+        "awake_camp_bulk_mask": {
+          "baseline_fuel": [
+            34965.166666666664,
+            59917.166666666664
+          ],
+          "alternative_fuel": [
+            3021.3,
+            3021.3
+          ],
+          "ratio": [
+            11.57288805039773,
+            19.831584637959374
+          ],
+          "observations": 6
+        },
+        "enemy_champion_prefilter": {
+          "baseline_fuel": [
+            42286.7,
+            42286.7
+          ],
+          "alternative_fuel": [
+            9510.1,
+            9510.1
+          ],
+          "ratio": [
+            4.446504242857593,
+            4.446504242857593
+          ],
+          "observations": 6
+        },
+        "existence_empty_tile": {
+          "baseline_fuel": [
+            18207.28,
+            18207.28
+          ],
+          "alternative_fuel": [
+            3132.055,
+            3132.055
+          ],
+          "ratio": [
+            5.813205706796336,
+            5.813205706796336
+          ],
+          "observations": 6
+        },
+        "existence_occupied_tile": {
+          "baseline_fuel": [
+            10752.055,
+            10752.055
+          ],
+          "alternative_fuel": [
+            3132.055,
+            3132.055
+          ],
+          "ratio": [
+            3.4329074681000176,
+            3.4329074681000176
+          ],
+          "observations": 6
+        },
+        "vision_single_query": {
+          "baseline_fuel": [
+            4618.055,
+            4618.055
+          ],
+          "alternative_fuel": [
+            3132.055,
+            3132.055
+          ],
+          "ratio": [
+            1.4744488841990324,
+            1.4744488841990324
+          ],
+          "observations": 6
+        },
+        "vision_batched_q1": {
+          "baseline_fuel": [
+            5157.7,
+            5157.7
+          ],
+          "alternative_fuel": [
+            6747.7,
+            6747.7
+          ],
+          "ratio": [
+            0.764364153711635,
+            0.764364153711635
+          ],
+          "observations": 6
+        },
+        "vision_batched_q8": {
+          "baseline_fuel": [
+            22900.7,
+            22900.7
+          ],
+          "alternative_fuel": [
+            11535.3,
+            11535.3
+          ],
+          "ratio": [
+            1.9852712976688949,
+            1.9852712976688949
+          ],
+          "observations": 6
+        },
+        "vision_batched_q32": {
+          "baseline_fuel": [
+            83719.3,
+            83719.3
+          ],
+          "alternative_fuel": [
+            28002.7,
+            28002.7
+          ],
+          "ratio": [
+            2.989686708781653,
+            2.989686708781653
+          ],
+          "observations": 6
+        },
+        "vision_batched_q128": {
+          "baseline_fuel": [
+            327097.36666666664,
+            327097.36666666664
+          ],
+          "alternative_fuel": [
+            93852.3,
+            93852.3
+          ],
+          "ratio": [
+            3.485235488812385,
+            3.485235488812385
+          ],
+          "observations": 6
+        },
+        "shared_write_8": {
+          "baseline_fuel": [
+            33474.76666666667,
+            33474.76666666667
+          ],
+          "alternative_fuel": [
+            8321.166666666666,
+            8321.166666666666
+          ],
+          "ratio": [
+            4.022845354217158,
+            4.022845354217158
+          ],
+          "observations": 6
+        },
+        "shared_read_8": {
+          "baseline_fuel": [
+            27498.6,
+            27498.6
+          ],
+          "alternative_fuel": [
+            8445.166666666666,
+            8445.166666666666
+          ],
+          "ratio": [
+            3.2561346726924674,
+            3.2561346726924674
+          ],
+          "observations": 6
+        },
+        "champion_dict_id_conversion": {
+          "baseline_fuel": [
+            3947.195,
+            4044.195
+          ],
+          "alternative_fuel": [
+            2884.195,
+            2884.195
+          ],
+          "ratio": [
+            1.3685603781991162,
+            1.4021919461062793
+          ],
+          "observations": 6
+        },
+        "champion_dict_preextracted_id": {
+          "baseline_fuel": [
+            3947.195,
+            4044.195
+          ],
+          "alternative_fuel": [
+            1370.195,
+            1370.195
+          ],
+          "ratio": [
+            2.8807541992198193,
+            2.9515470425742323
+          ],
+          "observations": 6
+        }
+      }
+    },
+    {
+      "replay": "python-fuel-vs-python-fuel-1792676806998.repl26a",
+      "dimensions": [
+        71,
+        71
+      ],
+      "python_version": "3.13.7 (main, Oct 21 2026, 01:54:52) [Clang 22.1.0-wasi-sdk (https://github.com/llvm/llvm-project 4434dabb69916856b82",
+      "completed": {
+        "draft": 2,
+        "game": 12
+      },
+      "pair_count": 72,
+      "pairs": {
+        "intersection_count": {
+          "baseline_fuel": [
+            4962484.766666667,
+            4962484.766666667
+          ],
+          "alternative_fuel": [
+            6898.633333333333,
+            6898.633333333333
+          ],
+          "ratio": [
+            719.3431694200301,
+            719.3431694200301
+          ],
+          "observations": 2
+        },
+        "filter_positions": {
+          "baseline_fuel": [
+            4031426.566666667,
+            4031426.566666667
+          ],
+          "alternative_fuel": [
+            766328.1,
+            766328.1
+          ],
+          "ratio": [
+            5.260705651621893,
+            5.260705651621893
+          ],
+          "observations": 2
+        },
+        "overlap_any_early_cached_points": {
+          "baseline_fuel": [
+            7028.21,
+            7028.21
+          ],
+          "alternative_fuel": [
+            6408.715,
+            6408.715
+          ],
+          "ratio": [
+            1.0966644639369982,
+            1.0966644639369982
+          ],
+          "observations": 2
+        },
+        "overlap_any_none_cached_points": {
+          "baseline_fuel": [
+            3643197.533333333,
+            3643197.533333333
+          ],
+          "alternative_fuel": [
+            6568.633333333333,
+            6568.633333333333
+          ],
+          "ratio": [
+            554.6355456995113,
+            554.6355456995113
+          ],
+          "observations": 2
+        },
+        "union_chain_vs_copy_inplace": {
+          "baseline_fuel": [
+            10637.866666666667,
+            10637.866666666667
+          ],
+          "alternative_fuel": [
+            10377.866666666667,
+            10377.866666666667
+          ],
+          "ratio": [
+            1.0250533186011255,
+            1.0250533186011255
+          ],
+          "observations": 2
+        },
+        "union_chain_vs_reuse": {
+          "baseline_fuel": [
+            10395.866666666667,
+            10395.866666666667
+          ],
+          "alternative_fuel": [
+            11974.733333333334,
+            11974.733333333334
+          ],
+          "ratio": [
+            0.8681501606159636,
+            0.8681501606159636
+          ],
+          "observations": 2
+        },
+        "cache_static_terrain_union": {
+          "baseline_fuel": [
+            24864.366666666665,
+            24864.366666666665
+          ],
+          "alternative_fuel": [
+            10454.366666666667,
+            10454.366666666667
+          ],
+          "ratio": [
+            2.378371398235506,
+            2.378371398235506
+          ],
+          "observations": 2
+        },
+        "draw_chebyshev_r3": {
+          "baseline_fuel": [
+            32658.266666666666,
+            32658.266666666666
+          ],
+          "alternative_fuel": [
+            3092.5333333333333,
+            3092.5333333333333
+          ],
+          "ratio": [
+            10.560360438044322,
+            10.560360438044322
+          ],
+          "observations": 2
+        },
+        "draw_chebyshev_r8": {
+          "baseline_fuel": [
+            178094.53333333333,
+            178094.53333333333
+          ],
+          "alternative_fuel": [
+            3292.5333333333333,
+            3292.5333333333333
+          ],
+          "ratio": [
+            54.090426824329796,
+            54.090426824329796
+          ],
+          "observations": 2
+        },
+        "mask_scores_preconverted_int": {
+          "baseline_fuel": [
+            27025.533333333333,
+            27025.533333333333
+          ],
+          "alternative_fuel": [
+            35160.1,
+            35160.1
+          ],
+          "ratio": [
+            0.7686421066303376,
+            0.7686421066303376
+          ],
+          "observations": 2
+        },
+        "mask_scores_conversion_included": {
+          "baseline_fuel": [
+            27020.066666666666,
+            27020.066666666666
+          ],
+          "alternative_fuel": [
+            158284.76666666666,
+            158284.76666666666
+          ],
+          "ratio": [
+            0.1707054142712828,
+            0.1707054142712828
+          ],
+          "observations": 2
+        },
+        "distance_search_target_two_tiles_away": {
+          "baseline_fuel": [
+            107697.3,
+            107697.3
+          ],
+          "alternative_fuel": [
+            39005.3,
+            39005.3
+          ],
+          "ratio": [
+            2.7610940051736557,
+            2.7610940051736557
+          ],
+          "observations": 2
+        },
+        "distance_search_bound_three": {
+          "baseline_fuel": [
+            107697.3,
+            107697.3
+          ],
+          "alternative_fuel": [
+            41025.3,
+            41025.3
+          ],
+          "ratio": [
+            2.6251435090054187,
+            2.6251435090054187
+          ],
+          "observations": 2
+        },
+        "next_move_single": {
+          "baseline_fuel": [
+            4072.195,
+            4072.195
+          ],
+          "alternative_fuel": [
+            2184.195,
+            2184.195
+          ],
+          "ratio": [
+            1.8643916866397001,
+            1.8643916866397001
+          ],
+          "observations": 2
+        },
+        "distance_multisource_four_goals": {
+          "baseline_fuel": [
+            715445.3,
+            715445.3
+          ],
+          "alternative_fuel": [
+            107697.3,
+            107697.3
+          ],
+          "ratio": [
+            6.643112687133289,
+            6.643112687133289
+          ],
+          "observations": 2
+        },
+        "distance_export_q1": {
+          "baseline_fuel": [
+            3407.0333333333333,
+            3407.0333333333333
+          ],
+          "alternative_fuel": [
+            42518.13333333333,
+            42518.13333333333
+          ],
+          "ratio": [
+            0.08013130084105292,
+            0.08013130084105292
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q1": {
+          "baseline_fuel": [
+            3407.0333333333333,
+            3407.0333333333333
+          ],
+          "alternative_fuel": [
+            1759689.4,
+            1759689.4
+          ],
+          "ratio": [
+            0.0019361560814842287,
+            0.0019361560814842287
+          ],
+          "observations": 2
+        },
+        "distance_export_q8": {
+          "baseline_fuel": [
+            8268.533333333333,
+            8268.533333333333
+          ],
+          "alternative_fuel": [
+            47807.9,
+            47807.9
+          ],
+          "ratio": [
+            0.17295328456872885,
+            0.17295328456872885
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q8": {
+          "baseline_fuel": [
+            8274.1,
+            8274.1
+          ],
+          "alternative_fuel": [
+            1737342.1333333333,
+            1737342.1333333333
+          ],
+          "ratio": [
+            0.004762504656538194,
+            0.004762504656538194
+          ],
+          "observations": 2
+        },
+        "distance_export_q32": {
+          "baseline_fuel": [
+            31228.133333333335,
+            31228.133333333335
+          ],
+          "alternative_fuel": [
+            73104.56666666667,
+            73104.56666666667
+          ],
+          "ratio": [
+            0.42717076042217156,
+            0.42717076042217156
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q32": {
+          "baseline_fuel": [
+            31085.233333333334,
+            31085.233333333334
+          ],
+          "alternative_fuel": [
+            1748458.1,
+            1748458.1
+          ],
+          "ratio": [
+            0.017778654995125896,
+            0.017778654995125896
+          ],
+          "observations": 2
+        },
+        "distance_export_into_q32": {
+          "baseline_fuel": [
+            31008.333333333332,
+            31008.333333333332
+          ],
+          "alternative_fuel": [
+            70762.36666666667,
+            70762.36666666667
+          ],
+          "ratio": [
+            0.43820373447091227,
+            0.43820373447091227
+          ],
+          "observations": 2
+        },
+        "distance_export_q128": {
+          "baseline_fuel": [
+            117539.26666666666,
+            117539.26666666666
+          ],
+          "alternative_fuel": [
+            169085.16666666666,
+            169085.16666666666
+          ],
+          "ratio": [
+            0.6951483029755222,
+            0.6951483029755222
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q128": {
+          "baseline_fuel": [
+            117377.86666666667,
+            117377.86666666667
+          ],
+          "alternative_fuel": [
+            1786876.9666666666,
+            1786876.9666666666
+          ],
+          "ratio": [
+            0.06568883524512013,
+            0.06568883524512013
+          ],
+          "observations": 2
+        },
+        "distance_export_q5041": {
+          "baseline_fuel": [
+            4635008.733333333,
+            4635008.733333333
+          ],
+          "alternative_fuel": [
+            5387196.233333333,
+            5387196.233333333
+          ],
+          "ratio": [
+            0.860374958063374,
+            0.860374958063374
+          ],
+          "observations": 2
+        },
+        "distance_export_list_q5041": {
+          "baseline_fuel": [
+            4614852.266666667,
+            4614852.266666667
+          ],
+          "alternative_fuel": [
+            4136112.2666666666,
+            4136112.2666666666
+          ],
+          "ratio": [
+            1.1157463746470841,
+            1.1157463746470841
+          ],
+          "observations": 2
+        },
+        "distance_export_into_q5041": {
+          "baseline_fuel": [
+            4646983.0,
+            4646983.0
+          ],
+          "alternative_fuel": [
+            5370744.866666666,
+            5370744.866666666
+          ],
+          "ratio": [
+            0.8652399462952209,
+            0.8652399462952209
+          ],
+          "observations": 2
+        },
+        "distance_vec2_creation": {
+          "baseline_fuel": [
+            388908.93333333335,
+            388908.93333333335
+          ],
+          "alternative_fuel": [
+            127314.23333333334,
+            127314.23333333334
+          ],
+          "ratio": [
+            3.054716846270396,
+            3.054716846270396
+          ],
+          "observations": 2
+        },
+        "distance_frozen_dense_cache_128": {
+          "baseline_fuel": [
+            126591.3,
+            126591.3
+          ],
+          "alternative_fuel": [
+            135032.7,
+            135032.7
+          ],
+          "ratio": [
+            0.937486253329749,
+            0.937486253329749
+          ],
+          "observations": 2
+        },
+        "distance_frozen_list_cache_128": {
+          "baseline_fuel": [
+            125231.73333333334,
+            125231.73333333334
+          ],
+          "alternative_fuel": [
+            64932.333333333336,
+            64932.333333333336
+          ],
+          "ratio": [
+            1.928649825202647,
+            1.928649825202647
+          ],
+          "observations": 2
+        },
+        "distance_row_sum": {
+          "baseline_fuel": [
+            180452.16666666666,
+            180452.16666666666
+          ],
+          "alternative_fuel": [
+            26953.1,
+            26953.1
+          ],
+          "ratio": [
+            6.695043118107627,
+            6.695043118107627
+          ],
+          "observations": 2
+        },
+        "distance_copy_from": {
+          "baseline_fuel": [
+            6332818.8,
+            6332818.8
+          ],
+          "alternative_fuel": [
+            35350.2,
+            35350.2
+          ],
+          "ratio": [
+            179.14520427041433,
+            179.14520427041433
+          ],
+          "observations": 2
+        },
+        "distance_copy_reuse": {
+          "baseline_fuel": [
+            12790.533333333333,
+            12790.533333333333
+          ],
+          "alternative_fuel": [
+            35111.36666666667,
+            35111.36666666667
+          ],
+          "ratio": [
+            0.3642846903329501,
+            0.3642846903329501
+          ],
+          "observations": 2
+        },
+        "distance_masked_copy": {
+          "baseline_fuel": [
+            4514185.2,
+            4514185.2
+          ],
+          "alternative_fuel": [
+            71959.2,
+            71959.2
+          ],
+          "ratio": [
+            62.7325651202348,
+            62.7325651202348
+          ],
+          "observations": 2
+        },
+        "distance_bulk_import": {
+          "baseline_fuel": [
+            6250958.0,
+            6250958.0
+          ],
+          "alternative_fuel": [
+            33560.2,
+            33560.2
+          ],
+          "ratio": [
+            186.2610473119946,
+            186.2610473119946
+          ],
+          "observations": 2
+        },
+        "real_distance_export_list_q128": {
+          "baseline_fuel": [
+            93631.23333333334,
+            93631.23333333334
+          ],
+          "alternative_fuel": [
+            658776.9,
+            658776.9
+          ],
+          "ratio": [
+            0.1421288957359211,
+            0.1421288957359211
+          ],
+          "observations": 2
+        },
+        "real_distance_export_list_q5041": {
+          "baseline_fuel": [
+            3466539.0,
+            3466539.0
+          ],
+          "alternative_fuel": [
+            4525763.033333333,
+            4525763.033333333
+          ],
+          "ratio": [
+            0.765956806502706,
+            0.765956806502706
+          ],
+          "observations": 2
+        },
+        "real_distance_frozen_list_cache_128": {
+          "baseline_fuel": [
+            103851.06666666667,
+            103851.06666666667
+          ],
+          "alternative_fuel": [
+            68342.13333333333,
+            68342.13333333333
+          ],
+          "ratio": [
+            1.5195760155765308,
+            1.5195760155765308
+          ],
+          "observations": 2
+        },
+        "reachable_bfs_r4": {
+          "baseline_fuel": [
+            1672571.8,
+            1672571.8
+          ],
+          "alternative_fuel": [
+            5759.9,
+            5759.9
+          ],
+          "ratio": [
+            290.3820899668397,
+            290.3820899668397
+          ],
+          "observations": 2
+        },
+        "reachable_scratch_r4": {
+          "baseline_fuel": [
+            5607.3,
+            5607.3
+          ],
+          "alternative_fuel": [
+            4890.3,
+            4890.3
+          ],
+          "ratio": [
+            1.1466167719771794,
+            1.1466167719771794
+          ],
+          "observations": 2
+        },
+        "reachable_bfs_r12": {
+          "baseline_fuel": [
+            17111005.2,
+            17111005.2
+          ],
+          "alternative_fuel": [
+            10752.9,
+            10752.9
+          ],
+          "ratio": [
+            1591.2921351449377,
+            1591.2921351449377
+          ],
+          "observations": 2
+        },
+        "reachable_scratch_r12": {
+          "baseline_fuel": [
+            10569.3,
+            10569.3
+          ],
+          "alternative_fuel": [
+            9890.3,
+            9890.3
+          ],
+          "ratio": [
+            1.0686531247788238,
+            1.0686531247788238
+          ],
+          "observations": 2
+        },
+        "field_min_native_callback": {
+          "baseline_fuel": [
+            222358.3,
+            222358.3
+          ],
+          "alternative_fuel": [
+            73021.26666666666,
+            73021.26666666666
+          ],
+          "ratio": [
+            3.0451169933142763,
+            3.0451169933142763
+          ],
+          "observations": 2
+        },
+        "min_itemgetter": {
+          "baseline_fuel": [
+            174859.3,
+            174859.3
+          ],
+          "alternative_fuel": [
+            57826.2,
+            57826.2
+          ],
+          "ratio": [
+            3.023876720240998,
+            3.023876720240998
+          ],
+          "observations": 2
+        },
+        "min_vs_sorted": {
+          "baseline_fuel": [
+            132662.2,
+            132662.2
+          ],
+          "alternative_fuel": [
+            57826.2,
+            57826.2
+          ],
+          "ratio": [
+            2.2941538610526027,
+            2.2941538610526027
+          ],
+          "observations": 2
+        },
+        "bisect_lower_bound": {
+          "baseline_fuel": [
+            4524364.3,
+            4524364.3
+          ],
+          "alternative_fuel": [
+            145374.8,
+            145374.8
+          ],
+          "ratio": [
+            31.122067235862062,
+            31.122067235862062
+          ],
+          "observations": 2
+        },
+        "vector_dot": {
+          "baseline_fuel": [
+            1911.195,
+            1911.195
+          ],
+          "alternative_fuel": [
+            1386.195,
+            1386.195
+          ],
+          "ratio": [
+            1.378734593617781,
+            1.378734593617781
+          ],
+          "observations": 2
+        },
+        "vector_length_squared": {
+          "baseline_fuel": [
+            2166.23,
+            2166.23
+          ],
+          "alternative_fuel": [
+            1544.23,
+            1544.23
+          ],
+          "ratio": [
+            1.4027897398703562,
+            1.4027897398703562
+          ],
+          "observations": 2
+        },
+        "binary_unpack_batch": {
+          "baseline_fuel": [
+            573398.7666666667,
+            573398.7666666667
+          ],
+          "alternative_fuel": [
+            13717.233333333334,
+            13717.233333333334
+          ],
+          "ratio": [
+            41.80134235037678,
+            41.80134235037678
+          ],
+          "observations": 2
+        },
+        "binary_iter_unpack": {
+          "baseline_fuel": [
+            135621.8,
+            135621.8
+          ],
+          "alternative_fuel": [
+            48750.333333333336,
+            48750.333333333336
+          ],
+          "ratio": [
+            2.7819666190316643,
+            2.7819666190316643
+          ],
+          "observations": 2
+        },
+        "binary_pack_into": {
+          "baseline_fuel": [
+            823937.1666666666,
+            823937.1666666666
+          ],
+          "alternative_fuel": [
+            281824.26666666666,
+            281824.26666666666
+          ],
+          "ratio": [
+            2.923584886468258,
+            2.923584886468258
+          ],
+          "observations": 2
+        },
+        "champion_state_snapshot_five": {
+          "baseline_fuel": [
+            27061.405,
+            27061.405
+          ],
+          "alternative_fuel": [
+            7759.52,
+            7759.52
+          ],
+          "ratio": [
+            3.487510181042126,
+            3.487510181042126
+          ],
+          "observations": 12
+        },
+        "flags_any_intersects": {
+          "baseline_fuel": [
+            3907.7,
+            3907.7
+          ],
+          "alternative_fuel": [
+            1868.495,
+            1868.495
+          ],
+          "ratio": [
+            2.091362299604762,
+            2.091362299604762
+          ],
+          "observations": 12
+        },
+        "flags_all_contains": {
+          "baseline_fuel": [
+            3885.195,
+            3885.195
+          ],
+          "alternative_fuel": [
+            1432.66,
+            1432.66
+          ],
+          "ratio": [
+            2.7118751134253767,
+            2.7118751134253767
+          ],
+          "observations": 12
+        },
+        "champion_position_xy": {
+          "baseline_fuel": [
+            5253.195,
+            5253.195
+          ],
+          "alternative_fuel": [
+            3544.195,
+            3544.195
+          ],
+          "ratio": [
+            1.4821969445812093,
+            1.4821969445812093
+          ],
+          "observations": 12
+        },
+        "retain_champion_ability_cache": {
+          "baseline_fuel": [
+            39452.6,
+            39790.6
+          ],
+          "alternative_fuel": [
+            11936.3,
+            11936.3
+          ],
+          "ratio": [
+            3.305262099645619,
+            3.333579082295184
+          ],
+          "observations": 12
+        },
+        "buff_snapshot_three": {
+          "baseline_fuel": [
+            27071.3,
+            27071.3
+          ],
+          "alternative_fuel": [
+            14841.3,
+            14841.3
+          ],
+          "ratio": [
+            1.8240518013920615,
+            1.8240518013920615
+          ],
+          "observations": 12
+        },
+        "ability_readiness_two": {
+          "baseline_fuel": [
+            43517.1,
+            43517.1
+          ],
+          "alternative_fuel": [
+            21909.833333333332,
+            21909.833333333332
+          ],
+          "ratio": [
+            1.9861903711423334,
+            1.9861903711423334
+          ],
+          "observations": 12
+        },
+        "ability_target_mask_five": {
+          "baseline_fuel": [
+            35865.3,
+            39015.3
+          ],
+          "alternative_fuel": [
+            19382.9,
+            20012.9
+          ],
+          "ratio": [
+            1.8503577895980479,
+            1.9495075676188858
+          ],
+          "observations": 12
+        },
+        "awake_camp_bulk_mask": {
+          "baseline_fuel": [
+            37492.166666666664,
+            37492.166666666664
+          ],
+          "alternative_fuel": [
+            4197.3,
+            4197.3
+          ],
+          "ratio": [
+            8.932448637616245,
+            8.932448637616245
+          ],
+          "observations": 12
+        },
+        "enemy_champion_prefilter": {
+          "baseline_fuel": [
+            76424.7,
+            76424.7
+          ],
+          "alternative_fuel": [
+            11853.1,
+            11853.1
+          ],
+          "ratio": [
+            6.447655043828196,
+            6.447655043828196
+          ],
+          "observations": 12
+        },
+        "existence_empty_tile": {
+          "baseline_fuel": [
+            18200.28,
+            18200.28
+          ],
+          "alternative_fuel": [
+            3132.055,
+            3132.055
+          ],
+          "ratio": [
+            5.8109707524293155,
+            5.8109707524293155
+          ],
+          "observations": 12
+        },
+        "existence_occupied_tile": {
+          "baseline_fuel": [
+            10753.97,
+            10753.97
+          ],
+          "alternative_fuel": [
+            3132.055,
+            3132.055
+          ],
+          "ratio": [
+            3.433518887758995,
+            3.433518887758995
+          ],
+          "observations": 12
+        },
+        "vision_single_query": {
+          "baseline_fuel": [
+            5883.055,
+            5883.055
+          ],
+          "alternative_fuel": [
+            3132.055,
+            3132.055
+          ],
+          "ratio": [
+            1.8783370662392584,
+            1.8783370662392584
+          ],
+          "observations": 12
+        },
+        "vision_batched_q1": {
+          "baseline_fuel": [
+            5157.7,
+            5157.7
+          ],
+          "alternative_fuel": [
+            8012.7,
+            8012.7
+          ],
+          "ratio": [
+            0.6436906411072423,
+            0.6436906411072423
+          ],
+          "observations": 12
+        },
+        "vision_batched_q8": {
+          "baseline_fuel": [
+            22900.7,
+            22900.7
+          ],
+          "alternative_fuel": [
+            12800.3,
+            12800.3
+          ],
+          "ratio": [
+            1.7890752560486864,
+            1.7890752560486864
+          ],
+          "observations": 12
+        },
+        "vision_batched_q32": {
+          "baseline_fuel": [
+            83456.3,
+            83456.3
+          ],
+          "alternative_fuel": [
+            29004.7,
+            29004.7
+          ],
+          "ratio": [
+            2.877337121225181,
+            2.877337121225181
+          ],
+          "observations": 12
+        },
+        "vision_batched_q128": {
+          "baseline_fuel": [
+            327512.36666666664,
+            327512.36666666664
+          ],
+          "alternative_fuel": [
+            95532.3,
+            95532.3
+          ],
+          "ratio": [
+            3.4282893499545875,
+            3.4282893499545875
+          ],
+          "observations": 12
+        },
+        "shared_write_8": {
+          "baseline_fuel": [
+            33474.76666666667,
+            33474.76666666667
+          ],
+          "alternative_fuel": [
+            8350.166666666666,
+            8350.166666666666
+          ],
+          "ratio": [
+            4.008874074369774,
+            4.008874074369774
+          ],
+          "observations": 12
+        },
+        "shared_read_8": {
+          "baseline_fuel": [
+            27498.6,
+            27498.6
+          ],
+          "alternative_fuel": [
+            8445.166666666666,
+            8445.166666666666
+          ],
+          "ratio": [
+            3.2561346726924674,
+            3.2561346726924674
+          ],
+          "observations": 12
+        },
+        "champion_dict_id_conversion": {
+          "baseline_fuel": [
+            3947.195,
+            4044.195
+          ],
+          "alternative_fuel": [
+            2884.195,
+            2884.195
+          ],
+          "ratio": [
+            1.3685603781991162,
+            1.4021919461062793
+          ],
+          "observations": 12
+        },
+        "champion_dict_preextracted_id": {
+          "baseline_fuel": [
+            3947.195,
+            4044.195
+          ],
+          "alternative_fuel": [
+            1370.195,
+            1370.195
+          ],
+          "ratio": [
+            2.8807541992198193,
+            2.9515470425742323
+          ],
+          "observations": 12
+        }
+      }
+    }
+  ]
+}

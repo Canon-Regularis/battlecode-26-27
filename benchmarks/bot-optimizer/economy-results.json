@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-22",
+  "cambc_version": "3.0.4",
+  "bot": "bots/economy-bot",
+  "input_sha256": "950f6e045c5624b53965f679837259176013e9b072f6dfc30130dffce98dc54c",
+  "pass_counts": {"native-attrgetter": 3},
+  "generated_source_matches_existing_bots_economy_optimized": true,
+  "generated_host_tests_passed": 71,
+  "method": {
+    "mode": "release",
+    "fuel_quantum_argument": 1000000000,
+    "search_configuration": "Unchanged production defaults; max_expansions=20000",
+    "runs_per_variant_per_map": 1,
+    "team_observations_per_map": 2,
+    "measured_region": "Cold DraftPlanner.build(), including its normal report printing; excludes fallback_plan(), module imports, plan encoding and drawing",
+    "instrumentation": "Identical AST round-trip on both staged copies. fuel_remaining() before/after build; LoopPlanner.find_loops() wrapped to retain its fuel cost and expansion_count. Probe output printed after build timing ends.",
+    "comparison": "Separate baseline-vs-baseline and generated-vs-generated self-matches; compare corresponding sides on the same map",
+    "baseline": "All optimiser passes disabled; no hand optimisations",
+    "checks": "Both teams completed, no logged errors, no search/BFS fuel guard truncation, identical expansion counts and full ranked loop reports",
+    "limitation": "Single cold-build comparison per variant/map, not a confidence interval. Snapshot/allocation effects are not isolated; tiny observed savings should not be treated as significant or guaranteed."
+  },
+  "normal_budget_validation": {
+    "instrumented": false,
+    "rounds": 3,
+    "maps": ["collision", "corners"],
+    "both_teams_reported_identical_ranked_loops": true,
+    "logged_errors": false
+  },
+  "comparisons": [
+    {
+      "map": "collision",
+      "side": "a",
+      "expansions_both": 6020,
+      "baseline_build_fuel": 1358280937,
+      "optimized_build_fuel": 1358161233,
+      "build_fuel_reduction_percent": 0.008812904366040097,
+      "baseline_search_fuel": 1346290883,
+      "optimized_search_fuel": 1346202084,
+      "search_fuel_reduction_percent": 0.006595825695721036,
+      "ranked_reports_equal": true
+    },
+    {
+      "map": "collision",
+      "side": "b",
+      "expansions_both": 6020,
+      "baseline_build_fuel": 1358284969,
+      "optimized_build_fuel": 1358237984,
+      "build_fuel_reduction_percent": 0.0034591415698725925,
+      "baseline_search_fuel": 1346284638,
+      "optimized_search_fuel": 1346268601,
+      "search_fuel_reduction_percent": 0.0011912042630068953,
+      "ranked_reports_equal": true
+    },
+    {
+      "map": "corners",
+      "side": "a",
+      "expansions_both": 20000,
+      "baseline_build_fuel": 4213401444,
+      "optimized_build_fuel": 4212221422,
+      "build_fuel_reduction_percent": 0.028006398528213072,
+      "baseline_search_fuel": 4188470670,
+      "optimized_search_fuel": 4187346407,
+      "search_fuel_reduction_percent": 0.026841849652969874,
+      "ranked_reports_equal": true
+    },
+    {
+      "map": "corners",
+      "side": "b",
+      "expansions_both": 20000,
+      "baseline_build_fuel": 4212795748,
+      "optimized_build_fuel": 4211673769,
+      "build_fuel_reduction_percent": 0.026632646515856173,
+      "baseline_search_fuel": 4187864307,
+      "optimized_search_fuel": 4186794250,
+      "search_fuel_reduction_percent": 0.02555137706375943,
+      "ranked_reports_equal": true
+    }
+  ]
+}

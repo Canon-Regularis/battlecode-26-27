@@ -1,0 +1,49 @@
+{
+  "cambc_version": "3.0.4",
+  "date": "2026-10-22",
+  "guest_python_version": "3.13.7",
+  "source_sha256": "b5ad9ae66ddfb9d6ac03479b5d4ec97b1ef4c1841fa5774c9494c2600bafb4a3",
+  "warmups": 20,
+  "batches": 5,
+  "calls_per_batch": 20,
+  "per_call_setup_included": true,
+  "module_initialization_included": false,
+  "datasets": [
+    {
+      "map": "collision",
+      "dimensions": [41, 41],
+      "observations_per_pair": 2,
+      "all_team_samples_identical": true,
+      "pairs": {
+        "attribute_key": {"baseline_fuel": 223032.05, "optimized_fuel": 110902.7, "ratio": 2.0110605963605934},
+        "bounded_sum": {"baseline_fuel": 162556.3, "optimized_fuel": 120141.7, "ratio": 1.3530381208189994},
+        "integer_square": {"baseline_fuel": 185698.4, "optimized_fuel": 147310.7, "ratio": 1.2605900318171048},
+        "item_key": {"baseline_fuel": 381256.75, "optimized_fuel": 262497.1, "ratio": 1.4524227124794904},
+        "mask_count": {"baseline_fuel": 139479.9, "optimized_fuel": 7292.7, "ratio": 19.125961578016373},
+        "mask_empty": {"baseline_fuel": 139111.9, "optimized_fuel": 6964.7, "ratio": 19.97385386305225},
+        "mask_filter": {"baseline_fuel": 346015.1, "optimized_fuel": 69204.7, "ratio": 4.999878620960715},
+        "mask_intersection_count": {"baseline_fuel": 408664.05, "optimized_fuel": 13509.7, "ratio": 30.24967615861196},
+        "native_key": {"baseline_fuel": 620466.8, "optimized_fuel": 284193.7, "ratio": 2.183253182600459},
+        "native_map": {"baseline_fuel": 168545.3, "optimized_fuel": 81652.3, "ratio": 2.0641831277257343}
+      }
+    },
+    {
+      "map": "corners",
+      "dimensions": [71, 71],
+      "observations_per_pair": 2,
+      "all_team_samples_identical": true,
+      "pairs": {
+        "attribute_key": {"baseline_fuel": 223032.05, "optimized_fuel": 110902.7, "ratio": 2.0110605963605934},
+        "bounded_sum": {"baseline_fuel": 162556.3, "optimized_fuel": 122632.7, "ratio": 1.3255542771218443},
+        "integer_square": {"baseline_fuel": 185698.4, "optimized_fuel": 147310.7, "ratio": 1.2605900318171048},
+        "item_key": {"baseline_fuel": 383747.75, "optimized_fuel": 264988.1, "ratio": 1.4481697480000046},
+        "mask_count": {"baseline_fuel": 141091.9, "optimized_fuel": 8951.7, "ratio": 15.761464302869845},
+        "mask_empty": {"baseline_fuel": 140761.9, "optimized_fuel": 8661.7, "ratio": 16.251070805961877},
+        "mask_filter": {"baseline_fuel": 349952.1, "optimized_fuel": 72640.7, "ratio": 4.817576097146641},
+        "mask_intersection_count": {"baseline_fuel": 410604.05, "optimized_fuel": 16857.7, "ratio": 24.357062351329066},
+        "native_key": {"baseline_fuel": 627941.8, "optimized_fuel": 291668.7, "ratio": 2.1529283052998145},
+        "native_map": {"baseline_fuel": 168545.3, "optimized_fuel": 81652.3, "ratio": 2.0641831277257343}
+      }
+    }
+  ]
+}
