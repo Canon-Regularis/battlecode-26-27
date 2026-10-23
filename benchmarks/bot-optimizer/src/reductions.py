@@ -2,7 +2,8 @@
 
 from dataclasses import dataclass
 
-CASES = ('empty', 'one', 'four', 'eight', 'thirty_two', 'floats', 'bigints', 'protocols')
+CASES = ('empty', 'one', 'four', 'eight', 'sixteen', 'thirty_two', 'floats', 'bigints', 'protocols',
+         'negative_indices', 'index_errors')
 
 
 @dataclass(frozen=True)
@@ -42,6 +43,24 @@ def eight():
 
 def thirty_two():
     return totals(ROWS, tuple(range(32)))
+
+
+def sixteen():
+    return totals(ROWS, tuple(range(16)))
+
+
+def negative_indices():
+    return totals(ROWS, (-1,-2,-32))
+
+
+def index_errors():
+    results = []
+    for route in ((32,), (-33,), (10**100,), (-(10**100),), (0,1,99)):
+        try:
+            totals(ROWS, route)
+        except IndexError as error:
+            results.append((type(error).__name__, str(error)))
+    return tuple(results)
 
 
 def floats():

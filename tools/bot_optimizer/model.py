@@ -4,6 +4,17 @@ from dataclasses import asdict, dataclass, field
 
 
 PASS_DESCRIPTIONS = {
+    "tuple-adjacent-iterator": "Iterate owned exact tuples with a previous-item local and explicit cleanup instead of pair allocation/unpacking.",
+    "tuple-insertion-buffer": "Yield tuple insertion variants using an owned buffer with explicit generator cleanup and exact-tuple fallback.",
+    "native-index-guard": "Use native exact-sequence bounds checks with original reduction fallback on IndexError.",
+    "wide-helper-limit": "Extend measured guarded reduction and adjacency helpers through sixteen indices.",
+    "helper-loop-shape": "Hoist invariant integer bounds and track extremum initialization with a local boolean.",
+    "helper-builtin-cache": "Bind stable builtins as private helper defaults while preserving source function signatures.",
+    "adjacent-extend": "Incrementally extend exact lists over guarded primitive tuple adjacency with original fallback.",
+    "tuple-adjacent": "Use native pairwise for exact tuples with a stable local owner and original fallback.",
+    "scalar-extremum": "Inline two-argument min/max with stable ties and explicit temporary cleanup.",
+    "extremum-loop": "Use direct min/max expression loops with exact-sequence fallback and explicit exception cleanup.",
+    "record-inline-return": "Inline cached fresh-record allocation at a proven terminal return without deferring allocation.",
     "short-circuit-loop": "Use guarded direct loops for any/all element comparisons, preserving iterator and exception fallbacks.",
     "short-int-reductions": "Fuse three indexed reductions of up to eight rows after exact container, record and integer guards.",
     "deferred-record": "Compatibility disable switch for the archived, rejected deferred-record prototype (inactive).",

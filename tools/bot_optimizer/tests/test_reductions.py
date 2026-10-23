@@ -1,5 +1,6 @@
 """Semantic fallbacks and callback order for short reduction fusion."""
 
+import inspect
 import unittest
 
 from tools.bot_optimizer import Options, optimize_source
@@ -21,6 +22,17 @@ def run(rows, route):
 
 
 class ShortReductionTests(unittest.TestCase):
+    def test_helper_defaults_preserve_public_signature(self):
+        source = SOURCE.replace('def run(rows, route):', 'def run(rows, route=(0,)):')
+        original = execute(source)
+        for disabled in (frozenset(), frozenset({'helper-builtin-cache', 'helper-loop-shape'})):
+            result = optimize_source(source, Options(disabled=disabled))
+            generated = execute(result.source)
+            self.assertEqual(inspect.signature(original['run']), inspect.signature(generated['run']))
+            self.assertEqual(generated['run']([generated['Row'](1, 2, 3)]), (1, 2, 3))
+            with self.assertRaises(TypeError):
+                generated['run']([], (), int)
+
     def namespaces(self, source=SOURCE):
         result = optimize_source(source)
         self.assertIn('short-int-reductions', [c.pass_name for c in result.changes])
@@ -28,7 +40,7 @@ class ShortReductionTests(unittest.TestCase):
 
     def test_exact_values_bounds_sizes_and_float_fallback(self):
         old, new = self.namespaces()
-        for size in (0, 1, 4, 5, 8, 9, 32):
+        for size in (0, 1, 4, 5, 8, 9, 16, 17, 32):
             for values in ((1, 2, 3), (2**100, -2**120, 9), (1e30, -1e30, 0.1), (True, False, 4)):
                 for container in (list, tuple):
                     observations = []
@@ -39,7 +51,7 @@ class ShortReductionTests(unittest.TestCase):
         for ns in (old, new):
             rows = [ns['Row'](1, 2, 3), ns['Row'](4, 5, 6)]
             self.assertEqual(ns['run'](rows, (-1, -2)), (5, 7, 9))
-            for route in ((2,), (-3,)):
+            for route in ((2,), (-3,), (10**100,), (-(10**100),), (0, 1, 99)):
                 with self.assertRaises(IndexError):
                     ns['run'](rows, route)
             object.__delattr__(rows[0], 'b')
@@ -91,6 +103,7 @@ class ShortReductionTests(unittest.TestCase):
 
     def test_fresh_locals_and_unsupported_patterns(self):
         sources = [
+            SOURCE.replace('    a = sum', '    del rows\n    a = sum'),
             SOURCE.replace('def run(rows, route):', 'def run[sum](rows, route):'),
             SOURCE.replace('def run(rows, route):', 'def run(rows, route, a=0):'),
             SOURCE.replace('    a = sum', '    a = 0\n    a = sum'),
@@ -105,6 +118,11 @@ class ShortReductionTests(unittest.TestCase):
             self.assertNotIn('short-int-reductions', [c.pass_name for c in optimize_source(source).changes])
         result = optimize_source(SOURCE, Options(disabled=frozenset({'short-int-reductions'})))
         self.assertNotIn('short-int-reductions', [c.pass_name for c in result.changes])
+
+    def test_straight_line_cleanup_after_reductions(self):
+        old, new = self.namespaces(SOURCE.replace('    return a, b, c', '    del rows\n    return a, b, c'))
+        self.assertEqual(old['run']([old['Row'](1, 2, 3)], (0,)),
+                         new['run']([new['Row'](1, 2, 3)], (0,)))
 
 
 if __name__ == '__main__':

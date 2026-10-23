@@ -15,6 +15,12 @@ from .program import Program
 from .records import RecordSpecializer
 from .reductions import ShortReductions
 from .shortcircuit import ShortCircuit
+from .record_returns import InlineRecordReturns
+from .extrema import ExtremumLoops
+from .scalar_extrema import ScalarExtrema
+from .adjacent import AdjacentPairs
+from .extensions import AdjacentExtensions
+from .tuple_insertions import TupleInsertions
 
 
 IGNORED_DIRS = {".git", ".venv", ".cambc", "__pycache__", ".pytest_cache",
@@ -78,16 +84,30 @@ def optimize_source(source: str, options: Options | None = None, *, filename="<b
         program = Program({module_name: tree})
     # Use the indexed tree so class identity and source locations are unambiguous.
     tree = program.modules[module_name].tree
+    record_returns = InlineRecordReturns(program, module_name, options)
+    tree = ast.fix_missing_locations(record_returns.apply(tree))
     reductions = ShortReductions(program, module_name, options)
     tree = ast.fix_missing_locations(reductions.apply(tree))
     shortcircuit = ShortCircuit(program, module_name, options)
     tree = ast.fix_missing_locations(shortcircuit.apply(tree))
+    extrema = ExtremumLoops(program, module_name, options)
+    tree = ast.fix_missing_locations(extrema.apply(tree))
     records = RecordSpecializer(program, module_name, options)
     tree = records.visit(tree)
     rewriter = Rewriter(options, program=program, module=module_name)
     tree = ast.fix_missing_locations(rewriter.visit(tree))
+    extensions = AdjacentExtensions(program, module_name, options)
+    tree = ast.fix_missing_locations(extensions.apply(tree))
+    scalar = ScalarExtrema(program, module_name, options)
+    tree = ast.fix_missing_locations(scalar.apply(tree))
+    adjacent = AdjacentPairs(program, module_name, options)
+    tree = ast.fix_missing_locations(adjacent.apply(tree))
+    insertions = TupleInsertions(program, module_name, options)
+    tree = ast.fix_missing_locations(insertions.apply(tree))
     compile(tree, filename, "exec")
-    changes = [*reductions.changes, *shortcircuit.changes, *records.changes, *rewriter.changes]
+    changes = [*record_returns.changes, *reductions.changes, *shortcircuit.changes,
+                *extrema.changes, *records.changes, *rewriter.changes, *extensions.changes,
+                *scalar.changes, *adjacent.changes, *insertions.changes]
     if not changes:
         return SourceResult(source, warnings=warnings)
     emitted = ast.unparse(tree) + "\n"

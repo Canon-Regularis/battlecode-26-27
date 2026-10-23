@@ -95,6 +95,32 @@ class ShortCircuitTests(unittest.TestCase):
                 with self.subTest(consumer=consumer, mode=mode):
                     self.assertEqual(self.observe_lifetime(old, mode), self.observe_lifetime(new, mode))
 
+    def test_boolean_traceback_does_not_retain_input_container(self):
+        source = '''def run(items, events):
+    try:
+        any(item < 0 for item in items)
+    except ValueError as error:
+        saved = error
+    items = None
+    events.append('after')
+    return saved
+'''
+        result = optimize_source(source)
+        self.assertIn('short-circuit-loop', [c.pass_name for c in result.changes])
+        for code in (source, result.source):
+            events = []
+            class Truth:
+                def __bool__(self):
+                    raise ValueError('bool')
+            class Item:
+                def __lt__(self, other):
+                    return Truth()
+                def __del__(self):
+                    events.append('item-del')
+            error = execute(code)['run']([Item()], events)
+            self.assertEqual(events, ['item-del', 'after'])
+            del error
+
     def test_unsupported_scope_and_predicates(self):
         sources = [
             'def run(items, any):\n    return any(item < 0 for item in items)',

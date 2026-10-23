@@ -482,7 +482,7 @@ class CrossModuleTests(unittest.TestCase):
         (self.bot/'src/pkg/helpers.py').write_text('from dataclasses import dataclass\n@dataclass(frozen=True)\nclass Sample:\n    a:int\n    b:int\n')
         (self.bot/'src/pkg/consumer.py').write_text('from .helpers import Sample\ndef run():\n    return Sample(a=1,b=2)\n')
         report=optimize_folder(self.bot,self.root/'output')
-        self.assertEqual(report['pass_counts'],{'call-positional':1,'small-record-call':1})
+        self.assertEqual(report['pass_counts'],{'record-inline-return':1})
 
     def test_custom_dataclasses_module_does_not_get_stdlib_contract(self):
         (self.bot/'src/dataclasses.py').write_text('def dataclass(**kw):\n    return lambda cls: cls\n')

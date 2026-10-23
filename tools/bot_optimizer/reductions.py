@@ -10,6 +10,7 @@ import copy
 from .analysis import Bindings, arguments
 from .model import Change
 from .records import used_names
+from .helper_bindings import cache_helper_builtins
 
 
 class ShortReductions:
@@ -18,7 +19,7 @@ class ShortReductions:
         self.names = used_names(program.modules[module].tree)
         self.changes, self.helpers = [], []
         self.builtins = {name: self.fresh(name) for name in
-                         ('type', 'list', 'tuple', 'int', 'len', 'AttributeError')}
+                         ('type', 'list', 'tuple', 'int', 'len', 'AttributeError', 'IndexError')}
 
     def fresh(self, stem):
         index = 0
@@ -60,9 +61,11 @@ class ShortReductions:
             if function.type_params:
                 continue
             parts = list(ast.walk(function))
-            if any(isinstance(n, (ast.Global, ast.Nonlocal, ast.NamedExpr, ast.Delete,
+            if any(isinstance(n, (ast.Global, ast.Nonlocal, ast.NamedExpr,
                                   ast.Lambda, ast.Yield, ast.YieldFrom, ast.Await, ast.ClassDef,
                                   ast.Try, ast.TryStar))
+                   or isinstance(n, ast.Delete) and (n not in function.body or any(
+                       not isinstance(target, ast.Name) for target in n.targets))
                    or isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef)) and n is not function for n in parts):
                 continue
             bindings = Bindings(function.body)
@@ -87,6 +90,8 @@ class ShortReductions:
                             index += len(replacement)
                             continue
                 statement = function.body[index]
+                if isinstance(statement, ast.Delete):
+                    definite.difference_update(target.id for target in statement.targets)
                 if isinstance(statement, (ast.Assign, ast.AnnAssign)) and statement.value is not None:
                     targets_ = statement.targets if isinstance(statement, ast.Assign) else [statement.target]
                     for target in targets_:
@@ -123,9 +128,10 @@ class ShortReductions:
     if {typ}(route) is not {tup} or {length}(route) > 8 or not ({typ}(rows) is {seq} or {typ}(rows) is {tup}):
         return None
     size = {length}(rows)
+    lower = -size
     a = b = c = 0
     for index in route:
-        if {typ}(index) is not {integer} or not -size <= index < size:
+        if {typ}(index) is not {integer} or index < lower or index >= size:
             return None
         row = rows[index]
         if {typ}(row) is not record:
@@ -141,7 +147,26 @@ class ShortReductions:
         c += z
     return a, b, c
 '''
-        self.helpers.extend(ast.parse(source).body)
+        original_loop = source.replace('    lower = -size\n', '').replace(
+            'index < lower or index >= size', 'not -size <= index < size')
+        if 'helper-loop-shape' in self.options.disabled:
+            source = original_loop
+        elif 'native-index-guard' in self.options.disabled:
+            self.changes.append(Change('helper-loop-shape', triple[0].lineno, original_loop, source))
+        if 'native-index-guard' not in self.options.disabled:
+            previous = source
+            source = source.replace(f'    size = {length}(rows)\n', '').replace('    lower = -size\n', '')
+            source = source.replace(' or index < lower or index >= size:', ':')
+            source = source.replace(' or not -size <= index < size:', ':')
+            source = source.replace('        row = rows[index]\n',
+                f'        try:\n            row = rows[index]\n        except {self.builtins["IndexError"]}:\n            return None\n')
+            self.changes.append(Change('native-index-guard', triple[0].lineno, previous, source))
+        if 'wide-helper-limit' not in self.options.disabled:
+            previous = source
+            source = source.replace(f'{length}(route) > 8', f'{length}(route) > 16')
+            self.changes.append(Change('wide-helper-limit', triple[0].lineno, previous, source))
+        self.helpers.extend(cache_helper_builtins(ast.parse(source).body, self.builtins,
+            {'type', 'int', 'list', 'tuple', 'len'}, self.options, self.changes, triple[0].lineno))
         replacement = ast.parse(f'''{packed} = {helper}({rows}, {route}, {record})
 if {packed} is None:
     pass

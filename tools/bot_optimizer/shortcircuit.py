@@ -6,6 +6,7 @@ import copy
 from .analysis import Bindings, arguments
 from .model import Change
 from .records import used_names
+from .helper_bindings import cache_helper_builtins
 
 
 class ShortCircuit:
@@ -110,14 +111,15 @@ class ShortCircuit:
             finally:
                 del value
         except {b['BaseException']}:
-            del item
+            del item, items
             raise
     return {consumer == 'all'}
 '''
             # Predicate exceptions occur inside the original generator; boolean
             # exceptions occur in the consumer. Explicit cleanup preserves that
             # distinction and avoids retaining the item in a bool-error traceback.
-            self.helpers.extend(ast.parse(source).body)
+            self.helpers.extend(cache_helper_builtins(ast.parse(source).body, self.builtins,
+                {'type'}, self.options, self.changes, node.lineno))
             self.cache[key] = helper
         replacement = ast.Call(func=ast.Name(id=self.cache[key], ctx=ast.Load()),
                                args=[copy.deepcopy(comp.iter)], keywords=[])

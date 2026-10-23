@@ -13,10 +13,18 @@ short integer reductions and long-input, float, bigint and callback fallbacks.
 `--suite shortcircuit` checks generated `any`/`all` loops, custom iterator protocols,
 mutation, predicate exceptions and boolean-error finalizer lifetimes.
 
-The final audited compiler saves **20.30–20.31% collision, 22.50% corners, and
+The earlier audited milestone saves **20.30–20.31% collision, 22.50% corners, and
 22.99–23.01% lanes** at the equal-work planner boundary. Repeated measurements,
 work counts, normal-budget checks and source fingerprints are archived in
 [`twenty-percent-results.json`](twenty-percent-results.json).
+
+The completed [30% investigation](thirty-percent.md) now verifies **30.44–30.45%
+collision, 32.61% corners, and 33.11–33.12% lanes** at the same equal-work planner
+boundary. It includes Wasm-guided loop refinements, 166 compiler tests, 71 bot tests,
+240 exact planner scenarios, 47 guest fixtures, explicit expansion counts and
+matching three-round normal-budget replays. Evidence and source provenance are in
+[`thirty-percent-results.json`](thirty-percent-results.json); `--suite thirty`
+exercises the new allocation, extrema, adjacency, insertion and cleanup paths.
 
 Unlike `benchmarks/python-fuel`, these alternatives are **produced by the
 optimiser**, not written by hand.

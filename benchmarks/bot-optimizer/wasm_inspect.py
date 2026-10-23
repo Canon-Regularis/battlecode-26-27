@@ -12,6 +12,10 @@ import re
 
 
 TARGETS = {'builtin_sum', 'gen_iternext', 'gen_send_ex2', '_PyEval_EvalFrameDefault',
+           '_PyDict_LoadGlobal', '_PyEvalFramePushAndInit', 'dict_subscript',
+           'list_extend_iter_lock_held', 'pairwise_next', 'float_div',
+           'list_item', 'list_subscript', 'tupleitem', 'tuplesubscript',
+           'min_max', 'PyObject_RichCompareBool', 'float_add', 'float_mul', '_PyObject_MakeTpCall',
            'PyObject_GetAttr', '_PyObject_GenericGetAttrWithDict', 'PyObject_Vectorcall',
            'type_call', 'object_new', 'dict_new', 'insertdict', 'long_add', 'map_next',
            'attrgetter_call', 'PyObject_GenericSetAttr', '_PyObject_GenericSetAttrWithDict'}
