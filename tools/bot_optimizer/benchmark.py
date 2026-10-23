@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 from .compiler import optimize_source
-from .model import Options
+from .model import Options, PASS_DESCRIPTIONS
 from .runtime import check_logs, executable, replay_logs, run_command
 
 
@@ -19,6 +19,7 @@ def summarize(replay, expected_names):
     check_logs(logs)
     pairs = defaultdict(list)
     metadata = []
+    runtime = []
     for team in ("team-a.stdout", "team-b.stdout"):
         text = logs.get(team, "")
         completed = 0
@@ -27,6 +28,8 @@ def summarize(replay, expected_names):
         for line in text.splitlines():
             if line.startswith("BCOPT_META "):
                 metas.append(json.loads(line[len("BCOPT_META "):]))
+            elif line.startswith("BCOPT_RUNTIME "):
+                runtime.append(json.loads(line[len("BCOPT_RUNTIME "):]))
             elif line.startswith("BCOPT_PAIR "):
                 record = json.loads(line[len("BCOPT_PAIR "):])
                 names[record["name"]] += 1
@@ -38,11 +41,12 @@ def summarize(replay, expected_names):
         if completed != 1 or len(metas) != 1 or names != Counter(expected_names):
             raise ValueError(f"Incomplete benchmark in {team}: done={completed}, pairs={dict(names)}")
         metadata.extend(metas)
-    return {"replay": Path(replay).name, "metadata": metadata,
+    return {"replay": Path(replay).name, "metadata": metadata, "runtime": runtime,
             "pairs": dict(pairs), "minimum_ratio": min(r["ratio"] for rs in pairs.values() for r in rs)}
 
 
-def benchmark(output, *, maps=("collision", "corners"), cambc=None, suite="core", options=None):
+def benchmark(output, *, maps=("collision", "corners"), cambc=None, suite="core", options=None,
+              baseline_source=None):
     output = Path(output).resolve()
     if output.exists():
         raise ValueError(f"Output already exists: {output}")
@@ -51,11 +55,15 @@ def benchmark(output, *, maps=("collision", "corners"), cambc=None, suite="core"
         raise ValueError("At least one map is required")
     cli = executable(cambc)
     fixtures = Path(__file__).resolve().parents[2] / "benchmarks/bot-optimizer/src"
-    if suite not in {"core", "specialization"}:
+    if suite not in {"core", "specialization", "advanced", "lifetimes", "wrappers", "deferred", "reductions", "shortcircuit"}:
         raise ValueError(f"Unknown benchmark suite: {suite}")
     options = options or Options()
-    source = (fixtures / ("kernels.py" if suite == "core" else "specialization.py")).read_text()
+    source = (fixtures / {"core": "kernels.py", "specialization": "specialization.py",
+                         "advanced": "advanced.py", "lifetimes": "lifetimes.py",
+                         "wrappers": "wrappers.py", "deferred": "deferred.py",
+                         "reductions": "reductions.py", "shortcircuit": "shortcircuit.py"}[suite]).read_text()
     result = optimize_source(source, options)
+    baseline = Path(baseline_source).read_text() if baseline_source is not None else source
     # Read the literal case inventory without executing SDK-dependent bot code.
     import ast
     tree = ast.parse(source)
@@ -65,11 +73,14 @@ def benchmark(output, *, maps=("collision", "corners"), cambc=None, suite="core"
     src = bot / "src"
     src.mkdir(parents=True)
     shutil.copy2(fixtures / "main.py", src / "main.py")
-    (src / "original.py").write_text(source)
+    (src / "original.py").write_text(baseline)
     (src / "optimized.py").write_text(result.source)
-    report = {"target": "cambc 3.0.4", "suite": suite, "options": options.to_dict(),
+    report = {"status": "running", "target": "cambc 3.0.4", "suite": suite, "options": options.to_dict(),
               "source_sha256": hashlib.sha256(source.encode()).hexdigest(),
+              "baseline_source_sha256": hashlib.sha256(baseline.encode()).hexdigest(),
+              "baseline": str(baseline_source) if baseline_source is not None else "unmodified source",
               "compiler": result.diagnostics(), "datasets": []}
+    (output / "results.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     for index, game_map in enumerate(maps):
         destination = output / f"replays-{index}"
         run_command([cli, "run", str(bot), str(bot), "--release", "--rounds", "1",
@@ -82,6 +93,8 @@ def benchmark(output, *, maps=("collision", "corners"), cambc=None, suite="core"
         report["datasets"].append(dataset)
         # Retain completed maps even if a later map fails.
         (output / "results.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    report["status"] = "complete"
+    (output / "results.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     return report
 
 
@@ -90,11 +103,15 @@ def main(argv=None):
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--maps", default="collision,corners")
     parser.add_argument("--cambc")
-    parser.add_argument("--suite", choices=("core", "specialization"), default="core")
+    parser.add_argument("--baseline-source", type=Path,
+                        help="Use an existing equivalent kernel implementation as baseline (not re-optimised)")
+    parser.add_argument("--disable", action="append", choices=sorted(PASS_DESCRIPTIONS), default=[])
+    parser.add_argument("--suite", choices=("core", "specialization", "advanced", "lifetimes", "wrappers", "deferred", "reductions", "shortcircuit"), default="core")
     args = parser.parse_args(argv)
     try:
         report = benchmark(args.output, maps=[m.strip() for m in args.maps.split(",") if m.strip()],
-                           cambc=args.cambc, suite=args.suite)
+                           cambc=args.cambc, suite=args.suite, baseline_source=args.baseline_source,
+                           options=Options(disabled=frozenset(args.disable)))
         for dataset in report["datasets"]:
             print(dataset["map"] + ":")
             for name, records in dataset["pairs"].items():

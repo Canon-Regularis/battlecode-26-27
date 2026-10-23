@@ -55,21 +55,27 @@ uv run python -m unittest discover -s bots/economy-generated/tests -v
 | Pass | Recognised pattern / guard |
 | --- | --- |
 | `integer-square` | Local exact-integer `x**2` → `x*x`; e.g. induction variables from an unshadowed `range` |
-| `native-map` | Eligible `sum(abs(x) for x in range/tuple)` → native `map`; no filters or shadowed callbacks |
+| `native-map` | Exact-integer `abs` generators → native `map` in `sum`, `min`, `max`, `any`, `all`, `list`, `tuple`; no filters or shadowed callbacks |
 | `bounded-sum` | Pure exact-integer sum generator → list comprehension, with a statically bounded `range` |
 | `mask-count` | `len(board.positions())` → `board.count()` |
 | `mask-empty` | `bool(board.positions())` → `not board.is_empty()` |
 | `mask-filter` | `[p for p in a.positions() if b.is_set(p)]` → `(a & b).positions()` |
 | `mask-intersection-count` | `sum(1 for p in a.positions() if b.is_set(p))` → `(a & b).count()` |
 | `native-key` | Eligible `key=lambda p: field.get(p)` → `key=field.get`, over a fresh SDK positions list |
-| `native-itemgetter` | Fixed-index lambda keys → precomputed native `itemgetter` |
-| `native-attrgetter` | Attribute-only lambda keys → precomputed native `attrgetter`, including nested paths |
+| `native-itemgetter` | Fixed-index lambda keys → precomputed native `itemgetter`, including multi-index tuple keys |
+| `native-attrgetter` | Attribute-only lambda keys → precomputed native `attrgetter`, including nested paths and multi-attribute tuple keys |
 | `identity-reduction` | `sum(x for x in values)` → `sum(values)`; also streaming `min`, `max`, `any`, `all` |
 | `bounded-reduction` | Pure integer reductions over known immutable tuples; also bounded integer `min`/`max` |
 | `call-positional` | Convert a leading sequence of keywords to positional arguments at resolved function/constructor calls |
 | `inline-integer-helper` | Inline a small resolved arithmetic-only helper when all supplied inputs are proven exact integers |
-| `record-bulk-init` | Populate an eligible frozen dataclass using one native dictionary update, with subclass fallback |
+| `record-bulk-init` | Populate an eligible frozen dataclass using direct dictionary stores, with subclass fallback |
+| `record-call` | Cached-allocator factories for resolved, hook-free frozen records with 4–20 fields |
+| `short-int-reductions` | Fuse three adjacent field sums for exact integer inputs and tuple routes of at most eight indices; retain original statements as fallback |
+| `short-circuit-loop` | Direct `any`/`all` comparison loops for exact list/tuple inputs held in noncaptured locals; preserve custom iterator fallback, PEP 479, boolean exceptions and cleanup |
 | `scalar-record` | Eliminate a primitive-valued temporary record used only by an immediately following return expression |
+| `integer-membership` | Exact-integer membership in 4–4,096 literal integers → CPython-folded frozen constant set |
+| `sdk-state-expression` | Share `Champion.state()` only within callback-free, same-receiver boolean expressions, retaining lazy evaluation |
+| `sdk-state-mask` | Combine adjacent same-polarity SDK predicates into native any/all flag tests, using build-time masks |
 
 Key passes cover unshadowed `min`, `max`, `sorted`, and eligible list `.sort` calls.
 The SDK-method pass also recognises a proven `Vec2.chebyshev_distance` callback.
@@ -85,6 +91,9 @@ The materialisation limit is **4,096 elements**, configurable through
 `--max-materialize`. A limit of `0` disables nonempty materialisations. No blanket
 generator replacement occurs in `any`, `all`, or other short-circuiting searches.
 Floating-point reductions are not reassociated or materialised by this pass.
+Bounded integer reductions may also contain total integer predicates: comparisons,
+bit tests, `not`, `and`, and `or`. Callback, division and other potentially raising
+filters are preserved. `any`/`all` are never eagerly materialised.
 
 ### Whole-folder specialisation
 
@@ -102,12 +111,18 @@ user callbacks or unproven operand types.
 
 Frozen-record bulk initialisation requires a plain, non-inheriting dataclass with
 ordinary fields, no defaults/factories/hooks/custom methods/slots, and at least
-**four fields** (`--min-bulk-fields`). Exact instances use `self.__dict__.update`;
-subclasses execute the original per-field `object.__setattr__` operations so
+**four fields** (`--min-bulk-fields`). Exact instances with an empty, exact dict
+capture `self.__dict__` once and store fields directly, avoiding a temporary
+dictionary. Subclasses, nonempty dictionaries and dict subclasses execute the
+original per-field `object.__setattr__` operations so
 subclass descriptors still work. The class type, field values, freezing, equality,
 hashing, constructor argument names/annotations and generated docstring are
 preserved. Arbitrary record values are allowed: field annotations are used to
 identify layout, **not** assumed to prove the runtime value types.
+Repeated `__init__` calls retain dictionary aliases, extra attributes and ordered
+replacement/finalization. The fallback releases its temporary dict reference
+before any setter: a field finalizer may replace the dict, and other finalizers
+must not be delayed. Replacing the dictionary outright is not equivalent.
 
 Scalar replacement is narrower: a temporary must not escape, and its supplied
 values must be proven finalizer-free primitives. Unknown field objects, captures,
@@ -144,8 +159,16 @@ proof system for arbitrary reflective Python:
 - Annotations are **not trusted by default**. `--trust-annotations` explicitly
   treats supported SDK/int/integer-tuple parameter annotations as exact-type contracts, not
   merely Python subtype hints. Use it only if those contracts are true.
-- Dynamic state is not cached or hoisted. SDK-owned masks are never mutated by a
+- Dynamic state is not cached across decisions or hoisted across effects. SDK-owned masks are never mutated by a
   generated rewrite. Native masks remain in their SDK representation.
+  The narrow state-expression pass shares a snapshot **inside one boolean
+  expression**, never across statements, actions, arbitrary callbacks or turns.
+  A query remains at the first executed predicate on each path; definitions are
+  reused only where they dominate a later predicate. Different receivers,
+  unknown truth conversions, awaits and user callbacks prevent this rewrite.
+  The dependent `sdk-state-mask` pass uses `intersects` for any-flag tests and
+  membership for all-flag tests; negations preserve their distinct meanings.
+  Its immutable masks are prepared at module initialization, not rebuilt per test.
 - Fuel readings, allocation identity, resource exhaustion, traceback text and
   implicit suspension timing can differ. There is no promise of identical turns
   when one version runs out of fuel. Fuel-aware search can intentionally make
@@ -235,6 +258,39 @@ the optimiser:
 - [`PythonPerformance.md`](../../docs/cambc/PythonPerformance.md)
 - [`PythonSDKPatterns.md`](../../docs/cambc/PythonSDKPatterns.md)
 - [`python-fuel` probe and losing alternatives](../../benchmarks/python-fuel/README.md)
+
+## Additional measured fuel work
+
+The follow-up adds seven independently motivated improvements: direct record stores,
+compound native keys, filtered integer reductions, more native-map consumers,
+constant integer membership, expression-local SDK state sharing and native flag
+groups. See
+[`fuel-followup.md`](../../benchmarks/bot-optimizer/fuel-followup.md) for reproducible
+commands, before/after fuel, cold/warm results, losing alternatives and limits.
+Those measurements predate recovery of the economy-bot source. The subsequent
+[`economy-followup.md`](../../benchmarks/bot-optimizer/economy-followup.md)
+investigation reproduces its historical baseline exactly and extends it with
+measured small-record construction improvements.
+
+Additional conservative passes (individually disabled with `--disable`):
+
+- `small-record-call`: fresh exact two/three-field frozen records use generated
+  direct-store factories. Public constructors remain intact; defaults, hooks,
+  slots, unknown callees and invalid calls retain their original path. Larger
+  factories lost in warmed probes and are excluded.
+- `record-allocator-cache`: prebind the fixed builtin allocator used by these
+  factories. The competing probe gains about 8% warm versus the uncached factory
+  but loses about 1% on the first call. Disable independently for cold-heavy code.
+- `return-shape`: infer immutable/SDK return facts from straight-line function
+  implementations and acyclic source imports, enabling existing passes through
+  wrappers. Annotations and mutable container contents are not proofs.
+- `constant-facts`: infer stable module integer values, retaining ordinary reads
+  except where a consuming transformation proves they can be removed.
+- `loop-integer-facts`: retain exact-int types for already-bound locals only when
+  every loop write preserves that type. Initial values are not loop invariants.
+- `integer-mod-mask`: exact integers modulo a proven positive power of two
+  (2 through 2**30) use a mask, including negative dividends. Effectful divisor
+  expressions stay evaluated; unknown numeric protocols remain unchanged.
 
 ## Layout
 

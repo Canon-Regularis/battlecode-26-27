@@ -13,6 +13,8 @@ from .model import Options, SourceResult
 from .passes import Rewriter
 from .program import Program
 from .records import RecordSpecializer
+from .reductions import ShortReductions
+from .shortcircuit import ShortCircuit
 
 
 IGNORED_DIRS = {".git", ".venv", ".cambc", "__pycache__", ".pytest_cache",
@@ -76,12 +78,16 @@ def optimize_source(source: str, options: Options | None = None, *, filename="<b
         program = Program({module_name: tree})
     # Use the indexed tree so class identity and source locations are unambiguous.
     tree = program.modules[module_name].tree
+    reductions = ShortReductions(program, module_name, options)
+    tree = ast.fix_missing_locations(reductions.apply(tree))
+    shortcircuit = ShortCircuit(program, module_name, options)
+    tree = ast.fix_missing_locations(shortcircuit.apply(tree))
     records = RecordSpecializer(program, module_name, options)
     tree = records.visit(tree)
     rewriter = Rewriter(options, program=program, module=module_name)
     tree = ast.fix_missing_locations(rewriter.visit(tree))
     compile(tree, filename, "exec")
-    changes = [*records.changes, *rewriter.changes]
+    changes = [*reductions.changes, *shortcircuit.changes, *records.changes, *rewriter.changes]
     if not changes:
         return SourceResult(source, warnings=warnings)
     emitted = ast.unparse(tree) + "\n"

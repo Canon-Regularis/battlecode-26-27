@@ -7,7 +7,7 @@ rebinding, decorators, inheritance and unsupported record layouts stay unknown.
 import ast
 from dataclasses import dataclass, field
 
-from .analysis import Bindings, arguments
+from .analysis import Bindings, arguments, infer
 
 
 def body_without_docstring(body):
@@ -77,6 +77,13 @@ class Record:
 
 
 @dataclass
+class IntegerConstant:
+    module: str
+    node: ast.AST
+    value: int
+
+
+@dataclass
 class Module:
     name: str
     tree: ast.Module
@@ -89,9 +96,14 @@ class Module:
 class Program:
     def __init__(self, trees, packages=()):
         self.modules = {name: Module(name, tree, name in packages) for name, tree in trees.items()}
+        self.explicit_attribute_mutation = any(
+            isinstance(node, ast.Attribute) and node.attr in {'__setattr__', '__delattr__'}
+            for tree in trees.values() for node in ast.walk(tree))
         self.functions = {}
         self.records = {}
         self.signatures = {}
+        self.return_facts = {}
+        self.constants = {}
         for module in self.modules.values():
             self._symbols(module)
         # Module __getattr__ can supply a different callable during cyclic or
@@ -102,6 +114,65 @@ class Program:
             return
         for module in self.modules.values():
             self._definitions(module)
+        self._infer_returns()
+
+    def _infer_returns(self):
+        """Implementation-derived return facts, never annotation promises.
+
+        Only straight-line leaf/wrapper functions qualify. Calls still execute in
+        place, including their exceptions and effects. A returned immutable value
+        or exact SDK wrapper has the same type even if an unrelated call has side
+        effects. No mutable container contents or object fields are inferred.
+        """
+        if self._cyclic_imports():
+            return
+        for _ in range(len(self.functions)):
+            changed = False
+            for qualified, function in self.functions.items():
+                if qualified in self.return_facts:
+                    continue
+                node = function.node
+                body = body_without_docstring(node.body)
+                bindings = Bindings(body)
+                local = set(bindings.counts) | {arg.arg for arg in arguments(node)}
+                if (bindings.external or not body or not isinstance(body[-1], ast.Return)
+                        or any(isinstance(n, (ast.NamedExpr, ast.Yield, ast.YieldFrom, ast.Await))
+                               for n in ast.walk(node))):
+                    continue
+
+                def resolve(expression):
+                    root = expression
+                    while isinstance(root, ast.Attribute):
+                        root = root.value
+                    if isinstance(root, ast.Name) and root.id in local:
+                        return None
+                    return self.resolve(function.module, expression)
+
+                facts = {}
+                valid = True
+                for statement in body[:-1]:
+                    if isinstance(statement, (ast.Assign, ast.AnnAssign)):
+                        targets = statement.targets if isinstance(statement, ast.Assign) else [statement.target]
+                        if not all(isinstance(target, ast.Name) for target in targets):
+                            valid = False
+                            break
+                        value = infer(statement.value, facts, resolve, self.return_facts)
+                        for target in targets:
+                            facts[target.id] = value
+                    elif not isinstance(statement, (ast.Expr, ast.Pass)):
+                        valid = False
+                        break
+                if not valid:
+                    continue
+                result = infer(body[-1].value, facts, resolve, self.return_facts)
+                if result.kind not in {'int', 'tuple', 'range', 'board', 'field', 'vec', 'champion'}:
+                    continue
+                if 'cambc' in self.modules and result.kind in {'board', 'field', 'vec', 'champion'}:
+                    continue
+                self.return_facts[qualified] = result
+                changed = True
+            if not changed:
+                break
 
     def _symbols(self, module):
         bindings = Bindings(module.tree.body)
@@ -112,6 +183,18 @@ class Program:
             if isinstance(node, (ast.FunctionDef, ast.ClassDef)) and node.name in stable:
                 module.symbols[node.name] = f"{module.name}.{node.name}"
                 module.declarations[node.name] = node
+            elif isinstance(node, (ast.Assign, ast.AnnAssign)):
+                targets = node.targets if isinstance(node, ast.Assign) else [node.target]
+                if len(targets) != 1 or not isinstance(targets[0], ast.Name) or targets[0].id not in stable:
+                    continue
+                try:
+                    value = ast.literal_eval(node.value)
+                except (ValueError, TypeError, SyntaxError):
+                    continue
+                if type(value) is int:
+                    name = targets[0].id
+                    module.symbols[name] = f"{module.name}.{name}"
+                    module.declarations[name] = node
             elif isinstance(node, ast.Import):
                 for alias in node.names:
                     name = alias.asname or alias.name.split(".")[0]
@@ -192,6 +275,8 @@ class Program:
                         signature = Signature.from_function(init, method=True)
                         if signature:
                             self.signatures[qualified] = signature
+            elif isinstance(node, (ast.Assign, ast.AnnAssign)):
+                self.constants[qualified] = IntegerConstant(module.name, node, ast.literal_eval(node.value))
 
     def _record(self, module, node, qualified):
         if "dataclasses" in self.modules:
@@ -311,7 +396,7 @@ class Program:
         module = self.modules[module_name]
         if root.id in module.imports:
             target = self.resolve(module_name, expression)
-            definition = self.functions.get(target) or self.records.get(target)
+            definition = self.functions.get(target) or self.records.get(target) or self.constants.get(target)
             if definition is None or "__getattr__" in self.modules[definition.module].declarations:
                 return False
             # Cyclic initialisation can expose a module before its declarations
@@ -356,4 +441,5 @@ class Program:
     def diagnostics(self):
         return {"modules": len(self.modules), "resolved_functions": len(self.functions),
                 "resolved_records": len(self.records), "resolved_signatures": len(self.signatures),
-                "dynamic_module_attributes": self.dynamic_modules}
+                "dynamic_module_attributes": self.dynamic_modules,
+                "inferred_returns": len(self.return_facts)}

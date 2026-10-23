@@ -101,9 +101,9 @@ class RewriteTests(unittest.TestCase):
         for expression in ("range(0)", "range(10, -20, -2)", "range(2, 1)"):
             self.equivalent(f"def run():\n    return sum(x*x for x in {expression})", [()])
 
-    def test_unbounded_filtered_and_effectful_generators_left_alone(self):
+    def test_unbounded_and_effectful_generators_left_alone(self):
         for expression in ("sum(x*x for x in range(n))", "sum(x*x for x in range(10000))",
-                           "sum(x*x for x in range(10) if x)",
+                           "sum(x*x for x in range(10) if f(x))",
                            "sum(f(x) for x in range(10))", "any(x*x for x in range(10))",
                            "sum(1/x for x in range(10))"):
             result = self.optimize(f"def run(n, f):\n    return {expression}")

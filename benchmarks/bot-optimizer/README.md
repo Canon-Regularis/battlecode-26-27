@@ -1,5 +1,23 @@
 # Generated-code fuel benchmark
 
+The recovered economy investigation is documented in
+[`economy-followup.md`](economy-followup.md), including exact historical baseline
+reproduction, competing allocation/layout/integer experiments, new generic
+passes, and combined whole-planner measurements. `--suite wrappers` exercises
+small-record factories, inferred wrapper returns and integer loop facts.
+
+The completed [20% investigation](twenty-percent.md) includes actual Wasm
+disassembly, rejected prototypes, and runtime-guarded candidates. `--suite deferred`
+tests generated allocation/override/finalizer paths; `--suite reductions` tests
+short integer reductions and long-input, float, bigint and callback fallbacks.
+`--suite shortcircuit` checks generated `any`/`all` loops, custom iterator protocols,
+mutation, predicate exceptions and boolean-error finalizer lifetimes.
+
+The final audited compiler saves **20.30–20.31% collision, 22.50% corners, and
+22.99–23.01% lanes** at the equal-work planner boundary. Repeated measurements,
+work counts, normal-budget checks and source fingerprints are archived in
+[`twenty-percent-results.json`](twenty-percent-results.json).
+
 Unlike `benchmarks/python-fuel`, these alternatives are **produced by the
 optimiser**, not written by hand.
 
@@ -147,3 +165,16 @@ probe observed roughly 13.5–14.4% savings. This is evidence of a real improvem
 on this bot, **not a guaranteed saving for arbitrary bots**. No production source
 or existing `bots/economy-optimized/` output was overwritten; the verified new
 submission copy is `bots/economy-optimized-v2/`.
+
+## Fuel follow-up
+
+The [2026-10-22/23 follow-up](fuel-followup.md) adds direct record stores,
+compound native keys, filtered integer reductions, more native-map consumers,
+constant-integer membership and expression-local native SDK state optimizations.
+It includes cold/warm competing implementations, incremental comparisons against
+the previous compiler, generated combined kernels, whole starter-bot turn fuel,
+normal-budget and held-out checks, and documented losing cases. Raw measured
+reports for the audited implementation are archived in
+[fuel-followup-guarded-results.json](fuel-followup-guarded-results.json); the initial
+[exploratory archive](fuel-followup-results.json) is retained separately.
+No new economy-bot planner gain is claimed: its source is absent in this checkout.

@@ -170,7 +170,7 @@ def annotation_fact(node, resolve):
             "cambc.Vec2": VEC}.get(name, UNKNOWN)
 
 
-def infer(node, facts, resolve):
+def infer(node, facts, resolve, returns=None):
     if isinstance(node, ast.Name):
         return facts.get(node.id, UNKNOWN)
     if isinstance(node, ast.Constant):
@@ -178,11 +178,11 @@ def infer(node, facts, resolve):
     if isinstance(node, (ast.List, ast.Tuple)):
         if any(isinstance(item, ast.Starred) for item in node.elts):
             return Fact("tuple" if isinstance(node, ast.Tuple) else "sequence")
-        items = [infer(item, facts, resolve).kind for item in node.elts]
+        items = [infer(item, facts, resolve, returns).kind for item in node.elts]
         item = items[0] if items and len(set(items)) == 1 else "unknown"
         return Fact("tuple" if isinstance(node, ast.Tuple) else "sequence", item=item, size=len(items))
     if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub, ast.Invert)):
-        operand = infer(node.operand, facts, resolve)
+        operand = infer(node.operand, facts, resolve, returns)
         if operand.kind == "int":
             if operand.value is not None:
                 value = {ast.UAdd: lambda x: x, ast.USub: lambda x: -x,
@@ -192,7 +192,7 @@ def infer(node, facts, resolve):
         if operand.kind == "board" and isinstance(node.op, ast.Invert):
             return BOARD
     if isinstance(node, ast.BinOp):
-        left, right = infer(node.left, facts, resolve), infer(node.right, facts, resolve)
+        left, right = infer(node.left, facts, resolve, returns), infer(node.right, facts, resolve, returns)
         if left.kind == right.kind == "int" and isinstance(node.op, (
             ast.Add, ast.Sub, ast.Mult, ast.FloorDiv, ast.Mod, ast.LShift,
             ast.RShift, ast.BitOr, ast.BitAnd, ast.BitXor,
@@ -202,10 +202,12 @@ def infer(node, facts, resolve):
             return BOARD
     if isinstance(node, ast.Call) and not any(isinstance(a, ast.Starred) for a in node.args):
         name = resolve(node.func)
+        if returns and name in returns:
+            return returns[name]
         if name in SDK_RETURNS:
             return SDK_RETURNS[name]
         if name == "range" and not node.keywords and 1 <= len(node.args) <= 3:
-            args = [infer(a, facts, resolve) for a in node.args]
+            args = [infer(a, facts, resolve, returns) for a in node.args]
             size = None
             if all(a.kind == "int" and a.value is not None for a in args):
                 try:
@@ -216,18 +218,18 @@ def infer(node, facts, resolve):
             # Invalid arguments raise before any loop body can execute.
             return Fact("range", item="int", size=size)
         if name == "abs" and len(node.args) == 1 and not node.keywords:
-            return INT if infer(node.args[0], facts, resolve).kind == "int" else UNKNOWN
+            return INT if infer(node.args[0], facts, resolve, returns).kind == "int" else UNKNOWN
         if name == "len" and len(node.args) == 1 and not node.keywords:
             # The builtin normalises __len__/__index__ results to an exact int.
             return INT
         if name == "tuple" and not node.keywords and len(node.args) <= 1:
             if not node.args:
                 return Fact("tuple", size=0)
-            iterable = infer(node.args[0], facts, resolve)
+            iterable = infer(node.args[0], facts, resolve, returns)
             if iterable.kind in {"range", "tuple"}:
                 return Fact("tuple", item=iterable.item, size=iterable.size)
         if isinstance(node.func, ast.Attribute):
-            owner = infer(node.func.value, facts, resolve).kind
+            owner = infer(node.func.value, facts, resolve, returns).kind
             method = node.func.attr
             if owner == "board":
                 if method == "positions":
@@ -262,3 +264,16 @@ def pure_integer(node, facts, resolve):
     return (isinstance(node, ast.Call) and resolve(node.func) == "abs"
             and not node.keywords and len(node.args) == 1
             and pure_integer(node.args[0], facts, resolve))
+
+
+def pure_condition(node, facts, resolve):
+    """Only total, callback-free integer predicates; preserve short circuiting."""
+    if pure_integer(node, facts, resolve):
+        return True
+    if isinstance(node, ast.UnaryOp) and isinstance(node.op, ast.Not):
+        return pure_condition(node.operand, facts, resolve)
+    if isinstance(node, ast.BoolOp):
+        return all(pure_condition(value, facts, resolve) for value in node.values)
+    return (isinstance(node, ast.Compare)
+            and all(isinstance(op, (ast.Eq, ast.NotEq, ast.Lt, ast.LtE, ast.Gt, ast.GtE)) for op in node.ops)
+            and all(pure_integer(value, facts, resolve) for value in [node.left, *node.comparators]))

@@ -4,6 +4,16 @@ from dataclasses import asdict, dataclass, field
 
 
 PASS_DESCRIPTIONS = {
+    "short-circuit-loop": "Use guarded direct loops for any/all element comparisons, preserving iterator and exception fallbacks.",
+    "short-int-reductions": "Fuse three indexed reductions of up to eight rows after exact container, record and integer guards.",
+    "deferred-record": "Compatibility disable switch for the archived, rejected deferred-record prototype (inactive).",
+    "record-call": "Use cached-allocation factories for resolved four-to-twenty-field frozen records.",
+    "record-allocator-cache": "Prebind the immutable builtin allocator used by small-record factories.",
+    "constant-facts": "Infer stable module integer constants across acyclic imports.",
+    "loop-integer-facts": "Retain exact-int facts for already-bound locals with integer-preserving loop writes.",
+    "integer-mod-mask": "Replace exact-int modulo a proven small positive power of two with a bit mask.",
+    "return-shape": "Infer exact immutable/SDK return shapes from straight-line source wrappers across modules.",
+    "small-record-call": "Specialise resolved two/three-field frozen-record construction without changing public constructors.",
     "integer-square": "Replace exact-integer local x**2 with x*x.",
     "native-map": "Replace a pure integer generator callback with native map.",
     "bounded-sum": "Materialise a bounded pure integer sum generator.",
@@ -18,8 +28,11 @@ PASS_DESCRIPTIONS = {
     "bounded-reduction": "Materialise bounded pure integer reductions over immutable tuples.",
     "call-positional": "Use positional arguments at statically resolved call sites.",
     "inline-integer-helper": "Inline resolved small arithmetic helpers with exact integer inputs.",
-    "record-bulk-init": "Initialise eligible frozen records with one native dictionary update.",
+    "record-bulk-init": "Initialise eligible frozen records with allocation-free direct dictionary stores.",
     "scalar-record": "Eliminate a temporary record used only by an immediate return expression.",
+    "integer-membership": "Use a frozen constant set for exact-integer membership in literal integer tables.",
+    "sdk-state-expression": "Share champion state queries inside callback-free boolean expressions.",
+    "sdk-state-mask": "Use precomputed native flag masks for grouped champion state predicates.",
 }
 
 

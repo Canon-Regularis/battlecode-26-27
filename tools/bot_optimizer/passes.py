@@ -4,7 +4,7 @@ import ast
 import copy
 
 from .analysis import (
-    Bindings, Fact, INT, UNKNOWN, annotation_fact, arguments, infer, pure_integer,
+    Bindings, Fact, INT, UNKNOWN, annotation_fact, arguments, infer, pure_integer, pure_condition,
 )
 from .model import Change, Options
 
@@ -30,6 +30,8 @@ class Rewriter(ast.NodeTransformer):
         self.bindings = None
         self.helper_imports = {}
         self.helper_keys = {}
+        self.state_masks = {}
+        self.record_factories = {}
         self.used_names = set()
 
     def fresh_name(self, stem):
@@ -58,7 +60,27 @@ class Rewriter(ast.NodeTransformer):
         return None
 
     def fact(self, node):
-        return infer(node, self.facts, self.resolve)
+        if self.program and "constant-facts" not in self.options.disabled:
+            owner = self
+            before = self.function_lines[-1] if self.function_lines else getattr(node, 'lineno', 0)
+
+            class Constants(ast.NodeTransformer):
+                def visit_Name(self, expression):
+                    constant = owner.program.constants.get(owner.resolve(expression))
+                    if constant and owner.program.available(owner.module, expression, before):
+                        return ast.copy_location(ast.Constant(constant.value), expression)
+                    return expression
+
+                def visit_Attribute(self, expression):
+                    replacement = self.visit_Name(expression)
+                    return replacement if replacement is not expression else self.generic_visit(expression)
+
+            # Only the analysis tree is substituted. Ordinary global reads stay
+            # in generated code unless a specific pass proves their elimination.
+            node = Constants().visit(copy.deepcopy(node))
+        returns = (self.program.return_facts if self.program and
+                   "return-shape" not in self.options.disabled else None)
+        return infer(node, self.facts, self.resolve, returns)
 
     def change(self, name, old, new):
         if name in self.options.disabled:
@@ -83,6 +105,11 @@ class Rewriter(ast.NodeTransformer):
                 self.used_names.update(Bindings(child.body).counts)
         self.bindings = Bindings(node.body)
         self.used_names.update(self.bindings.counts)
+        if self.program:
+            # Imported record fields can become helper parameters later. Reserve
+            # all of them before choosing any shared factory/global alias.
+            for record in self.program.records.values():
+                self.used_names.update(record.fields)
         self.bindings.external.update(name for n in ast.walk(node) if isinstance(n, ast.Global)
                                       for name in n.names)
         scope = dict.fromkeys(self.bindings.counts)
@@ -98,8 +125,34 @@ class Rewriter(ast.NodeTransformer):
                    for kind, alias in self.helper_imports.items()]
         helpers.extend(ast.Assign(targets=[ast.Name(id=name, ctx=ast.Store())], value=ast.Call(
             func=ast.Name(id=self.helper_imports[kind], ctx=ast.Load()),
-            args=[ast.Constant(value=value)], keywords=[],
+            args=[ast.Constant(value=part) for part in value], keywords=[],
         )) for (kind, value), name in self.helper_keys.items())
+        if self.record_factories:
+            helpers.append(ast.ImportFrom(module="builtins", names=[ast.alias(
+                name="object", asname=self.factory_object)], level=0))
+            allocator = f"{self.factory_object}.__new__"
+            if "record-allocator-cache" not in self.options.disabled:
+                cached = self.fresh_name("new")
+                helpers.extend(ast.parse(f"{cached} = {allocator}").body)
+                allocator = cached
+            for fields, (factory, cls, row, dictionary) in self.record_factories.items():
+                source = (f"def {factory}({cls}, {', '.join(fields)}):\n"
+                          f"    {row} = {allocator}({cls})\n"
+                          f"    {dictionary} = {row}.__dict__\n")
+                source += ''.join(f"    {dictionary}[{field!r}] = {field}\n" for field in fields)
+                source += f"    return {row}\n"
+                helpers.extend(ast.parse(source).body)
+        if hasattr(self, "state_helper"):
+            helpers.append(ast.ImportFrom(module="cambc", names=[ast.alias(
+                name="ChampionState", asname=self.state_helper)], level=0))
+            for flags, alias in self.state_masks.items():
+                parts = [ast.Attribute(value=ast.Name(id=self.state_helper, ctx=ast.Load()),
+                                       attr=flag, ctx=ast.Load()) for flag in flags]
+                value = parts[0]
+                for part in parts[1:]:
+                    value = ast.BinOp(left=value, op=ast.BitOr(), right=part)
+                helpers.append(ast.Assign(targets=[ast.Name(id=alias, ctx=ast.Store())], value=ast.Call(
+                    func=ast.Name(id=self.state_helper, ctx=ast.Load()), args=[value], keywords=[])))
         index = 0
         if node.body and isinstance(node.body[0], ast.Expr) and isinstance(node.body[0].value, ast.Constant) and isinstance(node.body[0].value.value, str):
             index = 1
@@ -228,10 +281,128 @@ class Rewriter(ast.NodeTransformer):
         self.facts = {k: v for k, v in first.items() if self.facts.get(k) == v}
         return node
 
+    def visit_BoolOp(self, node):
+        flags = {
+            "can_move": "CAN_MOVE", "can_attack": "CAN_ATTACK", "can_cast": "CAN_CAST",
+            "is_recalling": "RECALLING", "is_submitting_gems": "SUBMITTING_GEMS",
+            "is_teleporting": "TELEPORTING", "has_completed_turn": "COMPLETED_TURN",
+        }
+        calls = []
+
+        def eligible(expression):
+            if isinstance(expression, ast.BoolOp):
+                return all(eligible(value) for value in expression.values)
+            if isinstance(expression, ast.UnaryOp) and isinstance(expression.op, ast.Not):
+                return eligible(expression.operand)
+            if isinstance(expression, ast.Constant):
+                return type(expression.value) in {bool, int, type(None)}
+            if (isinstance(expression, ast.Call) and not expression.args and not expression.keywords
+                    and isinstance(expression.func, ast.Attribute) and isinstance(expression.func.value, ast.Name)
+                    and self.fact(expression.func.value).kind == "champion"
+                    and expression.func.attr in {*flags, "is_alive"}):
+                calls.append(expression)
+                return True
+            return False
+
+        if ("sdk-state-expression" in self.options.disabled
+                or (self.program and "cambc" in self.program.modules) or not eligible(node)
+                or len({call.func.value.id for call in calls}) != 1
+                or sum(call.func.attr in flags for call in calls) < 2):
+            return self.generic_visit(node)
+        local = self.fresh_name("state")
+        # A private import alias avoids shadowed cambc/ChampionState names. It is
+        # generated only after profitability (at least one dominated reuse).
+        flag_owner = getattr(self, "state_helper", None) or self.fresh_name("ChampionState")
+        reuse = 0
+
+        def snapshot(receiver, defined):
+            nonlocal reuse
+            state = ast.Name(id=local, ctx=ast.Load())
+            if not defined:
+                state = ast.NamedExpr(target=ast.Name(id=local, ctx=ast.Store()),
+                                      value=method(copy.deepcopy(receiver), "state"))
+            else:
+                reuse += 1
+            return state
+
+        def predicate(value):
+            positive = True
+            if isinstance(value, ast.UnaryOp) and isinstance(value.op, ast.Not):
+                positive, value = False, value.operand
+            if isinstance(value, ast.Call) and value.func.attr in flags:
+                return positive, value
+            return None
+
+        def rewrite(expression, defined):
+            nonlocal reuse
+            if isinstance(expression, ast.BoolOp):
+                result = copy.deepcopy(expression)
+                result.values = []
+                first_defined = defined
+                index = 0
+                while index < len(expression.values):
+                    start = index
+                    value = expression.values[index]
+                    first = predicate(value)
+                    group = [first] if first else []
+                    if first and "sdk-state-mask" not in self.options.disabled:
+                        for following in expression.values[index + 1:]:
+                            item = predicate(following)
+                            if item is None or item[0] != first[0]:
+                                break
+                            group.append(item)
+                    if len(group) >= 2:
+                        token = tuple(flags[item[1].func.attr] for item in group)
+                        if token not in self.state_masks:
+                            self.state_masks[token] = self.fresh_name("state_flags")
+                        mask = ast.Name(id=self.state_masks[token], ctx=ast.Load())
+                        state = snapshot(first[1].func.value, defined)
+                        # Positive AND / negative OR need all flags; positive
+                        # OR / negative AND need any flag. Leaves are bools and
+                        # read-only SDK predicates, never arbitrary callbacks.
+                        any_flags = isinstance(expression.op, ast.Or) == first[0]
+                        value = (method(state, "intersects", mask) if any_flags else
+                                 ast.Compare(left=mask, ops=[ast.In()], comparators=[state]))
+                        if not first[0]:
+                            value = ast.UnaryOp(op=ast.Not(), operand=value)
+                        original = ast.copy_location(ast.BoolOp(op=copy.deepcopy(expression.op),
+                            values=copy.deepcopy(expression.values[index:index + len(group)])), expression)
+                        value = self.change("sdk-state-mask", original, ast.fix_missing_locations(value))
+                        reuse += len(group) - 1
+                        defined = True
+                        index += len(group)
+                    else:
+                        value, defined = rewrite(value, defined)
+                        index += 1
+                    result.values.append(value)
+                    if start == 0:
+                        first_defined = defined
+                # Later operands may be skipped. Only definitions guaranteed by
+                # the first operand dominate a use outside this boolean node.
+                return (result.values[0] if len(result.values) == 1 else result), first_defined
+            if isinstance(expression, ast.UnaryOp):
+                operand, defined = rewrite(expression.operand, defined)
+                return ast.UnaryOp(op=ast.Not(), operand=operand), defined
+            if isinstance(expression, ast.Call) and expression.func.attr in flags:
+                state = snapshot(expression.func.value, defined)
+                flag = ast.Attribute(value=ast.Name(id=flag_owner, ctx=ast.Load()),
+                                     attr=flags[expression.func.attr], ctx=ast.Load())
+                return ast.Compare(left=flag, ops=[ast.In()], comparators=[state]), True
+            return copy.deepcopy(expression), defined
+
+        result, _ = rewrite(node, False)
+        if not reuse:
+            return self.generic_visit(node)
+        # Use a separate helper inventory: operator constructors are unrelated.
+        self.state_helper = flag_owner
+        return self.change("sdk-state-expression", node, ast.fix_missing_locations(result))
+
     def visit_For(self, node):
         node.iter = self.visit(node.iter)
         iterable = self.fact(node.iter)
+        stable = self.loop_integer_facts(node)
         self.forget_writes([node])
+        self.facts.update(stable)
         # Mutating the induction variable inside the body invalidates its type
         # on subsequent expressions/iterations, unless a new assignment proves it.
         writes = Bindings(node.body).counts
@@ -239,17 +410,58 @@ class Rewriter(ast.NodeTransformer):
             self.assign(node.target, Fact(iterable.item))
         node.body = [self.visit(s) for s in node.body]
         self.forget_writes([node])
+        self.facts.update(stable)
         node.orelse = [self.visit(s) for s in node.orelse]
         self.forget_writes([node])
+        self.facts.update(stable)
         return node
 
+    def loop_integer_facts(self, node):
+        """Retain already-bound ints only if every loop write preserves exact int."""
+        if "loop-integer-facts" in self.options.disabled:
+            return {}
+        parts = list(ast.walk(node))
+        if any(isinstance(part, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef, ast.Lambda,
+                                 ast.NamedExpr, ast.Global, ast.Nonlocal)) for part in parts):
+            return {}
+        written = Bindings([node]).counts
+        stable = {name: INT for name, fact in self.facts.items()
+                  if fact.kind == 'int' and name in written and name not in self.bindings.external}
+        untouched = {name: fact for name, fact in self.facts.items() if name not in written}
+        while stable:
+            removed = set()
+            for name in stable:
+                stores = {id(part) for part in parts if isinstance(part, ast.Name)
+                          and part.id == name and isinstance(part.ctx, (ast.Store, ast.Del))}
+                allowed = set()
+                for part in parts:
+                    if isinstance(part, (ast.Assign, ast.AnnAssign)):
+                        targets = part.targets if isinstance(part, ast.Assign) else [part.target]
+                        if pure_integer(part.value, {**untouched, **stable}, self.resolve):
+                            allowed.update(id(t) for t in targets if isinstance(t, ast.Name) and t.id == name)
+                    elif (isinstance(part, ast.AugAssign) and isinstance(part.target, ast.Name)
+                          and part.target.id == name and isinstance(part.op, (ast.Add, ast.Sub, ast.Mult,
+                                                                             ast.BitOr, ast.BitAnd, ast.BitXor))
+                          and pure_integer(part.value, {**untouched, **stable}, self.resolve)):
+                        allowed.add(id(part.target))
+                if stores != allowed or len(stores) != written[name]:
+                    removed.add(name)
+            if not removed:
+                break
+            stable = {name: fact for name, fact in stable.items() if name not in removed}
+        return stable
+
     def visit_While(self, node):
+        stable = self.loop_integer_facts(node)
         self.forget_writes([node])
+        self.facts.update(stable)
         node.test = self.visit(node.test)
         node.body = [self.visit(s) for s in node.body]
         self.forget_writes([node])
+        self.facts.update(stable)
         node.orelse = [self.visit(s) for s in node.orelse]
         self.forget_writes([node])
+        self.facts.update(stable)
         return node
 
     def visit_Try(self, node):
@@ -338,6 +550,14 @@ class Rewriter(ast.NodeTransformer):
 
     def visit_BinOp(self, node):
         node = self.generic_visit(node)
+        if (isinstance(node.op, ast.Mod) and self.fact(node.left).kind == 'int'
+                and isinstance(node.right, (ast.Constant, ast.Name, ast.Attribute))):
+            divisor = self.fact(node.right)
+            value = divisor.value
+            if (divisor.kind == 'int' and type(value) is int and 2 <= value <= 1 << 30
+                    and value & (value - 1) == 0):
+                return self.change('integer-mod-mask', node, ast.BinOp(
+                    left=node.left, op=ast.BitAnd(), right=ast.Constant(value - 1)))
         if (isinstance(node.op, ast.Pow) and isinstance(node.left, ast.Name)
                 and isinstance(node.right, ast.Constant) and type(node.right.value) is int
                 and node.right.value == 2 and self.fact(node.left).kind == "int"):
@@ -345,6 +565,27 @@ class Rewriter(ast.NodeTransformer):
                 left=node.left, op=ast.Mult(), right=copy.deepcopy(node.left),
             ))
         return node
+
+    def visit_Compare(self, node):
+        node = self.generic_visit(node)
+        if (len(node.ops) != 1 or not isinstance(node.ops[0], (ast.In, ast.NotIn))
+                or self.fact(node.left).kind != "int"):
+            return node
+        table = node.comparators[0]
+        if (not isinstance(table, (ast.List, ast.Tuple))
+                or not 4 <= len(table.elts) <= self.options.max_materialize):
+            return node
+        try:
+            values = [ast.literal_eval(value) for value in table.elts]
+        except (ValueError, TypeError, SyntaxError):
+            return node
+        if any(type(value) is not int for value in values):
+            return node
+        # CPython folds a constant set used by CONTAINS_OP to a frozenset. No
+        # runtime set allocation/hoisting and no hash callbacks on exact ints.
+        result = copy.deepcopy(node)
+        result.comparators = [ast.Set(elts=[ast.Constant(value=value) for value in values])]
+        return self.change("integer-membership", node, result)
 
     def mask_pair(self, node):
         if len(node.generators) != 1:
@@ -373,7 +614,13 @@ class Rewriter(ast.NodeTransformer):
         inline = self.inline_helper(node)
         if inline is not node:
             return self.visit(inline)
+        constructed = self.record_call(node)
+        if constructed is not node:
+            return constructed
         name = self.resolve(node.func)
+        mapped = self.native_map_consumer(node, name)
+        if mapped is not node:
+            return mapped
         identity = self.identity_reduction(node, name)
         if identity is not node:
             return identity
@@ -430,6 +677,46 @@ class Rewriter(ast.NodeTransformer):
         result.keywords = result.keywords[count:]
         return self.change("call-positional", node, result)
 
+    def record_call(self, node):
+        if not self.program:
+            return node
+        record = self.program.records.get(self.resolve(node.func))
+        if record is None or not record.frozen or not record.simple:
+            return node
+        width = len(record.fields)
+        if (2 <= width <= 3 and (width < self.options.min_bulk_fields
+                                or "record-bulk-init" in self.options.disabled)):
+            pass_name = "small-record-call"
+        elif 4 <= width <= 20 and "record-allocator-cache" not in self.options.disabled:
+            # Larger uncached factories lost to the guarded initializer. A
+            # prebound allocator reverses that result in the measured range.
+            pass_name = "record-call"
+        else:
+            return node
+        if pass_name in self.options.disabled:
+            return node
+        before = self.function_lines[-1] if self.function_lines else node.lineno
+        if not self.program.available(self.module, node.func, before):
+            return node
+        bound = record.signature.bind(node)
+        if bound is None or set(bound) != set(record.fields):
+            return node
+        # Only direct calls to an exact, hook-free source record qualify. The
+        # newly allocated object cannot have an existing dictionary alias or old
+        # fields/finalizers. Public construction and subclass initialization stay
+        # untouched. The original class lookup is still evaluated before args.
+        self.used_names.update(record.fields)
+        if not self.record_factories:
+            self.factory_object = self.fresh_name("object")
+        if record.fields not in self.record_factories:
+            self.record_factories[record.fields] = tuple(self.fresh_name(stem) for stem in
+                                                        ("make_record", "class", "record", "dict"))
+        factory = self.record_factories[record.fields][0]
+        result = copy.deepcopy(node)
+        result.func = ast.Name(id=factory, ctx=ast.Load())
+        result.args.insert(0, copy.deepcopy(node.func))
+        return self.change(pass_name, node, result)
+
     def inline_helper(self, node):
         if not self.program or "inline-integer-helper" in self.options.disabled:
             return node
@@ -484,13 +771,14 @@ class Rewriter(ast.NodeTransformer):
 
     def materialize_reduction(self, call, gen, pass_name):
         loop = gen.generators[0]
-        if loop.is_async or loop.ifs or not isinstance(loop.target, ast.Name):
+        if loop.is_async or not isinstance(loop.target, ast.Name):
             return call
         iterable = self.fact(loop.iter)
         if iterable.kind not in {"range", "tuple"} or iterable.item != "int":
             return call
         facts = {**self.facts, loop.target.id: INT}
-        if not pure_integer(gen.elt, facts, self.resolve):
+        if (not pure_integer(gen.elt, facts, self.resolve)
+                or not all(pure_condition(test, facts, self.resolve) for test in loop.ifs)):
             return call
         result = copy.deepcopy(call)
         result.args = [ast.ListComp(elt=copy.deepcopy(gen.elt), generators=copy.deepcopy(gen.generators))]
@@ -518,22 +806,31 @@ class Rewriter(ast.NodeTransformer):
                 or args.defaults or any(kw.arg is None for kw in node.keywords)):
             return node
         name = args.args[0].arg
-        body = callback.body
-        if (isinstance(body, ast.Subscript) and isinstance(body.value, ast.Name) and body.value.id == name
-                and isinstance(body.slice, ast.Constant) and type(body.slice.value) in {int, str}):
-            kind, value, pass_name = "itemgetter", body.slice.value, "native-itemgetter"
-        else:
+        def extract(body):
+            if (isinstance(body, ast.Subscript) and isinstance(body.value, ast.Name) and body.value.id == name
+                    and isinstance(body.slice, ast.Constant) and type(body.slice.value) in {int, str}):
+                return "itemgetter", body.slice.value, "native-itemgetter"
             path = []
             while isinstance(body, ast.Attribute):
                 # A string passed to attrgetter does not undergo class-name
                 # mangling the way an attribute expression in a lambda does.
                 if body.attr.startswith("__") and not body.attr.endswith("__"):
-                    return node
+                    return None
                 path.append(body.attr)
                 body = body.value
             if not path or not isinstance(body, ast.Name) or body.id != name:
-                return node
-            kind, value, pass_name = "attrgetter", ".".join(reversed(path)), "native-attrgetter"
+                return None
+            return "attrgetter", ".".join(reversed(path)), "native-attrgetter"
+
+        body = callback.body
+        # Multi-getters return a tuple and retain left-to-right access order.
+        # A one-element tuple must stay a tuple, not become a scalar getter.
+        parts = body.elts if isinstance(body, ast.Tuple) and len(body.elts) >= 2 else [body]
+        extracted = [extract(part) for part in parts]
+        if any(part is None for part in extracted) or len({part[0] for part in extracted}) != 1:
+            return node
+        kind, _, pass_name = extracted[0]
+        value = tuple(part[1] for part in extracted)
         if pass_name in self.options.disabled:
             return node
         if kind not in self.helper_imports:
@@ -551,27 +848,41 @@ class Rewriter(ast.NodeTransformer):
         if len(gen.generators) != 1:
             return call
         loop = gen.generators[0]
-        if loop.is_async or loop.ifs or not isinstance(loop.target, ast.Name):
+        if loop.is_async or not isinstance(loop.target, ast.Name):
             return call
         iterable = self.fact(loop.iter)
         # Exact range has stable immutable integer elements. Lists can be mutated
         # by aliases, so their contents are not trusted here.
         if iterable.kind not in {"range", "tuple"} or iterable.item != "int":
             return call
-        facts = {**self.facts, loop.target.id: INT}
-        expression = gen.elt
-        if (isinstance(expression, ast.Call) and self.resolve(expression.func) == "abs"
-                and not expression.keywords and len(expression.args) == 1
-                and isinstance(expression.args[0], ast.Name)
-                and expression.args[0].id == loop.target.id and self.resolve(ast.Name(id="map")) == "map"):
-            # A target named 'abs' would shadow the callback inside the generator.
-            if loop.target.id != "abs":
-                mapped = ast.Call(func=ast.Name(id="map", ctx=ast.Load()),
-                                  args=[expression.func, loop.iter], keywords=[])
-                result = ast.Call(func=call.func, args=[mapped], keywords=[])
-                if "native-map" not in self.options.disabled:
-                    return self.change("native-map", call, result)
         return self.materialize_reduction(call, gen, "bounded-sum" if iterable.kind == "range" else "bounded-reduction")
+
+    def native_map_consumer(self, call, name):
+        if (name not in {"sum", "min", "max", "any", "all", "list", "tuple"}
+                or len(call.args) != 1 or "native-map" in self.options.disabled
+                or self.resolve(ast.Name(id="map")) != "map"
+                or any(kw.arg != "default" or not isinstance(kw.value, ast.Constant) for kw in call.keywords)
+                or (call.keywords and name not in {"min", "max"})):
+            return call
+        gen = call.args[0]
+        if not isinstance(gen, ast.GeneratorExp) or len(gen.generators) != 1:
+            return call
+        loop, expression = gen.generators[0], gen.elt
+        if (loop.is_async or loop.ifs or not isinstance(loop.target, ast.Name) or loop.target.id == "abs"
+                or not isinstance(expression, ast.Call) or self.resolve(expression.func) != "abs"
+                or expression.keywords or len(expression.args) != 1
+                or not isinstance(expression.args[0], ast.Name) or expression.args[0].id != loop.target.id):
+            return call
+        iterable = self.fact(loop.iter)
+        # Exact integers cannot run callbacks or raise StopIteration in abs.
+        # General objects could: map would then silently stop where a generator
+        # raises RuntimeError (PEP 479). Never infer this from the callback alone.
+        if iterable.kind not in {"range", "tuple"} or iterable.item != "int":
+            return call
+        result = copy.deepcopy(call)
+        result.args = [ast.Call(func=ast.Name(id="map", ctx=ast.Load()),
+                               args=[copy.deepcopy(expression.func), copy.deepcopy(loop.iter)], keywords=[])]
+        return self.change("native-map", call, result)
 
     def native_key(self, node):
         if len(node.args) != 1 or any(kw.arg not in {"key", "default", "reverse"} for kw in node.keywords):

@@ -20,8 +20,13 @@ def measure(function, repeats=20):
 def run():
     print("BCOPT_META " + json.dumps({"python": sys.version,
           "width": cambc.game_map.width(), "height": cambc.game_map.height()}), flush=True)
+    if hasattr(original, 'runtime_info'):
+        print('BCOPT_RUNTIME ' + json.dumps(original.runtime_info()), flush=True)
     for name in original.CASES:
         before, after = getattr(original, name), getattr(optimized, name)
+        # First-call cost, before equality checks or warmup. Module preparation is
+        # still excluded: ordinary modules are snapshotted by cambc.
+        cold_baseline, cold_candidate = measure(before, 1), measure(after, 1)
         # Also compare position ordering, not merely set equality.
         assert before() == after(), name
         for _ in range(20):
@@ -37,6 +42,7 @@ def run():
                 candidate.append(measure(after))
         old, new = sorted(baseline)[2], sorted(candidate)[2]
         print("BCOPT_PAIR " + json.dumps({"name": name, "baseline": old, "optimized": new,
+              "cold_baseline": cold_baseline, "cold_optimized": cold_candidate,
               "ratio": old / new, "baseline_samples": baseline, "optimized_samples": candidate}), flush=True)
     print("BCOPT_DONE", flush=True)
 

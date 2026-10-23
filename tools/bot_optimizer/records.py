@@ -1,6 +1,6 @@
 """General record specialisation; no bot-specific names or algorithms.
 
-Exact ordinary frozen dataclasses can populate their dict in one native update.
+Exact ordinary frozen dataclasses can populate their dict with direct stores.
 Subclasses retain the original per-field object.__setattr__ semantics. A separate
 small escape analysis removes a record used only by the immediately next return.
 """
@@ -78,11 +78,15 @@ class RecordSpecializer(ast.NodeTransformer):
         before = ast.unparse(node)
         receiver = ast.Name(id="self", ctx=ast.Load())
         dictionary = ast.Attribute(value=copy.deepcopy(receiver), attr="__dict__", ctx=ast.Load())
-        update = ast.Expr(value=ast.Call(
-            func=ast.Attribute(value=dictionary, attr="update", ctx=ast.Load()),
-            args=[ast.Dict(keys=[ast.Constant(name) for name in record.fields],
-                           values=[ast.Name(id=name, ctx=ast.Load()) for name in record.fields])], keywords=[],
-        ))
+        # Capture only an empty exact dict. On re-init, replacing an old field
+        # may invoke __del__ and even replace the instance dictionary mid-call.
+        # A dict subclass may override __setitem__/__bool__. Both need the
+        # original setters, not a captured dictionary or subclass callbacks.
+        local = self.fresh("dict")
+        update = [ast.Assign(targets=[ast.Name(id=local, ctx=ast.Store())], value=dictionary)]
+        update.extend(ast.Assign(targets=[ast.Subscript(
+            value=ast.Name(id=local, ctx=ast.Load()), slice=ast.Constant(name), ctx=ast.Store())],
+            value=ast.Name(id=name, ctx=ast.Load())) for name in record.fields)
         fallback = [ast.Expr(value=ast.Call(
             func=ast.Attribute(value=self.helper("object"), attr="__setattr__", ctx=ast.Load()),
             args=[copy.deepcopy(receiver), ast.Constant(name), ast.Name(id=name, ctx=ast.Load())], keywords=[],
@@ -91,11 +95,20 @@ class RecordSpecializer(ast.NodeTransformer):
             left=ast.Call(func=self.helper("type"), args=[copy.deepcopy(receiver)], keywords=[]),
             ops=[ast.Is()], comparators=[ast.Name(id="__class__", ctx=ast.Load())],
         )
+        empty_dictionary = ast.BoolOp(op=ast.And(), values=[ast.Compare(
+            left=ast.Call(func=self.helper("type"), args=[ast.Name(id=local, ctx=ast.Load())], keywords=[]),
+            ops=[ast.Is()], comparators=[self.helper("dict")]),
+            ast.UnaryOp(op=ast.Not(), operand=ast.Name(id=local, ctx=ast.Load()))])
+        # Do not retain the old dictionary during fallback: a field finalizer
+        # may replace it, and other old field finalizers must not be delayed.
+        release = ast.Delete(targets=[ast.Name(id=local, ctx=ast.Del())])
+        exact_body = [update[0], ast.If(test=empty_dictionary, body=update[1:],
+                                      orelse=[release, *copy.deepcopy(fallback)])]
         initializer = ast.FunctionDef(
             name="__init__", args=ast.arguments(posonlyargs=[], args=[ast.arg(arg="self"),
                 *(ast.arg(arg=name) for name in record.fields)], vararg=None,
                 kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]),
-            body=[ast.If(test=condition, body=[update], orelse=fallback)],
+            body=[ast.If(test=condition, body=exact_body, orelse=fallback)],
             decorator_list=[], returns=None, type_params=[],
         )
         node.body.append(initializer)
