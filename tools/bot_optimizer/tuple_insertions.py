@@ -150,13 +150,17 @@ class TupleInsertions:
             work = self.fresh('work')
         generated = copy.deepcopy(loop)
         generated.body = ast.parse(f'{work}.insert({position}, {item.id})\n'
-                                   f'yield {self.aliases["tuple"]}({work})\n'
-                                   f'del {work}[{position}]\n').body
+                                    f'yield {self.aliases["tuple"]}({work})\n'
+                                    f'del {work}[{position}]\n').body
+        generated._bcopt_tuple_buffer_loop = (self.aliases['tuple'], loop.iter.func.id, bound.left.func.id)
         fast = [*ast.parse(f'{work} = {self.aliases["list"]}({owner})').body,
                 ast.Try(body=[generated], handlers=[], orelse=[],
                         finalbody=[ast.Delete(targets=[ast.Name(id=work, ctx=ast.Del())])])]
         if hoist:
             fast = [generated]
         replacement = ast.If(test=ast.Name(id=self.flags[owner], ctx=ast.Load()), body=fast, orelse=[copy.deepcopy(loop)])
+        if hasattr(loop, '_bcopt_insertion_key_loop'):
+            replacement._bcopt_insertion_key_loop = loop._bcopt_insertion_key_loop
+            replacement._bcopt_insertion_exact_branch = True
         self.changes.append(Change('tuple-insertion-buffer', loop.lineno, ast.unparse(loop), ast.unparse(replacement)))
         return ast.copy_location(replacement, loop)

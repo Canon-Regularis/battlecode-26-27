@@ -104,7 +104,8 @@ class InlineRecordReturns:
                     values[field] = ast.Name(id=temporary, ctx=ast.Load())
         row, dictionary = self.fresh('return_record'), self.fresh('return_dict')
         replacement.extend(ast.parse(f'{row} = {self.allocator}({ast.unparse(call.func)})\n'
-                                     f'{dictionary} = {row}.__dict__\n').body)
+                                      f'{dictionary} = {row}.__dict__\n').body)
+        replacement[-2]._bcopt_complete_record = (self.program.resolve(self.module, call.func), tuple(record.fields))
         replacement.extend(ast.Assign(targets=[ast.Subscript(value=ast.Name(id=dictionary, ctx=ast.Load()),
             slice=ast.Constant(field), ctx=ast.Store())], value=values[field]) for field in record.fields)
         replacement.extend(ast.parse(f'del {dictionary}\nreturn {row}\n').body)

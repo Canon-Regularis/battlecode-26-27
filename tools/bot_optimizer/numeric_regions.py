@@ -138,6 +138,7 @@ class NumericClones:
         self.required_methods.add(method)
         clone = Clone(self.fresh('numeric'), method, copy.deepcopy(source), dict(facts))
         clone.function.name = clone.name
+        clone.function._bcopt_numeric_clone = True
         clone.function.returns = None
         clone.function.type_comment = None
         for parameter in arguments(clone.function):
@@ -191,6 +192,7 @@ class Lower:
     def bind(self, target, value, facts):
         if isinstance(target, ast.Name):
             facts[target.id] = replace(value, total=True)
+            target._bcopt_bound_kind = value.schema.kind
             return
         if isinstance(target, (ast.Tuple, ast.List)) and value.schema.kind == 'fixed-tuple':
             if len(target.elts) != len(value.schema.items):
@@ -308,7 +310,15 @@ class Lower:
         if isinstance(node, ast.BinOp):
             node.left, left = self.expr(node.left, facts)
             node.right, right = self.expr(node.right, facts)
-            return self.tagged(node, self.numeric(node.op, left, right))
+            result = self.tagged(node, self.numeric(node.op, left, right))
+            if (isinstance(node.op, ast.Mult) and isinstance(node.left, ast.BinOp)
+                    and isinstance(node.left.op, ast.Sub) and isinstance(node.left.left, ast.BinOp)
+                    and isinstance(node.left.left.op, ast.Add)
+                    and all(getattr(part, '_bcopt_numeric_kind', None) == 'int'
+                            for part in (node.left.left.left, node.left.left.right, node.left.right))
+                    and right.schema.kind in {'int', 'float', 'number'}):
+                node._bcopt_integer_cancel_product = True
+            return result
         if isinstance(node, ast.UnaryOp):
             node.operand, value = self.expr(node.operand, facts)
             if isinstance(node.op, ast.Not) and value.schema.kind in NUMERIC | SEQUENCES | {'none', 'optional'}:
@@ -439,12 +449,15 @@ class Lower:
                 # Native sum returns the integer zero for an empty iterable.
                 # Subsequent arithmetic must not assume an exact float.
                 kind = Schema('number')
+            node._bcopt_numeric_native = name
             return self.tagged(node, Value(kind, total=False))
         if name in {'min', 'max'} and len(values) == 2 and all(v.schema.kind in NUMERIC for v in values):
             if values[0].schema != values[1].schema:
                 raise Unsupported('mixed scalar extrema result')
+            node._bcopt_numeric_native = name
             return self.tagged(node, Value(values[0].schema, total=all(v.total for v in values)))
         if name == 'math.ceil' and 'math' not in self.builder.program.modules and len(values) == 1 and values[0].schema.kind in NUMERIC:
+            node._bcopt_numeric_scalar_call = True
             return self.tagged(node, Value(INT, total=False))
         raise Unsupported(f'unknown native call {name}')
 
@@ -642,8 +655,23 @@ def fuse_integer_reductions(builder, function):
             source += f'    if {best} is None or {value} {">" if consumer == "max" else "<"} {best}:\n        {best}={value}\n'
             target = statement.targets[0].id
             replacement = ast.parse(f'{target}={ast.unparse(statement.value.func)}(()) if {best} is None else {best}\n').body[0]
+            replacement._bcopt_group_extremum = True
+            replacement.value.body._bcopt_numeric_scalar_call = True
             body[position] = ast.copy_location(replacement, statement)
         replacement = ast.parse(source).body
+        for initialization in replacement[:-1]:
+            initialization._bcopt_group_init = True
+        if maximum:
+            for node in ast.walk(replacement[-1]):
+                if (isinstance(node, ast.Assign) and len(node.targets) == 1
+                        and isinstance(node.targets[0], ast.Name) and node.targets[0].id == value):
+                    node.value = copy.deepcopy(expression)
+        replacement[-1]._bcopt_integer_reductions = {
+            'base': copy.deepcopy(base), 'route': copy.deepcopy(route),
+            'outputs': [*targets, *([best] if maximum else [])],
+        }
+        replacement[-1]._bcopt_integer_fields = tuple(comp.elt.slice.value for _, comp, _, _ in group)
+        replacement[-1]._bcopt_integer_extremum = maximum[2] if maximum else None
         for statement in replacement:
             ast.copy_location(statement, group[0][0])
         body[index:index+len(group)] = replacement
@@ -652,7 +680,7 @@ def fuse_integer_reductions(builder, function):
     return changed
 
 
-def inline_numeric_helpers(builder, entry):
+def inline_numeric_helpers(builder, entry, *, helper_limit=600, output_limit=1500):
     """Inline small emitter-owned pure numeric calls, retaining return branches.
 
     Projected inputs and every local hold only validated primitives, private
@@ -690,7 +718,7 @@ def inline_numeric_helpers(builder, entry):
                     and node.value.func.id in helpers):
                 return node
             helper = helpers[node.value.func.id]
-            if sum(1 for _ in ast.walk(helper.function)) > 600:
+            if sum(1 for _ in ast.walk(helper.function)) > helper_limit:
                 return node
             helper_locals = set(Bindings(helper.function.body).counts) | {arg.arg for arg in arguments(helper.function)}
             helper_loads = {child.id for child in ast.walk(helper.function)
@@ -736,7 +764,7 @@ def inline_numeric_helpers(builder, entry):
                 visit_GeneratorExp = visit_ListComp
             body = [Rename(names).visit(copy.deepcopy(statement)) for statement in helper.function.body]
             replacement = [*prefix, *returns(body, node.targets[0])]
-            if sum(1 for statement in replacement for _ in ast.walk(statement)) > 1500:
+            if sum(1 for statement in replacement for _ in ast.walk(statement)) > output_limit:
                 return node
             for statement in replacement:
                 ast.copy_location(statement, node)

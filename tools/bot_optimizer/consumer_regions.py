@@ -48,6 +48,8 @@ class ConsumerProof:
         self.active = set()
         self.schema_cache = {}
         self.consumer_node = None
+        self.expressions = {}
+        self.consumer_result = None
 
     def add(self, cell, *shapes):
         previous = len(cell.shapes)
@@ -131,7 +133,7 @@ class ConsumerProof:
                 if schema is None or schema.kind not in NUMBERS:
                     raise Unsupported('unchecked consumer parameter')
                 facts[parameter.arg] = self.schema(schema)
-        self.analyze(node, self.module, facts, method=method)
+        self.consumer_result = self.analyze(node, self.module, facts, method=method)
         self.solve()
         if not self.numeric_calls or not self.callback_tests:
             raise Unsupported('no repeated numeric/callback consumer')
@@ -226,6 +228,11 @@ class Scope:
         self.p.rules.append(rule)
 
     def expr(self, node, facts):
+        result = self.expression(node, facts)
+        self.p.expressions.setdefault(node, []).append(result)
+        return result
+
+    def expression(self, node, facts):
         p = self.p
         if isinstance(node, ast.Constant):
             kind = {int: 'int', float: 'float', bool: 'bool', type(None): 'none'}.get(type(node.value))

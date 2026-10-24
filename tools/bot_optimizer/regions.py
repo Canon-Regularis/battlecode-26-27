@@ -6,6 +6,7 @@ import copy
 from .analysis import Bindings, arguments
 from .consumer_regions import ConsumerProof
 from .effects import CallbackEffects
+from .derived_tables import DerivedTables
 from .model import Change
 from .numeric_regions import NumericClones, Unsupported, emit_argument_guards
 from .program import Signature
@@ -206,7 +207,20 @@ class NumericRegions:
             guard_source += f'    if namespace.get({name!r}) is not {alias} or {name!r} in instance:\n        return None\n'
         for ref, alias in functions.values():
             guard_source += f'    if {ref} is not {alias}:\n        return None\n'
+        derived_helpers, derived = ([], [])
+        if 'numeric-derived-tables' not in self.options.disabled:
+            derived_helpers, derived = DerivedTables(builder, entry, builtins,
+                memoize='numeric-reduction-memo' not in self.options.disabled,
+                native_projection='numeric-native-projection' not in self.options.disabled).apply()
+        if derived:
+            guard_source += '    data = (*data, ' + ', '.join(f'{name}(data)' for name in derived) + ')\n'
         guard_source += f'    return data,{prepare}(data)\n'
+        if 'insertion-invariant-keys' not in self.options.disabled:
+            from .insertion_keys import annotate_insertion_keys
+            annotate_insertion_keys(builder, proof)
+        if 'losing-record-stores' not in self.options.disabled:
+            from .losing_stores import annotate_losing_stores
+            annotate_losing_stores(builder, proof)
         clone = copy.deepcopy(proof.consumer_node)
         clone.name, clone.returns, clone.type_comment = clone_name, None, None
         for arg in arguments(clone):
@@ -227,6 +241,7 @@ class NumericRegions:
                                     args=[ast.Name(id=data, ctx=ast.Load()), *copy.deepcopy(original.args)],
                                     keywords=copy.deepcopy(original.keywords))
                     node.value = ast.IfExp(test=ast.Name(id=live, ctx=ast.Load()), body=fast, orelse=original)
+                    node._bcopt_numeric_assignment = True
                     target = node.targets[0].id
                     retry = ast.If(test=ast.BoolOp(op=ast.And(), values=[ast.Name(id=live, ctx=ast.Load()),
                         ast.Compare(left=ast.Name(id=target, ctx=ast.Load()), ops=[ast.Is()],
@@ -251,8 +266,10 @@ class NumericRegions:
                 return node
         clone = Dispatch().visit(clone)
         clone.body[:0] = ast.parse(f'{data},{bounds}={state}\n{live}=True\n').body
+        clone._bcopt_numeric_consumer = (data, len(builder.owner.fields)+len(derived))
+        clone.body[1]._bcopt_consumer_ready = True
         owner_nodes = [*ast.parse(prelude).body, *validators.body, *guards.body,
-                       *ast.parse(guard_source).body, *(value.function for value in builder.clones.values()), clone]
+                        *derived_helpers, *ast.parse(guard_source).body, *(value.function for value in builder.clones.values()), clone]
         # A callsite wrapper evaluates the original bound method and every source
         # argument exactly once, in source order, before doing any speculation.
         caller_taken = used_names(self.program.modules[module].tree) | builder.taken

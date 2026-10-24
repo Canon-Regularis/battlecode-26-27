@@ -117,6 +117,12 @@ class AdjacentPairs:
         replacement = ast.If(test=copy.deepcopy(loop.iter.test),
             body=[*reserve, *initialize, ast.Try(body=[fast], handlers=[], orelse=[], finalbody=cleanup)],
             orelse=[original])
+        if getattr(loop, '_bcopt_ordered_pair_fold', False):
+            replacement._bcopt_ordered_pair_fold = True
+            if all(getattr(part, '_bcopt_bound_kind', None) == 'int' for part in loop.target.elts):
+                for part in ast.walk(replacement):
+                    if isinstance(part, ast.Name) and part.id in {left, right} and isinstance(part.ctx, ast.Store):
+                        part._bcopt_bound_kind = 'int'
         self.changes.append(Change('tuple-adjacent-iterator', loop.lineno,
                                    ast.unparse(loop), ast.unparse(replacement)))
         return ast.copy_location(replacement, loop)

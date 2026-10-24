@@ -250,6 +250,21 @@ a no-op rather than an incremental optimisation route.
 
 ## Tests and measured evidence
 
+For faster host checks, run independent test modules in isolated processes:
+
+```sh
+uv run python -m tools.bot_optimizer.test_runner --jobs 3
+# During iteration, select only the affected modules/classes/test methods:
+uv run python -m tools.bot_optimizer.test_runner test_cancelled_products test_runtime
+```
+
+The runner prints each test's start/completion, keeps module/class fixtures
+together, and saves per-module logs plus a JSON summary under
+`replays/optimizer-tests/`. `--output` selects a new output directory; `--list`
+previews selection. Duplicate discoveries of the same unittest ID run once.
+Use focused checks while iterating and the full suite at integration checkpoints.
+Wasm fuel measurements remain sequential. The serial runner is also available:
+
 ```sh
 uv run python -m unittest discover -s tools/bot_optimizer/tests -v
 uv run python -m tools.bot_optimizer.benchmark \
@@ -284,6 +299,16 @@ repeatable, raised-budget whole-planner comparison found approximately **13.6–
 less fuel** for equal reported work, not the negligible benefit of version 0.1.
 See [recorded v2 results](../../benchmarks/bot-optimizer/economy-v2-results.json).
 The starter bot still had no applicable default rewrites and built/ran correctly.
+
+The current guarded structural passes achieve **80.02–81.34% lower
+`DraftPlanner.build` guest fuel** against unchanged economy-bot across collision,
+corners and lanes. Two repeats have identical map/team fuel counts, with equal
+expansion counts of **6,020 / 20,000 / 20,000**. Validation passes 298 unique
+compiler tests, 71 copied-bot tests, host/guest differential checks and three-round
+normal-budget replay comparisons. Source regeneration, public signatures and
+unchanged Wasm runtime import/code sections are audited. See the
+[optimization history and reproduction commands](../../benchmarks/bot-optimizer/eighty-percent.md)
+and [final evidence](../../benchmarks/bot-optimizer/eighty-percent-results.json).
 
 ## Compare your own bot
 

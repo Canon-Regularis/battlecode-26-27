@@ -23,6 +23,26 @@ from .extensions import AdjacentExtensions
 from .tuple_insertions import TupleInsertions
 from .helper_facts import HelperFacts, ReuseHelperFacts, StaticHelperShapes
 from .regions import NumericRegions, finish_numeric_regions
+from .numeric_ops import NumericOperations
+from .entry_inlining import InlineNumericEntries
+from .insertion_keys import InsertionKeys
+from .incremental_edges import IncrementalEdges
+from .compensated_sums import CompensatedSums
+from .ordered_folds import OrderedFolds
+from .group_scalars import GroupScalars
+from .producer_fusion import ProducerFusion
+from .fused_caches import FusedCaches
+from .edge_algebra import EdgeAlgebra
+from .losing_stores import LosingStores
+from .width_dispatch import WidthDispatch
+from .direct_routes import DirectRoutes
+from .unroll_positions import UnrollPositions
+from .base_edge_scalars import BaseEdgeScalars
+from .base_prefix_scalars import BasePrefixScalars
+from .base_integer_totals import BaseIntegerTotals
+from .cancelled_products import CancelledProducts
+from .retained_integer_edges import RetainedIntegerEdges
+from .dead_primitive_slots import DeadPrimitiveSlots
 
 
 IGNORED_DIRS = {".git", ".venv", ".cambc", "__pycache__", ".pytest_cache",
@@ -114,13 +134,58 @@ def optimize_source(source: str, options: Options | None = None, *, filename="<b
     tree = ast.fix_missing_locations(static_shapes.apply(tree))
     fact_reuse = ReuseHelperFacts(facts, options)
     tree = ast.fix_missing_locations(fact_reuse.apply(tree))
+    numeric_ops = NumericOperations(options)
+    tree = numeric_ops.apply(tree)
     tree = finish_numeric_regions(tree)
+    entry_inlining = InlineNumericEntries(options)
+    tree = entry_inlining.apply(tree)
+    insertion_keys = InsertionKeys(options)
+    tree = insertion_keys.apply(tree)
+    incremental_edges = IncrementalEdges(options)
+    tree = incremental_edges.apply(tree)
+    compensated_sums = CompensatedSums(options)
+    tree = compensated_sums.apply(tree)
+    ordered_folds = OrderedFolds(options)
+    tree = ordered_folds.apply(tree)
+    group_scalars = GroupScalars(options)
+    tree = group_scalars.apply(tree)
+    producer_fusion = ProducerFusion(options)
+    tree = producer_fusion.apply(tree)
+    fused_caches = FusedCaches(options)
+    tree = fused_caches.apply(tree)
+    cancelled_products = CancelledProducts(options)
+    tree = cancelled_products.apply(tree)
+    edge_algebra = EdgeAlgebra(options)
+    tree = edge_algebra.apply(tree)
+    losing_stores = LosingStores(options)
+    tree = losing_stores.apply(tree)
+    width_dispatch = WidthDispatch(options)
+    tree = width_dispatch.apply(tree)
+    direct_routes = DirectRoutes(options)
+    tree = direct_routes.apply(tree)
+    unroll_positions = UnrollPositions(options)
+    tree = unroll_positions.apply(tree)
+    base_edge_scalars = BaseEdgeScalars(options)
+    tree = base_edge_scalars.apply(tree)
+    base_prefix_scalars = BasePrefixScalars(options)
+    tree = base_prefix_scalars.apply(tree)
+    base_integer_totals = BaseIntegerTotals(options)
+    tree = base_integer_totals.apply(tree)
+    retained_integer_edges = RetainedIntegerEdges(options)
+    tree = retained_integer_edges.apply(tree)
+    dead_primitive_slots = DeadPrimitiveSlots(options)
+    tree = dead_primitive_slots.apply(tree)
     compile(tree, filename, "exec")
     changes = [*getattr(program, 'region_changes', {}).get(module_name, []),
                 *record_returns.changes, *reductions.changes, *shortcircuit.changes,
                 *extrema.changes, *records.changes, *rewriter.changes, *extensions.changes,
                 *scalar.changes, *adjacent.changes, *insertions.changes,
-                *static_shapes.changes, *fact_reuse.changes]
+                *static_shapes.changes, *fact_reuse.changes, *numeric_ops.changes, *entry_inlining.changes,
+                *insertion_keys.changes, *incremental_edges.changes, *compensated_sums.changes, *ordered_folds.changes,
+                *group_scalars.changes, *producer_fusion.changes, *fused_caches.changes, *edge_algebra.changes,
+                *losing_stores.changes, *width_dispatch.changes, *direct_routes.changes, *unroll_positions.changes,
+                *base_edge_scalars.changes, *base_prefix_scalars.changes, *base_integer_totals.changes,
+                *cancelled_products.changes, *retained_integer_edges.changes, *dead_primitive_slots.changes]
     if not changes:
         return SourceResult(source, warnings=warnings)
     emitted = ast.unparse(tree) + "\n"

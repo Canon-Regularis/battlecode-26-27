@@ -32,6 +32,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('bot', type=Path)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--inlined-entry', action='store_true', help='Instrument an experimental inlined numeric entry in memory')
+    parser.add_argument('--entry-copies', type=int, default=1, help='Expected number of research loop-specialized entry copies')
     args = parser.parse_args()
     if args.output.exists():
         parser.error('output must be fresh')
@@ -42,17 +44,71 @@ def main():
     consumer, = consumers
     enter, = [node.name for node in tree.body if isinstance(node, ast.FunctionDef)
               and node.name.startswith('_bcopt_region_enter_')]
-    numeric, = {node.body.func.id for node in ast.walk(consumer)
-                if isinstance(node, ast.IfExp) and isinstance(node.body, ast.Call)
-                and isinstance(node.body.func, ast.Name) and node.body.func.id.startswith('_bcopt_region_numeric_')}
+    call_targets = {node.body.func.id for node in ast.walk(consumer)
+                    if isinstance(node, ast.IfExp) and isinstance(node.body, ast.Call)
+                    and isinstance(node.body.func, ast.Name) and node.body.func.id.startswith('_bcopt_region_numeric_')}
+    inlined_entry = args.inlined_entry or not call_targets
+    if inlined_entry:
+        numeric, = [node.name for node in tree.body if isinstance(node, ast.FunctionDef)
+                    and node.name.startswith('_bcopt_region_numeric_') and len(node.body) == 1
+                    and isinstance(node.body[0], ast.Try)]
+    else:
+        numeric, = call_targets
     check, = {node.name for node in tree.body if isinstance(node, ast.FunctionDef)
               and node.name.startswith('_bcopt_region_arguments_')}
     sys.path.insert(0, str(args.bot.resolve()/'src'))
     import planner as p
     from settings import SearchConfig
+    counts = {'contexts': 0, 'direct_evaluations': 0, 'direct_fast_evaluations': 0, 'consumer_numeric_calls': 0}
+    if inlined_entry:
+        def observed_entry():
+            counts['consumer_numeric_calls'] += 1
+        marker = '_profile_inlined_numeric_entry'
+        assert not hasattr(p, marker)
+        setattr(p, marker, observed_entry)
+        entries = [node for node in ast.walk(consumer) if isinstance(node, ast.If)
+                   and isinstance(node.test, ast.Name) and node.test.id.startswith('_bcopt_region_live_')
+                   and any(isinstance(part, ast.Name) and part.id.startswith(('_bcopt_inline80_', '_bcopt_entry_'))
+                           for statement in node.body for part in ast.walk(statement))]
+        assert len(entries) == args.entry_copies
+        for entry in entries:
+            entry.body.insert(0, ast.Expr(value=ast.Call(func=ast.Name(id=marker, ctx=ast.Load()), args=[], keywords=[])))
+        if any(name.startswith(('_bcopt_sum80_certify', '_bcopt_compensated_certify')) for name in vars(p)):
+            counts['compensated_cache_eligible'] = counts['compensated_cache_hits'] = 0
+            def observe_sum(hit):
+                counts['compensated_cache_eligible'] += 1
+                counts['compensated_cache_hits'] += hit
+            sum_marker = '_profile_compensated_cache'
+            assert not hasattr(p, sum_marker)
+            setattr(p, sum_marker, observe_sum)
+            caches = [node for node in ast.walk(consumer) if isinstance(node, ast.If)
+                      and isinstance(node.test, ast.BoolOp)
+                      and any(isinstance(part, ast.Name) and part.id.startswith(('_bcopt_sum80_ready', '_bcopt_compensated_ready'))
+                              for part in ast.walk(node.test))]
+            assert caches
+            for cache in caches:
+                read = cache.body[0].value
+                assert (isinstance(read, ast.Subscript) and isinstance(read.value, ast.Name)
+                        or isinstance(read, ast.Name) and read.id.startswith(('_bcopt_slot80_', '_bcopt_cache_slot_')))
+                cache.body[:0] = ast.parse(f'{sum_marker}({ast.unparse(read)} is not None)').body
+        scalar_reads = [node for node in ast.walk(consumer) if isinstance(node, ast.Assign)
+                        and isinstance(node.targets[0], ast.Name) and node.targets[0].id.startswith('_bcopt_group_scalar_state')]
+        if scalar_reads:
+            counts['scalar_group_calls'] = counts['scalar_group_hits'] = 0
+            def observe_scalars(value):
+                counts['scalar_group_calls'] += 1
+                counts['scalar_group_hits'] += value is not None
+                return value
+            scalar_marker = '_profile_scalar_group'
+            assert not hasattr(p, scalar_marker)
+            setattr(p, scalar_marker, observe_scalars)
+            for node in scalar_reads:
+                assert (isinstance(node.value, ast.Subscript)
+                        or isinstance(node.value, ast.Name) and node.value.id.startswith(('_bcopt_slot80_', '_bcopt_cache_slot_')))
+                node.value = ast.Call(func=ast.Name(id=scalar_marker, ctx=ast.Load()), args=[node.value], keywords=[])
+        exec(compile(ast.fix_missing_locations(ast.Module(body=[consumer], type_ignores=[])), '<inline-observation>', 'exec'), vars(p))
     fast, context = getattr(p, consumer.name), getattr(p, enter)
     state_parameter, = [name for name in inspect.signature(fast).parameters if name.startswith('_bcopt_region_state_')]
-    counts = {'contexts': 0, 'direct_evaluations': 0, 'direct_fast_evaluations': 0, 'consumer_numeric_calls': 0}
     numeric_function = getattr(p, numeric)
     def observed(*values):
         counts['consumer_numeric_calls'] += 1
@@ -112,7 +168,9 @@ def main():
     report = {'status': 'complete', 'scenarios': 240, **counts, 'exact_records_and_stop_counts_equal': True,
               'mutable_alias_retention': False, 'observations_sha256': hashlib.sha256(
                   json.dumps(observations, sort_keys=True).encode()).hexdigest(),
-              'planner_sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+               'planner_sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+    if inlined_entry:
+        report['inlined_entry_instrumentation'] = 'host-only in-memory entry counter; source files unchanged'
     args.output.mkdir(parents=True)
     (args.output/'results.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps(report, indent=2))
