@@ -14,10 +14,11 @@ from .helper_bindings import cache_helper_builtins
 
 
 class ShortReductions:
-    def __init__(self, program, module, options):
+    def __init__(self, program, module, options, facts=None):
         self.program, self.module, self.options = program, module, options
         self.names = used_names(program.modules[module].tree)
         self.changes, self.helpers = [], []
+        self.facts = facts
         self.builtins = {name: self.fresh(name) for name in
                          ('type', 'list', 'tuple', 'int', 'len', 'AttributeError', 'IndexError')}
 
@@ -165,8 +166,28 @@ class ShortReductions:
             previous = source
             source = source.replace(f'{length}(route) > 8', f'{length}(route) > 16')
             self.changes.append(Change('wide-helper-limit', triple[0].lineno, previous, source))
-        self.helpers.extend(cache_helper_builtins(ast.parse(source).body, self.builtins,
-            {'type', 'int', 'list', 'tuple', 'len'}, self.options, self.changes, triple[0].lineno))
+        if 'helper-guard-branches' not in self.options.disabled:
+            previous = source
+            # Only compiler-owned exact builtin type calls on already-loaded
+            # locals are reordered. A failed guard still takes the same fallback;
+            # no user comparison or attribute access is skipped here.
+            source = source.replace(f'{typ}(x) is {typ}(y) is {typ}(z) is {integer}',
+                f'{typ}(x) is {integer} and {typ}(y) is {integer} and {typ}(z) is {integer}')
+            self.changes.append(Change('helper-guard-branches', triple[0].lineno, previous, source))
+        generated = cache_helper_builtins(ast.parse(source).body, self.builtins,
+            {'type', 'int', 'list', 'tuple', 'len'}, self.options, self.changes, triple[0].lineno)
+        if self.facts is not None:
+            function = generated[0]
+            loop = next(n for n in function.body if isinstance(n, ast.For))
+            index_guard = loop.body[0].test
+            if isinstance(index_guard, ast.BoolOp):
+                index_guard = index_guard.values[0]
+            self.facts.consumes(function, argument=1,
+                maximum=8 if 'wide-helper-limit' in self.options.disabled else 16,
+                guards=[*function.body[0].test.values[:2], index_guard])
+            self.facts.shape(function, argument=1, kinds={'tuple'}, guard=function.body[0].test.values[0])
+            self.facts.shape(function, argument=0, kinds={'list', 'tuple'}, guard=function.body[0].test.values[2])
+        self.helpers.extend(generated)
         replacement = ast.parse(f'''{packed} = {helper}({rows}, {route}, {record})
 if {packed} is None:
     pass

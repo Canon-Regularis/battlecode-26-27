@@ -21,6 +21,8 @@ from .scalar_extrema import ScalarExtrema
 from .adjacent import AdjacentPairs
 from .extensions import AdjacentExtensions
 from .tuple_insertions import TupleInsertions
+from .helper_facts import HelperFacts, ReuseHelperFacts, StaticHelperShapes
+from .regions import NumericRegions, finish_numeric_regions
 
 
 IGNORED_DIRS = {".git", ".venv", ".cambc", "__pycache__", ".pytest_cache",
@@ -82,21 +84,25 @@ def optimize_source(source: str, options: Options | None = None, *, filename="<b
         return SourceResult(source, warnings=warnings)
     if program is None:
         program = Program({module_name: tree})
+        regions = NumericRegions(program, options)
+        regions.apply()
+        program.region_changes = regions.changes
     # Use the indexed tree so class identity and source locations are unambiguous.
     tree = program.modules[module_name].tree
     record_returns = InlineRecordReturns(program, module_name, options)
     tree = ast.fix_missing_locations(record_returns.apply(tree))
-    reductions = ShortReductions(program, module_name, options)
+    facts = HelperFacts()
+    reductions = ShortReductions(program, module_name, options, facts)
     tree = ast.fix_missing_locations(reductions.apply(tree))
-    shortcircuit = ShortCircuit(program, module_name, options)
+    shortcircuit = ShortCircuit(program, module_name, options, facts)
     tree = ast.fix_missing_locations(shortcircuit.apply(tree))
-    extrema = ExtremumLoops(program, module_name, options)
+    extrema = ExtremumLoops(program, module_name, options, facts)
     tree = ast.fix_missing_locations(extrema.apply(tree))
     records = RecordSpecializer(program, module_name, options)
     tree = records.visit(tree)
     rewriter = Rewriter(options, program=program, module=module_name)
     tree = ast.fix_missing_locations(rewriter.visit(tree))
-    extensions = AdjacentExtensions(program, module_name, options)
+    extensions = AdjacentExtensions(program, module_name, options, facts)
     tree = ast.fix_missing_locations(extensions.apply(tree))
     scalar = ScalarExtrema(program, module_name, options)
     tree = ast.fix_missing_locations(scalar.apply(tree))
@@ -104,10 +110,17 @@ def optimize_source(source: str, options: Options | None = None, *, filename="<b
     tree = ast.fix_missing_locations(adjacent.apply(tree))
     insertions = TupleInsertions(program, module_name, options)
     tree = ast.fix_missing_locations(insertions.apply(tree))
+    static_shapes = StaticHelperShapes(facts, options)
+    tree = ast.fix_missing_locations(static_shapes.apply(tree))
+    fact_reuse = ReuseHelperFacts(facts, options)
+    tree = ast.fix_missing_locations(fact_reuse.apply(tree))
+    tree = finish_numeric_regions(tree)
     compile(tree, filename, "exec")
-    changes = [*record_returns.changes, *reductions.changes, *shortcircuit.changes,
+    changes = [*getattr(program, 'region_changes', {}).get(module_name, []),
+                *record_returns.changes, *reductions.changes, *shortcircuit.changes,
                 *extrema.changes, *records.changes, *rewriter.changes, *extensions.changes,
-                *scalar.changes, *adjacent.changes, *insertions.changes]
+                *scalar.changes, *adjacent.changes, *insertions.changes,
+                *static_shapes.changes, *fact_reuse.changes]
     if not changes:
         return SourceResult(source, warnings=warnings)
     emitted = ast.unparse(tree) + "\n"
@@ -164,7 +177,11 @@ def optimize_folder(source, output, options: Options | None = None):
     if len(set(modules.values())) != len(modules):
         raise ValueError("Ambiguous Python module/package names in the input folder")
     program = Program({modules[path]: ast.parse(text, filename=str(path.relative_to(source)))
-                       for path, text in texts.items()}, packages)
+                        for path, text in texts.items()}, packages)
+    if not blocked:
+        regions = NumericRegions(program, options)
+        regions.apply()
+        program.region_changes = regions.changes
     results = {path: optimize_source(text, options, filename=str(path.relative_to(source)), blocked=blocked,
                                      program=program, module_name=modules[path])
                for path, text in texts.items()}

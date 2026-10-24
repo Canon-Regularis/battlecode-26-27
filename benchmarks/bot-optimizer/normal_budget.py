@@ -33,15 +33,28 @@ def observe_local(folder, specification):
                  and child.name == name]
     if not isinstance(node, ast.FunctionDef):
         raise ValueError('local observation target must be a function')
-    body = node.body
-    doc = []
-    if body and isinstance(body[0], ast.Expr) and isinstance(body[0].value, ast.Constant):
-        doc, body = body[:1], body[1:]
-    finish = ast.parse(f"print('BCOPT_WORK ' + repr(({specification!r}, {local})), flush=True)").body
-    node.body = [*doc, ast.Try(body=body, handlers=[], orelse=[], finalbody=finish)]
+    targets = [node]
+    manifest = folder/'optimizer-report.json'
+    if manifest.exists():
+        report = json.loads(manifest.read_text())
+        for info in report['files'].values():
+            for change in info['changes']:
+                if change['pass_name'] != 'numeric-consumer-regions' or not change['before'].startswith(f'{module}.{qualified}:'):
+                    continue
+                names = [word for word in change['after'].split() if word.startswith('_bcopt_region_consumer_')]
+                for name in names:
+                    clone, = [child for child in tree.body if isinstance(child, ast.FunctionDef) and child.name == name]
+                    targets.append(clone)
+    for target in targets:
+        body, doc = target.body, []
+        if body and isinstance(body[0], ast.Expr) and isinstance(body[0].value, ast.Constant):
+            doc, body = body[:1], body[1:]
+        finish = ast.parse(f"print('BCOPT_WORK ' + repr(({specification!r}, {local})), flush=True)").body
+        target.body = [*doc, ast.Try(body=body, handlers=[], orelse=[], finalbody=finish)]
     text = ast.unparse(ast.fix_missing_locations(tree)) + '\n'
     compile(text, str(path), 'exec')
     path.write_text(text)
+    return [target.name for target in targets]
 
 
 def work_counts(replay):
@@ -82,13 +95,14 @@ def main():
     new = optimize_folder(args.bot, optimized)
     if old['input_sha256'] != new['input_sha256']:
         raise ValueError('input changed between variants')
+    observation_targets = {}
     if args.observe_local:
         for folder in (baseline, optimized):
-            observe_local(folder, args.observe_local)
+            observation_targets[folder.name] = observe_local(folder, args.observe_local)
     report = {'status': 'running', 'instrumented': bool(args.observe_local),
               'fuel': args.fuel or 'normal engine default', 'observe_local': args.observe_local,
               'input_sha256': old['input_sha256'], 'pass_counts': new['pass_counts'],
-              'rounds': args.rounds, 'comparisons': []}
+              'rounds': args.rounds, 'comparisons': [], 'observation_targets': observation_targets}
     for index, game_map in enumerate(maps):
         paths = []
         for name, bot in (('baseline', baseline), ('optimized', optimized)):

@@ -4,6 +4,12 @@ from dataclasses import asdict, dataclass, field
 
 
 PASS_DESCRIPTIONS = {
+    "numeric-consumer-regions": "Derive primitive graph snapshots and numeric clones from source, guarded by closed consumer effects, callback identities, exact runtime types and access bounds.",
+    "helper-guard-branches": "Simplify compiler-owned exact-integer guard chains into short-circuit identity branches.",
+    "static-helper-shapes": "Specialise generated helpers for exact builtin container types proven from local literals/comprehensions, retaining content checks.",
+    "immutable-helper-facts": "Reuse proven exact integer tuple guards across generated helpers, retaining mutable-data checks and fallbacks.",
+    "immutable-helper-regions": "Specialise bounded continuations after successful immutable guards to eliminate repeated helper dispatch.",
+    "tuple-insertion-hoist": "Reuse an owned tuple insertion buffer across outer loops with function-scope finally cleanup.",
     "tuple-adjacent-iterator": "Iterate owned exact tuples with a previous-item local and explicit cleanup instead of pair allocation/unpacking.",
     "tuple-insertion-buffer": "Yield tuple insertion variants using an owned buffer with explicit generator cleanup and exact-tuple fallback.",
     "native-index-guard": "Use native exact-sequence bounds checks with original reduction fallback on IndexError.",

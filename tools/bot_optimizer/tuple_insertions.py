@@ -35,6 +35,7 @@ class TupleInsertions:
         functions.extend(method for owner in tree.body if isinstance(owner, ast.ClassDef) and not owner.type_params
                          for method in owner.body if isinstance(method, ast.FunctionDef))
         for function in functions:
+            before = ast.unparse(function)
             parts = list(ast.walk(function))
             if function.type_params or not any(isinstance(n, ast.Yield) for n in parts) or any(
                 isinstance(n, (ast.Global, ast.Nonlocal, ast.NamedExpr, ast.Lambda, ast.ClassDef,
@@ -46,6 +47,7 @@ class TupleInsertions:
             self.local = set(bindings.counts) | parameters
             self.owners = parameters - set(bindings.counts)
             self.flags = {}
+            self.buffers = {}
             function.body = self.block(function.body, set(parameters))
             if self.flags:
                 prefix = [ast.Assign(targets=[ast.Name(id=flag, ctx=ast.Store())], value=ast.Compare(
@@ -56,7 +58,17 @@ class TupleInsertions:
                 index = int(bool(function.body and isinstance(function.body[0], ast.Expr)
                             and isinstance(function.body[0].value, ast.Constant)
                             and isinstance(function.body[0].value.value, str)))
-                function.body[index:index] = prefix
+                if self.buffers:
+                    for owner, work in self.buffers.items():
+                        prefix.extend(ast.parse(f'{work} = {self.aliases["list"]}({owner}) '
+                                                f'if {self.flags[owner]} else None').body)
+                    cleanup = ast.parse('del ' + ', '.join(self.buffers.values())).body
+                    function.body[index:] = [*prefix, ast.Try(body=function.body[index:],
+                        handlers=[], orelse=[], finalbody=cleanup)]
+                    self.changes.append(Change('tuple-insertion-hoist', function.lineno,
+                                               before, ast.unparse(ast.fix_missing_locations(function))))
+                else:
+                    function.body[index:index] = prefix
         if self.changes:
             imports = ast.ImportFrom(module='builtins', names=[ast.alias(name=n, asname=a)
                 for n, a in self.aliases.items()], level=0)
@@ -72,16 +84,16 @@ class TupleInsertions:
     def stores(target):
         return {n.id for n in ast.walk(target) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store)}
 
-    def block(self, statements, definite):
+    def block(self, statements, definite, depth=0):
         result = []
         for statement in statements:
             if isinstance(statement, ast.For):
-                statement.body = self.block(statement.body, definite | self.stores(statement.target))
-                statement.orelse = self.block(statement.orelse, set(definite))
-                result.append(self.rewrite(statement, definite))
+                statement.body = self.block(statement.body, definite | self.stores(statement.target), depth + 1)
+                statement.orelse = self.block(statement.orelse, set(definite), depth)
+                result.append(self.rewrite(statement, definite, depth))
             elif isinstance(statement, (ast.If, ast.While)):
-                statement.body = self.block(statement.body, set(definite))
-                statement.orelse = self.block(statement.orelse, set(definite))
+                statement.body = self.block(statement.body, set(definite), depth + isinstance(statement, ast.While))
+                statement.orelse = self.block(statement.orelse, set(definite), depth)
                 result.append(statement)
             else:
                 result.append(statement)
@@ -98,7 +110,7 @@ class TupleInsertions:
                 and self.program.resolve(self.module, call.func) in {name, f'builtins.{name}'}
                 and len(call.args) == 1 and not call.keywords)
 
-    def rewrite(self, loop, definite):
+    def rewrite(self, loop, definite, depth):
         if not (isinstance(loop.target, ast.Name) and not loop.orelse and len(loop.body) == 1
                 and isinstance(loop.body[0], ast.Expr) and isinstance(loop.body[0].value, ast.Yield)
                 and self.builtin(loop.iter, 'range')):
@@ -129,7 +141,13 @@ class TupleInsertions:
                 return loop
         if owner not in self.flags:
             self.flags[owner] = self.fresh('exact')
-        work = self.fresh('work')
+        hoist = depth > 0 and 'tuple-insertion-hoist' not in self.options.disabled
+        if hoist:
+            if owner not in self.buffers:
+                self.buffers[owner] = self.fresh('work')
+            work = self.buffers[owner]
+        else:
+            work = self.fresh('work')
         generated = copy.deepcopy(loop)
         generated.body = ast.parse(f'{work}.insert({position}, {item.id})\n'
                                    f'yield {self.aliases["tuple"]}({work})\n'
@@ -137,6 +155,8 @@ class TupleInsertions:
         fast = [*ast.parse(f'{work} = {self.aliases["list"]}({owner})').body,
                 ast.Try(body=[generated], handlers=[], orelse=[],
                         finalbody=[ast.Delete(targets=[ast.Name(id=work, ctx=ast.Del())])])]
+        if hoist:
+            fast = [generated]
         replacement = ast.If(test=ast.Name(id=self.flags[owner], ctx=ast.Load()), body=fast, orelse=[copy.deepcopy(loop)])
         self.changes.append(Change('tuple-insertion-buffer', loop.lineno, ast.unparse(loop), ast.unparse(replacement)))
         return ast.copy_location(replacement, loop)

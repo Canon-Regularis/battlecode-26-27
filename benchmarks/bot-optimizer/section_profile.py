@@ -26,7 +26,7 @@ SECTIONS = {
     ],
     '_calculate_loop_risk': [
         ('setup', None), ('altar-exposure', 'exposure ='),
-        ('inter-camp', 'for origin, destination'), ('service', 'exposure += sum'),
+        ('inter-camp', ('for origin, destination', 'if _bcopt_adj_type_')), ('service', 'exposure += sum'),
         ('waiting-clamp', 'exposure += (tribute_turns'),
     ],
 }
@@ -75,18 +75,31 @@ def main():
     parser.add_argument('bot', type=Path)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--maps', default='collision,corners')
+    parser.add_argument('--functions-only', action='store_true',
+                        help='Profile generated helpers and planner methods without relying on section layout')
     args = parser.parse_args()
     if args.output.exists():
         parser.error('output must be new')
     folder = args.output.resolve() / 'optimized'
     compiled = optimize_folder(args.bot, folder)
-    inventory = sections(folder)
+    if args.functions_only:
+        tree = ast.parse((folder / 'src/planner.py').read_text())
+        helpers = [node for node in tree.body if isinstance(node, ast.FunctionDef)
+                   and node.name.startswith('_bcopt_')]
+        inventory = {node.name: ast.unparse(node) for node in helpers}
+        targets = [*(f'planner:{node.name}' for node in helpers),
+                   'planner:LoopPlanner.evaluate_loop', 'planner:LoopPlanner._calculate_loop_risk',
+                   'planner:LoopPlanner.find_loops']
+    else:
+        inventory = sections(folder)
+        targets = ['planner:LoopPlanner.find_loops']
     spec = importlib.util.spec_from_file_location('fuel_profile', Path(__file__).with_name('profile.py'))
     profiler = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(profiler)
-    profiler.instrument(folder, ['planner:LoopPlanner.find_loops'], 'draft_planner:DraftPlanner.build')
+    profiler.instrument(folder, targets, 'draft_planner:DraftPlanner.build')
     report = {'status': 'running', 'inclusive': True, 'instrumentation_overhead_included': True,
-              'input_sha256': compiled['input_sha256'], 'sections': inventory, 'runs': []}
+              'input_sha256': compiled['input_sha256'], 'sections': inventory, 'runs': [],
+              'functions_only': args.functions_only, 'targets': targets}
     for game_map in args.maps.split(','):
         dest = args.output.resolve() / game_map
         run_command([executable(), 'run', str(folder), str(folder), '--release', '--rounds', '1',

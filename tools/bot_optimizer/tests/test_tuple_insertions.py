@@ -13,6 +13,51 @@ SOURCE = '''def run(route, item):
 
 
 class TupleInsertionTests(unittest.TestCase):
+    def test_hoisted_buffer_outer_iterator_lifetimes(self):
+        source = '''def run(route, items, make):
+    token = make('token')
+    for item in items:
+        for position in range(len(route)+1):
+            yield route[:position]+(item,)+route[position:]
+'''
+        generated = optimize_source(source)
+        self.assertIn('tuple-insertion-hoist', [c.pass_name for c in generated.changes])
+        disabled = optimize_source(source, Options(disabled=frozenset({'tuple-insertion-hoist'})))
+        self.assertNotIn('tuple-insertion-hoist', [c.pass_name for c in disabled.changes])
+        for mode in ('close', 'throw', 'exhaust', 'iterator-error'):
+            outcomes = []
+            for text in (source, generated.source, disabled.source):
+                events = []
+                class Value:
+                    def __init__(self, label):self.label = label
+                    def __del__(self):events.append(self.label)
+                def items():
+                    yield Value('first')
+                    events.append('next-item')
+                    if mode == 'iterator-error':raise ValueError('iterator')
+                    yield Value('second')
+                gen = execute(text)['run']((Value('a'),Value('b')),items(),Value)
+                saved = None
+                row = None
+                try:
+                    next(gen)
+                    if mode == 'close':
+                        gen.close()
+                    elif mode == 'throw':
+                        gen.throw(ValueError('injected'))
+                    else:
+                        for row in gen:
+                            pass
+                        row = None
+                except ValueError as error:
+                    saved = error
+                events.append('after')
+                del gen, saved, row
+                gc.collect()
+                outcomes.append(events)
+            self.assertEqual(outcomes[0], outcomes[1], mode)
+            self.assertEqual(outcomes[0], outcomes[2], mode)
+
     def functions(self, source=SOURCE):
         result = optimize_source(source)
         self.assertIn('tuple-insertion-buffer', [c.pass_name for c in result.changes])

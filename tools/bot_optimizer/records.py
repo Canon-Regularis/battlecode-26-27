@@ -13,16 +13,30 @@ from .model import Change
 
 
 def used_names(tree):
-    result = {n.id for n in ast.walk(tree) if isinstance(n, ast.Name)}
-    result.update(n.arg for n in ast.walk(tree) if isinstance(n, ast.arg))
-    result.update(n.name for n in ast.walk(tree)
-                  if isinstance(n, (ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)))
-    result.update(a.asname or a.name for n in ast.walk(tree)
-                  if isinstance(n, (ast.Import, ast.ImportFrom)) for a in n.names)
-    result.update(Bindings(tree.body).counts)
+    """Reserve identifiers in every scope with one traversal of the live tree.
+
+    Unlike lexical binding analysis this includes nested scopes and class bodies:
+    generated helpers must not collide with exception/pattern/import bindings.
+    Recompute after transformations so newly emitted names are also reserved.
+    """
+    result = set()
     for node in ast.walk(tree):
-        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
-            result.update(Bindings(node.body).counts)
+        if isinstance(node, ast.Name):
+            result.add(node.id)
+        elif isinstance(node, ast.arg):
+            result.add(node.arg)
+        elif isinstance(node, (ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)):
+            result.add(node.name)
+        elif isinstance(node, (ast.Import, ast.ImportFrom)):
+            for alias in node.names:
+                result.add(alias.asname or alias.name)
+                if isinstance(node, ast.Import):
+                    result.add(alias.asname or alias.name.split('.')[0])
+        elif isinstance(node, (ast.ExceptHandler, ast.MatchAs, ast.MatchStar)):
+            if node.name:
+                result.add(node.name)
+        elif isinstance(node, ast.MatchMapping) and node.rest:
+            result.add(node.rest)
     return result
 
 

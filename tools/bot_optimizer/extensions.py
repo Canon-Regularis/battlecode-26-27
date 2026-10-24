@@ -10,10 +10,11 @@ from .helper_bindings import cache_helper_builtins
 
 
 class AdjacentExtensions:
-    def __init__(self, program, module, options):
+    def __init__(self, program, module, options, facts=None):
         self.program, self.module, self.options = program, module, options
         self.names = used_names(program.modules[module].tree)
         self.changes, self.helpers = [], []
+        self.facts = facts
         self.builtins = {n: self.fresh(n) for n in ('type', 'list', 'tuple', 'int', 'len', 'iter', 'next', 'StopIteration', 'RuntimeError')}
         self.pairwise = self.fresh('pairwise')
 
@@ -143,8 +144,14 @@ class AdjacentExtensions:
             previous = source
             source = source.replace(f"{b['len']}(route) > 8", f"{b['len']}(route) > 16")
             self.changes.append(Change('wide-helper-limit', statement.lineno, previous, source))
-        self.helpers.extend(cache_helper_builtins(ast.parse(source).body, self.builtins,
-            {'type', 'int', 'list', 'tuple', 'len'}, self.options, self.changes, statement.lineno))
+        generated = cache_helper_builtins(ast.parse(source).body, self.builtins,
+            {'type', 'int', 'list', 'tuple', 'len'}, self.options, self.changes, statement.lineno)
+        self.helpers.extend(generated)
+        if self.facts is not None:
+            self.facts.produces(helper, argument=1,
+                maximum=8 if 'wide-helper-limit' in self.options.disabled else 16)
+            self.facts.shape(generated[0], argument=0, kinds={'list'}, guard=generated[0].body[0].test.values[0])
+            self.facts.shape(generated[0], argument=1, kinds={'tuple'}, guard=generated[0].body[0].test.values[1])
         test = ast.Call(func=ast.Name(id=helper, ctx=ast.Load()),
             args=[copy.deepcopy(call.func.value), copy.deepcopy(first),
                   *(ast.Name(id=n, ctx=ast.Load()) for n in captures)], keywords=[])

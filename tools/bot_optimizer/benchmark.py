@@ -55,14 +55,14 @@ def benchmark(output, *, maps=("collision", "corners"), cambc=None, suite="core"
         raise ValueError("At least one map is required")
     cli = executable(cambc)
     fixtures = Path(__file__).resolve().parents[2] / "benchmarks/bot-optimizer/src"
-    if suite not in {"core", "specialization", "advanced", "lifetimes", "wrappers", "deferred", "reductions", "shortcircuit", "thirty"}:
+    if suite not in {"core", "specialization", "advanced", "lifetimes", "wrappers", "deferred", "reductions", "shortcircuit", "thirty", "forty", "regions"}:
         raise ValueError(f"Unknown benchmark suite: {suite}")
     options = options or Options()
     source = (fixtures / {"core": "kernels.py", "specialization": "specialization.py",
                          "advanced": "advanced.py", "lifetimes": "lifetimes.py",
                          "wrappers": "wrappers.py", "deferred": "deferred.py",
                          "reductions": "reductions.py", "shortcircuit": "shortcircuit.py",
-                         "thirty": "thirty.py"}[suite]).read_text()
+                           "thirty": "thirty.py", "forty": "forty.py", "regions": "regions.py"}[suite]).read_text()
     result = optimize_source(source, options)
     baseline = Path(baseline_source).read_text() if baseline_source is not None else source
     # Read the literal case inventory without executing SDK-dependent bot code.
@@ -107,7 +107,7 @@ def main(argv=None):
     parser.add_argument("--baseline-source", type=Path,
                         help="Use an existing equivalent kernel implementation as baseline (not re-optimised)")
     parser.add_argument("--disable", action="append", choices=sorted(PASS_DESCRIPTIONS), default=[])
-    parser.add_argument("--suite", choices=("core", "specialization", "advanced", "lifetimes", "wrappers", "deferred", "reductions", "shortcircuit", "thirty"), default="core")
+    parser.add_argument("--suite", choices=("core", "specialization", "advanced", "lifetimes", "wrappers", "deferred", "reductions", "shortcircuit", "thirty", "forty", "regions"), default="core")
     args = parser.parse_args(argv)
     try:
         report = benchmark(args.output, maps=[m.strip() for m in args.maps.split(",") if m.strip()],

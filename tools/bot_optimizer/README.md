@@ -71,6 +71,10 @@ uv run python -m unittest discover -s bots/economy-generated/tests -v
 | `record-bulk-init` | Populate an eligible frozen dataclass using direct dictionary stores, with subclass fallback |
 | `record-call` | Cached-allocator factories for resolved, hook-free frozen records with 4–20 fields |
 | `short-int-reductions` | Fuse three adjacent field sums for exact integer inputs and tuple routes of at most eight indices; retain original statements as fallback |
+| `helper-guard-branches` | Simplify pure exact-integer type guards in generated reductions into short-circuit branches |
+| `immutable-helper-facts` | Carry emitter-registered exact-integer tuple proofs from successful helpers to later reductions/extrema; expire proofs on rebinding and retain mutable-data guards |
+| `immutable-helper-regions` | Version one bounded continuation after a successful guard, avoiding repeated helper dispatch; preserve the original fallback branch |
+| `static-helper-shapes` | Prove exact list/tuple types from local literals, list comprehensions and aliases; remove only container-type guards, retaining content checks |
 | `short-circuit-loop` | Direct `any`/`all` comparison loops for exact list/tuple inputs held in noncaptured locals; preserve custom iterator fallback, PEP 479, boolean exceptions and cleanup |
 | `scalar-record` | Eliminate a primitive-valued temporary record used only by an immediately following return expression |
 | `integer-membership` | Exact-integer membership in 4–4,096 literal integers → CPython-folded frozen constant set |
@@ -93,7 +97,8 @@ generator replacement occurs in `any`, `all`, or other short-circuiting searches
 Floating-point reductions are not reassociated or materialised by this pass.
 Bounded integer reductions may also contain total integer predicates: comparisons,
 bit tests, `not`, `and`, and `or`. Callback, division and other potentially raising
-filters are preserved. `any`/`all` are never eagerly materialised.
+filters are preserved. Outside the guarded numeric regions described below,
+`any`/`all` are never eagerly materialised.
 
 ### Whole-folder specialisation
 
@@ -103,6 +108,66 @@ report includes resolution counts. Unknown/decorated/rebound callables stay
 unknown. Dynamic module `__getattr__` disables these whole-folder specialisations;
 cyclic imports prevent cross-module lookup elimination. This is **not** full
 Python type inference or unrestricted inlining.
+
+`helper_facts.py` connects generated passes through explicit guard contracts.
+Only an exact tuple's immutable shape and exact-integer contents survive arbitrary
+callbacks. A successful extension guard can therefore remove redundant tuple
+checks in later helpers, while those helpers still validate mutable rows, record
+fields and indexes. Unknown user functions never publish these contracts.
+Assignments, deletions and bindings inside intervening branches invalidate the
+local proof. Continuation specialisation stays in the original lexical scope,
+keeps public signatures, and versions at most one region of up to2,000 AST nodes
+per function to bound code growth. Both passes can be disabled independently.
+
+Static helper specialisation also recognises exact list/tuple types established
+by local construction. Those types cannot change when callbacks mutate contents;
+the contents themselves remain unknown. Binding changes invalidate these facts,
+and annotations or unknown constructors never establish them. Generated helper
+clones retain contracts for any remaining runtime guards, allowing the static and
+dynamic fact passes to compose.
+
+Host compilation uses a single traversal to collect reserved names in each live
+AST, including imports and exception/pattern bindings in nested/class scopes.
+This avoids repeated whole-tree binding scans without caching stale identifiers
+across transformations. Host compile-time measurements are separate from guest
+Wasm fuel measurements.
+
+### Guarded numeric consumer regions
+
+`effects.py` computes bounded, path-sensitive summaries for zero-argument
+callbacks. A summary requires exact boolean returns and proves every False exit
+read-only; an effectful True exit can terminate a region. The pinned SDK's
+successful `cambc.fuel_remaining` call has an audited read-only integer-return
+contract. Consumers must still execute callbacks, guard callable/dependency
+bindings, and invalidate facts across other effects.
+
+`region_types.py` derives candidate schemas from simple constructor assignments
+and numeric record layouts. Annotations only select runtime checks. Its snapshot
+emitter validates exact classes, containers and primitive values, checks raw
+class namespaces for changed lookup/descriptors, and copies data into private
+tuples. Failed validation has a distinct sentinel; valid optional None is retained.
+Snapshots retain no mutable input aliases.
+
+`numeric_regions.py` derives private numeric methods, indexed-access obligations,
+and primitive result contracts from source. It fuses total integer field reductions
+and can inline small, proven read-only numeric helpers. Floating sums retain native
+compensated accumulation; their empty integer-zero result is tracked explicitly.
+Eager short-circuit producers require total, side-effect-free primitive expressions.
+
+`consumer_regions.py` solves container element and alias facts across branches,
+loop backedges and source helpers. Only owned-container mutation is permitted.
+`regions.py` connects eligible constructor/method callsites to guarded consumers:
+callback/dependency identities, owner/method identities, complete snapshots and
+argument types are checked before numeric dispatch. Proven consumer assignments
+can use native indexing with an `IndexError`-only retry of the original method;
+other call forms retain explicit bounds checks. Retries are restricted to numeric
+clones with no borrowed mutation or callbacks. A dirty True callback exit
+disables dispatch before its branch continues. Public methods retain their original
+signatures and fallback behaviour. Disable with `--disable numeric-consumer-regions`.
+The pass is integrated and audited at **43.46–45.56% lower equal-work planner
+fuel** across collision, corners and lanes. See
+[`forty-percent.md`](../../benchmarks/bot-optimizer/forty-percent.md) for measurements,
+semantic checks and reproducible evidence.
 
 Positional-call lowering preserves argument evaluation order, positional-only and
 keyword-only restrictions, and does not repair invalid calls or fill default

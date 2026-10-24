@@ -10,10 +10,11 @@ from .helper_bindings import cache_helper_builtins
 
 
 class ExtremumLoops:
-    def __init__(self, program, module, options):
+    def __init__(self, program, module, options, facts=None):
         self.program, self.module, self.options = program, module, options
         self.names = used_names(program.modules[module].tree)
         self.changes, self.helpers, self.cache = [], [], {}
+        self.facts = facts
         self.builtins = {name: self.fresh(name) for name in
                          ('type', 'list', 'tuple', 'object', 'StopIteration', 'RuntimeError', 'BaseException', 'min', 'max')}
         self.sentinel = self.fresh('empty')
@@ -163,8 +164,13 @@ class ExtremumLoops:
                 source = original_loop
             else:
                 self.changes.append(Change('helper-loop-shape', node.lineno, original_loop, source))
-            self.helpers.extend(cache_helper_builtins(ast.parse(source).body, self.builtins,
-                {'type'}, self.options, self.changes, node.lineno))
+            generated = cache_helper_builtins(ast.parse(source).body, self.builtins,
+                {'type'}, self.options, self.changes, node.lineno)
+            if self.facts is not None:
+                self.facts.consumes(generated[0], argument=0, maximum=None,
+                                    guards=[generated[0].body[0].test])
+                self.facts.shape(generated[0], argument=0, kinds={'list', 'tuple'}, guard=generated[0].body[0].test)
+            self.helpers.extend(generated)
             self.cache[key] = helper
         replacement = ast.Call(func=ast.Name(id=self.cache[key], ctx=ast.Load()),
             args=[copy.deepcopy(comp.iter), *(ast.Name(id=name, ctx=ast.Load()) for name in captures)], keywords=[])
