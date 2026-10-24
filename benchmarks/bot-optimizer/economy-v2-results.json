@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-22",
+  "status": "complete",
+  "optimizer_version": "0.2.0",
+  "cambc_version": "3.0.4",
+  "input_sha256": "950f6e045c5624b53965f679837259176013e9b072f6dfc30130dffce98dc54c",
+  "bot": "bots/economy-bot",
+  "generated_bot": "bots/economy-optimized-v2",
+  "pass_counts": {"call-positional": 5, "native-attrgetter": 3, "record-bulk-init": 5},
+  "options": {"target": "3.0.4", "trust_annotations": false, "max_materialize": 4096, "min_bulk_fields": 4, "disabled": []},
+  "measurement": {
+    "driver": "python -m tools.bot_optimizer.compare",
+    "target": "draft_planner:DraftPlanner.build",
+    "require_equal_prefix": "SQUAD_LOOPS_DATA ",
+    "fuel_quantum_argument": 1000000000,
+    "rounds": 1,
+    "repeats": 2,
+    "variant_order_reversed_on_second_repeat": true,
+    "repeated_per_team_samples_identical": true,
+    "notes": "Cold source-defined build call. Identical timing wrappers in staged baseline/generated bots. Excludes fallback plan construction, module imports, encoding and drawing. Printed ranked reports matched on both sides of both maps."
+  },
+  "comparisons": [
+    {"run": 0, "map": "collision", "side": "a", "baseline_fuel": 1358254434, "optimized_fuel": 1173334587, "reduction_percent": 13.614521872416729},
+    {"run": 0, "map": "collision", "side": "b", "baseline_fuel": 1358270180, "optimized_fuel": 1173301995, "reduction_percent": 13.617922834763252},
+    {"run": 0, "map": "corners", "side": "a", "baseline_fuel": 4213032489, "optimized_fuel": 3602375957, "reduction_percent": 14.494465295351777},
+    {"run": 0, "map": "corners", "side": "b", "baseline_fuel": 4212574475, "optimized_fuel": 3601728021, "reduction_percent": 14.500549666840012},
+    {"run": 1, "map": "collision", "side": "a", "baseline_fuel": 1358254434, "optimized_fuel": 1173334587, "reduction_percent": 13.614521872416729},
+    {"run": 1, "map": "collision", "side": "b", "baseline_fuel": 1358270180, "optimized_fuel": 1173301995, "reduction_percent": 13.617922834763252},
+    {"run": 1, "map": "corners", "side": "a", "baseline_fuel": 4213032489, "optimized_fuel": 3602375957, "reduction_percent": 14.494465295351777},
+    {"run": 1, "map": "corners", "side": "b", "baseline_fuel": 4212574475, "optimized_fuel": 3601728021, "reduction_percent": 14.500549666840012}
+  ],
+  "separate_expansion_count_validation": {
+    "same_ranked_reports": true,
+    "baseline_and_generated_expansions_per_team": {"collision": 6020, "corners": 20000},
+    "repeated_fresh_build_results_identical": true,
+    "planner_reduction_percent_range": [13.523835459674128, 14.379590196960113],
+    "note": "Additional search-function instrumentation changes frame/snapshot layout; exact costs differ slightly from the generic single-boundary driver."
+  },
+  "ablation_without_record_bulk_init": {
+    "map": "collision",
+    "repeats": 1,
+    "printed_outputs_equal": true,
+    "teams": [
+      {"side": "a", "baseline_fuel": 1358254434, "optimized_fuel": 1273536542, "reduction_percent": 6.237262318408899},
+      {"side": "b", "baseline_fuel": 1358270180, "optimized_fuel": 1273561016, "reduction_percent": 6.236547429760996}
+    ]
+  },
+  "validation": {
+    "optimizer_tests_passed": 86,
+    "generated_bot_tests_passed": 71,
+    "normal_budget_smoke_rounds": 3,
+    "normal_budget_maps": ["collision", "corners"],
+    "normal_budget_ranked_reports_equal_both_teams": true,
+    "logged_errors": false
+  },
+  "limitations": [
+    "These are planner-call fuel measurements, not an entire-match or win-rate claim.",
+    "Team/run ranges are observations, not confidence intervals over arbitrary inputs.",
+    "Other bots, smaller records and subclass-heavy workloads can have different tradeoffs.",
+    "Matching printed reports and tests does not prove full behavioural equivalence."
+  ]
+}

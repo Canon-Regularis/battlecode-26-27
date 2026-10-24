@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-22",
+  "optimizer_version": "0.2.0",
+  "cambc_version": "3.0.4",
+  "guest_python_version": "3.13.7",
+  "suite": "specialization",
+  "source_sha256": "252600fbc2f1229b17a7a9d34c4a3a400df438bb018fd1738d66bd8ee94a8630",
+  "warmups": 20,
+  "batches": 5,
+  "calls_per_batch": 20,
+  "per_call_setup_included": true,
+  "module_initialization_included": false,
+  "options": {"target": "3.0.4", "trust_annotations": false, "max_materialize": 4096, "min_bulk_fields": 4, "disabled": []},
+  "datasets": [
+    {
+      "map": "collision",
+      "dimensions": [41, 41],
+      "observations_per_pair": 2,
+      "all_team_samples_identical": true,
+      "pairs": {
+        "identity_sum": {"baseline_fuel": 102765.65, "optimized_fuel": 19046.3, "ratio": 5.395570268241076},
+        "bounded_tuple": {"baseline_fuel": 21222.7, "optimized_fuel": 14144.7, "ratio": 1.5003994429008745},
+        "native_map_tuple": {"baseline_fuel": 183477.7, "optimized_fuel": 96385.7, "ratio": 1.9035780203909918},
+        "integer_helper": {"baseline_fuel": 235374.7, "optimized_fuel": 147310.7, "ratio": 1.5978112927302632},
+        "keyword_calls": {"baseline_fuel": 109601.7, "optimized_fuel": 86433.7, "ratio": 1.2680435987352157},
+        "frozen_record4": {"baseline_fuel": 15021.8, "optimized_fuel": 11177.7, "ratio": 1.3439079595981283},
+        "frozen_record8": {"baseline_fuel": 26202.05, "optimized_fuel": 15925.7, "ratio": 1.645268339853193},
+        "frozen_record12": {"baseline_fuel": 37384.05, "optimized_fuel": 20312.7, "ratio": 1.8404274173300448},
+        "temporary_record": {"baseline_fuel": 14994.35, "optimized_fuel": 3453.7, "ratio": 4.3415322697397},
+        "subclass_fallback": {"baseline_fuel": 37606.05, "optimized_fuel": 37847.75, "ratio": 0.9936138872191875}
+      }
+    },
+    {
+      "map": "corners",
+      "dimensions": [71, 71],
+      "observations_per_pair": 2,
+      "all_team_samples_identical": true,
+      "pairs": {
+        "identity_sum": {"baseline_fuel": 102743.65, "optimized_fuel": 19046.3, "ratio": 5.394415188251786},
+        "bounded_tuple": {"baseline_fuel": 21200.7, "optimized_fuel": 14144.7, "ratio": 1.4988440900125135},
+        "native_map_tuple": {"baseline_fuel": 183383.7, "optimized_fuel": 96313.7, "ratio": 1.9040250763910016},
+        "integer_helper": {"baseline_fuel": 235374.7, "optimized_fuel": 147310.7, "ratio": 1.5978112927302632},
+        "keyword_calls": {"baseline_fuel": 109601.7, "optimized_fuel": 86433.7, "ratio": 1.2680435987352157},
+        "frozen_record4": {"baseline_fuel": 15021.8, "optimized_fuel": 11177.7, "ratio": 1.3439079595981283},
+        "frozen_record8": {"baseline_fuel": 26202.05, "optimized_fuel": 15925.7, "ratio": 1.645268339853193},
+        "frozen_record12": {"baseline_fuel": 37362.05, "optimized_fuel": 20290.7, "ratio": 1.8413386428265166},
+        "temporary_record": {"baseline_fuel": 14994.35, "optimized_fuel": 3453.7, "ratio": 4.3415322697397},
+        "subclass_fallback": {"baseline_fuel": 37584.05, "optimized_fuel": 37825.75, "ratio": 0.9936101729641845}
+      }
+    }
+  ]
+}
