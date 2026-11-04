@@ -1,6 +1,6 @@
 # CAMBC Bot API — Python
 
-Event: cambc2026a. Read alongside GameRules.md. Signatures and descriptions come from the same SDK documentation shown on the Bot API page.
+Event: cambc2026a. Read alongside GameRules.md. Earlier Bot API export, reconciled with the vendored CAMBC 4.0.0 SDK on 3 November 2026. See [4.0.0 additions and source references](SDK_4.0.0.md) for item selection and capture-state APIs. The live website could not be fully re-exported; source declarations take precedence over retained prose and illustrative fragments.
 
 Examples are fragments for an initialised bot. Check visibility and action preconditions. 
 
@@ -630,7 +630,18 @@ class ItemInfo: cost: int; combine_count: int; result: Any; health_points: int; 
 ### ItemPassive
 
 ```python
-class ItemPassive(IntEnum): MONSTER = 1; DURABILITY = 2; TREASURE = 3; JUNGLE = 4; HOME = 5
+class ItemPassive(IntEnum):
+    MONSTER = 1
+    DURABILITY = 2
+    TREASURE = 3
+    JUNGLE = 4
+    HOME = 5
+    TRIBUTE = 6
+    CAPTURE = 7
+    PROSPECTOR = 8
+    HUNTER = 9
+    SKIRMISH = 10
+    COLLECTORS = 11
 ```
 
 Item passive group.
@@ -638,13 +649,110 @@ Item passive group.
 Public SDK type declaration.
 
 ```python
-class ItemPassive(IntEnum): MONSTER = 1; DURABILITY = 2; TREASURE = 3; JUNGLE = 4; HOME = 5
+class ItemPassive(IntEnum):
+    MONSTER = 1
+    DURABILITY = 2
+    TREASURE = 3
+    JUNGLE = 4
+    HOME = 5
+    TRIBUTE = 6
+    CAPTURE = 7
+    PROSPECTOR = 8
+    HUNTER = 9
+    SKIRMISH = 10
+    COLLECTORS = 11
 ```
 
 ### ItemType
 
 ```python
-class ItemType(int): MONSTER_SHARD_OF_STRENGTH: ClassVar[ItemType]; MONSTER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; MONSTER_SHARD_OF_FOCUS: ClassVar[ItemType]; MONSTER_EMBLEM_OF_FOCUS: ClassVar[ItemType]; MONSTER_SHARD_OF_HEALTH: ClassVar[ItemType]; MONSTER_EMBLEM_OF_HEALTH: ClassVar[ItemType]; POWER_SHARD_OF_STRENGTH: ClassVar[ItemType]; POWER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; POWER_SHARD_OF_FOCUS: ClassVar[ItemType]; POWER_EMBLEM_OF_FOCUS: ClassVar[ItemType]; POWER_SHARD_OF_HEALTH: ClassVar[ItemType]; POWER_EMBLEM_OF_HEALTH: ClassVar[ItemType]; DURABILITY_SHARD_OF_STRENGTH: ClassVar[ItemType]; DURABILITY_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; DURABILITY_SHARD_OF_FOCUS: ClassVar[ItemType]; DURABILITY_EMBLEM_OF_FOCUS: ClassVar[ItemType]; DURABILITY_SHARD_OF_HEALTH: ClassVar[ItemType]; DURABILITY_EMBLEM_OF_HEALTH: ClassVar[ItemType]; TREASURE_SHARD_OF_STRENGTH: ClassVar[ItemType]; TREASURE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; TREASURE_SHARD_OF_FOCUS: ClassVar[ItemType]; TREASURE_EMBLEM_OF_FOCUS: ClassVar[ItemType]; TREASURE_SHARD_OF_HEALTH: ClassVar[ItemType]; TREASURE_EMBLEM_OF_HEALTH: ClassVar[ItemType]; JUNGLE_SHARD_OF_STRENGTH: ClassVar[ItemType]; JUNGLE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; JUNGLE_SHARD_OF_FOCUS: ClassVar[ItemType]; JUNGLE_EMBLEM_OF_FOCUS: ClassVar[ItemType]; JUNGLE_SHARD_OF_HEALTH: ClassVar[ItemType]; JUNGLE_EMBLEM_OF_HEALTH: ClassVar[ItemType]; HOME_SHARD_OF_STRENGTH: ClassVar[ItemType]; HOME_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; HOME_SHARD_OF_FOCUS: ClassVar[ItemType]; HOME_EMBLEM_OF_FOCUS: ClassVar[ItemType]; HOME_SHARD_OF_HEALTH: ClassVar[ItemType]; HOME_EMBLEM_OF_HEALTH: ClassVar[ItemType]; BRUISER_SHARD_OF_STRENGTH: ClassVar[ItemType]; BRUISER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; BRUISER_SHARD_OF_FOCUS: ClassVar[ItemType]; BRUISER_EMBLEM_OF_FOCUS: ClassVar[ItemType]; BRUISER_SHARD_OF_HEALTH: ClassVar[ItemType]; BRUISER_EMBLEM_OF_HEALTH: ClassVar[ItemType]; COUNT: ClassVar[int]; name: str
+class ItemType(int):
+    MONSTER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    MONSTER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    MONSTER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    MONSTER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    MONSTER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    MONSTER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    POWER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    POWER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    POWER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    POWER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    POWER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    POWER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    DURABILITY_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    DURABILITY_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    DURABILITY_SHARD_OF_FOCUS: ClassVar[ItemType]
+    DURABILITY_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    DURABILITY_SHARD_OF_HEALTH: ClassVar[ItemType]
+    DURABILITY_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    TREASURE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    TREASURE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    TREASURE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    TREASURE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    TREASURE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    TREASURE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    JUNGLE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    JUNGLE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    JUNGLE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    JUNGLE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    JUNGLE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    JUNGLE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    HOME_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    HOME_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    HOME_SHARD_OF_FOCUS: ClassVar[ItemType]
+    HOME_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    HOME_SHARD_OF_HEALTH: ClassVar[ItemType]
+    HOME_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    BRUISER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    BRUISER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    BRUISER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    BRUISER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    BRUISER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    BRUISER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    TRIBUTE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    TRIBUTE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    TRIBUTE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    TRIBUTE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    TRIBUTE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    TRIBUTE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    CAPTURE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    CAPTURE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    CAPTURE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    CAPTURE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    CAPTURE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    CAPTURE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    PROSPECTOR_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    PROSPECTOR_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    PROSPECTOR_SHARD_OF_FOCUS: ClassVar[ItemType]
+    PROSPECTOR_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    PROSPECTOR_SHARD_OF_HEALTH: ClassVar[ItemType]
+    PROSPECTOR_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    HUNTER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    HUNTER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    HUNTER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    HUNTER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    HUNTER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    HUNTER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    SKIRMISH_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    SKIRMISH_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    SKIRMISH_SHARD_OF_FOCUS: ClassVar[ItemType]
+    SKIRMISH_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    SKIRMISH_SHARD_OF_HEALTH: ClassVar[ItemType]
+    SKIRMISH_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    GREED_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    GREED_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    GREED_SHARD_OF_FOCUS: ClassVar[ItemType]
+    GREED_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    GREED_SHARD_OF_HEALTH: ClassVar[ItemType]
+    GREED_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    COLLECTORS_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    COLLECTORS_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    COLLECTORS_SHARD_OF_FOCUS: ClassVar[ItemType]
+    COLLECTORS_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    COLLECTORS_SHARD_OF_HEALTH: ClassVar[ItemType]
+    COLLECTORS_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    COUNT: ClassVar[int] = 84
+    name: str
 ```
 
 Item type: an engine item ID with getters that forward to info().
@@ -652,7 +760,93 @@ Item type: an engine item ID with getters that forward to info().
 Public SDK type declaration.
 
 ```python
-class ItemType(int): MONSTER_SHARD_OF_STRENGTH: ClassVar[ItemType]; MONSTER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; MONSTER_SHARD_OF_FOCUS: ClassVar[ItemType]; MONSTER_EMBLEM_OF_FOCUS: ClassVar[ItemType]; MONSTER_SHARD_OF_HEALTH: ClassVar[ItemType]; MONSTER_EMBLEM_OF_HEALTH: ClassVar[ItemType]; POWER_SHARD_OF_STRENGTH: ClassVar[ItemType]; POWER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; POWER_SHARD_OF_FOCUS: ClassVar[ItemType]; POWER_EMBLEM_OF_FOCUS: ClassVar[ItemType]; POWER_SHARD_OF_HEALTH: ClassVar[ItemType]; POWER_EMBLEM_OF_HEALTH: ClassVar[ItemType]; DURABILITY_SHARD_OF_STRENGTH: ClassVar[ItemType]; DURABILITY_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; DURABILITY_SHARD_OF_FOCUS: ClassVar[ItemType]; DURABILITY_EMBLEM_OF_FOCUS: ClassVar[ItemType]; DURABILITY_SHARD_OF_HEALTH: ClassVar[ItemType]; DURABILITY_EMBLEM_OF_HEALTH: ClassVar[ItemType]; TREASURE_SHARD_OF_STRENGTH: ClassVar[ItemType]; TREASURE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; TREASURE_SHARD_OF_FOCUS: ClassVar[ItemType]; TREASURE_EMBLEM_OF_FOCUS: ClassVar[ItemType]; TREASURE_SHARD_OF_HEALTH: ClassVar[ItemType]; TREASURE_EMBLEM_OF_HEALTH: ClassVar[ItemType]; JUNGLE_SHARD_OF_STRENGTH: ClassVar[ItemType]; JUNGLE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; JUNGLE_SHARD_OF_FOCUS: ClassVar[ItemType]; JUNGLE_EMBLEM_OF_FOCUS: ClassVar[ItemType]; JUNGLE_SHARD_OF_HEALTH: ClassVar[ItemType]; JUNGLE_EMBLEM_OF_HEALTH: ClassVar[ItemType]; HOME_SHARD_OF_STRENGTH: ClassVar[ItemType]; HOME_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; HOME_SHARD_OF_FOCUS: ClassVar[ItemType]; HOME_EMBLEM_OF_FOCUS: ClassVar[ItemType]; HOME_SHARD_OF_HEALTH: ClassVar[ItemType]; HOME_EMBLEM_OF_HEALTH: ClassVar[ItemType]; BRUISER_SHARD_OF_STRENGTH: ClassVar[ItemType]; BRUISER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]; BRUISER_SHARD_OF_FOCUS: ClassVar[ItemType]; BRUISER_EMBLEM_OF_FOCUS: ClassVar[ItemType]; BRUISER_SHARD_OF_HEALTH: ClassVar[ItemType]; BRUISER_EMBLEM_OF_HEALTH: ClassVar[ItemType]; COUNT: ClassVar[int]; name: str
+class ItemType(int):
+    MONSTER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    MONSTER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    MONSTER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    MONSTER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    MONSTER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    MONSTER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    POWER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    POWER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    POWER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    POWER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    POWER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    POWER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    DURABILITY_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    DURABILITY_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    DURABILITY_SHARD_OF_FOCUS: ClassVar[ItemType]
+    DURABILITY_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    DURABILITY_SHARD_OF_HEALTH: ClassVar[ItemType]
+    DURABILITY_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    TREASURE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    TREASURE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    TREASURE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    TREASURE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    TREASURE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    TREASURE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    JUNGLE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    JUNGLE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    JUNGLE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    JUNGLE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    JUNGLE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    JUNGLE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    HOME_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    HOME_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    HOME_SHARD_OF_FOCUS: ClassVar[ItemType]
+    HOME_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    HOME_SHARD_OF_HEALTH: ClassVar[ItemType]
+    HOME_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    BRUISER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    BRUISER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    BRUISER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    BRUISER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    BRUISER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    BRUISER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    TRIBUTE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    TRIBUTE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    TRIBUTE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    TRIBUTE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    TRIBUTE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    TRIBUTE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    CAPTURE_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    CAPTURE_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    CAPTURE_SHARD_OF_FOCUS: ClassVar[ItemType]
+    CAPTURE_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    CAPTURE_SHARD_OF_HEALTH: ClassVar[ItemType]
+    CAPTURE_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    PROSPECTOR_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    PROSPECTOR_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    PROSPECTOR_SHARD_OF_FOCUS: ClassVar[ItemType]
+    PROSPECTOR_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    PROSPECTOR_SHARD_OF_HEALTH: ClassVar[ItemType]
+    PROSPECTOR_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    HUNTER_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    HUNTER_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    HUNTER_SHARD_OF_FOCUS: ClassVar[ItemType]
+    HUNTER_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    HUNTER_SHARD_OF_HEALTH: ClassVar[ItemType]
+    HUNTER_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    SKIRMISH_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    SKIRMISH_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    SKIRMISH_SHARD_OF_FOCUS: ClassVar[ItemType]
+    SKIRMISH_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    SKIRMISH_SHARD_OF_HEALTH: ClassVar[ItemType]
+    SKIRMISH_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    GREED_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    GREED_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    GREED_SHARD_OF_FOCUS: ClassVar[ItemType]
+    GREED_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    GREED_SHARD_OF_HEALTH: ClassVar[ItemType]
+    GREED_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    COLLECTORS_SHARD_OF_STRENGTH: ClassVar[ItemType]
+    COLLECTORS_EMBLEM_OF_STRENGTH: ClassVar[ItemType]
+    COLLECTORS_SHARD_OF_FOCUS: ClassVar[ItemType]
+    COLLECTORS_EMBLEM_OF_FOCUS: ClassVar[ItemType]
+    COLLECTORS_SHARD_OF_HEALTH: ClassVar[ItemType]
+    COLLECTORS_EMBLEM_OF_HEALTH: ClassVar[ItemType]
+    COUNT: ClassVar[int] = 84
+    name: str
 ```
 
 ### me
