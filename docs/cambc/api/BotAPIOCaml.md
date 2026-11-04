@@ -1,6 +1,6 @@
 # CAMBC Bot API — OCaml
 
-Event: cambc2026a. Read alongside GameRules.md. Signatures and descriptions come from the same SDK documentation shown on the Bot API page.
+Event: cambc2026a. Read alongside GameRules.md. Earlier Bot API export, reconciled with the vendored CAMBC 4.0.0 SDK on 3 November 2026. See [4.0.0 additions and source references](SDK_4.0.0.md) for item selection and capture-state APIs. The live website could not be fully re-exported; source declarations take precedence over retained prose and illustrative fragments.
 
 Examples are fragments for an initialised bot. Check visibility and action preconditions. 
 
@@ -6307,7 +6307,7 @@ let result = Item.all
 ### t
 
 ```ocaml
-type t = | Monster_shard_of_strength | Monster_emblem_of_strength | Monster_shard_of_focus | Monster_emblem_of_focus | Monster_shard_of_health | Monster_emblem_of_health | Power_shard_of_strength | Power_emblem_of_strength | Power_shard_of_focus | Power_emblem_of_focus | Power_shard_of_health | Power_emblem_of_health | Durability_shard_of_strength | Durability_emblem_of_strength | Durability_shard_of_focus | Durability_emblem_of_focus | Durability_shard_of_health | Durability_emblem_of_health | Treasure_shard_of_strength | Treasure_emblem_of_strength | Treasure_shard_of_focus | Treasure_emblem_of_focus | Treasure_shard_of_health | Treasure_emblem_of_health | Jungle_shard_of_strength | Jungle_emblem_of_strength | Jungle_shard_of_focus | Jungle_emblem_of_focus | Jungle_shard_of_health | Jungle_emblem_of_health | Home_shard_of_strength | Home_emblem_of_strength | Home_shard_of_focus | Home_emblem_of_focus | Home_shard_of_health | Home_emblem_of_health | Bruiser_shard_of_strength | Bruiser_emblem_of_strength | Bruiser_shard_of_focus | Bruiser_emblem_of_focus | Bruiser_shard_of_health | Bruiser_emblem_of_health
+type t = Monster_shard_of_strength | Monster_emblem_of_strength | Monster_shard_of_focus | Monster_emblem_of_focus | Monster_shard_of_health | Monster_emblem_of_health | Power_shard_of_strength | Power_emblem_of_strength | Power_shard_of_focus | Power_emblem_of_focus | Power_shard_of_health | Power_emblem_of_health | Durability_shard_of_strength | Durability_emblem_of_strength | Durability_shard_of_focus | Durability_emblem_of_focus | Durability_shard_of_health | Durability_emblem_of_health | Treasure_shard_of_strength | Treasure_emblem_of_strength | Treasure_shard_of_focus | Treasure_emblem_of_focus | Treasure_shard_of_health | Treasure_emblem_of_health | Jungle_shard_of_strength | Jungle_emblem_of_strength | Jungle_shard_of_focus | Jungle_emblem_of_focus | Jungle_shard_of_health | Jungle_emblem_of_health | Home_shard_of_strength | Home_emblem_of_strength | Home_shard_of_focus | Home_emblem_of_focus | Home_shard_of_health | Home_emblem_of_health | Bruiser_shard_of_strength | Bruiser_emblem_of_strength | Bruiser_shard_of_focus | Bruiser_emblem_of_focus | Bruiser_shard_of_health | Bruiser_emblem_of_health | Tribute_shard_of_strength | Tribute_emblem_of_strength | Tribute_shard_of_focus | Tribute_emblem_of_focus | Tribute_shard_of_health | Tribute_emblem_of_health | Capture_shard_of_strength | Capture_emblem_of_strength | Capture_shard_of_focus | Capture_emblem_of_focus | Capture_shard_of_health | Capture_emblem_of_health | Prospector_shard_of_strength | Prospector_emblem_of_strength | Prospector_shard_of_focus | Prospector_emblem_of_focus | Prospector_shard_of_health | Prospector_emblem_of_health | Hunter_shard_of_strength | Hunter_emblem_of_strength | Hunter_shard_of_focus | Hunter_emblem_of_focus | Hunter_shard_of_health | Hunter_emblem_of_health | Skirmish_shard_of_strength | Skirmish_emblem_of_strength | Skirmish_shard_of_focus | Skirmish_emblem_of_focus | Skirmish_shard_of_health | Skirmish_emblem_of_health | Greed_shard_of_strength | Greed_emblem_of_strength | Greed_shard_of_focus | Greed_emblem_of_focus | Greed_shard_of_health | Greed_emblem_of_health | Collectors_shard_of_strength | Collectors_emblem_of_strength | Collectors_shard_of_focus | Collectors_emblem_of_focus | Collectors_shard_of_health | Collectors_emblem_of_health
 ```
 
 
@@ -6315,7 +6315,7 @@ type t = | Monster_shard_of_strength | Monster_emblem_of_strength | Monster_shar
 Public SDK type declaration.
 
 ```ocaml
-type t = | Monster_shard_of_strength | Monster_emblem_of_strength | Monster_shard_of_focus | Monster_emblem_of_focus | Monster_shard_of_health | Monster_emblem_of_health | Power_shard_of_strength | Power_emblem_of_strength | Power_shard_of_focus | Power_emblem_of_focus | Power_shard_of_health | Power_emblem_of_health | Durability_shard_of_strength | Durability_emblem_of_strength | Durability_shard_of_focus | Durability_emblem_of_focus | Durability_shard_of_health | Durability_emblem_of_health | Treasure_shard_of_strength | Treasure_emblem_of_strength | Treasure_shard_of_focus | Treasure_emblem_of_focus | Treasure_shard_of_health | Treasure_emblem_of_health | Jungle_shard_of_strength | Jungle_emblem_of_strength | Jungle_shard_of_focus | Jungle_emblem_of_focus | Jungle_shard_of_health | Jungle_emblem_of_health | Home_shard_of_strength | Home_emblem_of_strength | Home_shard_of_focus | Home_emblem_of_focus | Home_shard_of_health | Home_emblem_of_health | Bruiser_shard_of_strength | Bruiser_emblem_of_strength | Bruiser_shard_of_focus | Bruiser_emblem_of_focus | Bruiser_shard_of_health | Bruiser_emblem_of_health
+type t = Monster_shard_of_strength | Monster_emblem_of_strength | Monster_shard_of_focus | Monster_emblem_of_focus | Monster_shard_of_health | Monster_emblem_of_health | Power_shard_of_strength | Power_emblem_of_strength | Power_shard_of_focus | Power_emblem_of_focus | Power_shard_of_health | Power_emblem_of_health | Durability_shard_of_strength | Durability_emblem_of_strength | Durability_shard_of_focus | Durability_emblem_of_focus | Durability_shard_of_health | Durability_emblem_of_health | Treasure_shard_of_strength | Treasure_emblem_of_strength | Treasure_shard_of_focus | Treasure_emblem_of_focus | Treasure_shard_of_health | Treasure_emblem_of_health | Jungle_shard_of_strength | Jungle_emblem_of_strength | Jungle_shard_of_focus | Jungle_emblem_of_focus | Jungle_shard_of_health | Jungle_emblem_of_health | Home_shard_of_strength | Home_emblem_of_strength | Home_shard_of_focus | Home_emblem_of_focus | Home_shard_of_health | Home_emblem_of_health | Bruiser_shard_of_strength | Bruiser_emblem_of_strength | Bruiser_shard_of_focus | Bruiser_emblem_of_focus | Bruiser_shard_of_health | Bruiser_emblem_of_health | Tribute_shard_of_strength | Tribute_emblem_of_strength | Tribute_shard_of_focus | Tribute_emblem_of_focus | Tribute_shard_of_health | Tribute_emblem_of_health | Capture_shard_of_strength | Capture_emblem_of_strength | Capture_shard_of_focus | Capture_emblem_of_focus | Capture_shard_of_health | Capture_emblem_of_health | Prospector_shard_of_strength | Prospector_emblem_of_strength | Prospector_shard_of_focus | Prospector_emblem_of_focus | Prospector_shard_of_health | Prospector_emblem_of_health | Hunter_shard_of_strength | Hunter_emblem_of_strength | Hunter_shard_of_focus | Hunter_emblem_of_focus | Hunter_shard_of_health | Hunter_emblem_of_health | Skirmish_shard_of_strength | Skirmish_emblem_of_strength | Skirmish_shard_of_focus | Skirmish_emblem_of_focus | Skirmish_shard_of_health | Skirmish_emblem_of_health | Greed_shard_of_strength | Greed_emblem_of_strength | Greed_shard_of_focus | Greed_emblem_of_focus | Greed_shard_of_health | Greed_emblem_of_health | Collectors_shard_of_strength | Collectors_emblem_of_strength | Collectors_shard_of_focus | Collectors_emblem_of_focus | Collectors_shard_of_health | Collectors_emblem_of_health
 ```
 
 ### to_string
@@ -6605,7 +6605,7 @@ type t = { cost : int; combine_count : int; result : Item.t option; health_point
 ### t
 
 ```ocaml
-type t = Monster | Durability | Treasure | Jungle | Home
+type t = Monster | Durability | Treasure | Jungle | Home | Tribute | Capture | Prospector | Hunter | Skirmish | Collectors
 ```
 
 
@@ -6613,7 +6613,7 @@ type t = Monster | Durability | Treasure | Jungle | Home
 Public SDK type declaration.
 
 ```ocaml
-type t = Monster | Durability | Treasure | Jungle | Home
+type t = Monster | Durability | Treasure | Jungle | Home | Tribute | Capture | Prospector | Hunter | Skirmish | Collectors
 ```
 
 ### to_string
