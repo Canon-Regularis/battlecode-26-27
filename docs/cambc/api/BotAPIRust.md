@@ -1,6 +1,6 @@
 # CAMBC Bot API — Rust
 
-Event: cambc2026a. Read alongside GameRules.md. Signatures and descriptions come from the same SDK documentation shown on the Bot API page.
+Event: cambc2026a. Read alongside GameRules.md. Earlier Bot API export, reconciled with the vendored CAMBC 4.0.0 SDK on 3 November 2026. See [4.0.0 additions and source references](SDK_4.0.0.md) for item selection and capture-state APIs. The live website could not be fully re-exported; source declarations take precedence over retained prose and illustrative fragments.
 
 Examples are fragments for an initialised bot. Check visibility and action preconditions. Use ? inside a function returning cambc::Result. 
 
@@ -609,11 +609,13 @@ Run the statements without spending fuel when the bot is built in debug mode (`c
 
 Use this value in your bot's draft or turn logic.
 
-Inputs:
-- debug_block! { ..: debug_block! { ...
+Example inside a gameplay function returning `bc::Result<()>`:
 
 ```rust
-let result = bc::debug_block(debug_block! { ..);
+bc::debug_block! {
+    let champion = bc::self_champion()?;
+    bc::debug::draw_dot(champion.position()?, 0x00FF00)?;
+}
 ```
 
 ### DistanceField
@@ -708,7 +710,7 @@ pub enum ErrorCode { Success = 0,InvalidHandle = 1,OutOfMemory = 2,FileNotFound 
 pub fn fuel_remaining() -> Result<u64>
 ```
 
-Return remaining guest fuel (10x on a team's first draft turn, 2x on each champion's first turn); invalid negative host values return an error.
+Return remaining guest fuel (100x on a team's first draft turn, 2x on each champion's first turn); invalid negative host values return an error.
 
 Stop optional planning when little fuel remains and yield the current turn.
 
@@ -796,7 +798,7 @@ pub struct ItemInfo { pub cost: u32, pub combine_count: u32, pub result: Option<
 ### ItemPassive
 
 ```rust
-pub enum ItemPassive { Monster = 1, Durability = 2, Treasure = 3, Jungle = 4, Home = 5, }
+pub enum ItemPassive { Monster = 1, Durability = 2, Treasure = 3, Jungle = 4, Home = 5, Tribute = 6, Capture = 7, Prospector = 8, Hunter = 9, Skirmish = 10, Collectors = 11 }
 ```
 
 Checked item-passive tag; item metadata uses `None` for no passive.
@@ -804,13 +806,98 @@ Checked item-passive tag; item metadata uses `None` for no passive.
 Public SDK type declaration.
 
 ```rust
-pub enum ItemPassive { Monster = 1, Durability = 2, Treasure = 3, Jungle = 4, Home = 5, }
+pub enum ItemPassive { Monster = 1, Durability = 2, Treasure = 3, Jungle = 4, Home = 5, Tribute = 6, Capture = 7, Prospector = 8, Hunter = 9, Skirmish = 10, Collectors = 11 }
 ```
 
 ### ItemType
 
 ```rust
-pub enum ItemType { MonsterShardOfStrength = 0,MonsterEmblemOfStrength = 1,MonsterShardOfFocus = 2,MonsterEmblemOfFocus = 3,MonsterShardOfHealth = 4,MonsterEmblemOfHealth = 5,PowerShardOfStrength = 6,PowerEmblemOfStrength = 7,PowerShardOfFocus = 8,PowerEmblemOfFocus = 9,PowerShardOfHealth = 10,PowerEmblemOfHealth = 11,DurabilityShardOfStrength = 12,DurabilityEmblemOfStrength = 13,DurabilityShardOfFocus = 14,DurabilityEmblemOfFocus = 15,DurabilityShardOfHealth = 16,DurabilityEmblemOfHealth = 17,TreasureShardOfStrength = 18,TreasureEmblemOfStrength = 19,TreasureShardOfFocus = 20,TreasureEmblemOfFocus = 21,TreasureShardOfHealth = 22,TreasureEmblemOfHealth = 23,JungleShardOfStrength = 24,JungleEmblemOfStrength = 25,JungleShardOfFocus = 26,JungleEmblemOfFocus = 27,JungleShardOfHealth = 28,JungleEmblemOfHealth = 29,HomeShardOfStrength = 30,HomeEmblemOfStrength = 31,HomeShardOfFocus = 32,HomeEmblemOfFocus = 33,HomeShardOfHealth = 34,HomeEmblemOfHealth = 35,BruiserShardOfStrength = 36,BruiserEmblemOfStrength = 37,BruiserShardOfFocus = 38,BruiserEmblemOfFocus = 39,BruiserShardOfHealth = 40,BruiserEmblemOfHealth = 41 }
+pub enum ItemType {
+    MonsterShardOfStrength = 0,
+    MonsterEmblemOfStrength = 1,
+    MonsterShardOfFocus = 2,
+    MonsterEmblemOfFocus = 3,
+    MonsterShardOfHealth = 4,
+    MonsterEmblemOfHealth = 5,
+    PowerShardOfStrength = 6,
+    PowerEmblemOfStrength = 7,
+    PowerShardOfFocus = 8,
+    PowerEmblemOfFocus = 9,
+    PowerShardOfHealth = 10,
+    PowerEmblemOfHealth = 11,
+    DurabilityShardOfStrength = 12,
+    DurabilityEmblemOfStrength = 13,
+    DurabilityShardOfFocus = 14,
+    DurabilityEmblemOfFocus = 15,
+    DurabilityShardOfHealth = 16,
+    DurabilityEmblemOfHealth = 17,
+    TreasureShardOfStrength = 18,
+    TreasureEmblemOfStrength = 19,
+    TreasureShardOfFocus = 20,
+    TreasureEmblemOfFocus = 21,
+    TreasureShardOfHealth = 22,
+    TreasureEmblemOfHealth = 23,
+    JungleShardOfStrength = 24,
+    JungleEmblemOfStrength = 25,
+    JungleShardOfFocus = 26,
+    JungleEmblemOfFocus = 27,
+    JungleShardOfHealth = 28,
+    JungleEmblemOfHealth = 29,
+    HomeShardOfStrength = 30,
+    HomeEmblemOfStrength = 31,
+    HomeShardOfFocus = 32,
+    HomeEmblemOfFocus = 33,
+    HomeShardOfHealth = 34,
+    HomeEmblemOfHealth = 35,
+    BruiserShardOfStrength = 36,
+    BruiserEmblemOfStrength = 37,
+    BruiserShardOfFocus = 38,
+    BruiserEmblemOfFocus = 39,
+    BruiserShardOfHealth = 40,
+    BruiserEmblemOfHealth = 41,
+    TributeShardOfStrength = 42,
+    TributeEmblemOfStrength = 43,
+    TributeShardOfFocus = 44,
+    TributeEmblemOfFocus = 45,
+    TributeShardOfHealth = 46,
+    TributeEmblemOfHealth = 47,
+    CaptureShardOfStrength = 48,
+    CaptureEmblemOfStrength = 49,
+    CaptureShardOfFocus = 50,
+    CaptureEmblemOfFocus = 51,
+    CaptureShardOfHealth = 52,
+    CaptureEmblemOfHealth = 53,
+    ProspectorShardOfStrength = 54,
+    ProspectorEmblemOfStrength = 55,
+    ProspectorShardOfFocus = 56,
+    ProspectorEmblemOfFocus = 57,
+    ProspectorShardOfHealth = 58,
+    ProspectorEmblemOfHealth = 59,
+    HunterShardOfStrength = 60,
+    HunterEmblemOfStrength = 61,
+    HunterShardOfFocus = 62,
+    HunterEmblemOfFocus = 63,
+    HunterShardOfHealth = 64,
+    HunterEmblemOfHealth = 65,
+    SkirmishShardOfStrength = 66,
+    SkirmishEmblemOfStrength = 67,
+    SkirmishShardOfFocus = 68,
+    SkirmishEmblemOfFocus = 69,
+    SkirmishShardOfHealth = 70,
+    SkirmishEmblemOfHealth = 71,
+    GreedShardOfStrength = 72,
+    GreedEmblemOfStrength = 73,
+    GreedShardOfFocus = 74,
+    GreedEmblemOfFocus = 75,
+    GreedShardOfHealth = 76,
+    GreedEmblemOfHealth = 77,
+    CollectorsShardOfStrength = 78,
+    CollectorsEmblemOfStrength = 79,
+    CollectorsShardOfFocus = 80,
+    CollectorsEmblemOfFocus = 81,
+    CollectorsShardOfHealth = 82,
+    CollectorsEmblemOfHealth = 83,
+}
 ```
 
 Checked engine values. Implements TryFrom<u32> and Display; ALL lists the recognised values.
@@ -818,7 +905,92 @@ Checked engine values. Implements TryFrom<u32> and Display; ALL lists the recogn
 Public SDK type declaration.
 
 ```rust
-pub enum ItemType { MonsterShardOfStrength = 0,MonsterEmblemOfStrength = 1,MonsterShardOfFocus = 2,MonsterEmblemOfFocus = 3,MonsterShardOfHealth = 4,MonsterEmblemOfHealth = 5,PowerShardOfStrength = 6,PowerEmblemOfStrength = 7,PowerShardOfFocus = 8,PowerEmblemOfFocus = 9,PowerShardOfHealth = 10,PowerEmblemOfHealth = 11,DurabilityShardOfStrength = 12,DurabilityEmblemOfStrength = 13,DurabilityShardOfFocus = 14,DurabilityEmblemOfFocus = 15,DurabilityShardOfHealth = 16,DurabilityEmblemOfHealth = 17,TreasureShardOfStrength = 18,TreasureEmblemOfStrength = 19,TreasureShardOfFocus = 20,TreasureEmblemOfFocus = 21,TreasureShardOfHealth = 22,TreasureEmblemOfHealth = 23,JungleShardOfStrength = 24,JungleEmblemOfStrength = 25,JungleShardOfFocus = 26,JungleEmblemOfFocus = 27,JungleShardOfHealth = 28,JungleEmblemOfHealth = 29,HomeShardOfStrength = 30,HomeEmblemOfStrength = 31,HomeShardOfFocus = 32,HomeEmblemOfFocus = 33,HomeShardOfHealth = 34,HomeEmblemOfHealth = 35,BruiserShardOfStrength = 36,BruiserEmblemOfStrength = 37,BruiserShardOfFocus = 38,BruiserEmblemOfFocus = 39,BruiserShardOfHealth = 40,BruiserEmblemOfHealth = 41 }
+pub enum ItemType {
+    MonsterShardOfStrength = 0,
+    MonsterEmblemOfStrength = 1,
+    MonsterShardOfFocus = 2,
+    MonsterEmblemOfFocus = 3,
+    MonsterShardOfHealth = 4,
+    MonsterEmblemOfHealth = 5,
+    PowerShardOfStrength = 6,
+    PowerEmblemOfStrength = 7,
+    PowerShardOfFocus = 8,
+    PowerEmblemOfFocus = 9,
+    PowerShardOfHealth = 10,
+    PowerEmblemOfHealth = 11,
+    DurabilityShardOfStrength = 12,
+    DurabilityEmblemOfStrength = 13,
+    DurabilityShardOfFocus = 14,
+    DurabilityEmblemOfFocus = 15,
+    DurabilityShardOfHealth = 16,
+    DurabilityEmblemOfHealth = 17,
+    TreasureShardOfStrength = 18,
+    TreasureEmblemOfStrength = 19,
+    TreasureShardOfFocus = 20,
+    TreasureEmblemOfFocus = 21,
+    TreasureShardOfHealth = 22,
+    TreasureEmblemOfHealth = 23,
+    JungleShardOfStrength = 24,
+    JungleEmblemOfStrength = 25,
+    JungleShardOfFocus = 26,
+    JungleEmblemOfFocus = 27,
+    JungleShardOfHealth = 28,
+    JungleEmblemOfHealth = 29,
+    HomeShardOfStrength = 30,
+    HomeEmblemOfStrength = 31,
+    HomeShardOfFocus = 32,
+    HomeEmblemOfFocus = 33,
+    HomeShardOfHealth = 34,
+    HomeEmblemOfHealth = 35,
+    BruiserShardOfStrength = 36,
+    BruiserEmblemOfStrength = 37,
+    BruiserShardOfFocus = 38,
+    BruiserEmblemOfFocus = 39,
+    BruiserShardOfHealth = 40,
+    BruiserEmblemOfHealth = 41,
+    TributeShardOfStrength = 42,
+    TributeEmblemOfStrength = 43,
+    TributeShardOfFocus = 44,
+    TributeEmblemOfFocus = 45,
+    TributeShardOfHealth = 46,
+    TributeEmblemOfHealth = 47,
+    CaptureShardOfStrength = 48,
+    CaptureEmblemOfStrength = 49,
+    CaptureShardOfFocus = 50,
+    CaptureEmblemOfFocus = 51,
+    CaptureShardOfHealth = 52,
+    CaptureEmblemOfHealth = 53,
+    ProspectorShardOfStrength = 54,
+    ProspectorEmblemOfStrength = 55,
+    ProspectorShardOfFocus = 56,
+    ProspectorEmblemOfFocus = 57,
+    ProspectorShardOfHealth = 58,
+    ProspectorEmblemOfHealth = 59,
+    HunterShardOfStrength = 60,
+    HunterEmblemOfStrength = 61,
+    HunterShardOfFocus = 62,
+    HunterEmblemOfFocus = 63,
+    HunterShardOfHealth = 64,
+    HunterEmblemOfHealth = 65,
+    SkirmishShardOfStrength = 66,
+    SkirmishEmblemOfStrength = 67,
+    SkirmishShardOfFocus = 68,
+    SkirmishEmblemOfFocus = 69,
+    SkirmishShardOfHealth = 70,
+    SkirmishEmblemOfHealth = 71,
+    GreedShardOfStrength = 72,
+    GreedEmblemOfStrength = 73,
+    GreedShardOfFocus = 74,
+    GreedEmblemOfFocus = 75,
+    GreedShardOfHealth = 76,
+    GreedEmblemOfHealth = 77,
+    CollectorsShardOfStrength = 78,
+    CollectorsEmblemOfStrength = 79,
+    CollectorsShardOfFocus = 80,
+    CollectorsEmblemOfFocus = 81,
+    CollectorsShardOfHealth = 82,
+    CollectorsEmblemOfHealth = 83,
+}
 ```
 
 ### PassiveType
