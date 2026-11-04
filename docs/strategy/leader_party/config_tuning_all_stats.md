@@ -104,4 +104,4 @@ uv run --locked cambc build leader_party_tuned --release
 & bots/leader_party_tuned/tests/run.ps1
 ```
 
-Use `tools/tune_leader_party.py` to preserve/build clones and resume match matrices, `tools/tune_all_settings.py` for the frozen two-sweep sequence and `tools/finalize_config_tuning.py` for validation/promotion/auditing. Large builds and replays remain ignored locally. No platform submission changed.
+Use `tools/tune_leader_party.py` to preserve/build clones and resume match matrices, `tools/tune_all_settings.py` for the frozen two-sweep sequence and `tools/finalize_config_tuning.py` for validation/promotion/auditing. Large builds and replays remain ignored locally. The tuned bot was subsequently submitted to CAMBC as version 7; see the [publication receipt](evaluation/2026-11-04/tuning/publication.json).

@@ -389,6 +389,21 @@ def report():
         '- [Original G2 champion receipt](champion-first-pass.json)\n\n'
         'All stage receipts remain here. Builds and replay ZIPs are ignored locally; '
         'stage totals overlap and must not be added as independent games. No platform submission changed.\n')
+    publication = t.STORE / 'publication.json'
+    if publication.exists():
+        version = t.read(publication)['version']
+        for path, relative in [
+            (t.ROOT / 'README.md', 'docs/strategy/leader_party/evaluation/2026-11-04/tuning/publication.json'),
+            (t.ROOT / 'bots/leader_party_tuned/README.md', '../../docs/strategy/leader_party/evaluation/2026-11-04/tuning/publication.json'),
+            (docs / 'README.md', evidence + 'publication.json'),
+            (docs / 'config_tuning_all_stats.md', evidence + 'publication.json'),
+            (t.STORE / 'README.md', 'publication.json')]:
+            content = path.read_text(encoding='utf-8')
+            replacement = f'The tuned bot was subsequently submitted to CAMBC as version {version}; see the [publication receipt]({relative}).'
+            for old in ['No platform submission changed.', 'Platform submission was not changed by these experiments.',
+                    'The platform submission was not changed by these experiments.']:
+                content = content.replace(old, replacement)
+            write(path, content)
     print('Updated current bot documentation', flush=True)
 
 

@@ -12,4 +12,4 @@ The experiment preserves 202 profiles and covers all 31 fields. See the [complet
 - [Reserved legacy maps](complete-tuning-legacy-robustness.json)
 - [Original G2 champion receipt](champion-first-pass.json)
 
-All stage receipts remain here. Builds and replay ZIPs are ignored locally; stage totals overlap and must not be added as independent games. No platform submission changed.
+All stage receipts remain here. Builds and replay ZIPs are ignored locally; stage totals overlap and must not be added as independent games. The tuned bot was subsequently submitted to CAMBC as version 7; see the [publication receipt](publication.json).

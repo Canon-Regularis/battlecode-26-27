@@ -20,7 +20,7 @@ CAMBC provisions its required compiler assets when needed. Use `uv run --locked 
 
 The preferred C++ bot is [leader_party_tuned](bots/leader_party_tuned/README.md), the combined configuration champion `g07_search` after two full configurable-stat sweeps. It won **409–107** on 86 published maps against untuned Subhan, D1 and gold_diamond. See the [complete tuning report](docs/strategy/leader_party/config_tuning_all_stats.md) and [current strategy](docs/strategy/leader_party/README.md). Build with `uv run --locked cambc build leader_party_tuned --release`; native tests run with `& bots/leader_party_tuned/tests/run.ps1`.
 
-The original [leader_party](bots/leader_party/README.md), untuned Subhan bot and all tuning generations remain available. The former custom state-machine bot is preserved in the [dated archive](bots/archive/state-machine-2026-11-04/README.md). Platform submission was not changed by these experiments.
+The original [leader_party](bots/leader_party/README.md), untuned Subhan bot and all tuning generations remain available. The former custom state-machine bot is preserved in the [dated archive](bots/archive/state-machine-2026-11-04/README.md). The tuned bot was subsequently submitted to CAMBC as version 7; see the [publication receipt](docs/strategy/leader_party/evaluation/2026-11-04/tuning/publication.json).
 
 See the [game rules](docs/cambc/GameRules.md) and [current API additions and SDK source links](docs/cambc/api/SDK_4.0.0.md). The published competition map pool was added while preserving the original maps.
 

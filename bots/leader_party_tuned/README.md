@@ -9,4 +9,4 @@ uv run --locked cambc build leader_party_tuned --release
 & bots/leader_party_tuned/tests/run.ps1
 ```
 
-See the [complete strategy and evaluation](../../docs/strategy/leader_party/config_tuning_all_stats.md). No platform submission changed.
+See the [complete strategy and evaluation](../../docs/strategy/leader_party/config_tuning_all_stats.md). Submitted to CAMBC as version 7 after evaluation; see the [publication receipt](../../docs/strategy/leader_party/evaluation/2026-11-04/tuning/publication.json).
