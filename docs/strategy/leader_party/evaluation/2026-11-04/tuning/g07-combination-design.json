@@ -1,0 +1,583 @@
+{
+  "positive_settings": {
+    "bank_bag": 40,
+    "bag_age": 55,
+    "stall": 6,
+    "protection_limit": 9,
+    "retry": 0,
+    "competition_cost": 6,
+    "loop_phase": 3,
+    "lease": 1,
+    "wards": false,
+    "coordination": true
+  },
+  "comparisons": {
+    "bank_bag": {
+      "candidate": "g06_bank_bag_1",
+      "reference": "g05_without_team",
+      "wins_delta": 2,
+      "margin_delta": 26.30392156862746,
+      "score": {
+        "games": 102,
+        "wins": 85,
+        "margin": 245.59803921568627,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "bag_age": {
+      "candidate": "g06_bag_age_0",
+      "reference": "g05_without_team",
+      "wins_delta": 1,
+      "margin_delta": 14.039215686274531,
+      "score": {
+        "games": 102,
+        "wins": 84,
+        "margin": 233.33333333333334,
+        "faults": 0,
+        "errors": 6
+      }
+    },
+    "stall": {
+      "candidate": "g06_stall_0",
+      "reference": "g05_without_team",
+      "wins_delta": 1,
+      "margin_delta": 23.313725490196077,
+      "score": {
+        "games": 102,
+        "wins": 84,
+        "margin": 242.6078431372549,
+        "faults": 0,
+        "errors": 7
+      }
+    },
+    "task_limit": {
+      "candidate": "g06_task_limit_0",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": 13.519607843137265,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 232.81372549019608,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "max_clear": {
+      "candidate": "g06_max_clear_0",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": -5.5098039215686185,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 213.7843137254902,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "protection_limit": {
+      "candidate": "g06_protection_limit_0",
+      "reference": "g05_without_team",
+      "wins_delta": 2,
+      "margin_delta": 10.637254901960802,
+      "score": {
+        "games": 102,
+        "wins": 85,
+        "margin": 229.9313725490196,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "retry": {
+      "candidate": "g06e_retry",
+      "reference": "g05_without_team",
+      "wins_delta": 5,
+      "margin_delta": 45.93137254901964,
+      "score": {
+        "games": 102,
+        "wins": 88,
+        "margin": 265.22549019607845,
+        "faults": 0,
+        "errors": 5
+      }
+    },
+    "recovery_low": {
+      "candidate": "g06_recovery_low_1",
+      "reference": "g05_without_team",
+      "wins_delta": -4,
+      "margin_delta": -48.84313725490196,
+      "score": {
+        "games": 102,
+        "wins": 79,
+        "margin": 170.45098039215685,
+        "faults": 0,
+        "errors": 2
+      }
+    },
+    "recovery_high": {
+      "candidate": "g06_recovery_high_1",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": -4.274509803921546,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 215.01960784313727,
+        "faults": 0,
+        "errors": 2
+      }
+    },
+    "recall_gold": {
+      "candidate": "g06_recall_gold_1",
+      "reference": "g05_without_team",
+      "wins_delta": -3,
+      "margin_delta": -6.578431372549005,
+      "score": {
+        "games": 102,
+        "wins": 80,
+        "margin": 212.7156862745098,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "competition_cost": {
+      "candidate": "g06_competition_cost_1",
+      "reference": "g05_without_team",
+      "wins_delta": 3,
+      "margin_delta": 2.176470588235304,
+      "score": {
+        "games": 102,
+        "wins": 86,
+        "margin": 221.47058823529412,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "loop_candidates": {
+      "candidate": "g06_loop_candidates_1",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": -5.166666666666657,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 214.12745098039215,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "loop_altars": {
+      "candidate": "g06_loop_altars_1",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": -5.30392156862743,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 213.99019607843138,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "loop_beam": {
+      "candidate": "g06_loop_beam_4",
+      "reference": "g05_without_team",
+      "wins_delta": -2,
+      "margin_delta": -7.225490196078425,
+      "score": {
+        "games": 102,
+        "wins": 81,
+        "margin": 212.0686274509804,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_length": {
+      "candidate": "g06_loop_length_0",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": 2.921568627450995,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 222.2156862745098,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "loop_expansions": {
+      "candidate": "g06_loop_expansions_0",
+      "reference": "g05_without_team",
+      "wins_delta": -1,
+      "margin_delta": -1.8235294117646959,
+      "score": {
+        "games": 102,
+        "wins": 82,
+        "margin": 217.47058823529412,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "loop_reports": {
+      "candidate": "g06_loop_reports_0",
+      "reference": "g05_without_team",
+      "wins_delta": -9,
+      "margin_delta": -24.95098039215685,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 194.34313725490196,
+        "faults": 0,
+        "errors": 7
+      }
+    },
+    "loop_gold": {
+      "candidate": "g06_loop_gold_1",
+      "reference": "g05_without_team",
+      "wins_delta": -1,
+      "margin_delta": -9.137254901960773,
+      "score": {
+        "games": 102,
+        "wins": 82,
+        "margin": 210.15686274509804,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "loop_opening": {
+      "candidate": "g06_loop_opening_0",
+      "reference": "g05_without_team",
+      "wins_delta": -3,
+      "margin_delta": -19.637254901960773,
+      "score": {
+        "games": 102,
+        "wins": 80,
+        "margin": 199.65686274509804,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_risk": {
+      "candidate": "g06_loop_risk_0",
+      "reference": "g05_without_team",
+      "wins_delta": -3,
+      "margin_delta": -23.166666666666657,
+      "score": {
+        "games": 102,
+        "wins": 80,
+        "margin": 196.12745098039215,
+        "faults": 0,
+        "errors": 2
+      }
+    },
+    "loop_service": {
+      "candidate": "g06_loop_service_1",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": 3.029411764705884,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 222.3235294117647,
+        "faults": 0,
+        "errors": 8
+      }
+    },
+    "loop_phase": {
+      "candidate": "g06_loop_phase_1",
+      "reference": "g05_without_team",
+      "wins_delta": 4,
+      "margin_delta": 17.470588235294116,
+      "score": {
+        "games": 102,
+        "wins": 87,
+        "margin": 236.76470588235293,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "rally_life": {
+      "candidate": "g06e_rally_life",
+      "reference": "g06_coordination_0",
+      "wins_delta": -1,
+      "margin_delta": 1.0686274509803866,
+      "score": {
+        "games": 102,
+        "wins": 81,
+        "margin": 192.2843137254902,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "lease": {
+      "candidate": "g06_lease_0",
+      "reference": "g06_coordination_0",
+      "wins_delta": 2,
+      "margin_delta": -3.470588235294116,
+      "score": {
+        "games": 102,
+        "wins": 84,
+        "margin": 187.7450980392157,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "reserve": {
+      "candidate": "g06_reserve_2",
+      "reference": "g05_without_team",
+      "wins_delta": -1,
+      "margin_delta": 10.833333333333343,
+      "score": {
+        "games": 102,
+        "wins": 82,
+        "margin": 230.12745098039215,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "field_admission": {
+      "candidate": "g06_field_admission_0",
+      "reference": "g05_without_team",
+      "wins_delta": -2,
+      "margin_delta": -5.245098039215662,
+      "score": {
+        "games": 102,
+        "wins": 81,
+        "margin": 214.04901960784315,
+        "faults": 0,
+        "errors": 6
+      }
+    },
+    "max_fields": {
+      "candidate": "g06_max_fields_1",
+      "reference": "g05_without_team",
+      "wins_delta": 0,
+      "margin_delta": 0.07843137254903354,
+      "score": {
+        "games": 102,
+        "wins": 83,
+        "margin": 219.37254901960785,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "wards": {
+      "candidate": "g06_wards_0",
+      "reference": "g05_without_team",
+      "wins_delta": 1,
+      "margin_delta": -6.235294117647044,
+      "score": {
+        "games": 102,
+        "wins": 84,
+        "margin": 213.05882352941177,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "value_routing": {
+      "candidate": "g06_value_routing_0",
+      "reference": "g05_without_team",
+      "wins_delta": -10,
+      "margin_delta": -42.64705882352939,
+      "score": {
+        "games": 102,
+        "wins": 73,
+        "margin": 176.64705882352942,
+        "faults": 0,
+        "errors": 9
+      }
+    },
+    "coordination": {
+      "candidate": "g06_coordination_0",
+      "reference": "g05_without_team",
+      "wins_delta": -1,
+      "margin_delta": -28.078431372549005,
+      "score": {
+        "games": 102,
+        "wins": 82,
+        "margin": 191.2156862745098,
+        "faults": 0,
+        "errors": 3
+      }
+    }
+  },
+  "combinations": {
+    "g07_all": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "lease": 1,
+      "wards": false,
+      "coordination": true
+    },
+    "g07_top6": {
+      "retry": 0,
+      "loop_phase": 3,
+      "competition_cost": 6,
+      "bank_bag": 40,
+      "protection_limit": 9,
+      "lease": 1
+    },
+    "g07_banking": {
+      "bank_bag": 40,
+      "bag_age": 55
+    },
+    "g07_recovery": {
+      "wards": false
+    },
+    "g07_tasks": {
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6
+    },
+    "g07_search": {
+      "loop_phase": 3
+    },
+    "g07_team": {
+      "lease": 1,
+      "coordination": true
+    },
+    "g07_team_probe": {
+      "coordination": true,
+      "rally_life": 0,
+      "lease": 1
+    },
+    "g07_value_probe": {
+      "value_routing": true,
+      "competition_cost": 6,
+      "loop_phase": 3
+    },
+    "g07_banking_probe": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "recall_gold": 400
+    },
+    "g07_recovery_probe": {
+      "recovery_low": 0.4,
+      "recovery_high": 0.6,
+      "wards": false
+    },
+    "g07_tasks_probe": {
+      "stall": 6,
+      "task_limit": 70,
+      "max_clear": 70,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "value_routing": true
+    },
+    "g07_search_probe": {
+      "loop_candidates": 32,
+      "loop_altars": 5,
+      "loop_beam": 32,
+      "loop_length": 4,
+      "loop_expansions": 512,
+      "loop_reports": 2,
+      "loop_gold": 0.04,
+      "loop_opening": 0.05,
+      "loop_risk": 0.1,
+      "loop_service": 10,
+      "loop_phase": 3
+    },
+    "g07_fuel_probe": {
+      "reserve": 10000,
+      "field_admission": 20000,
+      "max_fields": 4
+    },
+    "g07_without_banking": {
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "lease": 1,
+      "wards": false,
+      "coordination": true
+    },
+    "g07_without_recovery": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "lease": 1,
+      "coordination": true
+    },
+    "g07_without_tasks": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "loop_phase": 3,
+      "lease": 1,
+      "wards": false,
+      "coordination": true
+    },
+    "g07_without_search": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "lease": 1,
+      "wards": false,
+      "coordination": true
+    },
+    "g07_without_team": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "wards": false
+    },
+    "g07_flip_coordination": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "lease": 1,
+      "wards": false,
+      "coordination": false
+    },
+    "g07_flip_wards": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "lease": 1,
+      "wards": true,
+      "coordination": true
+    },
+    "g07_flip_value_routing": {
+      "bank_bag": 40,
+      "bag_age": 55,
+      "stall": 6,
+      "protection_limit": 9,
+      "retry": 0,
+      "competition_cost": 6,
+      "loop_phase": 3,
+      "lease": 1,
+      "wards": false,
+      "coordination": true,
+      "value_routing": true
+    }
+  },
+  "policy": "Combine full-training gains with no VM faults; allow conditional settings to rescue an enabled feature when that complete probe beats the control. Test positive-setting families, top six gains, whole-family probes including individual losers, feature flips and leave-one-family-out ablations. No promotion from isolated wins alone."
+}

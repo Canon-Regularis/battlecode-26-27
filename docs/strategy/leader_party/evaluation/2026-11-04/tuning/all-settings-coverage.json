@@ -1,0 +1,2379 @@
+{
+  "settings": 31,
+  "oriented_conditions": 26540,
+  "inventory": {
+    "bank_bag": {
+      "default": 20,
+      "probes": [
+        {
+          "name": "g04_bank_bag_0",
+          "value": 20,
+          "parent": "g04_control",
+          "context": {
+            "bank_bag": 20
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 31,
+            "margin": 131.41666666666666,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_bank_bag_1",
+          "value": 50,
+          "parent": "g04_control",
+          "context": {
+            "bank_bag": 50
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 73,
+            "margin": 173.6078431372549,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_bank_bag_0",
+          "value": 30,
+          "parent": "g05_without_team",
+          "context": {
+            "bank_bag": 30
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 201.64583333333334,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_bank_bag_1",
+          "value": 40,
+          "parent": "g05_without_team",
+          "context": {
+            "bank_bag": 40
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 85,
+            "margin": 245.59803921568627,
+            "faults": 0,
+            "errors": 4
+          }
+        }
+      ]
+    },
+    "bag_age": {
+      "default": 40,
+      "probes": [
+        {
+          "name": "g04_bag_age_0",
+          "value": 40,
+          "parent": "g04_control",
+          "context": {
+            "bag_age": 40
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 65,
+            "margin": 121.79411764705883,
+            "faults": 0,
+            "errors": 6
+          }
+        },
+        {
+          "name": "g04_bag_age_1",
+          "value": 100,
+          "parent": "g04_control",
+          "context": {
+            "bag_age": 100
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 28,
+            "margin": 26.020833333333332,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_bag_age_0",
+          "value": 55,
+          "parent": "g05_without_team",
+          "context": {
+            "bag_age": 55
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 84,
+            "margin": 233.33333333333334,
+            "faults": 0,
+            "errors": 6
+          }
+        },
+        {
+          "name": "g06_bag_age_1",
+          "value": 85,
+          "parent": "g05_without_team",
+          "context": {
+            "bag_age": 85
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 39,
+            "margin": 189.70833333333334,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "stall": {
+      "default": 8,
+      "probes": [
+        {
+          "name": "g04_stall_0",
+          "value": 4,
+          "parent": "g04_control",
+          "context": {
+            "stall": 4
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 26,
+            "margin": -30.666666666666668,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_stall_1",
+          "value": 16,
+          "parent": "g04_control",
+          "context": {
+            "stall": 16
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 71,
+            "margin": 169.15686274509804,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_stall_0",
+          "value": 6,
+          "parent": "g05_without_team",
+          "context": {
+            "stall": 6
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 84,
+            "margin": 242.6078431372549,
+            "faults": 0,
+            "errors": 7
+          }
+        },
+        {
+          "name": "g06_stall_1",
+          "value": 10,
+          "parent": "g05_without_team",
+          "context": {
+            "stall": 10
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 206.89583333333334,
+            "faults": 0,
+            "errors": 3
+          }
+        }
+      ]
+    },
+    "task_limit": {
+      "default": 90,
+      "probes": [
+        {
+          "name": "g04_task_limit_0",
+          "value": 45,
+          "parent": "g04_control",
+          "context": {
+            "task_limit": 45
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 26,
+            "margin": 9.375,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_task_limit_1",
+          "value": 150,
+          "parent": "g04_control",
+          "context": {
+            "task_limit": 150
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 73,
+            "margin": 165.7941176470588,
+            "faults": 0,
+            "errors": 5
+          }
+        },
+        {
+          "name": "g06_task_limit_0",
+          "value": 70,
+          "parent": "g05_without_team",
+          "context": {
+            "task_limit": 70
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 232.81372549019608,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_task_limit_1",
+          "value": 110,
+          "parent": "g05_without_team",
+          "context": {
+            "task_limit": 110
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 229.75,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ]
+    },
+    "max_clear": {
+      "default": 90,
+      "probes": [
+        {
+          "name": "g04_max_clear_0",
+          "value": 45,
+          "parent": "g04_control",
+          "context": {
+            "max_clear": 45
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 24,
+            "margin": -70.79166666666667,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g04_max_clear_1",
+          "value": 150,
+          "parent": "g04_control",
+          "context": {
+            "max_clear": 150
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 111.76470588235294,
+            "faults": 0,
+            "errors": 5
+          }
+        },
+        {
+          "name": "g06_max_clear_0",
+          "value": 70,
+          "parent": "g05_without_team",
+          "context": {
+            "max_clear": 70
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 213.7843137254902,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_max_clear_1",
+          "value": 110,
+          "parent": "g05_without_team",
+          "context": {
+            "max_clear": 110
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 38,
+            "margin": 197.91666666666666,
+            "faults": 0,
+            "errors": 7
+          }
+        }
+      ]
+    },
+    "protection_limit": {
+      "default": 12,
+      "probes": [
+        {
+          "name": "g04_protection_limit_0",
+          "value": 4,
+          "parent": "g04_control",
+          "context": {
+            "protection_limit": 4
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 31,
+            "margin": 79.70833333333333,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g04_protection_limit_1",
+          "value": 24,
+          "parent": "g04_control",
+          "context": {
+            "protection_limit": 24
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 176.26470588235293,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_protection_limit_0",
+          "value": 9,
+          "parent": "g05_without_team",
+          "context": {
+            "protection_limit": 9
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 85,
+            "margin": 229.9313725490196,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_protection_limit_1",
+          "value": 15,
+          "parent": "g05_without_team",
+          "context": {
+            "protection_limit": 15
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 205.5,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06e_protection_limit",
+          "value": 0,
+          "parent": "g05_without_team",
+          "context": {
+            "protection_limit": 0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 246.54166666666666,
+            "faults": 0,
+            "errors": 2
+          }
+        }
+      ]
+    },
+    "retry": {
+      "default": 10,
+      "probes": [
+        {
+          "name": "g04_retry_0",
+          "value": 3,
+          "parent": "g04_control",
+          "context": {
+            "retry": 3
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 128.10416666666666,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g04_retry_1",
+          "value": 25,
+          "parent": "g04_control",
+          "context": {
+            "retry": 25
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 72,
+            "margin": 169.64705882352942,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_retry_0",
+          "value": 7,
+          "parent": "g05_without_team",
+          "context": {
+            "retry": 7
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 41,
+            "margin": 303.9166666666667,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_retry_1",
+          "value": 13,
+          "parent": "g05_without_team",
+          "context": {
+            "retry": 13
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 178.79166666666666,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06e_retry",
+          "value": 0,
+          "parent": "g05_without_team",
+          "context": {
+            "retry": 0
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 166,
+            "margin": 283.6904761904762,
+            "faults": 0,
+            "errors": 15
+          }
+        },
+        {
+          "name": "g08_retry0",
+          "value": 0,
+          "parent": "g07_search",
+          "context": {
+            "retry": 0
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 163,
+            "margin": 275.2047619047619,
+            "faults": 0,
+            "errors": 10
+          }
+        },
+        {
+          "name": "g08_comp6_retry0",
+          "value": 0,
+          "parent": "g07_search",
+          "context": {
+            "competition_cost": 6,
+            "retry": 0
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 160,
+            "margin": 255.8761904761905,
+            "faults": 0,
+            "errors": 7
+          }
+        }
+      ]
+    },
+    "wards": {
+      "default": true,
+      "probes": [
+        {
+          "name": "g04_wards_0",
+          "value": false,
+          "parent": "g04_control",
+          "context": {
+            "wards": false
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 71,
+            "margin": 137.00980392156862,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_wards_0",
+          "value": false,
+          "parent": "g05_without_team",
+          "context": {
+            "wards": false
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 84,
+            "margin": 213.05882352941177,
+            "faults": 0,
+            "errors": 3
+          }
+        }
+      ]
+    },
+    "value_routing": {
+      "default": false,
+      "probes": [
+        {
+          "name": "g04_value_routing_0",
+          "value": true,
+          "parent": "g04_control",
+          "context": {
+            "value_routing": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 59,
+            "margin": 103.40196078431373,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_value_routing_0",
+          "value": true,
+          "parent": "g05_without_team",
+          "context": {
+            "value_routing": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 73,
+            "margin": 176.64705882352942,
+            "faults": 0,
+            "errors": 9
+          }
+        }
+      ]
+    },
+    "recovery_low": {
+      "default": 0.35,
+      "probes": [
+        {
+          "name": "g04_recovery_low_0",
+          "value": 0.2,
+          "parent": "g04_control",
+          "context": {
+            "recovery_low": 0.2
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 71,
+            "margin": 134.8921568627451,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_recovery_low_1",
+          "value": 0.5,
+          "parent": "g04_control",
+          "context": {
+            "recovery_low": 0.5
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 23,
+            "margin": -60.333333333333336,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_recovery_low_0",
+          "value": 0.3,
+          "parent": "g05_without_team",
+          "context": {
+            "recovery_low": 0.3
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 38,
+            "margin": 266.4166666666667,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_recovery_low_1",
+          "value": 0.4,
+          "parent": "g05_without_team",
+          "context": {
+            "recovery_low": 0.4
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 79,
+            "margin": 170.45098039215685,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06e_recovery_low",
+          "value": 0.0,
+          "parent": "g05_without_team",
+          "context": {
+            "recovery_low": 0.0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 38,
+            "margin": 202.16666666666666,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "recovery_high": {
+      "default": 0.55,
+      "probes": [
+        {
+          "name": "g04_recovery_high_0",
+          "value": 0.4,
+          "parent": "g04_control",
+          "context": {
+            "recovery_high": 0.4
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 72,
+            "margin": 159.40196078431373,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g04_recovery_high_1",
+          "value": 0.75,
+          "parent": "g04_control",
+          "context": {
+            "recovery_high": 0.75
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 31,
+            "margin": 111.89583333333333,
+            "faults": 0,
+            "errors": 6
+          }
+        },
+        {
+          "name": "g06_recovery_high_0",
+          "value": 0.5,
+          "parent": "g05_without_team",
+          "context": {
+            "recovery_high": 0.5
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 165.45833333333334,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_recovery_high_1",
+          "value": 0.6,
+          "parent": "g05_without_team",
+          "context": {
+            "recovery_high": 0.6
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 215.01960784313727,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06e_recovery_high",
+          "value": 1.0,
+          "parent": "g05_without_team",
+          "context": {
+            "recovery_high": 1.0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 33,
+            "margin": 223.72916666666666,
+            "faults": 0,
+            "errors": 3
+          }
+        }
+      ]
+    },
+    "recall_gold": {
+      "default": 300,
+      "probes": [
+        {
+          "name": "g04_recall_gold_0",
+          "value": 150,
+          "parent": "g04_control",
+          "context": {
+            "recall_gold": 150
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 158.63725490196077,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g04_recall_gold_1",
+          "value": 600,
+          "parent": "g04_control",
+          "context": {
+            "recall_gold": 600
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 32,
+            "margin": 124.625,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_recall_gold_0",
+          "value": 200,
+          "parent": "g05_without_team",
+          "context": {
+            "recall_gold": 200
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 172.14583333333334,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_recall_gold_1",
+          "value": 400,
+          "parent": "g05_without_team",
+          "context": {
+            "recall_gold": 400
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 80,
+            "margin": 212.7156862745098,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "competition_cost": {
+      "default": 4,
+      "probes": [
+        {
+          "name": "g04_competition_cost_0",
+          "value": 0,
+          "parent": "g04_control",
+          "context": {
+            "competition_cost": 0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 30,
+            "margin": 91.25,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g04_competition_cost_1",
+          "value": 10,
+          "parent": "g04_control",
+          "context": {
+            "competition_cost": 10
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 72,
+            "margin": 186.23529411764707,
+            "faults": 0,
+            "errors": 5
+          }
+        },
+        {
+          "name": "g06_competition_cost_0",
+          "value": 2,
+          "parent": "g05_without_team",
+          "context": {
+            "competition_cost": 2
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 178.4375,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_competition_cost_1",
+          "value": 6,
+          "parent": "g05_without_team",
+          "context": {
+            "competition_cost": 6
+          },
+          "built": true,
+          "score": {
+            "games": 910,
+            "wins": 706,
+            "margin": 299.5131868131868,
+            "faults": 0,
+            "errors": 73
+          }
+        },
+        {
+          "name": "g08_comp6",
+          "value": 6,
+          "parent": "g07_search",
+          "context": {
+            "competition_cost": 6
+          },
+          "built": true,
+          "score": {
+            "games": 910,
+            "wins": 698,
+            "margin": 299.532967032967,
+            "faults": 0,
+            "errors": 57
+          }
+        },
+        {
+          "name": "g08_comp8",
+          "value": 8,
+          "parent": "g07_search",
+          "context": {
+            "competition_cost": 8
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 169,
+            "margin": 259.43809523809523,
+            "faults": 0,
+            "errors": 14
+          }
+        },
+        {
+          "name": "g08_comp6_retry0",
+          "value": 6,
+          "parent": "g07_search",
+          "context": {
+            "competition_cost": 6,
+            "retry": 0
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 160,
+            "margin": 255.8761904761905,
+            "faults": 0,
+            "errors": 7
+          }
+        }
+      ]
+    },
+    "loop_candidates": {
+      "default": 24,
+      "probes": [
+        {
+          "name": "g04_loop_candidates_0",
+          "value": 12,
+          "parent": "g04_control",
+          "context": {
+            "loop_candidates": 12
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 32,
+            "margin": 134.64583333333334,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_loop_candidates_1",
+          "value": 40,
+          "parent": "g04_control",
+          "context": {
+            "loop_candidates": 40
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 159.99019607843138,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_loop_candidates_0",
+          "value": 16,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_candidates": 16
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 172.83333333333334,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_loop_candidates_1",
+          "value": 32,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_candidates": 32
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 214.12745098039215,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_loop_candidates_2",
+          "value": 48,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_candidates": 48
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 186.91666666666666,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ]
+    },
+    "loop_altars": {
+      "default": 4,
+      "probes": [
+        {
+          "name": "g04_loop_altars_0",
+          "value": 1,
+          "parent": "g04_control",
+          "context": {
+            "loop_altars": 1
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 132.02941176470588,
+            "faults": 0,
+            "errors": 7
+          }
+        },
+        {
+          "name": "g04_loop_altars_1",
+          "value": 2,
+          "parent": "g04_control",
+          "context": {
+            "loop_altars": 2
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 158.58333333333334,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_loop_altars_0",
+          "value": 3,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_altars": 3
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 172.83333333333334,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_loop_altars_1",
+          "value": 5,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_altars": 5
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 213.99019607843138,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_loop_altars_2",
+          "value": 8,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_altars": 8
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 186.6875,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_altars_3",
+          "value": 16,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_altars": 16
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 162.83333333333334,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ]
+    },
+    "loop_beam": {
+      "default": 4,
+      "probes": [
+        {
+          "name": "g04_loop_beam_0",
+          "value": 2,
+          "parent": "g04_control",
+          "context": {
+            "loop_beam": 2
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 29,
+            "margin": 71.0625,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_loop_beam_1",
+          "value": 8,
+          "parent": "g04_control",
+          "context": {
+            "loop_beam": 8
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 77,
+            "margin": 160.8921568627451,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_loop_beam_0",
+          "value": 4,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_beam": 4
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 170,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_beam_1",
+          "value": 6,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_beam": 6
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 199.0625,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_beam_2",
+          "value": 10,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_beam": 10
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 199.95833333333334,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_beam_3",
+          "value": 16,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_beam": 16
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 188.08333333333334,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_beam_4",
+          "value": 32,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_beam": 32
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 81,
+            "margin": 212.0686274509804,
+            "faults": 0,
+            "errors": 4
+          }
+        }
+      ]
+    },
+    "loop_length": {
+      "default": 5,
+      "probes": [
+        {
+          "name": "g04_loop_length_0",
+          "value": 3,
+          "parent": "g04_control",
+          "context": {
+            "loop_length": 3
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 167.55882352941177,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g04_loop_length_1",
+          "value": 4,
+          "parent": "g04_control",
+          "context": {
+            "loop_length": 4
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 137.45833333333334,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_loop_length_0",
+          "value": 4,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_length": 4
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 222.2156862745098,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "loop_expansions": {
+      "default": 768,
+      "probes": [
+        {
+          "name": "g04_loop_expansions_0",
+          "value": 256,
+          "parent": "g04_control",
+          "context": {
+            "loop_expansions": 256
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 33,
+            "margin": 116.97916666666667,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_loop_expansions_1",
+          "value": 1536,
+          "parent": "g04_control",
+          "context": {
+            "loop_expansions": 1536
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 175.04901960784315,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_loop_expansions_0",
+          "value": 512,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_expansions": 512
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 82,
+            "margin": 217.47058823529412,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_loop_expansions_1",
+          "value": 1024,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_expansions": 1024
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 199.0625,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_expansions_2",
+          "value": 6144,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_expansions": 6144
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 199.0625,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_expansions_3",
+          "value": 20000,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_expansions": 20000
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 199.0625,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ]
+    },
+    "loop_reports": {
+      "default": 3,
+      "probes": [
+        {
+          "name": "g04_loop_reports_0",
+          "value": 1,
+          "parent": "g04_control",
+          "context": {
+            "loop_reports": 1
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 31,
+            "margin": 81.64583333333333,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g04_loop_reports_1",
+          "value": 2,
+          "parent": "g04_control",
+          "context": {
+            "loop_reports": 2
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 143.9313725490196,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_loop_reports_0",
+          "value": 2,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_reports": 2
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 194.34313725490196,
+            "faults": 0,
+            "errors": 7
+          }
+        }
+      ]
+    },
+    "loop_gold": {
+      "default": 0.02,
+      "probes": [
+        {
+          "name": "g04_loop_gold_0",
+          "value": 0.0,
+          "parent": "g04_control",
+          "context": {
+            "loop_gold": 0.0
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 73,
+            "margin": 172.9607843137255,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_loop_gold_1",
+          "value": 0.08,
+          "parent": "g04_control",
+          "context": {
+            "loop_gold": 0.08
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 155.4375,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_loop_gold_0",
+          "value": 0.0,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_gold": 0.0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 191.04166666666666,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_loop_gold_1",
+          "value": 0.04,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_gold": 0.04
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 82,
+            "margin": 210.15686274509804,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "loop_opening": {
+      "default": 0.15,
+      "probes": [
+        {
+          "name": "g04_loop_opening_0",
+          "value": 0.0,
+          "parent": "g04_control",
+          "context": {
+            "loop_opening": 0.0
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 72,
+            "margin": 156.73529411764707,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_loop_opening_1",
+          "value": 0.4,
+          "parent": "g04_control",
+          "context": {
+            "loop_opening": 0.4
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 31,
+            "margin": 83.3125,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_loop_opening_0",
+          "value": 0.05,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_opening": 0.05
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 80,
+            "margin": 199.65686274509804,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_loop_opening_1",
+          "value": 0.25,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_opening": 0.25
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 182.625,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ]
+    },
+    "loop_risk": {
+      "default": 0.2,
+      "probes": [
+        {
+          "name": "g04_loop_risk_0",
+          "value": 0.0,
+          "parent": "g04_control",
+          "context": {
+            "loop_risk": 0.0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 143.52083333333334,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g04_loop_risk_1",
+          "value": 0.6,
+          "parent": "g04_control",
+          "context": {
+            "loop_risk": 0.6
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 152.2843137254902,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_loop_risk_0",
+          "value": 0.1,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_risk": 0.1
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 80,
+            "margin": 196.12745098039215,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_loop_risk_1",
+          "value": 0.3,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_risk": 0.3
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 177.1875,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06e_loop_risk",
+          "value": 1.0,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_risk": 1.0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 182.91666666666666,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "loop_service": {
+      "default": 7,
+      "probes": [
+        {
+          "name": "g04_loop_service_0",
+          "value": 0,
+          "parent": "g04_control",
+          "context": {
+            "loop_service": 0
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 181.98039215686273,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g04_loop_service_1",
+          "value": 14,
+          "parent": "g04_control",
+          "context": {
+            "loop_service": 14
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 33,
+            "margin": 167.83333333333334,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_loop_service_0",
+          "value": 4,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_service": 4
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 198.4375,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_loop_service_1",
+          "value": 10,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_service": 10
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 222.3235294117647,
+            "faults": 0,
+            "errors": 8
+          }
+        }
+      ]
+    },
+    "loop_phase": {
+      "default": 2,
+      "probes": [
+        {
+          "name": "g04_loop_phase_0",
+          "value": 0,
+          "parent": "g04_control",
+          "context": {
+            "loop_phase": 0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 29,
+            "margin": 4.145833333333333,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g04_loop_phase_1",
+          "value": 4,
+          "parent": "g04_control",
+          "context": {
+            "loop_phase": 4
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 186.83333333333334,
+            "faults": 0,
+            "errors": 3
+          }
+        },
+        {
+          "name": "g06_loop_phase_0",
+          "value": 1,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_phase": 1
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 34,
+            "margin": 141.85416666666666,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_loop_phase_1",
+          "value": 3,
+          "parent": "g05_without_team",
+          "context": {
+            "loop_phase": 3
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 87,
+            "margin": 236.76470588235293,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g08_phase4",
+          "value": 4,
+          "parent": "g07_search",
+          "context": {
+            "loop_phase": 4
+          },
+          "built": true,
+          "score": {
+            "games": 910,
+            "wins": 700,
+            "margin": 309.78681318681316,
+            "faults": 0,
+            "errors": 58
+          }
+        },
+        {
+          "name": "g08_phase5",
+          "value": 5,
+          "parent": "g07_search",
+          "context": {
+            "loop_phase": 5
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 170,
+            "margin": 298.1142857142857,
+            "faults": 0,
+            "errors": 10
+          }
+        }
+      ]
+    },
+    "rally_life": {
+      "default": 12,
+      "probes": [
+        {
+          "name": "g04_rally_life_0",
+          "value": 6,
+          "parent": "g04_control",
+          "context": {
+            "rally_life": 6,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 150.80392156862746,
+            "faults": 0,
+            "errors": 6
+          }
+        },
+        {
+          "name": "g04_rally_life_1",
+          "value": 24,
+          "parent": "g04_control",
+          "context": {
+            "rally_life": 24,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 131.64583333333334,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_rally_life_0",
+          "value": 9,
+          "parent": "g05_without_team",
+          "context": {
+            "rally_life": 9,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 38,
+            "margin": 176.72916666666666,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_rally_life_1",
+          "value": 15,
+          "parent": "g05_without_team",
+          "context": {
+            "rally_life": 15,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 38,
+            "margin": 185.04166666666666,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06e_rally_life",
+          "value": 0,
+          "parent": "g05_without_team",
+          "context": {
+            "rally_life": 0,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 81,
+            "margin": 192.2843137254902,
+            "faults": 0,
+            "errors": 4
+          }
+        }
+      ],
+      "interpretation": "Measured with coordination enabled; compare against the coordination-enabled control. Dormant when coordination is disabled."
+    },
+    "lease": {
+      "default": 3,
+      "probes": [
+        {
+          "name": "g04_lease_0",
+          "value": 1,
+          "parent": "g04_control",
+          "context": {
+            "lease": 1,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 76,
+            "margin": 139.6764705882353,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g04_lease_1",
+          "value": 8,
+          "parent": "g04_control",
+          "context": {
+            "lease": 8,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 33,
+            "margin": 108.6875,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_lease_0",
+          "value": 1,
+          "parent": "g05_without_team",
+          "context": {
+            "lease": 1,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 84,
+            "margin": 187.7450980392157,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_lease_1",
+          "value": 5,
+          "parent": "g05_without_team",
+          "context": {
+            "lease": 5,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 38,
+            "margin": 181.29166666666666,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06e_lease",
+          "value": 0,
+          "parent": "g05_without_team",
+          "context": {
+            "lease": 0,
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 200.39583333333334,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ],
+      "interpretation": "Measured with coordination enabled; compare against the coordination-enabled control. Dormant when coordination is disabled."
+    },
+    "reserve": {
+      "default": 10000,
+      "probes": [
+        {
+          "name": "g04_reserve_0",
+          "value": 5000,
+          "parent": "g04_control",
+          "context": {
+            "reserve": 5000
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 77,
+            "margin": 159.26470588235293,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g04_reserve_1",
+          "value": 20000,
+          "parent": "g04_control",
+          "context": {
+            "reserve": 20000
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 30,
+            "margin": 85.375,
+            "faults": 0,
+            "errors": 2
+          }
+        },
+        {
+          "name": "g06_reserve_0",
+          "value": 2500,
+          "parent": "g05_without_team",
+          "context": {
+            "reserve": 2500
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 35,
+            "margin": 158.75,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_reserve_1",
+          "value": 7500,
+          "parent": "g05_without_team",
+          "context": {
+            "reserve": 7500
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 213.97916666666666,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_reserve_2",
+          "value": 10000,
+          "parent": "g05_without_team",
+          "context": {
+            "reserve": 10000
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 82,
+            "margin": 230.12745098039215,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06e_reserve",
+          "value": 0,
+          "parent": "g05_without_team",
+          "context": {
+            "reserve": 0
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 33,
+            "margin": 152.77083333333334,
+            "faults": 0,
+            "errors": 0
+          }
+        }
+      ]
+    },
+    "field_admission": {
+      "default": 55000,
+      "probes": [
+        {
+          "name": "g04_field_admission_0",
+          "value": 30000,
+          "parent": "g04_control",
+          "context": {
+            "field_admission": 30000
+          },
+          "built": true,
+          "score": {
+            "games": 210,
+            "wins": 165,
+            "margin": 271.92857142857144,
+            "faults": 0,
+            "errors": 17
+          }
+        },
+        {
+          "name": "g04_field_admission_1",
+          "value": 80000,
+          "parent": "g04_control",
+          "context": {
+            "field_admission": 80000
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 1,
+            "margin": -490.9791666666667,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g06_field_admission_0",
+          "value": 20000,
+          "parent": "g05_without_team",
+          "context": {
+            "field_admission": 20000
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 81,
+            "margin": 214.04901960784315,
+            "faults": 0,
+            "errors": 6
+          }
+        },
+        {
+          "name": "g06_field_admission_1",
+          "value": 40000,
+          "parent": "g05_without_team",
+          "context": {
+            "field_admission": 40000
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 37,
+            "margin": 178.39583333333334,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_field_admission_2",
+          "value": 55000,
+          "parent": "g05_without_team",
+          "context": {
+            "field_admission": 55000
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 33,
+            "margin": 99,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "max_fields": {
+      "default": 3,
+      "probes": [
+        {
+          "name": "g04_max_fields_0",
+          "value": 1,
+          "parent": "g04_control",
+          "context": {
+            "max_fields": 1
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 22,
+            "margin": -71.45833333333333,
+            "faults": 0,
+            "errors": 0
+          }
+        },
+        {
+          "name": "g04_max_fields_1",
+          "value": 5,
+          "parent": "g04_control",
+          "context": {
+            "max_fields": 5
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 75,
+            "margin": 175.7549019607843,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_max_fields_0",
+          "value": 2,
+          "parent": "g05_without_team",
+          "context": {
+            "max_fields": 2
+          },
+          "built": true,
+          "score": {
+            "games": 48,
+            "wins": 36,
+            "margin": 203.39583333333334,
+            "faults": 0,
+            "errors": 1
+          }
+        },
+        {
+          "name": "g06_max_fields_1",
+          "value": 4,
+          "parent": "g05_without_team",
+          "context": {
+            "max_fields": 4
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 83,
+            "margin": 219.37254901960785,
+            "faults": 0,
+            "errors": 1
+          }
+        }
+      ]
+    },
+    "coordination": {
+      "default": false,
+      "probes": [
+        {
+          "name": "g04_coordination_0",
+          "value": true,
+          "parent": "g04_control",
+          "context": {
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 74,
+            "margin": 146.2058823529412,
+            "faults": 0,
+            "errors": 4
+          }
+        },
+        {
+          "name": "g06_coordination_0",
+          "value": true,
+          "parent": "g05_without_team",
+          "context": {
+            "coordination": true
+          },
+          "built": true,
+          "score": {
+            "games": 102,
+            "wins": 82,
+            "margin": 191.2156862745098,
+            "faults": 0,
+            "errors": 3
+          }
+        }
+      ]
+    },
+    "attacks": {
+      "default": false,
+      "probes": [
+        {
+          "name": "g04_attacks_0",
+          "value": true,
+          "parent": "g04_control",
+          "context": {
+            "attacks": true
+          },
+          "built": true,
+          "score": null
+        }
+      ],
+      "interpretation": "Unused declaration; no callers. Both values compile to exactly the same WASM. No runtime tuning is possible without an algorithm change."
+    }
+  },
+  "policy": "Probes list independent changes and explicitly enabled contexts. Scores deduplicate repeated candidate/opponent/map/side conditions. This coverage report is descriptive and does not itself establish final selection."
+}

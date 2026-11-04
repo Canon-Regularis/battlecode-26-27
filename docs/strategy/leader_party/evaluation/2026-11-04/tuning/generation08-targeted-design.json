@@ -1,0 +1,25 @@
+{
+  "parent": "g07_search",
+  "candidates": {
+    "g08_phase4": {
+      "loop_phase": 4
+    },
+    "g08_phase5": {
+      "loop_phase": 5
+    },
+    "g08_comp6": {
+      "competition_cost": 6
+    },
+    "g08_comp8": {
+      "competition_cost": 8
+    },
+    "g08_retry0": {
+      "retry": 0
+    },
+    "g08_comp6_retry0": {
+      "competition_cost": 6,
+      "retry": 0
+    }
+  },
+  "policy": "Final targeted refinement frozen before the 86-map pool results: extend the strongest validated planner-start value 3 to 4/5; combine that parent with the independently supported competition penalty 6 and adjacent 8, and zero-retry training winner. Test the small combination separately from the regressing full G7 combination. No other fields change."
+}

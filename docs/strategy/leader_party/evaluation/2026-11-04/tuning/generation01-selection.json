@@ -1,0 +1,33 @@
+{
+  "screen": "generation01-screen",
+  "expanded": [
+    "g01_bank30",
+    "g01_recover_late",
+    "g01_bank40"
+  ],
+  "rule": "Three highest fault-free screening win rates; use training only to refine settings.",
+  "generation02_parent": "g01_bank30",
+  "generation02_candidates": {
+    "g02_bank30_late": {
+      "recovery_low": 0.25,
+      "recovery_high": 0.45
+    },
+    "g02_bank30_no_wards": {
+      "wards": false
+    },
+    "g02_bank25": {
+      "bank_bag": 25,
+      "bag_age": 50
+    },
+    "g02_bank35": {
+      "bank_bag": 35,
+      "bag_age": 70
+    },
+    "g02_bank30_shop200": {
+      "recall_gold": 200
+    },
+    "g02_bank30_shop450": {
+      "recall_gold": 450
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "labels": [
+    "baseline-holdout",
+    "final-holdout"
+  ],
+  "baseline": "g00",
+  "results": [
+    {
+      "candidate": "g03_recover20",
+      "baseline": "g00",
+      "matched_conditions": 306,
+      "maps": 51,
+      "wins": 228,
+      "baseline_wins": 212,
+      "win_delta": 0.0522875816993464,
+      "map_cluster_win_delta_95": [
+        -0.003267973856209151,
+        0.10784313725490195
+      ],
+      "margin_delta": 32.39542483660131,
+      "errors": 19,
+      "baseline_errors": 17,
+      "faults": 0
+    },
+    {
+      "candidate": "g03_shop450",
+      "baseline": "g00",
+      "matched_conditions": 306,
+      "maps": 51,
+      "wins": 222,
+      "baseline_wins": 212,
+      "win_delta": 0.032679738562091505,
+      "map_cluster_win_delta_95": [
+        -0.02287581699346405,
+        0.0915032679738562
+      ],
+      "margin_delta": 5.1013071895424815,
+      "errors": 11,
+      "baseline_errors": 17,
+      "faults": 0
+    }
+  ]
+}

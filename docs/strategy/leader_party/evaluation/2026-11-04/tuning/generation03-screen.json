@@ -1,0 +1,6954 @@
+{
+  "label": "generation03-screen",
+  "split": "screen",
+  "maps": [
+    "00eight",
+    "00great-wall",
+    "01fracture",
+    "01corridors",
+    "02the-pack",
+    "02the-pond",
+    "03the-front",
+    "03honeycomb"
+  ],
+  "candidates": [
+    "g03_bank40_late",
+    "g03_age30",
+    "g03_age90",
+    "g03_recover20",
+    "g03_recover30",
+    "g03_shop450"
+  ],
+  "opponents": [
+    "subhan",
+    "D1",
+    "gold_diamond"
+  ],
+  "artifact_sha256": {
+    "D1": "c70fadfba72e0d9aeb4da034c914b2763291fe9c69bd1142e32b18a69cf2f814",
+    "g03_age30": "7ef8a2e515a06ad605c412ba94feb9df6a1565a8890cd70bbc59a66a6bbe91c6",
+    "g03_age90": "fdb537ff09f81e8e28240c96d509f2573b6ac7119d8f3e7dcb36434b42a30d08",
+    "g03_bank40_late": "a18cbf31a21e4d8e5413b17698944dfb7f2298d3de7c433827385653595d3aac",
+    "g03_recover20": "cc0d25f33fd004933be034081ccb7336167430064f54d87e5506edc0055f1317",
+    "g03_recover30": "309128aef00508a002b1e037f215d3aa113ff6bd2ad9c0a5c20b437e884211bd",
+    "g03_shop450": "f18ef51c35d13359c77ddfecc6bc7fd3e6f4b795b14d66a05c8f4cb87f7afcfa",
+    "gold_diamond": "810460f304047ea38711f7b41b904e24f32c77d48ce07b81d28c2836d13b7b27",
+    "subhan": "8d7d585a1f63faa6ba08c0ce150f8e09416135df5b6941e2ec15d15a2b928695"
+  },
+  "planned_games": 288,
+  "status": "complete",
+  "matches": [
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1013,
+      "theirs": 913,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1336,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 6.0,
+      "opponent_deaths": 12.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fdffd04f810f4fe2d9b5e95d.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 854,
+      "theirs": 1003,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1327,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 4.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4d2411df3225643990b46f13.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 721,
+      "theirs": 636,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 24.0,
+      "opponent_deaths": 26.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\51aaeb64d1ba5848f9a26b0c.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1052,
+      "theirs": 831,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1802,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\933a54c3b13348bec97b4d77.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 438,
+      "theirs": 891,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 27.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5653f029349777cb98ca889c.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 575,
+      "theirs": 660,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\60cdf3959f57aafb13199bb9.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 712,
+      "theirs": 504,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 18.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\55f64770011800bb98437c8f.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 617,
+      "theirs": 415,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 28.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fbfe04a401fc17cc5878bc71.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ff901cf5b0935a931e4d4acb.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\639544bd148e03b55cf508db.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 531,
+      "theirs": 717,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5e6bfd92cfff7aae85b079d9.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 708,
+      "theirs": 675,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 4.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f001c7057687b28372a7810c.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 6.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\eea061707873f3bd020fa3bf.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1720d624299ef5628de39ced.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 118,
+      "theirs": 1000,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1519,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 3.0,
+      "opponent_deaths": 9.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\efa3e0d08838f1888f2c17e7.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 112,
+      "theirs": 1021,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1468,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 7.0,
+      "opponent_deaths": 7.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\883dfaaec6ccb65f0ef83226.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1009,
+      "theirs": 19,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1105,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3ef275fedfddb74ce9abf0df.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1009,
+      "theirs": 40,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1328,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 13.0,
+      "opponent_deaths": 24.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\104f6eb5539f155ba6f0212f.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1012,
+      "theirs": 387,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1983,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\179eb16b52004fb3b7301122.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 132,
+      "theirs": 124,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 15.0,
+      "opponent_deaths": 21.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\750ec21fd91200f773c8faaf.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 653,
+      "theirs": 523,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 49.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f46340628dbc740b1ee497d8.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 840,
+      "theirs": 533,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 43.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f35d7c3492d611e7a462b6bd.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 703,
+      "theirs": 336,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 38.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\739d41099d3c88082664d2d0.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 406,
+      "theirs": 782,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 45.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\51103f2005211f2e18236044.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\afa90cf8b6f7f443cac9faa8.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e86ab45e62f6393700fabe3b.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 594,
+      "theirs": 165,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 13.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8ee30a42a5aff8fae198b30d.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 717,
+      "theirs": 129,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\048914b22af0c541526b18e4.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 358,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1375,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 51.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1240f22ac6ffb7b2cf063cb2.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 158,
+      "theirs": 1030,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1373,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\174528cd54ae2c16d07b784a.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1022,
+      "theirs": 618,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1638,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\dc5001260291b7db9c14a1f9.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 499,
+      "theirs": 123,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\9b676df7c1891a63a37f6c43.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1034,
+      "theirs": 35,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1315,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 20.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\46aa101a91d2d254dfc772ba.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1018,
+      "theirs": 34,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1412,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 38.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8fc0bbd4c76cf71b4626427b.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 205,
+      "theirs": 124,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 38.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1720ace468acd6bd9905ac4e.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 925,
+      "theirs": 204,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 47.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\b8ccd2a7ac89255fcf296da7.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 473,
+      "theirs": 602,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 70.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\734dc8578288bacfc6b2f7c7.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 803,
+      "theirs": 447,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 56.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2c7f8a097e7064b8ce0f4689.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 483,
+      "theirs": 223,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 47.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e0d4b137d119074dfb13e16b.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 286,
+      "theirs": 750,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 33.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\29eeb29c25705fa418949981.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 126,
+      "zero_score": false,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 88.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6a29d3179198bd52ecfcce03.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\b7b072f5275f850a3610d2d8.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 720,
+      "theirs": 321,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 34.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\10744d44b7dd34118bfac27a.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 612,
+      "theirs": 309,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 5.0,
+      "opponent_deaths": 34.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f85f5a536888a30c48441045.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 291,
+      "theirs": 1004,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1614,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 94.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c4c571e400c9cea3b0dbb919.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 91,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1354,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 25.0,
+      "opponent_deaths": 82.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e2c6bf7e03b005d52c5a7e40.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1020,
+      "theirs": 60,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1564,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fecb0a05acead25f9a7911e1.zip"
+    },
+    {
+      "candidate": "g03_bank40_late",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 962,
+      "theirs": 131,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 15.0,
+      "opponent_deaths": 36.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8d4697f6d3fdd421e30018a4.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1008,
+      "theirs": 776,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1322,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d51b84bfc6b7bfbb640735de.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 719,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1302,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 5.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\42127c570914896b2ad3189d.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 118,
+      "theirs": 219,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 16.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c0c2cd0c24bdcbd97bd290c0.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 394,
+      "theirs": 387,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2ccc983f0d463fcfb35246c3.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 515,
+      "theirs": 584,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 30.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c72eb6500d3848181b2922ab.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 609,
+      "theirs": 756,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 35.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\dd34475fbb12fe58b6199914.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 588,
+      "theirs": 534,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 23.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\afe808e4ad504f7ad0c42657.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 753,
+      "theirs": 373,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 24.0,
+      "opponent_deaths": 20.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\89819fd4dfea8a950347c6b0.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5afd03e643281c04a7895d55.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\da6c50e316257f0582aa5573.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 606,
+      "theirs": 681,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 2,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 7.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3648e27f9fcf70d4af2c828d.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 657,
+      "theirs": 603,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 6.0,
+      "opponent_deaths": 9.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3c40dd4b7cfac5d18313fdfa.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 6.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\67e0c76575fc7a9061fff034.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\65f053bc309b4e6ff70f78d2.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 795,
+      "theirs": 1004,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1885,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\37b847e7b5695378bb4368c0.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1004,
+      "theirs": 909,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1962,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 14.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1040d645e62988abfb86e8a2.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1011,
+      "theirs": 30,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1376,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 13.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\bd227378704570eb49817e7e.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 860,
+      "theirs": 72,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 24.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\aefe64f17d3fd4fddff7d1c7.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 117,
+      "theirs": 84,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 16.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\07c77be402dc626bd3c04248.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 805,
+      "theirs": 329,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 57.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5a9fe0c6b67857400230d436.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 525,
+      "theirs": 757,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 48.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6fa94036c1f78d7cd1b79c84.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 776,
+      "theirs": 629,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 41.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\12a3ec1a51cd1942f365286b.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 340,
+      "theirs": 508,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 42.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f480e069a359a69b4d417627.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 470,
+      "theirs": 366,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 38.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\acdb8e826707cfc0bbec6bb9.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\556c9cb09053ce2c0d36bd85.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\cf65443e1043513768d2acbe.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 588,
+      "theirs": 204,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e4cb690674dd37ff90174a22.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 633,
+      "theirs": 0,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 14.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3411b99bf1662b700fdf22dd.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 251,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1388,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 51.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\b58305e5a07402750c555087.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 95,
+      "theirs": 1003,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1351,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 58.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1e2e0dc3583d8c787bc9c8ed.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1014,
+      "theirs": 216,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1803,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 33.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c0c161506db688589a74ab49.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 872,
+      "theirs": 763,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 34.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d137e28db273362d27285c4f.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1014,
+      "theirs": 11,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1931,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\61989e43df8da1a46cc7b86a.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 272,
+      "theirs": 34,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 15.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ea75df4c3f45b75e5672cb02.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 511,
+      "theirs": 200,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 58.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3afc69ec4857b1c3f4338466.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 300,
+      "theirs": 131,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 44.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\907727af000d0a4b7112919d.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 408,
+      "theirs": 440,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 33.0,
+      "opponent_deaths": 61.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e2b58366d1d8da08f90e515b.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1012,
+      "theirs": 272,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 1977,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 53.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\54f0880fa783488a1a6310ca.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 478,
+      "theirs": 125,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 48.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d10f19d743ab373a17211b90.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 548,
+      "theirs": 352,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 75.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ce823ddf25f70b7bdd9965c6.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 126,
+      "zero_score": false,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 88.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2463587e0b7ff964fbfd4c6b.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6bbb7c6994b72cf2b3061f21.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 651,
+      "theirs": 114,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e5dcfbd98454b6c985317483.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 558,
+      "theirs": 114,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\119dedb2e986ca5179a54876.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 12,
+      "theirs": 1011,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1631,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 95.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\201a0eaa5b0c5d3d0ac4b80f.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1354,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 82.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\290d4494cf963ee7a762b404.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 943,
+      "theirs": 69,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 40.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c79301cbc7766cb810ed89c1.zip"
+    },
+    {
+      "candidate": "g03_age30",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1009,
+      "theirs": 326,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1780,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 49.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\874ea9b3f5f60c098b00e64b.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1007,
+      "theirs": 759,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1263,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 12.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1a9eb5eec67d100d142026f3.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1040,
+      "theirs": 958,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1443,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 4.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5e99ec93d70d1910ba7f6f8c.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 744,
+      "theirs": 1013,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1751,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 20.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f293e32c9355d9a80f2a1f34.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 790,
+      "theirs": 687,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 1,
+      "deaths": 22.0,
+      "opponent_deaths": 16.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\a9b61476fa4d14bb5dee28b1.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 704,
+      "theirs": 848,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 2,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 25.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\826e48e119608fc0ab4c09b5.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 849,
+      "theirs": 485,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 32.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\35b400dd166a562f4131aec3.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 553,
+      "theirs": 558,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 24.0,
+      "opponent_deaths": 22.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c6c2b0359271c24a698119e7.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 488,
+      "theirs": 458,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 25.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2e33ceee9b3fcbab7b864048.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5479dda614f6cd74eed57c36.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c2bd5a8aab0466269bd99ea5.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 573,
+      "theirs": 753,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 7.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6c64766a0edbcf2640204e55.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 657,
+      "theirs": 648,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 7.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d7b69075d7dc96318f1e1f80.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 18.0,
+      "opponent_deaths": 6.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\39dac7b2987c4814eec9ed50.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\330d81bc5c0676a19a46c898.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1062,
+      "theirs": 376,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1922,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\44cd45d8fa1b55e30a4ff6cb.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1021,
+      "theirs": 111,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1607,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 14.0,
+      "opponent_deaths": 4.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\470fb0c63213a286189f11f2.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 19,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1211,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\b2267069aded136136de06a2.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1011,
+      "theirs": 30,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1565,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 20.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\019abdd3f8a16b08b333331b.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 434,
+      "theirs": 150,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 13.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\edd0fbbbf293f12e03ad95eb.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 314,
+      "theirs": 168,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 16.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\df3d3a658f6d22203abe1cbc.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 956,
+      "theirs": 724,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 25.0,
+      "opponent_deaths": 53.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ceaad1ee2ae2b491c96632b9.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 917,
+      "theirs": 556,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 44.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\beeaaef75e28d0a49b69bb96.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 498,
+      "theirs": 314,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 35.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f4bd17fc13026d30d48d4701.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 521,
+      "theirs": 312,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 25.0,
+      "opponent_deaths": 35.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\616dcbd4cf80d840e7440264.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 1.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d900f1f54862fe9d6062dcea.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\9d65046329bf6d243a884ca9.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 525,
+      "theirs": 126,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 9.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1db4acc23b1d6102a2adfe60.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 639,
+      "theirs": 489,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 2.0,
+      "opponent_deaths": 26.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\34210e8f7f1f1f5a273676f7.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 79,
+      "theirs": 1016,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1358,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 50.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\19eb44c02c592e6a506b7faf.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 87,
+      "theirs": 1011,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1564,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 61.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2ee4a55a9d4e078c27654784.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 131,
+      "theirs": 77,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 1.0,
+      "opponent_deaths": 12.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\df912fb52eb3163ac1dcc636.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 942,
+      "theirs": 127,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 16.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\29b3a7878f65641df5d4147e.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 86,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1469,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 37.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\246f3d5724a5105e2043a0aa.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1028,
+      "theirs": 34,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1402,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 18.0,
+      "opponent_deaths": 37.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2e6cd3a7f26a792ee4edbad4.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1040,
+      "theirs": 325,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1732,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 70.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5321a850df6c99d98e449b41.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1045,
+      "theirs": 312,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1824,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\77cea8b70dcd5d7d283e24a0.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 760,
+      "theirs": 576,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6e40286a82c58b187199ab2a.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 877,
+      "theirs": 571,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 57.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3329c0aa83babb1dbbd931f3.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 640,
+      "theirs": 367,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 24.0,
+      "opponent_deaths": 74.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\9b497310c53de8d02a694047.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 391,
+      "theirs": 452,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 33.0,
+      "opponent_deaths": 64.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ec7fa1fc6ece94ee045a509a.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 119,
+      "zero_score": false,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 1.0,
+      "opponent_deaths": 88.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\9f1ec5c2d8f2546b80868c9f.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 1.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d18be1ce44c40618f92dee97.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 468,
+      "theirs": 626,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 41.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\bee1689da3f4117a233bdc68.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 696,
+      "theirs": 111,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\060c7051ab0e9ba58f499106.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 484,
+      "theirs": 1011,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1629,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 90.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5a2bbb0aaceaa7efd98d24fd.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 79,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1354,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 82.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3ce586fc97e12f81de01463a.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 259,
+      "theirs": 1004,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1769,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 46.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\644363518b12b7ecb352928c.zip"
+    },
+    {
+      "candidate": "g03_age90",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1000,
+      "theirs": 380,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1892,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 40.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\41b869984407aa59268e79fa.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1001,
+      "theirs": 792,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1386,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\616d46eee4d80fb8cae4e027.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 975,
+      "theirs": 1012,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1425,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 18.0,
+      "opponent_deaths": 5.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\79ef1f6a17119bcd896aa272.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 937,
+      "theirs": 705,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 23.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6d100557cb5ff546e6159103.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 609,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1765,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 21.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4eb54f8d36f155592453007e.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 933,
+      "theirs": 800,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 25.0,
+      "opponent_deaths": 31.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\204ffeb28362df94e65a3b10.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 717,
+      "theirs": 421,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\13df7e4b11b98b44cc8ecc06.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 556,
+      "theirs": 376,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 26.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\9b57b015e5a2466c4b6c89ee.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 194,
+      "theirs": 1000,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 1998,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 21.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\746b2674dbb8b3113e957b0e.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6fb7a924b1558d3d4c1e37bd.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fe0a461b0088b593ea46515a.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 612,
+      "theirs": 702,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d94b309de2b68a684732c405.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 678,
+      "theirs": 570,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 6.0,
+      "opponent_deaths": 9.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3886cb01a9ba5919e56590de.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 6.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fbaa55a0584b752c5bbddb09.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5f02510503748e1feee04df9.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1037,
+      "theirs": 168,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1414,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3a1c1dae846c605898a83057.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1011,
+      "theirs": 327,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1620,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2e16d996929dace1a358bdc4.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1009,
+      "theirs": 24,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1278,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 16.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8f1c037dd0e71323c66d921c.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1014,
+      "theirs": 98,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1603,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ab2cc11e24831663464585c3.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 557,
+      "theirs": 273,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 39.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ac24a43cf56d442690e3206e.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 742,
+      "theirs": 338,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8a69641fbb9a8c79ac2bf2f1.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 668,
+      "theirs": 697,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 49.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\b0335f164d26bb68f058ab01.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 548,
+      "theirs": 587,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 37.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\89733fbfe716d67d498d353d.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 785,
+      "theirs": 64,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 40.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\699a6503b27f25e5fd8f6f92.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 483,
+      "theirs": 230,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 35.0,
+      "opponent_deaths": 28.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ea14008a9a553e576f1e0fd5.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\79034815f6ccd35d5af402a2.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\a009719848887d5e496ca144.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 618,
+      "theirs": 87,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 12.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4e4badaf728d01c4a833f4ea.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 867,
+      "theirs": 321,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 1.0,
+      "opponent_deaths": 24.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4c347d623bb96f39585778d1.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 194,
+      "theirs": 1027,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1390,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 24.0,
+      "opponent_deaths": 50.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2c02806aa499ecee6713758e.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 1030,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1322,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 51.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\950ba84db3b3d3974e7b220e.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1011,
+      "theirs": 675,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1767,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 31.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\26f24067d941f0b55a018659.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 216,
+      "theirs": 31,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 4.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1075fff799ed0465b0d12b2e.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1032,
+      "theirs": 15,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1382,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 23.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\67f36a80e211b2268e284d73.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1040,
+      "theirs": 9,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1570,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 40.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ea26d1b60b1d214f7bffc093.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 934,
+      "theirs": 209,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 18.0,
+      "opponent_deaths": 50.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5737846246cb286e73aa4a26.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 247,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1511,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 60.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d98466193916a5bc86aa8c48.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 580,
+      "theirs": 511,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 32.0,
+      "opponent_deaths": 69.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c63062b5c5450bac20b2dac6.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 767,
+      "theirs": 553,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 56.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ecdbf9c953c8f38d81dab5af.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 606,
+      "theirs": 545,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 61.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\1d56971817f28a7c70980592.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 367,
+      "theirs": 455,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 71.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\39a719eba4c7a32a18b6541c.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 126,
+      "zero_score": false,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 88.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c12a4fe688eb4ddce9c580cf.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 3.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c1c1af8cdd51ae3d21c321d2.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 344,
+      "theirs": 156,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\a4504493edbe7b174c96f035.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 732,
+      "theirs": 108,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 27.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8993e9387098d66e75286d1c.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 434,
+      "theirs": 1006,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1828,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 33.0,
+      "opponent_deaths": 102.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\cd1deefd5c5d7e835630fadb.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 162,
+      "theirs": 1012,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1412,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 84.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\827848933107d04b63f999a9.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1000,
+      "theirs": 216,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1796,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 45.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\16e5c4b4b054b093065685b0.zip"
+    },
+    {
+      "candidate": "g03_recover20",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 904,
+      "theirs": 143,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fa05c3c9ff68080252b1b620.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1035,
+      "theirs": 960,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1403,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 6.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ee5b34d203a1b9acdbbd9841.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 527,
+      "theirs": 1018,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1220,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 14.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\cca8a056076a521f3034b13a.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 876,
+      "theirs": 888,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 1,
+      "deaths": 20.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\71023a4640dedd38bec5d981.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 831,
+      "theirs": 762,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ef8bea396deef4a1ba309ca0.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 648,
+      "theirs": 775,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 24.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5351957139283cc20b3c8a07.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 901,
+      "theirs": 486,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 25.0,
+      "opponent_deaths": 30.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\becb3cbc0b54498c2f9ebc09.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1006,
+      "theirs": 120,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 1974,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 34.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2455d2a3117773d96c05506e.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 310,
+      "theirs": 846,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 13.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8f75471dc09f2d4bbb30d119.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\da4ba3e5d03f55a8823b67f1.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5327671fed47d89ac7c16c32.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 525,
+      "theirs": 804,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 4.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d0d9a4f7f3d0d7989e12d4fe.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 546,
+      "theirs": 405,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 1,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\64745bdfa9def01cca3634bd.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 13.0,
+      "opponent_deaths": 6.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\22f31bfc2a1d91421bb5814b.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\bf98203be193f76841c4d2f4.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 49,
+      "theirs": 332,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 2.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\8c6af5c4f45cf8b14cdab797.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 316,
+      "theirs": 1021,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1665,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 14.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\08e091545c04c97756bf112f.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1022,
+      "theirs": 19,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1244,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4e55018cb0e87703b7bf669a.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1052,
+      "theirs": 17,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1515,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 17.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fadc0b5a7e389abbc40f9d60.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 880,
+      "theirs": 392,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 50.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3607a9a3a7c904ef63e7b1fa.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1027,
+      "theirs": 354,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1712,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 21.0,
+      "opponent_deaths": 56.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c3c689aa560ea75c83afad04.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 684,
+      "theirs": 546,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 46.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\18bc3ea50be7a5303c471609.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 950,
+      "theirs": 589,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 42.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\747da76d503d31bf4f41c916.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 519,
+      "theirs": 684,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 26.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d1ac32a06037f00f983a9a27.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 557,
+      "theirs": 502,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 30.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\6a5d6c0e707416e80f7c64e8.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f9eeb74b2c5527a494975546.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\418318e88222be69370c307e.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 657,
+      "theirs": 303,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 23.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\be25d017d295ad250c2c4a94.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 615,
+      "theirs": 399,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\55c7d30194dc9c5b17af0777.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 4,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1389,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 17.0,
+      "opponent_deaths": 46.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\47b0a81e34150824026f4664.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 190,
+      "theirs": 1021,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1287,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 58.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c15426c5f2fcdd4f87ac4e25.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 239,
+      "theirs": 256,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 20.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\bf439817574340d28e31533f.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1015,
+      "theirs": 410,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1806,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 32.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\bd5e1a740f8da2cb894922cc.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1020,
+      "theirs": 15,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1209,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 28.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\be0437930b00857437a82e11.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 759,
+      "theirs": 24,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e457aa2047b43480a50e0d19.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1004,
+      "theirs": 253,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1661,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d00c6983302af53e675fd212.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 547,
+      "theirs": 172,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 14.0,
+      "opponent_deaths": 51.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ce2d271cbc632b3ed16bf3ae.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 574,
+      "theirs": 605,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 29.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\cd7aa61ed02c999909b0ba08.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 518,
+      "theirs": 398,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 57.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\edfa65f4bf7ef89eab408625.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 550,
+      "theirs": 542,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 71.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\7ec6fa5ba231be89a84d202d.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 510,
+      "theirs": 124,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 68.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4cea8ec2fa2a727b72514b54.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 126,
+      "zero_score": false,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 88.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\29b680a45c38e8b24d7d6fa2.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 2.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\24b32b25428a29bd2afe02a1.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 435,
+      "theirs": 240,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 21.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\9330bddba55f768f3453f57c.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 761,
+      "theirs": 116,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 6.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\0bcd44cab1d3499f82c94602.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 166,
+      "theirs": 1001,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1294,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 80.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5e970e1e568ad240f0452d0d.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 138,
+      "theirs": 1010,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1213,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 76.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\a59d45fc48adfe13e0f03191.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 27,
+      "theirs": 1003,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1918,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 2.0,
+      "opponent_deaths": 55.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2fc82d99ac453bce41e1c5c8.zip"
+    },
+    {
+      "candidate": "g03_recover30",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1011,
+      "theirs": 134,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1736,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 12.0,
+      "opponent_deaths": 43.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\7008625e853113167c28abce.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1017,
+      "theirs": 742,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1295,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 8.0,
+      "opponent_deaths": 10.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\57789be85ec99fe2bcf5fb71.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1000,
+      "theirs": 744,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1348,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 15.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\a77594472bd777cfa5b98bfb.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 534,
+      "theirs": 497,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 16.0,
+      "opponent_deaths": 16.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d7a232c885a3526c77a0b1e5.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 517,
+      "theirs": 405,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 28.0,
+      "opponent_deaths": 14.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\084240b1cedf6eaf9e8eee8e.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 607,
+      "theirs": 898,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 1,
+      "deaths": 32.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\242610a43d53cbd1a765eb88.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 695,
+      "theirs": 511,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 26.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ae46a9c19e29434da091bf21.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 569,
+      "theirs": 550,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 19.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f0f63a8470f6eddeb72fc1b5.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 600,
+      "theirs": 400,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 21.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\dc7c70bc5dcafc27eb7d2540.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f2ee6a1458d39cc4ea61de06.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 0.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\126fe1e39d1c503be962f143.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 573,
+      "theirs": 699,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 15.0,
+      "opponent_deaths": 7.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2f727116fd25a815d9b83440.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 669,
+      "theirs": 399,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 6.0,
+      "opponent_deaths": 9.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5c104523b86afd540a1f12c5.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 6.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\515945ab5a7d161b11375c52.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "10295389531147254543",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 11.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e1ff449ad0d26cebaa25e508.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1042,
+      "theirs": 358,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1659,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\95ba3d3818fe7993629d6ef7.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "subhan",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 601,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1752,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 18.0,
+      "opponent_deaths": 19.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2b9e652992c15f96cfe24599.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1025,
+      "theirs": 30,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1243,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 25.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f2a9b142e20c06ee5a515528.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1016,
+      "theirs": 19,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1251,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 14.0,
+      "opponent_deaths": 18.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\a9d7f56ea3654e00121ada3d.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 512,
+      "theirs": 301,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 14.0,
+      "opponent_deaths": 31.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5dd3d394ecbd4838e1327acf.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 574,
+      "theirs": 286,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 20.0,
+      "opponent_deaths": 38.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\eb49bfdd2674c2bab0ce792d.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 840,
+      "theirs": 498,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 44.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f71e32da1ae9bd9bd54ff390.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1040,
+      "theirs": 443,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 1943,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 39.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\d59c68a26b7f8ddf218b4ff5.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 415,
+      "theirs": 785,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 44.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e4f25da3ac7842da739b793f.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 342,
+      "theirs": 728,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 35.0,
+      "opponent_deaths": 40.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\ba72624dce6de18efffcc406.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 8.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f1d69c847f8e4222d5d644ea.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 0.0,
+      "opponent_deaths": 3.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\57b86e786070ad00348219df.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "win",
+      "ours": 641,
+      "theirs": 366,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 22.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\16c0b2cad1c9aed7ae8df398.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 690,
+      "theirs": 321,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 31.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\5a6be44f6da2855d3f022aee.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 142,
+      "theirs": 1025,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1328,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 22.0,
+      "opponent_deaths": 50.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\e6a85474f2159e48eeed050f.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 146,
+      "theirs": 1030,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1322,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 51.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\7d13123f23358db80788b4ae.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1027,
+      "theirs": 90,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1965,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 32.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\f4508203c4cc323c1d0363cb.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "D1",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 915,
+      "theirs": 86,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 22.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\aed42942fbff684e0bf6bdf6.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1008,
+      "theirs": 15,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1284,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 9.0,
+      "opponent_deaths": 30.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314102 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\cad759248b0b39b69110e53d.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "00eight",
+      "side": "teamB",
+      "result": "win",
+      "ours": 1016,
+      "theirs": 24,
+      "zero_score": false,
+      "seed": "4688072832035281268",
+      "rounds": 1288,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 10.0,
+      "opponent_deaths": 35.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=8 bodies=5 fuel=5314471 bytes=134"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\c4a6c96a1410345445b1d5f3.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1003,
+      "theirs": 286,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 1797,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 72.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9199757 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\fdd240789db7b8aa4627ac71.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "00great-wall",
+      "side": "teamB",
+      "result": "win",
+      "ours": 211,
+      "theirs": 75,
+      "zero_score": false,
+      "seed": "2659261568717473540",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 15.0,
+      "opponent_deaths": 22.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=17 bodies=5 fuel=9200282 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\037d290157500d85456f2ced.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamA",
+      "result": "win",
+      "ours": 603,
+      "theirs": 579,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 31.0,
+      "opponent_deaths": 67.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9171683 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\69dcd37b8170b74cc8527601.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "01fracture",
+      "side": "teamB",
+      "result": "win",
+      "ours": 792,
+      "theirs": 529,
+      "zero_score": false,
+      "seed": "2382417794428096208",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 34.0,
+      "opponent_deaths": 54.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9173087 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\2a8a2df3a0cad77c87847dbf.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamA",
+      "result": "win",
+      "ours": 638,
+      "theirs": 203,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 27.0,
+      "opponent_deaths": 60.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043169 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\daf1f60842a2443969ae18e1.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "01corridors",
+      "side": "teamB",
+      "result": "win",
+      "ours": 476,
+      "theirs": 124,
+      "zero_score": false,
+      "seed": "2827948941545917667",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 33.0,
+      "opponent_deaths": 58.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=12 bodies=5 fuel=9043018 bytes=110"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\b1f81ef467d2c6d9d8e09cb6.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 91,
+      "zero_score": false,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 88.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9024293 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\67f7be94b7cfb3c1b13e9f7b.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "02the-pack",
+      "side": "teamB",
+      "result": "win",
+      "ours": 0,
+      "theirs": 0,
+      "zero_score": true,
+      "seed": "1039914881260023231",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 4.0,
+      "opponent_deaths": 52.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9007623 bytes=156"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\db9ab7aabe8db5c74dba945c.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 93,
+      "theirs": 441,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 37.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592500 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\7926f96cdbcda2b2a9bf1a50.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "02the-pond",
+      "side": "teamB",
+      "result": "win",
+      "ours": 857,
+      "theirs": 51,
+      "zero_score": false,
+      "seed": "16758209932634372172",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 6.0,
+      "opponent_deaths": 15.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=6 bodies=5 fuel=6592978 bytes=130"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\187876020799359be4e6fe45.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamA",
+      "result": "loss",
+      "ours": 79,
+      "theirs": 1011,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1631,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 14.0,
+      "opponent_deaths": 95.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9170488 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\4b12ab19083c9a13bbb679a4.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "03the-front",
+      "side": "teamB",
+      "result": "loss",
+      "ours": 0,
+      "theirs": 1017,
+      "zero_score": false,
+      "seed": "10295389531147254543",
+      "rounds": 1354,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 23.0,
+      "opponent_deaths": 82.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9154650 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\59fdaeeddcf89587fbedf1c3.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamA",
+      "result": "win",
+      "ours": 1004,
+      "theirs": 132,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 1857,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 11.0,
+      "opponent_deaths": 46.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9165104 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\46d5a49a079dd1cc94a6c04a.zip"
+    },
+    {
+      "candidate": "g03_shop450",
+      "opponent": "gold_diamond",
+      "map": "03honeycomb",
+      "side": "teamB",
+      "result": "win",
+      "ours": 806,
+      "theirs": 164,
+      "zero_score": false,
+      "seed": "6032855512574096148",
+      "rounds": 2000,
+      "faults": {
+        "teamA": 0,
+        "teamB": 0
+      },
+      "errors": 0,
+      "opponent_errors": 0,
+      "deaths": 7.0,
+      "opponent_deaths": 29.0,
+      "draft": [
+        "SUBHAN_DRAFT candidates=24 bodies=5 fuel=9172486 bytes=120"
+      ],
+      "replay": "replays\\leader-party\\tuning\\cache\\3828e872154237387f4aa0eb.zip"
+    }
+  ]
+}

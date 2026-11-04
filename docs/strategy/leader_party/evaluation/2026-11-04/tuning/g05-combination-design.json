@@ -1,0 +1,508 @@
+{
+  "positive_settings": {
+    "loop_beam": 8,
+    "lease": 1,
+    "reserve": 5000,
+    "field_admission": 30000,
+    "coordination": true
+  },
+  "comparisons": {
+    "bank_bag": {
+      "candidate": "g04_bank_bag_1",
+      "reference": "g04_control",
+      "wins_delta": -2,
+      "margin_delta": -1.4411764705882604,
+      "score": {
+        "games": 102,
+        "wins": 73,
+        "margin": 173.6078431372549,
+        "faults": 0,
+        "errors": 2
+      }
+    },
+    "bag_age": {
+      "candidate": "g04_bag_age_0",
+      "reference": "g04_control",
+      "wins_delta": -10,
+      "margin_delta": -53.25490196078432,
+      "score": {
+        "games": 102,
+        "wins": 65,
+        "margin": 121.79411764705883,
+        "faults": 0,
+        "errors": 6
+      }
+    },
+    "stall": {
+      "candidate": "g04_stall_1",
+      "reference": "g04_control",
+      "wins_delta": -4,
+      "margin_delta": -5.892156862745111,
+      "score": {
+        "games": 102,
+        "wins": 71,
+        "margin": 169.15686274509804,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "task_limit": {
+      "candidate": "g04_task_limit_1",
+      "reference": "g04_control",
+      "wins_delta": -2,
+      "margin_delta": -9.254901960784338,
+      "score": {
+        "games": 102,
+        "wins": 73,
+        "margin": 165.7941176470588,
+        "faults": 0,
+        "errors": 5
+      }
+    },
+    "max_clear": {
+      "candidate": "g04_max_clear_1",
+      "reference": "g04_control",
+      "wins_delta": -1,
+      "margin_delta": -63.28431372549021,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 111.76470588235294,
+        "faults": 0,
+        "errors": 5
+      }
+    },
+    "protection_limit": {
+      "candidate": "g04_protection_limit_1",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": 1.2156862745097783,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 176.26470588235293,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "retry": {
+      "candidate": "g04_retry_1",
+      "reference": "g04_control",
+      "wins_delta": -3,
+      "margin_delta": -5.401960784313729,
+      "score": {
+        "games": 102,
+        "wins": 72,
+        "margin": 169.64705882352942,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "recovery_low": {
+      "candidate": "g04_recovery_low_0",
+      "reference": "g04_control",
+      "wins_delta": -4,
+      "margin_delta": -40.15686274509804,
+      "score": {
+        "games": 102,
+        "wins": 71,
+        "margin": 134.8921568627451,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "recovery_high": {
+      "candidate": "g04_recovery_high_0",
+      "reference": "g04_control",
+      "wins_delta": -3,
+      "margin_delta": -15.64705882352942,
+      "score": {
+        "games": 102,
+        "wins": 72,
+        "margin": 159.40196078431373,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "recall_gold": {
+      "candidate": "g04_recall_gold_0",
+      "reference": "g04_control",
+      "wins_delta": -1,
+      "margin_delta": -16.411764705882376,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 158.63725490196077,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "competition_cost": {
+      "candidate": "g04_competition_cost_1",
+      "reference": "g04_control",
+      "wins_delta": -3,
+      "margin_delta": 11.186274509803923,
+      "score": {
+        "games": 102,
+        "wins": 72,
+        "margin": 186.23529411764707,
+        "faults": 0,
+        "errors": 5
+      }
+    },
+    "loop_candidates": {
+      "candidate": "g04_loop_candidates_1",
+      "reference": "g04_control",
+      "wins_delta": -1,
+      "margin_delta": -15.058823529411768,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 159.99019607843138,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_altars": {
+      "candidate": "g04_loop_altars_0",
+      "reference": "g04_control",
+      "wins_delta": -1,
+      "margin_delta": -43.019607843137265,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 132.02941176470588,
+        "faults": 0,
+        "errors": 7
+      }
+    },
+    "loop_beam": {
+      "candidate": "g04_loop_beam_1",
+      "reference": "g04_control",
+      "wins_delta": 2,
+      "margin_delta": -14.156862745098039,
+      "score": {
+        "games": 102,
+        "wins": 77,
+        "margin": 160.8921568627451,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_length": {
+      "candidate": "g04_loop_length_0",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": -7.4901960784313815,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 167.55882352941177,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_expansions": {
+      "candidate": "g04_loop_expansions_1",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": 0.0,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 175.04901960784315,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_reports": {
+      "candidate": "g04_loop_reports_1",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": -31.117647058823536,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 143.9313725490196,
+        "faults": 0,
+        "errors": 2
+      }
+    },
+    "loop_gold": {
+      "candidate": "g04_loop_gold_0",
+      "reference": "g04_control",
+      "wins_delta": -2,
+      "margin_delta": -2.088235294117652,
+      "score": {
+        "games": 102,
+        "wins": 73,
+        "margin": 172.9607843137255,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "loop_opening": {
+      "candidate": "g04_loop_opening_0",
+      "reference": "g04_control",
+      "wins_delta": -3,
+      "margin_delta": -18.313725490196077,
+      "score": {
+        "games": 102,
+        "wins": 72,
+        "margin": 156.73529411764707,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "loop_risk": {
+      "candidate": "g04_loop_risk_1",
+      "reference": "g04_control",
+      "wins_delta": -1,
+      "margin_delta": -22.764705882352956,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 152.2843137254902,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "loop_service": {
+      "candidate": "g04_loop_service_0",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": 6.931372549019585,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 181.98039215686273,
+        "faults": 0,
+        "errors": 2
+      }
+    },
+    "loop_phase": {
+      "candidate": "g04_loop_phase_1",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": 11.784313725490193,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 186.83333333333334,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "rally_life": {
+      "candidate": "g04_rally_life_0",
+      "reference": "g04_coordination_0",
+      "wins_delta": 0,
+      "margin_delta": 4.598039215686271,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 150.80392156862746,
+        "faults": 0,
+        "errors": 6
+      }
+    },
+    "lease": {
+      "candidate": "g04_lease_0",
+      "reference": "g04_coordination_0",
+      "wins_delta": 2,
+      "margin_delta": -6.529411764705884,
+      "score": {
+        "games": 102,
+        "wins": 76,
+        "margin": 139.6764705882353,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "reserve": {
+      "candidate": "g04_reserve_0",
+      "reference": "g04_control",
+      "wins_delta": 2,
+      "margin_delta": -15.784313725490222,
+      "score": {
+        "games": 102,
+        "wins": 77,
+        "margin": 159.26470588235293,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "field_admission": {
+      "candidate": "g04_field_admission_0",
+      "reference": "g04_control",
+      "wins_delta": 5,
+      "margin_delta": 50.5392156862745,
+      "score": {
+        "games": 102,
+        "wins": 80,
+        "margin": 225.58823529411765,
+        "faults": 0,
+        "errors": 1
+      }
+    },
+    "max_fields": {
+      "candidate": "g04_max_fields_1",
+      "reference": "g04_control",
+      "wins_delta": 0,
+      "margin_delta": 0.7058823529411598,
+      "score": {
+        "games": 102,
+        "wins": 75,
+        "margin": 175.7549019607843,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "wards": {
+      "candidate": "g04_wards_0",
+      "reference": "g04_control",
+      "wins_delta": -4,
+      "margin_delta": -38.03921568627453,
+      "score": {
+        "games": 102,
+        "wins": 71,
+        "margin": 137.00980392156862,
+        "faults": 0,
+        "errors": 4
+      }
+    },
+    "value_routing": {
+      "candidate": "g04_value_routing_0",
+      "reference": "g04_control",
+      "wins_delta": -16,
+      "margin_delta": -71.64705882352942,
+      "score": {
+        "games": 102,
+        "wins": 59,
+        "margin": 103.40196078431373,
+        "faults": 0,
+        "errors": 3
+      }
+    },
+    "coordination": {
+      "candidate": "g04_coordination_0",
+      "reference": "g04_control",
+      "wins_delta": -1,
+      "margin_delta": -28.84313725490196,
+      "score": {
+        "games": 102,
+        "wins": 74,
+        "margin": 146.2058823529412,
+        "faults": 0,
+        "errors": 4
+      }
+    }
+  },
+  "combinations": {
+    "g05_all": {
+      "loop_beam": 8,
+      "lease": 1,
+      "reserve": 5000,
+      "field_admission": 30000,
+      "coordination": true
+    },
+    "g05_search": {
+      "loop_beam": 8
+    },
+    "g05_fuel": {
+      "reserve": 5000,
+      "field_admission": 30000
+    },
+    "g05_team": {
+      "lease": 1,
+      "coordination": true
+    },
+    "g05_team_probe": {
+      "coordination": true,
+      "rally_life": 6,
+      "lease": 1
+    },
+    "g05_value_probe": {
+      "value_routing": true,
+      "competition_cost": 10,
+      "loop_phase": 4
+    },
+    "g05_banking_probe": {
+      "bank_bag": 50,
+      "bag_age": 40,
+      "recall_gold": 150
+    },
+    "g05_recovery_probe": {
+      "recovery_low": 0.2,
+      "recovery_high": 0.4,
+      "wards": false
+    },
+    "g05_tasks_probe": {
+      "stall": 16,
+      "task_limit": 150,
+      "max_clear": 150,
+      "protection_limit": 24,
+      "retry": 25,
+      "competition_cost": 10,
+      "value_routing": true
+    },
+    "g05_search_probe": {
+      "loop_candidates": 40,
+      "loop_altars": 1,
+      "loop_beam": 8,
+      "loop_length": 3,
+      "loop_expansions": 1536,
+      "loop_reports": 2,
+      "loop_gold": 0.0,
+      "loop_opening": 0.0,
+      "loop_risk": 0.6,
+      "loop_service": 0,
+      "loop_phase": 4
+    },
+    "g05_fuel_probe": {
+      "reserve": 5000,
+      "field_admission": 30000,
+      "max_fields": 5
+    },
+    "g05_without_search": {
+      "lease": 1,
+      "reserve": 5000,
+      "field_admission": 30000,
+      "coordination": true
+    },
+    "g05_without_fuel": {
+      "loop_beam": 8,
+      "lease": 1,
+      "coordination": true
+    },
+    "g05_without_team": {
+      "loop_beam": 8,
+      "reserve": 5000,
+      "field_admission": 30000
+    },
+    "g05_flip_coordination": {
+      "loop_beam": 8,
+      "lease": 1,
+      "reserve": 5000,
+      "field_admission": 30000,
+      "coordination": false
+    },
+    "g05_flip_wards": {
+      "loop_beam": 8,
+      "lease": 1,
+      "reserve": 5000,
+      "field_admission": 30000,
+      "coordination": true,
+      "wards": false
+    },
+    "g05_flip_value_routing": {
+      "loop_beam": 8,
+      "lease": 1,
+      "reserve": 5000,
+      "field_admission": 30000,
+      "coordination": true,
+      "value_routing": true
+    }
+  },
+  "policy": "Combine full-training gains with no VM faults; allow conditional settings to rescue an enabled feature when that complete probe beats the control. Test positive-setting families, top six gains, whole-family probes including individual losers, feature flips and leave-one-family-out ablations. No promotion from isolated wins alone."
+}

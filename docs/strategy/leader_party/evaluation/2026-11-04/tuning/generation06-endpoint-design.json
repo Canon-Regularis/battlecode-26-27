@@ -1,0 +1,72 @@
+{
+  "control": "g05_without_team",
+  "candidates": [
+    {
+      "name": "g06e_recovery_low",
+      "stat": "recovery_low",
+      "value": 0.0,
+      "context": {
+        "recovery_low": 0.0
+      }
+    },
+    {
+      "name": "g06e_recovery_high",
+      "stat": "recovery_high",
+      "value": 1.0,
+      "context": {
+        "recovery_high": 1.0
+      }
+    },
+    {
+      "name": "g06e_loop_risk",
+      "stat": "loop_risk",
+      "value": 1.0,
+      "context": {
+        "loop_risk": 1.0
+      }
+    },
+    {
+      "name": "g06e_reserve",
+      "stat": "reserve",
+      "value": 0,
+      "context": {
+        "reserve": 0
+      }
+    },
+    {
+      "name": "g06e_protection_limit",
+      "stat": "protection_limit",
+      "value": 0,
+      "context": {
+        "protection_limit": 0
+      }
+    },
+    {
+      "name": "g06e_retry",
+      "stat": "retry",
+      "value": 0,
+      "context": {
+        "retry": 0
+      }
+    },
+    {
+      "name": "g06e_rally_life",
+      "stat": "rally_life",
+      "value": 0,
+      "context": {
+        "rally_life": 0,
+        "coordination": true
+      }
+    },
+    {
+      "name": "g06e_lease",
+      "stat": "lease",
+      "value": 0,
+      "context": {
+        "lease": 0,
+        "coordination": true
+      }
+    }
+  ],
+  "policy": "Test legal recovery/risk endpoints and zero action reserve in the combined parent context. Preserve the main frozen screen. Faults disqualify promotion; endpoint probes join the same per-stat full-training selection."
+}

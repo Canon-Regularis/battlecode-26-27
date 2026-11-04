@@ -1,0 +1,32 @@
+{
+  "screen": "generation02-screen",
+  "expanded": [
+    "g02_bank30_late",
+    "g02_bank35"
+  ],
+  "rule": "Two highest fault-free screening win rates; full training ranks g01_recover_late above banking-only changes.",
+  "generation03_parent": "g02_bank30_late",
+  "generation03_candidates": {
+    "g03_bank40_late": {
+      "bank_bag": 40,
+      "bag_age": 80
+    },
+    "g03_age30": {
+      "bag_age": 30
+    },
+    "g03_age90": {
+      "bag_age": 90
+    },
+    "g03_recover20": {
+      "recovery_low": 0.2,
+      "recovery_high": 0.4
+    },
+    "g03_recover30": {
+      "recovery_low": 0.3,
+      "recovery_high": 0.5
+    },
+    "g03_shop450": {
+      "recall_gold": 450
+    }
+  }
+}

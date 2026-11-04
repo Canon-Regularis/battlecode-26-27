@@ -12,7 +12,7 @@ The workspace now pins `cambc==4.0.0` and `sdk_version = "4.0.0"`, with Python a
 
 The [SDK reference](../cambc/api/SDK_4.0.0.md) records current sources and the [runtime snapshot](../cambc/runtime-4.0.0.json) records balance values. The engine confirms a 10-turn ward recharge, five-hit altar locks, 100-gold kill reward, Prism's 1.5 Focus per gem, Vesper's 33% gold bonus, and Marcella's 2 gold per tributed gem. Read runtime settings and item design metadata when implementing strategy. Monster's emblem bonus is now 15%; Treasure's is 10%; Greed combines after 25 shards rather than five.
 
-This brief remains an earlier proposal. The current [leader-party strategy](leader_party/README.md) governs implemented behavior; the preferred C++ bot lives in `bots/leader_party_subhan/src/`, with `bots/leader_party/src/` retained as its baseline. The former `starter-cpp` implementation is archived.
+This brief remains an earlier proposal. The current [leader-party strategy](leader_party/README.md) governs implemented behavior; the preferred C++ bot lives in `bots/leader_party_tuned/src/`, with `bots/leader_party/src/` retained as its baseline. The former `starter-cpp` implementation is archived.
 
 ## 1. Win condition and governing policy
 

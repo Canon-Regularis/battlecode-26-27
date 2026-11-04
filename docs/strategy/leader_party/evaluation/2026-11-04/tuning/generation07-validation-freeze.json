@@ -1,0 +1,202 @@
+{
+  "candidates": [
+    "g07_without_search",
+    "g06e_retry",
+    "g07_search",
+    "g06_competition_cost_1",
+    "g07_all"
+  ],
+  "parent": "g05_without_team",
+  "training_scores": {
+    "g05_without_team": {
+      "games": 102,
+      "wins": 83,
+      "margin": 219.2941176470588,
+      "faults": 0,
+      "errors": 1
+    },
+    "g07_all": {
+      "games": 102,
+      "wins": 85,
+      "margin": 268.44117647058823,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_top6": {
+      "games": 102,
+      "wins": 83,
+      "margin": 233,
+      "faults": 0,
+      "errors": 4
+    },
+    "g07_banking": {
+      "games": 102,
+      "wins": 82,
+      "margin": 224.04901960784315,
+      "faults": 0,
+      "errors": 6
+    },
+    "g07_recovery": {
+      "games": 102,
+      "wins": 84,
+      "margin": 213.05882352941177,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_tasks": {
+      "games": 102,
+      "wins": 84,
+      "margin": 216.36274509803923,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_search": {
+      "games": 102,
+      "wins": 87,
+      "margin": 236.76470588235293,
+      "faults": 0,
+      "errors": 4
+    },
+    "g07_team": {
+      "games": 102,
+      "wins": 84,
+      "margin": 187.7450980392157,
+      "faults": 0,
+      "errors": 4
+    },
+    "g07_team_probe": {
+      "games": 102,
+      "wins": 80,
+      "margin": 185.87254901960785,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_value_probe": {
+      "games": 102,
+      "wins": 78,
+      "margin": 231.35294117647058,
+      "faults": 0,
+      "errors": 7
+    },
+    "g07_banking_probe": {
+      "games": 102,
+      "wins": 80,
+      "margin": 204.9607843137255,
+      "faults": 0,
+      "errors": 4
+    },
+    "g07_recovery_probe": {
+      "games": 102,
+      "wins": 74,
+      "margin": 158.0686274509804,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_tasks_probe": {
+      "games": 102,
+      "wins": 79,
+      "margin": 248.66666666666666,
+      "faults": 0,
+      "errors": 8
+    },
+    "g07_search_probe": {
+      "games": 102,
+      "wins": 75,
+      "margin": 234.23529411764707,
+      "faults": 0,
+      "errors": 2
+    },
+    "g07_fuel_probe": {
+      "games": 102,
+      "wins": 83,
+      "margin": 216.94117647058823,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_without_banking": {
+      "games": 102,
+      "wins": 85,
+      "margin": 228.09803921568627,
+      "faults": 0,
+      "errors": 9
+    },
+    "g07_without_recovery": {
+      "games": 102,
+      "wins": 78,
+      "margin": 251.37254901960785,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_without_tasks": {
+      "games": 102,
+      "wins": 75,
+      "margin": 205.7843137254902,
+      "faults": 0,
+      "errors": 4
+    },
+    "g07_without_search": {
+      "games": 102,
+      "wins": 89,
+      "margin": 265.27450980392155,
+      "faults": 0,
+      "errors": 4
+    },
+    "g07_without_team": {
+      "games": 102,
+      "wins": 81,
+      "margin": 234.88235294117646,
+      "faults": 0,
+      "errors": 6
+    },
+    "g07_flip_coordination": {
+      "games": 102,
+      "wins": 81,
+      "margin": 234.88235294117646,
+      "faults": 0,
+      "errors": 6
+    },
+    "g07_flip_wards": {
+      "games": 102,
+      "wins": 78,
+      "margin": 251.37254901960785,
+      "faults": 0,
+      "errors": 3
+    },
+    "g07_flip_value_routing": {
+      "games": 102,
+      "wins": 77,
+      "margin": 263.2156862745098,
+      "faults": 0,
+      "errors": 4
+    },
+    "g06e_retry": {
+      "games": 102,
+      "wins": 88,
+      "margin": 265.22549019607845,
+      "faults": 0,
+      "errors": 5
+    },
+    "g06_loop_phase_1": {
+      "games": 102,
+      "wins": 87,
+      "margin": 236.76470588235293,
+      "faults": 0,
+      "errors": 4
+    },
+    "g06_competition_cost_1": {
+      "games": 102,
+      "wins": 86,
+      "margin": 221.47058823529412,
+      "faults": 0,
+      "errors": 3
+    },
+    "g06_bank_bag_1": {
+      "games": 102,
+      "wins": 85,
+      "margin": 245.59803921568627,
+      "faults": 0,
+      "errors": 4
+    }
+  },
+  "policy": "Validate the top five second-sweep combinations or independent winners, preserving the combined parent, G2 and G1/G3 controls."
+}

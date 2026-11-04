@@ -1,6 +1,6 @@
 # C++ replacement: implementation and measured results
 
-Baseline implemented on 2026-11-04 in `bots/leader_party`, on branch `state_machine`, using CAMBC SDK/CLI 4.0.0 (engine summary version 2.0.0). The bot clears/captures camps, buys equipment, recovers, and banks gems. The retired state-machine bot and all three incumbent binaries remain unchanged. The subsequent [Subhan planner variant](subhan_comparison.md) is now preferred; the results below describe the original baseline and its initial implementation, not that variant.
+Baseline implemented on 2026-11-04 in `bots/leader_party`, on branch `state_machine`, using CAMBC SDK/CLI 4.0.0 (engine summary version 2.0.0). The bot clears/captures camps, buys equipment, recovers, and banks gems. The retired state-machine bot and all three incumbent binaries remain unchanged. The subsequent [configuration-tuned Subhan variant](config_tuning.md) is now preferred; the results below describe the original baseline and its initial implementation, not that variant.
 
 Final result: **22/24 wins against gold_diamond** in the main six-map suite; **5/8** on four additional geometry maps; **12/12** against the official Python starter. All **44 final matches scored positive gems with zero VM faults and zero unexpected LP_ERROR entries**. The six-map incumbent games completed at least two engine-confirmed tributes per game. These results support a stronger tested replacement, not a universally winning bot.
 

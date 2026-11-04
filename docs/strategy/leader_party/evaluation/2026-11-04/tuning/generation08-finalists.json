@@ -1,0 +1,109 @@
+{
+  "candidates": [
+    "g08_phase4",
+    "g08_comp6"
+  ],
+  "training": {
+    "g07_search": {
+      "games": 102,
+      "wins": 87,
+      "margin": 236.76470588235293,
+      "faults": 0,
+      "errors": 4
+    },
+    "g08_phase4": {
+      "games": 102,
+      "wins": 87,
+      "margin": 264.52941176470586,
+      "faults": 0,
+      "errors": 2
+    },
+    "g08_phase5": {
+      "games": 102,
+      "wins": 85,
+      "margin": 258.44117647058823,
+      "faults": 0,
+      "errors": 1
+    },
+    "g08_comp6": {
+      "games": 102,
+      "wins": 87,
+      "margin": 245.09803921568627,
+      "faults": 0,
+      "errors": 2
+    },
+    "g08_comp8": {
+      "games": 102,
+      "wins": 87,
+      "margin": 223.57843137254903,
+      "faults": 0,
+      "errors": 1
+    },
+    "g08_retry0": {
+      "games": 102,
+      "wins": 82,
+      "margin": 241.61764705882354,
+      "faults": 0,
+      "errors": 2
+    },
+    "g08_comp6_retry0": {
+      "games": 102,
+      "wins": 82,
+      "margin": 221.47058823529412,
+      "faults": 0,
+      "errors": 0
+    }
+  },
+  "validation": {
+    "g07_search": {
+      "games": 108,
+      "wins": 89,
+      "margin": 350.75925925925924,
+      "faults": 0,
+      "errors": 11
+    },
+    "g08_phase4": {
+      "games": 108,
+      "wins": 84,
+      "margin": 333.9537037037037,
+      "faults": 0,
+      "errors": 8
+    },
+    "g08_phase5": {
+      "games": 108,
+      "wins": 85,
+      "margin": 335.5833333333333,
+      "faults": 0,
+      "errors": 9
+    },
+    "g08_comp6": {
+      "games": 108,
+      "wins": 84,
+      "margin": 301.4259259259259,
+      "faults": 0,
+      "errors": 15
+    },
+    "g08_comp8": {
+      "games": 108,
+      "wins": 82,
+      "margin": 293.30555555555554,
+      "faults": 0,
+      "errors": 13
+    },
+    "g08_retry0": {
+      "games": 108,
+      "wins": 81,
+      "margin": 306.9259259259259,
+      "faults": 0,
+      "errors": 8
+    },
+    "g08_comp6_retry0": {
+      "games": 108,
+      "wins": 78,
+      "margin": 288.3703703703704,
+      "faults": 0,
+      "errors": 7
+    }
+  },
+  "policy": "Best two distinct fault-free final targeted probes by pooled train/validation wins, then validation wins and combined margin. Compare on the identical final matrices; do not replace any prior frozen receipts."
+}

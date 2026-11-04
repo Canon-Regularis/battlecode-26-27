@@ -1,0 +1,78 @@
+{
+  "labels": [
+    "baseline-holdout",
+    "final-holdout",
+    "parents-holdout"
+  ],
+  "baseline": "g00",
+  "results": [
+    {
+      "candidate": "g01_recover_late",
+      "baseline": "g00",
+      "matched_conditions": 306,
+      "maps": 51,
+      "wins": 221,
+      "baseline_wins": 212,
+      "win_delta": 0.029411764705882353,
+      "map_cluster_win_delta_95": [
+        -0.016339869281045753,
+        0.07516339869281045
+      ],
+      "margin_delta": 11.447712418300654,
+      "errors": 18,
+      "baseline_errors": 17,
+      "faults": 0
+    },
+    {
+      "candidate": "g02_bank35",
+      "baseline": "g00",
+      "matched_conditions": 306,
+      "maps": 51,
+      "wins": 227,
+      "baseline_wins": 212,
+      "win_delta": 0.049019607843137254,
+      "map_cluster_win_delta_95": [
+        0.0065359477124183,
+        0.08823529411764705
+      ],
+      "margin_delta": 30.447712418300654,
+      "errors": 17,
+      "baseline_errors": 17,
+      "faults": 0
+    },
+    {
+      "candidate": "g03_recover20",
+      "baseline": "g00",
+      "matched_conditions": 306,
+      "maps": 51,
+      "wins": 228,
+      "baseline_wins": 212,
+      "win_delta": 0.0522875816993464,
+      "map_cluster_win_delta_95": [
+        -0.003267973856209151,
+        0.10784313725490195
+      ],
+      "margin_delta": 32.39542483660131,
+      "errors": 19,
+      "baseline_errors": 17,
+      "faults": 0
+    },
+    {
+      "candidate": "g03_shop450",
+      "baseline": "g00",
+      "matched_conditions": 306,
+      "maps": 51,
+      "wins": 222,
+      "baseline_wins": 212,
+      "win_delta": 0.032679738562091505,
+      "map_cluster_win_delta_95": [
+        -0.02287581699346405,
+        0.0915032679738562
+      ],
+      "margin_delta": 5.1013071895424815,
+      "errors": 11,
+      "baseline_errors": 17,
+      "faults": 0
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # leader_party with Subhan's loop planner
 
-Preferred variant of `bots/leader_party` at commit `d8bd432`, following a 93–79
+Untuned baseline for the newer [leader_party_tuned](../leader_party_tuned/README.md), preserved unchanged in gameplay code. See the [configuration evaluation](../../docs/strategy/leader_party/config_tuning.md).
+
+Original preferred variant of `bots/leader_party` at commit `d8bd432`, following a 93–79
 direct comparison across 86 maps. The advantage is modest and varies by map; the
 original bot remains unchanged as a fallback. The draft picks, combat, movement/dash execution, shopping, banking thresholds,
 recovery, shared protocol settings and optional wards retain the original policy.

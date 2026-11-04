@@ -18,9 +18,9 @@ uv run --locked cambc run starter-python starter-python --map 00monolith --relea
 
 CAMBC provisions its required compiler assets when needed. Use `uv run --locked cambc` so the CLI matches `pyproject.toml`, `uv.lock`, and `cambc.toml`; an independently installed global CLI may use another engine version. `--release` matches the platform's treatment of `debug_block`.
 
-The preferred C++ bot is [leader_party_subhan](bots/leader_party_subhan/README.md), which adds Subhan's camp-loop planner to our existing strategy. It beat the unchanged [leader_party baseline](bots/leader_party/README.md) **93–79** across 86 maps; see the [comparison and limitations](docs/strategy/leader_party/subhan_comparison.md) and [current strategy](docs/strategy/leader_party/README.md). Build it with `uv run --locked cambc build leader_party_subhan --release`. Native decision tests run with `& bots/leader_party_subhan/tests/run.ps1`; planner translation tests run with `.venv/Scripts/python.exe bots/leader_party_subhan/tests/verify_translation.py`.
+The preferred C++ bot is [leader_party_tuned](bots/leader_party_tuned/README.md), the combined configuration champion `g07_search` after two full configurable-stat sweeps. It won **409–107** on 86 published maps against untuned Subhan, D1 and gold_diamond. See the [complete tuning report](docs/strategy/leader_party/config_tuning_all_stats.md) and [current strategy](docs/strategy/leader_party/README.md). Build with `uv run --locked cambc build leader_party_tuned --release`; native tests run with `& bots/leader_party_tuned/tests/run.ps1`.
 
-The baseline remains available as a fallback. The former custom state-machine bot is preserved in the [dated archive](bots/archive/state-machine-2026-11-04/README.md). Platform submission was not changed by the planner experiment.
+The original [leader_party](bots/leader_party/README.md), untuned Subhan bot and all tuning generations remain available. The former custom state-machine bot is preserved in the [dated archive](bots/archive/state-machine-2026-11-04/README.md). Platform submission was not changed by these experiments.
 
 See the [game rules](docs/cambc/GameRules.md) and [current API additions and SDK source links](docs/cambc/api/SDK_4.0.0.md). The published competition map pool was added while preserving the original maps.
 

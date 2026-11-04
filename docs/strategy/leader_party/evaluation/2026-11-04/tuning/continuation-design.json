@@ -1,0 +1,757 @@
+{
+  "status": "in_progress",
+  "incumbent": "g02_bank35",
+  "control": "g04_control",
+  "settings": 31,
+  "ranges": {
+    "bank_bag": [
+      20,
+      50
+    ],
+    "bag_age": [
+      40,
+      100
+    ],
+    "stall": [
+      4,
+      16
+    ],
+    "task_limit": [
+      45,
+      150
+    ],
+    "max_clear": [
+      45,
+      150
+    ],
+    "protection_limit": [
+      4,
+      24
+    ],
+    "retry": [
+      3,
+      25
+    ],
+    "recovery_low": [
+      0.2,
+      0.5
+    ],
+    "recovery_high": [
+      0.4,
+      0.75
+    ],
+    "recall_gold": [
+      150,
+      600
+    ],
+    "competition_cost": [
+      0,
+      10
+    ],
+    "loop_candidates": [
+      12,
+      40
+    ],
+    "loop_altars": [
+      1,
+      2
+    ],
+    "loop_beam": [
+      2,
+      8
+    ],
+    "loop_length": [
+      3,
+      4
+    ],
+    "loop_expansions": [
+      256,
+      1536
+    ],
+    "loop_reports": [
+      1,
+      2
+    ],
+    "loop_gold": [
+      0.0,
+      0.08
+    ],
+    "loop_opening": [
+      0.0,
+      0.4
+    ],
+    "loop_risk": [
+      0.0,
+      0.6
+    ],
+    "loop_service": [
+      0,
+      14
+    ],
+    "loop_phase": [
+      0,
+      4
+    ],
+    "rally_life": [
+      6,
+      24
+    ],
+    "lease": [
+      1,
+      8
+    ],
+    "reserve": [
+      5000,
+      20000
+    ],
+    "field_admission": [
+      30000,
+      80000
+    ],
+    "max_fields": [
+      1,
+      5
+    ],
+    "wards": [
+      false
+    ],
+    "value_routing": [
+      true
+    ],
+    "coordination": [
+      true
+    ],
+    "attacks": [
+      true
+    ]
+  },
+  "references": {
+    "bank_bag": [
+      "bots\\leader_party_tuned\\src\\bot.cpp",
+      "bots\\leader_party_tuned\\src\\model.h"
+    ],
+    "bag_age": [
+      "bots\\leader_party_tuned\\src\\model.h"
+    ],
+    "stall": [
+      "bots\\leader_party_tuned\\src\\model.h"
+    ],
+    "task_limit": [
+      "bots\\leader_party_tuned\\src\\model.h"
+    ],
+    "max_clear": [
+      "bots\\leader_party_tuned\\src\\objectives.cpp"
+    ],
+    "protection_limit": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "retry": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "recovery_low": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "recovery_high": [
+      "bots\\leader_party_tuned\\src\\bot.cpp",
+      "bots\\leader_party_tuned\\src\\combat.cpp"
+    ],
+    "recall_gold": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "competition_cost": [
+      "bots\\leader_party_tuned\\src\\objectives.cpp"
+    ],
+    "loop_candidates": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_altars": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_beam": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_length": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_expansions": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_reports": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_gold": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_opening": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_risk": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_service": [
+      "bots\\leader_party_tuned\\src\\route_plan.cpp"
+    ],
+    "loop_phase": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "rally_life": [
+      "bots\\leader_party_tuned\\src\\protocol.h"
+    ],
+    "lease": [
+      "bots\\leader_party_tuned\\src\\protocol.h"
+    ],
+    "reserve": [
+      "bots\\leader_party_tuned\\src\\bot.cpp",
+      "bots\\leader_party_tuned\\src\\combat.cpp",
+      "bots\\leader_party_tuned\\src\\navigation.cpp"
+    ],
+    "field_admission": [
+      "bots\\leader_party_tuned\\src\\navigation.h"
+    ],
+    "max_fields": [
+      "bots\\leader_party_tuned\\src\\navigation.cpp",
+      "bots\\leader_party_tuned\\src\\navigation.h"
+    ],
+    "wards": [
+      "bots\\leader_party_tuned\\src\\combat.cpp"
+    ],
+    "value_routing": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "coordination": [
+      "bots\\leader_party_tuned\\src\\bot.cpp"
+    ],
+    "attacks": []
+  },
+  "candidates": [
+    {
+      "name": "g04_bank_bag_0",
+      "stat": "bank_bag",
+      "value": 20,
+      "context": {
+        "bank_bag": 20
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_bank_bag_1",
+      "stat": "bank_bag",
+      "value": 50,
+      "context": {
+        "bank_bag": 50
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_bag_age_0",
+      "stat": "bag_age",
+      "value": 40,
+      "context": {
+        "bag_age": 40
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_bag_age_1",
+      "stat": "bag_age",
+      "value": 100,
+      "context": {
+        "bag_age": 100
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_stall_0",
+      "stat": "stall",
+      "value": 4,
+      "context": {
+        "stall": 4
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_stall_1",
+      "stat": "stall",
+      "value": 16,
+      "context": {
+        "stall": 16
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_task_limit_0",
+      "stat": "task_limit",
+      "value": 45,
+      "context": {
+        "task_limit": 45
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_task_limit_1",
+      "stat": "task_limit",
+      "value": 150,
+      "context": {
+        "task_limit": 150
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_max_clear_0",
+      "stat": "max_clear",
+      "value": 45,
+      "context": {
+        "max_clear": 45
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_max_clear_1",
+      "stat": "max_clear",
+      "value": 150,
+      "context": {
+        "max_clear": 150
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_protection_limit_0",
+      "stat": "protection_limit",
+      "value": 4,
+      "context": {
+        "protection_limit": 4
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_protection_limit_1",
+      "stat": "protection_limit",
+      "value": 24,
+      "context": {
+        "protection_limit": 24
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_retry_0",
+      "stat": "retry",
+      "value": 3,
+      "context": {
+        "retry": 3
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_retry_1",
+      "stat": "retry",
+      "value": 25,
+      "context": {
+        "retry": 25
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_recovery_low_0",
+      "stat": "recovery_low",
+      "value": 0.2,
+      "context": {
+        "recovery_low": 0.2
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_recovery_low_1",
+      "stat": "recovery_low",
+      "value": 0.5,
+      "context": {
+        "recovery_low": 0.5
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_recovery_high_0",
+      "stat": "recovery_high",
+      "value": 0.4,
+      "context": {
+        "recovery_high": 0.4
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_recovery_high_1",
+      "stat": "recovery_high",
+      "value": 0.75,
+      "context": {
+        "recovery_high": 0.75
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_recall_gold_0",
+      "stat": "recall_gold",
+      "value": 150,
+      "context": {
+        "recall_gold": 150
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_recall_gold_1",
+      "stat": "recall_gold",
+      "value": 600,
+      "context": {
+        "recall_gold": 600
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_competition_cost_0",
+      "stat": "competition_cost",
+      "value": 0,
+      "context": {
+        "competition_cost": 0
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_competition_cost_1",
+      "stat": "competition_cost",
+      "value": 10,
+      "context": {
+        "competition_cost": 10
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_candidates_0",
+      "stat": "loop_candidates",
+      "value": 12,
+      "context": {
+        "loop_candidates": 12
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_candidates_1",
+      "stat": "loop_candidates",
+      "value": 40,
+      "context": {
+        "loop_candidates": 40
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_altars_0",
+      "stat": "loop_altars",
+      "value": 1,
+      "context": {
+        "loop_altars": 1
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_altars_1",
+      "stat": "loop_altars",
+      "value": 2,
+      "context": {
+        "loop_altars": 2
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_beam_0",
+      "stat": "loop_beam",
+      "value": 2,
+      "context": {
+        "loop_beam": 2
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_beam_1",
+      "stat": "loop_beam",
+      "value": 8,
+      "context": {
+        "loop_beam": 8
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_length_0",
+      "stat": "loop_length",
+      "value": 3,
+      "context": {
+        "loop_length": 3
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_length_1",
+      "stat": "loop_length",
+      "value": 4,
+      "context": {
+        "loop_length": 4
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_expansions_0",
+      "stat": "loop_expansions",
+      "value": 256,
+      "context": {
+        "loop_expansions": 256
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_expansions_1",
+      "stat": "loop_expansions",
+      "value": 1536,
+      "context": {
+        "loop_expansions": 1536
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_reports_0",
+      "stat": "loop_reports",
+      "value": 1,
+      "context": {
+        "loop_reports": 1
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_reports_1",
+      "stat": "loop_reports",
+      "value": 2,
+      "context": {
+        "loop_reports": 2
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_gold_0",
+      "stat": "loop_gold",
+      "value": 0.0,
+      "context": {
+        "loop_gold": 0.0
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_gold_1",
+      "stat": "loop_gold",
+      "value": 0.08,
+      "context": {
+        "loop_gold": 0.08
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_opening_0",
+      "stat": "loop_opening",
+      "value": 0.0,
+      "context": {
+        "loop_opening": 0.0
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_opening_1",
+      "stat": "loop_opening",
+      "value": 0.4,
+      "context": {
+        "loop_opening": 0.4
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_risk_0",
+      "stat": "loop_risk",
+      "value": 0.0,
+      "context": {
+        "loop_risk": 0.0
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_risk_1",
+      "stat": "loop_risk",
+      "value": 0.6,
+      "context": {
+        "loop_risk": 0.6
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_service_0",
+      "stat": "loop_service",
+      "value": 0,
+      "context": {
+        "loop_service": 0
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_service_1",
+      "stat": "loop_service",
+      "value": 14,
+      "context": {
+        "loop_service": 14
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_phase_0",
+      "stat": "loop_phase",
+      "value": 0,
+      "context": {
+        "loop_phase": 0
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_loop_phase_1",
+      "stat": "loop_phase",
+      "value": 4,
+      "context": {
+        "loop_phase": 4
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_rally_life_0",
+      "stat": "rally_life",
+      "value": 6,
+      "context": {
+        "rally_life": 6,
+        "coordination": true
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_rally_life_1",
+      "stat": "rally_life",
+      "value": 24,
+      "context": {
+        "rally_life": 24,
+        "coordination": true
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_lease_0",
+      "stat": "lease",
+      "value": 1,
+      "context": {
+        "lease": 1,
+        "coordination": true
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_lease_1",
+      "stat": "lease",
+      "value": 8,
+      "context": {
+        "lease": 8,
+        "coordination": true
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_reserve_0",
+      "stat": "reserve",
+      "value": 5000,
+      "context": {
+        "reserve": 5000
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_reserve_1",
+      "stat": "reserve",
+      "value": 20000,
+      "context": {
+        "reserve": 20000
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_field_admission_0",
+      "stat": "field_admission",
+      "value": 30000,
+      "context": {
+        "field_admission": 30000
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_field_admission_1",
+      "stat": "field_admission",
+      "value": 80000,
+      "context": {
+        "field_admission": 80000
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_max_fields_0",
+      "stat": "max_fields",
+      "value": 1,
+      "context": {
+        "max_fields": 1
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_max_fields_1",
+      "stat": "max_fields",
+      "value": 5,
+      "context": {
+        "max_fields": 5
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_wards_0",
+      "stat": "wards",
+      "value": false,
+      "context": {
+        "wards": false
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_value_routing_0",
+      "stat": "value_routing",
+      "value": true,
+      "context": {
+        "value_routing": true
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_coordination_0",
+      "stat": "coordination",
+      "value": true,
+      "context": {
+        "coordination": true
+      },
+      "role": "paired screen"
+    },
+    {
+      "name": "g04_attacks_0",
+      "stat": "attacks",
+      "value": true,
+      "context": {
+        "attacks": true
+      },
+      "role": "executable-equivalence probe"
+    }
+  ],
+  "policy": "One-setting-at-a-time low/high probes around G2 champion; boolean flips; rally lifetime and lease exercised with coordination enabled. attacks is unused and verified by exact WASM equivalence instead of wasting duplicate matches. Preserve all generations. Screen 8 train maps x incumbent/D1/gold_diamond x both sides. Expand per-setting winners, recombine, validate on separate existing splits. All published splits were used previously: no pristine confirmation claim. VM faults prevent promotion. Expand a boundary when a supported gain points outward. Complete only with explicit coverage of every Config field, conditional settings, interactions and final opponent validation.",
+  "final_deliverable": "One combined leader_party_tuned strategy using experimentally supported settings, verified through interaction/ablation comparisons against individual winners, the prior champion, earlier generations and the opponent pool. Individual screen wins are not blindly combined.",
+  "coordination_control": "g04_coordination_0"
+}

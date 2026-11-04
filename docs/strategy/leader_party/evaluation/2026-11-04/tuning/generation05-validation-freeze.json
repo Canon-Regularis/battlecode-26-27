@@ -1,0 +1,166 @@
+{
+  "candidates": [
+    "g05_all",
+    "g05_without_team",
+    "g05_flip_coordination",
+    "g05_without_search",
+    "g04_field_admission_0"
+  ],
+  "training_scores": {
+    "g04_control": {
+      "games": 102,
+      "wins": 75,
+      "margin": 175.04901960784315,
+      "faults": 0,
+      "errors": 4
+    },
+    "g05_all": {
+      "games": 102,
+      "wins": 84,
+      "margin": 187.7450980392157,
+      "faults": 0,
+      "errors": 4
+    },
+    "g05_search": {
+      "games": 102,
+      "wins": 77,
+      "margin": 160.8921568627451,
+      "faults": 0,
+      "errors": 4
+    },
+    "g05_fuel": {
+      "games": 102,
+      "wins": 78,
+      "margin": 198.2843137254902,
+      "faults": 0,
+      "errors": 0
+    },
+    "g05_team": {
+      "games": 102,
+      "wins": 76,
+      "margin": 139.6764705882353,
+      "faults": 0,
+      "errors": 4
+    },
+    "g05_team_probe": {
+      "games": 102,
+      "wins": 74,
+      "margin": 130.47058823529412,
+      "faults": 0,
+      "errors": 5
+    },
+    "g05_value_probe": {
+      "games": 102,
+      "wins": 65,
+      "margin": 113.44117647058823,
+      "faults": 0,
+      "errors": 5
+    },
+    "g05_banking_probe": {
+      "games": 102,
+      "wins": 60,
+      "margin": 94.12745098039215,
+      "faults": 0,
+      "errors": 3
+    },
+    "g05_recovery_probe": {
+      "games": 102,
+      "wins": 72,
+      "margin": 162.68627450980392,
+      "faults": 0,
+      "errors": 2
+    },
+    "g05_tasks_probe": {
+      "games": 102,
+      "wins": 54,
+      "margin": 25.04901960784314,
+      "faults": 0,
+      "errors": 5
+    },
+    "g05_search_probe": {
+      "games": 102,
+      "wins": 75,
+      "margin": 171.1764705882353,
+      "faults": 0,
+      "errors": 7
+    },
+    "g05_fuel_probe": {
+      "games": 102,
+      "wins": 78,
+      "margin": 198.36274509803923,
+      "faults": 0,
+      "errors": 0
+    },
+    "g05_without_search": {
+      "games": 102,
+      "wins": 83,
+      "margin": 180.72549019607843,
+      "faults": 0,
+      "errors": 1
+    },
+    "g05_without_fuel": {
+      "games": 102,
+      "wins": 75,
+      "margin": 136.83333333333334,
+      "faults": 0,
+      "errors": 2
+    },
+    "g05_without_team": {
+      "games": 102,
+      "wins": 83,
+      "margin": 219.2941176470588,
+      "faults": 0,
+      "errors": 1
+    },
+    "g05_flip_coordination": {
+      "games": 102,
+      "wins": 83,
+      "margin": 219.2941176470588,
+      "faults": 0,
+      "errors": 1
+    },
+    "g05_flip_wards": {
+      "games": 102,
+      "wins": 80,
+      "margin": 220.54901960784315,
+      "faults": 0,
+      "errors": 2
+    },
+    "g05_flip_value_routing": {
+      "games": 102,
+      "wins": 75,
+      "margin": 184.7549019607843,
+      "faults": 0,
+      "errors": 9
+    },
+    "g04_field_admission_0": {
+      "games": 102,
+      "wins": 80,
+      "margin": 225.58823529411765,
+      "faults": 0,
+      "errors": 1
+    },
+    "g04_loop_beam_1": {
+      "games": 102,
+      "wins": 77,
+      "margin": 160.8921568627451,
+      "faults": 0,
+      "errors": 4
+    },
+    "g04_reserve_0": {
+      "games": 102,
+      "wins": 77,
+      "margin": 159.26470588235293,
+      "faults": 0,
+      "errors": 1
+    },
+    "g04_lease_0": {
+      "games": 102,
+      "wins": 76,
+      "margin": 139.6764705882353,
+      "faults": 0,
+      "errors": 4
+    }
+  },
+  "policy": "Top five combined or single-stat profiles, selected by training wins then margin. Compare to G2 control and earlier G1/G3 winners on 18 validation maps. These existing splits are reused; no pristine holdout claim."
+}

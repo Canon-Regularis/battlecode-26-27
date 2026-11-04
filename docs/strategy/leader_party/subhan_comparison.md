@@ -3,7 +3,9 @@
 Evaluated 2026-11-04 with CAMBC 4.0.0. Experimental bot:
 [`bots/leader_party_subhan`](../../../bots/leader_party_subhan/README.md).
 
-**Recommendation: prefer `leader_party_subhan` on the current evidence.**
+This is the original port evaluation. The subsequent [configuration tuning](config_tuning.md) identifies `leader_party_tuned` as the newer preferred profile, while preserving both bots measured here.
+
+**Recommendation at this stage: prefer `leader_party_subhan`.**
 The clone wins the direct comparison 93–79 and has a slightly better combined
 record against the two control opponents (73–23 versus 72–24). The advantage varies
 by map and is a modest, uncertain upgrade rather than a proven general improvement.

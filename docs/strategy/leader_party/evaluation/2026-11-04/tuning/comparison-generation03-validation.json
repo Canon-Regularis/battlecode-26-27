@@ -1,0 +1,78 @@
+{
+  "labels": [
+    "baseline-validation",
+    "early-champions-validation",
+    "generation03-validation"
+  ],
+  "baseline": "g00",
+  "results": [
+    {
+      "candidate": "g01_recover_late",
+      "baseline": "g00",
+      "matched_conditions": 180,
+      "maps": 18,
+      "wins": 127,
+      "baseline_wins": 134,
+      "win_delta": -0.03888888888888889,
+      "map_cluster_win_delta_95": [
+        -0.08888888888888889,
+        0.011111111111111112
+      ],
+      "margin_delta": 16.205555555555556,
+      "errors": 16,
+      "baseline_errors": 14,
+      "faults": 0
+    },
+    {
+      "candidate": "g02_bank35",
+      "baseline": "g00",
+      "matched_conditions": 180,
+      "maps": 18,
+      "wins": 129,
+      "baseline_wins": 134,
+      "win_delta": -0.027777777777777776,
+      "map_cluster_win_delta_95": [
+        -0.1,
+        0.03888888888888889
+      ],
+      "margin_delta": -34.666666666666664,
+      "errors": 11,
+      "baseline_errors": 14,
+      "faults": 0
+    },
+    {
+      "candidate": "g03_recover20",
+      "baseline": "g00",
+      "matched_conditions": 180,
+      "maps": 18,
+      "wins": 133,
+      "baseline_wins": 134,
+      "win_delta": -0.005555555555555556,
+      "map_cluster_win_delta_95": [
+        -0.05555555555555556,
+        0.044444444444444446
+      ],
+      "margin_delta": 14.383333333333335,
+      "errors": 8,
+      "baseline_errors": 14,
+      "faults": 0
+    },
+    {
+      "candidate": "g03_shop450",
+      "baseline": "g00",
+      "matched_conditions": 180,
+      "maps": 18,
+      "wins": 132,
+      "baseline_wins": 134,
+      "win_delta": -0.011111111111111112,
+      "map_cluster_win_delta_95": [
+        -0.06666666666666667,
+        0.044444444444444446
+      ],
+      "margin_delta": -12.849999999999998,
+      "errors": 15,
+      "baseline_errors": 14,
+      "faults": 0
+    }
+  ]
+}

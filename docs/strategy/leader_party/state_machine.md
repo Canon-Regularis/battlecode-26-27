@@ -1,6 +1,6 @@
 # Implemented state machine
 
-Source: `state_machine.cpp` in both `bots/leader_party` and the preferred `bots/leader_party_subhan`, with execution and task bookkeeping in `bot.cpp`. Their transition policy is shared; the preferred variant additionally advances planned camp routes when tasks finish or are abandoned. Earlier proposals are preserved under `history/`.
+Source: `state_machine.cpp` in `bots/leader_party`, `bots/leader_party_subhan` and the preferred `bots/leader_party_tuned`, with execution and task bookkeeping in `bot.cpp`. Their transition order is shared; both Subhan-based variants additionally advance planned camp routes when tasks finish or are abandoned. Thresholds below describe the tuned profile; see [configuration](config.md) for baseline differences. Earlier proposals are preserved under `history/`.
 
 The pure decision function applies the first matching condition:
 
@@ -20,7 +20,7 @@ The pure decision function applies the first matching condition:
 | 12 | Experimental leader/follower guidance | LEAD_TEAM/FOLLOW_LEADER, both retain local planning |
 | 13 | Otherwise | EXPLORE with autonomous camp selection |
 
-Recovery uses 35%/55% HP hysteresis. Danger uses visible champion counts within six tiles, nearby usable allies, awake camp attacks and raw incoming basic damage. These estimates omit hidden spells and mitigations.
+Recovery uses 35%/55% HP hysteresis in both the tuned profile and untuned bots. Danger uses visible champion counts within six tiles, nearby usable allies, awake camp attacks and raw incoming basic damage. These estimates omit hidden spells and mitigations.
 
 Every uncommitted body selects its own camp; leadership is not required. A task ends after 90 total rounds or eight rounds without reduced route distance, observed objective damage or capture-countdown progress. Abandoned objectives receive a ten-round cooldown. The initial 30-round limit rejected the available gem camps on ambush; the measured change is documented in the results. Camp guarding ends after 12 rounds. A vacant reward region is approached through free tiles; current occupancy is rechecked after movement. The implementation does not add a special Capture Emblem co-occupant policy.
 

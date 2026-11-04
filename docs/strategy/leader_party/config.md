@@ -1,21 +1,39 @@
 # Release configuration
 
-Source of configurable switches: `config.h` in both `bots/leader_party` and the preferred `bots/leader_party_subhan`; these switches are identical. These are measured starting policies, not global optima.
+The preferred bot is `leader_party_tuned`, matching frozen **`g07_search`**. It combines the selected settings in one C++ bot using Subhan’s camp-loop planner. Original bots and every tuning generation remain intact.
 
-| Setting | Value |
-| --- | --- |
-| Bag threshold / age | 20 gems / 40 rounds |
-| Task no-progress / absolute lifetime | 8 / 90 rounds |
-| Maximum estimated solo clear | 90 basic-damage equivalents |
-| Camp protection / retry | 12 / 10 rounds |
-| Experimental rally lifetime / leadership lease | 12 / 3 rounds |
-| Critical fuel reserve / native field admission | 10,000 / 55,000 |
-| Maximum native fields per own dispatch | 3 |
-| Shared coordination / ATTACK initiation | off / off |
-| Distance routing / optional wards | on / on |
+| Compile-time field | Value |
+| --- | ---: |
+| `bank_bag` | `35` |
+| `bag_age` | `70` |
+| `stall` | `8` |
+| `task_limit` | `90` |
+| `max_clear` | `90` |
+| `protection_limit` | `12` |
+| `retry` | `10` |
+| `wards` | `True` |
+| `value_routing` | `False` |
+| `recovery_low` | `0.35` |
+| `recovery_high` | `0.55` |
+| `recall_gold` | `300` |
+| `competition_cost` | `4` |
+| `loop_candidates` | `24` |
+| `loop_altars` | `4` |
+| `loop_beam` | `8` |
+| `loop_length` | `5` |
+| `loop_expansions` | `768` |
+| `loop_reports` | `3` |
+| `loop_gold` | `0.02` |
+| `loop_opening` | `0.15` |
+| `loop_risk` | `0.2` |
+| `loop_service` | `7` |
+| `loop_phase` | `3` |
+| `rally_life` | `12` |
+| `lease` | `3` |
+| `reserve` | `5000` |
+| `field_admission` | `30000` |
+| `max_fields` | `3` |
+| `coordination` | `False` |
+| `attacks` | `False` |
 
-In the preferred variant, planned camp loops take precedence over distance ranking after the first two equipment phases, subject to the existing candidate eligibility checks. Planner bounds are 24 camps, four altars, beam width four, five camps per route, 768 expansions and three reported routes per champion, with a one-million-fuel draft reserve. See the [planner comparison](subhan_comparison.md) for scoring weights, fallback behavior and evaluation.
-
-Other implementation constants: recovery 35%/55%; leadership eligibility >50%; equipment recall >=300 gold with empty bag and no visible enemy; five shards per purchase phase; at most 40 purchases per call; banking courtesy wait three rounds; blocked altar retry three rounds; exploration viewpoint eight rounds; carrier reacquisition two rounds. These remain explicit constants in the decision/execution modules and are not dynamically tunable.
-
-Noncommitted camp lifecycle observations are staggered over eight rounds before full-map bitboard operations. The committed camp is refreshed after relevant actions. Optional work is skipped when fuel is insufficient. Very small custom fuel quanta can prevent the 55,000 admission threshold from ever being reached; the release targets the engine default budget.
+Settings are compiled into the bot. The unused `attacks` field has no callers. Protocol lifetimes matter only with coordination enabled. Movement still uses the existing native distance fields; Subhan’s planner selects camp loops. See the [full evaluation](config_tuning_all_stats.md) for measured ranges and limitations.
