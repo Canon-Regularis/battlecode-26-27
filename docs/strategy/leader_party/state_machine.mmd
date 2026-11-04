@@ -1,0 +1,23 @@
+stateDiagram-v2
+    [*] --> EXPLORE
+    state "Any live activity" as ACTIVE
+    ACTIVE --> DEATH: dead
+    DEATH --> EXPLORE: respawn and healthy
+    ACTIVE --> BANK_GEMS: engine channel active
+    ACTIVE --> RUN_AWAY: danger
+    RUN_AWAY --> RECALL: safe and recovering
+    RECALL --> HEALING: returned to spawn
+    HEALING --> EXPLORE: restored
+    ACTIVE --> DEFEND_SPAWN: spawn threatened
+    ACTIVE --> PREPARE_GEM_BANKING: bag threshold, age or stalled task
+    PREPARE_GEM_BANKING --> BANK_GEMS: submission confirmed
+    BANK_GEMS --> EXPLORE: channel completed or interrupted
+    EXPLORE --> CAPTURE_POINT: eligible local camp
+    CAPTURE_POINT --> PROTECT_POINT: ally occupies reward
+    PROTECT_POINT --> EXPLORE: completion, deadline or lost carrier
+    CAPTURE_POINT --> EXPLORE: completion or task deadline
+    note right of EXPLORE
+        Shared guidance and remote RALLY disabled.
+        All bodies can select local objectives.
+        Ordered guards are in state_machine.cpp.
+    end note
