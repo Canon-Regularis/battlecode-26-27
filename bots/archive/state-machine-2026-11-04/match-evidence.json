@@ -1,0 +1,54 @@
+{
+  "scope": "One prior local release match, 00monolith; not rerun during archival.",
+  "packageVersion": "4.0.0",
+  "replayPath": "replays/starter-cpp-vs-starter-python-1793749116896.repl26a",
+  "match": {
+    "engineBuildHash": "85aa7167b44db7cea97509f55e997750520e33d644e9f4f90d6128c50eba1d21",
+    "engineVersion": "2.0.0",
+    "finalInput": 32179,
+    "finalRoundPartial": false,
+    "finalSubstep": 6,
+    "height": 50,
+    "mapHash": "ba5674bf2ab26336eb99df0c9e97c16b27bd231deffc023de1d873a05a558313",
+    "metricSemanticsVersion": 1,
+    "outcome": "teamB",
+    "roundsCompleted": 2000,
+    "roundsStarted": 2000,
+    "seed": "10600525974676784129",
+    "width": 50
+  },
+  "diagnostics": {
+    "botFaults": {
+      "teamA": 0,
+      "teamB": 0
+    },
+    "codes": [],
+    "detailedCaptureComplete": true
+  },
+  "teams": [
+    {
+      "team": "teamA",
+      "bot": "starter-cpp",
+      "submittedGems": 0,
+      "earnedGold": 40,
+      "spentGold": 0,
+      "kills": 0,
+      "deaths": 0
+    },
+    {
+      "team": "teamB",
+      "bot": "starter-python",
+      "submittedGems": 763,
+      "earnedGold": 9330,
+      "spentGold": 8040,
+      "kills": 0,
+      "deaths": 45
+    }
+  ],
+  "caughtErrorEvidence": {
+    "stage": "run_state.capture_point",
+    "error": "engine error 22: Known occupied destination.",
+    "occurrencesInCapturedStdout": 4,
+    "limitation": "Captured logging was capped; this is not a total match error count. Caught errors do not count as VM faults."
+  }
+}

@@ -1,152 +1,23 @@
----
-title: Leader-party champion state machine
-config:
-  theme: neutral
-  flowchart:
-    curve: basis
-    nodeSpacing: 36
-    rankSpacing: 90
-    useMaxWidth: false
----
-flowchart LR
-    %% One complete machine. Exactly one of 12 coloured states is active.
-    %% RETURN is a bounded decision, not a state. Table row order is authoritative.
-    %% Every living state has its own explicit G0 death arrow.
-    %% Every exit from LEAD_TEAM releases leadership before new actions.
-    %% CAMP/BANK are PROTECT_POINT task kinds, not extra states.
-    %% Colours match state_machine.md and config.md.
-    %% Repeated transitions are intentionally retained.
-    START((Start))
-    RETURN{"Return decision<br/>First applicable priority 1-10"}
-    LEAD_TEAM["LEAD_TEAM"]
-    FOLLOW_LEADER["FOLLOW_LEADER"]
-    CAPTURE_POINT["CAPTURE_POINT"]
-    PROTECT_POINT["PROTECT_POINT"]
-    PREPARE_GEM_BANKING["PREPARE_GEM_BANKING"]
-    BANK_GEMS["BANK_GEMS"]
-    RALLY["RALLY"]
-    RUN_AWAY["RUN_AWAY"]
-    RECALL["RECALL"]
-    HEALING["HEALING"]
-    DEFEND_SPAWN["DEFEND_SPAWN"]
-    DEATH["DEATH"]
-
-    LEAD_TEAM -->|"G0: self dead - overrides all rows"| DEATH
-    FOLLOW_LEADER -->|"G0: self dead - overrides all rows"| DEATH
-    CAPTURE_POINT -->|"G0: self dead - overrides all rows"| DEATH
-    PROTECT_POINT -->|"G0: self dead - overrides all rows"| DEATH
-    PREPARE_GEM_BANKING -->|"G0: self dead - overrides all rows"| DEATH
-    BANK_GEMS -->|"G0: self dead - overrides all rows"| DEATH
-    RALLY -->|"G0: self dead - overrides all rows"| DEATH
-    RUN_AWAY -->|"G0: self dead - overrides all rows"| DEATH
-    RECALL -->|"G0: self dead - overrides all rows"| DEATH
-    HEALING -->|"G0: self dead - overrides all rows"| DEATH
-    DEFEND_SPAWN -->|"G0: self dead - overrides all rows"| DEATH
-    START -->|"Startup"| RETURN
-    RETURN -->|"1: self dead"| DEATH
-    RETURN -->|"2: at threatened spawn"| DEFEND_SPAWN
-    RETURN -->|"3: at spawn, Health missing"| HEALING
-    RETURN -->|"4: Danger; or 5: recovery unsafe"| RUN_AWAY
-    RETURN -->|"5: recovery needed and safe"| RECALL
-    RETURN -->|"6: saved bag or banking needed"| PREPARE_GEM_BANKING
-    RETURN -->|"7: valid eligible rally"| RALLY
-    RETURN -->|"8: saved camp revalidated"| CAPTURE_POINT
-    RETURN -->|"9: elected/assigned and eligible"| LEAD_TEAM
-    RETURN -->|"10: follow or offer/wait"| FOLLOW_LEADER
-    LEAD_TEAM -->|"L0: threatened spawn"| DEFEND_SPAWN
-    LEAD_TEAM -->|"D1: spawn, Health missing"| HEALING
-    LEAD_TEAM -->|"D2/D4: Danger or unsafe recovery"| RUN_AWAY
-    LEAD_TEAM -->|"D3: Low Health, recall safe"| RECALL
-    LEAD_TEAM -->|"D5: banking needed/pending"| PREPARE_GEM_BANKING
-    LEAD_TEAM -->|"L1: lost leadership or Health threshold"| FOLLOW_LEADER
-    LEAD_TEAM -->|"L2/L3: inherited or selected camp work"| CAPTURE_POINT
-    LEAD_TEAM -->|"L2/L3: inherited/selected active allied capture"| PROTECT_POINT
-    LEAD_TEAM -->|"D6: joinable rally"| RALLY
-    LEAD_TEAM -->|"L4: continue route/runner policy"| LEAD_TEAM
-    FOLLOW_LEADER -->|"F0: threatened spawn"| DEFEND_SPAWN
-    FOLLOW_LEADER -->|"D1: spawn, Health missing"| HEALING
-    FOLLOW_LEADER -->|"D2/D4: Danger or unsafe recovery"| RUN_AWAY
-    FOLLOW_LEADER -->|"D3: Low Health, recall safe"| RECALL
-    FOLLOW_LEADER -->|"D5: banking needed/pending"| PREPARE_GEM_BANKING
-    FOLLOW_LEADER -->|"F1: observed allied camp capture"| PROTECT_POINT
-    FOLLOW_LEADER -->|"F2: confirmed camp/runner assignment"| CAPTURE_POINT
-    FOLLOW_LEADER -->|"F3: observed bank channel, at guard position"| PROTECT_POINT
-    FOLLOW_LEADER -->|"D6: joinable rally"| RALLY
-    FOLLOW_LEADER -->|"F4: nominated/elected and eligible"| LEAD_TEAM
-    FOLLOW_LEADER -->|"F5: follow leader"| FOLLOW_LEADER
-    FOLLOW_LEADER -->|"F6: no leader; offer or wait"| FOLLOW_LEADER
-    CAPTURE_POINT -->|"C1: reward claimed; C5: invalid/unreachable"| RETURN
-    CAPTURE_POINT -->|"C2: cleared, vacant, safe - approach"| CAPTURE_POINT
-    CAPTURE_POINT -->|"C3: cleared, allied occupant including self"| PROTECT_POINT
-    CAPTURE_POINT -->|"C4: Danger before protection"| RUN_AWAY
-    CAPTURE_POINT -->|"C6: continue combat/inspection"| CAPTURE_POINT
-    PROTECT_POINT -->|"PC1: camp reward claimed/invalid"| RETURN
-    PROTECT_POINT -->|"PC2: collector dead and region vacant"| CAPTURE_POINT
-    PROTECT_POINT -->|"PC4: collector left/displaced, region vacant"| CAPTURE_POINT
-    PROTECT_POINT -->|"PC3: continue camp protection"| PROTECT_POINT
-    PROTECT_POINT -->|"PB2: bank completion confirmed"| RETURN
-    PROTECT_POINT -->|"PB1: carrier dead/empty"| RETURN
-    PROTECT_POINT -->|"PB3: interrupted living carrier retries locally"| PROTECT_POINT
-    PROTECT_POINT -->|"PB4: hidden carrier - bounded local inspection"| PROTECT_POINT
-    PROTECT_POINT -->|"PB5: abandoned or search exhausted"| RETURN
-    PROTECT_POINT -->|"PB6: continue bank protection"| PROTECT_POINT
-    PREPARE_GEM_BANKING -->|"P1: empty bag"| RETURN
-    PREPARE_GEM_BANKING -->|"P0: threatened spawn; retain banking"| DEFEND_SPAWN
-    PREPARE_GEM_BANKING -->|"P2: spawn, Health missing"| HEALING
-    PREPARE_GEM_BANKING -->|"P3: Danger/unsafe recovery; retain banking"| RUN_AWAY
-    PREPARE_GEM_BANKING -->|"P4: safe recovery; retain banking"| RECALL
-    PREPARE_GEM_BANKING -->|"P5: tribute start succeeds"| BANK_GEMS
-    PREPARE_GEM_BANKING -->|"P6: handle lock/obstruction/selection"| PREPARE_GEM_BANKING
-    PREPARE_GEM_BANKING -->|"P7: continue approach"| PREPARE_GEM_BANKING
-    BANK_GEMS -->|"B1: confirmed completion; B4: empty ended attempt"| RETURN
-    BANK_GEMS -->|"B2: active channel, including zero timer"| BANK_GEMS
-    BANK_GEMS -->|"B3: interrupted, gems remain"| PREPARE_GEM_BANKING
-    RALLY -->|"R1: creator cancels; R2: ended/expired"| RETURN
-    RALLY -->|"R3: replacement not joinable"| RETURN
-    RALLY -->|"R3: joinable replacement"| RALLY
-    RALLY -->|"R0: BANK travel at threatened spawn"| DEFEND_SPAWN
-    RALLY -->|"R4/R5: BANK travel danger/unsafe recovery"| RUN_AWAY
-    RALLY -->|"R4/R5: BANK travel at threatened spawn"| DEFEND_SPAWN
-    RALLY -->|"R5: BANK travel, safe recovery"| RECALL
-    RALLY -->|"R6: carrier channeling, at guard position"| PROTECT_POINT
-    RALLY -->|"R7: hold BANK position"| RALLY
-    RALLY -->|"R8: committed ATTACK"| RALLY
-    RALLY -->|"R9: continue approach"| RALLY
-    RUN_AWAY -->|"E1: threatened spawn"| DEFEND_SPAWN
-    RUN_AWAY -->|"E2: safe spawn, Health missing"| HEALING
-    RUN_AWAY -->|"E2: safe full-Health spawn; E4: escape cleared, no recovery"| RETURN
-    RUN_AWAY -->|"E3: escape cleared, recovery needed and safe"| RECALL
-    RUN_AWAY -->|"E5: approach suitable friendly"| RUN_AWAY
-    RUN_AWAY -->|"E6: fall back to spawn"| RUN_AWAY
-    RECALL -->|"Q0: threatened spawn"| DEFEND_SPAWN
-    RECALL -->|"Q1: safe spawn, Health missing"| HEALING
-    RECALL -->|"Q1: safe full-Health spawn; Q4: unstarted recall unnecessary"| RETURN
-    RECALL -->|"Q2: visible enemy/camp can hit; Q6: unsafe start"| RUN_AWAY
-    RECALL -->|"Q3: continue active recall"| RECALL
-    RECALL -->|"Q5: start/retry safe recall"| RECALL
-    HEALING -->|"H2: threatened spawn"| DEFEND_SPAWN
-    HEALING -->|"H1: wait on safe spawn for healing"| HEALING
-    HEALING -->|"H3: recovered; H6: full Health outside spawn"| RETURN
-    HEALING -->|"H4: displaced into Danger; H5: recovery unsafe"| RUN_AWAY
-    HEALING -->|"H5: outside spawn, recovery safe"| RECALL
-    DEFEND_SPAWN -->|"S1: displaced from spawn"| RETURN
-    DEFEND_SPAWN -->|"S2: threat remains - hold/fight"| DEFEND_SPAWN
-    DEFEND_SPAWN -->|"S3: threat gone, Health missing"| HEALING
-    DEFEND_SPAWN -->|"S4: threat gone, full Health"| RETURN
-    DEATH -->|"X1: still dead - permitted shopping"| DEATH
-    DEATH -->|"X2: respawn; clear invalid life-specific tasks"| RETURN
-
-    style LEAD_TEAM fill:#2563EB,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style FOLLOW_LEADER fill:#06B6D4,color:#111827,stroke:#111827,stroke-width:2px
-    style CAPTURE_POINT fill:#F97316,color:#111827,stroke:#111827,stroke-width:2px
-    style PROTECT_POINT fill:#9333EA,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style PREPARE_GEM_BANKING fill:#CA8A04,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style BANK_GEMS fill:#FACC15,color:#111827,stroke:#111827,stroke-width:2px
-    style RALLY fill:#DB2777,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style RUN_AWAY fill:#DC2626,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style RECALL fill:#4F46E5,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style HEALING fill:#16A34A,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style DEFEND_SPAWN fill:#991B1B,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style DEATH fill:#6B7280,color:#FFFFFF,stroke:#111827,stroke-width:2px
-    style RETURN fill:#FFFFFF,color:#111827,stroke:#111827,stroke-dasharray:5 3
-
+stateDiagram-v2
+    [*] --> EXPLORE
+    state "Any live activity" as ACTIVE
+    ACTIVE --> DEATH: dead
+    DEATH --> EXPLORE: respawn and healthy
+    ACTIVE --> BANK_GEMS: engine channel active
+    ACTIVE --> RUN_AWAY: danger
+    RUN_AWAY --> RECALL: safe and recovering
+    RECALL --> HEALING: returned to spawn
+    HEALING --> EXPLORE: restored
+    ACTIVE --> DEFEND_SPAWN: spawn threatened
+    ACTIVE --> PREPARE_GEM_BANKING: bag threshold, age or stalled task
+    PREPARE_GEM_BANKING --> BANK_GEMS: submission confirmed
+    BANK_GEMS --> EXPLORE: channel completed or interrupted
+    EXPLORE --> CAPTURE_POINT: eligible local camp
+    CAPTURE_POINT --> PROTECT_POINT: ally occupies reward
+    PROTECT_POINT --> EXPLORE: completion, deadline or lost carrier
+    CAPTURE_POINT --> EXPLORE: completion or task deadline
+    note right of EXPLORE
+        Shared guidance and remote RALLY disabled.
+        All bodies can select local objectives.
+        Ordered guards are in state_machine.cpp.
+    end note

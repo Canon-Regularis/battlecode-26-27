@@ -49,17 +49,19 @@ I inspected the [Cambridge Battlecode ladder](https://2026a.battlecode.co.uk/gam
 ## Strategic rules that change the rankings
 
 - **Tribute, not carried gems, wins.** A champion carrying a large bag is a valuable target. Tribute takes at least one owner turn end and completes at the next turn start after its timer reaches zero. Stuns, death, and a new enemy altar lock interrupt it; damage alone does not.
-- **Capture needs one uncontested occupant for five capture phases.** Extra allies do not speed it up and split the reward if present when it finishes. Clear together, then leave the intended gem carrier alone on the region when practical. This matters especially for Marcella's tribute gold, Prism's carried-gem Focus, and Vesper's gold bonus.
+- **Capture needs one uncontested occupant; the base countdown is five rounds.** A Capture Emblem holder caps the remaining countdown at three, even when joining mid-capture, and does not increase an already shorter timer. The reduction persists while another ally keeps capturing. Extra allies without the emblem do not speed it up and split the reward if present when it finishes. Clear together, then leave the intended gem carrier alone on the region when practical. This matters especially for Marcella's tribute gold, Prism's carried-gem Focus, and Vesper's gold bonus.
 - **Camps reward different tools.** Gem and gold clusters have 120 Health and cannot attack; grouped camps favor area damage and Varg's splash. Golem and Monolith have far more Health and hit harder, favoring sustained attacks, shields, healing, and control.
 - **One successful ability cast per champion turn.** An attack reset can enable another basic attack, but a champion cannot cast a second ability in that same turn. Vendetta's kill refresh helps on later turns or with an available ability that turn, subject to this limit.
 - **Positioning costs ranged attackers damage.** Ranged champions ordinarily cannot walk and basic attack on one turn, and their damaging spells generally exclude walking. Cassi's stun and Willow's heal are exceptions that can accompany walking.
 - **Use turn order deliberately.** Within a team, priority and then draft order determine who acts first. `set_priority` takes effect next round. Arrange a stun or camp softening before a finisher, and have a defender ready before a tribute channel starts.
 
+Champion and item numbers below were reconciled with the [4.0.0 runtime snapshot](../cambc/runtime-4.0.0.json) on 3 November 2026. Ladder observations and subjective ratings retain their original dates.
+
 ## Character notes
 
 ### Vesper Vale — 9/10
 
-**Good for:** Early economy, steady ranged camp damage, moving between camps, and fighting over capture regions. Her 55 starting Strength is unusually high for a ranged champion, and the 33% gold bonus speeds later purchases. A Treasure emblem adds another 20 percentage points, for 53% total.
+**Good for:** Early economy, steady ranged camp damage, moving between camps, and fighting over capture regions. Her 45 starting Strength provides steady ranged damage, and the 33% gold bonus speeds later purchases. Under the audited 4.0.0 engine, a Treasure emblem adds 10 percentage points, for 43% total.
 
 **Use her:** Give Vesper a share of gold-bearing captures, especially early. Spend the extra gold on stats that let her keep clearing and surviving. Use the dash to cross gaps or leave a threatened position; use the attack reset when another basic hit matters more than movement. The two abilities cannot be cast in the same turn.
 
@@ -83,7 +85,7 @@ I inspected the [Cambridge Battlecode ladder](https://2026a.battlecode.co.uk/gam
 
 ### Tavi — 8/10
 
-**Good for:** Long camp routes, flexible item builds, and ranged picks. He can buy shards anywhere, starts with 110 Focus, and has a range-four 1.4× Focus spell that stuns. His attack reset improves his basic-attack turns.
+**Good for:** Long camp routes, flexible item builds, and ranged picks. He can buy shards anywhere, starts with 110 Focus, and has a range-four 1.6× Focus spell that stuns. His attack reset improves his basic-attack turns.
 
 **Use him:** Put Tavi on a route where he can collect gold and convert it into shards without recalling. Buy the stat that addresses the next fight: Strength for repeated basics, Focus for the stun spell, or Health for durability. Health bought away from spawn increases maximum Health but does not restore current Health; use a safe heal or recall when needed. He still needs spawn or death to buy consumables.
 
@@ -115,7 +117,7 @@ I inspected the [Cambridge Battlecode ladder](https://2026a.battlecode.co.uk/gam
 
 ### Willow — 7/10
 
-**Good for:** Keeping a valuable ally alive on a long route or through a contested capture. Her ally heal restores up to 3× Focus, or 360 Health at base Focus, at range four and is compatible with walking. She also starts with a respectable 55 Strength for ranged basic attacks.
+**Good for:** Keeping a valuable ally alive on a long route or through a contested capture. Her ally heal restores up to 3× Focus, or 420 Health at base Focus, at range four and is compatible with walking. She also starts with a respectable 55 Strength for ranged basic attacks.
 
 **Use her:** Follow a frontline clearer rather than sending her to solo a dangerous camp. Move and heal when an ally needs recovery; use attack reset on turns when extra basic damage is more useful. She cannot target herself with the heal, so keep her out of the focus of enemy attacks.
 
@@ -131,7 +133,7 @@ I inspected the [Cambridge Battlecode ladder](https://2026a.battlecode.co.uk/gam
 
 ### Cassi — 7/10
 
-**Good for:** Range-four burst and control from behind a frontline. Her 2× Focus spell deals 140 damage at base Focus, and her separate range-four stun can be cast while walking. Focus shards add 13 each, making spell investment valuable.
+**Good for:** Range-four burst and control from behind a frontline. Her 2× Focus spell deals 200 damage at base Focus, and her separate range-four stun can be cast while walking. Focus shards add 13 each, making spell investment valuable.
 
 **Use her:** Keep distance, stun a dangerous monster or enemy during a repositioning turn, then cast damage once set. She starts with only 600 Health. Since her death also kills Issac and loses both bags, keep her out of exposed capture and altar positions when possible.
 
@@ -141,13 +143,13 @@ I inspected the [Cambridge Battlecode ladder](https://2026a.battlecode.co.uk/gam
 
 **Good for:** Mobile melee pressure and extra map coverage from the Cassi & Issac pick. He has a dash and an attack reset, so he can reach a target or add a basic hit as the situation demands.
 
-**Use him:** Take relatively safe side camps or assist Cassi's stunned targets. Two independent bodies can cover more ground, but avoid using Issac as a disposable scout or gem courier: his death also kills Cassi and loses both bags. His 40 starting Strength and 3 Strength growth per shard make him less efficient as the team's sole sustained damage source.
+**Use him:** Take relatively safe side camps or assist Cassi's stunned targets. Two independent bodies can cover more ground, but avoid using Issac as a disposable scout or gem courier: his death also kills Cassi and loses both bags. His 45 starting Strength and 3 Strength growth per shard make him less efficient as the team's sole sustained damage source.
 
 **Pairs well with:** **Cassi** for stun into melee pressure; **Willow** for sustain; **Vesper Vale** for a second mobile unit that can work another route. Keep the linked pair's combined death risk in mind when splitting them across the map.
 
 ### Ren — 7/10
 
-**Good for:** Harassing a target at range four, dashing to contest ground, and punishing attackers. His damage-and-stun spell starts at 0.75× Focus, and retaliation starts at 0.2× Focus when he is damaged.
+**Good for:** Harassing a target at range four, dashing to contest ground, and punishing attackers. His damage-and-stun spell starts at 1.1× Focus, and retaliation starts at 0.2× Focus when he is damaged.
 
 **Use him:** Interrupt a channel or start a control chain, then dash to contest a capture or escape. Retaliation adds value in a fight where he is already being attacked, but deliberately taking camp hits just for 20 base retaliation damage is usually a poor trade. His 35 starting Strength gives him slow isolated camp clears.
 
@@ -157,7 +159,7 @@ I inspected the [Cambridge Battlecode ladder](https://2026a.battlecode.co.uk/gam
 
 **Good for:** Range-four spell damage, especially when multiple enemies are in one radius-one area. At the current 70 base Focus, her single-target spell starts at 140 damage and her area spell at 98 damage per target before modifiers.
 
-**Use her:** Pre-position before a camp or fight, because both spells exclude walking and her 650 starting Health leaves little room for errors. Use the area spell when it hits several valuable targets, and the 2× spell for one priority target. Focus shards add 7 each, so compare that growth with other damage options before making her the team's main scaling carry.
+**Use her:** Pre-position before a camp or fight, because both spells exclude walking and her 650 starting Health leaves little room for errors. Use the area spell when it hits several valuable targets, and the 2× spell for one priority target. Focus shards add 8.5 each, so compare that growth with other damage options before making her the team's main scaling carry.
 
 **Pairs well with:** **Ryth** or **Heart of Ruin** to stun groups into an area hit; **Varg** to keep grouped camps under pressure; **Willow** to offset her low Health. She benefits strongly from allies who create safe, stationary casting turns.
 

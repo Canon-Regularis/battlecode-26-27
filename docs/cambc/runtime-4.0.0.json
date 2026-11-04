@@ -1,0 +1,1571 @@
+{
+  "cambc_version": "4.0.0",
+  "checked_on": "2026-11-03",
+  "source": "Official cambc 4.0.0 engine, queried during draft on 00ambush",
+  "SETTINGS": [
+    {
+      "CAPTURE_TIME": 5,
+      "CAMP_SLEEP_TIME": 2,
+      "RESPAWN_TIME": 60,
+      "RECALL_TIME": 5,
+      "SUBMIT_GEM_DURATION_MULTIPLIER": 0.1,
+      "SUBMIT_GEM_BASE_DURATION": 0,
+      "SUBMIT_GEM_MINIMUM_DURATION": 1,
+      "SUBMIT_GEMS_RANGE": 1,
+      "MAX_ROUNDS": 2000,
+      "WINNING_GEMS": 1000,
+      "KILL_GOLD": 100,
+      "ASSIST_GOLD": 0,
+      "PASSIVE_GOLD": 0,
+      "SPAWN_HEALING": 1.0,
+      "ACTIVE_WARDS": 1,
+      "SHARED_MEMORY_BYTES": 8,
+      "DRAFT_MEMORY_BYTES": 1024,
+      "TILE_REVEAL_ROUNDS": 1,
+      "WARD_COOLDOWN": 10,
+      "WARD_LIFETIME": -1,
+      "WARD_VISION_RADIUS": 6.0,
+      "WARD_PLACEMENT_RADIUS": 2.0,
+      "ALTAR_LOCK_HITS": 5,
+      "TP_CRYSTAL_TIME": 3
+    }
+  ],
+  "PASSIVES": [
+    {
+      "PRISM_FOCUS_PER_GEM": 1.5,
+      "VARG_SPLASH_RADIUS": 1.0,
+      "VESPER_VALE_BONUS_GOLD_PERCENT": 33,
+      "MARCELLA_TRIBUTE_GOLD_PER_GEM": 2,
+      "RYTH_HEALTH_STRENGTH_RATIO": 0.01,
+      "REN_RETALIATION_FOCUS_RATIO": 0.2,
+      "HEART_OF_RUIN_MISSING_HEALTH_DAMAGE_MAX_BONUS": 0.5
+    }
+  ],
+  "ITEM": [
+    {
+      "name": "MONSTER_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 1,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "MONSTER_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 1,
+      "passive_magnitude": 0.15000000596046448,
+      "purchasable": false
+    },
+    {
+      "name": "MONSTER_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 3,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "MONSTER_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 1,
+      "passive_magnitude": 0.15000000596046448,
+      "purchasable": false
+    },
+    {
+      "name": "MONSTER_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 5,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "MONSTER_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 1,
+      "passive_magnitude": 0.15000000596046448,
+      "purchasable": false
+    },
+    {
+      "name": "POWER_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 7,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "POWER_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 6,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "POWER_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 9,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "POWER_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 6,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "POWER_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 11,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "POWER_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 6,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "DURABILITY_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 13,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "DURABILITY_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 2,
+      "passive_magnitude": 0.10000000149011612,
+      "purchasable": false
+    },
+    {
+      "name": "DURABILITY_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 15,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "DURABILITY_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 2,
+      "passive_magnitude": 0.10000000149011612,
+      "purchasable": false
+    },
+    {
+      "name": "DURABILITY_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 17,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "DURABILITY_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 2,
+      "passive_magnitude": 0.10000000149011612,
+      "purchasable": false
+    },
+    {
+      "name": "TREASURE_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 19,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "TREASURE_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 3,
+      "passive_magnitude": 0.10000000149011612,
+      "purchasable": false
+    },
+    {
+      "name": "TREASURE_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 21,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "TREASURE_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 3,
+      "passive_magnitude": 0.10000000149011612,
+      "purchasable": false
+    },
+    {
+      "name": "TREASURE_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 23,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "TREASURE_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 3,
+      "passive_magnitude": 0.10000000149011612,
+      "purchasable": false
+    },
+    {
+      "name": "JUNGLE_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 25,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "JUNGLE_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 4,
+      "passive_magnitude": 0.30000001192092896,
+      "purchasable": false
+    },
+    {
+      "name": "JUNGLE_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 27,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "JUNGLE_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 4,
+      "passive_magnitude": 0.30000001192092896,
+      "purchasable": false
+    },
+    {
+      "name": "JUNGLE_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 29,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "JUNGLE_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 4,
+      "passive_magnitude": 0.30000001192092896,
+      "purchasable": false
+    },
+    {
+      "name": "HOME_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 31,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "HOME_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 5,
+      "passive_magnitude": 0.5,
+      "purchasable": false
+    },
+    {
+      "name": "HOME_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 33,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "HOME_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 5,
+      "passive_magnitude": 0.5,
+      "purchasable": false
+    },
+    {
+      "name": "HOME_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 35,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "HOME_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 5,
+      "passive_magnitude": 0.5,
+      "purchasable": false
+    },
+    {
+      "name": "BRUISER_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 37,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "BRUISER_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 1,
+      "strength_points": 5,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "BRUISER_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 39,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "BRUISER_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 1,
+      "strength_points": 1,
+      "focus_points": 5,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "BRUISER_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 41,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "BRUISER_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 1,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "TRIBUTE_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 43,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "TRIBUTE_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 6,
+      "passive_magnitude": 0.33000001311302185,
+      "purchasable": false
+    },
+    {
+      "name": "TRIBUTE_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 45,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "TRIBUTE_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 6,
+      "passive_magnitude": 0.33000001311302185,
+      "purchasable": false
+    },
+    {
+      "name": "TRIBUTE_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 47,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "TRIBUTE_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 6,
+      "passive_magnitude": 0.33000001311302185,
+      "purchasable": false
+    },
+    {
+      "name": "CAPTURE_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 49,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "CAPTURE_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 7,
+      "passive_magnitude": 3.0,
+      "purchasable": false
+    },
+    {
+      "name": "CAPTURE_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 51,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "CAPTURE_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 7,
+      "passive_magnitude": 3.0,
+      "purchasable": false
+    },
+    {
+      "name": "CAPTURE_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 53,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "CAPTURE_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 7,
+      "passive_magnitude": 3.0,
+      "purchasable": false
+    },
+    {
+      "name": "PROSPECTOR_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 55,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "PROSPECTOR_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 8,
+      "passive_magnitude": 0.25,
+      "purchasable": false
+    },
+    {
+      "name": "PROSPECTOR_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 57,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "PROSPECTOR_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 8,
+      "passive_magnitude": 0.25,
+      "purchasable": false
+    },
+    {
+      "name": "PROSPECTOR_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 59,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "PROSPECTOR_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 8,
+      "passive_magnitude": 0.25,
+      "purchasable": false
+    },
+    {
+      "name": "HUNTER_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 61,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "HUNTER_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 9,
+      "passive_magnitude": 50.0,
+      "purchasable": false
+    },
+    {
+      "name": "HUNTER_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 63,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "HUNTER_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 9,
+      "passive_magnitude": 50.0,
+      "purchasable": false
+    },
+    {
+      "name": "HUNTER_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 65,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "HUNTER_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 9,
+      "passive_magnitude": 50.0,
+      "purchasable": false
+    },
+    {
+      "name": "SKIRMISH_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 67,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "SKIRMISH_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 10,
+      "passive_magnitude": 0.05000000074505806,
+      "purchasable": false
+    },
+    {
+      "name": "SKIRMISH_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 69,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "SKIRMISH_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 10,
+      "passive_magnitude": 0.05000000074505806,
+      "purchasable": false
+    },
+    {
+      "name": "SKIRMISH_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 71,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "SKIRMISH_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 10,
+      "passive_magnitude": 0.05000000074505806,
+      "purchasable": false
+    },
+    {
+      "name": "GREED_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 25,
+      "result": 73,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "GREED_EMBLEM_OF_STRENGTH",
+      "cost": 750,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 35,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "GREED_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 25,
+      "result": 75,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "GREED_EMBLEM_OF_FOCUS",
+      "cost": 750,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 35,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "GREED_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 25,
+      "result": 77,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "GREED_EMBLEM_OF_HEALTH",
+      "cost": 750,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 35,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": false
+    },
+    {
+      "name": "COLLECTORS_SHARD_OF_STRENGTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 79,
+      "health_points": 0,
+      "strength_points": 1,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "COLLECTORS_EMBLEM_OF_STRENGTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 5,
+      "focus_points": 0,
+      "passive": 11,
+      "passive_magnitude": 0.009999999776482582,
+      "purchasable": false
+    },
+    {
+      "name": "COLLECTORS_SHARD_OF_FOCUS",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 81,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 1,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "COLLECTORS_EMBLEM_OF_FOCUS",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 0,
+      "strength_points": 0,
+      "focus_points": 5,
+      "passive": 11,
+      "passive_magnitude": 0.009999999776482582,
+      "purchasable": false
+    },
+    {
+      "name": "COLLECTORS_SHARD_OF_HEALTH",
+      "cost": 30,
+      "combine_count": 5,
+      "result": 83,
+      "health_points": 1,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": null,
+      "passive_magnitude": 0.0,
+      "purchasable": true
+    },
+    {
+      "name": "COLLECTORS_EMBLEM_OF_HEALTH",
+      "cost": 150,
+      "combine_count": 0,
+      "result": null,
+      "health_points": 5,
+      "strength_points": 0,
+      "focus_points": 0,
+      "passive": 11,
+      "passive_magnitude": 0.009999999776482582,
+      "purchasable": false
+    }
+  ],
+  "CONSUMABLE": [
+    {
+      "name": "TP_CRYSTAL",
+      "cost": 10,
+      "carry_limit": 1
+    },
+    {
+      "name": "ALTAR_LOCK",
+      "cost": 10,
+      "carry_limit": 1
+    }
+  ],
+  "CHAMPION": [
+    {
+      "name": "ChampionType.RYTH",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 1200.0,
+        "health_growth": 100.0,
+        "base_strength": 45.0,
+        "strength_growth": 4.5,
+        "base_focus": 100.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 19,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 1.0,
+          "radius": 1.0,
+          "duration": 1
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.VESPER_VALE",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 1000.0,
+        "health_growth": 100.0,
+        "base_strength": 45.0,
+        "strength_growth": 5.0,
+        "base_focus": 100.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 16,
+          "exclusive_with_movement": false,
+          "range": 2.0,
+          "modifier": 0.0,
+          "radius": 0.0,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.VENDETTA",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 1000.0,
+        "health_growth": 100.0,
+        "base_strength": 70.0,
+        "strength_growth": 6.0,
+        "base_focus": 100.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 16,
+          "exclusive_with_movement": false,
+          "range": 2.0,
+          "modifier": 0.0,
+          "radius": 0.0,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.CASSI",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 600.0,
+        "health_growth": 65.0,
+        "base_strength": 30.0,
+        "strength_growth": 3.0,
+        "base_focus": 100.0,
+        "focus_growth": 13.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 2.0
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": false,
+          "range": 4.0,
+          "modifier": 0.0,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.ISSAC",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 900.0,
+        "health_growth": 80.0,
+        "base_strength": 45.0,
+        "strength_growth": 3.0,
+        "base_focus": 100.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 16,
+          "exclusive_with_movement": false,
+          "range": 2.0,
+          "modifier": 0.0,
+          "radius": 0.0,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.STELLAR",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 650.0,
+        "health_growth": 65.0,
+        "base_strength": 30.0,
+        "strength_growth": 3.5,
+        "base_focus": 70.0,
+        "focus_growth": 8.5,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 2.0
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 19,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 1.399999976158142,
+          "radius": 1.0,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.PRISM",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 700.0,
+        "health_growth": 65.0,
+        "base_strength": 35.0,
+        "strength_growth": 2.5,
+        "base_focus": 80.0,
+        "focus_growth": 8.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 1.5,
+          "duration": 1
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 19,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 1.0,
+          "radius": 1.0,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.MARCELLA",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 1200.0,
+        "health_growth": 100.0,
+        "base_strength": 45.0,
+        "strength_growth": 4.5,
+        "base_focus": 60.0,
+        "focus_growth": 14.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": true
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 2.0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.WILLOW",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 700.0,
+        "health_growth": 50.0,
+        "base_strength": 55.0,
+        "strength_growth": 3.0,
+        "base_focus": 140.0,
+        "focus_growth": 5.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 4,
+          "exclusive_with_movement": false,
+          "range": 4.0,
+          "modifier": 3.0
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.REN",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 900.0,
+        "health_growth": 100.0,
+        "base_strength": 35.0,
+        "strength_growth": 5.0,
+        "base_focus": 100.0,
+        "focus_growth": 9.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 1.100000023841858,
+          "duration": 1
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 16,
+          "exclusive_with_movement": false,
+          "range": 2.0,
+          "modifier": 0.0,
+          "radius": 0.0,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.VARG",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 1000.0,
+        "health_growth": 100.0,
+        "base_strength": 45.0,
+        "strength_growth": 5.0,
+        "base_focus": 100.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "range": 4.0,
+          "modifier": 2.5,
+          "duration": 5
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.TAVI",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 900.0,
+        "health_growth": 75.0,
+        "base_strength": 45.0,
+        "strength_growth": 5.0,
+        "base_focus": 110.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "enhanced_attack": false
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 3,
+          "exclusive_with_movement": true,
+          "range": 4.0,
+          "modifier": 1.600000023841858,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "name": "ChampionType.HEART_OF_RUIN",
+      "stats": {
+        "vision_radius": 8,
+        "base_move_speed": 1,
+        "base_attack_range": 1,
+        "base_health": 1000.0,
+        "health_growth": 100.0,
+        "base_strength": 30.0,
+        "strength_growth": 3.0,
+        "base_focus": 100.0,
+        "focus_growth": 10.0,
+        "camp_damage_multiplier": 1.0
+      },
+      "abilities": [
+        {
+          "max_cooldown": 8,
+          "valid_targets": 8,
+          "exclusive_with_movement": false,
+          "range": 4.0,
+          "modifier": 1.5,
+          "duration": 5
+        },
+        {
+          "max_cooldown": 8,
+          "valid_targets": 16,
+          "exclusive_with_movement": false,
+          "range": 2.0,
+          "modifier": 1.5,
+          "radius": 1.0,
+          "duration": 1
+        }
+      ]
+    }
+  ],
+  "CAMP": [
+    {
+      "name": "CampType.WOLF",
+      "stats": {
+        "vision_radius": 8.0,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 1350.0,
+        "health_growth": 0.0,
+        "base_strength": 20.0,
+        "strength_growth": 0.0,
+        "base_focus": 1.0,
+        "focus_growth": 0.0
+      }
+    },
+    {
+      "name": "CampType.ELK",
+      "stats": {
+        "vision_radius": 8.0,
+        "base_move_speed": 1,
+        "base_attack_range": 4,
+        "base_health": 2400.0,
+        "health_growth": 0.0,
+        "base_strength": 60.0,
+        "strength_growth": 0.0,
+        "base_focus": 1.0,
+        "focus_growth": 0.0
+      }
+    },
+    {
+      "name": "CampType.GEM_CLUSTER",
+      "stats": {
+        "vision_radius": 8.0,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 120.0,
+        "health_growth": 0.0,
+        "base_strength": 0.0,
+        "strength_growth": 0.0,
+        "base_focus": 1.0,
+        "focus_growth": 0.0
+      }
+    },
+    {
+      "name": "CampType.GOLD_CLUSTER",
+      "stats": {
+        "vision_radius": 8.0,
+        "base_move_speed": 1,
+        "base_attack_range": 3,
+        "base_health": 120.0,
+        "health_growth": 0.0,
+        "base_strength": 0.0,
+        "strength_growth": 0.0,
+        "base_focus": 1.0,
+        "focus_growth": 0.0
+      }
+    },
+    {
+      "name": "CampType.MONOLITH",
+      "stats": {
+        "vision_radius": 8.0,
+        "base_move_speed": 1,
+        "base_attack_range": 5,
+        "base_health": 20000.0,
+        "health_growth": 0.0,
+        "base_strength": 200.0,
+        "strength_growth": 0.0,
+        "base_focus": 1.0,
+        "focus_growth": 0.0
+      }
+    },
+    {
+      "name": "CampType.GOLEM",
+      "stats": {
+        "vision_radius": 8.0,
+        "base_move_speed": 1,
+        "base_attack_range": 4,
+        "base_health": 5000.0,
+        "health_growth": 0.0,
+        "base_strength": 120.0,
+        "strength_growth": 0.0,
+        "base_focus": 1.0,
+        "focus_growth": 0.0
+      }
+    }
+  ]
+}
