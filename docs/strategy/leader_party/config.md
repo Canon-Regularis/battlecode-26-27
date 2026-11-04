@@ -1,6 +1,6 @@
 # Release configuration
 
-Source of configurable switches: `bots/leader_party/src/config.h`. These are measured starting policies, not global optima.
+Source of configurable switches: `config.h` in both `bots/leader_party` and the preferred `bots/leader_party_subhan`; these switches are identical. These are measured starting policies, not global optima.
 
 | Setting | Value |
 | --- | --- |
@@ -13,6 +13,8 @@ Source of configurable switches: `bots/leader_party/src/config.h`. These are mea
 | Maximum native fields per own dispatch | 3 |
 | Shared coordination / ATTACK initiation | off / off |
 | Distance routing / optional wards | on / on |
+
+In the preferred variant, planned camp loops take precedence over distance ranking after the first two equipment phases, subject to the existing candidate eligibility checks. Planner bounds are 24 camps, four altars, beam width four, five camps per route, 768 expansions and three reported routes per champion, with a one-million-fuel draft reserve. See the [planner comparison](subhan_comparison.md) for scoring weights, fallback behavior and evaluation.
 
 Other implementation constants: recovery 35%/55%; leadership eligibility >50%; equipment recall >=300 gold with empty bag and no visible enemy; five shards per purchase phase; at most 40 purchases per call; banking courtesy wait three rounds; blocked altar retry three rounds; exploration viewpoint eight rounds; carrier reacquisition two rounds. These remain explicit constants in the decision/execution modules and are not dynamically tunable.
 

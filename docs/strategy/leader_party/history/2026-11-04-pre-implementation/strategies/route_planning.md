@@ -1,5 +1,7 @@
 # Temporary dynamic camp routing
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../../README.md).
+
 Status: user-approved direction recorded on 22 October 2026. A teammate is developing a replacement planner; keep this baseline behind a small replaceable interface. This document chooses objectives, while pathfinding.md supplies movement and state_machine.md alone defines transitions.
 
 ## Objective selection

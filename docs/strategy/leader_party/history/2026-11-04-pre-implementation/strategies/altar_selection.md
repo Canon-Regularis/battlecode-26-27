@@ -1,10 +1,12 @@
 > **TEMPORARY MVP PLACEHOLDER. Use this baseline for today's MVP; replace and tune it after observing working matches. This is an implementation specification, not installed bot code.**
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../../README.md).
+
 # MVP altar selection and banking approach
 
 Goal: take a carried bag to a reasonably safe reachable altar, remove a blocking lock when worthwhile, and confirm an actual tribute channel. All configurable values are in [config.md](../config.md). PREPARE_GEM_BANKING owns this work; BANK_GEMS owns an active channel.
 
-Sources: [tribute and lock rules](../../../cambc/GameRules.md#tribute-at-an-altar), [Python SDK](../../../../sdk/python/cambc/__init__.py), [pathfinding baseline](pathfinding.md). Static altar positions come from game_map.altars(); locks and enemies require current personal vision.
+Sources: [tribute and lock rules](../../../../../cambc/GameRules.md#tribute-at-an-altar), [Python SDK](../../../../../../sdk/python/cambc/__init__.py), [pathfinding baseline](pathfinding.md). Static altar positions come from game_map.altars(); locks and enemies require current personal vision.
 
 ## 1. Select from exact altar tiles
 

@@ -1,8 +1,8 @@
 # Leader-party strategy
 
-Design for a C++ bot named `leader_party`; implementation is pending the design interview. The existing starter is not the requested finished bot.
+Historical pre-implementation design for `leader_party`, retained for strategy context. It is superseded by the [current strategy and measured variants](../../README.md); unfinished requirements below do not describe current bot behavior.
 
-The earlier custom C++ implementation is [archived](../../../bots/archive/state-machine-2026-11-04/README.md). The [critical analysis](critical_analysis.md) reviews this revised plan, its implementation blockers, and strategic risks. Its recommendations are proposals, not changes to the confirmed policy below.
+The earlier custom C++ implementation is [archived](../../../../../bots/archive/state-machine-2026-11-04/README.md). The replacement's resolved behavior and remaining limitations are documented in the [implementation results](../../implementation_results.md).
 
 [state_machine.md](state_machine.md) alone defines transitions. The deleted team plan is not used. `analysis.md` and `team_meta.md` are excluded.
 

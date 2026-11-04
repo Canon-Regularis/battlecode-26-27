@@ -1,6 +1,6 @@
 # Objective tempo and altar denial: implementation brief
 
-This is the proposed bot strategy for the current CAMBC rules. It is written as an implementation handoff. Its goal is to beat strong ladder teams by **turning camp rewards into tributed gems reliably**, while denying opponents' long tribute channels. It cannot guarantee a win against a particular bot. The [champion analysis](analysis.md) contains the ratings and the 21 October 2026 ladder snapshot on which this draft choice is based; [GameRules.md](../cambc/GameRules.md) and the [Python API](../cambc/api/BotAPIPython.md) define the actions.
+Historical strategy proposal, retained for its draft, equipment and combat reasoning. It is not an active implementation handoff; the [current bot strategy](leader_party/README.md) records what is implemented. Its goal was to beat strong ladder teams by **turning camp rewards into tributed gems reliably**, while denying opponents' long tribute channels. It cannot guarantee a win against a particular bot. The [champion analysis](analysis.md) contains the ratings and the 21 October 2026 ladder snapshot on which this draft choice is based; [GameRules.md](../cambc/GameRules.md) and the [Python API](../cambc/api/BotAPIPython.md) define the actions.
 
 **Earlier strategy:** The routing and shared-memory proposals here have been superseded by the [leader-party strategy](leader_party/README.md), including its [state machine](leader_party/state_machine.md) and [communication contract](leader_party/communciation.md). Retain this document for its earlier draft, equipment, combat, and SDK notes; it does not define the current communication layout.
 
@@ -10,9 +10,9 @@ The ladder's top 20 showed Heart of Ruin among 17 teams' three most-picked champ
 
 The workspace now pins `cambc==4.0.0` and `sdk_version = "4.0.0"`, with Python and C++ enabled. The official SDK exposes `ChampionDraft.HEART_OF_RUIN`, `ChampionType.HEART_OF_RUIN`, and `CampType.GOLEM`. The Python starter's random draft includes all twelve named picks; the C++ bot retains its existing ordered draft policy. Neither starter implements this earlier brief's Heart-first policy merely by upgrading.
 
-The 3 November 2026 [upstream audit](../cambc/UPSTREAM_AUDIT.md) records SDK synchronization, runtime balance values, and validation. The engine confirms a 10-turn ward recharge, five-hit altar locks, 100-gold kill reward, Prism's 1.5 Focus per gem, Vesper's 33% gold bonus, and Marcella's 2 gold per tributed gem. Read runtime settings and item design metadata when implementing strategy. Monster's emblem bonus is now 15%; Treasure's is 10%; Greed combines after 25 shards rather than five.
+The [SDK reference](../cambc/api/SDK_4.0.0.md) records current sources and the [runtime snapshot](../cambc/runtime-4.0.0.json) records balance values. The engine confirms a 10-turn ward recharge, five-hit altar locks, 100-gold kill reward, Prism's 1.5 Focus per gem, Vesper's 33% gold bonus, and Marcella's 2 gold per tributed gem. Read runtime settings and item design metadata when implementing strategy. Monster's emblem bonus is now 15%; Treasure's is 10%; Greed combines after 25 shards rather than five.
 
-This brief remains an earlier proposal. The current [leader-party strategy](leader_party/README.md) governs intended behavior; the implemented C++ bot lives in `bots/starter-cpp/src/`. Python's `main.py` remains the draft/gameplay dispatcher.
+This brief remains an earlier proposal. The current [leader-party strategy](leader_party/README.md) governs implemented behavior; the preferred C++ bot lives in `bots/leader_party_subhan/src/`, with `bots/leader_party/src/` retained as its baseline. The former `starter-cpp` implementation is archived.
 
 ## 1. Win condition and governing policy
 

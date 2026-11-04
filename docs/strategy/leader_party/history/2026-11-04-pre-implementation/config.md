@@ -1,5 +1,7 @@
 # Configuration reference
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../README.md).
+
 Status: documentation only. These variables must become one implementation config; do not scatter copies through bot code. Values are starting proposals for trial and error, not measured optima. Changing a value must not change the meaning of a state. The shop, navigation, altar, and ward settings below are **temporary MVP placeholders to replace/tune after initial matches**.
 
 ## Leadership and party

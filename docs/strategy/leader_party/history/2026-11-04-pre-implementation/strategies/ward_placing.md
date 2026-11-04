@@ -1,10 +1,12 @@
 > **TEMPORARY MVP PLACEHOLDER. Use this baseline for today's MVP; replace and tune it after observing working matches. This is an implementation specification, not installed bot code.**
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../../README.md).
+
 # MVP ward placement
 
 Goal: place the free ward as far from the champion as legally possible toward the likely enemy approach, using the terrain-aware route toward the enemy side of the map. Configuration is in [config.md](../config.md).
 
-Rules: one active ward per body, replacement removes its old ward, radius six, placement within two tiles, recharge ten owner turn ends. Wards are permanent under current rules. **Ward vision belongs to its owner only.** Source: [rules](../../../cambc/GameRules.md#wards), [SDK](../../../../sdk/python/cambc/__init__.py).
+Rules: one active ward per body, replacement removes its old ward, radius six, placement within two tiles, recharge ten owner turn ends. Wards are permanent under current rules. **Ward vision belongs to its owner only.** Source: [rules](../../../../../cambc/GameRules.md#wards), [SDK](../../../../../../sdk/python/cambc/__init__.py).
 
 ## 1. Run after essential actions
 

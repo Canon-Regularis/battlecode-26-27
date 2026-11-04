@@ -1,6 +1,6 @@
 # Implemented state machine
 
-Source: `bots/leader_party/src/state_machine.cpp`, with execution and task bookkeeping in `bot.cpp`. Earlier proposals are preserved under `history/`.
+Source: `state_machine.cpp` in both `bots/leader_party` and the preferred `bots/leader_party_subhan`, with execution and task bookkeeping in `bot.cpp`. Their transition policy is shared; the preferred variant additionally advances planned camp routes when tasks finish or are abandoned. Earlier proposals are preserved under `history/`.
 
 The pure decision function applies the first matching condition:
 

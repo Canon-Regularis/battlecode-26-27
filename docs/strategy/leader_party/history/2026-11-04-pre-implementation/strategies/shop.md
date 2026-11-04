@@ -1,10 +1,12 @@
 > **TEMPORARY MVP PLACEHOLDER. Use this baseline for today's MVP; replace and tune it after observing working matches. This is an implementation specification, not installed bot code.**
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../../README.md).
+
 # MVP shopping
 
 Goal: spend gold on a predictable useful build, keep one affordable altar lock, and leave spawn promptly. Use [config.md](../config.md) as the single configuration source. The state machine decides when to recall/heal; shopping does not create another recall trigger.
 
-Sources: [item and consumable rules](../../../cambc/GameRules.md#items--gold), [Python SDK](../../../../sdk/python/cambc/__init__.py). Shards cost 30 gold, five matching shards in the baseline families below combine automatically (Greed requires 25), and consumables cost 10. Read actual costs/combine metadata from the SDK.
+Sources: [item and consumable rules](../../../../../cambc/GameRules.md#items--gold), [Python SDK](../../../../../../sdk/python/cambc/__init__.py). Shards cost 30 gold, five matching shards in the baseline families below combine automatically (Greed requires 25), and consumables cost 10. Read actual costs/combine metadata from the SDK.
 
 ## When to shop
 

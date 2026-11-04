@@ -1,5 +1,7 @@
 # Combat
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../README.md).
+
 Status: user-approved principles recorded on 22 October 2026; unresolved tactical choices are listed below. Bot implementation is pending the design interview.
 
 Only [state_machine.md](state_machine.md) defines state transitions and commitment. Combat chooses legal actions inside the selected state. Re-read observations and action allowances after each action; channeling, death, stun, and the current state's movement limits remain authoritative.

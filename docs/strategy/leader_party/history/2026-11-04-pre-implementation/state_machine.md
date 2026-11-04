@@ -1,5 +1,7 @@
 # Champion state machine
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../README.md).
+
 Current leader-party design; documentation only. This file alone defines state transitions. Read with [configuration](config.md), [communication](communciation.md), and the [editable diagram](state_machine.mmd).
 
 ## States at a glance

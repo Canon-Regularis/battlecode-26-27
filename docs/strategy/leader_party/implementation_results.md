@@ -1,6 +1,6 @@
 # C++ replacement: implementation and measured results
 
-Implemented on 2026-11-04 in `bots/leader_party`, on branch `state_machine`, using CAMBC SDK/CLI 4.0.0 (engine summary version 2.0.0). The active bot clears/captures camps, buys equipment, recovers, and banks gems. The retired state-machine bot and all three incumbent binaries remain unchanged. No commit or push was made.
+Baseline implemented on 2026-11-04 in `bots/leader_party`, on branch `state_machine`, using CAMBC SDK/CLI 4.0.0 (engine summary version 2.0.0). The bot clears/captures camps, buys equipment, recovers, and banks gems. The retired state-machine bot and all three incumbent binaries remain unchanged. The subsequent [Subhan planner variant](subhan_comparison.md) is now preferred; the results below describe the original baseline and its initial implementation, not that variant.
 
 Final result: **22/24 wins against gold_diamond** in the main six-map suite; **5/8** on four additional geometry maps; **12/12** against the official Python starter. All **44 final matches scored positive gems with zero VM faults and zero unexpected LP_ERROR entries**. The six-map incumbent games completed at least two engine-confirmed tributes per game. These results support a stronger tested replacement, not a universally winning bot.
 
@@ -36,7 +36,7 @@ Main-suite mean scoring rate: 59.77 submitted gems per 100 rounds (mean of per-m
 
 Exploratory matched comparisons used the same six maps and both sides against gold_diamond. Value routing with shared guidance won 10/12 (10,835 submitted gems; mean rate 58.53/100 rounds). Disabling guidance with value routing also won 10/12 (11,157 gems; 59.28/100). Distance routing with guidance won 11/12 (11,476 gems; 58.52/100). These intermediate variants exposed rejected-move/reset errors subsequently fixed; their result files preserve that evidence. They are directional comparisons, not statistically independent estimates.
 
-The release retains distance routing and disables shared guidance, consistent with the plan instruction to retain the simpler functioning policy when coordination regresses. The final combination was tested separately. Direct visible camp/carrier protection and optional wards remain enabled. Versioned shared-memory packing, election/heartbeat and BANK publication code remain present for later experiments. Remote chunk responders and ATTACK creation remain disabled/unimplemented.
+The release retains distance routing and disables shared guidance, retaining the simpler functioning policy after coordination regressed. The final combination was tested separately. Direct visible camp/carrier protection and optional wards remain enabled. Versioned shared-memory packing, election/heartbeat and BANK publication code remain present for later experiments. Remote chunk responders and ATTACK creation remain disabled/unimplemented.
 
 ## Failures fixed during implementation
 

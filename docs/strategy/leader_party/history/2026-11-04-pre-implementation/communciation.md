@@ -1,8 +1,10 @@
 # Team communication: bits and meanings
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../README.md).
+
 Leader-party binary specification, based on commit 66b1cd6 with the user's explicit corrections; **not implemented**. The filename communciation.md is retained from the original request. Read with [state_machine.md](state_machine.md), and [config.md](config.md).
 
-Capacity: **8 live shared bytes = 64 bits**, plus 1,024 bytes of draft memory that becomes read-only during play. Each bot has private state and vision. Sources: [rules](../../cambc/GameRules.md), [Python API](../../cambc/api/BotAPIPython.md).
+Capacity: **8 live shared bytes = 64 bits**, plus 1,024 bytes of draft memory that becomes read-only during play. Each bot has private state and vision. Sources: [rules](../../../../cambc/GameRules.md), [Python API](../../../../cambc/api/BotAPIPython.md).
 
 ## What the committed starter writes
 
@@ -12,7 +14,7 @@ Capacity: **8 live shared bytes = 64 bits**, plus 1,024 bytes of draft memory th
 | Shared bits 32–63 | Unassigned by the checked starter. |
 | Draft bytes 0–10 | Literal UTF-8 hello world. |
 
-Sources: [bot.py](../../../bots/starter-python/src/bot.py), [draft.py](../../../bots/starter-python/src/draft.py). Replace the starter round write when implementing this protocol; it would overwrite strategy fields. This documentation does not change bot code.
+Sources: [bot.py](../../../../../bots/starter-python/src/bot.py), [draft.py](../../../../../bots/starter-python/src/draft.py). Replace the starter round write when implementing this protocol; it would overwrite strategy fields. This documentation does not change bot code.
 
 ## Revised payload layout
 

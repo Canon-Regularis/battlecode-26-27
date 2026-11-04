@@ -1,10 +1,12 @@
 > **TEMPORARY MVP PLACEHOLDER. Use this baseline for today's MVP; replace and tune it after observing working matches. This is an implementation specification, not installed bot code.**
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../../README.md).
+
 # MVP pathfinding
 
 Goal: walk legally around terrain/visible units to a useful tile, with minimal code. Use the SDK's native DistanceField and Bitboard operations. The existing leader route planner still chooses the next **objective**; this helper supplies tile routes and distances for any state.
 
-Sources: [movement rules](../../../cambc/GameRules.md#ways-to-move), [DistanceField API](../../../cambc/api/BotAPIPython.md#cambcdistancefield), [SDK move_towards implementation](../../../../sdk/python/cambc/__init__.py). Configuration is in [config.md](../config.md).
+Sources: [movement rules](../../../../../cambc/GameRules.md#ways-to-move), [DistanceField API](../../../../../cambc/api/BotAPIPython.md#cambcdistancefield), [SDK move_towards implementation](../../../../../../sdk/python/cambc/__init__.py). Configuration is in [config.md](../config.md).
 
 ## 1. Input/output
 

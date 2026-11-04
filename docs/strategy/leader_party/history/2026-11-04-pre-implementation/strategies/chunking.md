@@ -1,5 +1,7 @@
 # Global chunking and target inspection
 
+Historical pre-implementation strategy; superseded by the [current bot documentation](../../../README.md).
+
 Status: selected design for the leader-party strategy; not implemented. This document defines the shared map partition and a bounded inspection helper. It does not replace the leader's route planner, select which altar to bank at, or change the state machine's safety priorities.
 
 Read with [configuration](../config.md), [communication](../communciation.md), and [state transitions](../state_machine.md).
@@ -28,14 +30,14 @@ The chunk ID is a compact **area address**. It is not an exact coordinate, a pat
 
 | Fact | Design consequence | Source |
 | --- | --- | --- |
-| Map dimensions range from 30×30 to 100×100. | Bound grid count using 100, but calculate using actual width/height. | [Rules: map features](../../../cambc/GameRules.md#map-features) |
-| Champions see up to eight tiles in every direction, including diagonally. Walls and bushes block sight. | Chebyshev range gives an open-terrain guarantee; geometry alone cannot prove actual visibility. | [Rules: vision](../../../cambc/GameRules.md#what-you-can-see) |
-| Standing in a connected bush makes that bush transparent to the observer; other bushes still occlude. | A viewpoint inside a bush can expose targets an outside centre cannot see. Evaluate using the engine. | [Rules: vision](../../../cambc/GameRules.md#what-you-can-see) |
-| Holes do not block sight; they cannot be ordinary walking destinations. Altars and enemy spawn tiles also cannot be ordinary destinations. | Visibility and standability are separate filters. | [Rules: movement](../../../cambc/GameRules.md#ways-to-move) |
-| Own ward contributes vision, but teammates' vision/wards are not shared. Ward radius is six. | Inspect using this body's actual visible mask; do not assume a ward alone covers a 15×15 chunk. | [Rules: wards](../../../cambc/GameRules.md#wards) |
-| Static terrain, altar positions, camp groups, and spawn positions are available through map queries. | Pre-index static objectives; hidden current camp state still needs a legal live query. | [game_map.py](../../../../sdk/python/cambc/game_map.py) |
-| Champion.visible_tiles_from(position) / visible_tiles_from_into provide hypothetical champion vision. | Use these for candidate visibility; do not substitute Ward.visible_tiles_from or implement an approximate line-of-sight algorithm. | [Python API](../../../cambc/api/BotAPIPython.md#visible_tiles_from), [SDK implementation](../../../../sdk/python/cambc/__init__.py) |
-| Group.state() requires at least one spawn tile in current vision and returns a group-level state. | A valid engine group-state result can confirm a cleared group without manually seeing every monster. Merely seeing one dead monster cannot. | [game_map.py](../../../../sdk/python/cambc/game_map.py) |
+| Map dimensions range from 30×30 to 100×100. | Bound grid count using 100, but calculate using actual width/height. | [Rules: map features](../../../../../cambc/GameRules.md#map-features) |
+| Champions see up to eight tiles in every direction, including diagonally. Walls and bushes block sight. | Chebyshev range gives an open-terrain guarantee; geometry alone cannot prove actual visibility. | [Rules: vision](../../../../../cambc/GameRules.md#what-you-can-see) |
+| Standing in a connected bush makes that bush transparent to the observer; other bushes still occlude. | A viewpoint inside a bush can expose targets an outside centre cannot see. Evaluate using the engine. | [Rules: vision](../../../../../cambc/GameRules.md#what-you-can-see) |
+| Holes do not block sight; they cannot be ordinary walking destinations. Altars and enemy spawn tiles also cannot be ordinary destinations. | Visibility and standability are separate filters. | [Rules: movement](../../../../../cambc/GameRules.md#ways-to-move) |
+| Own ward contributes vision, but teammates' vision/wards are not shared. Ward radius is six. | Inspect using this body's actual visible mask; do not assume a ward alone covers a 15×15 chunk. | [Rules: wards](../../../../../cambc/GameRules.md#wards) |
+| Static terrain, altar positions, camp groups, and spawn positions are available through map queries. | Pre-index static objectives; hidden current camp state still needs a legal live query. | [game_map.py](../../../../../../sdk/python/cambc/game_map.py) |
+| Champion.visible_tiles_from(position) / visible_tiles_from_into provide hypothetical champion vision. | Use these for candidate visibility; do not substitute Ward.visible_tiles_from or implement an approximate line-of-sight algorithm. | [Python API](../../../../../cambc/api/BotAPIPython.md#visible_tiles_from), [SDK implementation](../../../../../../sdk/python/cambc/__init__.py) |
+| Group.state() requires at least one spawn tile in current vision and returns a group-level state. | A valid engine group-state result can confirm a cleared group without manually seeing every monster. Merely seeing one dead monster cannot. | [game_map.py](../../../../../../sdk/python/cambc/game_map.py) |
 
 The SDK visibility query predicts which tiles would be visible; it does not reveal unseen occupants or make a destination walkable. Confirm observations after arriving.
 

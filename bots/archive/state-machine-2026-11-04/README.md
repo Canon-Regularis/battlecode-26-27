@@ -32,10 +32,10 @@ Captured C++ output contains four `run_state.capture_point` errors reporting `Kn
 
 `move_to_goals` in [bot.cpp](starter-cpp/src/bot.cpp) explicitly permits camp-occupied goal tiles and clears goals from its blocked mask. That conflicts with the revised plan's requirement to approach free legal tiles. This is a concrete defect consistent with the logged error, but the complete cause of the scoring failure has not been isolated.
 
-## Relationship to the current plan
+## Relationship to the replacement
 
-[protocol.h](starter-cpp/src/protocol.h) uses report stamps, eligibility offers, runner assignments, a rally owner and an initialization bit. The current plan restores safety summaries and reserves bits 41–63, forbids nonleader role allocations, and retains leadership through state changes. The archived code also releases leadership during camp selection. It must not be treated as the current specification's reference implementation.
+[protocol.h](starter-cpp/src/protocol.h) uses report stamps, eligibility offers, runner assignments, a rally owner and an initialization bit. The replacement has a different versioned protocol and allocates no runner, collector or escort roles. Shared coordination is disabled in its measured release. The archived code also releases leadership during camp selection. It must not be treated as the current specification's reference implementation.
 
-The [critical analysis](../../../docs/strategy/leader_party/critical_analysis.md) evaluates the revised plan separately. One map and opponent establish a serious regression signal, not a tournament ranking or proof that state machines themselves are unsuitable.
+The [current strategy and results](../../../docs/strategy/leader_party/README.md) describe the replacement separately. One map and opponent establish a serious regression signal, not a tournament ranking or proof that state machines themselves are unsuitable.
 
 To revisit the experiment, copy the preserved source into a separately named active bot directory and regenerate its build files with a compatible SDK. Preserve this archive unchanged as the comparison point.
