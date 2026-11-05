@@ -1,0 +1,17 @@
+[Unit]
+Description=Battlecode Pi coding worker
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/battlecode-26-27
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/python3 %h/battlecode-26-27/tools/agent_bridge.py --state %h/.local/state/battlecode-agent work --role coder --name pi5
+Restart=on-failure
+RestartSec=30
+KillMode=control-group
+TimeoutStopSec=30
+
+[Install]
+WantedBy=default.target
