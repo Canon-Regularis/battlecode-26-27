@@ -8,6 +8,7 @@ import re
 import secrets
 import shutil
 import signal
+import socket
 import subprocess
 import tempfile
 import time
@@ -157,6 +158,8 @@ class Mailbox:
                 raise ValueError('Worker lease expired or was replaced')
             allowed = {'coding': {'coding', 'ready', 'coding_failed'},
                        'testing': {'testing', 'done', 'testing_failed'}}
+            if job.get('kind') == 'ping':
+                allowed['coding'].add('done')
             if status not in allowed[job['status']]:
                 raise ValueError('Invalid job transition')
             job.update(payload or {})
@@ -270,8 +273,7 @@ Task:
     mailbox.finish(job['id'], job['lease']['token'], 'coding')
     staged = run(['git', 'diff', '--cached', '--quiet'], cwd=path, check=False)
     if staged.returncode:
-        run(['git', '-c', 'user.name=Pi coding agent', '-c', 'user.email=pi-agent@localhost',
-             'commit', '-m', f'Implement experiment {job["id"]}'], cwd=path)
+        run(['git', 'commit', '-m', f'Implement experiment {job["id"]}'], cwd=path)
     commit = run(['git', 'rev-parse', 'HEAD'], cwd=path).stdout.strip()
     run(['git', 'merge-base', '--is-ancestor', job['base_commit'], commit], cwd=path)
     run(['git', 'push', 'origin', f'HEAD:refs/heads/{branch}'], cwd=path)
@@ -322,8 +324,12 @@ def worker(mailbox, args):
                 logs.mkdir(parents=True, exist_ok=False)
                 print(f'{args.role}: {job["id"]}; logs: {logs}', flush=True)
                 try:
-                    result = implement(mailbox, job, args, logs) if args.role == 'coder' else test_candidate(mailbox, job, args, logs)
-                    status = 'ready' if args.role == 'coder' else 'done'
+                    if job.get('kind') == 'ping':
+                        result = dict(worker_reply=dict(name=args.name, host=socket.gethostname(), received_at=time.time()))
+                        status = 'done'
+                    else:
+                        result = implement(mailbox, job, args, logs) if args.role == 'coder' else test_candidate(mailbox, job, args, logs)
+                        status = 'ready' if args.role == 'coder' else 'done'
                     mailbox.finish(job['id'], job['lease']['token'], status, result)
                 except Exception as error:
                     save(logs / 'failure.json', {'error': str(error)})
@@ -376,6 +382,8 @@ def main():
     submit.add_argument('--base-bot', default='leader_party_tuned')
     submit.add_argument('--instructions', type=Path, required=True)
     sub.add_parser('status')
+    ping = sub.add_parser('ping', help='Check worker receipt without a model call or code changes')
+    ping.add_argument('--id', default=None)
     show = sub.add_parser('show');show.add_argument('id')
     work = sub.add_parser('work')
     work.add_argument('--role', choices=['coder', 'tester'], required=True)
@@ -404,6 +412,11 @@ def main():
         task = dict(id=job_id, base_commit=args.base, base_bot=args.base_bot,
                     candidate_bot='pi_' + job_id, instructions=args.instructions.read_text(encoding='utf-8'))
         print(json.dumps(mailbox.submit(task), indent=2))
+    elif args.command == 'ping':
+        job_id = args.id or 'ping-' + uuid.uuid4().hex[:12]
+        if not ID.fullmatch(job_id):
+            raise ValueError('Invalid ping identifier')
+        print(json.dumps(mailbox.submit(dict(id=job_id, kind='ping')), indent=2))
     elif args.command == 'status':
         print(json.dumps([{k: j[k] for k in ('id', 'status', 'updated_at')} for j in mailbox.jobs()], indent=2))
     elif args.command == 'show':

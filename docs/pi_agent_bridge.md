@@ -75,6 +75,15 @@ Document any scenario that remains unverified; do not claim a win-rate improveme
 .venv/Scripts/python.exe tools/agent_bridge.py show bank-progress-01
 ```
 
+To verify the Pi is listening without making a model call, send a ping and inspect its reply:
+
+```powershell
+.venv/Scripts/python.exe tools/agent_bridge.py ping --id pi-connectivity-01
+.venv/Scripts/python.exe tools/agent_bridge.py show pi-connectivity-01
+```
+
+The coder worker completes ping jobs locally with its name, hostname and receipt time. A `done` status proves the Pi read and acknowledged the mailbox; it does not run Codex or modify a bot.
+
 Use `--base-bot lp_feature_c02_record_guard` to start from the selected combined challenger instead; the snapshot must contain that bot. Subsequent jobs can start from a previous candidate's commit and bot name. The whole loop is directed through these commands, so this chat can issue implementation tasks and inspect results without controlling the Pi desktop.
 
 ## Run the PC tester
@@ -92,6 +101,8 @@ The runner reserves one physical core, uses the other permitted logical processo
 ## Keep the Pi worker running
 
 After a successful real smoke test, copy `tools/pi-coder.service.example` to `~/.config/systemd/user/battlecode-coder.service`, adjusting its checkout path if needed. Then:
+
+The service example loads the already configured provider credential file at `~/.config/codex/subhan-pi.env`. GitHub CLI sign-in on the Pi supplies Git credentials through `gh auth setup-git`, with the repository using HTTPS. Candidate commits use the Pi's configured Git name/email; set those to your normal commit identity. The worker confines candidate pushes to its generated `pi/` branches and uses the separate mailbox branch for job state. No deploy key is required for this setup.
 
 ```bash
 systemctl --user daemon-reload

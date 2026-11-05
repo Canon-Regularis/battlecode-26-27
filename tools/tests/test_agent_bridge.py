@@ -24,6 +24,11 @@ class BridgeTests(unittest.TestCase):
         scratch.mkdir(parents=True, exist_ok=True)
         self.temporary = tempfile.TemporaryDirectory(dir=scratch)
         self.root = Path(self.temporary.name)
+        git_config = self.root / 'test-gitconfig'
+        git_config.write_text('[user]\n name = Test\n email = test@localhost\n')
+        self.git_environment = patch.dict(os.environ, {'GIT_CONFIG_GLOBAL': str(git_config)})
+        self.git_environment.start()
+        self.addCleanup(self.git_environment.stop)
         self.remote = self.root / 'remote.git'
         self.seed = self.root / 'seed'
         bridge.run(['git', 'init', '--bare', self.remote])
@@ -86,6 +91,16 @@ class BridgeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.pi.finish('experiment', job['lease']['token'], 'done')
 
+    def test_ping_round_trip_never_invokes_coding_agent(self):
+        self.pc.submit(dict(id='ping-one', kind='ping'))
+        args = argparse.Namespace(role='coder', name='pi5', once=True, poll=5, timeout=30)
+        with patch.object(bridge, 'implement') as implement:
+            bridge.worker(self.pi, args)
+            implement.assert_not_called()
+        result = self.job('ping-one')
+        self.assertEqual(result['status'], 'done')
+        self.assertEqual(result['worker_reply']['name'], 'pi5')
+
     def test_coder_push_and_pc_test_round_trip(self):
         self.submit()
         args = argparse.Namespace(role='coder', name='pi', once=True, poll=5, timeout=30, codex=sys.executable)
@@ -97,6 +112,8 @@ class BridgeTests(unittest.TestCase):
         ready = self.job()
         self.assertEqual(ready['status'], 'ready')
         self.assertNotEqual(ready['candidate_commit'], self.base)
+        author = bridge.run(['git', '--git-dir', self.remote, 'show', '-s', '--format=%an <%ae>', ready['candidate_commit']]).stdout.strip()
+        self.assertEqual(author, 'Test <test@localhost>')
         tester = self.root / 'fake_test.py'
         tester.write_text('import json,pathlib,subprocess,sys\n'
                           'commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=sys.argv[1],text=True).strip()\n'

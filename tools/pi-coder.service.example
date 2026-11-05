@@ -7,6 +7,8 @@ After=network-online.target
 Type=simple
 WorkingDirectory=%h/battlecode-26-27
 Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=GIT_TERMINAL_PROMPT=0
+EnvironmentFile=%h/.config/codex/subhan-pi.env
 ExecStart=/usr/bin/python3 %h/battlecode-26-27/tools/agent_bridge.py --state %h/.local/state/battlecode-agent work --role coder --name pi5
 Restart=on-failure
 RestartSec=30
