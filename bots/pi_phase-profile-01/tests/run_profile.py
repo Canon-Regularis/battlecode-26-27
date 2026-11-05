@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+"""Focused native checks; all outputs use a temporary directory."""
+from pathlib import Path
+import subprocess
+import tempfile
+ROOT = Path(__file__).resolve().parents[3]
+BOT = ROOT / 'bots/pi_phase-profile-01'
+def run(*args):
+    subprocess.run([str(a) for a in args], cwd=ROOT, check=True)
+with tempfile.TemporaryDirectory(prefix='ppfx-') as temp:
+    for enabled in (0, 1):
+        out = Path(temp) / f'profile-{enabled}'
+        run('g++', '-std=c++20', '-O2', '-Wall', '-Wextra', '-Werror',
+            f'-DPPFX_ENABLED={enabled}', '-I', BOT/'src', BOT/'tests/phase_profile.cpp', '-o', out)
+        run(out)
+        run('g++', '-std=c++20', '-fpermissive', '-w', '-include', 'cmath',
+            '-fsyntax-only', f'-DPPFX_ENABLED={enabled}', '-I', ROOT/'sdk/cpp',
+            *sorted((BOT/'src').glob('*.cpp')))
+    out = Path(temp)/'mask'
+    run('g++', '-std=c++20', '-O2', '-DPPFX_ENABLED=1', '-DPPFX_MASK_TEST',
+        '-DPPFX_PHASE_MASK=1', '-I', BOT/'src', BOT/'tests/phase_profile.cpp', '-o', out)
+    run(out)
+    for source in sorted((BOT/'src').glob('*.cpp')):
+        args = ['g++', '-std=c++20', '-E', '-P', '-I', str(ROOT/'sdk/cpp')]
+        original = ROOT/'bots/leader_party_tuned/src'/source.name
+        a = subprocess.check_output(args+[str(original)], cwd=ROOT)
+        b = subprocess.check_output(args+[str(source)], cwd=ROOT)
+        assert a.split() == b.split(), source.name
+    out = Path(temp)/'decisions'
+    run('g++', '-std=c++20', '-O2', '-I', BOT/'src', BOT/'tests/decisions.cpp',
+        BOT/'src/state_machine.cpp', '-o', out)
+    run(out)
+print('PASS profiler ON/OFF, SDK syntax (native workarounds), OFF token identity, decisions')
