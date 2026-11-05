@@ -4,15 +4,199 @@
   "base_bot": "pi_dominant-gems-01",
   "candidate_bot": "pi_dominant-team-01",
   "instructions": "# dt01: test shared passive-objective admission at the opening\n\nParent source `ef22c7f92ecab5fe76e3333ab7df3f8ec567ff9a`, base bot `pi_dominant-gems-01`. Candidate `bots/pi_dominant-team-01/` only. This is a dependent, separately identified experiment; parent is tested but unpromoted. Preserve IMPLEMENTATION.md history by rewriting it for this experiment with parent/delta explicit. Do not merge into champion or change platform selection.\n\n## Evidence, rationale and limits\n\nParent dg01 chooses the unique positive-gem, zero-gold, all-gem_cluster group whose gems exceed all other groups combined, only during bootstrap and only when original eligibility holds. It is active on3/112 surveyed development maps. It improves the two other affected maps7/8 vs3/8 but Vault remains1/4 vs1/4, with first useful candidate capture1239, far too late. Existing max_clear90 uses full group HP divided by one actor's strength+.2focus and excludes Vault's49 passive clusters/5880HP/343gems for ALL four starting picks. Other camps together yield16gems. Task lifetime90 remains a separate bound on travel/work/commitment.\n\nFish's same-map baseline clear33/capture39 and Mite's capture38 establish an opening economic opportunity with different opponents. Fish buys no items before first capture. At first center clear33, its five physical actors total6120 monster damage, equal to center5880 plus earlier cleared240HP gold group. Vendetta receives final clear credit but has only2090 cumulative damage, so clear credit cannot mean solo work. This is aggregate consistency evidence for distributed work; it does not prove exact target allocation, routes or commands. Our current four-pick roster has different abilities and fewer bodies, so success is uncertain.\n\nHypothesis: our identical per-actor policy can choose the same publicly known passive objective early, allowing actual work to be shared, if the one-actor max_clear estimate stops vetoing that ONE objective. This is an explicit bounded coordination experiment, not a claim of an accurate team-DPS model. All ordinary danger/retreat/banking/expiry behavior stays in force; no hidden ally/enemy state or promised future damage is used. Group contention, weak combat, travel, fuel, capture sharing or enemy arrival may invalidate it. It may improve local farming while remaining worse against leaders.\n\n## Exact delta from parent\n\nIn choose_camp, exempt ONLY `bootstrap && i == w.dominant_gem_camp` from the `clear > Config::max_clear` rejection. The cached dominant index already guarantees the unique, passive gem-only metadata contract. Preserve the exact cutoff for every other group and every non-bootstrap decision. Keep retry, blocked/risk reachability, respawn timing, budget/current-round checks, eligibility bookkeeping, preferred-loop precedence and the parent's bootstrap preference unchanged.\n\nNo new target preemption or communication. The existing new-task caller naturally makes actors choose the shared objective when eligible. Do not change max_clear value, task_limit90, loop_phase, group definition, draft, items, combat, pathfinding, enemy handling, channels or banking. Do not add future ally DPS, AoE forecasts, magic round thresholds, map names or coordinates. Do not add release logging. The implementation should be a tiny admission exception; no framework refactor.\n\nUpdate inherited focused checks to establish: overlong-clear dominant passive group admitted only during bootstrap; ordinary/mixed/attacking/gold-bearing/equal-reward targets still obey original clear gate; dominant target still rejected if unreachable, cooling or respawning beyond arrival; later-phase behavior and budget deferral unchanged. Test actual selector body/helper, not a disconnected restatement. Retain the metadata strict-dominance/canonical-index checks. Report actual checks and gaps accurately.\n\n## Frozen PC diagnosis and progression\n\nFirst exact-source current-engine release build, zero candidate faults. Vault both sides vs frozen champion and C02, with original baseline AND parent dg01 receipts matched by map/seed/opponent/side. Primary mechanism: first dominant clear/capture/bank and per-actor participation, not just W/L. Require at least one candidate-owned dominant capture before round200 and at least one subsequent bank before round250 to establish early cooperative conversion; this is still far slower than leaders38\u201339. Require no candidate-caused VM faults. If no early conversion, diagnose actual source task/action/fuel events and reject this admission exception as insufficient; do not loosen gates afterward to rescue it.\n\nIf that mechanism succeeds, repeat the predeclared other2 positive maps against champion/C02, both sides, and3 positive maps vs frozen D1/gold_diamond, both sides. Compare with parent and original. Retain only if total wins do not fall below either parent or original in each common-opponent stage, and disclose per-map score/capture regressions. These are developmental criteria, not confidence bounds. Then80-game negative-control screen: direct>=8/16, common>=31/64,zero candidate faults; compare changed event trajectories/fuel because earlier inactive-rule code also changed outcomes.16 confirmation maps remain reserved.\n\nNo upload merely for passing these gates: a three-map structural experiment is not broad leader competitiveness. Keep source/WASM/replays; interactions with future performance or capture changes require separate tests. Implementation belongs to Pi, validation/research to PC. Leave commits to bridge.\n",
-  "status": "testing",
+  "status": "done",
   "created_at": 1793857336.3702202,
-  "updated_at": 1793857607.2812386,
+  "updated_at": 1793857629.2683134,
   "candidate_commit": "862c588a37b9b29f34e7a8100cb061a66f8022f1",
   "candidate_branch": "pi/dominant-team-01/9e32ee7be457",
   "implementation_report": "# dt01: shared passive-objective admission at the opening\n\nCandidate: `bots/pi_dominant-team-01/`, cloned from `pi_dominant-gems-01` at parent source `ef22c7f92ecab5fe76e3333ab7df3f8ec567ff9a`. Changes remain uncommitted for the bridge. No champion merge, platform selection change or upload was performed.\n\n## Parent history and hypothesis\n\nParent dg01 originated from `leader_party_tuned` at `2f0f534e8311ee597e516b11c2afca1bbf608060`. It added a cached canonical index for the unique positive-gem, zero-gold, all-gem-cluster group whose gems strictly exceed all other groups combined, and preferred it only during bootstrap after the existing eligibility scan. Its Pi report recorded 40 focused metadata/selector checks plus protocol/state scenarios and native SDK syntax checks. It retained the solo max_clear=90 rejection. No item experiment was inherited.\n\nThe supplied subsequent PC evidence describes dg01 as tested but unpromoted, active on 3/112 surveyed development maps: the two other affected maps improved to 7/8 versus 3/8, but Vault stayed 1/4 versus 1/4, with first useful candidate capture at 1239. Vault's 49 passive clusters total 5880 HP and 343 gems; other camps together yield 16 gems. The solo estimate excludes that group for all four starting picks. Fish's clear33/capture39 and Mite's capture38 show an opening opportunity with different opponents. Fish's five actors' aggregate 6120 monster damage equals the center plus an earlier 240-HP gold group; final clear credit is not evidence of solo work. These are task-supplied observations, not independently replayed Pi results, and do not establish exact routes, commands or allocation for our roster.\n\nHypothesis: identical local policies can select the same publicly known passive objective early and share actual work if the solo clear estimate stops vetoing that one objective. This is a bounded coordination experiment, not a team-DPS estimate. Fewer bodies, different abilities, travel, contention, weak combat, fuel, capture sharing or enemy arrival can defeat it. Local farming improvement would not establish leader competitiveness.\n\n## Actual delta from parent\n\nThe sole production change is in `src/objectives.cpp`, inside the actual `choose_camp` scan:\n\n```cpp\nif(clear>Config::max_clear&&!(bootstrap&&i==w.dominant_gem_camp))continue;\n```\n\nOnly the cached dominant group during bootstrap bypasses this rejection. Its inherited metadata contract and preference are unchanged. Every other group and every non-bootstrap decision retain the original cutoff. Retry cooldown, blocked/risk reachability, respawn versus arrival, budget/current-round checks, eligibility bookkeeping, preferred-loop precedence and scoring are unchanged. The existing new-task caller still controls selection; no task preemption or communication was added.\n\n`max_clear=90`, `task_limit=90`, loop phase, group definition, draft, items, combat, enemies, channels, retreat, banking and pathfinding remain unchanged. There is no future ally damage, AoE forecast, round threshold, map special case or release logging. Exemption does not promise completion within the independent task lifetime.\n\n`tests/dominant_gems.cpp` extends inherited fixtures against the extracted production selector and actual metadata helper/canonical sort. `tests/run_native.py` changes only its temporary-directory prefix from dg01 to dt01. This report replaces the inherited report with explicit parent history and this experiment's delta.\n\n## Checks performed on the Pi\n\nHost: aarch64, GCC 13.3.0. Read the current leader-party strategy overview, selection/routing, navigation, state-machine, configuration and combat references, along with relevant C++ API/SDK metadata and distance-field contracts and the actual caller.\n\nFrom repository root:\n\n```sh\npython3 bots/pi_dominant-team-01/tests/run_native.py\n```\n\nPassed: **84 dominant metadata / production selection assertions**, plus inherited protocol and state scenarios. Harness builds use C++20, `-O2 -Wall -Wextra -Werror`, with all generated headers/executables in a temporary directory.\n\nCoverage includes:\n\n- Overlong dominant admission during bootstrap in distance and value modes, including a 49-member/5880-HP fixture; rejection after bootstrap even when the loop planner requests it.\n- Ordinary overlong groups rejected with the exception active; ordinary clear=90 accepted. Equal-reward, gold-bearing, each non-gem member type (including attacking types), and mixed groups use the real recomputed metadata index and production selector: clear>90 rejected in bootstrap and later, clear=90 available to the later planner.\n- Overlong dominant groups still rejected during cooldown, with unreachable exported approaches, or with respawn beyond arrival; cooldown expiry and respawn exactly at arrival admitted.\n- Later planner precedence/fallback, bootstrap preference, fresh/stale HP, reward-available admission, missing dominant group, no-eligible sentinel, admission failure, already-used field budget and stale-round deferral. Budget fixtures include an overlong dominant objective.\n- Retained strict dominance versus equality, positive rewards, all-other-group sums including unreachable groups, mixed/member exclusions, 64-bit totals/full uint32 rewards, empty maps and canonical index after the actual production anchor sort.\n\n```sh\ng++ -std=c++20 -Wno-changes-meaning -include cmath -fsyntax-only -I sdk/cpp bots/pi_dominant-team-01/src/*.cpp\n```\n\nPassed for every candidate translation unit against the checkout SDK. These are the inherited native compatibility flags: suppress the SDK's GCC `team team()` naming diagnostic and supply `<cmath>` externally for inherited missing includes. No SDK or unrelated source was edited. This is a syntax check, not a release link/build.\n\nA byte comparison of all **37 inherited files** against `ef22c7f92ecab5fe76e3333ab7df3f8ec567ff9a:bots/pi_dominant-gems-01/` found changes only in `src/objectives.cpp`, the two focused test files and this report. The production diff is precisely the one condition above. Git status shows only the untracked candidate directory; no tracked modifications elsewhere. No tournaments ran; `uv` and `cambc` are unavailable on this Pi PATH.\n\n## Gaps and frozen PC progression\n\nThe harness runs the actual selector body and metadata/sort seams with fixture SDK metadata and exported distances. It does not exercise engine distance computation, occupancy, actual risk construction, the entire World initialization, combat sharing, fuel, capture or banking. No exact-source current-engine release/WASM build, VM-fault result, match outcome or early cooperative conversion is claimed.\n\nPC validation must first build exact-source release/current engine and require zero candidate faults. Keep source, WASM and replays. Run Vault both sides versus frozen champion and C02, matching original baseline AND dg01 receipts by map/seed/opponent/side. Inspect first dominant clear/capture/bank and per-actor participation. Require at least one candidate-owned dominant capture before round200 and at least one subsequent bank before round250. This remains much slower than leaders38\u201339. If no early conversion occurs, diagnose actual source task/action/fuel events and reject this exception as insufficient; do not loosen gates to rescue it.\n\nOnly after mechanism success, repeat the predeclared other two positive maps against champion/C02, both sides, then all three positive maps versus frozen D1/gold_diamond, both sides. Compare with parent and original; total wins must not fall below either in each common-opponent stage. Disclose per-map score/capture regressions. These developmental criteria are not confidence bounds.\n\nThen run the 80-game negative-control screen: direct >=8/16, common >=31/64, zero candidate faults. Compare changed event trajectories/fuel because earlier inactive-rule code also changed outcomes. Keep 16 confirmation maps reserved. Passing these gates does not authorize upload or establish broad leader competitiveness. Future performance or capture changes require separate tests. Implementation belongs to Pi; validation/research belongs to PC; commits belong to the bridge.\n",
-  "lease": {
-    "token": "9784375a5a33898388f0682fc35a6377",
-    "worker": "windows-pc",
-    "expires_at": 1793858507.281235
+  "test_report": {
+    "bot": "pi_dominant-team-01",
+    "candidate_commit": "862c588a37b9b29f34e7a8100cb061a66f8022f1",
+    "parent_commit": "ef22c7f92ecab5fe76e3333ab7df3f8ec567ff9a",
+    "candidate": {
+      "path": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-team-01-9784375a5a33\\tournament\\candidate.zip",
+      "language": "cpp",
+      "wasm_sha256": "359b5d2cce1e1af069cadd7ed256f7e1a321e955428160d69559995bf9cde978",
+      "zip_sha256": "de3e7de26c88a08be8e5d5b5873d11195cbf8d1c6190c062f9ba33ec54e7455c"
+    },
+    "opponents": {
+      "champion": {
+        "path": "D:\\Coding\\battlecode-26-27\\.cambc\\tuning\\g07_search.zip",
+        "language": "cpp",
+        "wasm_sha256": "a24ef0c56844e506694c48ed34e698c083a18fe7d9d74bf6c12ae355d1b448ac",
+        "zip_sha256": "c15add470231deee1f119220211991058075dfcb4de4724d06eb152ab4075d33"
+      },
+      "record_guard": {
+        "path": "D:\\Coding\\battlecode-26-27\\.cambc\\features\\c02_record_guard.zip",
+        "language": "cpp",
+        "wasm_sha256": "605207958ed3f3dc778f03b0b122dfa9c7469f09e19dd7b48c979a47532e73d7",
+        "zip_sha256": "573535e7cd99af582b9024132783bb0bc99cb672bda9e37f55bd90acdc4489c3"
+      }
+    },
+    "cpu_policy": {
+      "affinity_mask": 65532,
+      "reserved_core_mask": 3,
+      "physical_cores_in_group": 8,
+      "logical_cores": 14,
+      "workers": 14,
+      "batch_size": 120,
+      "cooldown_seconds": 0,
+      "summary_workers": 14,
+      "priority": "BelowNormal"
+    },
+    "cli_sha256": "4a94c15027d94c4702e1b84471cb25110a5d2c4e3c67976e65439d93582e774c",
+    "cli_version": "cambc 5.0.0",
+    "map_sha256": {
+      "00vault": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454"
+    },
+    "games": 4,
+    "outcomes": {
+      "win": 3,
+      "loss": 1
+    },
+    "versus": {
+      "champion": {
+        "win": 2
+      },
+      "record_guard": {
+        "loss": 1,
+        "win": 1
+      }
+    },
+    "both_teams_faults": 0,
+    "candidate_faults": 0,
+    "candidate_logged_errors": 0,
+    "matches": [
+      {
+        "opponent": "champion",
+        "map": "00vault",
+        "side": "teamA",
+        "outcome": "win",
+        "engine_outcome": "teamA",
+        "submitted": 1065,
+        "opponent_submitted": 68,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-team-01-9784375a5a33\\tournament\\00000.zip",
+        "replay_sha256": "af96d1e7b88c92481f6d8ad8b18102b0256f69c5d86f4cc88db5e6ce6dc2d227",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 12581,
+          "finalRoundPartial": true,
+          "finalSubstep": 84,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 846,
+          "roundsStarted": 847,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      },
+      {
+        "opponent": "champion",
+        "map": "00vault",
+        "side": "teamB",
+        "outcome": "win",
+        "engine_outcome": "teamB",
+        "submitted": 1077,
+        "opponent_submitted": 84,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-team-01-9784375a5a33\\tournament\\00001.zip",
+        "replay_sha256": "851e80de03dbcc1aee502210ff9e7c2c5abff6bd07515e1c7a8f433f9ac1faff",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 14906,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 1006,
+          "roundsStarted": 1007,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00vault",
+        "side": "teamA",
+        "outcome": "loss",
+        "engine_outcome": "teamB",
+        "submitted": 754,
+        "opponent_submitted": 1141,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-team-01-9784375a5a33\\tournament\\00002.zip",
+        "replay_sha256": "5262b0656216ec8f0cbadc0d13500bb1c372dee61b9ba325e295070c6de25f44",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 19589,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 1322,
+          "roundsStarted": 1323,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00vault",
+        "side": "teamB",
+        "outcome": "win",
+        "engine_outcome": "teamB",
+        "submitted": 1005,
+        "opponent_submitted": 435,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-team-01-9784375a5a33\\tournament\\00003.zip",
+        "replay_sha256": "9edf2b02045c40383dfdc62ad845c6d284ce5c8e86e0b848e51bb1bbe7e4681a",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 16294,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 1103,
+          "roundsStarted": 1104,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      }
+    ],
+    "decision": "Evidence for critic review; no automatic promotion or platform submission."
   }
 }
