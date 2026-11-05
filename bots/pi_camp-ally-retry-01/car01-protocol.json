@@ -1,0 +1,23 @@
+{
+  "experiment": "car01",
+  "candidate": "bots/pi_camp-ally-retry-01/",
+  "base_commit": "0a32c23b1432433d29164d642077bbe9fd01badf",
+  "parent_candidate": "bots/pi_camp-ally-occupancy-01/",
+  "replaces_unplayed_experiment": "cao01",
+  "frozen_evaluation_protocol": "cao01-protocol.json",
+  "evaluation_protocol_modified": false,
+  "protocol_availability": "PC-owned original is absent from this checkout; this file records provenance only and does not replace its conditions, gates, or definitions.",
+  "pc_order": [
+    "Review exact production delta and rerun actual-source integration tests on exact candidate.",
+    "Reuse the 17 prior official-visibility geometry controls only by exact unchanged module and adapter hashes; otherwise rerun.",
+    "Use original frozen protocol: four Vault games, champion/C02, both sides; never standard80 first.",
+    "Any failure stops expansion; a pass requires a separately frozen regression panel."
+  ],
+  "unchanged_geometry_inputs_sha256": {
+    "src/ally_occupancy.h": "2b9b3bb55e176daafa7a96d78089d8894584276fe01f234f3a58ac0e5668aaa9",
+    "tests/occupancy_adapter.cpp": "514c8c32fd6df1decb05088e4fb1a940b530972a4dff57fcfa6bb562f0c58b4e"
+  },
+  "pi_games_run": 0,
+  "pi_release_builds_run": 0,
+  "authorization": "No duplicate baseline games, online challenge, upload, ranked replacement, automatic composition, or fresh-confirmation claim follows from this job."
+}
