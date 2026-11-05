@@ -4,15 +4,321 @@
   "base_bot": "pi_actor-scene-layout-01",
   "candidate_bot": "pi_actor-scene-epoch-01",
   "instructions": "# ase01: validate each coordinate conversion against its own observation epoch\n\nParent `914cf67173be7c5231ccaa2878e4292d236b71e4`, base bot\n`pi_actor-scene-layout-01`; candidate `bots/pi_actor-scene-epoch-01/`.\nUse the existing Pi bridge and keep all edits inside the candidate. No games,\nuploads, ranked changes or infrastructure changes on Pi.\n\n## Source-supported defect\n\nThe parent's coordinate conversion correctly fixes all six packed-bitboard\nrepresentation errors. However, `LiveBackend::scalar` ends with\n`if(!current(turn))throw Halt{Status::stale};`, where `turn` was captured in the\nbackend constructor and includes the initial `observation_version` revision.\n\nReal `observations.cpp` implements `invalidate_observations()` by clearing its\ncache and incrementing `revision`; `observation_version()` returns that revision.\nEvery successful controller motion/channel/defensive action invalidates it.\nThus a fresh capture after a legitimate first action has a new observation\nrevision but the same actor/life/round. The conversion compares this fresh\nrevision with the constructor's old revision and throws stale. This prevents\nthe required second motion and health-recall continuation. Channel cancellation\nand post-defense refresh have the same problem; post-recall capture also fails.\n\nThe supplied `adapter_scene.cpp` mocks `observation_version(){return0;}` and\n`invalidate_observations(){}`. That is incompatible with production revision\nsemantics and hides the failure. Native source syntax and constant-revision\ntests cannot establish correct refreshed continuation. The parent is being\nrejected before release games; do not describe it as a measured strength loss.\n\n## Exact production correction\n\nCorrect only the freshness boundary in `LiveBackend::scalar`:\n\n- After verifying the live dispatch round/actor/life/reserve, capture a **local\n  conversion-entry Epoch**. Its revision belongs to this invocation, not the\n  constructor. Capture it before the coordinate export/conversion.\n- Preserve the existing checked `positions()` query, dimension/count/coordinate\n  validation, owned byte array and post-conversion reserve check.\n- Require full epoch equality with that local conversion-entry Epoch before\n  returning the array. Any actor/life/round/revision change during this conversion\n  remains stale. Do not remove revision checking or compare only round.\n- Do not mutate or advance the constructor's `turn` to make a check pass. It\n  remains the dispatch identity used by the existing checks. A new local\n  conversion can legitimately begin with a newer revision after an action;\n  it must be internally coherent and the enclosing capture/defense still\n  enforces its own scene epoch.\n\nAll other production files remain byte-identical to the parent. Within\n`recovery_sdk.cpp`, preserve every behavior outside this scalar epoch boundary.\nDo not alter `recovery_tiles.h`, planner policy, thresholds, attempts, geometry,\nstatic cache semantics, guard outcomes, caller routing, defense or economics.\nDo not bundle the static-home detour limitation or bookkeeping changes.\n\n## Actual adapter regression tests\n\nCorrect the test seam to use production revision semantics. Prefer mechanically\nusing the exact production observation-version/invalidation functions in the\nnative adapter fixture, or explicitly assert the identical increment behavior\nif extracting their surrounding cache is impractical. Do not make the SDK mock\nsilently update the backend's constructor epoch.\n\nRun the actual SDK wrappers plus returned production adapter/controller:\n\n1. Successful ordinary motion updates actual position/allowance and observation\n   revision, then a fresh same-turn capture succeeds. A supported second dash\n   or other controller continuation remains expressible after revalidation.\n2. Successful dash followed by fresh capture can choose an ordinary move. The\n   predicted second action is never issued without that refresh.\n3. Move into a fresh safe health-recovery state, then health recall in the same\n   turn. Post-recall capture returns a channeling outcome, not false stale.\n4. Active recall cancellation changes revision; fresh permissions/capture permit\n   the bounded faster-home first step where the actual flags support it.\n5. Defensive action changes revision; fresh capture succeeds and footer uses\n   changed health/foes/permissions. The current live heal targets allies only;\n   do not invent a self-heal host effect or widen targeting. Keep the existing\n   scripted controller test where changed observed health releases the latch\n   separately from actual adapter defense-refresh coverage.\n6. Reusing the **old Scene** to issue another action still fails freshness.\n   A revision change inside positions()/conversion is stale, not accepted merely\n   because normal post-action revision changes are now supported.\n7. Actor/life/round rollover before/during/after conversion rejects later action,\n   preserving any earlier committed action exactly once. Stale/incomplete\n   results bypass all further defense/footer. Boolean false-return host actions\n   retain their existing observation invalidation and cannot reuse an old scene.\n   Unexpected thrown SDK errors continue to propagate without continuation;\n   do not add exception invalidation behavior outside this scalar-only repair.\n8. Preserve all coordinate shape/empty/full/malformed/odd-map/defensive-mask\n   controls and completed static-cache rollover/reuse checks from the parent.\n\nKeep required host transitions explicit: real action wrappers must call the\nmocked host mutation, and production invalidation must advance the revision.\nReport which fixture actions and continuations actually executed. A direct\nplanner result alone is not this regression test.\n\nRun unchanged292 controller assertions, inherited source/state checks and all\nproduction current-SDK syntax. Update source-preservation checks for this exact\nparent and narrow correction. Update IMPLEMENTATION.md with the changed lines,\ntest semantics, actual results and limitations. Native mocks do not establish\nengine fuel or competitive improvement.\n\n## PC follow-through\n\nPC reviews exact source and independently reruns the actual adapter regression\nbefore release. Then retain the same8construction games, Swirl/Lanes/Elkring/\nGuardians both sides versus exact C02, current CLI5/engine3. Same original\nconstruction gates and no standalone win threshold; no automatic80. Require\nreal recovery activation and same-turn movement followed by health recall;\nmissing coverage is incomplete. Compare original and defective atc01 controls,\nwhile reporting asl01 as unplayed. These are reused development conditions,\nnot fresh confirmation. No upload or ranked change.\n",
-  "status": "testing",
+  "status": "done",
   "created_at": 1793905634.661215,
-  "updated_at": 1793906668.0709903,
+  "updated_at": 1793906695.3164966,
   "candidate_commit": "d378591a722eed9ebb6b1c407e748c9ecad9274a",
   "candidate_branch": "pi/actor-scene-epoch-01/5cf7f28234be",
   "implementation_report": "# ase01: conversion observation epochs\n\nParent: `914cf67173be7c5231ccaa2878e4292d236b71e4`, base\n`bots/pi_actor-scene-layout-01/`. Candidate:\n`bots/pi_actor-scene-epoch-01/`. Changes remain uncommitted and confined to\nthis candidate. No games, uploads, ranked changes or infrastructure changes ran\non the Pi. No competitive improvement or measured strength loss is claimed;\nasl01 was rejected from source review before release games.\n\n## Hypothesis and exact production change\n\nProduction observation invalidation clears the cache and increments its unsigned\nrevision. Each controller action therefore makes its old Scene stale, but a new\ncapture in the same actor/life/round must be allowed to use the newer revision.\nThe parent's scalar conversion instead compared with the backend constructor's\nrevision, rejecting legitimate refreshed continuation.\n\nOnly `src/recovery_sdk.cpp` changes in production:\n\n- Line 26 adds `check();const Epoch conversion=epoch();` before dimensions,\n  coordinate export and conversion. This checks dispatch round/actor/life and\n  reserve before taking the invocation's own complete entry epoch.\n- Line 30 compares `current(conversion)` instead of `current(turn)` after the\n  existing post-conversion reserve check. Actor, life, round and revision must\n  all remain equal during this conversion.\n\nThe constructor's `turn` is never advanced. Checked `positions()`, dimension,\ncount and coordinate admission, owned scalar bytes, query quota and reserve\nchecks remain. Enclosing capture and defensive preflight retain their own scene\nfreshness checks. All other bytes of this production file and every other\nproduction source/header, including `recovery_tiles.h`, are preserved against\nthe exact parent. Pathfinding, planner policy, thresholds, attempts, geometry,\nstatic cache publication/reuse, guard outcomes, caller routing, defense,\neconomics and bookkeeping are unchanged.\n\nRead the current leader-party overview, state machine, combat and pathfinding\ndocuments, Pi bridge instructions, inherited implementation report, production\nobservations/controller/adapter and current SDK. In particular, inspected SDK\ncoordinate exports, cached self identity, live state flags, ability metadata,\nmove/cast/recall/cancellation wrappers and checked host error propagation.\n\n## Test seam and actual executions\n\n`tests/run_adapter.py` mechanically extracts the exact production observation\ncache declaration, `invalidate_observations()` and `observation_version()` into\na temporary include. The fixture compiles these definitions, the real SDK\nwrappers, production LiveBackend and production recovery controller. It asserts\ntwo invalidations advance the revision by exactly two. No mock updates the\nbackend constructor epoch.\n\n`tests/adapter_scene.cpp` adds explicit host mutations for successful ordinary\nmovement (position and movement allowance), dash (position and casting\nallowance), recall (channel/started flags), cancellation (channel/cancelled\nflags), and defensive attack. Test-only rollover hooks change round, Memory\nlife or the SDK's cached self view; replacing the cached view is the explicit\nnative actor-rollover simulation. Unexpected host error codes go through the\nreal SDK checker and become `cambc::error`. Unused host imports still fail fast.\n\n`tests/adapter_epochs.h` actually executed these cases:\n\n- LiveBackend ordinary step to (9,9), old-Scene rejection, fresh capture,\n  supported dash to (7,7), fresh capture. Position, consumed allowances and\n  increased revision are asserted; constructor epoch remains unchanged.\n- Returned controller dash -> refreshed ordinary move -> health recall:\n  one dash, one move, one recall, four captures, final `channeling`. The host\n  action log asserts revision advancement and intervening coordinate exports\n  before continuations; the predicted second motion is not issued directly.\n- Controller ordinary movement out of the initial threatened observation;\n  the move host explicitly hides the foe. Fresh safe low-health capture then\n  permits recall. One move, one recall, three captures, final `channeling`.\n- Active recall -> cancellation -> refreshed faster-home first step: one\n  cancellation, one move, three captures, no recall restart. With movement\n  permission absent, cancellation instead ends in `cancelled_wait`, no step.\n- Controller defensive basic attack -> refreshed footer -> health recall:\n  one defense, one recall, three captures, final `channeling`. The explicit\n  attack host transition removes the visible foe, lowers observed health from\n  30 to 25 and removes casting/attack permissions. A fresh capture verifies\n  changed HP, empty foes, permissions and active recall. No self-heal effect is\n  invented. Existing actual heal-mask tests still target ally handle 2 only.\n  The unchanged scripted controller assertion where changed observed health\n  releases the recovery latch remains separate.\n- Revision changes inside either dynamic positions()/scalar conversion reject,\n  even following an already committed move. Controller stale/incomplete refresh\n  after a move preserves that move exactly once, with no defense or recall.\n- Round/life/actor rollover before conversion rejects without exporting or\n  acting; rollover during conversion rejects old-Scene action; rollover inside\n  the first motion or its subsequent refreshed conversion preserves exactly one\n  move/history entry and stops before defense/footer. All three identities are\n  exercised at each boundary.\n- False-return ordinary move and dash invalidate once, return blocked without\n  continuation and reject reuse of the old Scene. False-return ally heal\n  invalidates once and leads to stale without footer recall. Unexpected errors\n  from both move and dash propagate without observation invalidation, committed\n  action or continuation, preserving the existing exception behavior.\n\nAll parent coordinate controls remain: 45x30 and odd 5x3 empty/full/sparse masks,\nrow/final-cell indices, malformed coordinates/counts/dimensions, cap and\noverflow-shaped dimensions, owned earlier scenes, distinct masks, both defensive\nrange masks, post-conversion reserve failure, static/dynamic conversion failures,\nfield admission, completed static compute/export rollover and next-round reuse.\nThe inherited 292 controller assertions, protocol/state tests and strategy\ncontract sources remain byte-identical. `source_contracts.py` verifies their\npreservation and the exact parent production bytes with only the two scalar\nedits permitted. README points to the candidate's focused command.\n\n## Checks performed on Pi\n\naarch64, GCC 13.3.0. Generated binaries/includes live in temporary directories.\n\n```sh\npython3 bots/pi_actor-scene-epoch-01/tests/run_focused.py\npython3 bots/pi_actor-scene-epoch-01/tests/source_contracts.py\npython3 bots/pi_actor-scene-epoch-01/tests/run_adapter.py\npython3 bots/pi_actor-scene-epoch-01/tests/run_adapter.py --parent-control\nADAPTER_CXXFLAGS='-O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer' \\\nASAN_OPTIONS=detect_leaks=0 \\\npython3 bots/pi_actor-scene-epoch-01/tests/run_adapter.py\n```\n\nResults: focused suite passed unchanged 292 recovery assertions, inherited\nprotocol/state scenarios, every production .cpp's current-SDK syntax,\nintegration/source-preservation checks and the actual adapter fixture. Source\nchecks and normal adapter also passed independently. ASan/UBSan passed with no\nfinding; leak detection was disabled. Syntax retains the inherited GCC\n`-fpermissive` workaround for SDK declarations; shared SDK files were not edited.\n\nThe optional negative control compiles the exact parent's recovery_sdk.cpp from\nGit with the corrected revision seam and new epoch cases. It reproduced stale\non the first fresh capture after exactly one successfully committed step, with\nthe constructor revision unchanged. The runner expects that failure and reports:\n`EXPECTED: exact parent rejects fresh capture after one committed step`.\nThis is a source/fixture regression demonstration, not a game result.\n\n## Gaps and PC follow-through\n\nNative mocks do not establish engine fuel, scheduling, suspension, WASM resource\nuse, actual engine legality or competitive improvement. Board storage, full\nfield values, visibility changes, action effects and rollover are mocked.\nThe static-home detour limitation and bookkeeping remain separate work.\n\nPC must review exact source and independently rerun this actual-adapter regression\nbefore release. Retain the same eight construction games: Swirl/Lanes/Elkring/\nGuardians, both sides against exact C02 WASM\n`605207958ed3f3dc778f03b0b122dfa9c7469f09e19dd7b48c979a47532e73d7`,\ncurrent CLI 5 / engine 3 build\n`96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd`.\nRetain original construction gates: zero VM faults, SDK error classification,\nreal recovery activation and same-turn movement followed by health recall.\nMissing required coverage is incomplete. Compare the original and defective\natc01 controls; report asl01 as unplayed. These are reused development\nconditions, not fresh confirmation. No standalone win threshold, automatic\n80-game expansion, upload or ranked change.\n",
-  "lease": {
-    "token": "c25809a32076d8f7d0c1b104c3d582b9",
-    "worker": "windows-pc",
-    "expires_at": 1793907568.0709865
+  "test_report": {
+    "bot": "pi_actor-scene-epoch-01",
+    "candidate_commit": "d378591a722eed9ebb6b1c407e748c9ecad9274a",
+    "parent_commit": "914cf67173be7c5231ccaa2878e4292d236b71e4",
+    "candidate": {
+      "path": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\candidate.zip",
+      "language": "cpp",
+      "wasm_sha256": "b87eb8b98c9f2b70827515a16f7bbca22cbab874c72bb931a1b290d74d4846d6",
+      "zip_sha256": "0f389aa77794d404929a20c039ee186b809cbb517c682c92b14b48a76fb6f650"
+    },
+    "opponents": {
+      "record_guard": {
+        "path": "D:\\Coding\\battlecode-26-27\\.cambc\\features\\c02_record_guard.zip",
+        "language": "cpp",
+        "wasm_sha256": "605207958ed3f3dc778f03b0b122dfa9c7469f09e19dd7b48c979a47532e73d7",
+        "zip_sha256": "573535e7cd99af582b9024132783bb0bc99cb672bda9e37f55bd90acdc4489c3"
+      }
+    },
+    "cpu_policy": {
+      "affinity_mask": 65532,
+      "reserved_core_mask": 3,
+      "physical_cores_in_group": 8,
+      "logical_cores": 14,
+      "workers": 14,
+      "batch_size": 120,
+      "cooldown_seconds": 0,
+      "summary_workers": 14,
+      "priority": "BelowNormal"
+    },
+    "cli_sha256": "4a94c15027d94c4702e1b84471cb25110a5d2c4e3c67976e65439d93582e774c",
+    "cli_version": "cambc 5.0.0",
+    "map_sha256": {
+      "00elkring": "4621e92590befe6b0438b7ecdd8fde5aa85945b27535f4968e701cf86934746e",
+      "00lanes": "8ca26ed2ea65c7d80ceb9604a7431ca1dc056922912b4e2f46cad06051e4886a",
+      "00swirl": "e6f860670947b1326f34c86515db8ef6893c565eaa69e3f9a6464ec5744e1c93",
+      "02guardians": "b28e0b473ebcdda91780d80477fd1729d66122ff3b82464d10c87d5e9159dc09"
+    },
+    "games": 8,
+    "outcomes": {
+      "loss": 7,
+      "win": 1
+    },
+    "versus": {
+      "record_guard": {
+        "loss": 7,
+        "win": 1
+      }
+    },
+    "both_teams_faults": 0,
+    "candidate_faults": 0,
+    "candidate_logged_errors": 0,
+    "matches": [
+      {
+        "opponent": "record_guard",
+        "map": "00elkring",
+        "side": "teamA",
+        "outcome": "loss",
+        "engine_outcome": "teamB",
+        "submitted": 143,
+        "opponent_submitted": 1012,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00000.zip",
+        "replay_sha256": "7c7049f7f6191b53a50c17f9dce63f5554a2a394d424df7c3deac09371239262",
+        "seed": "15537562139140322559",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 17961,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 30,
+          "mapHash": "4621e92590befe6b0438b7ecdd8fde5aa85945b27535f4968e701cf86934746e",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 1132,
+          "roundsStarted": 1133,
+          "seed": "15537562139140322559",
+          "width": 30
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00elkring",
+        "side": "teamB",
+        "outcome": "loss",
+        "engine_outcome": "teamA",
+        "submitted": 77,
+        "opponent_submitted": 1012,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00001.zip",
+        "replay_sha256": "4e5182c259cf13d9ea8537119b92ddeb61162bf339c32ca534cf603b619cc7a4",
+        "seed": "15537562139140322559",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 18090,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 30,
+          "mapHash": "4621e92590befe6b0438b7ecdd8fde5aa85945b27535f4968e701cf86934746e",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 1261,
+          "roundsStarted": 1262,
+          "seed": "15537562139140322559",
+          "width": 30
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00lanes",
+        "side": "teamA",
+        "outcome": "loss",
+        "engine_outcome": "teamB",
+        "submitted": 282,
+        "opponent_submitted": 1015,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00002.zip",
+        "replay_sha256": "745968b269c223a72d5a73a0fa434c71a78b7f690b2ba340ab6c31c769ab46dd",
+        "seed": "15497727643895809986",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 22086,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 30,
+          "mapHash": "8ca26ed2ea65c7d80ceb9604a7431ca1dc056922912b4e2f46cad06051e4886a",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 1317,
+          "roundsStarted": 1318,
+          "seed": "15497727643895809986",
+          "width": 90
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00lanes",
+        "side": "teamB",
+        "outcome": "loss",
+        "engine_outcome": "teamA",
+        "submitted": 259,
+        "opponent_submitted": 1029,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00003.zip",
+        "replay_sha256": "f290fae00e8c1e8be1e478d49013316ae5dba1cceb34c836f10b2b8447e53c99",
+        "seed": "15497727643895809986",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 21641,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 30,
+          "mapHash": "8ca26ed2ea65c7d80ceb9604a7431ca1dc056922912b4e2f46cad06051e4886a",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 1303,
+          "roundsStarted": 1304,
+          "seed": "15497727643895809986",
+          "width": 90
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00swirl",
+        "side": "teamA",
+        "outcome": "loss",
+        "engine_outcome": "teamB",
+        "submitted": 0,
+        "opponent_submitted": 463,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00004.zip",
+        "replay_sha256": "4b5ad3e3ad3677c488a293762f05f5e6a7f8593f9cdd4f9a24dfae916cda4914",
+        "seed": "9524772109193877957",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 20721,
+          "finalRoundPartial": false,
+          "finalSubstep": 6,
+          "height": 30,
+          "mapHash": "e6f860670947b1326f34c86515db8ef6893c565eaa69e3f9a6464ec5744e1c93",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 2000,
+          "roundsStarted": 2000,
+          "seed": "9524772109193877957",
+          "width": 45
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00swirl",
+        "side": "teamB",
+        "outcome": "loss",
+        "engine_outcome": "teamA",
+        "submitted": 192,
+        "opponent_submitted": 772,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00005.zip",
+        "replay_sha256": "4579ab3b4b22cbfab1c0c1c7320ecd4ab01841ffb1672626befe4979effca148",
+        "seed": "9524772109193877957",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 25090,
+          "finalRoundPartial": false,
+          "finalSubstep": 6,
+          "height": 30,
+          "mapHash": "e6f860670947b1326f34c86515db8ef6893c565eaa69e3f9a6464ec5744e1c93",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 2000,
+          "roundsStarted": 2000,
+          "seed": "9524772109193877957",
+          "width": 45
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "02guardians",
+        "side": "teamA",
+        "outcome": "win",
+        "engine_outcome": "teamA",
+        "submitted": 0,
+        "opponent_submitted": 0,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00006.zip",
+        "replay_sha256": "2ad2c358ca6b32bfb35114be409f1465148dd9d43f37213618ec51ca93593960",
+        "seed": "18109356720521877809",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 20077,
+          "finalRoundPartial": false,
+          "finalSubstep": 6,
+          "height": 41,
+          "mapHash": "b28e0b473ebcdda91780d80477fd1729d66122ff3b82464d10c87d5e9159dc09",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 2000,
+          "roundsStarted": 2000,
+          "seed": "18109356720521877809",
+          "width": 41
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "02guardians",
+        "side": "teamB",
+        "outcome": "loss",
+        "engine_outcome": "teamA",
+        "submitted": 0,
+        "opponent_submitted": 0,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\actor-scene-epoch-01-c25809a32076\\tournament\\00007.zip",
+        "replay_sha256": "eab442a605890d8fb484e90942aaee290a0899bf9607b84a88fbbfff5de118fa",
+        "seed": "18109356720521877809",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 25226,
+          "finalRoundPartial": false,
+          "finalSubstep": 6,
+          "height": 41,
+          "mapHash": "b28e0b473ebcdda91780d80477fd1729d66122ff3b82464d10c87d5e9159dc09",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 2000,
+          "roundsStarted": 2000,
+          "seed": "18109356720521877809",
+          "width": 41
+        }
+      }
+    ],
+    "decision": "Evidence for critic review; no automatic promotion or platform submission."
   }
 }
