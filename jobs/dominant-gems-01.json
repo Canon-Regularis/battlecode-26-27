@@ -4,15 +4,199 @@
   "base_bot": "leader_party_tuned",
   "candidate_bot": "pi_dominant-gems-01",
   "instructions": "# dg01: make an admissible dominant gem objective visible to the opening policy\n\nBase commit `2f0f534e8311ee597e516b11c2afca1bbf608060`, base bot `leader_party_tuned`. Allowed candidate directory `bots/pi_dominant-gems-01/` only, including required `IMPLEMENTATION.md`. Do not inherit either item experiment.\n\n## Evidence and hypothesis\n\nOur current policy's choose_camp runs distance_only=true and bootstrap=true before shop_phase3. Thus it ignores reward size even when a high-value group becomes eligible. In current engine3, 00vault's central group has49 passive gem clusters, 5880 total HP and343 gems; all other groups together have16 gems. No initial member of our four-pick roster passes the existing max_clear90 estimate for the center. In ranked loss01a1a978-6393-7eab-b12e-f7804eff3be2, Vesper buys7 Strength shards at209, making estimated clear66, before enemy first central clear272/capture278; our first actors enter phase3 only625/629. This is an opportunity, not proof Vesper was free, safe or nearby enough to take it.\n\nDirect Fish diagnostic01a1a9b5-5820-755b-8197-db4f68af6378 is a disconfirming speed benchmark: Fish clears center at33 (last hit Vendetta), Marcella captures343 at39, and wins1142\u20138 at262. The proposed change retains our initial exclusion and CANNOT reproduce that opening. It tests later objective valuation under the existing executor and roster. Do not claim it will beat Fish. On04restricted_area there is no dominant group; economic losses also involve enemy capture of groups we cleared. This policy does not address that mechanism.\n\n## Exact treatment\n\nCompute once per World initialization, using legal public static camp metadata, whether there is a group satisfying ALL:\n\n- positive gem reward and zero gold reward;\n- every member is a gem_cluster (passive type), no attacking monster member;\n- its gem reward strictly exceeds the SUM of gem rewards of every other map group, including unreachable ones.\n\nStrict dominance makes the group unique. Use 64-bit sums and canonical World camp indices after anchor sorting; never hardcode a map name, engine group ID, coordinate, or reward343. Preserve the existing World ordering and route packet mapping.\n\nOnly when choose_camp is selecting a new task AND bootstrap==true, prefer this group IF its entry in the existing eligible vector is true. Return it after the normal eligibility scan and before the ordinary bootstrap fallback. Leave every existing eligibility check and distance field unchanged, including retry, reachability, respawn and max_clear90. If absent/ineligible, return exactly the existing selected result. Non-bootstrap planner precedence must remain unchanged. No task preemption, no new travel admission threshold, no expanded clear limit or loop-phase change, no global value_routing toggle, no item/draft/combat/navigation/retreat/bank changes. Additional work should be static at initialization except a constant-time selection check. Do not add release logging.\n\nThis is a narrow test of a map-structure opportunity, not a generic farming rewrite. Prefer the smallest implementation seam that expresses the rule and can later support evidence-based valuation. Do not generalize it into a strategy framework.\n\n## Correctness and falsification\n\nMeaningful focused checks for strict dominance vs equality, zero reward, attacking/mixed groups, gold-bearing groups, canonical index after sorting, bootstrap vs later phase, and eligible vs blocked/cooling/respawning/too-long-clear cases. Pure metadata/selection checks are appropriate if they exercise the helper actually used; avoid duplicating implementation expressions in disconnected tests. Preserve original roster and all other source policies. Report exact checks performed and limitations; do not claim SDK integration tests if only native checks ran.\n\nPC diagnostic first: exact-source release build on CLI5/current engine;00vault both sides versus frozen champion and C02, matching baseline. Require zero candidate VM faults. Inspect actual central camp clear/capture/bank events, not merely wins or score. If candidate never productively captures the dominant group, retain failed mechanism evidence and diagnose whether eligibility, task commitment, combat, capture access or banking prevented it. Do not broaden or upload on a proxy win alone.\n\nIf diagnostic mechanism succeeds, run the same80-game regression screen. Direct champion >=8/16 and common >=31/64 are minimal regression conditions, NOT a positive strength claim; the rare rule may not trigger there. Broader testing must include predeclared development maps, diverse opponents and no-dominant negative controls. Fresh confirmation maps remain reserved. No platform upload or ranked change from this job. PC will provide exact source/artifact identities and measure active-rule exposure, target rewards, banking/deaths/faults plus paired outcomes. Existing task_limit90 remains; report observed expiration rather than modifying it.\n\nLeave commits/push to the bridge. Write IMPLEMENTATION.md with actual diff, checks, uncertainty and expected diagnostic limitations.\n",
-  "status": "testing",
+  "status": "done",
   "created_at": 1793849157.0463665,
-  "updated_at": 1793849547.094647,
+  "updated_at": 1793849569.1935794,
   "candidate_commit": "ef22c7f92ecab5fe76e3333ab7df3f8ec567ff9a",
   "candidate_branch": "pi/dominant-gems-01/e41b9abf9894",
   "implementation_report": "# dg01: admissible dominant gem objective during bootstrap\n\nBase: `2f0f534e8311ee597e516b11c2afca1bbf608060`, cloned from `leader_party_tuned`.\nCandidate: `bots/pi_dominant-gems-01/`. Changes are uncommitted for the bridge.\nNo item experiment was inherited. No platform upload or ranked change was made.\n\n## Hypothesis and scope\n\nThe bootstrap distance policy can ignore an unusually valuable passive gem group after equipment makes its estimated clear time admissible. Prefer a unique, strictly dominant passive gem group when choosing a new bootstrap task, provided the existing selector admits it. This tests later objective valuation under the existing roster and executor.\n\nThe supplied engine3 evidence describes 00vault's center as 49 gem clusters, 5880 HP and 343 gems versus 16 gems elsewhere. No initial roster member passes the existing 90-round clear estimate. In ranked loss `01a1a978-6393-7eab-b12e-f7804eff3be2`, Vesper's seven Strength shards at round 209 imply an estimated clear of 66 before the enemy clear/capture at 272/278, while our phase 3 starts at 625/629. That suggests an opportunity; it does not establish availability, safety or travel feasibility. These replay observations were supplied by the task, not independently replayed on the Pi.\n\nFish diagnostic `01a1a9b5-5820-755b-8197-db4f68af6378` clears at 33 and captures at 39, winning 1142\u20138 at 262. This treatment retains the initial clear-time exclusion and cannot reproduce that opening; it makes no claim to beat Fish. It also does not address enemies capturing camps we clear, including the economic losses described on 04restricted_area, where no dominant group exists.\n\n## Actual changes\n\n- `src/dominant_gems.h`: a small metadata helper sums every group's gems in signed 64-bit integers, then finds a positive-gem, zero-gold group whose members are all `is_gem_cluster()` and whose reward strictly exceeds the sum of all other groups. All groups contribute to the total regardless of reachability, gold or member type. Only immutable public metadata is read; there are no map names, IDs, coordinates or reward constants in the policy. A constant-time helper checks bootstrap and the existing eligibility bit.\n- `src/objectives.h`: cache `World::dominant_gem_camp`, defaulting to `-1`.\n- `src/objectives.cpp`: compute the cached index once in the existing guarded initialization, immediately after the unchanged anchor sort and before route loading. After the complete, unchanged eligibility scan, return that index only if bootstrap and eligible. Otherwise execute the exact previous planner/fallback code.\n- `tests/dominant_gems.cpp` and `tests/run_native.py`: focused native fixtures using the production helper, the actual extracted `choose_camp` body and the actual canonical-sort/cache statements. Generated headers and executables stay in a temporary directory.\n\nNo existing task is preempted: the caller still invokes `choose_camp` only when `memory.task < 0`. Retry, distance field, risk/reachability, respawn, remaining/design HP, max_clear=90 and every scoring expression are unchanged. Later-phase loop precedence is unchanged. World ordering, route packets, pathfinding, roster, shopping, combat, retreat, banking, task_limit=90, loop_phase=3 and value_routing=false are unchanged. No release logging was added. Extra metadata work is confined to initialization; selection adds a bounded constant-time check.\n\n## Checks performed on the Pi\n\nHost: aarch64, GCC 13.3.0. From repository root:\n\n```sh\npython3 bots/pi_dominant-gems-01/tests/run_native.py\n```\n\nPassed: **40 dominant metadata/production selection checks**, plus the inherited protocol and state scenarios. The native harness compiles with C++20, `-O2 -Wall -Wextra -Werror`.\n\nCoverage includes strict dominance versus equality, zero rewards, gold exclusion, every non-gem member type and mixed groups, all-gem multi-member groups, sum of all other groups including unreachable ones, totals exceeding 32 bits, full uint32 rewards, empty maps, canonical index after the production anchor sort, bootstrap in both scoring modes, later-phase planner precedence and fallback, missing dominant group, retry cooldown and its expiration, unreachable approaches, respawn before/after arrival, clear estimates at 90 and above, fresh/stale remaining HP, reward-available admission, no eligible result and budget/stale-field deferral.\n\nThe harness supplies metadata and exported distances; it runs the real eligibility/selection expressions. Its blocked/risk case supplies an unreachable field result: it does not test SDK distance computation, occupancy or engine navigation. It extracts the initialization sort/cache seam, not the entire engine-dependent `World::init`. These are native policy checks, **not SDK runtime integration tests or WASM matches**.\n\n```sh\ng++ -std=c++20 -Wno-changes-meaning -include cmath -fsyntax-only -I sdk/cpp bots/pi_dominant-gems-01/src/*.cpp\n```\n\nPassed for all candidate translation units against the checkout SDK, including the actual public metadata API. A first plain GCC syntax attempt failed on existing SDK `team team()` naming diagnostics and missing `std::ceil`; suppressing the naming diagnostic still exposed missing `std::ceil` in objectives/route_plan. The same missing-header errors were reproduced in the unchanged baseline. The successful command supplies `<cmath>` externally and suppresses only the naming diagnostic. No source outside the candidate, and no unrelated candidate source, was changed to accommodate native GCC. This check does not link or validate the release toolchain.\n\nA byte comparison against the base commit audited all **33 inherited files**: only `src/objectives.cpp` and `src/objectives.h` differ. Removing the four added lines from objectives.cpp exactly restores the base source, including all eligibility, distance and planner code. Git reports no tracked modifications outside the candidate. No tournaments were run. CAMBC/uv/release compiler tooling is unavailable on this Pi PATH.\n\n## Required PC diagnostics and uncertainty\n\nFirst build the exact candidate source in release mode using CLI5/current engine. Record source and artifact identities. Run 00vault on both sides against frozen champion and C02, with matching baseline games. Require zero candidate VM faults. Inspect actual central clear, capture and bank events; wins and scores alone do not establish the mechanism. Measure active-rule exposure, target rewards, banking, deaths, faults and paired outcomes.\n\nEligibility may remain false until too late; existing task commitment can delay selection even after equipment improves. The unchanged solo clear estimate is neither a safety model nor a guarantee of completing travel, combat and capture within task_limit=90. Capture access, competition, retreat and banking can defeat the opportunity. Record observed task expiration without changing the deadline. If no productive dominant-group capture occurs, retain the failed mechanism evidence and diagnose eligibility, commitment, combat, capture access or banking. Do not broaden treatment or upload on a proxy win.\n\nOnly after diagnostic mechanism success, run the same 80-game regression screen. Direct champion >=8/16 and common >=31/64 are minimal regression conditions, not evidence of increased strength; the rare rule may not trigger. Broader testing needs predeclared development maps, diverse opponents and no-dominant negative controls; fresh confirmation maps remain reserved. Release build, engine integration, VM fault rate, actual rule exposure and match outcomes remain unmeasured here. No platform upload or ranked change is authorized by this job.\n",
-  "lease": {
-    "token": "85ff8c9ecdf98653e42e401f39fd362e",
-    "worker": "windows-pc",
-    "expires_at": 1793850447.094643
+  "test_report": {
+    "bot": "pi_dominant-gems-01",
+    "candidate_commit": "ef22c7f92ecab5fe76e3333ab7df3f8ec567ff9a",
+    "parent_commit": "2f0f534e8311ee597e516b11c2afca1bbf608060",
+    "candidate": {
+      "path": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-gems-01-85ff8c9ecdf9\\tournament\\candidate.zip",
+      "language": "cpp",
+      "wasm_sha256": "eab6a8c153776767874987491c1e74f51fc327356692f733daf1e2eff83ec55c",
+      "zip_sha256": "25e95f440e3e73c9922af78b4f2cce0590c52da589acfe3e01c18e772d5122c7"
+    },
+    "opponents": {
+      "champion": {
+        "path": "D:\\Coding\\battlecode-26-27\\.cambc\\tuning\\g07_search.zip",
+        "language": "cpp",
+        "wasm_sha256": "a24ef0c56844e506694c48ed34e698c083a18fe7d9d74bf6c12ae355d1b448ac",
+        "zip_sha256": "c15add470231deee1f119220211991058075dfcb4de4724d06eb152ab4075d33"
+      },
+      "record_guard": {
+        "path": "D:\\Coding\\battlecode-26-27\\.cambc\\features\\c02_record_guard.zip",
+        "language": "cpp",
+        "wasm_sha256": "605207958ed3f3dc778f03b0b122dfa9c7469f09e19dd7b48c979a47532e73d7",
+        "zip_sha256": "573535e7cd99af582b9024132783bb0bc99cb672bda9e37f55bd90acdc4489c3"
+      }
+    },
+    "cpu_policy": {
+      "affinity_mask": 65532,
+      "reserved_core_mask": 3,
+      "physical_cores_in_group": 8,
+      "logical_cores": 14,
+      "workers": 14,
+      "batch_size": 120,
+      "cooldown_seconds": 0,
+      "summary_workers": 14,
+      "priority": "BelowNormal"
+    },
+    "cli_sha256": "4a94c15027d94c4702e1b84471cb25110a5d2c4e3c67976e65439d93582e774c",
+    "cli_version": "cambc 5.0.0",
+    "map_sha256": {
+      "00vault": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454"
+    },
+    "games": 4,
+    "outcomes": {
+      "loss": 3,
+      "win": 1
+    },
+    "versus": {
+      "champion": {
+        "loss": 2
+      },
+      "record_guard": {
+        "win": 1,
+        "loss": 1
+      }
+    },
+    "both_teams_faults": 0,
+    "candidate_faults": 0,
+    "candidate_logged_errors": 3,
+    "matches": [
+      {
+        "opponent": "champion",
+        "map": "00vault",
+        "side": "teamA",
+        "outcome": "loss",
+        "engine_outcome": "teamB",
+        "submitted": 487,
+        "opponent_submitted": 1059,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 1,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-gems-01-85ff8c9ecdf9\\tournament\\00000.zip",
+        "replay_sha256": "a69e416402b1a14814d77b5b3f485602b90cd6febdf3f62bca9159afe91c21f9",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 26327,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamB",
+          "roundsCompleted": 1768,
+          "roundsStarted": 1769,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      },
+      {
+        "opponent": "champion",
+        "map": "00vault",
+        "side": "teamB",
+        "outcome": "loss",
+        "engine_outcome": "teamA",
+        "submitted": 838,
+        "opponent_submitted": 1079,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 0,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-gems-01-85ff8c9ecdf9\\tournament\\00001.zip",
+        "replay_sha256": "389944b373c7f3620249b3b5624307072e319bf8c0d107633730bd9c2e860f3e",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 28514,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 1895,
+          "roundsStarted": 1896,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00vault",
+        "side": "teamA",
+        "outcome": "win",
+        "engine_outcome": "teamA",
+        "submitted": 850,
+        "opponent_submitted": 838,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 1,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-gems-01-85ff8c9ecdf9\\tournament\\00002.zip",
+        "replay_sha256": "d23ae82e442da13191ceb21df842da697de9d2af61243ed9db90e65253801926",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 29473,
+          "finalRoundPartial": false,
+          "finalSubstep": 6,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 2000,
+          "roundsStarted": 2000,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      },
+      {
+        "opponent": "record_guard",
+        "map": "00vault",
+        "side": "teamB",
+        "outcome": "loss",
+        "engine_outcome": "teamA",
+        "submitted": 140,
+        "opponent_submitted": 1165,
+        "both_teams_faults": {
+          "teamA": 0,
+          "teamB": 0
+        },
+        "candidate_logged_errors": 1,
+        "replay": "D:\\Coding\\battlecode-26-27\\.cambc\\agent-bridge\\logs\\dominant-gems-01-85ff8c9ecdf9\\tournament\\00003.zip",
+        "replay_sha256": "57f395f2f4dc114f75984d6fbc9bc823fd0c7c02ea3b4baf17d9de8da8b46192",
+        "seed": "12775475323598742673",
+        "engine": {
+          "engineBuildHash": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+          "engineVersion": "3.0.0",
+          "finalInput": 24503,
+          "finalRoundPartial": true,
+          "finalSubstep": 7,
+          "height": 31,
+          "mapHash": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+          "metricSemanticsVersion": 1,
+          "outcome": "teamA",
+          "roundsCompleted": 1637,
+          "roundsStarted": 1638,
+          "seed": "12775475323598742673",
+          "width": 31
+        }
+      }
+    ],
+    "decision": "Evidence for critic review; no automatic promotion or platform submission."
   }
 }
