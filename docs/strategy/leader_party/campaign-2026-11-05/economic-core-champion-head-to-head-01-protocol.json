@@ -1,0 +1,117 @@
+{
+  "experiment": "economic-core-champion-head-to-head-01",
+  "frozen_at": "2026-11-06T03:16:04.594730+00:00",
+  "status": "conditions selected before any complete economic-core game; final artifact binding pending",
+  "purpose": "Direct whole-bot comparison requested by user. Supplemental local development screen; does not replace or change frozen construction/strength protocols.",
+  "candidate_commit": null,
+  "candidate_wasm_sha256": null,
+  "opponent": {
+    "path": ".cambc/tuning/g07_search.zip",
+    "wasm_sha256": "a24ef0c56844e506694c48ed34e698c083a18fe7d9d74bf6c12ae355d1b448ac",
+    "zip_sha256": "c15add470231deee1f119220211991058075dfcb4de4724d06eb152ab4075d33"
+  },
+  "cli_version": "cambc 5.0.0",
+  "cli_sha256": "4a94c15027d94c4702e1b84471cb25110a5d2c4e3c67976e65439d93582e774c",
+  "engine_build": "96ce858f548c14560eff737967a691a30eaf0a469afd1f4f400f125e094bd1fd",
+  "candidate_games": 12,
+  "conditions": [
+    {
+      "map": "00swirl",
+      "map_sha256": "e6f860670947b1326f34c86515db8ef6893c565eaa69e3f9a6464ec5744e1c93",
+      "opponent": "champion",
+      "side": "teamA"
+    },
+    {
+      "map": "00swirl",
+      "map_sha256": "e6f860670947b1326f34c86515db8ef6893c565eaa69e3f9a6464ec5744e1c93",
+      "opponent": "champion",
+      "side": "teamB"
+    },
+    {
+      "map": "00lanes",
+      "map_sha256": "8ca26ed2ea65c7d80ceb9604a7431ca1dc056922912b4e2f46cad06051e4886a",
+      "opponent": "champion",
+      "side": "teamA"
+    },
+    {
+      "map": "00lanes",
+      "map_sha256": "8ca26ed2ea65c7d80ceb9604a7431ca1dc056922912b4e2f46cad06051e4886a",
+      "opponent": "champion",
+      "side": "teamB"
+    },
+    {
+      "map": "00elkring",
+      "map_sha256": "4621e92590befe6b0438b7ecdd8fde5aa85945b27535f4968e701cf86934746e",
+      "opponent": "champion",
+      "side": "teamA"
+    },
+    {
+      "map": "00elkring",
+      "map_sha256": "4621e92590befe6b0438b7ecdd8fde5aa85945b27535f4968e701cf86934746e",
+      "opponent": "champion",
+      "side": "teamB"
+    },
+    {
+      "map": "02guardians",
+      "map_sha256": "b28e0b473ebcdda91780d80477fd1729d66122ff3b82464d10c87d5e9159dc09",
+      "opponent": "champion",
+      "side": "teamA"
+    },
+    {
+      "map": "02guardians",
+      "map_sha256": "b28e0b473ebcdda91780d80477fd1729d66122ff3b82464d10c87d5e9159dc09",
+      "opponent": "champion",
+      "side": "teamB"
+    },
+    {
+      "map": "00vault",
+      "map_sha256": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+      "opponent": "champion",
+      "side": "teamA"
+    },
+    {
+      "map": "00vault",
+      "map_sha256": "aa5f5e981789c8f3f3658b5a989cbce00dc0fc91075b6ea5e771c42a2d839454",
+      "opponent": "champion",
+      "side": "teamB"
+    },
+    {
+      "map": "00the-line",
+      "map_sha256": "87a410356a18a703909b980eafb4888780e3785509ce54ff59ded5295b6acd7d",
+      "opponent": "champion",
+      "side": "teamA"
+    },
+    {
+      "map": "00the-line",
+      "map_sha256": "87a410356a18a703909b980eafb4888780e3785509ce54ff59ded5295b6acd7d",
+      "opponent": "champion",
+      "side": "teamB"
+    }
+  ],
+  "prerequisites": [
+    "Complete production banking integration and real SDK fixtures; exact source/artifact freeze.",
+    "Pass measured memory/fuel admission and the existing 12-game economic construction readiness gates."
+  ],
+  "primary": "Candidate win=1/draw=0.5/loss=0 directly against unchanged ranked champion, both sides on all six fixed maps.",
+  "gates": {
+    "minimum_score": 7,
+    "minimum_nonnegative_maps": 3,
+    "candidate_vm_faults": 0,
+    "candidate_logged_action_contract_errors": 0
+  },
+  "reporting": [
+    "All conditions, scores and exact opponent/source/artifact identities.",
+    "Banked/lost gems, deaths, first bank and fuel suspensions where extractable.",
+    "A small deterministic screen cannot establish leader competitiveness or statistical superiority."
+  ],
+  "stopping": [
+    "Source/runtime technical fault stops qualification; preserve all completed evidence, no silent retries.",
+    "A practical screen failure rejects this revision for broader strength testing; diagnose before a revised candidate.",
+    "A screen pass permits the unchanged broader development protocol; it is not promotion approval."
+  ],
+  "rules": [
+    "Never replace the ranked submission or upload on this local protocol.",
+    "No outcome-dependent map additions, exclusions or artifact changes.",
+    "These are development conditions, not fresh confirmation."
+  ]
+}
