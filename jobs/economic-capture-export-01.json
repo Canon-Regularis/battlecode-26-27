@@ -6,10 +6,10 @@
   "instructions": "# Export the preserved observation repair, without further implementation\n\nThe original job economic-capture-batches-01 explicitly timed out, with no returned commit. This is a one-time source recovery task, not a retry of coding or permission to change the strategy. Finish promptly after copying and reporting. Do not run tests, compile, research, debug or complete unfinished code.\n\nBase commit: 19ab17362c7bb8f022eb6b25183c337cd96bb68f. Base bot: local_economic_core_01. The bridge already copied the base into bots/pi_economic-capture-export-01/.\n\nRead the preserved old directory only:\n\n```text\n/home/dav/.local/state/battlecode-agent/checkouts/economic-capture-batches-01-coder-7168af955ff1/bots/pi_economic-capture-batches-01/\n```\n\nUse a short Python script to copy these files from that directory into the corresponding paths under bots/pi_economic-capture-export-01/, but only when the source file exists and is an ordinary file without a symlink component:\n\n```text\nsrc/live_turn.h\nsrc/economic_scene_sdk.cpp\ntests/economic_capture_batches.cpp\ntests/economic_capture_sdk.cpp\n```\n\nDo not copy any other source, executable, build artifact, credential, SDK, tool or setting. Do not write anything to the old checkout. Preserve the copied bytes exactly; do not rename identifiers or fix errors. If a source is missing/inaccessible, record that fact and leave the corresponding base file untouched. If the old directory is unavailable, write a report explaining that and stop; do not implement a replacement.\n\nWrite only the new candidate's IMPLEMENTATION.md in addition to those copied files. Include the original job/path/token, every attempted source path and its existence/copy status, SHA256 of copied bytes, and any original IMPLEMENTATION.md content if present (quote it as unverified original report). Explicitly state no tests/builds were run for this export, that completeness and correctness are unknown, and that the PC owns all source/API/native/engine qualification. Leave all changes uncommitted for the bridge to commit and push. End the Codex task immediately after the copy and report; there is no remaining implementation task here.\n",
   "status": "coding",
   "created_at": 1793941449.078991,
-  "updated_at": 1793944544.8045256,
+  "updated_at": 1793944607.9171991,
   "lease": {
     "token": "fbbf0ce0dec6095f16675d41e6e4490c",
     "worker": "pi5",
-    "expires_at": 1793945444.8045232
+    "expires_at": 1793945507.917198
   }
 }
