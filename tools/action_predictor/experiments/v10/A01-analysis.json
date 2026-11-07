@@ -1,0 +1,864 @@
+{
+  "rows": 14439,
+  "comparisons": {
+    "overall": {
+      "rows": 14439,
+      "new_correct": 11568,
+      "G00_correct": 11510,
+      "rescues": 69,
+      "regressions": 11,
+      "mean_nll": 0.6903908113629614,
+      "G00_nll": 0.7265556454658508,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.002689735388194281,
+          "high": 0.005446842848497058,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0011664808093668766,
+          "high": 0.008626805971695184,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.03989843249021585,
+          "high": -0.03241053926033499,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.04260963893776393,
+        "high": 0.05745794486173862,
+        "valid_draws": 2000
+      }
+    },
+    "except_recall": {
+      "rows": 11355,
+      "new_correct": 9054,
+      "G00_correct": 9038,
+      "rescues": 26,
+      "regressions": 10,
+      "mean_nll": 0.7637723251405686,
+      "G00_nll": 0.7616544961929321,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0007283261831114137,
+          "high": 0.0020344155293718913,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0027277903283855487,
+          "high": 0.009356759820309035,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.0013039163400723197,
+          "high": 0.005502220366186528,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.007839927156009674,
+        "high": 0.0016536649470006452,
+        "valid_draws": 2000
+      }
+    },
+    "point_routed": {
+      "rows": 482,
+      "new_correct": 404,
+      "G00_correct": 346,
+      "rescues": 69,
+      "regressions": 11,
+      "mean_nll": 0.8106075057466384,
+      "G00_nll": 1.0358638763427734,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.08936170212765959,
+          "high": 0.1599229287090559,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.12425564316592663,
+          "high": -0.008452322831465409,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.2532991864430484,
+          "high": -0.18999786564896803,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.18177054338946108,
+        "high": 0.2733284258621176,
+        "valid_draws": 2000
+      }
+    },
+    "fallback_routed": {
+      "rows": 13957,
+      "new_correct": 11164,
+      "G00_correct": 11164,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 0.6862391708461647,
+      "G00_nll": 0.7158738374710083,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.03380184771027006,
+          "high": -0.025202917231163524,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.03440612344390526,
+        "high": 0.049090169841697784,
+        "valid_draws": 2000
+      }
+    },
+    "move_continuing": {
+      "rows": 1198,
+      "new_correct": 1062,
+      "G00_correct": 1053,
+      "rescues": 10,
+      "regressions": 1,
+      "mean_nll": 0.568949607693245,
+      "G00_nll": 0.6290144324302673,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0038580246913579863,
+          "high": 0.013676588897827857,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.00016774596077506754,
+          "high": 0.00046261976496839163,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.09871016331698257,
+          "high": -0.024683394726624508,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.04421293148959915,
+        "high": 0.13848833746389033,
+        "valid_draws": 2000
+      }
+    },
+    "move_changing": {
+      "rows": 1158,
+      "new_correct": 273,
+      "G00_correct": 263,
+      "rescues": 11,
+      "regressions": 1,
+      "mean_nll": 2.123234096621155,
+      "G00_nll": 2.2165591716766357,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.00647249190938512,
+          "high": 0.010833333333333334,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 9.722257134173184e-05,
+          "high": 0.0004284793055207431,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.10272323455671639,
+          "high": -0.08408809034306497,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.03840575057575468,
+        "high": 0.04577430364435453,
+        "valid_draws": 2000
+      }
+    },
+    "altar": {
+      "rows": 2,
+      "new_correct": 0,
+      "G00_correct": 0,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 3.03227199614048,
+      "G00_nll": 2.426201105117798,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 1836
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 1836
+        },
+        "joint_nll": {
+          "low": 0.48226961493492126,
+          "high": 0.7298721671104431,
+          "valid_draws": 1836
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.27515689552001676,
+        "high": -0.2354658400572076,
+        "valid_draws": 1836
+      }
+    },
+    "attack": {
+      "rows": 985,
+      "new_correct": 872,
+      "G00_correct": 874,
+      "rescues": 3,
+      "regressions": 5,
+      "mean_nll": 0.37363092591298674,
+      "G00_nll": 0.347902774810791,
+      "paired95": {
+        "joint_accuracy": {
+          "low": -0.006615214994487251,
+          "high": 0.0021551724137930384,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.00015427402962549241,
+          "high": 8.484168239733525e-05,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 0.01292108904129452,
+          "high": 0.04352683424377707,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.10966612632369444,
+        "high": -0.03862586770170484,
+        "valid_draws": 2000
+      }
+    },
+    "blocked": {
+      "rows": 110,
+      "new_correct": 8,
+      "G00_correct": 8,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 4.290531349546685,
+      "G00_nll": 4.084982395172119,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.002247752247752248,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 0.16448039395628067,
+          "high": 0.23450266463974057,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.057733695760398884,
+        "high": -0.04354358307859396,
+        "valid_draws": 2000
+      }
+    },
+    "cancel": {
+      "rows": 2589,
+      "new_correct": 2535,
+      "G00_correct": 2535,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 0.07435045472870161,
+      "G00_nll": 0.07423103600740433,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 7.705410909540633e-05,
+          "high": 0.00016397805855743468,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.0021460104638191257,
+        "high": -0.0010430872432070082,
+        "valid_draws": 2000
+      }
+    },
+    "cast_0": {
+      "rows": 213,
+      "new_correct": 153,
+      "G00_correct": 154,
+      "rescues": 0,
+      "regressions": 1,
+      "mean_nll": 0.9169766847866029,
+      "G00_nll": 0.8352788090705872,
+      "paired95": {
+        "joint_accuracy": {
+          "low": -0.016393442622950838,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.0009989229489991217,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 0.04908573302576913,
+          "high": 0.11843691826129388,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.14067114404274528,
+        "high": -0.05828181929501741,
+        "valid_draws": 2000
+      }
+    },
+    "cast_1": {
+      "rows": 243,
+      "new_correct": 94,
+      "G00_correct": 95,
+      "rescues": 0,
+      "regressions": 1,
+      "mean_nll": 2.324094849730465,
+      "G00_nll": 2.1388487815856934,
+      "paired95": {
+        "joint_accuracy": {
+          "low": -0.0122976222734047,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.0010013822397029054,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 0.16567345983408055,
+          "high": 0.20667434202947055,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.09686900807069132,
+        "high": -0.07694716692493153,
+        "valid_draws": 2000
+      }
+    },
+    "end": {
+      "rows": 4096,
+      "new_correct": 3957,
+      "G00_correct": 3957,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 0.10749799212435682,
+      "G00_nll": 0.10737287998199463,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 9.002744277752939e-05,
+          "high": 0.00016573888279303173,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.0017072389658214782,
+        "high": -0.0008716902924901238,
+        "valid_draws": 2000
+      }
+    },
+    "move": {
+      "rows": 2362,
+      "new_correct": 1337,
+      "G00_correct": 1318,
+      "rescues": 21,
+      "regressions": 2,
+      "mean_nll": 1.332408238313995,
+      "G00_nll": 1.409581184387207,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.005806163465832959,
+          "high": 0.010955799017755896,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.00018320723921988574,
+          "high": 0.0003593944249975639,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.09876726487597476,
+          "high": -0.058106612108160816,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.04345037270345664,
+        "high": 0.06583571947750277,
+        "valid_draws": 2000
+      }
+    },
+    "priority": {
+      "rows": 576,
+      "new_correct": 71,
+      "G00_correct": 71,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 4.799706082680517,
+      "G00_nll": 4.683632850646973,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.000590405953884536,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 0.0949960418667084,
+          "high": 0.14393732520507463,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.029178254088280342,
+        "high": -0.021017352478241103,
+        "valid_draws": 2000
+      }
+    },
+    "recall": {
+      "rows": 3084,
+      "new_correct": 2514,
+      "G00_correct": 2472,
+      "rescues": 43,
+      "regressions": 1,
+      "mean_nll": 0.42020693038218015,
+      "G00_nll": 0.5973248481750488,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0075162282200205155,
+          "high": 0.0191502094554159,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.00033035057114111366,
+          "high": 0.0008311384668694549,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.19535475092729757,
+          "high": -0.15869730102728158,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": 0.25485415131957967,
+        "high": 0.3278620570464358,
+        "valid_draws": 2000
+      }
+    },
+    "shop": {
+      "rows": 43,
+      "new_correct": 0,
+      "G00_correct": 0,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 0.08717962300057627,
+      "G00_nll": 0.08499124646186829,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 9.01894056905099e-05,
+          "high": 0.0048273141243991985,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.06301172072587735,
+        "high": -0.001695547659897434,
+        "valid_draws": 2000
+      }
+    },
+    "submit": {
+      "rows": 22,
+      "new_correct": 21,
+      "G00_correct": 19,
+      "rescues": 2,
+      "regressions": 0,
+      "mean_nll": 0.17034540746829777,
+      "G00_nll": 0.2836500406265259,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.15394736842105208,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.006122448979591841,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.25862353390392023,
+          "high": 0.09842615298093367,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -1.255598400771135,
+        "high": 0.5778422435096542,
+        "valid_draws": 2000
+      }
+    },
+    "teleport": {
+      "rows": 2,
+      "new_correct": 0,
+      "G00_correct": 0,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll": 4.577654985354457,
+      "G00_nll": 4.577420234680176,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 1344
+        },
+        "macro_f1": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 1344
+        },
+        "joint_nll": {
+          "low": 0.00023475067428080365,
+          "high": 0.00023475067428080365,
+          "valid_draws": 1344
+        }
+      },
+      "loss_reduction95": {
+        "low": -5.128449262792323e-05,
+        "high": -5.128449262792323e-05,
+        "valid_draws": 1344
+      }
+    },
+    "ward": {
+      "rows": 112,
+      "new_correct": 6,
+      "G00_correct": 7,
+      "rescues": 0,
+      "regressions": 1,
+      "mean_nll": 4.51141532929246,
+      "G00_nll": 4.248322010040283,
+      "paired95": {
+        "joint_accuracy": {
+          "low": -0.03333333333333334,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.0025854800936768174,
+          "high": 0.0,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": 0.2273124502776107,
+          "high": 0.28660070164452645,
+          "valid_draws": 2000
+        }
+      },
+      "loss_reduction95": {
+        "low": -0.06698323059593236,
+        "high": -0.05683143320733541,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "opportunity": {
+    "library_rescues": 1628,
+    "captured": 69,
+    "missed": 1559
+  },
+  "support_ceiling": {
+    "<unknown>": {
+      "rows": 0,
+      "union_correct": 0
+    },
+    "altar": {
+      "rows": 2,
+      "union_correct": 0
+    },
+    "attack": {
+      "rows": 985,
+      "union_correct": 972
+    },
+    "blocked": {
+      "rows": 110,
+      "union_correct": 8
+    },
+    "cancel": {
+      "rows": 2589,
+      "union_correct": 2589
+    },
+    "cast_0": {
+      "rows": 213,
+      "union_correct": 206
+    },
+    "cast_1": {
+      "rows": 243,
+      "union_correct": 125
+    },
+    "end": {
+      "rows": 4096,
+      "union_correct": 4096
+    },
+    "move": {
+      "rows": 2362,
+      "union_correct": 1953
+    },
+    "priority": {
+      "rows": 576,
+      "union_correct": 71
+    },
+    "recall": {
+      "rows": 3084,
+      "union_correct": 3084
+    },
+    "shop": {
+      "rows": 43,
+      "union_correct": 0
+    },
+    "submit": {
+      "rows": 22,
+      "union_correct": 22
+    },
+    "teleport": {
+      "rows": 2,
+      "union_correct": 0
+    },
+    "ward": {
+      "rows": 112,
+      "union_correct": 12
+    }
+  },
+  "unique_slot_rescue": {
+    "camp_near/greedy_yx": 0,
+    "camp_near/field_yx": 13,
+    "camp_near/field_xy": 0,
+    "camp_hp/greedy_yx": 0,
+    "camp_hp/field_yx": 7,
+    "camp_hp/field_xy": 0,
+    "enemy_near/greedy_yx": 0,
+    "enemy_near/field_yx": 27,
+    "enemy_near/field_xy": 0,
+    "bank/greedy_yx": 0,
+    "bank/field_yx": 50,
+    "bank/field_xy": 0,
+    "home/greedy_yx": 0,
+    "home/field_yx": 38,
+    "home/field_xy": 0,
+    "attack/near": 1,
+    "attack/hp": 14,
+    "attack/fraction": 4,
+    "cast_0/near": 5,
+    "cast_0/hp": 1,
+    "cast_0/fraction": 9,
+    "cast_1/near": 2,
+    "cast_1/hp": 1,
+    "cast_1/fraction": 2,
+    "ward/self": 0,
+    "ward/toward_bank": 5,
+    "submit/bank": 3,
+    "end": 139,
+    "cancel": 54,
+    "recall": 612,
+    "priority/zero": 0
+  },
+  "legality": {
+    "move": {
+      "predicted_support": 2297,
+      "mask_rejections": 0
+    },
+    "blocked": {
+      "predicted_support": 94,
+      "mask_rejections": 92
+    },
+    "legacy_partial": {
+      "assessed": 7113,
+      "invalid": 113,
+      "rate": 0.015886405173625755,
+      "all_command_fraction": 0.007826026733153265,
+      "full_engine_illegal_action_rate": null,
+      "meaning": "Partial observable violations: exact personal movement mask; other families readiness/resource checks only. Does not certify complete legality."
+    },
+    "full_engine_legality": null,
+    "meaning": "Successful move-mask rejections separated from blocked-attempt forecasts; blocked mask rejection can be correct outcome prediction."
+  },
+  "priority": {
+    "all": {
+      "rows": 576,
+      "joint": 71,
+      "correctly_typed": 340,
+      "mean_abs_error_all_true_rows": 143.49131944444446,
+      "max_abs_error_all_true_rows": 1489,
+      "all_true_argument_accuracy": null,
+      "reason": "Joint-only decoder; leftover priority scalar on another type is not its priority prediction"
+    },
+    "rare": {
+      "rows": 65,
+      "joint": 6,
+      "correctly_typed": 46,
+      "mean_abs_error_all_true_rows": 254.1076923076923,
+      "max_abs_error_all_true_rows": 1489,
+      "all_true_argument_accuracy": null,
+      "reason": "Joint-only decoder; leftover priority scalar on another type is not its priority prediction"
+    },
+    "unseen": {
+      "rows": 4,
+      "joint": 1,
+      "correctly_typed": 3,
+      "mean_abs_error_all_true_rows": 323.5,
+      "max_abs_error_all_true_rows": 680,
+      "all_true_argument_accuracy": null,
+      "reason": "Joint-only decoder; leftover priority scalar on another type is not its priority prediction"
+    }
+  },
+  "route_confidence_bins": [
+    {
+      "low": 0.0,
+      "high": 0.1,
+      "rows": 11,
+      "mean_fallback_weight": 0.06968840211629868,
+      "G00_command_correct_rate": 0.7272727272727273,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.1,
+      "high": 0.2,
+      "rows": 25,
+      "mean_fallback_weight": 0.16107779741287231,
+      "G00_command_correct_rate": 0.72,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.2,
+      "high": 0.30000000000000004,
+      "rows": 40,
+      "mean_fallback_weight": 0.25822535157203674,
+      "G00_command_correct_rate": 0.7,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.30000000000000004,
+      "high": 0.4,
+      "rows": 146,
+      "mean_fallback_weight": 0.3609922230243683,
+      "G00_command_correct_rate": 0.6712328767123288,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.4,
+      "high": 0.5,
+      "rows": 356,
+      "mean_fallback_weight": 0.45661377906799316,
+      "G00_command_correct_rate": 0.6685393258426966,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.5,
+      "high": 0.6000000000000001,
+      "rows": 583,
+      "mean_fallback_weight": 0.5519208908081055,
+      "G00_command_correct_rate": 0.6740994854202401,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.6000000000000001,
+      "high": 0.7000000000000001,
+      "rows": 738,
+      "mean_fallback_weight": 0.6509082913398743,
+      "G00_command_correct_rate": 0.6598915989159891,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.7000000000000001,
+      "high": 0.8,
+      "rows": 762,
+      "mean_fallback_weight": 0.7502013444900513,
+      "G00_command_correct_rate": 0.5879265091863517,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.8,
+      "high": 0.9,
+      "rows": 885,
+      "mean_fallback_weight": 0.8520858883857727,
+      "G00_command_correct_rate": 0.5175141242937853,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    },
+    {
+      "low": 0.9,
+      "high": 1.0,
+      "rows": 10893,
+      "mean_fallback_weight": 0.9944598078727722,
+      "G00_command_correct_rate": 0.8568805655007803,
+      "meaning": "route weight, not calibrated probability of hard-command correctness"
+    }
+  ],
+  "uncertainty": "2000paired whole-group draws,seed20261106;5reusedDEVgroups,conditional on selectedcheckpoint;not untouched/selection-adjusted/3seed",
+  "warnings": [
+    "No parameter accuracy inferred by reading a leftover scalar from a differently typed command",
+    "No strategy similarity claim",
+    "Partial legality only;blocked movement-mask rejections are not illegal successful moves"
+  ],
+  "new_fits": 0,
+  "reserved_opened": 0
+}

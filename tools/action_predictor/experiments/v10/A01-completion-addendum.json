@@ -1,0 +1,36 @@
+{
+  "report_sha256": "e1bd919f87ff6d6cd0e42c4d557824963104c65cc64238470a59f2d70f9618ff",
+  "analysis_sha256": "657fd8a144d82c3749eb8004a23d12e521b58b07f9ff7b3018030d5219b0e752",
+  "files": {
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-01.pt": "439a78e14ec0bd0a2cb3e1206a092bed41e272bfa7c14d34bf082df5821dc245",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-02.pt": "1d02044687805d53ad5a7bfcdefc61c2dc9f990b05629edbdd7f56aab8d5da7b",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-03.pt": "98284e5fec3652ddbb0e14ae383dacf3cde1019d6d736c0f104c32b926bf0ec8",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-04.pt": "53a073fbbc1ad227088bf5abb1527a257d315141755bf3d61e3e70c62bf36df0",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-05.pt": "40261438e16662ec55feca1e3d8cddd62397cd09f95f76fb50b52075ecc08745",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-06.pt": "a48fcb6ce08ab8edc5dcb62f4756b2248f9153121099e62716e725d6d6755ab5",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-07.pt": "742553ed40ad02bd64e9951254a5367d1fc84bc8758c12e89024b384f39c00e0",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-08.pt": "c2f553eda1f545c8c34a27d17a302fc128f3b88c2dff60bbdfac9dcd9689246d",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-09.pt": "8efabf40e3b3b44f6eba56a8843550d28966b4d7ffabbfce689946015603d44c",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-10.pt": "4dc4be30f65cc8dd823d7c6ac5879f70f166658d0e92b83cccae6078e5ecf1d1",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-11.pt": "e4e98b6b9befa76aff0dadf9aea78205fdc3592c51b8d252e6528c8fcc9c7dd1",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-12.pt": "390c18ff224daf1e00749f7aebe6c11c107fa85fbef20bd10b49a70c69bcc148",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-13.pt": "c00fa8bf4118a395bd13d00570d40e5e8d9cb6adcd2bdbde310cf20dd94ac911",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-14.pt": "0b71f22a8d72d1006aee3bde30e7f47cf486e87cd3d528d4658a2749bca95bcf",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-15.pt": "5e7753efb376727eba3b3e25ab97275fd7df24add87a793f4dbf0d81b62b46f6",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\round-16.pt": "18aba17f60bb911121bab2c83122d8ba491c27eada364cb3468885dd8864f6dd",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\train-predictions.npz": "c9f401cf05511ad100176cb173193af51470c0fd770f5095bc047ae564045bcf",
+    ".cambc\\action-predictor\\v10\\runs\\A01\\validation-predictions.npz": "2970411fc12c08abed5bd790645ceac63c1b3b40b77e027e10aef354cb2caed0"
+  },
+  "source_sha256": "fbe2889cf47c0622654aba05a64f6f339f234229b5f1b74a276d6417c9df7178",
+  "optimizer_updates": 13536,
+  "commands": [
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic.study train",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic.study validation",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic_fit",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic_roundtrip",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic_analysis A01"
+  ],
+  "all_category_success": false,
+  "three_seeds": false,
+  "serving_receipt": null
+}

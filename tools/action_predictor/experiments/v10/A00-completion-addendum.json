@@ -1,0 +1,43 @@
+{
+  "report_sha256": "20ea771e8943ef7563d23c24e3a45c3084cb12358dec223b2f5d24ea3f0c827d",
+  "analysis_sha256": "4808953c8fec18931a83069756a6ab8e0fddef427eaa73eac5c1e8e35aaa7f97",
+  "files": {
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-01.pt": "5db5706bacddaed6f54603de9e95283f261b01beda3d39e803c246426bda5fcb",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-02.pt": "0b930e2dddeafbf5880fa44e9a69f2dc200701809dc5e140e3a67227611b67ae",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-03.pt": "d382f744ac9890b3f720c9221bd82d04fb6f0128bd74a35ea44aaf64cb8df778",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-04.pt": "142401d8681414f1b1d5162a5d76fb113cb039efa3647ad4f01cc9be618d10fc",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-05.pt": "da79bf8e99fa6f8a0d3c2ce6739cd27df526ab451e4a075dbd93a15520faea48",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-06.pt": "ec42b79b7266fda02e3fbe65cc65f63cd98444709e4dbbbcf0a02dc25990e760",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-07.pt": "67eb912c25b2b6697885bbceb9f69a5c98a5ae953dc9bc80f38aba5f119efdf1",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-08.pt": "a1c74add20b41402f23d4651db03428858434b68969c15f8facfa35e92549db3",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-09.pt": "46c61616980357cd7d256c8a7528d2c4fdcbe84436d29c41323297c77252c5c9",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-10.pt": "298656a802c9137ae7bf0aaf3a67b4b0284929d836a6d784e2f9c8c8055b7adc",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-11.pt": "ce76ebdd6de62b352a1c005477174dcfe85aa8ac894369c479359464ea2c5c7f",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-12.pt": "d2381bb4cabb88452f8989db235be2631cc8a5633e97824f6143e788eed34fa6",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-13.pt": "7fba8537287931d6bf83c80864b5aff3f96f0030ba18d7c547badb6d87e400ff",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-14.pt": "923d31c07f594441eb4b37a48101895098cf895efaca41abb895db41ac8cc727",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-15.pt": "dc637b9fa7bdacdeff8a88c6493af58b975bef22e9f208ee0c664dc09c3c1542",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-16.pt": "6768959f025b618aab1de4345b2e1305f0e1f068a3eddc3280a9e5a48a3e32db",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-17.pt": "f94585a081df713f1d884fcfc0d6ae8ef727383f65de812a0eb1286e15e1356c",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-18.pt": "d84d13dd4a5fef0f3c3fed2e670ebdb25536aef0a6d8087e3c45a5f4a1420298",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-19.pt": "d0e2245f4b1e6cb5c836317c04138d2e662f5994b23b7c70eb781ab29ceb4ab6",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-20.pt": "619e7fd7edf528626fc41ff1ccdff4c508ccf023df050d8abc43b0116f9830e6",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-21.pt": "2f5d66c22520a7fb726efef8e118d8e8fdaf388f68cce580b596460065206030",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-22.pt": "96fdc65497f651bc8b089844a916db1031f2432420dd50fd9bc7a32332576105",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-23.pt": "92e6843508dd07745ca70e1e2f7a6324c70476f0b4a51fc0dd287b189f67cbcf",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\train-predictions.npz": "38567500ff225d40e930ccfa6922053c1cd7b9582407aa5983adc3bf5cdc7382",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\validation-predictions.npz": "3a24545f7c814073ef41bdcaf33e04159589d49d40aba5323dc04900692234a7"
+  },
+  "source_sha256": "fbe2889cf47c0622654aba05a64f6f339f234229b5f1b74a276d6417c9df7178",
+  "optimizer_updates": 19458,
+  "commands": [
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic.study train",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic.study validation",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic_fit",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic_roundtrip",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.algorithmic_analysis A00"
+  ],
+  "all_category_success": false,
+  "three_seeds": false,
+  "serving_receipt": "e4ab7b595ad2a5283c672f034d04cabddb8c31444875e20cba562d0ca351f54a"
+}

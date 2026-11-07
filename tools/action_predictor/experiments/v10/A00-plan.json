@@ -1,0 +1,30 @@
+{
+  "id": "A00",
+  "source_sha256": "055ba2122c81f73f24bb58bd932eeebd1c30196c7a86343f0772c06e038230f3",
+  "selected_library": "C00 simple,mode1; selected by TRAIN movement coverage68.42% vs58.30%field library, before reading DEV coverage. Slot suffixes field_yx/field_xy in this control mean squared-distance-yx/xy geometric ties, as implemented in library.py.",
+  "library_plan_sha256": "54fc9542f542a5486ac0257832bdf3b07fe123b81f11d432dd39ad55e4ab81ce",
+  "coverage_reports": {
+    "train": "44df1d26c701650af1311d6e90c213625eefb98430a26ee9877df0d7a460af55",
+    "validation": "7fbe8862109ce3edc4fa8d90ab04c8ac3ededf0b4d971ed35918de82e0eb9e73"
+  },
+  "inputs": "253 frozen personal PRE features plus last8 actual own-action encodings, sanitized utility coordinates. No game/group/map IDs, sampled-row recurrence, current answer, future evidence or oracle routing. Missing history remains explicit in frozen vectors.",
+  "model": "445->64tanh->32logits;dropout.1;masked absent candidates;zero output weights,fallback bias4,other bias-4",
+  "loss": "Unweighted original augmented TRAIN. Negative log(sum weights of all exact command matches + fallback weight*G00 observed joint probability). Marginalizes duplicate intent explanations. Shop argument likelihood remains unobserved;strict shop alwaysfails.",
+  "decoder": "Sum weights of identical point commands; compare largest to opaque fallback weight; emit point or G00 predicted-family command. Approximate hard routing, not mixture command MAP. Action selection and fallback routing are trainable.",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch": 512,
+    "gradient_clip": 5
+  },
+  "seed": 20261107,
+  "selection": {
+    "max_rounds": 35,
+    "patience": 6,
+    "improvement": 0.0001,
+    "criterion": "full original DEV observed joint NLL"
+  },
+  "limitations": "No goal persistence yet. C00 uses terrain-only route costs, not verified full historical path semantics. Point experts have no novel shop arguments or nonzero priority. Conditional all-family parameter predictions unavailable for this joint command decoder; correctly typed conditional metrics and full predictions reported; do not mislabel its single output as true-family argument accuracy.",
+  "promotion": "Original targets binding; no promotion from oracle coverage. Three seeds only if joint improvement>=.005, no attack/cast joint or conditional loss>.02, macroF1>=.65 and DEV NLL improves. Maximum2 pilot fits frozen in C00; no automatic reuse after review."
+}

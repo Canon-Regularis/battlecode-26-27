@@ -1,0 +1,67 @@
+{
+  "id": "C00",
+  "ranked": [
+    "Measure TRAIN library coverage and same-size geometric control",
+    "Freeze source before DEV; measure every original DEV row",
+    "Fit one regularized causal command selector only if TRAIN coverage is informative",
+    "After fit fresh requested Sol xhigh review, then distinct diagnosed followup"
+  ],
+  "slots": [
+    "camp_near/greedy_yx",
+    "camp_near/field_yx",
+    "camp_near/field_xy",
+    "camp_hp/greedy_yx",
+    "camp_hp/field_yx",
+    "camp_hp/field_xy",
+    "enemy_near/greedy_yx",
+    "enemy_near/field_yx",
+    "enemy_near/field_xy",
+    "bank/greedy_yx",
+    "bank/field_yx",
+    "bank/field_xy",
+    "home/greedy_yx",
+    "home/field_yx",
+    "home/field_xy",
+    "attack/near",
+    "attack/hp",
+    "attack/fraction",
+    "cast_0/near",
+    "cast_0/hp",
+    "cast_0/fraction",
+    "cast_1/near",
+    "cast_1/hp",
+    "cast_1/fraction",
+    "ward/self",
+    "ward/toward_bank",
+    "submit/bank",
+    "end",
+    "cancel",
+    "recall",
+    "priority/zero"
+  ],
+  "count": 31,
+  "complexity": "5 objectives x3 planners;3 target ranks x3 families;2 ward,1submit,4utility. No destination enumeration, IDs or map routes. Eight-neighbour uniform terrain fields are planner hypotheses; emitted moves must belong to historical personal PRE engine movement mask. No claim hypothetical paths were engine-simulated.",
+  "memory": "C00 has no carried latent state. Selector may consume frozen causal own-action history, with original gaps; no sampled-row adjacency.",
+  "useful_TRAIN_criterion": "Movement union coverage >=0.60 OR at least0.03 of all TRAIN rows rescued beyond G00 strict commands. Exploratory allocation only, not original success.",
+  "coverage": "Any strict family+required-parameter match. Shops always fail. Move attempts vsblocked remain different; separately report destination-only collapsed diagnostic. Coordinates cannot certify ambiguous entity identity.",
+  "fit_budget": {
+    "pilot_fits": 2,
+    "seeds": [
+      20261107
+    ],
+    "promising_repeat_seeds": [
+      20261108,
+      20261109
+    ],
+    "max_rounds": 35,
+    "patience": 6,
+    "minimum_dev_nll_improvement": 0.0001
+  },
+  "frozen_targets": "Original V8 success definition binding; sparse categories uncertified. No sealed or old exposed-test tuning. No downloads,matches,bot edits,deployment. DRAFT PR11 only.",
+  "jobs_sha256": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+  "sources": {
+    "tools\\action_predictor\\algorithmic\\library.py": "69097e04bd80c27094ac1c222907b32e5c2cbae45f9e8533be3444f0d2adce1c",
+    "tools\\action_predictor\\algorithmic\\study.py": "719025c8af080ff26c5083cc30c458b35fc79f6129a508d3c9b8c5e658506f2e",
+    "tools\\action_predictor\\algorithmic\\__init__.py": "e67ad15f67ce79c62fff4b95f2d169ae52991dc878aa0188c8b9a1c06a726f49"
+  }
+}

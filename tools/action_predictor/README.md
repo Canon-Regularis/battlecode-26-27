@@ -1,5 +1,14 @@
 # Intercontinental Fish GRU action predictor
 
+## Current learned algorithmic phase
+
+V10 measures executable candidate coverage before learning causal command selection.
+A00 improves complete-command agreement mainly through recall; A01's shared
+candidate scorer loses against A00. A separate decoder diagnostic increases
+accuracy while worsening macro F1 and ward performance. None is promoted or meets
+the original category targets. See [V10 results, evidence and ranked next work](experiments/v10/INDEX.md).
+Both reserved partitions stay sealed; all prior V4–V9 artifacts are retained.
+
 ## Current completed movement pair
 
 G01 does not improve the unrestricted G00 control: 11,505 versus 11,510
