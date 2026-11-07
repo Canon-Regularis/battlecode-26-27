@@ -1,0 +1,32 @@
+{
+  "cases": {
+    "underflow_log_slots_over_original_tolerance": 16511,
+    "persistent_False/engine_2.0.0": 64,
+    "persistent_False/engine_3.0.0": 64,
+    "persistent_True/engine_2.0.0": 64,
+    "persistent_True/engine_3.0.0": 64
+  },
+  "max_absolute_difference": {
+    "state/context": 3.814697265625e-06,
+    "state/logprior": 6.67572021484375e-06,
+    "state/world": 2.384185791015625e-07,
+    "state/known": 0,
+    "state/age": 3.814697265625e-05,
+    "state/logscale": 4.76837158203125e-07,
+    "state/retain": 5.960464477539063e-08,
+    "parameter_logp": 0.0009765625,
+    "observed_nll": 5.245208740234375e-06
+  },
+  "tolerance": {
+    "state": 0.0001,
+    "logp_above_minus80": 0.0002,
+    "all_probabilities": 2e-05,
+    "observed_nll": 0.0002,
+    "command": "exact"
+  },
+  "qualification": "Bounded cached-input independent arithmetic and forward-filter check, not full raw-PRE or WASI/engine proof. Original absolute-log test failed on underflow sentinel slots and remains failed; revised probability/meaningful-log contract is explicit. Counterfactual persistence on control weights tests arithmetic only.",
+  "checkpoint_sha256": "b16229f352573176b05403b4acb2e3842ffad9974d1e5793420d88c95a9504bc",
+  "scope": "Arithmetic preflight on completed round1, not selected checkpoint quality or final serving parity",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

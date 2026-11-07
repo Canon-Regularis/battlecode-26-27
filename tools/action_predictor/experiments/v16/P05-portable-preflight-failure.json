@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "reason": "New port parity harness used cancel class4 instead of end class7 in legacy utility-coordinate masking, causing up to.6800072 context disagreement in first128DEV rows.",
+  "correction": "Corrected harness mask to exact frozen rt.model_data/priority runtime definition (all spatial families plusend); no trained model, exported weight or frozen input change. Subsequent full-row numerical check required.",
+  "scope": "New parity harness only; not the V16fit data path or deployed old P05 predictor",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

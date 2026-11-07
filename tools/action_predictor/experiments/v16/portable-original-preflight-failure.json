@@ -1,0 +1,9 @@
+{
+  "status": "FAILED",
+  "checkpoint": "L00/round-01.pt, not selected or promoted",
+  "original_test": "absolute log probability tolerance .0002 on every spatial bucket",
+  "observed": "289/291 buckets on a case differed by .0009765625 at logp around -9988.934; float32 -1e4 mask sentinel rounding, both probabilities underflow to zero",
+  "correction": "Keep original failure. Separately declared revised check: same exact commands, observed NLL .0002, state .0001, all probability differences .00002; meaningful logp > -80 .0002; count excluded-underflow original failures. No checkpoint or learned weights changed.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
