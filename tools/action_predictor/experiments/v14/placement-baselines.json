@@ -1,0 +1,75 @@
+{
+  "results": {
+    "train": {
+      "uniform": {
+        "rows": 10842,
+        "exact": 2325,
+        "accuracy": 0.2144438295517432,
+        "conditional_nll": 3.198093186632989,
+        "natural": {
+          "rows": 2192,
+          "exact": 458,
+          "accuracy": 0.20894160583941607
+        }
+      },
+      "TRAIN_offset_prior": {
+        "rows": 10842,
+        "exact": 1080,
+        "accuracy": 0.0996126175982291,
+        "conditional_nll": 2.9364056288121323,
+        "natural": {
+          "rows": 2192,
+          "exact": 218,
+          "accuracy": 0.09945255474452555
+        }
+      },
+      "masked_G00": {
+        "rows": 10842,
+        "exact": 2325,
+        "accuracy": 0.2144438295517432,
+        "conditional_nll": 2.545624600601081,
+        "natural": {
+          "rows": 2192,
+          "exact": 458,
+          "accuracy": 0.20894160583941607
+        }
+      },
+      "original_G00": {
+        "rows": 10842,
+        "exact": 2274,
+        "accuracy": 0.2097399003873824,
+        "conditional_nll": 2.565663974735618
+      }
+    },
+    "validation": {
+      "uniform": {
+        "rows": 112,
+        "exact": 24,
+        "accuracy": 0.21428571428571427,
+        "conditional_nll": 3.204060942806844
+      },
+      "TRAIN_offset_prior": {
+        "rows": 112,
+        "exact": 10,
+        "accuracy": 0.08928571428571429,
+        "conditional_nll": 2.9906198443179255
+      },
+      "masked_G00": {
+        "rows": 112,
+        "exact": 24,
+        "accuracy": 0.21428571428571427,
+        "conditional_nll": 2.6728258621558227
+      },
+      "original_G00": {
+        "rows": 112,
+        "exact": 24,
+        "accuracy": 0.21428571428571427,
+        "conditional_nll": 2.6958318392786986
+      }
+    }
+  },
+  "source_sha256": "b6f125e48e1aba673821259bfe384826e91212f613111d5ed751930e7fc14a08",
+  "interpretation": "All truewardrows retained; oracleprovided-family diagnostic only. Mode tie deterministic coordinateindex; noneofthese are learned specialist accuracy. MaskedG00isolatescandidate-domaincorrection from newhead fitting.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

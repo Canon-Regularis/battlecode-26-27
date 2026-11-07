@@ -1,0 +1,63 @@
+{
+  "id": "ward-specialists",
+  "budget": {
+    "initial_training_fits": 4,
+    "arms": {
+      "P00": "ward-only neural placement with frozen128context and20tilefeatures;richwardblocks zero",
+      "P01": "sameplacementarchitecture with personallyobservableward/visibleentity/history features",
+      "T00": "small binaryward specialist on frozencontext andbasePRE/history;richwardblocks zero",
+      "T01": "samebinaryarchitecture with additionalward-specificfeatures"
+    }
+  },
+  "control": "Frozen G00 original action-first complete predictor, P05priority and G00movement retained. B00 also retained as contextual baseline; its zero wardtypes make it uninformative as the sole head-only control.",
+  "treatments": {
+    "A": "P01placement only; EXACTLY unchanged G00 predicted action choices",
+    "B": "T01ward probability, originalconditionalward coordinates",
+    "C": "T01probability plusP01placement. P00/T00areprespecifiedsimplercontrols, notretrospective substitutes ifP01/T01 lose."
+  },
+  "probability": "Factorized normalized type*conditionalparameter distribution. Binaryp replaces P(ward);nonwardtypes rescaled proportionally to sum1-p. Placement is .9999learned probability on historicalrange2personal candidate tiles plus.0001frozenQwardfullsupport;emptycandidate contexts reuseQward. No opaque fallbackgate, oraclefamilyrouting,thresholdsweep or fabricatedshoparguments.",
+  "decoders": "PRIMARY preserves the requested A head-only intervention: allarms use typeargmax thenconditionalargmax, matching originalG00; explicitly NOT claimed jointMAP. Separate SECONDARY fulljointMAP ranks actual fullcommand probability across allfamilymodes in EVERYarm against Q00; it maychange types in A and is labeled separately. Neither decoder chosen retrospectively.",
+  "inputs": "Only personalPRE/publicgeometry,championtype(notgameentityID),knownliving ally/enemy/campgeometry,wardcharges/recharge/channel/readiness,actual earlier own-actionhistory,personallyAPI-authorizedexistingward positions/status/radius. Geometriccoverage indicators are NOT certified LOSvision. No currentrecordedfamily/position for inference.",
+  "semantics": "Pinned engines2/3 SDKrange getter andbitboard drawChebyshev2,publicinmap geometry,knownallywardcell exclusion. No hypotheticalaction simulation. Fullterrain/enginelegality notcertified beyond availableSDKconstraints; report all unsupported labels, retainfullsupportlikelihood,neverdroprows.",
+  "extraction": "Query everyeligible selected personalPRE with aliveownposition andwardcharges>0, regardless recordedaction orprediction, includingchannelled/recallhardnegatives. Otherrows explicitlyunavailable;charges/position alsoencoded. No newdownloads or matches.",
+  "sampling": "Placement trains ALL10842recordedaugmentedTRAINwardrows. Typing trains ALL433071TRAINrows, Bernoulli losswithTRAIN-onlypositive/negativeclasspriorweights matching naturalwardprevalence; this corrects classmarginals only, notunknownwithinclassselectionprobabilities. No nonwarddrops/hardnegative-onlydenominator. NaturalTRAINandallaugTRAINreported separately.",
+  "selection": {
+    "seed": 20261112,
+    "max_rounds": 35,
+    "patience": 6,
+    "improvement": 0.0001,
+    "criterion": "full original14439DEV observedjointNLL;placement substitutesonlywardparameterloss,typing substitutesBernoullitypeloss. No retrospective checkpoint/threshold choice.",
+    "placement_batch": 128,
+    "type_batch": 512,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "dropout": 0.1
+  },
+  "metrics": [
+    "WardbinaryPRF/calibrationatfixed.5 diagnostic and actual15waypredictedwardPRF separately",
+    "alltruefamilyexactwardplacement and correctlytypedconditional exact",
+    "jointwardcommands andtype/jointfalsepositives",
+    "recall->ward",
+    "all14categoryjoint/type/confusion/conditionalparameters",
+    "overallstrictmacroF1 andobservedjointNLL",
+    "paired2000wholegroupresamples seed20261106",
+    "TRAINnatural/aug vsDEV,champion/engine/contextsupport,learningcurves",
+    "physicalcandidatecoverage separatefromlearnedaccuracy"
+  ],
+  "continuation": "Execute fourprespecifiedfits subjecttoinput/semanticschecks, fresh requested Solxhighreview afterEACHfit. No furtherarchitectureexpansion. A meaningfulpartialbenefit requires jointward>=14/112, wardF1gain>=.05 vsG00, no increase282wardtypeFP,overalljointdrop<=.002,macrodrop<=.005,noattack/castjointdrop>.02 ormovementdrop>.005,pairedwardgainlower>0. Exploratoryrepeatallocation criterion ONLY; original>=90%everyadequatelysupportedcategory andmacro/movement/NLL/targeting/three-seed goals unchanged. Additionalseedbudget declaredseparatelybeforeanyrepeat; no robustnessclaimfromsingle seed.",
+  "preservation": "Originalbenchmark/splits/groups/dedup andeveryDEVrowfixed;bothreserved75+75sealed. Shops43unassessedstrictfailures andmissingargumentlikelihoodabsent. Sparsealtar/teleport/submituncertified;entityidentityambiguityretained. No playingbotchanges/deployment. PR11DRAFT only,unmerged,noautomerge/queue.",
+  "deferred": "Unrun V13B01/B02deferred bynewuserwardpriority;partialmemoryrepaircache preserved,no additionalgoal/memoryfit.",
+  "jobs_sha256": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+  "sources": {
+    "tools\\action_predictor\\ward_experts\\protocol.py": "4a3cb520d1b8cce14b25e78607971881f7a7dd96569472d8583eeb33607ed1b7",
+    "tools\\action_predictor\\ward_experts\\personal.cjs": "bf980e683e40cb5f496f4232b7a3a5c587ffd128b4b8ffe630008293b116bdd4",
+    "tools\\action_predictor\\ward_experts\\features.py": "164675201eacc83ce811387d9db15ca63ff9e4250c1412a4ea76b35b600a3a75",
+    "tools\\action_predictor\\ward_experts\\data.py": "9396c835dfcd8c8becbf9f219dbd2c2e1d192b053b94c39048f3feec4f37d54e",
+    "tools\\action_predictor\\ward_experts\\model.py": "c9a48b7333c330a8562572f04b567966063c9b8280e36f62e8c02ddcdf5c4cee",
+    "tools\\action_predictor\\ward_experts\\integration.py": "1e926927ccdfd9342c279f2068689649b7e1194f2cf4d011e2897220373fe088",
+    "tools\\action_predictor\\ward_experts\\fit.py": "8964699a38f507bbe25948f8d41ab74921c4a6b81b58e4f64b6fa9e1d5b6477c"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,81 @@
+{
+  "train": {
+    "augmented": {
+      "rows": 433071,
+      "wards": 10842,
+      "type_TP": 3888,
+      "type_FP": 7151,
+      "wrong_type_on_trueward": 6954,
+      "wrong_args_after_correcttype": 3134,
+      "joint": 754,
+      "all_true_family_coordinates": 2274,
+      "recall_to_ward": 5589,
+      "radius_confusion": {
+        "1": {
+          "0": 0,
+          "1": 115,
+          "2": 1133,
+          "3": 0
+        },
+        "2": {
+          "0": 0,
+          "1": 189,
+          "2": 9405,
+          "3": 0
+        }
+      }
+    },
+    "natural": {
+      "rows": 288801,
+      "wards": 2192,
+      "type_TP": 782,
+      "type_FP": 5430,
+      "wrong_type_on_trueward": 1410,
+      "wrong_args_after_correcttype": 640,
+      "joint": 142,
+      "all_true_family_coordinates": 449,
+      "recall_to_ward": 5014,
+      "radius_confusion": {
+        "1": {
+          "0": 0,
+          "1": 26,
+          "2": 258,
+          "3": 0
+        },
+        "2": {
+          "0": 0,
+          "1": 30,
+          "2": 1878,
+          "3": 0
+        }
+      }
+    }
+  },
+  "validation": {
+    "original": {
+      "rows": 14439,
+      "wards": 112,
+      "type_TP": 35,
+      "type_FP": 282,
+      "wrong_type_on_trueward": 77,
+      "wrong_args_after_correcttype": 28,
+      "joint": 7,
+      "all_true_family_coordinates": 24,
+      "recall_to_ward": 257,
+      "radius_confusion": {
+        "1": {
+          "0": 0,
+          "1": 2,
+          "2": 15,
+          "3": 0
+        },
+        "2": {
+          "0": 0,
+          "1": 2,
+          "2": 93,
+          "3": 0
+        }
+      }
+    }
+  }
+}
