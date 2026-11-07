@@ -1,0 +1,55 @@
+"""Bind completed pre-fit checks and the stronger baseline; never fit."""
+from pathlib import Path
+import sys,json
+import numpy as np
+import torch
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor.priority_modes_fit import verify_protocol,PLAN,SOURCES,PREFIT,VOCAB,read
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import frozen,sha
+from tools.action_predictor.priority_fit_v3 import load_base,context_directory,VAL
+from tools.action_predictor.reliable_model import priority_log_mass
+from tools.action_predictor.priority_modes import logistic_log_mass
+from tools.action_predictor import reliable_train as rt
+plan=verify_protocol();prefit=read(PREFIT)
+assert prefit['plan_sha256']==sha(PLAN) and prefit['sources_sha256']==sha(SOURCES)
+assert prefit['vocabulary_sha256']==sha(VOCAB)
+assert prefit['roundtrip_sha256']==sha(REPORTS/'priority-absolute-modes-initial-roundtrip.json')
+assert not (WORK/'runs/P03').exists() and not (REPORTS/'P03.json').exists()
+tests=read(REPORTS/'priority-absolute-modes-tests.json')
+assert tests['returncode']==0
+assert tests['output_sha256']==sha(REPORTS/'priority-absolute-modes-test-output.txt')
+for name,digest in tests['test_source_hashes'].items():assert sha(root/'tools/action_predictor'/(name+'.py'))==digest
+baseline=read(REPORTS/'priority-frequency-baseline.json')
+assert sha(baseline['predictions_path'])==baseline['predictions_sha256']
+assert baseline['plan_sha256']==sha(REPORTS/'priority-frequency-baseline-plan.json')
+assert baseline['source_sha256']==sha(REPORTS/'priority-frequency-baseline-source.txt')
+model,_=load_base()
+with np.load(VAL) as z:
+    selected=z['y']==rt.LABELS.index('priority');targets=torch.from_numpy(z['priority'][selected])
+context=torch.from_numpy(np.load(context_directory()/'validation.npy')[selected])
+with torch.no_grad():
+    raw=model.priority(context);old=priority_log_mass(raw,targets);new=logistic_log_mass(raw,targets)
+precision_error=float((old.double()-new).abs().max())
+assert precision_error<.0001,'Precision difference exceeds the retained checkpoint improvement tolerance'
+addendum=dict(plan_sha256=sha(PLAN),baseline_report_sha256=sha(REPORTS/'priority-frequency-baseline.json'),
+    baseline_plan_sha256=sha(REPORTS/'priority-frequency-baseline-plan.json'),baseline_predictions_sha256=baseline['predictions_sha256'],
+    requirement='Report P03 versus both P02 and the fixed training-frequency parameter baseline. Do not attribute gains beyond common values without this comparison. Original checkpoint rule, rows and immutable goals unchanged.',
+    exploratory_gate='Require the original predeclared P03 exploratory gate AND higher priority exact accuracy and lower priority NLL than this simple baseline before proposing matched-input repeats. This only tightens exploratory follow-up; it never changes a success threshold.',
+    joint_loss_accounting='Retain original frozen benchmark thresholds; additionally report the stronger hybrid M01-action/spatial plus simple-priority baseline observed joint NLL and its10% improvement reference.',
+    stronger_hybrid_baseline_joint_nll=baseline['full_observed_joint_nll'],stronger_hybrid_ten_percent_reference=.9*baseline['full_observed_joint_nll'],
+    no_fitting=True,source_sha256=sha(__file__))
+frozen(REPORTS/'priority-absolute-modes-evaluation-addendum.json',addendum)
+completion=dict(prefit_sha256=sha(PREFIT),plan_sha256=sha(PLAN),sources_sha256=sha(SOURCES),
+    tests_sha256=sha(REPORTS/'priority-absolute-modes-tests.json'),evaluation_addendum_sha256=sha(REPORTS/'priority-absolute-modes-evaluation-addendum.json'),
+    trainable_parameters=prefit['trainable_parameters'],frozen_parameters=prefit['frozen_parameters'],
+    parameter_factor_vs_logistic=prefit['trainable_parameters']/336,raw_output_width=len(read(VOCAB)['values'])+3,
+    fallback_nll_float32_float64_maximum_difference=precision_error,
+    new_optimizer_steps=0,reserved_games_opened=0,source_sha256=sha(__file__))
+frozen(REPORTS/'priority-absolute-modes-prefit-completion.json',completion)
+snapshot=REPORTS/'priority-absolute-modes-prefit-completion-source.txt'
+if snapshot.exists():assert snapshot.read_bytes()==Path(__file__).read_bytes()
+else:snapshot.write_bytes(Path(__file__).read_bytes())
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps(completion,indent=2))

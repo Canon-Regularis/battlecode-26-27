@@ -1,0 +1,38 @@
+"""Freeze the missed input-ablation gate and retain adverse strata."""
+from pathlib import Path
+import sys,json,math
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import sha,frozen
+read=lambda p:json.loads(p.read_text())
+analysis=read(REPORTS/'P04-analysis.json');p03=analysis['metrics']['P03'];p04=analysis['metrics']['P04']
+assert analysis['fit_report_sha256']==sha(REPORTS/'P04.json')
+gain=(p03['priority_exact']-p04['priority_exact'])/576
+assert gain<.05 and analysis['exploratory_followup_gate_met'] is False
+builder=root/'.cambc/build_P04_analysis.py';source=root/'.cambc/report_priority_P04.py'
+assert sha(source)==analysis['source_sha256']
+payload=dict(analysis_sha256=sha(REPORTS/'P04-analysis.json'),source_sha256=sha(__file__),
+    required_exact_gain=.05,observed_exact_gain=gain,required_extra_correct=math.ceil(.05*576),observed_extra_correct=p03['priority_exact']-p04['priority_exact'],
+    required_P04_maximum_exact=67,observed_P04_exact=p04['priority_exact'],exploratory_input_gate_met=False,matched_seed_repeats_triggered=False,
+    treatment_minus_control=analysis['P03_minus_P04'],tail_comparison={name:{k:analysis['metrics'][name][k] for k in ('mean_absolute_priority_error','maximum_absolute_priority_error','priority_errors_over1000','priority_wrong_sign')} for name in ('P03','P04')},
+    rare_unseen={name:analysis['priority_strata'][name] for name in ('unseen_value','training_count_1_19')},
+    analysis_generation=dict(argv=[sys.executable,str(builder)],generator_sha256=sha(builder),generated_sha256=sha(source)),
+    interpretation='Measured point gains in exact/joint correctness and lower loss do not meet the predeclared5pp input-followup gate. Do not weaken it or trigger identical matched-seed repeats. Lower mean/tail error is exploratory evidence only, not category-wise success.',
+    all_original_targets_unchanged=True,three_seed_confirmed=False,reserved_games_opened=0)
+frozen(REPORTS/'P04-input-gate-amendment.json',payload)
+(REPORTS/'P04-input-gate-source.txt').write_bytes(Path(__file__).read_bytes())
+(REPORTS/'P04-analysis-generation-source.txt').write_bytes(builder.read_bytes())
+lines=['# P04 matched input ablation: gate not met','',
+    'P03 uses the39 recovered priority channels; P04 zeroes them. Both retain the same87,528-parameter output head and frozen M01 representation.', '',
+    'Exact values:96 versus71 out of576 (+4.340 percentage points). Joint commands:57 versus49 (+1.389 points). The5-point exact-gain gate required at least29 additional correct values; the observed gain is25. The gate is not met and no matched seed repeats are triggered.', '',
+    'Paired whole-group intervals: exact gain−0.816 to+10.313 points; joint gain−0.811 to+3.534 points. Priority NLL improves4.14836→3.99395; its relative-reduction interval is0.67%–6.20%. These intervals condition on selected checkpoints and five reused development groups.', '',
+    'Mean integer error falls435.851→178.109; errors above1000 fall115→12; wrong-sign predictions fall197→81. This exploratory error improvement does not replace the missed gate or the original accuracy targets.', '',
+    'Both arms remain0/4 on unseen values and0/65 on rare training values. Rare-value NLL is worse with recovered inputs:8.03333 versus7.91319. Their rows remain included. The full-support fallback produces no actual non-vocabulary argmax in either arm.', '',
+    'Epoch-zero scores and the eight shared epoch shuffle RNG states match exactly. Every saved control extra-column weight remains zero. All saved outputs/decoded priorities and the75-target causal inference roundtrip reproduce.', '',
+    'The all-category90% and original benchmarks remain unmet. No replacement, strategy-similarity claim, independent full-GRU seed confirmation or reserved evaluation is established. Fresh review is required before further work.']
+(REPORTS/'P04-INPUT-NOTE.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+with (WORK/'commands.jsonl').open('a') as stream:
+    stream.write(json.dumps(dict(argv=[sys.executable,str(builder)],source_sha256=sha(builder),already_executed=True))+'\n')
+    stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps({k:payload[k] for k in ('observed_exact_gain','required_exact_gain','observed_extra_correct','required_extra_correct','matched_seed_repeats_triggered')},indent=2))

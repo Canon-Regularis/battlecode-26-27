@@ -24,4 +24,6 @@ The baseline remains available as a fallback. The former custom state-machine bo
 
 See the [game rules](docs/cambc/GameRules.md) and [current API additions and SDK source links](docs/cambc/api/SDK_4.0.0.md). The published competition map pool was added while preserving the original maps.
 
+To bulk-download platform replays for a team, optionally filtered by map, see the [replay downloader](tools/download_replays.md).
+
 For a future upgrade, check the [official package release](https://pypi.org/project/cambc/), generate a separate reference workspace with that version's `cambc init --yes <directory>`, compare its SDK and build configuration, and update the package pin, SDK version, and lock together. Preserve bot changes and local maps, then repeat builds and local matches before using the new version on the platform.

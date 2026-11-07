@@ -1,0 +1,342 @@
+{
+  "proposed_targets_met_consistently": false,
+  "selected_gru": {
+    "id": "E06",
+    "name": "gru-rich-rare-training",
+    "history": 16,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.5,
+    "augment": true,
+    "constrain": true
+  },
+  "selected_stateless": {
+    "id": "E02",
+    "name": "stateless-rich-spatial",
+    "history": 0,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.0,
+    "augment": false
+  },
+  "gru_runs": [
+    "E06",
+    "E07",
+    "E08"
+  ],
+  "stateless_runs": [
+    "E02",
+    "E09",
+    "E10"
+  ],
+  "total_substantive_experiments": 10,
+  "heldout_status": "No certified untouched Fish games; the old exposed test partition was preserved and used only after the final candidate lock.",
+  "remaining_limits": [
+    "Original shop item/count and original attack/cast entity IDs are not identifiable from root events.",
+    "Joint NLL is a partially observed recorded-label likelihood; strict full-command accuracy counts unsupported shop arguments as failures.",
+    "Illegal-action rate is only observable violations; full engine legality is unassessed.",
+    "Only five validation and five exposed test groups; one game group is five related maps."
+  ],
+  "validation_gates": {
+    "E06": {
+      "passed": {
+        "macro_f1": false,
+        "movement": false,
+        "joint_loss": true,
+        "targeting": false
+      },
+      "passed_count": 1,
+      "movement_gain": 0.03302286198137172,
+      "joint_loss_reduction": 0.16501157365455688,
+      "targeting_drops": {
+        "attack": 0.007106598984771617,
+        "cast_0": 0.028169014084507005,
+        "cast_1": -0.020576131687242816
+      },
+      "paired_loss_uncertainty": {
+        "movement_gain": {
+          "low": 0.24888293118856125,
+          "high": 0.27196485623003197
+        },
+        "joint_loss_reduction": {
+          "low": 0.12390193945400807,
+          "high": 0.20156164085587935
+        },
+        "macro_f1_gain": {
+          "low": 0.09887302404729054,
+          "high": 0.1454969583816998
+        },
+        "joint_accuracy_gain": {
+          "low": 0.008319586889478647,
+          "high": 0.021630501745499298
+        },
+        "attack_exact_gain": {
+          "low": 0.029154518950437303,
+          "high": 0.05628140703517581
+        },
+        "cast_0_exact_gain": {
+          "low": 0.004201680672269004,
+          "high": 0.09793814432989689
+        },
+        "cast_1_exact_gain": {
+          "low": 0.03930131004366816,
+          "high": 0.17372881355932202
+        }
+      },
+      "paired_movement_uncertainty": {
+        "movement_gain": {
+          "low": 0.017026578073089715,
+          "high": 0.05181558547531617
+        },
+        "joint_loss_reduction": {
+          "low": 0.6015659617786246,
+          "high": 0.6726197534136651
+        },
+        "macro_f1_gain": {
+          "low": 0.4994447980827088,
+          "high": 0.5385135307085999
+        },
+        "joint_accuracy_gain": {
+          "low": 0.45060361454389597,
+          "high": 0.4975729814726191
+        },
+        "attack_exact_gain": {
+          "low": 0.015947467166979368,
+          "high": 0.08075221238938046
+        },
+        "cast_0_exact_gain": {
+          "low": -0.031088082901554404,
+          "high": 0.0821917808219178
+        },
+        "cast_1_exact_gain": {
+          "low": 0.16450216450216448,
+          "high": 0.314516129032258
+        }
+      },
+      "targeting_uncertainty": {
+        "attack": {
+          "low": -0.025000000000000022,
+          "high": 0.005336179295624355
+        },
+        "cast_0": {
+          "low": -0.05797101449275366,
+          "high": 0.0
+        },
+        "cast_1": {
+          "low": -0.011583011583011615,
+          "high": 0.057355695994070914
+        }
+      },
+      "groups": 5,
+      "references": {
+        "loss": "E02",
+        "movement": "frequency-persistence",
+        "targeting": {
+          "attack": "frequency-lowest-health",
+          "cast_0": "frequency-lowest-health",
+          "cast_1": "E05"
+        }
+      }
+    },
+    "E07": {
+      "passed": {
+        "macro_f1": false,
+        "movement": false,
+        "joint_loss": true,
+        "targeting": false
+      },
+      "passed_count": 1,
+      "movement_gain": 0.030482641828958545,
+      "joint_loss_reduction": 0.12343725327633337,
+      "targeting_drops": {
+        "attack": 0.0,
+        "cast_0": 0.04694835680751175,
+        "cast_1": -0.04938271604938271
+      },
+      "paired_loss_uncertainty": {
+        "movement_gain": {
+          "low": 0.24159663865546221,
+          "high": 0.26663822525597275
+        },
+        "joint_loss_reduction": {
+          "low": 0.09536981903453401,
+          "high": 0.15493904779186984
+        },
+        "macro_f1_gain": {
+          "low": 0.10020770823792008,
+          "high": 0.1320841647061015
+        },
+        "joint_accuracy_gain": {
+          "low": 0.005811568439764825,
+          "high": 0.027857142857142914
+        },
+        "attack_exact_gain": {
+          "low": 0.015065368772584159,
+          "high": 0.030991735537190035
+        },
+        "cast_0_exact_gain": {
+          "low": 0.0092592592592593,
+          "high": 0.13733905579399142
+        },
+        "cast_1_exact_gain": {
+          "low": 0.07301859099804305,
+          "high": 0.2015810276679842
+        }
+      },
+      "paired_movement_uncertainty": {
+        "movement_gain": {
+          "low": 0.017551369863013755,
+          "high": 0.04281207751239291
+        },
+        "joint_loss_reduction": {
+          "low": 0.578588495505433,
+          "high": 0.6675605822264592
+        },
+        "macro_f1_gain": {
+          "low": 0.4948111322981248,
+          "high": 0.5273344122160865
+        },
+        "joint_accuracy_gain": {
+          "low": 0.44678199677466646,
+          "high": 0.494359745675805
+        },
+        "attack_exact_gain": {
+          "low": 0.030956848030018747,
+          "high": 0.0786516853932584
+        },
+        "cast_0_exact_gain": {
+          "low": -0.05555555555555558,
+          "high": 0.07228915662650603
+        },
+        "cast_1_exact_gain": {
+          "low": 0.23849372384937234,
+          "high": 0.3266129032258065
+        }
+      },
+      "targeting_uncertainty": {
+        "attack": {
+          "low": -0.004255319148936176,
+          "high": 0.00537056928034374
+        },
+        "cast_0": {
+          "low": -0.07407407407407407,
+          "high": -0.0273972602739726
+        },
+        "cast_1": {
+          "low": 0.016000000000000014,
+          "high": 0.08474576271186446
+        }
+      },
+      "groups": 5,
+      "references": {
+        "loss": "E09",
+        "movement": "frequency-persistence",
+        "targeting": {
+          "attack": "frequency-lowest-health",
+          "cast_0": "frequency-lowest-health",
+          "cast_1": "E05"
+        }
+      }
+    },
+    "E08": {
+      "passed": {
+        "macro_f1": false,
+        "movement": false,
+        "joint_loss": true,
+        "targeting": false
+      },
+      "passed_count": 1,
+      "movement_gain": 0.0160880609652837,
+      "joint_loss_reduction": 0.1338548160661066,
+      "targeting_drops": {
+        "attack": 0.025380710659898442,
+        "cast_0": 0.04225352112676062,
+        "cast_1": 0.02057613168724276
+      },
+      "paired_loss_uncertainty": {
+        "movement_gain": {
+          "low": 0.22563106796116505,
+          "high": 0.24847471013752026
+        },
+        "joint_loss_reduction": {
+          "low": 0.07474427967265962,
+          "high": 0.17328728530951787
+        },
+        "macro_f1_gain": {
+          "low": 0.07318737448335463,
+          "high": 0.12116273299986652
+        },
+        "joint_accuracy_gain": {
+          "low": -0.0021725418739925173,
+          "high": 0.01677048394825109
+        },
+        "attack_exact_gain": {
+          "low": -0.0020768431983384517,
+          "high": 0.023630504833512256
+        },
+        "cast_0_exact_gain": {
+          "low": 0.0037790697674418726,
+          "high": 0.07821229050279332
+        },
+        "cast_1_exact_gain": {
+          "low": -0.03738317757009346,
+          "high": 0.10852713178294576
+        }
+      },
+      "paired_movement_uncertainty": {
+        "movement_gain": {
+          "low": -0.0025690197084088902,
+          "high": 0.030644434429923373
+        },
+        "joint_loss_reduction": {
+          "low": 0.5785069740269253,
+          "high": 0.6532189471392373
+        },
+        "macro_f1_gain": {
+          "low": 0.48083371686514353,
+          "high": 0.53090600687404
+        },
+        "joint_accuracy_gain": {
+          "low": 0.4431644185198687,
+          "high": 0.4926207965496327
+        },
+        "attack_exact_gain": {
+          "low": -0.006776379477250738,
+          "high": 0.06510138740661686
+        },
+        "cast_0_exact_gain": {
+          "low": -0.02314814814814814,
+          "high": 0.04109589041095896
+        },
+        "cast_1_exact_gain": {
+          "low": 0.16049382716049382,
+          "high": 0.23622047244094488
+        }
+      },
+      "targeting_uncertainty": {
+        "attack": {
+          "low": -0.05192107995846307,
+          "high": 0.0
+        },
+        "cast_0": {
+          "low": -0.06024096385542166,
+          "high": -0.021857923497267784
+        },
+        "cast_1": {
+          "low": -0.04456688596491231,
+          "high": 0.0
+        }
+      },
+      "groups": 5,
+      "references": {
+        "loss": "E10",
+        "movement": "frequency-persistence",
+        "targeting": {
+          "attack": "frequency-lowest-health",
+          "cast_0": "frequency-lowest-health",
+          "cast_1": "E05"
+        }
+      }
+    }
+  }
+}

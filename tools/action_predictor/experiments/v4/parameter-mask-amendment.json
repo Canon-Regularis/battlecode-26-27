@@ -1,0 +1,17 @@
+{
+  "before_E05_E06_training": true,
+  "config_ids": [
+    "E05",
+    "E06"
+  ],
+  "reason": "Validation E01-E04 exposes avoidable attack/self-cast errors from unrestricted coordinate proposals. Add identical PRE-only movement/compatible-target/range constraints to both paired augmented fits.",
+  "evidence": {
+    "E01": "b18344f92db8a3b1ce292bd16f5a6e552d7d44c9e4f1fafb2e554565f9f0c1de",
+    "E02": "e2cf678deba5fd6e082c46a41a0afac17ad9b8deca19b6b031c67491e8224a9f",
+    "E03": "6ad1ff29a9aadabd59416e607a53b77bcefc1b936eaab356e30cced674592869",
+    "E04": "6e0dda9bb7d8dec7a90dbdafb4bf6c0fc1e1c7229f0a1979cf02b36752adac4a"
+  },
+  "distribution": "Fixed 0.9999 constrained + 0.0001 unconstrained map-valid mixture, so all recorded labels remain scored.",
+  "benchmark_and_targets_unchanged": true,
+  "no_test_read": true
+}

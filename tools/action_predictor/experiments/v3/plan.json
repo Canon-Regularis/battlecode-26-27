@@ -1,0 +1,23 @@
+{
+  "config": {
+    "seed": 26,
+    "epochs": 40,
+    "patience": 6,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "target_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "split_lock_sha256": "897005082baa0b0d8e3336eb8d96022fcd48ece51232e1c5ec7624257e7c1fb5",
+  "experiments": [
+    "V1 preserved frozen GRU",
+    "E1 parameter-matched stateless action MLP",
+    "E2 frozen V1 GRU states + coordinate ranker",
+    "E3 current state only + coordinate ranker"
+  ],
+  "selection": "Separate validation cross entropy; early stop. No new action-GRU tuning.",
+  "target_policy": "Recorded move destination and attack/cast aim coordinates; fixed +/-8 window; PRE-only candidates; no original entity IDs inferred as truth.",
+  "test_policy": "Evaluate locked checkpoints only after fitting is complete. Preserve all V1 test groups."
+}

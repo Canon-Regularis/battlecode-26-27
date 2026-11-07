@@ -1,0 +1,12 @@
+"""Run source unit checks only; no matches, network downloads, or fitting studies."""
+from pathlib import Path
+import subprocess,sys,json,hashlib
+root=Path(__file__).resolve().parent.parent
+modules=sorted('tools.action_predictor.'+p.stem for p in (root/'tools/action_predictor').glob('test_*.py'))
+modules+=['tools.test_download_replays','tools.test_download_selection','tools.test_more_replays']
+argv=[sys.executable,'-m','unittest',*modules,'-v']
+result=subprocess.run(argv,cwd=root,text=True,capture_output=True)
+output=result.stdout+result.stderr;path=root/'.cambc/fish-pr-unit-tests.log';path.write_text(output,encoding='utf-8')
+receipt=dict(argv=argv,returncode=result.returncode,output_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),module_count=len(modules))
+(root/'.cambc/fish-pr-unit-tests.json').write_text(json.dumps(receipt,indent=2)+'\n')
+print(output);print(json.dumps(receipt,indent=2));sys.exit(result.returncode)

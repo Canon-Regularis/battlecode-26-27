@@ -1,0 +1,56 @@
+{
+  "plan_sha256": "d32f97e3464c8b502848e4da3a5fe52ee571c3979ffdbbae41fe10dc45d34fb2",
+  "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "predictions_sha256": "a405b808558afa19c07e2f37bc676d9c165ed3863cb73e0aad0de494cabedf75",
+  "predictions_path": "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v8\\parameter-baselines\\priority-frequency.npz",
+  "predicted_value": -9,
+  "most_common_value": -9,
+  "priority_exact": 16,
+  "priority_joint": 8,
+  "priority_support": 576,
+  "priority_nll": 5.051254772722194,
+  "full_observed_joint_nll": 0.7915402054786682,
+  "absolute_error": {
+    "mean": 355.2951388888889,
+    "median": 514.5,
+    "p90": 713.0,
+    "maximum": 826.0
+  },
+  "per_group": [
+    {
+      "group": 1,
+      "support": 71,
+      "exact": 3,
+      "joint": 1
+    },
+    {
+      "group": 10,
+      "support": 73,
+      "exact": 5,
+      "joint": 2
+    },
+    {
+      "group": 11,
+      "support": 93,
+      "exact": 3,
+      "joint": 2
+    },
+    {
+      "group": 17,
+      "support": 139,
+      "exact": 4,
+      "joint": 2
+    },
+    {
+      "group": 31,
+      "support": 200,
+      "exact": 1,
+      "joint": 1
+    }
+  ],
+  "fitted_optimizer_steps": 0,
+  "unchanged_action_spatial_paths": true,
+  "reserved_games_opened": 0,
+  "three_seed_quality_claim": false,
+  "source_sha256": "cd0cd002b1fc8d04baafd4c23b10958bd2bed1f59356541deec0ce7e94c63e0e"
+}

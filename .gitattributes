@@ -1,0 +1,7 @@
+# Replay studies verify file bytes. Preserve recorded EOLs and source snapshots.
+tools/action_predictor/** -text whitespace=cr-at-eol
+tools/download_replays.py -text whitespace=cr-at-eol
+tools/download_replays.md -text whitespace=cr-at-eol
+tools/test_download_replays.py -text whitespace=cr-at-eol
+tools/test_download_selection.py -text whitespace=cr-at-eol
+tools/test_more_replays.py -text whitespace=cr-at-eol

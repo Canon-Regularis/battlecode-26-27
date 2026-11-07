@@ -1,0 +1,41 @@
+{
+  "post_training_sources": [
+    {
+      "source": "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\spatial_report.py",
+      "sha256": "1ea25e7e32ca80b2a9bc56120de0bb3785e5ab5b982681c3c3d970a0c7f460b1",
+      "snapshot": "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v6\\provenance\\1ea25e7e32ca80b2a9bc56120de0bb3785e5ab5b982681c3c3d970a0c7f460b1_spatial_report.py"
+    },
+    {
+      "source": "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\map_predictor.py",
+      "sha256": "27a645eda52d76b0b43e38d2de7628d709c06d2ca1030ecab68879f7f39e1305",
+      "snapshot": "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v6\\provenance\\27a645eda52d76b0b43e38d2de7628d709c06d2ca1030ecab68879f7f39e1305_map_predictor.py"
+    },
+    {
+      "source": "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\test_map_model.py",
+      "sha256": "821bc3e4245fc71465f0deb807354173efa22b867b0cb06c1aae4a50d9805be3",
+      "snapshot": "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v6\\provenance\\821bc3e4245fc71465f0deb807354173efa22b867b0cb06c1aae4a50d9805be3_test_map_model.py"
+    },
+    {
+      "source": "F:\\Code\\battlecode-26-27\\.cambc\\verify_spatial_inference.py",
+      "sha256": "19ace364b23cf6d31257ce4ac08357449b77a97127419ac5a1c358d9203a4499",
+      "snapshot": "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v6\\provenance\\19ace364b23cf6d31257ce4ac08357449b77a97127419ac5a1c358d9203a4499_verify_spatial_inference.py"
+    }
+  ],
+  "artifacts": {
+    "comparison.html": "0c709977bbac238900dfe9553b4bc2b33720e79e0dd5fca4670bc917c34c399b",
+    "M01-confusion.csv": "3df27d24881b4da8a6fb6924793856c26ef818e7abc4abac45bb9f309afe37c7",
+    "M02-confusion.csv": "7e68a7098c0b5607e7a3496f04b3e48c5afbfb1e22c681a86b793d8c4b4e1c42",
+    "M03-confusion.csv": "623d1c4f2418663976de69e7d242baa5ad0c0669b49dfb97ee17028c6f4cf652",
+    "metrics.csv": "e00d0b086716a4a67060ca34cb4c4f15c3743e34c91b5d77d7e4a1b34eb861ab",
+    "parameters.csv": "7c8605c0d63c32d008fa33a701ff31479d84b3ef3d0ca4432669646a39737020",
+    "per-action.csv": "d772ed6d7f1dac9496708444a2cfaaea8e5e7b60c975f9000ef65ba92e8cf593",
+    "RESULTS.md": "bf695600099dd7fcb4d23839d3894fcd925b29810889cf700886bfeb049a6b3d",
+    "S01-confusion.csv": "e1b7deb2f9628001bdff05d248db611be5350e361a05e76491ecb5ebdc17ffc0",
+    "S02-confusion.csv": "d6501be71514d51ec4924dde27b3c0e8632c341e745dacaf697489dd4c6267b3"
+  },
+  "training_sources_match_execution_lock": true,
+  "validation_comparison_sha256": "b4ea60182d2533d82d70a4ea45561c4b5f1d4aaa9b9a356c0bd33193abd20f50",
+  "sealed_test_audit_sha256": "21599eb76cffb40ae5e7a6d8f610a248dcf14ab0cb441e32145d375ce2c02e51",
+  "inference_roundtrip_sha256": "0c7e75fe54da07846d5eedd2a6974cba1a79e6b9acbceb158eee8d82c013e1a6",
+  "tests_passed": 30
+}

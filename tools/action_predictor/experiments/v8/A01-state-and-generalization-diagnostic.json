@@ -1,0 +1,221 @@
+{
+  "A01_report_sha256": "ba35c50bb68d99e50c67f91fa158d05eaefde420cafde25d4355311d636af20f",
+  "A01_analysis_sha256": "2079a59f86577fcfa3da745df4997994daa1ad298ebc1d912f04bb7425045380",
+  "source_sha256": "8789da74212df0a699ab314fa8b826e11415ece280aeaa06366c42eb3c78f0a4",
+  "training_contingency": {
+    "scope": "Post-hoc exploratory TRAIN-only descriptive counts, not a new model, legal mask or success criterion",
+    "feature": "Own personal-PRE current priority differs from scheduled priority, with both availability bits",
+    "rows": 433071,
+    "per_action": {
+      "<unknown>": {
+        "support": 0,
+        "known_equal": 0,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "altar": {
+        "support": 1663,
+        "known_equal": 1663,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "attack": {
+        "support": 22761,
+        "known_equal": 22761,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "blocked": {
+        "support": 10065,
+        "known_equal": 9052,
+        "known_different": 1013,
+        "unknown": 0
+      },
+      "cancel": {
+        "support": 73108,
+        "known_equal": 73061,
+        "known_different": 47,
+        "unknown": 0
+      },
+      "cast_0": {
+        "support": 4674,
+        "known_equal": 4674,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "cast_1": {
+        "support": 8273,
+        "known_equal": 8273,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "end": {
+        "support": 110233,
+        "known_equal": 95417,
+        "known_different": 14816,
+        "unknown": 0
+      },
+      "move": {
+        "support": 71945,
+        "known_equal": 71945,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "priority": {
+        "support": 14816,
+        "known_equal": 14816,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "recall": {
+        "support": 79748,
+        "known_equal": 68722,
+        "known_different": 11026,
+        "unknown": 0
+      },
+      "shop": {
+        "support": 17273,
+        "known_equal": 17273,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "submit": {
+        "support": 7076,
+        "known_equal": 7076,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "teleport": {
+        "support": 594,
+        "known_equal": 594,
+        "known_different": 0,
+        "unknown": 0
+      },
+      "ward": {
+        "support": 10842,
+        "known_equal": 8924,
+        "known_different": 1918,
+        "unknown": 0
+      }
+    }
+  },
+  "unseen_cases": [
+    {
+      "row": 7254,
+      "group": 11,
+      "round": 389,
+      "target": -671,
+      "negative_latest_prediction": 5,
+      "P03_prediction": 698,
+      "predicted_action": "priority",
+      "exact": false,
+      "joint": false,
+      "PRE_current": -5,
+      "PRE_scheduled": -5,
+      "last_earlier_argument": -5
+    },
+    {
+      "row": 8972,
+      "group": 17,
+      "round": 463,
+      "target": 547,
+      "negative_latest_prediction": 3,
+      "P03_prediction": 10,
+      "predicted_action": "recall",
+      "exact": false,
+      "joint": false,
+      "PRE_current": -3,
+      "PRE_scheduled": -3,
+      "last_earlier_argument": -3
+    },
+    {
+      "row": 9770,
+      "group": 17,
+      "round": 77,
+      "target": 784,
+      "negative_latest_prediction": 735,
+      "P03_prediction": 707,
+      "predicted_action": "priority",
+      "exact": false,
+      "joint": false,
+      "PRE_current": -735,
+      "PRE_scheduled": -735,
+      "last_earlier_argument": -735
+    },
+    {
+      "row": 10829,
+      "group": 17,
+      "round": 287,
+      "target": 784,
+      "negative_latest_prediction": 784,
+      "P03_prediction": 701,
+      "predicted_action": "priority",
+      "exact": true,
+      "joint": true,
+      "PRE_current": -784,
+      "PRE_scheduled": -784,
+      "last_earlier_argument": -784
+    }
+  ],
+  "rare_unseen_tradeoffs": {
+    "current_minus_copy": {
+      "unseen_value": {
+        "support": 4,
+        "exact": 1,
+        "joint": 1,
+        "nll": 8.19532299041748
+      },
+      "training_count_1_19": {
+        "support": 65,
+        "exact": 5,
+        "joint": 5,
+        "nll": 9.546905517578125
+      }
+    },
+    "scheduled_minus_copy": {
+      "unseen_value": {
+        "support": 4,
+        "exact": 1,
+        "joint": 1,
+        "nll": 8.19532299041748
+      },
+      "training_count_1_19": {
+        "support": 65,
+        "exact": 5,
+        "joint": 5,
+        "nll": 9.546905517578125
+      }
+    },
+    "latest_minus_copy": {
+      "unseen_value": {
+        "support": 4,
+        "exact": 1,
+        "joint": 1,
+        "nll": 8.192220687866211
+      },
+      "training_count_1_19": {
+        "support": 65,
+        "exact": 5,
+        "joint": 5,
+        "nll": 9.546637535095215
+      }
+    },
+    "latest_plus_residual": {
+      "unseen_value": {
+        "support": 4,
+        "exact": 0,
+        "joint": 0,
+        "nll": 7.559276103973389
+      },
+      "training_count_1_19": {
+        "support": 65,
+        "exact": 1,
+        "joint": 0,
+        "nll": 6.416759967803955
+      }
+    }
+  },
+  "interpretation": "One unseen and five rare complete commands from negative copying coexist with poor overall exactness and high NLL. No per-row target-aware routing or baseline adoption. TRAIN-only state contingency motivates a future separately preregistered action-input hypothesis, not a constraint or fit.",
+  "new_optimizer_steps": 0,
+  "reserved_games_opened": 0
+}

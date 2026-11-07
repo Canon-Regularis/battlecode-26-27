@@ -1,0 +1,57 @@
+{
+  "data_sha256": "429057c987db886109180cc0c507c4360f29bb6194bd3f0a0ad8140c16d6700d",
+  "baseline_sha256": "fcb5e834aa5817dacd50f260f89044fe9f55eba20393533fc0723a6e708850ac",
+  "coverage": {
+    "train": {
+      "move/supported": 12307,
+      "move/coordinate_only": 12307,
+      "cast_1/supported": 1216,
+      "cast_1/coordinate_only": 805,
+      "attack/supported": 4977,
+      "attack/unique_visible_entity_at_aim": 4977,
+      "cast_1/unique_visible_entity_at_aim": 411,
+      "cast_0/supported": 994,
+      "cast_0/unique_visible_entity_at_aim": 994,
+      "attack/no_visible_compatible_target": 13
+    },
+    "validation": {
+      "move/supported": 2362,
+      "move/coordinate_only": 2362,
+      "attack/supported": 981,
+      "attack/unique_visible_entity_at_aim": 981,
+      "cast_0/supported": 213,
+      "cast_0/unique_visible_entity_at_aim": 213,
+      "cast_1/supported": 243,
+      "cast_1/coordinate_only": 159,
+      "cast_1/unique_visible_entity_at_aim": 84,
+      "attack/no_visible_compatible_target": 4
+    },
+    "test": {
+      "move/supported": 2691,
+      "move/coordinate_only": 2691,
+      "attack/supported": 958,
+      "attack/unique_visible_entity_at_aim": 958,
+      "cast_0/supported": 184,
+      "cast_0/unique_visible_entity_at_aim": 184,
+      "cast_1/supported": 253,
+      "cast_1/unique_visible_entity_at_aim": 65,
+      "cast_1/coordinate_only": 188,
+      "attack/no_visible_compatible_target": 3
+    }
+  },
+  "candidate_features": [
+    "dx/8",
+    "dy/8",
+    "chebyshev/8",
+    "is_self_cell",
+    "visible_enemy_count",
+    "visible_ally_count",
+    "visible_camp_count",
+    "enemy_hp_fraction_sum",
+    "ally_hp_fraction_sum",
+    "camp_hp_fraction_sum"
+  ],
+  "coordinate_classes": 289,
+  "radius": 8,
+  "meaning": "Exact recorded coordinate conditional on action type. Unique visible occupant is diagnostic only; original entity ID is absent."
+}

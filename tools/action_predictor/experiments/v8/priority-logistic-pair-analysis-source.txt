@@ -1,0 +1,86 @@
+"""Additive R13 clarification and descriptive matched-pair analysis. No fitting."""
+from pathlib import Path
+import sys,json
+import numpy as np
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor.priority_dependencies_v3 import verify_dependencies
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import sha,frozen
+from tools.action_predictor import reliable_train as rt
+from tools.action_predictor.observation_metrics import correctness
+
+verify_dependencies()
+read=lambda p:json.loads(p.read_text())
+design=read(REPORTS/'priority-logistic-design-v3.json')
+val=root/'.cambc/action-predictor/v4/validation.npz'
+assert sha(val)==design['inputs']['validation_sha256']
+assert sha(REPORTS/'P01.json')=='4cf8ca9fd8cb38d447f6925d6304cd8773e4bb26f6f7f4b3b46807bafe4d2e4a'
+def arrays(p):
+    with np.load(p) as z:return {k:z[k] for k in z.files}
+raw=arrays(val);mask=raw['y']==rt.LABELS.index('priority');target=raw['priority']
+models={'M01':arrays(root/'.cambc/action-predictor/v5/runs/M01/validation-predictions.npz')}
+bindings={};fit_reports={}
+for name in ('P01','P02'):
+    report=read(REPORTS/(name+'.json'));fit_reports[name]=report
+    directory=WORK/'runs'/name
+    assert report['config']==next(c for c in design['fits'] if c['id']==name)
+    assert sha(directory/'validation-predictions.npz')==report['predictions_sha256']
+    assert sha(directory/'model.pt')==report['checkpoint_sha256']
+    models[name]=arrays(directory/'validation-predictions.npz')
+    bindings[name]=dict(report_sha256=sha(REPORTS/(name+'.json')),predictions_sha256=report['predictions_sha256'])
+    for key in ('prediction','coordinate','proposed_coordinate','top5','type_nll'):
+        assert np.array_equal(models[name][key],models['M01'][key]),key
+    assert np.array_equal(models[name]['nll'][~mask],models['M01']['nll'][~mask])
+results={};joints={}
+for name,pred in models.items():
+    _,joint=correctness(raw,pred);joints[name]=joint
+    error=np.abs(pred['priority'][mask].astype(np.int64)-target[mask].astype(np.int64))
+    wrongtype=pred['prediction']!=raw['y'];shop=raw['y']==rt.LABELS.index('shop')
+    results[name]=dict(priority_support=int(mask.sum()),priority_exact=int((error==0).sum()),
+        priority_joint=int(joint[mask].sum()),priority_absolute_error=dict(mean=float(error.mean()),median=float(np.median(error)),p90=float(np.quantile(error,.9)),maximum=int(error.max())),
+        priority_conditional_nll=float(pred['param_nll'][mask].mean()),observed_full_joint_nll=float(pred['nll'].mean()),
+        strict_joint_correct=int(joint.sum()),strict_failures=int((~joint).sum()),wrong_types=int(wrongtype.sum()),
+        wrong_parameters_after_correct_type=int((~joint&~wrongtype&~shop).sum()),unassessed_correct_type_shops=int((~wrongtype&shop).sum()),
+        all_unassessed_shops=int(shop.sum()),priority_prediction_range=[int(pred['priority'][mask].min()),int(pred['priority'][mask].max())])
+    assert results[name]['strict_failures']==sum(results[name][k] for k in ('wrong_types','wrong_parameters_after_correct_type','unassessed_correct_type_shops'))
+groups=np.unique(raw['group']);rng=np.random.default_rng(20261106)
+draws=np.stack([np.bincount(rng.integers(0,len(groups),len(groups)),minlength=len(groups)) for _ in range(2000)])
+def sums(a,selected):return np.array([a[selected&(raw['group']==g)].sum() for g in groups])
+def ci(a,b):
+    den=draws@b;num=draws@a;ok=den>0
+    return dict(valid_draws=int(ok.sum()),interval=list(map(float,np.quantile(num[ok]/den[ok],[.025,.975]))))
+control=models['P01'];treatment=models['P02'];n=sums(np.ones(len(mask)),mask)
+comparisons={
+    'priority_exact_delta':ci(sums((treatment['priority']==target).astype(float)-(control['priority']==target),mask),n),
+    'priority_joint_delta':ci(sums(joints['P02'].astype(float)-joints['P01'],mask),n),
+    'priority_loss_relative_reduction':ci(sums(control['param_nll']-treatment['param_nll'],mask),sums(control['param_nll'],mask)),
+    'full_joint_loss_relative_reduction':ci(sums(control['nll']-treatment['nll'],np.ones(len(mask),bool)),sums(control['nll'],np.ones(len(mask),bool)))}
+definitions=dict(parameter_accuracy='Exact parameter prediction supplied the recorded true action family, over ALL recorded rows in that category, including wrong predicted action types. Not conditioned on correct action classification.',
+    precision_recall_f1='Action-TYPE classification only, not full-command precision/recall/F1.',
+    joint_accuracy='Correct predicted action type AND all required exact recorded parameters; unavailable shop arguments fail.',
+    nll='Observed action plus observed conditional parameter negative log likelihood; purchase-argument likelihood is unassessed.',
+    no_required_parameter='Null conditional parameter accuracy means not applicable; shop null means unavailable arguments.',
+    uncertainty='2000 paired resamples of five whole reused development groups, conditional on checkpoint selection; not selection-adjusted, three-seed or untouched-test confirmation.')
+payload=dict(definitions=definitions,models=results,P02_minus_P01_paired_uncertainty=comparisons,
+    fixes_vs_P01=int((joints['P02']&~joints['P01']).sum()),regressions_vs_P01=int((~joints['P02']&joints['P01']).sum()),
+    frozen_nonpriority_paths_verified=True,bindings=bindings,validation_sha256=sha(val),source_sha256=sha(__file__),
+    three_seed_confirmed=False,all_category_goal_met=False,reserved_games_opened=0)
+frozen(REPORTS/'priority-logistic-pair-analysis.json',payload)
+snapshot=REPORTS/'priority-logistic-pair-analysis-source.txt'
+if snapshot.exists():assert snapshot.read_bytes()==Path(__file__).read_bytes()
+else:snapshot.write_bytes(Path(__file__).read_bytes())
+lines=['# Priority logistic pair: metric clarification and measured results','',*['- '+v for v in definitions.values()], '',
+    '| Model | Exact priority /576 | Joint priority /576 | Priority NLL | Mean / median / maximum integer error | Full observed joint NLL |',
+    '|---|---:|---:|---:|---:|---:|']
+for name,r in results.items():
+    e=r['priority_absolute_error'];lines.append(f"| {name} | {r['priority_exact']} | {r['priority_joint']} | {r['priority_conditional_nll']:.5f} | {e['mean']:.2f} / {e['median']:.0f} / {e['maximum']} | {r['observed_full_joint_nll']:.5f} |")
+lines+=['','P02 versus P01 isolates restored inputs within this logistic head. Comparisons against M01 also include head refitting. All action and spatial paths remain frozen. The fixed priority action decisions cap joint correctness at 343/576 (59.55%).', '',
+    'No category-wise goal or three-seed success is established. All 43 shops remain unassessed strict failures. Original category supports and regression guards remain unchanged. Altar and teleport each have only two development examples.', '',
+    'The immutable P01/P02 reports retain category PRF, joint counts, confusion matrices, top-k destinations, destination errors, history/unseen-value strata and legality coverage. Historical partial flags remain 0 successful-move mask rejections, 92 blocked-forecast rejections and 17 other flags; full engine legality is unknown.', '',
+    'The paired uncertainty, absolute-error summaries, exact hashes and source snapshot are preserved alongside this report. The original reports remain unchanged. Both reserved 75-game partitions remain sealed.']
+path=REPORTS/'PRIORITY-LOGISTIC-PAIR.md';content='\n'.join(lines)+'\n'
+if path.exists():assert path.read_text(encoding='utf-8')==content
+else:path.write_text(content,encoding='utf-8')
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps(payload,indent=2))

@@ -1,0 +1,29 @@
+{
+  "conditions": {
+    "movement_above_current": true,
+    "movement_above_capacity_control": true,
+    "movement_joint_no_regression": true,
+    "joint_loss_guard": true,
+    "macro_f1_guard": true,
+    "targeting_guard": false
+  },
+  "promising": false,
+  "target_gates": {
+    "passed": {
+      "macro_f1": true,
+      "movement": false,
+      "joint_loss": true,
+      "targeting": true
+    },
+    "passed_count": 3,
+    "movement_gain": 0.06223539373412368,
+    "joint_loss_reduction": 0.31067471587481543,
+    "targeting_drops": {
+      "attack": -0.004060913705583702,
+      "cast_0": 0.014084507042253502,
+      "cast_1": -0.07818930041152261
+    }
+  },
+  "plan_sha256": "6a9a61d760787125362166ec0a0197bf1b0421004754017a8582cb5fc719e28b",
+  "additional_fits": 0
+}

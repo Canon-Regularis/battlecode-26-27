@@ -1,0 +1,70 @@
+{
+  "engines": [
+    "2.0.0",
+    "3.0.0"
+  ],
+  "games": {
+    "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c": {
+      "raw_sha256": "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c",
+      "rows": 735,
+      "frames": 3071,
+      "cached_frames": 594,
+      "additional_frames": 2477,
+      "audit_cached_frames": 8,
+      "available_history_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "16": 732
+      },
+      "missing_observation_frames": 0,
+      "chronology_alignment": true,
+      "action_history_bitwise_identical": true,
+      "code_hashes": {
+        "observation_data.py": "b4a221778fcbc59fb2f28f3410de2b66e1243ae7cc9f1809aef836a09b12c0d1",
+        "observation_context.cjs": "8698c148d3ec4fbf38e3a6ce28992834f4d522a4d96f7b066ecca45c22484c9e"
+      },
+      "files": {
+        "arrays.npz": "0f942573598d9fd138db5879f8c8fd8dc6eb163b66c5f7597c7b3a5971adcdfe",
+        "frames.jsonl.gz": "ccafc347ce6010bd481edc367aa2f6d64d6fbbb9e5881716fe33912a45e73136",
+        "query.json": "787de7e97826aae61475c4be869f2723abb41d2b38a644c44fcb29b9a768b92c",
+        "additional.jsonl.gz": "0ab23a30e6e5bcc17adb21f81914183e8b1f3fd0ed1923f1dcfa2cedd928169c"
+      },
+      "shard_sha256": "2933681277601c1cb8d0e10d9cdf23bc924db01df11d4b4fc80f991da98149cb",
+      "diagnostics": {
+        "targets_crossing_own_turn_boundary": 732
+      }
+    },
+    "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c": {
+      "raw_sha256": "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c",
+      "rows": 737,
+      "frames": 3249,
+      "cached_frames": 589,
+      "additional_frames": 2660,
+      "audit_cached_frames": 8,
+      "available_history_counts": {
+        "16": 737
+      },
+      "missing_observation_frames": 0,
+      "chronology_alignment": true,
+      "action_history_bitwise_identical": true,
+      "code_hashes": {
+        "observation_data.py": "b4a221778fcbc59fb2f28f3410de2b66e1243ae7cc9f1809aef836a09b12c0d1",
+        "observation_context.cjs": "8698c148d3ec4fbf38e3a6ce28992834f4d522a4d96f7b066ecca45c22484c9e"
+      },
+      "files": {
+        "arrays.npz": "b69a7dfd89a0076e68c9fcef49afbfb884095161a2c65c1961869e83c7aa2d6e",
+        "frames.jsonl.gz": "fb4f6e073d0cafe7c345938b64c9ba94b73d63fccd93da87abf8d9b614289a24",
+        "query.json": "c7fab4a69dab93083864d27d62a49dcfbb4576462fed58e184784a99bc79229c",
+        "additional.jsonl.gz": "14da0992b5c20ec62e9bd8123c1772374bb7ce90adee3e68070cd15bf9e4083b"
+      },
+      "shard_sha256": "ce0a61b8b1e933c1e6d22efacdb026b6160fda5b1bb04b7aa558a76104be33de",
+      "diagnostics": {
+        "targets_crossing_own_turn_boundary": 737
+      }
+    }
+  },
+  "passed": true,
+  "training_only": true,
+  "fits_started": 0
+}

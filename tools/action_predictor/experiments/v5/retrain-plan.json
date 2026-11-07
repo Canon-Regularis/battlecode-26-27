@@ -1,0 +1,11 @@
+{
+  "membership_sha256": "0a0024d7ff8e279a0c9110484275ef84826a2c4ab42475f598228610d337fabd",
+  "architecture": "Unchanged V4 E06",
+  "seed": 26,
+  "primary_validation": "Exact original V4 validation arrays, unchanged metrics, reference models and checkpoint selection rule.",
+  "original_validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "new_validation_policy": "Membership frozen, not needed for this initial controlled retrain; no extraction.",
+  "final_test_policy": "75 new test games in 15 groups stay sealed; no extraction/scoring.",
+  "sampling": "Same lowest-sha256-turn-v1 / micro-v1-fixed, 32 complete turns per actor; same bounded rare augmentation.",
+  "scope": "Only more training replays change; observational cohort/time/engine composition may also change and must be reported."
+}

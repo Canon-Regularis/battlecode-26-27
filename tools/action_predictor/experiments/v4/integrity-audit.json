@@ -1,0 +1,31 @@
+{
+  "actual_unique_payloads": 170,
+  "cross_split_duplicates": 0,
+  "groups": 34,
+  "whole_group_membership_preserved": true,
+  "original_baseline_checkpoint_unchanged": true,
+  "training_actions": 110708,
+  "validation_actions": 14439,
+  "test_actions": 15604,
+  "rich_PRE_or_augmented_decisions_validated": 140751,
+  "legality_proxy_ground_truth_check": {
+    "validation": {
+      "assessed": 7174,
+      "invalid": 102,
+      "rate": 0.014218009478672985,
+      "all_command_fraction": 0.007064201121961355,
+      "full_engine_illegal_action_rate": null,
+      "meaning": "Partial observable violations: exact personal movement mask; other families readiness/resource checks only. Does not certify complete legality.",
+      "successful_recorded_action_violations": 0
+    },
+    "test": {
+      "assessed": 7708,
+      "invalid": 75,
+      "rate": 0.009730150492994291,
+      "all_command_fraction": 0.004806459882081518,
+      "full_engine_illegal_action_rate": null,
+      "meaning": "Partial observable violations: exact personal movement mask; other families readiness/resource checks only. Does not certify complete legality.",
+      "successful_recorded_action_violations": 0
+    }
+  }
+}

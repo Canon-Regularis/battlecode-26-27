@@ -1,0 +1,13 @@
+{
+  "frozen_before_M01_training": true,
+  "primary_seed": 26,
+  "additional_seeds": [
+    27,
+    28
+  ],
+  "repeat_condition": "M01 improves original-validation movement exact and observed joint NLL, does not reduce macro F1, and passes the unchanged targeting-regression gate.",
+  "comparison": "Compare each repeated seed to the existing E06/E07/E08 seed-matched checkpoint; same validation and frozen target references.",
+  "selection": "No new architectures or target changes. Repeated seeds cannot select a different configuration or open reserved games.",
+  "maximum_additional_fits": 2,
+  "benchmark_sha256": "e8bc7413c692c181e82809d458bdd9a78e115d59e61ac3f32ed03d413eba8aea"
+}

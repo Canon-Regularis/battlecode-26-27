@@ -1,0 +1,455 @@
+{
+  "scope": "Post-hoc objective error diagnostics; thresholds below are diagnostic only, never success criteria or inference inputs.",
+  "fit_report_sha256": "b82e9bc61a0c4b52f9820e6a92994056ce85fc889d6a600997b928019936a85f",
+  "analysis_sha256": "9daa37a550d947adabcc855336200d0969d15503e9e8c55150583249d5482509",
+  "source_sha256": "31c5cbf0dc9c521b53796c4433131d93364f7d85909bcb014956eac931214b99",
+  "tail_errors": {
+    "P01": {
+      "error_over_1000": 0,
+      "nonzero_target_wrong_sign": 190,
+      "maximum": 823
+    },
+    "P02": {
+      "error_over_1000": 0,
+      "nonzero_target_wrong_sign": 174,
+      "maximum": 827
+    },
+    "P03": {
+      "error_over_1000": 12,
+      "nonzero_target_wrong_sign": 81,
+      "maximum": 1489
+    }
+  },
+  "groups": [
+    {
+      "group": 1,
+      "support": 71,
+      "type_correct": 45,
+      "models": {
+        "P01": {
+          "exact": 6,
+          "joint": 5
+        },
+        "P02": {
+          "exact": 2,
+          "joint": 2
+        },
+        "P03": {
+          "exact": 11,
+          "joint": 8
+        }
+      }
+    },
+    {
+      "group": 10,
+      "support": 73,
+      "type_correct": 42,
+      "models": {
+        "P01": {
+          "exact": 3,
+          "joint": 2
+        },
+        "P02": {
+          "exact": 1,
+          "joint": 1
+        },
+        "P03": {
+          "exact": 7,
+          "joint": 1
+        }
+      }
+    },
+    {
+      "group": 11,
+      "support": 93,
+      "type_correct": 61,
+      "models": {
+        "P01": {
+          "exact": 5,
+          "joint": 4
+        },
+        "P02": {
+          "exact": 4,
+          "joint": 2
+        },
+        "P03": {
+          "exact": 15,
+          "joint": 8
+        }
+      }
+    },
+    {
+      "group": 17,
+      "support": 139,
+      "type_correct": 79,
+      "models": {
+        "P01": {
+          "exact": 4,
+          "joint": 2
+        },
+        "P02": {
+          "exact": 3,
+          "joint": 1
+        },
+        "P03": {
+          "exact": 20,
+          "joint": 17
+        }
+      }
+    },
+    {
+      "group": 31,
+      "support": 200,
+      "type_correct": 116,
+      "models": {
+        "P01": {
+          "exact": 4,
+          "joint": 2
+        },
+        "P02": {
+          "exact": 5,
+          "joint": 5
+        },
+        "P03": {
+          "exact": 43,
+          "joint": 23
+        }
+      }
+    }
+  ],
+  "largest_errors": [
+    {
+      "row": 4496,
+      "group": 10,
+      "round": 133,
+      "target": -787,
+      "prediction": 702,
+      "absolute_error": 1489,
+      "personal_PRE_current": -45,
+      "personal_PRE_scheduled": -45,
+      "last_earlier_argument": -45,
+      "last_round_gap": 4,
+      "last_outside16": false
+    },
+    {
+      "row": 4430,
+      "group": 10,
+      "round": 21,
+      "target": -700,
+      "prediction": 700,
+      "absolute_error": 1400,
+      "personal_PRE_current": -42,
+      "personal_PRE_scheduled": -42,
+      "last_earlier_argument": -42,
+      "last_round_gap": 13,
+      "last_outside16": true
+    },
+    {
+      "row": 5053,
+      "group": 10,
+      "round": 935,
+      "target": -699,
+      "prediction": 701,
+      "absolute_error": 1400,
+      "personal_PRE_current": -6,
+      "personal_PRE_scheduled": -6,
+      "last_earlier_argument": -6,
+      "last_round_gap": 138,
+      "last_outside16": true
+    },
+    {
+      "row": 8493,
+      "group": 11,
+      "round": 724,
+      "target": 700,
+      "prediction": -700,
+      "absolute_error": 1400,
+      "personal_PRE_current": -7,
+      "personal_PRE_scheduled": -7,
+      "last_earlier_argument": -7,
+      "last_round_gap": 84,
+      "last_outside16": true
+    },
+    {
+      "row": 12836,
+      "group": 31,
+      "round": 157,
+      "target": 700,
+      "prediction": -700,
+      "absolute_error": 1400,
+      "personal_PRE_current": -49,
+      "personal_PRE_scheduled": -49,
+      "last_earlier_argument": -49,
+      "last_round_gap": 3,
+      "last_outside16": false
+    },
+    {
+      "row": 7254,
+      "group": 11,
+      "round": 389,
+      "target": -671,
+      "prediction": 698,
+      "absolute_error": 1369,
+      "personal_PRE_current": -5,
+      "personal_PRE_scheduled": -5,
+      "last_earlier_argument": -5,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 11532,
+      "group": 17,
+      "round": 550,
+      "target": -666,
+      "prediction": 700,
+      "absolute_error": 1366,
+      "personal_PRE_current": -12,
+      "personal_PRE_scheduled": -12,
+      "last_earlier_argument": -12,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 12066,
+      "group": 31,
+      "round": 844,
+      "target": -599,
+      "prediction": 702,
+      "absolute_error": 1301,
+      "personal_PRE_current": -5,
+      "personal_PRE_scheduled": -5,
+      "last_earlier_argument": -5,
+      "last_round_gap": 15,
+      "last_outside16": true
+    },
+    {
+      "row": 9274,
+      "group": 17,
+      "round": 179,
+      "target": 600,
+      "prediction": -700,
+      "absolute_error": 1300,
+      "personal_PRE_current": -6,
+      "personal_PRE_scheduled": -6,
+      "last_earlier_argument": -6,
+      "last_round_gap": 5,
+      "last_outside16": true
+    },
+    {
+      "row": 168,
+      "group": 1,
+      "round": 297,
+      "target": -597,
+      "prediction": 702,
+      "absolute_error": 1299,
+      "personal_PRE_current": -15,
+      "personal_PRE_scheduled": -15,
+      "last_earlier_argument": -15,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 8983,
+      "group": 17,
+      "round": 469,
+      "target": 516,
+      "prediction": -694,
+      "absolute_error": 1210,
+      "personal_PRE_current": -4,
+      "personal_PRE_scheduled": -4,
+      "last_earlier_argument": -4,
+      "last_round_gap": 2,
+      "last_outside16": false
+    },
+    {
+      "row": 3860,
+      "group": 10,
+      "round": 417,
+      "target": -615,
+      "prediction": 523,
+      "absolute_error": 1138,
+      "personal_PRE_current": -3,
+      "personal_PRE_scheduled": -3,
+      "last_earlier_argument": -3,
+      "last_round_gap": 13,
+      "last_outside16": true
+    },
+    {
+      "row": 10236,
+      "group": 17,
+      "round": 711,
+      "target": 817,
+      "prediction": -2,
+      "absolute_error": 819,
+      "personal_PRE_current": -744,
+      "personal_PRE_scheduled": -744,
+      "last_earlier_argument": -744,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 4444,
+      "group": 10,
+      "round": 34,
+      "target": 815,
+      "prediction": -3,
+      "absolute_error": 818,
+      "personal_PRE_current": -704,
+      "personal_PRE_scheduled": -704,
+      "last_earlier_argument": -704,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 10687,
+      "group": 17,
+      "round": 190,
+      "target": -808,
+      "prediction": -4,
+      "absolute_error": 804,
+      "personal_PRE_current": -3,
+      "personal_PRE_scheduled": -3,
+      "last_earlier_argument": -3,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 8242,
+      "group": 11,
+      "round": 342,
+      "target": 796,
+      "prediction": -2,
+      "absolute_error": 798,
+      "personal_PRE_current": -772,
+      "personal_PRE_scheduled": -772,
+      "last_earlier_argument": -772,
+      "last_round_gap": 1,
+      "last_outside16": false
+    },
+    {
+      "row": 8665,
+      "group": 11,
+      "round": 948,
+      "target": 753,
+      "prediction": -40,
+      "absolute_error": 793,
+      "personal_PRE_current": -3,
+      "personal_PRE_scheduled": -3,
+      "last_earlier_argument": -3,
+      "last_round_gap": 7,
+      "last_outside16": true
+    },
+    {
+      "row": 10225,
+      "group": 17,
+      "round": 704,
+      "target": -800,
+      "prediction": -9,
+      "absolute_error": 791,
+      "personal_PRE_current": -9,
+      "personal_PRE_scheduled": -9,
+      "last_earlier_argument": -9,
+      "last_round_gap": 2,
+      "last_outside16": false
+    },
+    {
+      "row": 10920,
+      "group": 17,
+      "round": 357,
+      "target": 782,
+      "prediction": -9,
+      "absolute_error": 791,
+      "personal_PRE_current": -16,
+      "personal_PRE_scheduled": -16,
+      "last_earlier_argument": -16,
+      "last_round_gap": 6,
+      "last_outside16": false
+    },
+    {
+      "row": 13526,
+      "group": 31,
+      "round": 371,
+      "target": -38,
+      "prediction": 724,
+      "absolute_error": 762,
+      "personal_PRE_current": -710,
+      "personal_PRE_scheduled": -710,
+      "last_earlier_argument": -710,
+      "last_round_gap": 1,
+      "last_outside16": false
+    }
+  ],
+  "unseen_values": {
+    "support": 4,
+    "exact": 0,
+    "joint": 0,
+    "P03_nll": 11.803250312805176,
+    "P02_nll": 8.149181365966797
+  },
+  "rare_training_values": {
+    "support": 65,
+    "models": {
+      "M01": {
+        "exact": 0,
+        "joint": 0,
+        "nll": 8.069892883300781
+      },
+      "P01": {
+        "exact": 0,
+        "joint": 0,
+        "nll": 7.823819160461426
+      },
+      "P02": {
+        "exact": 0,
+        "joint": 0,
+        "nll": 7.862639904022217
+      },
+      "frequency_hybrid": {
+        "exact": 0,
+        "joint": 0,
+        "nll": 7.632818698883057
+      },
+      "P03": {
+        "exact": 0,
+        "joint": 0,
+        "nll": 8.033333778381348
+      }
+    }
+  },
+  "frequent_training_values": {
+    "support": 339,
+    "models": {
+      "M01": {
+        "exact": 13,
+        "joint": 10,
+        "nll": 6.292344570159912
+      },
+      "P01": {
+        "exact": 21,
+        "joint": 14,
+        "nll": 5.8576860427856445
+      },
+      "P02": {
+        "exact": 14,
+        "joint": 10,
+        "nll": 5.890043258666992
+      },
+      "frequency_hybrid": {
+        "exact": 16,
+        "joint": 8,
+        "nll": 4.098402976989746
+      },
+      "P03": {
+        "exact": 88,
+        "joint": 53,
+        "nll": 2.7042675018310547
+      }
+    }
+  },
+  "fallback_nonvocabulary_forecasts": 0,
+  "interpretation": "Aggregate priority gains coexist with a worse maximum error and zero exact rare/unseen values. Full-support likelihood alone does not establish unseen-value predictive quality. No replacement or restored-input attribution.",
+  "joint_correct_needed_for90": 519,
+  "remaining_priority_joint_gap": 462,
+  "frozen_type_ceiling": 343,
+  "reserved_games_opened": 0
+}

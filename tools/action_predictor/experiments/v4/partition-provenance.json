@@ -1,0 +1,82 @@
+{
+  "original_reservation": {
+    "recordings": 50,
+    "groups": 10
+  },
+  "prior_expert_release": {
+    "recordings": 25,
+    "groups": [
+      "01a1a793-2deb-7bc2-9e86-00b48f59275b",
+      "01a1a7ee-b67e-7415-af53-61314173fa17",
+      "01a1a81c-7df5-79c6-9f0b-e2521d599d81",
+      "01a1a881-3441-71f5-aabd-1fec9c8175e2",
+      "01a1a92f-2857-7f76-a249-9e1526e6e533"
+    ],
+    "match_ids": [
+      "01a1a793-2e04-704f-98db-24335c0cd4d3",
+      "01a1a793-2e04-7082-aaec-75171861723d",
+      "01a1a793-2e04-73b6-8b32-c2c8936d57da",
+      "01a1a793-2e04-7592-aabd-38415acc55ce",
+      "01a1a793-2e04-7ea1-9dbe-31248aa138d8",
+      "01a1a7ee-b696-7322-a6f3-d3f1874302f1",
+      "01a1a7ee-b696-76ef-9b1e-eef0af9ca1db",
+      "01a1a7ee-b696-7728-985d-2c03f3340683",
+      "01a1a7ee-b696-7dcb-bad3-5c606facdb9d",
+      "01a1a7ee-b696-7e05-9095-b13b469ec510",
+      "01a1a81c-7fd4-7232-a1d2-28c8742f6d38",
+      "01a1a81c-7fd4-75c8-9d45-3f0e6f529a2b",
+      "01a1a81c-7fd4-7b1e-a734-27546b3342d2",
+      "01a1a81c-7fd4-7bb3-96f7-a1626639f8ab",
+      "01a1a81c-7fd4-7c06-9df2-3d0166e420ed",
+      "01a1a881-345a-7690-96a0-08ccacedf8ff",
+      "01a1a881-345a-7971-9da5-3d2376c8698f",
+      "01a1a881-345a-7a28-939a-c9ce0f7dd314",
+      "01a1a881-345a-7b65-bda2-a659f8d74136",
+      "01a1a881-345a-7b90-8c67-aeefcdc96d7d",
+      "01a1a92f-286c-718b-a8ef-69fdebbd9576",
+      "01a1a92f-286c-7796-95e9-d5bcc7bbcd20",
+      "01a1a92f-286c-7a27-9822-a96579f7acf6",
+      "01a1a92f-286c-7c44-bd9d-4d0da60637d4",
+      "01a1a92f-286c-7db8-b85b-796c05d5ba71"
+    ],
+    "reason": "Previously released after H3 lock and used for a component validation in separate bot-improvement work; cannot be called untouched again."
+  },
+  "remaining_reported_unopened": {
+    "recordings": 25,
+    "cohort": "candidate",
+    "match_ids": [
+      "01a1a780-d912-712f-8c8a-5499d419bfc9",
+      "01a1a780-d912-7220-b5fb-ee047b94b5b7",
+      "01a1a780-d912-7263-a417-c2322c01f5fe",
+      "01a1a780-d912-7bef-b911-664c579e4014",
+      "01a1a780-d912-7e44-83b9-15f960ec2e6a",
+      "01a1a82e-d01c-708c-98b0-de84b0403478",
+      "01a1a82e-d01c-7aa8-b64e-e46ab261d7aa",
+      "01a1a82e-d01c-7e98-8bc1-7b6c4c054609",
+      "01a1a82e-d01c-7f51-a4a7-2ea9715778ad",
+      "01a1a82e-d01c-7f9b-9d6e-4695a1143faf",
+      "01a1a837-f29d-75ee-be1d-49c057ba3e0e",
+      "01a1a837-f29d-76ff-b054-fcd1d515128e",
+      "01a1a837-f29d-79f8-8d38-4c9329324659",
+      "01a1a837-f29d-7a09-b6f0-4b8b403f5bd7",
+      "01a1a837-f29d-7a33-9a4e-7808ab5f030b",
+      "01a1a85c-a62c-716d-99c8-8dedb401df4c",
+      "01a1a85c-a62c-775a-bfd8-3e3e871709b9",
+      "01a1a85c-a62c-781a-b752-f7d6102fca6e",
+      "01a1a85c-a62c-79a2-84a7-9a38bffc5e1a",
+      "01a1a85c-a62c-79d0-a5a5-47cbffc4eb3e",
+      "01a1a865-c036-7322-bcf4-c73c6efd2ef0",
+      "01a1a865-c036-754e-ae00-b92284373f23",
+      "01a1a865-c036-784d-98df-9ec163b700d4",
+      "01a1a865-c036-7bb5-a7a2-b5f2be758a61",
+      "01a1a865-c036-7c10-9235-4958e3e5e4fc"
+    ]
+  },
+  "v2_evaluator_policy": "Exclude ALL original50 from tuning/extraction; use395exploratory and fabricated/recorded acceptance controls. No new untouched expert holdout is claimed.",
+  "evidence": {
+    ".cambc\\bot-improvement\\policy-lock.json": "94da4aa747acb9650bf63ac719672085034c1aa910bb7b91323ef847b4efd2c3",
+    ".cambc\\bot-improvement\\final-verification.json": "da4e4a35f497de96887782703e86f53db6b7c3924afa76f73c562d8928c86948",
+    "docs\\strategy\\replay-improvement-report.md": "10bdab0d6045305ee1dbb0a01b3890265b2e075b3222729a0d73252fd8d54bc7"
+  },
+  "inspection_scope": "Read release/policy/verification metadata; no held-out tactical rows used for V2 tuning."
+}

@@ -1,0 +1,129 @@
+{
+  "definitions": {
+    "parameter_accuracy": "Exact parameter prediction supplied the recorded true action family, over ALL recorded rows in that category, including wrong predicted action types. Not conditioned on correct action classification.",
+    "precision_recall_f1": "Action-TYPE classification only, not full-command precision/recall/F1.",
+    "joint_accuracy": "Correct predicted action type AND all required exact recorded parameters; unavailable shop arguments fail.",
+    "nll": "Observed action plus observed conditional parameter negative log likelihood; purchase-argument likelihood is unassessed.",
+    "no_required_parameter": "Null conditional parameter accuracy means not applicable; shop null means unavailable arguments.",
+    "uncertainty": "2000 paired resamples of five whole reused development groups, conditional on checkpoint selection; not selection-adjusted, three-seed or untouched-test confirmation."
+  },
+  "models": {
+    "M01": {
+      "priority_support": 576,
+      "priority_exact": 13,
+      "priority_joint": 10,
+      "priority_absolute_error": {
+        "mean": 355.19965277777777,
+        "median": 514.5,
+        "p90": 716.5,
+        "maximum": 822
+      },
+      "priority_conditional_nll": 7.088237762451172,
+      "observed_full_joint_nll": 0.8727993965148926,
+      "strict_joint_correct": 11411,
+      "strict_failures": 3028,
+      "wrong_types": 1627,
+      "wrong_parameters_after_correct_type": 1359,
+      "unassessed_correct_type_shops": 42,
+      "all_unassessed_shops": 43,
+      "priority_prediction_range": [
+        -30,
+        25
+      ]
+    },
+    "P01": {
+      "priority_support": 576,
+      "priority_exact": 22,
+      "priority_joint": 15,
+      "priority_absolute_error": {
+        "mean": 355.1302083333333,
+        "median": 512.0,
+        "p90": 716.0,
+        "maximum": 823
+      },
+      "priority_conditional_nll": 6.759223937988281,
+      "observed_full_joint_nll": 0.8596744537353516,
+      "strict_joint_correct": 11416,
+      "strict_failures": 3023,
+      "wrong_types": 1627,
+      "wrong_parameters_after_correct_type": 1354,
+      "unassessed_correct_type_shops": 42,
+      "all_unassessed_shops": 43,
+      "priority_prediction_range": [
+        -29,
+        21
+      ]
+    },
+    "P02": {
+      "priority_support": 576,
+      "priority_exact": 15,
+      "priority_joint": 11,
+      "priority_absolute_error": {
+        "mean": 354.9045138888889,
+        "median": 517.0,
+        "p90": 717.0,
+        "maximum": 827
+      },
+      "priority_conditional_nll": 6.781004905700684,
+      "observed_full_joint_nll": 0.8605433106422424,
+      "strict_joint_correct": 11412,
+      "strict_failures": 3027,
+      "wrong_types": 1627,
+      "wrong_parameters_after_correct_type": 1358,
+      "unassessed_correct_type_shops": 42,
+      "all_unassessed_shops": 43,
+      "priority_prediction_range": [
+        -36,
+        44
+      ]
+    }
+  },
+  "P02_minus_P01_paired_uncertainty": {
+    "priority_exact_delta": {
+      "valid_draws": 2000,
+      "interval": [
+        -0.03509287925696594,
+        0.0
+      ]
+    },
+    "priority_joint_delta": {
+      "valid_draws": 2000,
+      "interval": [
+        -0.02743142144638404,
+        0.007211538461538462
+      ]
+    },
+    "priority_loss_relative_reduction": {
+      "valid_draws": 2000,
+      "interval": [
+        -0.00846284774598362,
+        -0.00040987424491364184
+      ]
+    },
+    "full_joint_loss_relative_reduction": {
+      "valid_draws": 2000,
+      "interval": [
+        -0.0020624391850505267,
+        -0.00016466251855809638
+      ]
+    }
+  },
+  "fixes_vs_P01": 11,
+  "regressions_vs_P01": 15,
+  "frozen_nonpriority_paths_verified": true,
+  "bindings": {
+    "P01": {
+      "report_sha256": "4cf8ca9fd8cb38d447f6925d6304cd8773e4bb26f6f7f4b3b46807bafe4d2e4a",
+      "predictions_sha256": "14912d3c8c4a666b62b2b0130a885f32e526abc83f5157b97f5731b93ddd1a03"
+    },
+    "P02": {
+      "report_sha256": "ecddce3cf0a2266b2dd31d0644919932c18c175f450b1595a7874f69f4e07f7e",
+      "predictions_sha256": "c1071dc01476ca7dcd14bf7cd8c925df9ceda05b4b1b739cb73d955abfd7a073"
+    }
+  },
+  "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "source_sha256": "6511f62ec509428593e388ed8ef30aca9e0e21b1a63ed12f0a2ad3c0ee3fdd65",
+  "three_seed_confirmed": false,
+  "all_category_goal_met": false,
+  "reserved_games_opened": 0
+}

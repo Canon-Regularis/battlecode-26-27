@@ -1,0 +1,54 @@
+"""Freeze training-only parameter baseline before its validation evaluation."""
+from pathlib import Path
+import sys,json,math
+import numpy as np
+import torch
+from torch import nn
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor.priority_dependencies_v3 import verify_dependencies
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import sha,frozen
+from tools.action_predictor import reliable_train as rt
+from tools.action_predictor.priority_modes import AbsolutePriorityModes
+from tools.action_predictor.observation_metrics import correctness
+verify_dependencies()
+prior=json.loads((REPORTS/'priority-logistic-design-v3.json').read_text())
+train=root/'.cambc/action-predictor/v5/combined-train.npz';validation=root/'.cambc/action-predictor/v4/validation.npz'
+assert sha(train)==prior['inputs']['train_sha256'] and sha(validation)==prior['inputs']['validation_sha256']
+with np.load(train) as z:target=z['priority'][z['y']==rt.LABELS.index('priority')]
+assert np.array_equal(target,target.astype(np.int64))
+values,counts=np.unique(target.astype(np.int64),return_counts=True)
+location=float(np.median(target)/100);log_scale=float(np.log(max(float(target.astype(np.float64).std())*math.sqrt(3)/math.pi/100,math.exp(-6))))
+plan=dict(train_sha256=sha(train),support=len(target),values=values.tolist(),counts=counts.tolist(),
+    most_common=int(values[counts.argmax()]),fallback_mass=.05,fallback_location=location,fallback_log_scale=log_scale,
+    fallback_method='Fixed training-median location and standard-deviation-matched logistic scale; retained[-6,5] scale bounds. No validation fitting.',
+    distribution='.95*training-value frequency + .05*normalized full-support integer logistic; global-mode decoding.',
+    source_sha256=sha(__file__),distribution_source_sha256=sha(root/'tools/action_predictor/priority_modes.py'))
+frozen(REPORTS/'priority-frequency-baseline-plan.json',plan) # Before validation contents are read.
+branch=AbsolutePriorityModes(nn.Linear(128,2),values,counts)
+with torch.no_grad():
+    branch.linear.weight.zero_();branch.linear.bias[-2]=location;branch.linear.bias[-1]=log_scale
+with np.load(validation) as z:raw={k:z[k] for k in z.files}
+with np.load(root/'.cambc/action-predictor/v5/runs/M01/validation-predictions.npz') as z:pred={k:z[k] for k in z.files}
+mask=raw['y']==rt.LABELS.index('priority')
+with torch.no_grad():
+    output=branch(torch.zeros(1,128),torch.zeros(1,39))
+    forecast=int(branch.integer(output)[0]);conditional=-branch.log_mass(output.expand(int(mask.sum()),-1),torch.from_numpy(raw['priority'][mask]).long()).numpy()
+pred['priority']=np.full(len(mask),forecast,np.int64)
+pred['param_nll'][mask]=conditional;pred['nll'][mask]=pred['type_nll'][mask]+conditional
+_,joint=correctness(raw,pred);error=np.abs(pred['priority'][mask]-raw['priority'][mask])
+directory=WORK/'parameter-baselines';directory.mkdir(exist_ok=True);archive=directory/'priority-frequency.npz'
+assert not archive.exists(),'Preserve existing baseline archive'
+np.savez_compressed(archive,**pred)
+result=dict(plan_sha256=sha(REPORTS/'priority-frequency-baseline-plan.json'),validation_sha256=sha(validation),
+    predictions_sha256=sha(archive),predictions_path=str(archive),predicted_value=forecast,most_common_value=plan['most_common'],
+    priority_exact=int((error==0).sum()),priority_joint=int(joint[mask].sum()),priority_support=int(mask.sum()),
+    priority_nll=float(conditional.mean()),full_observed_joint_nll=float(pred['nll'].mean()),
+    absolute_error=dict(mean=float(error.mean()),median=float(np.median(error)),p90=float(np.quantile(error,.9)),maximum=float(error.max())),
+    per_group=[dict(group=int(g),support=int((mask&(raw['group']==g)).sum()),exact=int(((pred['priority']==raw['priority'])&mask&(raw['group']==g)).sum()),joint=int((joint&mask&(raw['group']==g)).sum())) for g in np.unique(raw['group'])],
+    fitted_optimizer_steps=0,unchanged_action_spatial_paths=True,reserved_games_opened=0,three_seed_quality_claim=False,source_sha256=sha(__file__))
+frozen(REPORTS/'priority-frequency-baseline.json',result)
+snapshot=REPORTS/'priority-frequency-baseline-source.txt';assert not snapshot.exists();snapshot.write_bytes(Path(__file__).read_bytes())
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps(result,indent=2))

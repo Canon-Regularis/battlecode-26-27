@@ -1,0 +1,12 @@
+{
+  "prior_plan_sha256": "93eab85b479de4a49c210c5a661427e4d495df2f7402122e597c8a8726c7cb53",
+  "frozen_before_M01_training": true,
+  "trigger": "Repeat if all four frozen targets pass, OR if every original repeat condition passes.",
+  "reason": "A configuration meeting every development target is promising even if its joint loss trades off slightly against E06 while still beating the frozen baseline by 10%.",
+  "targets_unchanged": true,
+  "additional_seeds": [
+    27,
+    28
+  ],
+  "maximum_additional_fits": 2
+}

@@ -1,0 +1,359 @@
+{
+  "schema": 5,
+  "fish_team_id": "1890540d-1ffc-4847-adbf-d0d08772f268",
+  "fish_name": "Intercontinental Fish",
+  "created_at": "2026-11-06T18:00:11.407682+00:00",
+  "collection_started_at": "2026-11-06T17:18:14.762300+00:00",
+  "count": 500,
+  "groups": 100,
+  "split_counts": {
+    "train": {
+      "games": 350,
+      "groups": 70
+    },
+    "validation": {
+      "games": 75,
+      "groups": 15
+    },
+    "test": {
+      "games": 75,
+      "groups": 15
+    }
+  },
+  "split_rule": "SHA256(fish-more-500-v1|groupId), first15 groups test, next15 validation, remaining70 training; all five positions retained.",
+  "rejected_groups": [
+    {
+      "group": "01a1b1bb-3dff-7523-a8d3-aa6b11bc2133",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b184-53fa-7948-bf2b-87c3c743a28a",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b168-da45-73d7-abbc-18b1f3064d09",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b15f-b305-79b0-b25b-440815c390f0",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b128-c275-779e-b2c9-4c5d353a025e",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b0f1-da0b-72b8-bc52-80f31c5dad0f",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b0e8-b203-7b5c-a4a9-771c3c7f1be9",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b0cd-3c1c-762e-a3ce-845d6034de28",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b0ba-eb9c-7525-9e15-c3e8d0386e1b",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b0b1-c552-76f9-b6f9-5b8209d08aa6",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b0a8-99db-72cd-a0e6-03a5b34f944e",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1b043-e387-7b9b-adeb-2a20707ea5da",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1affa-aa45-757c-b4a9-4a251c595857",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1aff1-7aa3-7728-bf71-0678afe3decd",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1afe8-542e-740b-9713-bd3b1b386e67",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1afdf-3076-78bb-b4e3-be7a6ee823d8",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1afd6-0831-7a4c-96c4-60b9030b85fb",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1afcc-dd7a-79bc-b2c2-e7fef1759e29",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1afc3-b97c-739a-9c90-e76fe6fbe573",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1af9f-1ae7-75eb-8b17-b542f77a2b68",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1af95-f022-741c-90fc-bf29247d21d6",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1af28-1771-7786-81a5-2cd8b66a2b2c",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1aee8-01fd-7057-b725-ff8867980ae0",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1aeb1-0d4c-7251-93c8-678da8c6f431",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1aea7-e6d9-74a7-a191-ba43cba6b0e0",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1ae43-2e2a-7fda-bc99-ff1095c62aa7",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ae27-b813-7c6c-9555-bbc3c79312c9",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1adde-7dec-73b8-b637-ea4f0ffcc75a",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ad70-a05a-7091-9e0c-4262ab79c86c",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ad4c-0559-7af0-a7bd-90cc9f9c62ac",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1aca7-38e9-7c6e-82b1-18038d7b69b1",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ac9e-0db7-7836-996c-a46a0cd18dcc",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ac8b-baf4-7a2b-846e-1bba7ca07951",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ac70-47e2-7de5-bbe9-84dc6af88840",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ac54-d36a-768a-9846-8225af7d4e00",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ac42-8045-7054-814c-f0f94b8e5b11",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1abcb-7d06-7d35-8c37-9a637bd64d18",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ab9d-b1b6-75a1-84ef-6b01c9f9df7d",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ab82-461d-76ac-8e71-7b018fb5d91d",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ab2f-d83b-7218-93be-bc30018f6036",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1ab0b-3787-7647-b5db-4db96d1cbbbe",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1aaf8-e8d4-782a-b1d0-7340589c3c9c",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1aa94-3843-7a4c-b11d-76177c3584f5",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1aa66-7059-7de9-a0bb-78cab7ca1198",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1aa14-070d-7f6a-86fa-79191b120eb4",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1aa01-bb33-72b1-8cfc-0e5a65999012",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a9ef-6c43-7470-9338-0f36ba53fdab",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a9b8-7667-79d1-a2a7-0a3d7a72bfee",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a99c-ff95-72a0-830b-221ee9ac60a6",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a981-8d2c-71fc-b2b5-cd6e88fdb162",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a953-c8b9-786a-a767-403b73436e6b",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a938-596d-73e8-aee2-9d98a7689186",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a6f7-97a7-7927-8827-a728f2897b64",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a6c9-cc4f-7362-824c-d007d4ddbf6d",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a6c0-9645-702f-9cd8-ea2da27da3d9",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a6a5-21e1-78ce-abfb-10cab985ccfc",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a680-85af-7807-ab71-0406829da64d",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a677-5adb-7f5e-a5ea-86ad548cfeaf",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a649-975b-7cf2-adcf-bfff91588039",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a642-2bcf-786d-9039-ded11131f830",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1a62e-2018-71bf-8b6f-c8ab765912fe",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a612-ee32-78db-8fc5-f6173c07d684",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a609-7c2e-7a6b-9cc2-7894e9ee03ba",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a600-5524-7e4b-ab01-909c1cc27d81",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1a5f7-295d-78ed-a120-47a11da8549b",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1a5e4-dbfb-7e7f-baf3-589310329fde",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a5c9-71fe-7c10-b70b-1996ccee09dd",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1a5b7-1b0b-7b32-a229-b7809d4e48f3",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "01a1a592-8329-739d-9ae6-ba847197948e",
+      "reason": "existing payload"
+    },
+    {
+      "group": "01a1a589-5bd3-79ab-9f41-9f4163f73442",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "95c6731a-5efd-4182-bb28-e7621fc3a7d6",
+      "reason": "existing payload"
+    },
+    {
+      "group": "2ef4fced-6de0-4206-a1d9-33e3cc563f4b",
+      "reason": "existing payload"
+    },
+    {
+      "group": "2daa1332-1f1a-483e-99e4-ce28c5762aac",
+      "reason": "existing payload"
+    },
+    {
+      "group": "3eeb14e3-e6e6-473a-b154-5b4c843be820",
+      "reason": "existing payload"
+    },
+    {
+      "group": "0e70832f-e121-449c-9560-3bfa20fdabbb",
+      "reason": "existing payload"
+    },
+    {
+      "group": "f52355f2-9a47-49d2-aa8f-724a5b949fdb",
+      "reason": "existing payload"
+    },
+    {
+      "group": "1cbb075b-f96b-467b-b402-a3e016656f7d",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "81ef74e6-1bb9-4581-9345-d6a21eb6490a",
+      "reason": "existing payload"
+    },
+    {
+      "group": "a445c5e4-0631-4ae6-865b-2629b26afbe3",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "dfc43190-1eb8-40aa-b39a-764a77636e77",
+      "reason": "duplicate new payload"
+    },
+    {
+      "group": "8ebc6e40-6f20-4ecb-b252-d315620f61ba",
+      "reason": "existing payload"
+    }
+  ],
+  "existing_inventory_sha256": "80e77a19ca3859eb3854813cbdf0944d81d36ddb5118c1b080c77b0b9b66c211",
+  "refreshed_inventory_sha256": "09e6039c7bc891c55022df40c40f79265bc564141e8f1ccaa5f80971e628796b",
+  "catalogue_sha256": "df5150024686baa47916d62626690cac3f8dcc4630be0295eaea5b0a303f73f8",
+  "inspected_behaviour": false,
+  "final_test_policy": "SEALED: hashing/metadata/CRC only; no action extraction, features, labels, summaries or scoring.",
+  "training_experiment": "Unchanged V4 E06 architecture, encoding, sampling/rare augmentation, training settings and original validation benchmark. New validation remains separate. No final test evaluation.",
+  "unchanged_benchmark_sha256": "e8bc7413c692c181e82809d458bdd9a78e115d59e61ac3f32ed03d413eba8aea",
+  "downloader_sha256": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83",
+  "uv_lock_sha256": "dc2a93d299f9a08f5b553d44c2de06f29a4edcda67dba663de9e87b804a43d35"
+}

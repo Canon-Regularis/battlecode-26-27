@@ -1,0 +1,33 @@
+"""Capture A01 tests and bind training-only pre-evaluation evidence."""
+from pathlib import Path
+import sys,json,subprocess
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor import priority_anchor_baselines as study
+from tools.action_predictor.more_replays import frozen,sha
+from tools.action_predictor.category_study import WORK,REPORTS
+mode=sys.argv[1]
+if mode=='tests-v2':
+    names=('test_priority_inputs','test_priority_verify','test_priority_head','test_priority_dependencies_v3','test_priority_entry_v3','test_priority_modes','test_priority_modes_control','test_priority_anchor_baselines')
+    argv=[sys.executable,'-m','unittest',*['tools.action_predictor.'+n for n in names],'-v']
+    result=subprocess.run(argv,cwd=root,text=True,capture_output=True)
+    path=REPORTS/'priority-anchor-test-output-v2.txt';assert not path.exists();path.write_text(result.stdout+result.stderr,encoding='utf-8')
+    assert result.returncode==0,result.stdout+result.stderr
+    frozen(REPORTS/'priority-anchor-tests-v2.json',dict(argv=argv,returncode=result.returncode,output_sha256=sha(path),test_source_hashes={n:sha(root/'tools/action_predictor'/(n+'.py')) for n in names}))
+    with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=argv,returncode=result.returncode,output_sha256=sha(path)))+'\n')
+    print(path.read_text(encoding='utf-8'))
+elif mode=='finish':
+    study.verify_protocol();prefit=study.read(study.PREFIT)
+    assert prefit['plan_sha256']==sha(study.PLAN) and prefit['sources_sha256']==sha(study.SOURCES) and prefit['priors_sha256']==sha(study.PRIORS)
+    assert prefit['training_roundtrip']['cases']==6 and prefit['training_roundtrip']['split']=='training_only'
+    assert prefit['new_development_evaluations']==0 and prefit['new_optimizer_steps']==0
+    assert not (REPORTS/'A01.json').exists() and not (WORK/'anchor-baselines').exists()
+    tests=study.read(REPORTS/'priority-anchor-tests-v2.json');assert tests['returncode']==0
+    assert tests['output_sha256']==sha(REPORTS/'priority-anchor-test-output-v2.txt')
+    for name,digest in tests['test_source_hashes'].items():assert sha(root/'tools/action_predictor'/(name+'.py'))==digest
+    frozen(REPORTS/'priority-anchor-prefit-completion.json',dict(plan_sha256=sha(study.PLAN),sources_sha256=sha(study.SOURCES),priors_sha256=sha(study.PRIORS),prefit_sha256=sha(study.PREFIT),tests_sha256=sha(REPORTS/'priority-anchor-tests-v2.json'),interrupted_preparation_sha256=sha(REPORTS/'priority-anchor-interrupted-01.json'),
+        families=len(study.FAMILIES),training_priority_support=14816,training_only_roundtrip_cases=6,source_sha256=sha(__file__),new_optimizer_steps=0,new_development_evaluations=0,reserved_games_opened=0))
+    (REPORTS/'priority-anchor-prefit-check-source.txt').write_bytes(Path(__file__).read_bytes())
+    print((REPORTS/'priority-anchor-prefit-completion.json').read_text())
+else:raise ValueError(mode)
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve()),mode],source_sha256=sha(__file__)))+'\n')
