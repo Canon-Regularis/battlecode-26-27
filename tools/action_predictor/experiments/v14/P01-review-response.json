@@ -1,0 +1,38 @@
+{
+  "reviewed_head": "87a490241b4245d0ffdfe2a0a2ba645b98ae568b",
+  "review_task": "7007997f-ffb1-41cb-8656-71a7a7030a9a",
+  "verdict": "P01 valid; no promotion or repeat seeds",
+  "findings": [
+    {
+      "id": 1,
+      "status": "reported_configuration_ceiling",
+      "correction": "Perfect typing can reach at most24/112 wards in B and29/112 in C. P01 currently uses7 of29 exact locations;22 additional potentially recoverable with typing before regressions."
+    },
+    {
+      "id": 2,
+      "status": "reported_history_limitation",
+      "correction": "Priorward within32roots available on246/10842augTRAIN,61/2192naturalTRAIN,0/112DEV positive rows. Current personal API wards are a separate source. P01-P00 tests the combined input block, not isolated persistence."
+    },
+    {
+      "id": 3,
+      "status": "additive_null_correction",
+      "evidence": [
+        "P00-completion-v3-P00-head.json",
+        "P01-completion-v3-A.json"
+      ],
+      "correction": "31 undefined context F1 paths per evaluation explicitly null; original receipts and counts preserved. Future completion_v3 emits corresponding corrections for every evaluation."
+    },
+    {
+      "id": 4,
+      "status": "additive_reproduction_inventory",
+      "evidence": [
+        "P00-completion-v3-P00-head.json",
+        "P01-completion-v3-A.json"
+      ],
+      "correction": "Placement diagnosis command plus report hashes included; comparator reports and all TRAIN/DEV decoder archives hash-bound. Original v2 receipts preserved."
+    }
+  ],
+  "approval_scope": "No future fit approved; fresh independent review after each remaining fit.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
