@@ -259,3 +259,5 @@ inference. Group separation, original reservation exclusion and replay identity
 uniqueness were also checked on the prepared corpus.
 
 Ward P00 review corrections are additive: see [P00 reporting addendum](experiments/v14/P00-REPORT-ADDENDUM.md) and [review response](experiments/v14/P00-review-response.json). Original measurements remain frozen; no promotion or repeat seeds.
+
+User discontinued ward research after three fits; T01 remains unrun. Current movement specialization: [V15 protocol and status](experiments/v15/STATUS.md), [single expert negative result](experiments/v15/S00-REPORT.md). No model promotion.

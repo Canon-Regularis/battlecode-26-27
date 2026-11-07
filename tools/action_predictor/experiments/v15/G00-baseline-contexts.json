@@ -1,0 +1,147 @@
+{
+  "results": {
+    "train": {
+      "all": {
+        "move": {
+          "rows": 71945,
+          "conditional_exact": 47066,
+          "joint_exact": 42644,
+          "typed_support": 64103,
+          "typed_parameter_exact": 42644,
+          "mean_joint_nll": 1.2526510953903198
+        },
+        "blocked": {
+          "rows": 10065,
+          "conditional_exact": 2530,
+          "joint_exact": 1128,
+          "typed_support": 4776,
+          "typed_parameter_exact": 1128,
+          "mean_joint_nll": 3.7105183601379395
+        },
+        "continuing": {
+          "rows": 36368,
+          "conditional_exact": 33996,
+          "joint_exact": 31416,
+          "typed_support": 33385,
+          "typed_parameter_exact": 31416,
+          "mean_joint_nll": 0.6071126461029053
+        },
+        "change": {
+          "rows": 35456,
+          "conditional_exact": 12984,
+          "joint_exact": 11170,
+          "typed_support": 30642,
+          "typed_parameter_exact": 11170,
+          "mean_joint_nll": 1.9134786128997803
+        }
+      },
+      "natural": {
+        "move": {
+          "rows": 48286,
+          "conditional_exact": 31025,
+          "joint_exact": 28318,
+          "typed_support": 43482,
+          "typed_parameter_exact": 28318,
+          "mean_joint_nll": 1.2850830554962158
+        },
+        "blocked": {
+          "rows": 1906,
+          "conditional_exact": 445,
+          "joint_exact": 208,
+          "typed_support": 1004,
+          "typed_parameter_exact": 208,
+          "mean_joint_nll": 3.60758638381958
+        },
+        "continuing": {
+          "rows": 25918,
+          "conditional_exact": 24345,
+          "joint_exact": 22499,
+          "typed_support": 23824,
+          "typed_parameter_exact": 22499,
+          "mean_joint_nll": 0.6088219285011292
+        },
+        "change": {
+          "rows": 22279,
+          "conditional_exact": 6616,
+          "joint_exact": 5777,
+          "typed_support": 19602,
+          "typed_parameter_exact": 5777,
+          "mean_joint_nll": 2.070434331893921
+        }
+      }
+    },
+    "validation": {
+      "all": {
+        "move": {
+          "rows": 2362,
+          "conditional_exact": 1434,
+          "joint_exact": 1318,
+          "typed_support": 2127,
+          "typed_parameter_exact": 1318,
+          "mean_joint_nll": 1.409581184387207
+        },
+        "blocked": {
+          "rows": 110,
+          "conditional_exact": 24,
+          "joint_exact": 8,
+          "typed_support": 40,
+          "typed_parameter_exact": 8,
+          "mean_joint_nll": 4.084982395172119
+        },
+        "continuing": {
+          "rows": 1198,
+          "conditional_exact": 1120,
+          "joint_exact": 1053,
+          "typed_support": 1111,
+          "typed_parameter_exact": 1053,
+          "mean_joint_nll": 0.6290144324302673
+        },
+        "change": {
+          "rows": 1158,
+          "conditional_exact": 311,
+          "joint_exact": 263,
+          "typed_support": 1011,
+          "typed_parameter_exact": 263,
+          "mean_joint_nll": 2.2165591716766357
+        }
+      },
+      "natural": {
+        "move": {
+          "rows": 2362,
+          "conditional_exact": 1434,
+          "joint_exact": 1318,
+          "typed_support": 2127,
+          "typed_parameter_exact": 1318,
+          "mean_joint_nll": 1.409581184387207
+        },
+        "blocked": {
+          "rows": 110,
+          "conditional_exact": 24,
+          "joint_exact": 8,
+          "typed_support": 40,
+          "typed_parameter_exact": 8,
+          "mean_joint_nll": 4.084982395172119
+        },
+        "continuing": {
+          "rows": 1198,
+          "conditional_exact": 1120,
+          "joint_exact": 1053,
+          "typed_support": 1111,
+          "typed_parameter_exact": 1053,
+          "mean_joint_nll": 0.6290144324302673
+        },
+        "change": {
+          "rows": 1158,
+          "conditional_exact": 311,
+          "joint_exact": 263,
+          "typed_support": 1011,
+          "typed_parameter_exact": 263,
+          "mean_joint_nll": 2.2165591716766357
+        }
+      }
+    }
+  },
+  "interpretation": "Unchanged saved predictions; natural sampling separate from augmented. No fitting or replay audit.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
