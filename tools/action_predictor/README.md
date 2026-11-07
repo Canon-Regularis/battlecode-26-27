@@ -2,6 +2,13 @@
 
 ## Current root-cause investigation — production training paused
 
+The [selector-specific follow-up](experiments/v11/WHY-SELECTION-FAILS.md)
+quantifies a training/decoder mismatch: the correct point command ranks first in
+886 available-command failures but is overridden by the fallback. On571 failures,
+it also has higher mixture probability than the emitted command. Remaining
+ranking errors are already substantial on TRAIN; their ultimate cause is not
+yet isolated. This follow-up uses saved scores/checkpoints and no new fit.
+
 The [ranked root-cause report](experiments/v11/ROOT-CAUSE-REPORT.md) separates
 command-support ceilings from selection failures, corrects TRAIN/DEV sampling,
 and tests movement explanations and small-subset fitting. The existing model
