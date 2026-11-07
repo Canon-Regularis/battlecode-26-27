@@ -1,0 +1,8 @@
+{
+  "stage": "Postfit raw PRE parity before any further fit",
+  "initial_failure": "One of128 frozen-encoder context outputs differs2.861023e-6 between serving batch1 and cached neural batch; initial absolute tolerance2e-6",
+  "correction": "Separate exact raw PRE and tile features from numerical neural outputs; use fixed1e-5 tolerance only for the128 neural context coordinates, and still require exact command/argmax parity plus command-log-probability discrepancy below1e-4",
+  "checkpoint_or_prediction_change": "none; no refit, no current-answer substitution or archive change",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

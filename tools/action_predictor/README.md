@@ -7,8 +7,10 @@ priority over the unrun V13 B01/B02 goal/memory fits. Its frozen four-fit protoc
 tests matched placement specialists P00/P01 and binary ward-action specialists
 T00/T01, with controlled head-only, type-only and combined complete forecasts.
 Historical personal APIs recover existing ward state; every recorded TRAIN/DEV
-ward destination remains covered by the candidate mask. No specialist has been
-fitted at this preparation checkpoint. Both reserved partitions remain sealed.
+ward destination remains covered by the candidate mask. The first placement
+specialist [P00 is complete](experiments/v14/P00-REPORT.md), with no meaningful
+accuracy gain; its fresh postfit review precedes the remaining three fits.
+Both reserved partitions remain sealed.
 
 Primary head-only A keeps the original G00 action choices exactly unchanged.
 A separately declared joint-MAP comparison uses the same normalized probability

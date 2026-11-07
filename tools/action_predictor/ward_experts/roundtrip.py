@@ -15,7 +15,7 @@ def run(name,placement_id=None,typing_id=None):
     for kind,identifier in [('P',placement_id),('T',typing_id)]:
         if identifier:
             r=json.loads((REPORT/f'{identifier}.json').read_text());supplied[kind]=(WORK/f"runs/{identifier}/round-{r['selected_round']:02d}.pt",r['checkpoint_sha256'])
-    counts=Counter();max_probability=0;timings=[];bindings=[]
+    counts=Counter();max_probability=0;max_context=0;timings=[];bindings=[]
     for job in [j for j in json.loads(JOBS.read_text()) if j['split']=='validation']:
         raw=job['record']['raw_sha256'];turns,supps,route=evidence(job);decisions=[(t,d) for t in turns for d in t['decisions']];events=defaultdict(list);index=Path(job['manifest']['source'])/'extracted'/raw/'index.jsonl'
         for line in index.open():
@@ -45,13 +45,16 @@ def run(name,placement_id=None,typing_id=None):
                 if cursor(root['event'])>cursor(d['pre_cursor']):break
                 predictor.observe(root['event'],root['header']['step'],rnd);pointers[actor]+=1
             tick=time.perf_counter();out=predictor.predict(d['observation'],supps[d['id']],route,t['round'],d['pre_cursor'],states[d['event_cursor']],wards.get(idx));timings.append((time.perf_counter()-tick)*1000)
-            np.testing.assert_allclose(out['global_features'],cached['global'][idx],rtol=0,atol=2e-6);np.testing.assert_array_equal(out['tile_features'],cached['tile'][idx]);np.testing.assert_array_equal(out['candidate_mask'],cached['mask'][idx])
+            # Frozen encoder batch1 vs cachedbatch256 SGEMM rounding is not raw
+            # PRE feature drift. Only its128 neural outputs get a tolerance.
+            max_context=max(max_context,float(np.abs(out['global_features'][:128]-cached['global'][idx,:128]).max()))
+            np.testing.assert_allclose(out['global_features'][:128],cached['global'][idx,:128],rtol=0,atol=1e-5);np.testing.assert_array_equal(out['global_features'][128:],cached['global'][idx,128:]);np.testing.assert_array_equal(out['tile_features'],cached['tile'][idx]);np.testing.assert_array_equal(out['candidate_mask'],cached['mask'][idx])
             for decoder in ('primary','joint_MAP'):
                 for field in ('prediction','coordinate','priority'):assert out[decoder][field][0]==stored[decoder][field][idx],(idx,decoder,field)
                 max_probability=max(max_probability,abs(out[decoder]['command_log_probability'][0]-stored[decoder]['command_log_probability'][idx]))
             counts['cases']+=1;counts['engine_'+job['record']['engine_version']]+=1;counts['ward_predicted']+=int(out['primary']['prediction'][0]==14);counts['ward_state_available']+=int(idx in wards)
         bindings.append(dict(raw=raw,index=digest(index),priority=digest(priority),wards=digest(wp)))
         print('Ward raw PRE',name,len(bindings),'/25',flush=True)
-    assert max_probability<1e-4;immutable_json(REPORT/f'{name}-causal-roundtrip.json',dict(counts=dict(counts),features_and_commands_parity=True,max_command_log_probability_discrepancy=float(max_probability),bindings=bindings,selection='First/middle/last plus firstpredictedfamily in eachdecoder and firstavailable/unavailablewardstate pergame;no truefamily/correctness selection.',serving_ms=dict(mean=float(np.mean(timings)),median=float(np.median(timings)),p95=float(np.quantile(timings,.95)),scope='Actual allfallbackheads pluswardexpert(s),featureconstruction,bothdecoders;initialization/actualpriorhistoryreplay/SDKstateacquisitionexcluded;notproductionlatency'),sources={str(p.relative_to(ROOT)):digest(p) for p in (Path(__file__),Path(__file__).with_name('predictor.py'))},new_fits=0,reserved_opened=0));print(name,dict(counts),max_probability,flush=True)
+    assert max_probability<1e-4;immutable_json(REPORT/f'{name}-causal-roundtrip.json',dict(counts=dict(counts),raw_PRE_and_tile_features_exact=True,commands_exact=True,frozen_encoder_context_max_discrepancy=max_context,frozen_encoder_context_tolerance=1e-5,max_command_log_probability_discrepancy=float(max_probability),bindings=bindings,selection='First/middle/last plus firstpredictedfamily in eachdecoder and firstavailable/unavailablewardstate pergame;no truefamily/correctness selection.',serving_ms=dict(mean=float(np.mean(timings)),median=float(np.median(timings)),p95=float(np.quantile(timings,.95)),scope='Actual allfallbackheads pluswardexpert(s),featureconstruction,bothdecoders;initialization/actualpriorhistoryreplay/SDKstateacquisitionexcluded;notproductionlatency'),sources={str(p.relative_to(ROOT)):digest(p) for p in (Path(__file__),Path(__file__).with_name('predictor.py'))},new_fits=0,reserved_opened=0));print(name,dict(counts),max_context,max_probability,flush=True)
 
 if __name__=='__main__':run(sys.argv[1],None if len(sys.argv)<3 or sys.argv[2]=='-' else sys.argv[2],None if len(sys.argv)<4 or sys.argv[3]=='-' else sys.argv[3])

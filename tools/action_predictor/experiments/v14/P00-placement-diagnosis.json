@@ -1,0 +1,50 @@
+{
+  "results": {
+    "train": {
+      "all": {
+        "rows": 10842,
+        "new_exact": 2247,
+        "old_exact": 2274,
+        "rescues": 452,
+        "regressions": 479,
+        "new_conditional_nll": 2.5738660394186543,
+        "old_conditional_nll": 2.565663974735618
+      },
+      "natural": {
+        "rows": 2192,
+        "new_exact": 445,
+        "old_exact": 449,
+        "rescues": 86,
+        "regressions": 90,
+        "new_conditional_nll": 2.589908622560176,
+        "old_conditional_nll": 2.5929738860190032
+      },
+      "TRAIN_shuffled_context_probe": {
+        "rows": 10842,
+        "exact": 2141,
+        "conditional_nll": 2.6800015718230386,
+        "meaning": "Only existing128frozenneuralcontext shuffled;currenttilefeatures/mask retained. Measures fittedmodeldependence, not availableinformationcausalvalue. No newfit."
+      }
+    },
+    "validation": {
+      "all": {
+        "rows": 112,
+        "new_exact": 25,
+        "old_exact": 24,
+        "rescues": 4,
+        "regressions": 3,
+        "new_conditional_nll": 2.6477923497605005,
+        "old_conditional_nll": 2.6958318392786986
+      },
+      "paired_conditional_accuracy95": {
+        "low": -0.054945054945054944,
+        "high": 0.0472972972972973,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "source_sha256": "145d166c04db5a32e869b3506e4c8a822f2d4c598b95853584a116820278f636",
+  "checkpoint_sha256": "35a5825c82334efe6c795f747bb6ffca5743f72271d6dc368f8c3a7b27e2c2de",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
