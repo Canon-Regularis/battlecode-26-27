@@ -1,0 +1,261 @@
+{
+  "report_sha256": "8ca1acd27363684ec2acd9d62e111fb3338e0ca7485d380fc290b8d7f9694b8a",
+  "source_sha256": "b4e79ccd76d04bafa52f8604ede98d05572a4a02bcbc01f29903a2667d54cd19",
+  "accounting": {
+    "wrong_types": 1629,
+    "wrong_parameters_after_correct_type": 1306,
+    "correctly_typed_shops_unassessed": 43,
+    "strict_failures": 2978
+  },
+  "guards": {
+    "no_overall_joint_regression": false,
+    "macro_drop_at_most_one_point": true,
+    "attack_ability_joint_drop_at_most_two_points": true,
+    "attack_ability_parameter_guard": true,
+    "ward_type_correct_at_least_35": true,
+    "ward_joint_at_least_seven": true
+  },
+  "original_targets": {
+    "macro_f1_at_least_065": false,
+    "movement_simple_reference": 0.5520745131244708,
+    "movement_reference_sha256": "531df5f89e8da0cb2921c4c300e729da953c8b784effed4d0478ef102b67ad1c",
+    "movement_exact_gain": 0.04657070279424225,
+    "movement_gain_at_least_ten_points": false,
+    "ten_percent_lower_loss": {
+      "M01": true,
+      "P05": false,
+      "A01_strongest_simple": false
+    },
+    "per_category_90_point_estimate": {
+      "altar": false,
+      "attack": true,
+      "blocked": false,
+      "cancel": true,
+      "cast_0": false,
+      "cast_1": false,
+      "end": true,
+      "move": false,
+      "priority": false,
+      "recall": false,
+      "shop": false,
+      "submit": true,
+      "teleport": false,
+      "ward": false
+    },
+    "three_seed_certified": false,
+    "rare_categories_certified": false,
+    "missing_purchase_arguments_assessed": false
+  },
+  "exploratory_seed_allocation_trigger": false,
+  "strict_gain": -0.0007618256111919797,
+  "move_joint_gain": -0.0021168501270110163,
+  "paired_intervals": {
+    "joint_accuracy_gain": {
+      "low": -0.00596449371973895,
+      "high": 0.005674825652946747,
+      "valid_draws": 2000
+    },
+    "macro_f1_gain": {
+      "low": -0.01798401944563066,
+      "high": 0.02005691819501672,
+      "valid_draws": 2000
+    },
+    "loss_reduction": {
+      "low": -0.0034800878790113288,
+      "high": 0.016899615183485706,
+      "valid_draws": 2000
+    },
+    "move_joint_gain": {
+      "low": -0.011853022520742829,
+      "high": 0.011170688114387817,
+      "valid_draws": 2000
+    },
+    "scope": "Five reused groups; pointwise conditional on checkpoint selection, not independent3seed/untouched confirmation"
+  },
+  "category_uncertainty": {
+    "altar": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "groups_with_support": 2
+    },
+    "attack": {
+      "joint_accuracy": {
+        "low": 0.8862343572241184,
+        "high": 0.9280496718486366,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.002232142857142857,
+        "high": 0.039377289377289376,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "blocked": {
+      "joint_accuracy": {
+        "low": 0.02830188679245283,
+        "high": 0.1,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": 0.010752688172043012,
+        "high": 0.09302325581395349,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cancel": {
+      "joint_accuracy": {
+        "low": 0.9765726681127983,
+        "high": 0.9910039582583663,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": 0.001855976243504083,
+        "high": 0.009322033898305085,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cast_0": {
+      "joint_accuracy": {
+        "low": 0.7128205128205128,
+        "high": 0.817258883248731,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.0051813471502590676,
+        "high": 0.09405940594059406,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cast_1": {
+      "joint_accuracy": {
+        "low": 0.35064935064935066,
+        "high": 0.432,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.061371841155234655,
+        "high": 0.05752212389380531,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "end": {
+      "joint_accuracy": {
+        "low": 0.953248031496063,
+        "high": 0.9634615384615385,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.01318359375,
+        "high": -0.00244140625,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "move": {
+      "joint_accuracy": {
+        "low": 0.5150197628458498,
+        "high": 0.5705627705627706,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.011853022520742789,
+        "high": 0.011170688114387846,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "priority": {
+      "joint_accuracy": {
+        "low": 0.09977827050997783,
+        "high": 0.13481675392670156,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.015594541910331383,
+        "high": 0.009389671361502348,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "recall": {
+      "joint_accuracy": {
+        "low": 0.7645822265625,
+        "high": 0.8258175559380379,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.011688311688311689,
+        "high": -0.0025906735751295338,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "shop": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "submit": {
+      "joint_accuracy": {
+        "low": 0.7692307692307693,
+        "high": 1.0,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.16666666666666666,
+        "high": 0.2,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "teleport": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "groups_with_support": 1
+    },
+    "ward": {
+      "joint_accuracy": {
+        "low": 0.006896551724137931,
+        "high": 0.16455696202531644,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.037383177570093455,
+        "high": 0.05333333333333334,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    }
+  },
+  "interpretation": "E00 is redesigned zero-entity control; E01 is the matched input treatment. Improvements versus M01/P05 bundle classifier/GRU/movement retraining, separate fusions and common recovered priority channels. Entity attribution requires E01 minus E00. One head/representation warm-start seed is not three independent full-model seeds.",
+  "reserved_opened": 0
+}

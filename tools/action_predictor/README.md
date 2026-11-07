@@ -1,5 +1,14 @@
 # Intercontinental Fish GRU action predictor
 
+## Latest V9 representation studies
+
+The matched trainable-GRU entity-input pair did not improve complete-command
+prediction: E00 has 11,461/14,439 strict successes and E01 has 11,437, versus
+P05's 11,472. Neither is promoted or triggers identical repeats. See the
+[V9 study index](experiments/v9/INDEX.md) for the measured bottlenecks, full
+category results, uncertainty, serving costs and next substantial hypotheses.
+E01 is pending its fresh completed-fit review. Reserved games remain sealed.
+
 ## Current research status: 7 November 2026
 
 The predictor has **not met the reliability targets**. The latest reviewed

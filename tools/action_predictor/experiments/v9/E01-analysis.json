@@ -1,0 +1,261 @@
+{
+  "report_sha256": "46f5475b461b611be4330160dbd4970fd37abd6dfdfaaaf881834f42f555457d",
+  "source_sha256": "b4e79ccd76d04bafa52f8604ede98d05572a4a02bcbc01f29903a2667d54cd19",
+  "accounting": {
+    "wrong_types": 1654,
+    "wrong_parameters_after_correct_type": 1305,
+    "correctly_typed_shops_unassessed": 43,
+    "strict_failures": 3002
+  },
+  "guards": {
+    "no_overall_joint_regression": false,
+    "macro_drop_at_most_one_point": true,
+    "attack_ability_joint_drop_at_most_two_points": true,
+    "attack_ability_parameter_guard": true,
+    "ward_type_correct_at_least_35": true,
+    "ward_joint_at_least_seven": true
+  },
+  "original_targets": {
+    "macro_f1_at_least_065": false,
+    "movement_simple_reference": 0.5520745131244708,
+    "movement_reference_sha256": "531df5f89e8da0cb2921c4c300e729da953c8b784effed4d0478ef102b67ad1c",
+    "movement_exact_gain": 0.04487722269263339,
+    "movement_gain_at_least_ten_points": false,
+    "ten_percent_lower_loss": {
+      "M01": true,
+      "P05": false,
+      "A01_strongest_simple": false
+    },
+    "per_category_90_point_estimate": {
+      "altar": false,
+      "attack": false,
+      "blocked": false,
+      "cancel": true,
+      "cast_0": false,
+      "cast_1": false,
+      "end": true,
+      "move": false,
+      "priority": false,
+      "recall": false,
+      "shop": false,
+      "submit": false,
+      "teleport": false,
+      "ward": false
+    },
+    "three_seed_certified": false,
+    "rare_categories_certified": false,
+    "missing_purchase_arguments_assessed": false
+  },
+  "exploratory_seed_allocation_trigger": false,
+  "strict_gain": -0.0024239905810652385,
+  "move_joint_gain": -0.005080440304826461,
+  "paired_intervals": {
+    "joint_accuracy_gain": {
+      "low": -0.006926952141057985,
+      "high": 0.0028032271297688816,
+      "valid_draws": 2000
+    },
+    "macro_f1_gain": {
+      "low": -0.014854575219507282,
+      "high": 0.018507162217615725,
+      "valid_draws": 2000
+    },
+    "loss_reduction": {
+      "low": -0.009444711901825942,
+      "high": 0.017590696755414137,
+      "valid_draws": 2000
+    },
+    "move_joint_gain": {
+      "low": -0.008311295806573415,
+      "high": -0.0013966480446927498,
+      "valid_draws": 2000
+    },
+    "scope": "Five reused groups; pointwise conditional on checkpoint selection, not independent3seed/untouched confirmation"
+  },
+  "category_uncertainty": {
+    "altar": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "groups_with_support": 2
+    },
+    "attack": {
+      "joint_accuracy": {
+        "low": 0.8778705636743215,
+        "high": 0.9245689655172413,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.00663716814159292,
+        "high": 0.024390243902439025,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "blocked": {
+      "joint_accuracy": {
+        "low": 0.022548036758563074,
+        "high": 0.10144927536231885,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": 0.01904761904761905,
+        "high": 0.07246376811594203,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cancel": {
+      "joint_accuracy": {
+        "low": 0.9726616816251671,
+        "high": 0.9876062322946175,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.0011111523244312562,
+        "high": 0.00633147113594041,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cast_0": {
+      "joint_accuracy": {
+        "low": 0.6565656565656566,
+        "high": 0.7525773195876289,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.06735751295336788,
+        "high": 0.04417670682730924,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cast_1": {
+      "joint_accuracy": {
+        "low": 0.4017094017094017,
+        "high": 0.468,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.0037174721189591076,
+        "high": 0.09322033898305085,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "end": {
+      "joint_accuracy": {
+        "low": 0.9538690476190477,
+        "high": 0.9660917933810376,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.012839147286821706,
+        "high": -0.001708984375,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "move": {
+      "joint_accuracy": {
+        "low": 0.5149704231433506,
+        "high": 0.5647840531561462,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.00831129580657348,
+        "high": -0.0013966480446927375,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "priority": {
+      "joint_accuracy": {
+        "low": 0.10902255639097744,
+        "high": 0.13387423935091278,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.015625,
+        "high": 0.018648018648018648,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "recall": {
+      "joint_accuracy": {
+        "low": 0.7625790300546449,
+        "high": 0.8235479797979798,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.01713197969543147,
+        "high": -0.002011397921555481,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "shop": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "submit": {
+      "joint_accuracy": {
+        "low": 0.7941176470588235,
+        "high": 1.0,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "teleport": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_gain_over_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "groups_with_support": 1
+    },
+    "ward": {
+      "joint_accuracy": {
+        "low": 0.02666666666666667,
+        "high": 0.18421052631578946,
+        "valid_draws": 2000
+      },
+      "joint_gain_over_P05": {
+        "low": -0.021052631578947368,
+        "high": 0.07696629213483124,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    }
+  },
+  "interpretation": "E00 is redesigned zero-entity control; E01 is the matched input treatment. Improvements versus M01/P05 bundle classifier/GRU/movement retraining, separate fusions and common recovered priority channels. Entity attribution requires E01 minus E00. One head/representation warm-start seed is not three independent full-model seeds.",
+  "reserved_opened": 0
+}

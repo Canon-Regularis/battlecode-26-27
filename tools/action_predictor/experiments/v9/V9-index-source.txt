@@ -1,0 +1,46 @@
+﻿import csv,json
+from pathlib import Path
+from tools.action_predictor.fundamental_audit import REPORTS
+from tools.action_predictor.more_replays import sha,frozen
+read=lambda p:json.loads(Path(p).read_text())
+d=read(REPORTS/'D02.json');e=read(REPORTS/'E00.json');a=read(REPORTS/'E00-analysis.json')
+rows=[]
+for name,m in [('M01',d['validation_M01']),('P05',d['validation_P05']),('E00',e['validation'])]:
+ s=m['summary'];r={x['action']:x for x in m['per_category']};rows.append(dict(model=name,strict_joint=s['strict_full_command_accuracy'],macro_f1=s['macro_f1'],observed_joint_nll=s['joint_nll'],move_parameter_exact=r['move']['parameter_exact'],move_joint=r['move']['joint_accuracy'],priority_exact=r['priority']['parameter_exact'],priority_joint=r['priority']['joint_accuracy'],status='preserved baseline' if name!='E00' else 'control; no promotion; fresh review pending'))
+with (REPORTS/'comparison.csv').open('w',newline='') as f:
+ w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+(REPORTS/'CHECKPOINTS.md').write_text('''# Preserved checkpoint history
+
+M01 and P05 remain unchanged. P05 retains the strongest exact complete-command baseline among these three: 11,472/14,439. No certified replacement exists.
+
+E00: all 14 epoch checkpoints retained locally; epoch 8 selected by the frozen minimum observed joint NLL (0.726085), never by peak accuracy. Selected model and train/development predictions are SHA-bound in E00.json. 23,688 optimizer steps, approximately 555.6 seconds including final scoring. It has 11,461 strict successes, 11 fewer than P05; no promotion and no seed-repeat trigger. Attack joint correctness improves to 894/985 (90.76%) as a single-checkpoint point estimate, without seed certification. Improving direction changes while losing continuing moves motivates measuring specialization, not claiming a movement win.
+
+E00 pre-fit v1: no optimizer steps; batch-shape precision assertion failed. Original plan, verbatim sources and stdout remain under E00-prefit-v1. Corrected execution preserves the original 256-row frozen-priority GEMM before selecting rows; thresholds and data were unchanged.
+
+E01: not fitted. Fresh completed-E00 review is required before the planned matched actual-entity treatment. No future experiment or success is implied.
+
+All raw checkpoints and prepared replay data remain local and ignored by Git. The research PR remains draft and unmerged. Both 75-game reserved partitions remain sealed.
+''',encoding='utf-8')
+(REPORTS/'COMMANDS.md').write_text('''# V9 executed commands
+
+Commands ran from `F:/Code/battlecode-26-27` using `.venv-action-predictor/Scripts/python.exe` (Python/Torch versions remain bound by existing runtime receipts).
+
+```powershell
+.venv-action-predictor/Scripts/python.exe -m tools.action_predictor.fundamental_audit
+.venv-action-predictor/Scripts/python.exe -m tools.action_predictor.entity_cache *> .cambc/entity-cache.txt
+.venv-action-predictor/Scripts/python.exe -m unittest tools.action_predictor.test_entity_set -v
+.venv-action-predictor/Scripts/python.exe -m tools.action_predictor.entity_experiment E00 *> .cambc/E00-run.txt
+# The preceding invocation failed before optimization; its original sources/log are preserved.
+.venv-action-predictor/Scripts/python.exe -m tools.action_predictor.entity_experiment E00 *> .cambc/E00-run-v2.txt
+.venv-action-predictor/Scripts/python.exe -m tools.action_predictor.entity_analysis E00 *> .cambc/E00-analysis-output.txt
+.venv-action-predictor/Scripts/python.exe -m tools.action_predictor.entity_roundtrip E00 *> .cambc/E00-full-roundtrip.txt
+```
+
+The V9 local commands.jsonl retains executable argv. D02 completion and D03 arithmetic/context report scripts are preserved verbatim beside their input/output bindings. The first D02 completion wrapper lacked the repository import path and made no outputs; it was executed successfully through `python -c "import runpy; runpy.run_path('.cambc/complete_D02.py',run_name='__main__')"`. No model fitting occurred in these reporting scripts. E00's first pre-fit failure is separate from its only completed training experiment. No E01 or other V9 fit has run yet.
+''',encoding='utf-8')
+for source,target in [(Path('.cambc/complete_D02.py'),REPORTS/'D02-completion-source.txt'),(Path('tools/action_predictor/entity_analysis.py'),REPORTS/'E00-analysis-source.txt')]:target.write_bytes(source.read_bytes())
+# Self-contained visual; exact values come directly from immutable reports.
+plot=dict(rows=rows,contexts={name:m['direction_contexts'] for name,m in [('M01 train',d['train_M01']),('M01 dev',d['validation_M01']),('E00 train',e['train']),('E00 dev',e['validation'])]})
+html='''<!doctype html><html><head><meta charset="utf-8"><style>:root{font-family:var(--font-sans)}body{margin:0;color:var(--foreground)}section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}h3{font-size:15px;margin:0 0 12px}p{font-size:12px;color:var(--muted-foreground);line-height:1.5;margin:10px 0 0}.row{display:grid;grid-template-columns:84px 1fr 68px;align-items:center;gap:10px;margin:12px 0;font-size:13px}.track{height:18px;background:var(--secondary);border-radius:4px;position:relative}.bar{height:100%;border-radius:4px;background:var(--chart-1)}.goal{position:absolute;left:90%;height:24px;top:-3px;border-left:2px dashed var(--warning)}.value{text-align:right;font-variant-numeric:tabular-nums}select{font:inherit;color:var(--foreground);background:var(--secondary);border:1px solid var(--border);border-radius:5px;padding:5px;margin-bottom:8px}.context{display:grid;grid-template-columns:104px 1fr 54px;gap:8px;align-items:center;font-size:12px;margin:7px 0}.sub{font-size:12px;font-weight:600;margin:14px 0 7px}.legend{display:flex;gap:18px;font-size:11px;color:var(--muted-foreground)}.dot{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px}strong{color:var(--foreground)}</style></head><body><section><h3>Original development benchmark · exact complete commands</h3><div id="overall"></div><p>14,439 rows, five reused game groups. Dashed line: 90% aggregate reference; the actual goal is <strong>90% in every adequately supported category</strong>. E00 is the zero-entity control. No replacement is certified.</p></section><section><h3>Movement bottleneck · training versus development</h3><select id="metric" aria-label="Movement metric"><option value="parameter_exact">Exact destination, recorded move rows</option><option value="joint_exact">Correct move type and exact destination</option></select><div class="legend"><span><i class="dot" style="background:var(--chart-1)"></i>Training</span><span><i class="dot" style="background:var(--chart-2)"></i>Development</span></div><div id="contexts"></div><p>All continuing/change rows retained. Direction labels are evaluation evidence only. Better change prediction accompanied by worse continuation prediction does not establish an overall movement improvement.</p></section><script>const data=DATA;const pct=x=>(100*x).toFixed(2)+'%';document.getElementById('overall').innerHTML=data.rows.map(r=>`<div class="row"><span>${r.model}</span><div class="track"><div class="bar" style="width:${r.strict_joint*100}%"></div><i class="goal"></i></div><span class="value">${pct(r.strict_joint)}</span></div>`).join('');function draw(){let k=document.getElementById('metric').value,s='';for(let c of ['continuing','direction_change']){s+=`<div class="sub">${c==='continuing'?'Continuing direction':'Changing direction'}</div>`;for(let m of ['M01','E00'])for(let split of ['train','dev']){let r=data.contexts[m+' '+split][c];s+=`<div class="context"><span>${m} ${split}</span><div class="track"><div class="bar" style="width:${r[k]*100}%;background:var(--chart-${split==='train'?1:2})"></div></div><span class="value">${pct(r[k])}</span></div>`;}}document.getElementById('contexts').innerHTML=s;}document.getElementById('metric').onchange=draw;draw();</script></body></html>'''.replace('DATA',json.dumps(plot))
+Path('.cambc/E00-comparison.html').write_text(html,encoding='utf-8')
+print('Comparison, checkpoint/command history and visual prepared')

@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "changed_source_before_fitter_data",
+    "changed_TRAIN_weights_before_fitter_data",
+    "changed_P05_predictions_before_fitter_data",
+    "changed_normalization_before_fitter_data",
+    "runtime_label_swap_before_fitter_data",
+    "standalone_roundtrip_source_before_model",
+    "nonzero_loaded_extra_weights_masked_only_in_control"
+  ],
+  "passed": true,
+  "source_sha256": "4a0ca90413c8e2589eb85c0a2466d6d932ba40863fe3422b1c290c7e5aebcc86",
+  "new_optimizer_steps": 0,
+  "new_fits": 0,
+  "scope": "Six actual-entry corrupt-binding rejections and one synthetic loaded-head masking check; no synthetic checkpoint or approval file created"
+}

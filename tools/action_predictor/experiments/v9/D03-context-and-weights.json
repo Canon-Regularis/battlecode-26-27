@@ -1,0 +1,152 @@
+{
+  "source_sha256": "7853c90002a4b9c670ba964847b5f6e95771679ec3cbe71984285be53d59e885",
+  "inputs": {
+    "F:\\Code\\battlecode-26-27\\.cambc\\report_D03_context.py": "7853c90002a4b9c670ba964847b5f6e95771679ec3cbe71984285be53d59e885",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v7\\data-ready.json": "9c15ce360db03f07601e9f07798454502d018e11bf8a0e85b0e044d056c8749a",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v8\\entry-audit.json": "c79412f09e4be6a728108f598ad1440499d26190a0a724dc2a2849016712ed35",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v9\\D02-P05-train.npz": "597968b5aa1385fcf956ac37ac88b5f3781e24ba6095fc4b3c16c9110ffb451d",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\train-direction.npy": "97a4ca1b39099b49d4e283ba824ef1421cf73de39645f043a9a3173b4cd66546",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\train-near_obstacle.npy": "4d46a6a987d71dba6b04a8599874245a1036217da50437f7aae28c8c84342f07",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\train-visible_change.npy": "f2c20b5c21aaf9c4fe26fc70a0dc754c642f73f3c7e38f6a5e737ceb5c3b0733",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\train-available.npy": "9b7176ac86c4ace82151d3bf9642ab4b35c381d46d5529e7fe8b0e0e56cd5961",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\train-gaps.npy": "6fb2987a6ae8683ad1cf9b2de43d244acffbef4ce5091c443feeee46f22a6038",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v8\\runs\\P05\\validation-predictions.npz": "50fd694e906de27d69c29625ccd3fed3957ac147b37cdd5385f36e8f4bd08555",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\validation-direction.npy": "6e6cb5f2b9619137082c75fa086bfcfa1122833a1bf6f58e89e777130a8dbbcb",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\validation-near_obstacle.npy": "38e37fde4747caf9cf3fca58ed24c078ba1df4c01a564c6484eb46b2125eb7b1",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\validation-visible_change.npy": "98d6f4efaec8532b738957d42f5e0ba3cbc17f5eff0ae2955b6a2310bb20b505",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\validation-available.npy": "fa204f9d94d697efc8cd0a11de795d95112cae3f5d9db7d07e3cdcfc5177dfed",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\validation-gaps.npy": "6b16fa43cd31a90f326c9ecd921b89380fb033a56855b1022fd53474caff868b"
+  },
+  "action_mass": {
+    "<unknown>": {
+      "natural": 0.0,
+      "augmented": 0.0,
+      "class_weight": 12.602197887894691,
+      "weighted_action_mass": 0.0
+    },
+    "altar": {
+      "natural": 0.00015235404309541864,
+      "augmented": 0.003840016994903838,
+      "class_weight": 5.1301018580006055,
+      "weighted_action_mass": 0.019699678320310086
+    },
+    "attack": {
+      "natural": 0.06962579769460632,
+      "augmented": 0.052557201936864854,
+      "class_weight": 1.386680611520782,
+      "weighted_action_mass": 0.07288005292163299
+    },
+    "blocked": {
+      "natural": 0.006599700139542453,
+      "augmented": 0.023240992816420402,
+      "class_weight": 2.0852840581789307,
+      "weighted_action_mass": 0.04846407181633252
+    },
+    "cancel": {
+      "natural": 0.18329230161945423,
+      "augmented": 0.16881296600326506,
+      "class_weight": 0.7737304007652928,
+      "weighted_action_mass": 0.13061572384008405
+    },
+    "cast_0": {
+      "natural": 0.01348333281394455,
+      "augmented": 0.010792687573169295,
+      "class_weight": 3.0600446164382404,
+      "weighted_action_mass": 0.03302610550517661
+    },
+    "cast_1": {
+      "natural": 0.016599665513623567,
+      "augmented": 0.01910310318631356,
+      "class_weight": 2.300067601242362,
+      "weighted_action_mass": 0.04393842872202957
+    },
+    "end": {
+      "natural": 0.2778937746060436,
+      "augmented": 0.25453793950645504,
+      "class_weight": 0.6301098943947345,
+      "weighted_action_mass": 0.16038687418186576
+    },
+    "move": {
+      "natural": 0.16719471192966784,
+      "augmented": 0.16612749410604727,
+      "class_weight": 0.779959054695886,
+      "weighted_action_mass": 0.12957264326194903
+    },
+    "priority": {
+      "natural": 0.033985339385943954,
+      "augmented": 0.03421148033463335,
+      "class_weight": 1.7187259257525855,
+      "weighted_action_mass": 0.058800158209509096
+    },
+    "recall": {
+      "natural": 0.2178074175643436,
+      "augmented": 0.18414532490053595,
+      "class_weight": 0.7408191711235166,
+      "weighted_action_mass": 0.13641838695908573
+    },
+    "shop": {
+      "natural": 0.00416896063379282,
+      "augmented": 0.039884914944662654,
+      "class_weight": 1.591798995107347,
+      "weighted_action_mass": 0.06348876752885604
+    },
+    "submit": {
+      "natural": 0.0015062274715115253,
+      "augmented": 0.01633912222245313,
+      "class_weight": 2.487013831443358,
+      "weighted_action_mass": 0.040635622960884486
+    },
+    "teleport": {
+      "natural": 0.00010041516476743501,
+      "augmented": 0.00137159957605104,
+      "class_weight": 8.58378616606472,
+      "weighted_action_mass": 0.011773517466287155
+    },
+    "ward": {
+      "natural": 0.007590001419662674,
+      "augmented": 0.02503515589822454,
+      "class_weight": 2.0091733604728317,
+      "weighted_action_mass": 0.05029996830599705
+    }
+  },
+  "movement": {
+    "train": {
+      "continuing_obstacle_0": {
+        "support": 15696,
+        "exact": 0.9380733944954128
+      },
+      "continuing_obstacle_1": {
+        "support": 20672,
+        "exact": 0.9408862229102167
+      },
+      "direction_change_obstacle_0": {
+        "support": 12834,
+        "exact": 0.26733676172666354
+      },
+      "direction_change_obstacle_1": {
+        "support": 22622,
+        "exact": 0.36477765007514806
+      }
+    },
+    "validation": {
+      "continuing_obstacle_0": {
+        "support": 587,
+        "exact": 0.9642248722316865
+      },
+      "continuing_obstacle_1": {
+        "support": 611,
+        "exact": 0.9132569558101473
+      },
+      "direction_change_obstacle_0": {
+        "support": 394,
+        "exact": 0.1649746192893401
+      },
+      "direction_change_obstacle_1": {
+        "support": 764,
+        "exact": 0.2774869109947644
+      }
+    }
+  },
+  "scope": "Post-D02 diagnostic only; no fitting, checkpoint choice or causal input changes. Natural and augmented counts from preserved audited frequencies; original weights applied algebraically. Obstacle flags are frozen V7 diagnostic context. No hard action rule or hidden-state assertion.",
+  "reserved_opened": 0
+}

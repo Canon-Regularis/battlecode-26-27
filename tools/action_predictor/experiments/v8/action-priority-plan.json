@@ -1,0 +1,66 @@
+{
+  "id": "C01-C02",
+  "fits": [
+    {
+      "id": "C01",
+      "seed": 26,
+      "use_inputs": false
+    },
+    {
+      "id": "C02",
+      "seed": 26,
+      "use_inputs": true
+    }
+  ],
+  "sources_sha256": "932cb882e31810adbed8b225d86da801b83849786833887347bfad25bed55cff",
+  "weights_sha256": "b48ff5cd8ad080f8eedeb0b6e35c23416a5431577fe458083fa55768b8340920",
+  "D01_review_sha256": "0c2d64e3fd49f87cfc59170f9dbda7f895f76ce23c6e2f5535208aa3103bd254",
+  "P05_report_sha256": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+  "success_definition_sha256": "ebc678d209b91d73eef4e56550c8e16328e3391b880d3a91eb63aac4f8b42e06",
+  "train_sha256": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+  "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "normalization_sha256": "1007f9e7dfad65fc8cc008fee06e37f6859b1a3c548938871784a72bb49dd7ac",
+  "priority_train_sha256": "7847b7c9252c3443f517c30a082be05ffe8b244b586eead55b262bd385a6de2b",
+  "context_train_sha256": "8e27fe1e499555823ed141db1c968dad342a0e4a15819589b6c94bde6584da02",
+  "priority_validation_sha256": "f15ca9bc263f7068ec6dd0107fb1d166cb637e22939d3afef6b29ba178228696",
+  "context_validation_sha256": "95e05f2b7e38e113cddc3ef43e68b16c83a05384a6064d044d96100851fdd0be",
+  "hypothesis": "Direct causal priority-state/history channels plus two fixed PRE indicators may improve action discrimination in a frozen GRU representation. Benefit is not assumed; compare against a fresh matched zeroed-classifier-input control.",
+  "architecture": "Same two affine terms in both arms: Linear128to15 warmed M01 action logits plus bias-free Linear41to15 initializedzero. No new hidden activation/GRU/map/argument change.2550 nominal parameters;615 extra weights inactive in control.104160 M01 plus207816 P05 argument parameters frozen.",
+  "feature_schema": "Existing39 flattened causal priority inputs in original order, normalized by unchanged TRAIN-only mean/std; append unnormalized pair_unavailable=!(current_available&&scheduled_available) and changed=(both_available&&current!=scheduled), computed from exact int64 personal PRE values. No current target/header/POST/future/intent inputs. Unknown pair sets unavailable1 and changed0; original masks retained. Pair_unavailable is0 on all current TRAIN/dev rows, avoiding a redundant treatment-only constant bias.",
+  "control": "Zero all41 classifier extra channels in forward even after load; retain correlated M01 context and P05 argument predictor with its original priority inputs. This isolates direct classifier access to an input package, not whole-model absence of priority information or arithmetic-only attribution.",
+  "balance": 0.5,
+  "training": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "loss": "Retain M01 augmented-row sampling/shuffle and exact TRAIN class-weight formula capped20, normalized by mean TRAIN row weight. Optimize mean(weight[y]*actionCE) over FULL minibatch; focalzero. Frozen argument losses have no gradients; validation unweighted full observed joint NLL retains exact P05 argument losses/rounding. No frequency or weight correction in this study.",
+  "checkpoint": "Original full-development observed joint NLL, improvement0.0001,patience6,max35epochs. Epochzero reported not selectable. Preserve all epochs/failure/resume accounting. No selection on exactness/macroF1.",
+  "routing": "Runtime coordinate probabilities always use PREDICTED action family. Retain true-family coordinates/top5 and original argument losses for parameter metrics. Recompute proposed coordinates for changed types. Priority arguments remain P05. All43shops strict unassessed failures.",
+  "membership": "Same433071TRAIN targets470games94groups;14439originaldevtargets25games5groups. Both75reservedpartitions sealed,oldexposedtestunused. No new rows, no action constraints or label changes.",
+  "exploratory_progress_gate": {
+    "action_macro_f1_minimum": 0.65,
+    "macro_f1_gain_vs_control": 0.02,
+    "priority_joint_gain_vs_control_minimum": 18,
+    "priority_joint_minimum": 71,
+    "ward_type_correct_minimum": 35,
+    "ward_joint_minimum": 7,
+    "ward_type_false_positives_maximum": 282,
+    "move_joint_minimum": 1287,
+    "recall_joint_minimum": 2472,
+    "targeting_joint_regression_maximum": 0.02,
+    "observed_joint_loss_below_control": true,
+    "strict_joint_above_control": true,
+    "meaning": "All conditions required; priority+18 is a fixed count gate. Also require no ward/move/recall joint decline vs control and no >2pp attack/cast0/cast1 joint decline vs EITHER control or P05. Original conditional targeting guards unchanged. Exploratory follow-up only, not reliability/replacement."
+  },
+  "reporting": "Per-action type/joint PRF/support/FP, true-family vs correct-type parameter accuracy, all targeting/joint regressions, top-k/destination errors, loss and partial legality decomposition with assessed support.2000 paired whole-group resamples vs P05 and matched control, missing/outside16/priority-state strata. Actual rows retained; five reused groups and checkpoint-selection limitations explicit.",
+  "budget": "TWO substantive fits C01thenC02 seed26 only, separate CLI invocations and fresh review after each. C01 code/pre-fit review approval required; C02 also needs actual completed-C01 review. If all frozen progress gates pass, propose separately reviewed seeds27/28 matched repeats; none automatic or authorized under this plan. Head seeds under fixed M01/P05 are not independent full-GRU seed consistency.",
+  "goals": "Original >=90%joint EVERYcategory EACHof3seeds and all original macroF1,movement+10pp,strongest-baselineloss-10%,targeting guards unchanged. Frozen parameter ceilings include priority109/576,move1404/2362,ward24/112,cast1 146/243; this isolation cannot satisfy the full category goal.",
+  "prohibited": "No matches,botchanges,deployment,downloads,reserved behavior,PR/merge operations from runner. No hard equality/channel/after-priority masks."
+}

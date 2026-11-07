@@ -1,0 +1,64 @@
+"""Matched E01-E00 analysis; never changes fit selection or thresholds."""
+from pathlib import Path
+import csv,json,sys
+import numpy as np
+from .fundamental_audit import REPORTS,WORK,arrays,log
+from .priority_fit_v3 import BASE,VAL,read
+from .more_replays import sha,frozen
+from .observation_metrics import correctness,interval,ratio
+from .entity_experiment import group_comparison,target_deltas
+from . import reliable_train as rt
+
+def run():
+    reports={name:read(REPORTS/(name+'.json')) for name in ('E00','E01')};plans={name:read(REPORTS/(name+'-plan.json')) for name in reports}
+    control_review=read(REPORTS/'E00-review.json');assert control_review['verdict']=='APPROVE' and control_review['fit_report_sha256']==sha(REPORTS/'E00.json')
+    for key in ('source_hashes','dependencies','diagnostic_bindings','entity_cache_sha256','architecture','entities','loss','checkpoint','training','exploratory_seed_trigger'):
+        assert plans['E00'][key]==plans['E01'][key],('Unmatched experiment',key)
+    assert plans['E00']['config']==dict(plans['E01']['config'],id='E00',use_entities=False)
+    raw=arrays(VAL);pred={}
+    for name,r in reports.items():
+        p=WORK/'runs'/name/'validation-predictions.npz';assert sha(p)==r['predictions_sha256'];pred[name]=arrays(p)
+    parameter={};joint={}
+    for name,p in pred.items():parameter[name],joint[name]=correctness(raw,p)
+    assessed=np.isin(raw['y'],[rt.LABELS.index(x) for x in ('move','blocked','attack','cast_0','cast_1','ward','submit','altar','teleport','priority')])
+    # Preserved parameter paths must remain exact even when classifier choices differ.
+    constant=~np.isin(raw['y'],[rt.LABELS.index(x) for x in ('move','blocked')])
+    for key in ('coordinate','top5','param_nll'):
+        np.testing.assert_array_equal(pred['E00'][key][constant],pred['E01'][key][constant])
+    np.testing.assert_array_equal(pred['E00']['priority'],pred['E01']['priority'])
+    ready=read(REPORTS.parent/'v7/data-ready.json');contexts={};inputs={}
+    for key in ('direction','near_obstacle'):
+        p=BASE.parent/'v7'/('validation-'+key+'.npy');assert sha(p)==ready['files'][p.name];inputs[str(p)]=sha(p);contexts[key]=np.load(p)
+    groups=np.unique(raw['group']);rng=np.random.default_rng(20261106);draws=np.stack([np.bincount(rng.integers(0,len(groups),len(groups)),minlength=len(groups)) for _ in range(2000)])
+    def compare(mask):
+        n=int(mask.sum());count=np.array([int((mask&(raw['group']==g)).sum()) for g in groups]);den=draws@count
+        param_mask=mask&assessed;param_n=int(param_mask.sum())
+        result=dict(support=n,parameter_support=param_n,unassessed_shop_arguments=int((mask&(raw['y']==rt.LABELS.index('shop'))).sum()),groups_with_support=int((count>0).sum()),fixed=int((mask&joint['E01']&~joint['E00']).sum()),regressed=int((mask&~joint['E01']&joint['E00']).sum()),arms={})
+        for name in pred:
+            result['arms'][name]=dict(joint_correct=int(joint[name][mask].sum()),parameter_exact=int(parameter[name][param_mask].sum()) if param_n else None,joint_accuracy=float(joint[name][mask].mean()) if n else None,parameter_accuracy=float(parameter[name][param_mask].mean()) if param_n else None,observed_nll=float(pred[name]['nll'][mask].mean()) if n else None)
+        for metric,values in [('joint',joint),('parameter',parameter)]:
+            chosen=param_mask if metric=='parameter' else mask;counts=np.array([int((chosen&(raw['group']==g)).sum()) for g in groups]);denominator=draws@counts
+            delta=values['E01'].astype(np.int8)-values['E00'].astype(np.int8);sums=np.array([delta[chosen&(raw['group']==g)].sum() for g in groups]);result[metric+'_gain_interval']=interval(ratio(draws@sums,denominator))
+        return result
+    categories={name:compare(raw['y']==i) for i,name in enumerate(rt.LABELS) if (raw['y']==i).any()}
+    movement={}
+    for name,code in [('continuing',2),('direction_change',3),('no_previous',1)]:
+        base=(raw['y']==rt.LABELS.index('move'))&(contexts['direction']==code);movement[name]=compare(base)
+        for obstacle in (False,True):movement[name+('_near_obstacle' if obstacle else '_open')]=compare(base&(contexts['near_obstacle']==obstacle))
+    confusions={}
+    for name,p in pred.items():
+        def count(actual,guess):return int(((raw['y']==rt.LABELS.index(actual))&(p['prediction']==rt.LABELS.index(guess))).sum())
+        ward=p['prediction']==rt.LABELS.index('ward');ward_true=raw['y']==rt.LABELS.index('ward');ward_type=int((ward&ward_true).sum());ward_joint=int(joint[name][ward_true].sum());total=int(ward.sum())
+        confusions[name]=dict(ward_forecasts=total,ward_type_correct=ward_type,ward_joint_correct=ward_joint,ward_type_false_positives=int((ward&~ward_true).sum()),ward_joint_false_positives=total-ward_joint,ward_type_precision=ward_type/total if total else 0.,ward_joint_precision=ward_joint/total if total else 0.,recall_to_ward=count('recall','ward'),ward_to_recall=count('ward','recall'),priority_to_recall=count('priority','recall'),recall_to_priority=count('recall','priority'),move_to_cast_0=count('move','cast_0'),move_to_cast_1=count('move','cast_1'),cast_0_to_move=count('cast_0','move'),cast_1_to_move=count('cast_1','move'))
+    comparison=group_comparison(raw,pred['E01'],pred['E00']);bindings={name:sha(REPORTS/(name+'.json')) for name in reports}
+    result=dict(reports=bindings,analysis_source_sha256=sha(__file__),context_inputs=inputs,matched_source_hashes=plans['E01']['source_hashes'],matched_initialization='Identical seed26, model construction and zero-final-fusion initialization; only use_entities differs. Both epoch-zero decoded arrays match P05. Nominal shapes/dense compute match, effective input-dependent capacity differs in the zeroed control.',comparisons=comparison,overall=compare(np.ones(len(raw['y']),bool)),categories=categories,movement_contexts=movement,confusions=confusions,targeting_changes=target_deltas(raw,pred['E01'],pred['E00']),seed_gate='Apply original preregistered E01-versus-P05 repeat gate unchanged; E01-E00 contrast attributes entity input effect, not a replacement/reliability certification.',limitations='Five reused development groups; pointwise intervals conditional on selected checkpoints, not selection adjusted or independent three seeds. Buff features summarize types/timer/magnitude rather than preserving every field. Missing43shop arguments remain unassessed strict failures; altar/teleport2examples uncertified.',reserved_opened=0)
+    result['amendment']=dict(previous_report_sha256=sha(REPORTS/'E01-matched-comparison.json'),reason='Original diagnostic parameter fields included no-required-argument rows and default shop parameter flags. V2 reports assessed parameter support explicitly and null for unavailable/shop/no-required-argument parameters. All joint scores, rows, selections and conclusions are unchanged;43shops remain strict failures.')
+    assert categories['shop']['arms']['E01']['parameter_exact'] is None and categories['shop']['unassessed_shop_arguments']==43
+    frozen(REPORTS/'E01-matched-comparison-v2.json',result)
+    (REPORTS/'E01-matched-analysis-v2-source.txt').write_bytes(Path(__file__).read_bytes())
+    with (REPORTS/'E01-matched-categories-v2.csv').open('w',newline='',encoding='utf-8') as f:
+        writer=csv.writer(f);writer.writerow(['action','support','E00_joint_correct','E01_joint_correct','fixed','regressed','paired_joint_low','paired_joint_high'])
+        for name,r in categories.items():writer.writerow([name,r['support'],r['arms']['E00']['joint_correct'],r['arms']['E01']['joint_correct'],r['fixed'],r['regressed'],r['joint_gain_interval']['low'],r['joint_gain_interval']['high']])
+    print(json.dumps(dict(overall=result['overall'],paired=comparison,confusions=confusions)))
+
+if __name__=='__main__':log([sys.executable,'-m','tools.action_predictor.entity_pair_analysis']);run()
