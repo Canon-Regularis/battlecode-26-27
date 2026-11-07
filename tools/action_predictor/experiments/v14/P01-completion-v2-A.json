@@ -1,0 +1,84 @@
+{
+  "experts": {
+    "placement": {
+      "identifier": "P01",
+      "fit_source_commit": "af588d1ce9303f063950a5c6b77d32596feeee2e",
+      "fit_report_sha256": "ba2a0301501628ebcb6aeaa7e1c112d9df94655f4e0ea0f430555f9f172be037",
+      "checkpoint_sha256": "cb31a29527c15a928bfb239ef60cd2e8aec096da097d6ae3f27ba25d6ef0f578"
+    }
+  },
+  "fit_source_hashes": {
+    "tools\\action_predictor\\ward_experts\\protocol.py": "4a3cb520d1b8cce14b25e78607971881f7a7dd96569472d8583eeb33607ed1b7",
+    "tools\\action_predictor\\ward_experts\\personal.cjs": "bf980e683e40cb5f496f4232b7a3a5c587ffd128b4b8ffe630008293b116bdd4",
+    "tools\\action_predictor\\ward_experts\\features.py": "164675201eacc83ce811387d9db15ca63ff9e4250c1412a4ea76b35b600a3a75",
+    "tools\\action_predictor\\ward_experts\\data.py": "9396c835dfcd8c8becbf9f219dbd2c2e1d192b053b94c39048f3feec4f37d54e",
+    "tools\\action_predictor\\ward_experts\\model.py": "c9a48b7333c330a8562572f04b567966063c9b8280e36f62e8c02ddcdf5c4cee",
+    "tools\\action_predictor\\ward_experts\\integration.py": "1e926927ccdfd9342c279f2068689649b7e1194f2cf4d011e2897220373fe088",
+    "tools\\action_predictor\\ward_experts\\fit.py": "8964699a38f507bbe25948f8d41ab74921c4a6b81b58e4f64b6fa9e1d5b6477c"
+  },
+  "reports": {
+    "protocol.json": "5ddbdea19a95c517b51bbd67052fdffbdaa01b704f731e88e750f68d71aaacfe",
+    "train-data.json": "84df1fb3d1e0424b6480322e5ac71e133fe09554ae8ac8ea5f6badef4ba1dea9",
+    "validation-data.json": "5bc16208e92d81d5a70cf09ad183f8229560779282890f50642e4102534c2f12",
+    "architecture-diagnosis.json": "17af6b579694f5de3059672a8850c83fad1b75cef706c26fe3cc093575ab28fb",
+    "placement-baselines.json": "3a9fecbb4ad060a5e33700e32617435497cd40f5d88ca8caf11557cceda4c72f",
+    "placement-baselines-correction.json": "6698346483c9114f1a453fd8c788f2db6106ce1dce039d283be52819a0ad96e4",
+    "reporting-r2-plan.json": "3ae43ce0e166d865fe89b147ca9c4acd7c2098d37b80227ad24481e2721aedbb",
+    "control-evaluation.json": "a7b5c189898e92551b87d1b84a79a0d3bde5fa22ee44713c8422826bfe613d4f",
+    "P01.json": "ba2a0301501628ebcb6aeaa7e1c112d9df94655f4e0ea0f430555f9f172be037",
+    "A-evaluation.json": "8426ed820ba9bbf70127b74bca817b542e2651eba71ce08c6382e893a29d9c4f",
+    "A-causal-roundtrip.json": "5d605b3737b7eedf8b04bf01f3852134d9588f8648ac4d003f3275a09739036c",
+    "A-reporting-addendum.json": "4fff5a2f01fc8ffdb70f97468dccbd400b613f745ebf36d24d1d4a037794a624",
+    "P01-placement-diagnosis.json": "3b9bddbce88a7b7d86c3256404d4de7e524a36497f96e34130385fc5000aedc4"
+  },
+  "artifacts": {
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-01.pt": "5b05d11e373e3772cd9a94f654c79061b7e7f5d686557da17009e834d2758af1",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-02.pt": "c4b85e002491022f089e4b079cc512b0b490a7639ad8b892e15d2cefaf4b2fd4",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-03.pt": "58b962d955c973a9ac71714cb0758eadfeb334a0da26b377c20b68a6b3c23268",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-04.pt": "8cfc50c0bf5eeefd21ca3cd792ae2c0994513edb753e5b8494657d7b8826b7ed",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-05.pt": "d86a7e679e00976d05bdc959832457b83366c012d2700cbb6da5fd7df053c880",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-06.pt": "bd265bc24b8aead95c4cef2ff505bf89c644e307fcbdba1ad19a118f3d2e9ca2",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-07.pt": "85201bfee54e56c9e76777d011058dd1e0fbd299c5761b08aa37ea360d61d75d",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-08.pt": "80cbe94ae02290552c9533b36f5d87580d3e90fc19996e9509a1e6960d8c253e",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-09.pt": "55d96be45a1f9c9a6ca67df03502be72852265df0e251dd9e724c3bf892cd2c8",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-10.pt": "cf0857d69b49ee954ccbbdc5b7da7809f26a200bcf43f4046d2d59617f3e819f",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-11.pt": "5d9f274f480d1edd4ad0fca0cc94bf6f9b7081ce0dd915b5102c9910aea8bd23",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-12.pt": "4ab202d0a8a0a149374d9a76e28516114df111373f23bf5b14218594e76f220f",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-13.pt": "128e705eaf5141dd32a21621171d5278b55e2e0a93b8dced475133b53b98393d",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-14.pt": "9c8710cfc9f82351db01eb389c5901757b7b40d2fc95ac0a12c755904ae3b0dd",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-15.pt": "095d3e019c690b7f45cb07eb6be82a2a6ea2f81624314c4fdfa68c975c2c81da",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-16.pt": "2e76307b46a6c5f18c786660dd7236d5af1f692fd973c40c4d38662ac8183946",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-17.pt": "330f23558fcc0ac9db1f144495757fbe0d6992ccbc0ea73b014fb0e23e6c7474",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-18.pt": "08ce705e589b8963072b7c23c3b9215d1a6a643d07cab94f0e10bb7f72d1981f",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-19.pt": "9f53316da6c693ffbbf3506c84c010e293ae212c9a671d5a2a045a9541878e75",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-20.pt": "cb31a29527c15a928bfb239ef60cd2e8aec096da097d6ae3f27ba25d6ef0f578",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-21.pt": "24eae6cc9771cd807df11f945e67515c4c8060f3067c0bec6b4144a8c73efd14",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-22.pt": "d7ec6cb410b472d6150551db7b01c684673308f40344350d601df458df5dc6c7",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-23.pt": "e131999b9ae81ccbf7425a1a79042c6e314e70fbb7b97588156048eac3235dc3",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-24.pt": "6a19630b1326ab7397e1f3c716c10d576bfab21d3093f4837d6e8a20c9f3d860",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-25.pt": "24804dbb4e9c7a3d925d888442275b1e680ffff558809fa7836a1d9958c23f9d",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\round-26.pt": "2105b2a3030ed207bebae0787cce5f6b3a655c4faf0bff155dbabb8b612dbc18",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\train-outputs.npz": "82f0861a4f279e8a6cb0a6fb83e9dc78716d26b2f8f4ec914b2ee05a4942a344",
+    ".cambc\\action-predictor\\v14\\runs\\P01\\validation-outputs.npz": "aa4f44a5d823043d5237d3d0ae5b1d55b08a24ecee0bfc1f2988c4994443c700"
+  },
+  "evaluation_artifacts": {
+    ".cambc\\action-predictor\\v14\\evaluations\\A\\train-joint_MAP.npz": "bf642f037ee0979c674236dffe55a9705fe4a0e6caaf3d1fddd65ed22af1a09b",
+    ".cambc\\action-predictor\\v14\\evaluations\\A\\train-primary.npz": "24c8a25e5bc07efc823e154f8d7b71eeec243be735a95acc48c59d6ce6a404bb",
+    ".cambc\\action-predictor\\v14\\evaluations\\A\\validation-joint_MAP.npz": "4d3f0fa1150d3bd9c8d7b78e5b35807c1a34e9b129a782494c0aa6789bc9e881",
+    ".cambc\\action-predictor\\v14\\evaluations\\A\\validation-primary.npz": "b5ecc038e9352d729739a098c570f877fe2c9be09db434185d52c88b0e68fed6"
+  },
+  "commands": [
+    "python -m tools.action_predictor.ward_experts.fit P01",
+    "python -m tools.action_predictor.ward_experts.evaluate A P01 -",
+    "python -m tools.action_predictor.ward_experts.roundtrip A P01 -",
+    "python -m tools.action_predictor.ward_experts.reporting A control P00-head",
+    "python -m tools.action_predictor.ward_experts.completion_v2 P01 A"
+  ],
+  "commands_are_reproduction_only": "Existing run directories deliberately reject refits; retained prerequisites are reused.",
+  "source_sha256": "544f0554e48aa02fd4bcc544abb82b026c4ea4c41990a117bd0359a8b355c2f1",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false,
+  "three_seed_confirmed": false,
+  "qualification": "Shops43unassessedstrictfailures,missingargumentlossabsent;sparsecategoriesuncertified;ambiguousentityIDsnotrecovered;no originalreportoverwrite."
+}
