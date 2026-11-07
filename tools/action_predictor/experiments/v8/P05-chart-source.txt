@@ -1,0 +1,29 @@
+from pathlib import Path
+import sys
+root=Path(__file__).resolve().parent.parent;sys.path.insert(0,str(root))
+from tools.action_predictor.priority_fit_v3 import read,REPORTS
+from tools.action_predictor.more_replays import sha,frozen
+r=read(REPORTS/'P05-analysis.json');a=r['metrics']['P03'];b=r['metrics']['P05'];paired=r['paired_group_comparisons']['P03']
+def panel(label,key,goal=False):
+    rows=[]
+    for model,metrics,color in [('P03',a,'var(--chart-2)'),('P05',b,'var(--chart-1)')]:
+        n=metrics[key];pct=100*n/576
+        rows.append(f'<div class="p05line"><span>{model}</span><div class="p05track"><i style="width:{pct}%;background:{color}"></i>{"<b class=p05goal></b>" if goal else ""}</div><span>{n}/576 · {pct:.2f}%</span></div>')
+    return f'<section class="p05panel"><h3>{label}</h3>'+''.join(rows)+f'<div class="p05axis"><span>0%</span><span>{"90% category goal" if goal else "100% exact"}</span></div></section>'
+html='''<!doctype html><html><head><meta charset="utf-8"><style>
+.p05panel{background:var(--card);padding:16px;border-radius:var(--radius);margin:12px 0}.p05panel h3{font-size:15px;margin:0 0 15px}.p05line{display:grid;grid-template-columns:34px minmax(65px,1fr) 135px;gap:8px;align-items:center;margin:12px 0;font-size:13px}.p05track{height:20px;background:var(--secondary);position:relative}.p05track i{display:block;height:100%}.p05goal{position:absolute;left:90%;top:-4px;height:28px;border-left:2px dashed var(--muted-foreground)}.p05axis{display:flex;justify-content:space-between;font-size:11px;color:var(--muted-foreground);margin:0 143px 0 42px;gap:4px;white-space:nowrap}.p05facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}.p05fact{padding:12px;background:var(--secondary);border-radius:var(--radius)}.p05fact strong{font-size:18px;display:block}.p05note{font-size:13px;line-height:1.5;color:var(--muted-foreground)}.p05status{color:var(--warning-foreground);background:var(--warning-surface);padding:12px;border-radius:var(--radius);font-size:14px}
+</style></head><body>'''
+html+='<p class="p05status"><strong>P05 misses its fixed continuation gate.</strong> Exact priorities:109, required125. No repeats triggered; category-wise reliability remains unmet.</p>'
+html+=panel('Exact priority arguments · true priority rows','priority_exact')
+html+=panel('Complete priority commands · correct type and exact argument','priority_joint',True)
+html+='<div class="p05facts">'
+for title,old,new in [('Mean integer error',f"{a['mean_absolute_priority_error']:.1f}",f"{b['mean_absolute_priority_error']:.1f}"),('Rare values correct','0/65','6/65'),('Unseen values correct','0/4','1/4'),('Errors above1,000','12','4'),('Wrong-sign forecasts','81','92'),('Observed joint loss',f"{a['full_observed_joint_nll']:.6f}",f"{b['full_observed_joint_nll']:.6f}")]:
+    html+=f'<div class="p05fact"><span class="p05note">{title} · P03→P05</span><strong>{old} → {new}</strong></div>'
+html+='</div>'
+exact=paired['priority_exact_delta']['interval'];joint=paired['priority_joint_delta']['interval']
+html+=f'<p class="p05note">Paired95% whole-group intervals: exact gain {100*exact[0]:.2f}–{100*exact[1]:.2f} percentage points; joint gain {100*joint[0]:.2f}–{100*joint[1]:.2f}points. Five reused groups, conditional on checkpoint selection; not three-seed or untouched confirmation.</p>'
+html+='<p class="p05note">All action, movement and ability paths are unchanged. Overall strict correctness:11,472/14,439 (79.45%). All43 shops remain unassessed failures. The one unseen-value success is also solved by the preserved simple negative-copy baseline. Both75-game reserved partitions remain sealed.</p></body></html>'
+path=REPORTS/'P05-comparison.html';assert not path.exists();path.write_text(html,encoding='utf-8')
+snapshot=REPORTS/'P05-chart-source.txt';snapshot.write_bytes(Path(__file__).read_bytes())
+frozen(REPORTS/'P05-chart.json',dict(analysis_sha256=sha(REPORTS/'P05-analysis.json'),html_sha256=sha(path),source_sha256=sha(__file__)))
+print(html)

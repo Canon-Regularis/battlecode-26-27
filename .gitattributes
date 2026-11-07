@@ -5,3 +5,5 @@ tools/download_replays.md -text whitespace=cr-at-eol
 tools/test_download_replays.py -text whitespace=cr-at-eol
 tools/test_download_selection.py -text whitespace=cr-at-eol
 tools/test_more_replays.py -text whitespace=cr-at-eol
+# Preserve whitespace in this hash-bound, verbatim PowerShell stderr transcript.
+tools/action_predictor/experiments/v8/priority-residual-modes-tests-output-utf8.txt whitespace=cr-at-eol,-blank-at-eol

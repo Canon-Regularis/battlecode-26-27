@@ -2,20 +2,22 @@
 
 ## Current research status: 7 November 2026
 
-The predictor has **not met the reliability targets**. The current reviewed
-development candidate, P03, gets 11,458/14,439 complete recorded commands right
-(79.35%), including 1,287/2,362 moves (54.49%) and 57/576 priority commands
-(9.90%). Action-type accuracy is 88.73%; macro F1 is 0.63239. These are results
-on five repeatedly reused development groups, not untouched-test performance.
+The predictor has **not met the reliability targets**. The latest reviewed
+experiment, P05, gets 11,472/14,439 complete recorded commands right (79.45%),
+including 1,287/2,362 moves (54.49%) and 71/576 priority commands (12.33%).
+Action-type accuracy is 88.73%; macro F1 is 0.63239. These results use five
+repeatedly reused development groups, not untouched-test performance.
 
-M01 remains the preserved whole-model baseline. P03 changes only priority
-parameters; it does not improve the existing action, movement or ability paths.
-The matched P04 input study missed its fixed continuation gate, so it triggered
-no matched seed repeats. A01's simple signed-anchor baselines expose additional
-rare/unseen and integer-error tradeoffs; no template was adopted.
+M01 remains the preserved whole-model baseline. P03 and P05 change only
+priority parameters; action, movement and ability paths remain unchanged.
+P05 recovers 109/576 exact priority values, six rare cases and one unseen case,
+but misses its fixed 125-value gate. Wrong-sign predictions increase81?92.
+Neither P05 nor the earlier P04 input study triggers identical seed repeats.
+No certified replacement exists; all prior checkpoints and negative results remain.
 
 See the [V8 study index](experiments/v8/INDEX.md),
-[P03 results](experiments/v8/P03-REPORT.md),
+[P05 results](experiments/v8/P05-REPORT.md),
+[P05 failed gate and adverse outcomes](experiments/v8/P05-TAIL-NOTE.md),
 [P04 missed-gate report](experiments/v8/P04-INPUT-NOTE.md), and
 [all A01 baselines](experiments/v8/A01-REPORT.md). Both the 75 new validation
 games and the 75 final-test games remain unopened. All 43 shop arguments remain

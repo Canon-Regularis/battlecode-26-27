@@ -1,0 +1,52 @@
+{
+  "id": "P05",
+  "seed": 26,
+  "sources_sha256": "6949433731363055145940bf7564e4bb594906d36dfa600c07f8633741aa2e3a",
+  "vocabulary_sha256": "1fd6470d9572ff92eae489616c8a92fbed0b65d22a61084e587ad1fb174d4147",
+  "A01_review_sha256": "a31e6a50dec1c8bdcf1027ca6c3446afb8b61e8030ecd513a06fe914aaa5aa56",
+  "train_sha256": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+  "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "priority_train_sha256": "7847b7c9252c3443f517c30a082be05ffe8b244b586eead55b262bd385a6de2b",
+  "priority_validation_sha256": "f15ca9bc263f7068ec6dd0107fb1d166cb637e22939d3afef6b29ba178228696",
+  "P03_report_sha256": "b82e9bc61a0c4b52f9820e6a92994056ce85fc889d6a600997b928019936a85f",
+  "success_definition_sha256": "ebc678d209b91d73eef4e56550c8e16328e3391b880d3a91eb63aac4f8b42e06",
+  "hypothesis": "A learned mixture of absolute modes and residual modes around negative latest earlier own priority may improve exact commands and tails over P03. This is an output-design package, not assumed benefit or a recovered-input isolation.",
+  "architecture": "Linear(167,1237): 518 absolute points,716 TRAIN-derived residual points shifted by negative latest PRE argument,one absolute logistic fallback gate and two parameters. 207816 trainable parameters versus87528 P03;104160 M01 parameters frozen. No hidden layer, GRU, nonhistory input, action or spatial change.",
+  "anchor": "Exact signed int64 arithmetic on own latest earlier priority argument with explicit availability; earlier_event<=PRE<target_event. Input values verified signed-int32 domain; no label/output range clipping. Same39 causal channels as P03, normalized identically; analytic shift reads exact original integers rather than reversing float normalization.",
+  "prior": "A01 TRAIN-only absolute and latest-minus-residual counts. Initial .475 absolute/.475 residual/.05 fallback; warm M01 fallback location/scale, other weights zero, construction RNG preserved. Missing anchor masks residual logits before softmax; retained absolute/fallback renormalize. No row deletion or invented residual modes.",
+  "distribution": "Sum all duplicate absolute/shifted point masses with logsumexp, plus ONE normalized full-support integer-bin absolute logistic fallback. Decoder compares all point coordinates and floor/ceiling of fallback location, sorted smallest-integer ties. No target-dependent sign/anchor/routing and no private/POST state.",
+  "interpretation": "Capacity2.374x P03 and changed prior are part of this output-design package. Cannot attribute gain only to arithmetic or infer input usefulness. Residual support[-1206,850] is TRAIN-derived for this negative anchor; A01 positive-anchor large residual evidence remains preserved; fallback supports all other integers.",
+  "normalization": "Reuse original train-only M01 and V3 recovered-input normalization unchanged.",
+  "rows": {
+    "train": 433071,
+    "validation": 14439
+  },
+  "membership": "470 TRAIN games94groups;25 original development games5groups. All original targets/support retained;all43 shops unassessed strict failures. Both75-game reserved partitions sealed;old exposed test unused.",
+  "loss": "Same unweighted priority NLL SUM divided by FULL minibatch length, frozen action/spatial loss accounting; no sampler, augmentation, class-weight, optimizer or loss-normalization changes.",
+  "training": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "checkpoint": "Original observed full-development joint NLL, improvement0.0001,patience6,max35epochs;epochzero reported but not selectable. Preserve all epochs,failures and checkpoints.",
+  "exploratory_progress_gate": {
+    "priority_exact_minimum": 125,
+    "priority_joint_minimum": 58,
+    "priority_nll_below": 3.99395084,
+    "rare_nll_maximum": 8.13333,
+    "unseen_nll_maximum": 11.90325,
+    "errors_over1000_maximum": 12,
+    "nonpriority_paths_identical": true,
+    "meaning": "At least29 additional exact values over P03;positive joint gain;lower NLL;no >0.1nat rare/unseen NLL regression or increased >1000 tail. Exploratory continuation criterion only, not original success. No automatic repeats."
+  },
+  "reporting": "Report all category joint correctness,type/joint PRF,false positives,both parameter denominators,losses,legality coverage,top-k/destination metrics;whole-group paired uncertainty vsP03/P01/M01/strongest A01 metric references;rare/unseen,no-history,outside16,sign,tail strata;compute and inactive masks. Full observed loss excludes unavailable shop args;strict scoring does not.",
+  "goal": "All original >=90%every-category eachof3seeds,macroF1>=.65,movement+10pp,loss-10% vs strongest baseline,targeting guards unchanged. Parameter-only priority type ceiling343/576=59.55%. No strategy labels/percentage.",
+  "budget": "ONE P05 seed26 substantive fit only. Fresh review of code,tests,causal roundtrip and protocol plus bound approval before optimizer. Fresh review after fit before any later experiment. Failed P04 gate does not trigger identical repeats.",
+  "prohibited": "No matches,playing-bot changes,deployment,replay downloads,reserved behavior inspection,PR operations or auto-merging from this runner."
+}

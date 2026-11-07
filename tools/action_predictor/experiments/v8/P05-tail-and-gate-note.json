@@ -1,0 +1,239 @@
+{
+  "analysis_sha256": "229887d8e1dd8649f59978386ce1b8c10383041682a76479becf2c50fdb169cf",
+  "fit_report_sha256": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+  "source_sha256": "4fee845ef834215e6df49012b65581782889ac8a5ad4b4488d0a37d53fd7498d",
+  "bindings": {
+    "P03": "0bd070ef835f27e4435ad1ec3ad4360eba4f1db67d434df52e55bc68b47c6398",
+    "P05": "50fd694e906de27d69c29625ccd3fed3957ac147b37cdd5385f36e8f4bd08555",
+    "negative_latest_copy": "70261b787716e99cfae8c11d9f2e7e8e217004c3106d44d25efa0df948650566"
+  },
+  "exploratory_gate_failed": true,
+  "missed_exact_threshold": {
+    "required": 125,
+    "observed": 109,
+    "shortfall": 16,
+    "gain_over_P03": 13,
+    "gain_percentage_points": 2.2569444444444446,
+    "required_additional": 29,
+    "repeats_triggered": false
+  },
+  "wrong_sign_definition": "Nonzero recorded priority and different np.sign forecast; includes zero forecasts. Historical definition retained.",
+  "wrong_sign_change": {
+    "P03": 81,
+    "P05": 92,
+    "fixed": 19,
+    "introduced": 30
+  },
+  "exploratory_target_magnitude_bins": {
+    "1_10": {
+      "support": 153,
+      "models": {
+        "P03": {
+          "wrong_sign": 19,
+          "zero_forecasts": 1
+        },
+        "P05": {
+          "wrong_sign": 17,
+          "zero_forecasts": 2
+        },
+        "negative_latest_copy": {
+          "wrong_sign": 107,
+          "zero_forecasts": 1
+        }
+      }
+    },
+    "11_99": {
+      "support": 115,
+      "models": {
+        "P03": {
+          "wrong_sign": 21,
+          "zero_forecasts": 0
+        },
+        "P05": {
+          "wrong_sign": 30,
+          "zero_forecasts": 1
+        },
+        "negative_latest_copy": {
+          "wrong_sign": 96,
+          "zero_forecasts": 0
+        }
+      }
+    },
+    "100_499": {
+      "support": 4,
+      "models": {
+        "P03": {
+          "wrong_sign": 0,
+          "zero_forecasts": 0
+        },
+        "P05": {
+          "wrong_sign": 0,
+          "zero_forecasts": 0
+        },
+        "negative_latest_copy": {
+          "wrong_sign": 2,
+          "zero_forecasts": 0
+        }
+      }
+    },
+    "500_plus": {
+      "support": 300,
+      "models": {
+        "P03": {
+          "wrong_sign": 41,
+          "zero_forecasts": 0
+        },
+        "P05": {
+          "wrong_sign": 45,
+          "zero_forecasts": 0
+        },
+        "negative_latest_copy": {
+          "wrong_sign": 28,
+          "zero_forecasts": 0
+        }
+      }
+    }
+  },
+  "rare_unseen_case_comparison": {
+    "rare": {
+      "support": 65,
+      "P05_exact_rows": [
+        2900,
+        3321,
+        3789,
+        3860,
+        11990,
+        12904
+      ],
+      "baseline_exact_rows": [
+        2900,
+        3321,
+        3789,
+        11990,
+        12904
+      ],
+      "shared_exact_rows": [
+        2900,
+        3321,
+        3789,
+        11990,
+        12904
+      ],
+      "P05_only_rows": [
+        3860
+      ],
+      "baseline_only_rows": []
+    },
+    "unseen": {
+      "support": 4,
+      "P05_exact_rows": [
+        10829
+      ],
+      "baseline_exact_rows": [
+        10829
+      ],
+      "shared_exact_rows": [
+        10829
+      ],
+      "P05_only_rows": [],
+      "baseline_only_rows": []
+    }
+  },
+  "nonabsolute_forecasts": {
+    "support": 22,
+    "exact": 1,
+    "wrong": 21
+  },
+  "remaining_per_category": {
+    "altar": {
+      "support": 2,
+      "correct": 0,
+      "required_for90": 2,
+      "additional_needed": 2
+    },
+    "attack": {
+      "support": 985,
+      "correct": 874,
+      "required_for90": 887,
+      "additional_needed": 13
+    },
+    "blocked": {
+      "support": 110,
+      "correct": 1,
+      "required_for90": 99,
+      "additional_needed": 98
+    },
+    "cancel": {
+      "support": 2589,
+      "correct": 2535,
+      "required_for90": 2331,
+      "additional_needed": 0
+    },
+    "cast_0": {
+      "support": 213,
+      "correct": 154,
+      "required_for90": 192,
+      "additional_needed": 38
+    },
+    "cast_1": {
+      "support": 243,
+      "correct": 95,
+      "required_for90": 219,
+      "additional_needed": 124
+    },
+    "end": {
+      "support": 4096,
+      "correct": 3957,
+      "required_for90": 3687,
+      "additional_needed": 0
+    },
+    "move": {
+      "support": 2362,
+      "correct": 1287,
+      "required_for90": 2126,
+      "additional_needed": 839
+    },
+    "priority": {
+      "support": 576,
+      "correct": 71,
+      "required_for90": 519,
+      "additional_needed": 448
+    },
+    "recall": {
+      "support": 3084,
+      "correct": 2472,
+      "required_for90": 2776,
+      "additional_needed": 304
+    },
+    "shop": {
+      "support": 43,
+      "correct": 0,
+      "required_for90": 39,
+      "additional_needed": 39
+    },
+    "submit": {
+      "support": 22,
+      "correct": 19,
+      "required_for90": 20,
+      "additional_needed": 1
+    },
+    "teleport": {
+      "support": 2,
+      "correct": 0,
+      "required_for90": 2,
+      "additional_needed": 2
+    },
+    "ward": {
+      "support": 112,
+      "correct": 7,
+      "required_for90": 101,
+      "additional_needed": 94
+    }
+  },
+  "interpretation": "Descriptive saved-prediction comparison, no per-row oracle/routing or new family. P05 unseen success row10829 is also solved by the preserved simple negative-copy baseline. Twenty-one of22 outside-absolute-vocabulary forecasts are wrong. Positive intervals and lower loss do not replace the missed gate or three-seed/untouched evidence.",
+  "original_targets_unchanged": true,
+  "three_seed_confirmed": false,
+  "all_category_goal_met": false,
+  "new_optimizer_steps": 0,
+  "reserved_games_opened": 0
+}

@@ -1,0 +1,166 @@
+"""Reproduce and score saved P05 predictions only; never optimize or select epochs."""
+from pathlib import Path
+import sys,json,csv
+import numpy as np
+import torch
+root=Path(__file__).resolve().parent.parent;sys.path.insert(0,str(root))
+from tools.action_predictor.priority_residual_fit import verify_protocol,head,PLAN,SOURCES,VOCAB
+from tools.action_predictor.priority_fit_v3 import read,BASE,VAL,context_directory,load_base,log
+from tools.action_predictor.priority_head import flatten
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import sha,frozen
+from tools.action_predictor.observation_metrics import correctness
+from tools.action_predictor import reliable_train as rt
+
+plan=verify_protocol();info=read(REPORTS/'P05.json');directory=WORK/'runs/P05'
+approval=read(REPORTS/'priority-residual-modes-code-approval.json')
+assert approval['completion_sha256']==sha(REPORTS/'priority-residual-modes-completion.json')
+assert info['fingerprint']['approval_sha256']==sha(REPORTS/'priority-residual-modes-code-approval.json')
+assert info['fingerprint']['plan_sha256']==sha(PLAN) and info['fingerprint']['sources_sha256']==sha(SOURCES)
+for file,key in (('model.pt','checkpoint_sha256'),('validation-predictions.npz','predictions_sha256'),('priority-outputs.npy','priority_outputs_sha256')):
+    assert sha(directory/file)==info[key]
+roundtrip=read(REPORTS/'P05-inference-roundtrip.json')
+assert roundtrip['passed'] and roundtrip['head_sha256']==info['checkpoint_sha256']
+assert roundtrip['plan_sha256']==sha(PLAN) and roundtrip['sources_sha256']==sha(SOURCES)
+assert roundtrip['cases']==75 and roundtrip['probability_maximum_error']<=roundtrip['tolerance']
+
+def arrays(path):
+    with np.load(path) as z:return {k:z[k] for k in z.files}
+raw=arrays(VAL);pred=arrays(directory/'validation-predictions.npz');source=arrays(WORK/'priority-validation.npz')
+y=raw['y'];target=raw['priority'].astype(np.int64);priority=y==rt.LABELS.index('priority');vocab=read(VOCAB)
+models={'M01':arrays(BASE/'runs/M01/validation-predictions.npz')};bindings={}
+for name in ('P01','P02','P03','P04'):
+    report=read(REPORTS/(name+'.json'));review=read(REPORTS/(name+'-review.json'))
+    assert review['verdict']=='APPROVE' and review['fit_report_sha256']==sha(REPORTS/(name+'.json'))
+    path=WORK/'runs'/name/'validation-predictions.npz'
+    assert sha(path)==report['predictions_sha256']
+    models[name]=arrays(path);bindings[name]=dict(report_sha256=sha(REPORTS/(name+'.json')),predictions_sha256=sha(path))
+a01=read(REPORTS/'A01.json')
+for family,data in a01['metrics'].items():
+    path=WORK/'anchor-baselines'/(family+'.npz');assert sha(path)==data['predictions_sha256']
+    name='A01/'+family;models[name]=arrays(path);bindings[name]=dict(report_sha256=sha(REPORTS/'A01.json'),predictions_sha256=sha(path))
+models['P05']=pred
+for key in ('prediction','coordinate','proposed_coordinate','top5','type_nll'):
+    assert np.array_equal(pred[key],models['M01'][key]),key
+assert np.array_equal(pred['nll'][~priority],models['M01']['nll'][~priority])
+
+rt.setup(26);base,_=load_base();branch=head(base.priority)
+checkpoint=torch.load(directory/'model.pt',weights_only=True,map_location='cpu');branch.load_state_dict(checkpoint['head_state']);branch.eval()
+features=(flatten(source['values'],source['history']).astype(np.float32)-checkpoint['extra_mean'].numpy())/checkpoint['extra_std'].numpy()
+context=np.load(context_directory()/'validation.npy');outputs=[];decoded=[];conditional=[]
+with torch.no_grad():
+    for start in range(0,len(y),256):
+        stop=min(start+256,len(y));out=branch(torch.from_numpy(context[start:stop]),torch.from_numpy(features[start:stop]));values=torch.from_numpy(source['values'][start:stop])
+        outputs.append(out);decoded.append(branch.integer(out,values))
+        conditional.append(-branch.log_mass(out,torch.from_numpy(target[start:stop]),values))
+output=torch.cat(outputs)
+np.testing.assert_array_equal(output.numpy(),np.load(directory/'priority-outputs.npy'))
+np.testing.assert_array_equal(torch.cat(decoded).numpy(),pred['priority'])
+np.testing.assert_array_equal(torch.cat(conditional).numpy()[priority].astype(pred['param_nll'].dtype),pred['param_nll'][priority])
+parameter,joint=correctness(raw,pred);metrics={};joints={}
+for name,forecast in models.items():
+    _,correct=correctness(raw,forecast);joints[name]=correct
+    error=np.abs(forecast['priority'][priority].astype(np.int64)-target[priority]);wrong=forecast['prediction']!=y;shop=y==rt.LABELS.index('shop')
+    metrics[name]=dict(priority_exact=int((error==0).sum()),priority_joint=int(correct[priority].sum()),priority_nll=float(forecast['param_nll'][priority].mean()),
+        full_observed_joint_nll=float(forecast['nll'].mean()),strict_joint_correct=int(correct.sum()),mean_absolute_priority_error=float(error.mean()),median_absolute_priority_error=float(np.median(error)),
+        p90_absolute_priority_error=float(np.quantile(error,.9)),maximum_absolute_priority_error=int(error.max()),priority_errors_over1000=int((error>1000).sum()),
+        priority_wrong_sign=int(((np.sign(forecast['priority'][priority])!=np.sign(target[priority]))&(target[priority]!=0)).sum()),
+        failures=int((~correct).sum()),wrong_types=int(wrong.sum()),wrong_parameters_after_correct_type=int((~correct&~wrong&~shop).sum()),unassessed_correct_type_shops=int((~wrong&shop).sum()))
+    assert metrics[name]['failures']==sum(metrics[name][k] for k in ('wrong_types','wrong_parameters_after_correct_type','unassessed_correct_type_shops'))
+
+safe=lambda a,b:float(a/b) if b else None
+categories=[]
+for i,name in enumerate(rt.LABELS):
+    selected=y==i;n=int(selected.sum());typed=selected&(pred['prediction']==i);tp=int(typed.sum());guessed=int((pred['prediction']==i).sum());j=int(joint[selected].sum())
+    required=name in info['validation']['parameters'];assessed=required and name!='shop';jp=safe(j,guessed);jr=safe(j,n)
+    categories.append(dict(action=name,support=n,predicted_support=guessed,type_correct=tp,joint_correct=j,joint_accuracy=jr,joint_precision=jp,joint_recall=jr,
+        joint_f1=2*jp*jr/(jp+jr) if jp is not None and jr is not None and jp+jr else 0.,type_false_positives=guessed-tp,joint_false_positives=guessed-j,
+        **{'type_'+k:info['validation']['per_class'][i][k] for k in ('precision','recall','f1')},
+        true_family_parameter_accuracy=float(parameter[selected].mean()) if n and assessed else None,parameter_accuracy_given_correct_type=safe(j,tp) if assessed else None,
+        unassessed_parameters=n if name=='shop' else 0,observed_joint_nll=float(pred['nll'][selected].mean()) if n else None,
+        observed_type_nll=float(pred['type_nll'][selected].mean()) if n else None,observed_parameter_nll=float(pred['param_nll'][selected].mean()) if n and assessed else None))
+with (REPORTS/'P05-per-category.csv').open('w',encoding='utf-8',newline='') as stream:
+    writer=csv.DictWriter(stream,fieldnames=list(categories[0]));writer.writeheader();writer.writerows(categories)
+
+groups=np.unique(raw['group']);rng=np.random.default_rng(20261106)
+draws=np.stack([np.bincount(rng.integers(0,len(groups),len(groups)),minlength=len(groups)) for _ in range(2000)])
+def sums(a,selected):return np.array([a[selected&(raw['group']==g)].sum() for g in groups])
+def ci(a,b):
+    denominator=draws@b;ok=denominator>0;values=(draws@a)[ok]/denominator[ok]
+    return dict(valid_draws=int(ok.sum()),interval=list(map(float,np.quantile(values,[.025,.975]))))
+paired={};counts=sums(np.ones(len(y)),priority)
+for name,forecast in models.items():
+    if name=='P05':continue
+    paired[name]=dict(priority_exact_delta=ci(sums((pred['priority']==target).astype(float)-(forecast['priority']==target),priority),counts),
+        priority_joint_delta=ci(sums(joint.astype(float)-joints[name],priority),counts),
+        priority_loss_relative_reduction=ci(sums(forecast['param_nll']-pred['param_nll'],priority),sums(forecast['param_nll'],priority)),
+        full_joint_loss_relative_reduction=ci(sums(forecast['nll']-pred['nll'],np.ones(len(y),bool)),sums(forecast['nll'],np.ones(len(y),bool))),
+        fixes=int((joint&~joints[name]).sum()),regressions=int((~joint&joints[name]).sum()))
+category_intervals={}
+for i,name in enumerate(rt.LABELS):
+    selected=y==i
+    if selected.any():category_intervals[name]=dict(joint=ci(sums(joint,selected),sums(np.ones(len(y)),selected)),delta_vs_P03=ci(sums(joint.astype(float)-joints['P03'],selected),sums(np.ones(len(y)),selected)))
+frequency=dict(zip(vocab['absolute'],vocab['absolute_counts']));train_count=np.array([frequency.get(int(t),0) for t in target]);history_count=source['history'][:,:,1].sum(1)
+masks={'all':priority,'no_previous':priority&(source['values'][:,5]==0),'latest_outside16':priority&source['last_outside_window'],
+       'unseen_value':priority&(train_count==0),'training_count_1_19':priority&(train_count>0)&(train_count<20),'training_count_20_99':priority&(train_count>=20)&(train_count<100),'training_count_100_plus':priority&(train_count>=100)}
+for label,lo,hi in [('0',0,0),('1',1,1),('2_3',2,3),('4_7',4,7),('8_16',8,16)]:masks['recent_priority_arguments_'+label]=priority&(history_count>=lo)&(history_count<=hi)
+strata={}
+for name,selected in masks.items():
+    strata[name]=dict(support=int(selected.sum()),models={key:dict(exact=int((f['priority'][selected]==target[selected]).sum()),joint=int(joints[key][selected].sum()),nll=float(f['param_nll'][selected].mean()) if selected.any() else None) for key,f in models.items()})
+per_group=[dict(group=int(g),support=int((priority&(raw['group']==g)).sum()),models={name:dict(exact=int(((f['priority']==target)&priority&(raw['group']==g)).sum()),joint=int((joints[name]&priority&(raw['group']==g)).sum())) for name,f in models.items()}) for g in groups]
+with torch.no_grad():
+    points,mix=branch.components(output[priority],torch.from_numpy(source['values'][priority]));fallback=mix[:,-1].exp().numpy()
+    target_covered=(points==torch.from_numpy(target[priority,None])).any(-1).numpy()
+indices=np.flatnonzero(priority);errors=np.abs(pred['priority'][priority].astype(np.int64)-target[priority]);worst=indices[np.argsort(-errors,kind='stable')[:20]]
+def case(index):
+    return dict(row=int(index),group=int(raw['group'][index]),round=int(raw['round'][index]),target=int(target[index]),P05=int(pred['priority'][index]),P03=int(models['P03']['priority'][index]),
+        P05_type=rt.LABELS[int(pred['prediction'][index])],joint_correct=bool(joint[index]),anchor_available=bool(source['values'][index,5]),latest_prior=int(source['values'][index,4]),
+        required_residual=int(target[index])+int(source['values'][index,4]) if source['values'][index,5] else None,training_target_count=int(train_count[index]))
+current=metrics['P05'];gate=plan['exploratory_progress_gate']
+compute={}
+for name in ('P01','P02','P03','P04','P05'):
+    report=read(REPORTS/(name+'.json'))
+    compute[name]=dict(trainable_parameters=report['trainable_parameters'],epochs=len(report['history']),optimizer_calls=report['optimizer_calls'],head_updates=report['head_updates'],supervised_examples=report.get('supervised_examples'),fitting_seconds=report['elapsed_seconds'])
+common_rng_epochs=[]
+for path in sorted(directory.glob('epoch-*.pt')):
+    previous=WORK/'runs/P03'/path.name
+    if previous.exists():
+        state=torch.load(path,weights_only=True,map_location='cpu');other=torch.load(previous,weights_only=True,map_location='cpu')
+        assert torch.equal(state['rng'],other['rng'])
+        common_rng_epochs.append(state['epoch'])
+checks=dict(exact=current['priority_exact']>=gate['priority_exact_minimum'],joint=current['priority_joint']>=gate['priority_joint_minimum'],nll=current['priority_nll']<gate['priority_nll_below'],
+    rare_nll=strata['training_count_1_19']['models']['P05']['nll']<=gate['rare_nll_maximum'],unseen_nll=strata['unseen_value']['models']['P05']['nll']<=gate['unseen_nll_maximum'],
+    tail=current['priority_errors_over1000']<=gate['errors_over1000_maximum'],nonpriority_paths_identical=True)
+strongest_loss=min((m['full_observed_joint_nll'],name) for name,m in metrics.items() if name.startswith('A01/'))
+result=dict(model='P05',role='Learned absolute/negative-latest-residual output-design package; capacity and prior differ from P03',
+    fit_report_sha256=sha(REPORTS/'P05.json'),roundtrip_sha256=sha(REPORTS/'P05-inference-roundtrip.json'),source_sha256=sha(__file__),metrics=metrics,per_category=categories,confusion_matrix=info['validation']['confusion_matrix'],
+    spatial_metrics=info['validation']['parameters'],category_group_intervals=category_intervals,paired_group_comparisons=paired,priority_strata=strata,per_group=per_group,
+    exploratory_gate=dict(criteria=gate,checks=checks,passed=all(checks.values())),strongest_A01_loss_baseline=dict(model=strongest_loss[1],nll=strongest_loss[0],ten_percent_reference=.9*strongest_loss[0]),
+    fallback=dict(mean=float(fallback.mean()),median=float(np.median(fallback)),minimum=float(fallback.min()),maximum=float(fallback.max()),nonabsolute_vocabulary_forecasts=int((~np.isin(pred['priority'][priority],vocab['absolute'])).sum()),targets_on_any_dynamic_point=int(target_covered.sum())),
+    largest_errors=[case(i) for i in worst],unseen_cases=[case(i) for i in np.flatnonzero(masks['unseen_value'])],
+    groups=len(groups),bootstrap_draws=2000,uncertainty_scope='Pointwise whole-group resamples conditional on selected checkpoints; five reused groups; not adjusted for study/seed/comparison selection; not untouched confirmation',
+    trainable_parameters=info['trainable_parameters'],frozen_parameters=info['frozen_baseline_parameters'],optimizer_calls=info['optimizer_calls'],head_updates=info['head_updates'],supervised_examples=info['supervised_examples'],fitting_seconds=info['elapsed_seconds'],
+    compute_comparison=compute,common_epoch_shuffle_rngs_equal=sorted(common_rng_epochs),environment=dict(python=sys.version,torch=torch.__version__,numpy=np.__version__,torch_threads=torch.get_num_threads()),
+    legacy_legality=info['validation']['observable_invalid_commands'],outcome_aware_legality=read(REPORTS/'audit-amendment-01.json')['outcome_aware_mask_diagnostic'],full_engine_legality=None,
+    all_saved_raw_outputs_reproduced_exactly=True,nonpriority_paths_identical=True,bindings=bindings,three_seed_confirmed=False,all_category_goal_met=False,reserved_games_opened=0,unassessed_shops=43)
+frozen(REPORTS/'P05-analysis.json',result)
+snapshot=REPORTS/'P05-analysis-source.txt';assert not snapshot.exists();snapshot.write_bytes(Path(__file__).read_bytes())
+lines=['# P05: learned causal anchored-residual priority output','','**The category-wise 90% goal remains unmet.** One head seed, five reused development groups. No replacement or three-seed success claim.','',
+       '| Model | Exact priority /576 | Joint priority /576 | Priority NLL | MAE | Full observed joint NLL | Strict correct /14439 |','|---|---:|---:|---:|---:|---:|---:|']
+for name,m in metrics.items():lines.append(f"| {name} | {m['priority_exact']} | {m['priority_joint']} | {m['priority_nll']:.5f} | {m['mean_absolute_priority_error']:.3f} | {m['full_observed_joint_nll']:.6f} | {m['strict_joint_correct']} |")
+lines+=['',f"Selected epoch {info['best_epoch']} by unchanged joint-NLL rule, {len(info['history'])} epochs; {info['optimizer_calls']} optimizer calls, {info['head_updates']} updates, {info['supervised_examples']} supervised examples processed. {info['elapsed_seconds']:.2f}s fitting excludes evidence verification. All epoch checkpoints and failures retained.",'',
+        f"Fixed exploratory gate: {all(checks.values())}. Individual checks: {checks}. This criterion does not replace any original target or authorize repeats.",'',
+        'Output capacity207816 versus87528 P03;104160 M01 parameters frozen. This changes output modes, priors and analytic access to exact PRE integers, and does not isolate one factor. No new information or target-derived sign enters inference. Missing history remains explicit.', '',
+        '| Category | Support | Joint correct | Joint % | Type P/R/F1 % | True-family parameter % | Joint FP |','|---|---:|---:|---:|---|---:|---:|']
+for r in categories:
+    if not r['support']:continue
+    p='Unassessed' if r['unassessed_parameters'] else ('—' if r['true_family_parameter_accuracy'] is None else f"{100*r['true_family_parameter_accuracy']:.2f}")
+    prf='/'.join(f"{100*r['type_'+k]:.2f}" for k in ('precision','recall','f1'))
+    lines.append(f"| {r['action']} | {r['support']} | {r['joint_correct']} | {100*r['joint_accuracy']:.2f} | {prf} | {p} | {r['joint_false_positives']} |")
+lines+=['','Type PRF measures labels. True-family parameter accuracy uses every recorded category row, including wrong type forecasts; joint requires correct type and all exact required parameters. CSV additionally reports joint PRF, both FP definitions and parameter accuracy given correct type. All43 shops are unassessed strict failures; observed likelihood excludes unknown arguments.', '',
+        f"Rare exact {strata['training_count_1_19']['models']['P05']['exact']}/65; unseen exact {strata['unseen_value']['models']['P05']['exact']}/4. Errors above1000: {current['priority_errors_over1000']}; max {current['maximum_absolute_priority_error']}; wrong signs {current['priority_wrong_sign']}. All adverse strata, four unseen cases and twenty largest errors are preserved in JSON.",'',
+        'Every action, movement and ability path is unchanged. Movement top-k, destination errors, confusion matrix, partial legality coverage and group/category intervals are in the immutable report and analysis. Historical flags remain0 successful-move rejections,92 blocked forecasts and17 readiness/resource checks; full engine legality is unknown.', '',
+        'Frozen priority action correctness caps this branch at343/576=59.55%. Both75-game reserved partitions remain unopened and old exposed test unused. Five reused groups and two altar/teleport examples cannot certify reliability. All original targets and failed guards remain binding. Fresh Sol xhigh completed-fit review required before further experiments.']
+(REPORTS/'P05-REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+log([sys.executable,str(Path(__file__).resolve()),'source_sha256='+sha(__file__)])
+print(json.dumps(dict(P05=current,gate=checks,paired_vs_P03=paired['P03'],strata={k:strata[k]['models']['P05'] for k in ('unseen_value','training_count_1_19','no_previous','latest_outside16')}),indent=2))

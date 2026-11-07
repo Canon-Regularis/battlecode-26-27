@@ -1,0 +1,77 @@
+.venv-action-predictor/Scripts/python.exe : test_duplicate_point_mass_and_loss_match_decoder (tools.action_predictor.te
+st_priority_residual_modes.ResidualModesTests.test_duplicate_point_mass_and_loss_match_decoder) ... ok
+At line:2 char:1
++ .venv-action-predictor/Scripts/python.exe -m unittest tools.action_pr ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_duplicate_...decoder) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_exact_input_integer_domain 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_exact_input_integer_domain) ... ok
+test_fit_rejection_precedes_consumption 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_fit_rejection_precedes_consumption) ... ok
+test_global_argmax_matches_brute 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_global_argmax_matches_brute) ... ok
+test_gradient_and_signed_tail 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_gradient_and_signed_tail) ... ok
+test_missing_ignores_masked_residual_logits 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_missing_ignores_masked_residual_logits) 
+... ok
+test_normalized_and_missing_mask 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_normalized_and_missing_mask) ... ok
+test_rng_preservation_and_frozen_start 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_rng_preservation_and_frozen_start) ... ok
+test_roundtrip_rejection_precedes_consumption 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_roundtrip_rejection_precedes_consumption) 
+... ok
+test_unseen_shift_and_negative_anchor 
+(tools.action_predictor.test_priority_residual_modes.ResidualModesTests.test_unseen_shift_and_negative_anchor) ... ok
+test_control_masks_recovered_inputs 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_control_masks_recovered_inputs) ... ok
+test_decoder_matches_bruteforce_even_with_overlap 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_decoder_matches_bruteforce_even_with_overlap) ... ok
+test_fit_dependency_rejection_precedes_consumption 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_fit_dependency_rejection_precedes_consumption) ... 
+ok
+test_gradient_for_unseen_and_known_values 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_gradient_for_unseen_and_known_values) ... ok
+test_normalization_with_analytic_tail_mass 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_normalization_with_analytic_tail_mass) ... ok
+test_rng_initialization_and_parameter_count 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_rng_initialization_and_parameter_count) ... ok
+test_roundtrip_dependency_rejection_precedes_consumption (tools.action_predictor.test_priority_modes.PriorityModeTests.
+test_roundtrip_dependency_rejection_precedes_consumption) ... ok
+test_unseen_integer_has_finite_mass_and_can_win 
+(tools.action_predictor.test_priority_modes.PriorityModeTests.test_unseen_integer_has_finite_mass_and_can_win) ... ok
+test_control_masks_channels_after_checkpoint_construction (tools.action_predictor.test_priority_modes_control.PriorityM
+odeControlTests.test_control_masks_channels_after_checkpoint_construction) ... ok
+test_fit_rejection_precedes_consumption 
+(tools.action_predictor.test_priority_modes_control.PriorityModeControlTests.test_fit_rejection_precedes_consumption) 
+... ok
+test_roundtrip_rejection_precedes_consumption (tools.action_predictor.test_priority_modes_control.PriorityModeControlTe
+sts.test_roundtrip_rejection_precedes_consumption) ... ok
+test_treatment_checkpoint_rejected_before_model_loading (tools.action_predictor.test_priority_modes_control.PriorityMod
+eControlTests.test_treatment_checkpoint_rejected_before_model_loading) ... ok
+test_copy_mode_stays_literal_and_full_support (tools.action_predictor.test_priority_anchor_baselines.PriorityAnchorTest
+s.test_copy_mode_stays_literal_and_full_support) ... ok
+test_evaluation_rejection_precedes_development_loading (tools.action_predictor.test_priority_anchor_baselines.PriorityA
+nchorTests.test_evaluation_rejection_precedes_development_loading) ... ok
+test_half_integer_fallback_tie_selects_smallest_global_mode (tools.action_predictor.test_priority_anchor_baselines.Prio
+rityAnchorTests.test_half_integer_fallback_tie_selects_smallest_global_mode) ... ok
+test_no_label_rounding_or_integer_overflow 
+(tools.action_predictor.test_priority_anchor_baselines.PriorityAnchorTests.test_no_label_rounding_or_integer_overflow) 
+... ok
+test_no_row_adjacency_and_deterministic_ties (tools.action_predictor.test_priority_anchor_baselines.PriorityAnchorTests
+.test_no_row_adjacency_and_deterministic_ties) ... ok
+test_normalization_including_analytic_tail 
+(tools.action_predictor.test_priority_anchor_baselines.PriorityAnchorTests.test_normalization_including_analytic_tail) 
+... ok
+test_signed_anchor_residual_can_forecast_unseen_absolute_value (tools.action_predictor.test_priority_anchor_baselines.P
+riorityAnchorTests.test_signed_anchor_residual_can_forecast_unseen_absolute_value) ... ok
+test_zero_value_distinguished_from_unavailable_anchor (tools.action_predictor.test_priority_anchor_baselines.PriorityAn
+chorTests.test_zero_value_distinguished_from_unavailable_anchor) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.619s
+
+OK

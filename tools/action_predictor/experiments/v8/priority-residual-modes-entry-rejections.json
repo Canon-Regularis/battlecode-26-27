@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "fit_rejects_changed_source",
+    "fit_rejects_changed_vocabulary",
+    "fit_rejects_priority_data_binding",
+    "standalone_roundtrip_rejects_before_model_loading"
+  ],
+  "passed": true,
+  "source_sha256": "d0b8dc200cf6a567d19c63cc56d35926aa322eee9ecdb6b6bf2d45c4b3c89330",
+  "new_optimizer_steps": 0,
+  "run_directory_absent": true,
+  "launcher_note": "First invocation failed before imports: tools absent from script sys.path; corrected helper inserts repo root. No model/data reads or optimizer steps in failed invocation."
+}

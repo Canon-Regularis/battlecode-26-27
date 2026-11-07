@@ -1,0 +1,23 @@
+{
+  "command": [
+    "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "tools.action_predictor.test_priority_residual_modes",
+    "tools.action_predictor.test_priority_modes",
+    "tools.action_predictor.test_priority_modes_control",
+    "tools.action_predictor.test_priority_anchor_baselines",
+    "-v"
+  ],
+  "tests": 30,
+  "passed": true,
+  "source_hashes": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_residual_fit.py": "1082500eb49d990c8c952b81c0f3d74707921fd159689627423d665dcf5d098a",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_residual_predictor.py": "399a92635d1f82cb2e55705c7c8b1e122e6b8c171cca4b13570f80e541cb03b9",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_residual_roundtrip.py": "dea8172c0ecde41638bfd43deada286e9840069ec226da2c4991b432475ee1c0",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\test_priority_residual_modes.py": "d9821470da51892b479c6912d6d7399e78c0b8718fb163989133d9469051aa20"
+  },
+  "output_sha256": "9cfd37e4849029767fd1c912ec7fcb9e5c4b7d0b2287b1a4c7de2058f0869ac0",
+  "meaning": "Correctness tests only, not measured model quality; no optimizer steps"
+}

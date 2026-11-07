@@ -1,0 +1,82 @@
+{
+  "P05": {
+    "priority_exact": 109,
+    "priority_joint": 71,
+    "priority_nll": 3.531226634979248,
+    "full_observed_joint_nll": 0.7309032678604126,
+    "strict_joint_correct": 11472,
+    "mean_absolute_priority_error": 144.56597222222223,
+    "median_absolute_priority_error": 5.0,
+    "p90_absolute_priority_error": 669.0,
+    "maximum_absolute_priority_error": 1489,
+    "priority_errors_over1000": 4,
+    "priority_wrong_sign": 92,
+    "failures": 2967,
+    "wrong_types": 1627,
+    "wrong_parameters_after_correct_type": 1298,
+    "unassessed_correct_type_shops": 42
+  },
+  "gate": {
+    "exact": false,
+    "joint": true,
+    "nll": true,
+    "rare_nll": true,
+    "unseen_nll": true,
+    "tail": true,
+    "nonpriority_paths_identical": true
+  },
+  "paired_vs_P03": {
+    "priority_exact_delta": {
+      "valid_draws": 2000,
+      "interval": [
+        0.0091324200913242,
+        0.04456824512534819
+      ]
+    },
+    "priority_joint_delta": {
+      "valid_draws": 2000,
+      "interval": [
+        0.017084282460136675,
+        0.03950617283950617
+      ]
+    },
+    "priority_loss_relative_reduction": {
+      "valid_draws": 2000,
+      "interval": [
+        0.06431573404378842,
+        0.16859019719770638
+      ]
+    },
+    "full_joint_loss_relative_reduction": {
+      "valid_draws": 2000,
+      "interval": [
+        0.012556480329378068,
+        0.04168060547368319
+      ]
+    },
+    "fixes": 31,
+    "regressions": 17
+  },
+  "strata": {
+    "unseen_value": {
+      "exact": 1,
+      "joint": 1,
+      "nll": 8.763325691223145
+    },
+    "training_count_1_19": {
+      "exact": 6,
+      "joint": 6,
+      "nll": 6.904688835144043
+    },
+    "no_previous": {
+      "exact": 3,
+      "joint": 3,
+      "nll": 1.3451520204544067
+    },
+    "latest_outside16": {
+      "exact": 27,
+      "joint": 13,
+      "nll": 3.2026920318603516
+    }
+  }
+}
