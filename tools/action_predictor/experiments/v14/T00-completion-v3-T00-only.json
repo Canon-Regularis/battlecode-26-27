@@ -1,0 +1,839 @@
+{
+  "experts": {
+    "typing": {
+      "identifier": "T00",
+      "fit_report_sha256": "cd04eb71299d6c9c362d8bc7c617e40b1c152ea90f8933de7419fd73fb4c7b20",
+      "fit_source_commit": "641d31f90361c0920875f8df7cb58924ff2b6d06",
+      "checkpoint_sha256": "f778fe8bd419e777a73d9e940be8b215f0c1a73b776788c9d6e81cac2e1fe081",
+      "artifacts": {
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-01.pt": "85324802db9f279289bf688200a954630701b8a5b66e23ef2546985e6adf439b",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-02.pt": "438b2b4d7a0f068f5aed936164059ba7250597eec5b3a78cd7950b82b9a8d399",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-03.pt": "f778fe8bd419e777a73d9e940be8b215f0c1a73b776788c9d6e81cac2e1fe081",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-04.pt": "933c0296103e61e19542e6727115dc4b777f380f621ada3b97a82577c4235e16",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-05.pt": "0e428b5d87767310b9774e7492016eb04b7631bf38f9cf5e425599559bf868fc",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-06.pt": "b5ebe9a4f38435ccd288e9c92c05ba5c2d171a4c697d91e8f6d459f07b9ecb36",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-07.pt": "4042e7ad8d8bb084ce3fd7bb4a8c4af6f7ca0034f38f88baad9fdcfa9d570e4d",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-08.pt": "460ae1914e0da839cccb7770758c7b3643bebb57e9a3e9c88de9d3bfdc4dd1da",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\round-09.pt": "4823aecec098d5c1ec7eaf27c7805ff3b14338e8ce1eab4901a66d18d2580754",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\train-outputs.npz": "0536a603b9a8a25fa37ee509c3875869796228f7dc0cedab670b8da28cc765e2",
+        ".cambc\\action-predictor\\v14\\runs\\T00\\validation-outputs.npz": "488473329eecce39e6e0009d3e32b8a290d4a9f85a45affc265a349a6f20cab9"
+      }
+    }
+  },
+  "commands": [
+    "python -m tools.action_predictor.ward_experts.fit T00",
+    "python -m tools.action_predictor.ward_experts.evaluate T00-only - T00",
+    "python -m tools.action_predictor.ward_experts.roundtrip T00-only - T00",
+    "python -m tools.action_predictor.ward_experts.reporting T00-only control",
+    "python -m tools.action_predictor.ward_experts.completion_v3 T00 T00-only"
+  ],
+  "comparator_bindings": {
+    "control": {
+      "report_sha256": "a7b5c189898e92551b87d1b84a79a0d3bde5fa22ee44713c8422826bfe613d4f",
+      "archives": {
+        ".cambc\\action-predictor\\v14\\evaluations\\control\\train-joint_MAP.npz": "e63c8cb3bcfeb1d0493924e7ef60d4aebcdfa265610e83f680a4abf4ecccfdbc",
+        ".cambc\\action-predictor\\v14\\evaluations\\control\\train-primary.npz": "e6ca907dd40440ea70d2e063e99d5c433deb235c35428f225eeec383d8b11bae",
+        ".cambc\\action-predictor\\v14\\evaluations\\control\\validation-joint_MAP.npz": "f6f2777045774a0a4a747a62c3ff1390eadbe4ef81f55a28fad80af2e15659f1",
+        ".cambc\\action-predictor\\v14\\evaluations\\control\\validation-primary.npz": "c0e016275e3251acfb25aa3cbeae293274e95408661ea651417103b76f39a40f"
+      }
+    }
+  },
+  "diagnostic_reports": {},
+  "reporting_sha256": "6f758fc7753647d1469d1360d62d6d89a7a7976ea37276c09a2555056744d62b",
+  "evaluation_sha256": "7bedab1f309667c8c033afa56488215fa19feadf860b90d04a0478bdb5a82dd1",
+  "serving_sha256": "4126e5cd60effb5ed8a35064794b98eeaa467e37a17b903f4a9029136f60076c",
+  "prediction_archives": {
+    ".cambc\\action-predictor\\v14\\evaluations\\T00-only\\train-joint_MAP.npz": "655d09d39b5b74e96b3264107b5193aaecf73668a3c734a82da1ebf776dfbe39",
+    ".cambc\\action-predictor\\v14\\evaluations\\T00-only\\train-primary.npz": "f18278c5082552d24b4685ce8790686f44b1b07d51f4c1d3e1e67f6dcdbe22c1",
+    ".cambc\\action-predictor\\v14\\evaluations\\T00-only\\validation-joint_MAP.npz": "b4e82cf64c88cc2d0148df995f16a2e143615152895a82665f7e7dd33ec077f5",
+    ".cambc\\action-predictor\\v14\\evaluations\\T00-only\\validation-primary.npz": "a2c0bcf289d47b270cdf757e70f3fd4a2d9c85acc4a8aaa03ab77f2763a4ac27"
+  },
+  "undefined_context_F1_corrections": [
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "ward_state_available",
+        "unavailable",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "charges",
+        "zero",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "charges",
+        "two_or_more",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "coverage",
+        "0",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "channel",
+        "channelled",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "movement",
+        "1",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "movement",
+        "2",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "all",
+        "contexts",
+        "movement",
+        "3",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "ward_state_available",
+        "unavailable",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "charges",
+        "zero",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "charges",
+        "two_or_more",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "coverage",
+        "0",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "channel",
+        "channelled",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "movement",
+        "1",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "movement",
+        "2",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "primary",
+        "natural",
+        "contexts",
+        "movement",
+        "3",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "ward_state_available",
+        "unavailable",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "charges",
+        "zero",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "charges",
+        "two_or_more",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "coverage",
+        "0",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "channel",
+        "channelled",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "movement",
+        "1",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "movement",
+        "2",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "movement",
+        "3",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "ward_state_available",
+        "unavailable",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "charges",
+        "zero",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "charges",
+        "two_or_more",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "coverage",
+        "0",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "channel",
+        "channelled",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "movement",
+        "1",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "movement",
+        "2",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "train",
+        "joint_MAP",
+        "natural",
+        "contexts",
+        "movement",
+        "3",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "ward_state_available",
+        "unavailable",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "charges",
+        "zero",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "charges",
+        "two_or_more",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "prior_ward_history",
+        "available",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "coverage",
+        "0",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "channel",
+        "channelled",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "champion",
+        "6",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "movement",
+        "1",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "movement",
+        "2",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "primary",
+        "all",
+        "contexts",
+        "movement",
+        "3",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "ward_state_available",
+        "unavailable",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "charges",
+        "zero",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "charges",
+        "two_or_more",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "prior_ward_history",
+        "available",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "coverage",
+        "0",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "channel",
+        "channelled",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "champion",
+        "6",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "movement",
+        "1",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "movement",
+        "2",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    },
+    {
+      "path": [
+        "results",
+        "validation",
+        "joint_MAP",
+        "all",
+        "contexts",
+        "movement",
+        "3",
+        "ward_type_F1"
+      ],
+      "old": 0.0,
+      "corrected": null,
+      "reason": "2TP+FP+FN is zero; F1 undefined, counts preserved"
+    }
+  ],
+  "source_sha256": "9c694066a44ad79a3af76e20bfd5919af348d8f28a5c8d92c7a2012cdcdc3033",
+  "fit_protocol_sha256": "5ddbdea19a95c517b51bbd67052fdffbdaa01b704f731e88e750f68d71aaacfe",
+  "reporting_plan_sha256": "3ae43ce0e166d865fe89b147ca9c4acd7c2098d37b80227ad24481e2721aedbb",
+  "qualification": "Additive correction supersedes F1 only at listed paths; original counts/receipts unchanged. Comparator hashes bind the actual paired archives. Commands document reproduction, not permission to rerun existing fits. Original targets remain unmet; no promotion or seed claim. Shop arguments unavailable; sparse categories uncertified.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

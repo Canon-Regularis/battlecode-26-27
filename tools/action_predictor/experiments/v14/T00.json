@@ -1,0 +1,90 @@
+{
+  "selected_round": 3,
+  "trace": [
+    {
+      "round": 1,
+      "train_loss": 0.031046666465397898,
+      "dev_joint_nll": 0.7031707922012037,
+      "seconds": 3.577985899988562
+    },
+    {
+      "round": 2,
+      "train_loss": 0.02908357043641993,
+      "dev_joint_nll": 0.7030652036058477,
+      "seconds": 3.2028237000340596
+    },
+    {
+      "round": 3,
+      "train_loss": 0.028565595709801248,
+      "dev_joint_nll": 0.7027105185256217,
+      "seconds": 3.2072281000437215
+    },
+    {
+      "round": 4,
+      "train_loss": 0.028137937660396316,
+      "dev_joint_nll": 0.7027777782589326,
+      "seconds": 3.201496900001075
+    },
+    {
+      "round": 5,
+      "train_loss": 0.027746244753808068,
+      "dev_joint_nll": 0.7028962865137809,
+      "seconds": 3.2369800000451505
+    },
+    {
+      "round": 6,
+      "train_loss": 0.02746643476750348,
+      "dev_joint_nll": 0.7028496901567701,
+      "seconds": 3.199886999966111
+    },
+    {
+      "round": 7,
+      "train_loss": 0.027004888490363303,
+      "dev_joint_nll": 0.7030015461171925,
+      "seconds": 3.1566109999548644
+    },
+    {
+      "round": 8,
+      "train_loss": 0.026638795461252005,
+      "dev_joint_nll": 0.7027506363479991,
+      "seconds": 3.1664610999869183
+    },
+    {
+      "round": 9,
+      "train_loss": 0.026320015124348235,
+      "dev_joint_nll": 0.7029368475651159,
+      "seconds": 3.1572264000424184
+    }
+  ],
+  "stats": {
+    "train": {
+      "rows": 433071,
+      "ward_rows": 10842,
+      "conditional_exact": 2274,
+      "observed_joint_nll": 0.7050320418341275
+    },
+    "validation": {
+      "rows": 14439,
+      "ward_rows": 112,
+      "conditional_exact": 24,
+      "observed_joint_nll": 0.7027105185256217
+    }
+  },
+  "training_rows": 433071,
+  "natural_ward_prior": 0.007590001419662674,
+  "augmented_ward_prior": 0.02503515589822454,
+  "positive_weight": 0.3031737230044949,
+  "negative_weight": 1.0178931113097047,
+  "parameters": 41345,
+  "checkpoint_sha256": "f778fe8bd419e777a73d9e940be8b215f0c1a73b776788c9d6e81cac2e1fe081",
+  "outputs": {
+    "train": "0536a603b9a8a25fa37ee509c3875869796228f7dc0cedab670b8da28cc765e2",
+    "validation": "488473329eecce39e6e0009d3e32b8a290d4a9f85a45affc265a349a6f20cab9"
+  },
+  "source_commit": "641d31f90361c0920875f8df7cb58924ff2b6d06",
+  "protocol_sha256": "5ddbdea19a95c517b51bbd67052fdffbdaa01b704f731e88e750f68d71aaacfe",
+  "completed_updates": 7614,
+  "measured_interval_seconds": 31.72160360001726,
+  "new_fits": 1,
+  "reserved_opened": 0
+}

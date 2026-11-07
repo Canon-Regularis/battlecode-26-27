@@ -21,3 +21,8 @@ changes or deployment. Preserve all untracked frequency/goal/benchmark work.
 PR11 remains DRAFT/open/unmerged,noautomerge/queue/defaultpush. LocalV13/V14
 commits not yet pushed; immediately link PR after eventualpush. Shop43 strict
 unassessed failures; sparse categories and ambiguous entity identity uncertified.
+
+T00 completed selected3/9; predicts0DEVwards, strict11738/14439,macro.622921,
+NLL.702711. Negative; no promotion/seeds. RawPRE380cases passed. Constant-prior
+posthoc control has exactlysame DEVcommands. Fresh T00 Solxhigh review NEXT;
+T01 remains UNRUN. Complete T00 review before finalfit.

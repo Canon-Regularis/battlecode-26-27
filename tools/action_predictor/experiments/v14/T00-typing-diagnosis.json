@@ -1,0 +1,926 @@
+{
+  "results": {
+    "train": {
+      "all": {
+        "specialist": {
+          "rows": 433071,
+          "ward_rows": 10842,
+          "binary_fixed_half": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 10842,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "brier": 0.02141709910192722,
+            "bernoulli_nll": 0.07525981822346654,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "rows": 424134,
+                "mean_probability": 0.00605068776991677,
+                "ward_rate": 0.01687202629357703
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "rows": 8146,
+                "mean_probability": 0.13170552735956434,
+                "ward_rate": 0.38571077829609623
+              },
+              {
+                "low": 0.2,
+                "high": 0.30000000000000004,
+                "rows": 711,
+                "mean_probability": 0.23046889297115178,
+                "ward_rate": 0.6680731364275668
+              },
+              {
+                "low": 0.30000000000000004,
+                "high": 0.4,
+                "rows": 72,
+                "mean_probability": 0.3321175031115477,
+                "ward_rate": 0.8611111111111112
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "rows": 8,
+                "mean_probability": 0.44533896942360585,
+                "ward_rate": 0.875
+              },
+              {
+                "low": 0.5,
+                "high": 0.6000000000000001,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.6000000000000001,
+                "high": 0.7000000000000001,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.7000000000000001,
+                "high": 0.8,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              }
+            ],
+            "meaning": "Binaryfixed.5diagnostic; complete15waypredictedwardtypes scoredseparately"
+          },
+          "ranking": {
+            "average_precision": 0.3733740733050323,
+            "AUROC": 0.9616236343112545,
+            "probability_by_true_family": {
+              "ward": {
+                "rows": 10842,
+                "mean": 0.08730978174614659,
+                "quantiles": [
+                  7.15844977369108e-05,
+                  0.0222488590062731,
+                  0.07651879406594625,
+                  0.16519092526476087,
+                  0.4786919743764417
+                ]
+              },
+              "recall": {
+                "rows": 79748,
+                "mean": 0.02395390117905475,
+                "quantiles": [
+                  9.625652524430058e-06,
+                  5.641568744378654e-05,
+                  0.005493748482459924,
+                  0.07261326706820496,
+                  0.4197063664475268
+                ]
+              },
+              "other": {
+                "rows": 422229,
+                "mean": 0.006830183463634848,
+                "quantiles": [
+                  9.451187298817316e-06,
+                  3.575766950312834e-05,
+                  0.00019540566020317948,
+                  0.018869601472662898,
+                  0.4197063664475268
+                ]
+              }
+            },
+            "ties": "Whole equal-score groups; trapezoidal ROC, stepwise precision-recall average precision. No threshold selection."
+          },
+          "complete_predicted_ward": {
+            "TP": 16,
+            "FP": 1,
+            "FN": 10826,
+            "F1": 0.0029468643521502903,
+            "precision": 0.9411764705882353,
+            "recall": 0.0014757424829367274,
+            "recall_to_ward": 1
+          },
+          "missed_ward_predicted_types": {
+            "1": 137,
+            "2": 89,
+            "3": 1253,
+            "5": 25,
+            "6": 117,
+            "7": 242,
+            "8": 273,
+            "9": 595,
+            "10": 7719,
+            "11": 4,
+            "12": 371,
+            "13": 1
+          }
+        },
+        "G00": {
+          "rows": 433071,
+          "ward_rows": 10842,
+          "binary_fixed_half": {
+            "threshold": 0.5,
+            "tp": 2227,
+            "fp": 3083,
+            "fn": 8615,
+            "precision": 0.4193973634651601,
+            "recall": 0.20540490684375576,
+            "f1": 0.27575532441802875,
+            "brier": 0.0210116167572409,
+            "bernoulli_nll": 0.0698307402394525,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "rows": 381127,
+                "mean_probability": 0.004221789624410023,
+                "ward_rate": 0.002673649465926056
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "rows": 15795,
+                "mean_probability": 0.14916462531582939,
+                "ward_rate": 0.09040835707502375
+              },
+              {
+                "low": 0.2,
+                "high": 0.30000000000000004,
+                "rows": 13957,
+                "mean_probability": 0.24849620499736785,
+                "ward_rate": 0.15175180912803612
+              },
+              {
+                "low": 0.30000000000000004,
+                "high": 0.4,
+                "rows": 10547,
+                "mean_probability": 0.346702927997936,
+                "ward_rate": 0.21418412818811036
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "rows": 6335,
+                "mean_probability": 0.4453713442160287,
+                "ward_rate": 0.2827150749802684
+              },
+              {
+                "low": 0.5,
+                "high": 0.6000000000000001,
+                "rows": 3388,
+                "mean_probability": 0.5437189030901322,
+                "ward_rate": 0.3778040141676505
+              },
+              {
+                "low": 0.6000000000000001,
+                "high": 0.7000000000000001,
+                "rows": 1436,
+                "mean_probability": 0.6406079336810991,
+                "ward_rate": 0.4582172701949861
+              },
+              {
+                "low": 0.7000000000000001,
+                "high": 0.8,
+                "rows": 414,
+                "mean_probability": 0.7400121447741989,
+                "ward_rate": 0.5772946859903382
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "rows": 60,
+                "mean_probability": 0.8315486136520188,
+                "ward_rate": 0.6666666666666666
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "rows": 12,
+                "mean_probability": 0.9396247106198778,
+                "ward_rate": 0.8333333333333334
+              }
+            ],
+            "meaning": "Binaryfixed.5diagnostic; complete15waypredictedwardtypes scoredseparately"
+          },
+          "ranking": {
+            "average_precision": 0.32386682506790354,
+            "AUROC": 0.9581220423618148,
+            "probability_by_true_family": {
+              "ward": {
+                "rows": 10842,
+                "mean": 0.34455264715074413,
+                "quantiles": [
+                  0.00010943553654517324,
+                  0.1050685627829347,
+                  0.33692532467483693,
+                  0.5844862350142696,
+                  0.9854708339474967
+                ]
+              },
+              "recall": {
+                "rows": 79748,
+                "mean": 0.1219990909340916,
+                "quantiles": [
+                  6.0406211736001e-11,
+                  4.0805013903193275e-06,
+                  0.0339890842848419,
+                  0.36793452741983856,
+                  0.8804947269692005
+                ]
+              },
+              "other": {
+                "rows": 422229,
+                "mean": 0.03151224650298112,
+                "quantiles": [
+                  1.3783988789605526e-23,
+                  3.1284164343999977e-11,
+                  2.3342442747599563e-05,
+                  0.09941250101939805,
+                  0.961160622400294
+                ]
+              }
+            },
+            "ties": "Whole equal-score groups; trapezoidal ROC, stepwise precision-recall average precision. No threshold selection."
+          },
+          "complete_predicted_ward": {
+            "TP": 3888,
+            "FP": 7151,
+            "FN": 6954,
+            "F1": 0.3553768109318587,
+            "precision": 0.35220581574417975,
+            "recall": 0.3586054233536248,
+            "recall_to_ward": 5589
+          },
+          "missed_ward_predicted_types": {
+            "1": 123,
+            "2": 80,
+            "3": 921,
+            "5": 18,
+            "6": 103,
+            "7": 172,
+            "8": 253,
+            "9": 486,
+            "10": 4462,
+            "11": 4,
+            "12": 331,
+            "13": 1
+          }
+        }
+      },
+      "natural": {
+        "specialist": {
+          "rows": 288801,
+          "ward_rows": 2192,
+          "binary_fixed_half": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2192,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "brier": 0.006856032846917873,
+            "bernoulli_nll": 0.027768234492960925,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "rows": 284043,
+                "mean_probability": 0.005600637024226213,
+                "ward_rate": 0.005041490196906806
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "rows": 4457,
+                "mean_probability": 0.1304875526253582,
+                "ward_rate": 0.14830603544985416
+              },
+              {
+                "low": 0.2,
+                "high": 0.30000000000000004,
+                "rows": 280,
+                "mean_probability": 0.227455277900242,
+                "ward_rate": 0.3142857142857143
+              },
+              {
+                "low": 0.30000000000000004,
+                "high": 0.4,
+                "rows": 18,
+                "mean_probability": 0.3276162222130791,
+                "ward_rate": 0.5
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "rows": 3,
+                "mean_probability": 0.4515646893803149,
+                "ward_rate": 0.6666666666666666
+              },
+              {
+                "low": 0.5,
+                "high": 0.6000000000000001,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.6000000000000001,
+                "high": 0.7000000000000001,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.7000000000000001,
+                "high": 0.8,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              }
+            ],
+            "meaning": "Binaryfixed.5diagnostic; complete15waypredictedwardtypes scoredseparately"
+          },
+          "ranking": {
+            "average_precision": 0.1526978116096345,
+            "AUROC": 0.9623729652363695,
+            "probability_by_true_family": {
+              "ward": {
+                "rows": 2192,
+                "mean": 0.08855561221708538,
+                "quantiles": [
+                  0.0003065524354123519,
+                  0.023635234582073915,
+                  0.079434797616542,
+                  0.16192731358874096,
+                  0.4786919743764417
+                ]
+              },
+              "recall": {
+                "rows": 62903,
+                "mean": 0.027269408798564918,
+                "quantiles": [
+                  1.0119919969552732e-05,
+                  0.00027136503368764564,
+                  0.008460286512748372,
+                  0.07947348914952268,
+                  0.4197063664475268
+                ]
+              },
+              "other": {
+                "rows": 286609,
+                "mean": 0.0071499154814527845,
+                "quantiles": [
+                  9.638861915350005e-06,
+                  4.235185004444818e-05,
+                  0.00020324434633985176,
+                  0.020720622293082264,
+                  0.4197063664475268
+                ]
+              }
+            },
+            "ties": "Whole equal-score groups; trapezoidal ROC, stepwise precision-recall average precision. No threshold selection."
+          },
+          "complete_predicted_ward": {
+            "TP": 2,
+            "FP": 1,
+            "FN": 2190,
+            "F1": 0.0018223234624145787,
+            "precision": 0.6666666666666666,
+            "recall": 0.0009124087591240876,
+            "recall_to_ward": 1
+          },
+          "missed_ward_predicted_types": {
+            "1": 22,
+            "2": 21,
+            "3": 305,
+            "5": 3,
+            "6": 26,
+            "7": 26,
+            "8": 46,
+            "9": 127,
+            "10": 1583,
+            "11": 1,
+            "12": 30
+          }
+        },
+        "G00": {
+          "rows": 288801,
+          "ward_rows": 2192,
+          "binary_fixed_half": {
+            "threshold": 0.5,
+            "tp": 436,
+            "fp": 2378,
+            "fn": 1756,
+            "precision": 0.15493958777540867,
+            "recall": 0.1989051094890511,
+            "f1": 0.17419097083499802,
+            "brier": 0.014040498813836432,
+            "bernoulli_nll": 0.05055213605627873,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "rows": 256348,
+                "mean_probability": 0.00394330276292348,
+                "ward_rate": 0.0007411799584939224
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "rows": 10152,
+                "mean_probability": 0.14912272435836132,
+                "ward_rate": 0.02876280535855004
+              },
+              {
+                "low": 0.2,
+                "high": 0.30000000000000004,
+                "rows": 9190,
+                "mean_probability": 0.24851357318895098,
+                "ward_rate": 0.05059847660500544
+              },
+              {
+                "low": 0.30000000000000004,
+                "high": 0.4,
+                "rows": 6543,
+                "mean_probability": 0.34582425534389416,
+                "ward_rate": 0.06938713128534311
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "rows": 3754,
+                "mean_probability": 0.44513496046596834,
+                "ward_rate": 0.09456579648375067
+              },
+              {
+                "low": 0.5,
+                "high": 0.6000000000000001,
+                "rows": 1863,
+                "mean_probability": 0.5436129318872837,
+                "ward_rate": 0.1379495437466452
+              },
+              {
+                "low": 0.6000000000000001,
+                "high": 0.7000000000000001,
+                "rows": 721,
+                "mean_probability": 0.639648094838708,
+                "ward_rate": 0.15950069348127602
+              },
+              {
+                "low": 0.7000000000000001,
+                "high": 0.8,
+                "rows": 204,
+                "mean_probability": 0.7376638123177255,
+                "ward_rate": 0.2647058823529412
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "rows": 22,
+                "mean_probability": 0.8283879746245728,
+                "ward_rate": 0.3181818181818182
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "rows": 4,
+                "mean_probability": 0.934005727787105,
+                "ward_rate": 0.75
+              }
+            ],
+            "meaning": "Binaryfixed.5diagnostic; complete15waypredictedwardtypes scoredseparately"
+          },
+          "ranking": {
+            "average_precision": 0.1191710545661073,
+            "AUROC": 0.9558509691590564,
+            "probability_by_true_family": {
+              "ward": {
+                "rows": 2192,
+                "mean": 0.34407280539414486,
+                "quantiles": [
+                  0.00015499245775806668,
+                  0.11743707839485926,
+                  0.33233591167331145,
+                  0.5832722361449022,
+                  0.953768091211535
+                ]
+              },
+              "recall": {
+                "rows": 62903,
+                "mean": 0.13402713221044704,
+                "quantiles": [
+                  2.239919914603131e-10,
+                  2.8568370509986283e-05,
+                  0.053739331419966695,
+                  0.3803774725030899,
+                  0.8804947269692005
+                ]
+              },
+              "other": {
+                "rows": 286609,
+                "mean": 0.03361558677987521,
+                "quantiles": [
+                  2.818889781860696e-21,
+                  5.689471887281638e-11,
+                  2.265346650597715e-05,
+                  0.1173359501406444,
+                  0.9457815104049029
+                ]
+              }
+            },
+            "ties": "Whole equal-score groups; trapezoidal ROC, stepwise precision-recall average precision. No threshold selection."
+          },
+          "complete_predicted_ward": {
+            "TP": 782,
+            "FP": 5430,
+            "FN": 1410,
+            "F1": 0.1861018562589243,
+            "precision": 0.1258853831294269,
+            "recall": 0.35675182481751827,
+            "recall_to_ward": 5014
+          },
+          "missed_ward_predicted_types": {
+            "1": 19,
+            "2": 21,
+            "3": 229,
+            "5": 3,
+            "6": 23,
+            "7": 17,
+            "8": 40,
+            "9": 105,
+            "10": 924,
+            "11": 1,
+            "12": 28
+          }
+        }
+      }
+    },
+    "validation": {
+      "all": {
+        "specialist": {
+          "rows": 14439,
+          "ward_rows": 112,
+          "binary_fixed_half": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 112,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "brier": 0.007214030509454182,
+            "bernoulli_nll": 0.030795216193078973,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "rows": 14173,
+                "mean_probability": 0.005708806134260769,
+                "ward_rate": 0.00536230861497213
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "rows": 243,
+                "mean_probability": 0.13209340154058022,
+                "ward_rate": 0.13168724279835392
+              },
+              {
+                "low": 0.2,
+                "high": 0.30000000000000004,
+                "rows": 23,
+                "mean_probability": 0.23136331479926134,
+                "ward_rate": 0.17391304347826086
+              },
+              {
+                "low": 0.30000000000000004,
+                "high": 0.4,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6000000000000001,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.6000000000000001,
+                "high": 0.7000000000000001,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.7000000000000001,
+                "high": 0.8,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              }
+            ],
+            "meaning": "Binaryfixed.5diagnostic; complete15waypredictedwardtypes scoredseparately"
+          },
+          "ranking": {
+            "average_precision": 0.11498928263710778,
+            "AUROC": 0.9460521592597393,
+            "probability_by_true_family": {
+              "ward": {
+                "rows": 112,
+                "mean": 0.07836457935924332,
+                "quantiles": [
+                  0.0006766091212304376,
+                  0.014708996176887161,
+                  0.06434494915391145,
+                  0.1658724548111824,
+                  0.2925293735552983
+                ]
+              },
+              "recall": {
+                "rows": 3084,
+                "mean": 0.0291503015188519,
+                "quantiles": [
+                  1.0124524548582947e-05,
+                  0.0002701584273722314,
+                  0.009488009389185198,
+                  0.08145693100811004,
+                  0.2834474368180963
+                ]
+              },
+              "other": {
+                "rows": 14327,
+                "mean": 0.007646690114286776,
+                "quantiles": [
+                  1.0124524548582947e-05,
+                  4.504353030679066e-05,
+                  0.00021885635678814674,
+                  0.02282618620584971,
+                  0.2834474368180963
+                ]
+              }
+            },
+            "ties": "Whole equal-score groups; trapezoidal ROC, stepwise precision-recall average precision. No threshold selection."
+          },
+          "complete_predicted_ward": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 112,
+            "F1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "recall_to_ward": 0
+          },
+          "missed_ward_predicted_types": {
+            "1": 5,
+            "2": 4,
+            "3": 8,
+            "6": 1,
+            "7": 1,
+            "8": 3,
+            "9": 8,
+            "10": 80,
+            "12": 2
+          }
+        },
+        "G00": {
+          "rows": 14439,
+          "ward_rows": 112,
+          "binary_fixed_half": {
+            "threshold": 0.5,
+            "tp": 15,
+            "fp": 119,
+            "fn": 97,
+            "precision": 0.11194029850746269,
+            "recall": 0.13392857142857142,
+            "f1": 0.12195121951219512,
+            "brier": 0.015017929388555458,
+            "bernoulli_nll": 0.054640392033008835,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "rows": 12770,
+                "mean_probability": 0.004032228334867592,
+                "ward_rate": 0.0015661707126076742
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "rows": 485,
+                "mean_probability": 0.14954895270314267,
+                "ward_rate": 0.032989690721649485
+              },
+              {
+                "low": 0.2,
+                "high": 0.30000000000000004,
+                "rows": 524,
+                "mean_probability": 0.24821496427001552,
+                "ward_rate": 0.03816793893129771
+              },
+              {
+                "low": 0.30000000000000004,
+                "high": 0.4,
+                "rows": 328,
+                "mean_probability": 0.34408150378228,
+                "ward_rate": 0.06097560975609756
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "rows": 198,
+                "mean_probability": 0.44784408380474894,
+                "ward_rate": 0.10606060606060606
+              },
+              {
+                "low": 0.5,
+                "high": 0.6000000000000001,
+                "rows": 82,
+                "mean_probability": 0.5439522696589245,
+                "ward_rate": 0.10975609756097561
+              },
+              {
+                "low": 0.6000000000000001,
+                "high": 0.7000000000000001,
+                "rows": 43,
+                "mean_probability": 0.6373454546096488,
+                "ward_rate": 0.11627906976744186
+              },
+              {
+                "low": 0.7000000000000001,
+                "high": 0.8,
+                "rows": 8,
+                "mean_probability": 0.7553261074303566,
+                "ward_rate": 0.125
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "rows": 1,
+                "mean_probability": 0.8324683826036623,
+                "ward_rate": 0.0
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "rows": 0,
+                "mean_probability": null,
+                "ward_rate": null
+              }
+            ],
+            "meaning": "Binaryfixed.5diagnostic; complete15waypredictedwardtypes scoredseparately"
+          },
+          "ranking": {
+            "average_precision": 0.08646337844950577,
+            "AUROC": 0.9410933651746453,
+            "probability_by_true_family": {
+              "ward": {
+                "rows": 112,
+                "mean": 0.30232590999259296,
+                "quantiles": [
+                  0.0028104018563503866,
+                  0.04874733241306862,
+                  0.3111867268795837,
+                  0.5307026847618335,
+                  0.7402883380555311
+                ]
+              },
+              "recall": {
+                "rows": 3084,
+                "mean": 0.14048665488390652,
+                "quantiles": [
+                  9.98191547436139e-10,
+                  2.4557248706476934e-05,
+                  0.06640913937832675,
+                  0.3816955785834445,
+                  0.8324683826036623
+                ]
+              },
+              "other": {
+                "rows": 14327,
+                "mean": 0.03494407880169068,
+                "quantiles": [
+                  1.9751237142043124e-18,
+                  9.636678226940546e-11,
+                  2.599360510492496e-05,
+                  0.13114765553789853,
+                  0.8324683826036623
+                ]
+              }
+            },
+            "ties": "Whole equal-score groups; trapezoidal ROC, stepwise precision-recall average precision. No threshold selection."
+          },
+          "complete_predicted_ward": {
+            "TP": 35,
+            "FP": 282,
+            "FN": 77,
+            "F1": 0.16317016317016317,
+            "precision": 0.11041009463722397,
+            "recall": 0.3125,
+            "recall_to_ward": 257
+          },
+          "missed_ward_predicted_types": {
+            "1": 5,
+            "2": 3,
+            "3": 6,
+            "6": 1,
+            "7": 1,
+            "8": 2,
+            "9": 7,
+            "10": 50,
+            "12": 2
+          }
+        }
+      }
+    }
+  },
+  "evaluation": "T00-only",
+  "prediction_hashes": {
+    "train": "f18278c5082552d24b4685ce8790686f44b1b07d51f4c1d3e1e67f6dcdbe22c1",
+    "validation": "a2c0bcf289d47b270cdf757e70f3fd4a2d9c85acc4a8aaa03ab77f2763a4ac27"
+  },
+  "source_sha256": "b17fd2d1a342ef69a1755f7baca280cb82e08d1b6bd3bcc1f5eee4bd6c0fb945",
+  "fit_report_sha256": "cd04eb71299d6c9c362d8bc7c617e40b1c152ea90f8933de7419fd73fb4c7b20",
+  "evaluation_sha256": "7bedab1f309667c8c033afa56488215fa19feadf860b90d04a0478bdb5a82dd1",
+  "commands": [
+    "python -m tools.action_predictor.ward_experts.typing_diagnosis T00 T00-only"
+  ],
+  "interpretation": "Ranking/calibration from fixed selected outputs on original denominators; no threshold search, optimizer or architecture change. TRAIN in-sample and natural sampling same eligible groups; not group-held-out evidence. Binary half threshold differs from hierarchical15way choice; only latter is complete prediction.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
