@@ -1,0 +1,45 @@
+{
+  "id": "V16-goal-policy-pilot",
+  "fits": [
+    "L00",
+    "L01"
+  ],
+  "seed": 20261114,
+  "learned_goals": 4,
+  "initial_root_retention": 0.99,
+  "retention_learned": true,
+  "random_goal_offset_initial_std": 0.1,
+  "goal_offset_unit": "32tiles; randomseedinitialization, no named strategy/direction preference",
+  "auxiliary_goal_weight": 0.05,
+  "training": {
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "clip": 5,
+    "max_rounds": 35,
+    "patience": 6,
+    "min_improvement": 0.0001,
+    "actor_batch": 32,
+    "unroll": 8,
+    "dropout": "No extra dropout beyond the reused model; complexity controlled by shared execution and weight decay",
+    "checkpoint": "whole original DEV observed command NLL only, auxiliary target loss excluded"
+  },
+  "interpretation": "Two same-parameter policies; L00 resets goalbelief/positions, L01learns retention across actualroot gaps, conditioned on remembered relative goal/soft root age and current observation. Allaction/spatial heads trainable from warmM01. Achieved endpoint supervises goalforecast, NOT actual Fish intent. Policy predicts goals from past only and lowlevel executes conditioned on predicted goals. Four latent states may collapse or represent tactical phases; report rather than force interpretations.",
+  "observations": "Reused M01 current/action representation plus16actual earlier personal observations withavailability/roundgaps, all119fieldpersonallyknown champ/camp/self/dead entitytokens, ALLpublicaltars andALLtiles in bothspawnrectangles. No nearestentitycutoff, manualobjective ranking or hidden dynamic state. New learned entity/goal projections initializezero to preserve warmexecution initially. Oldgoal-memory scoring unused.",
+  "sequence": "Irregular selected observations with true intervening ownroot counts/order-last16windows and masks; no pretend consecutive sampledturns. Goal belief and worldgoalestimates persist across chunks; gradients detach every8selectednodes. Trainingteacherforced Fish past, deployedcontroller updates only its own executedactions. Unobserved intermediate decision posterior unavailable, gap dynamics explicitly imputed; replay fidelity is not closed-loop performance.",
+  "runtime": "SDK4dispatch implemented and call-recording tested, not engine-tested. HostTorchpolicy first, native export/liveSDKobservationbridge/draftlearning/unavailable purchase arguments and target identity remain required for eventual complete executable bot. No hand-designed farming/banking/pathfinding fallback.",
+  "sources": {
+    "model.py": "718a7af0d65890796a3c152eb1c8c2d51e073cd1755d24b74c832a25e404a768",
+    "data.py": "98915026ab681ab6c2c8cf1a9e44c82001eaed26ae3a4c358d426c6b359a14c1",
+    "inference.py": "854ac9e3bc6e49b4771582dca283b2dfd4b2022d1c887d515712e17e5921d31a",
+    "fit.py": "500700a636c7c7bcb4de65d371664b61caec19bf391ed73a0833ffa4b8c0823c",
+    "execution.py": "58506a9c5b9f5df6d1fd06e5d5b14ca3e92cff57fe931037d2daf3060242861a",
+    "actor.py": "61dc0c12298280968ab73e2519db3f4b50da76a87d022c02d851d1cee2785abb",
+    "public_inputs.py": "efb867d96f92b29178a59eceeaa32a15083640c7bc91798a851433a7eaf87e77",
+    "test_execution.py": "f6e4c2f978a3bf1ee7bc1f09da6c547fe7f0bc630c6a312a3aaf2e9a9240815d",
+    "test_causality.py": "2192fd524d3520972d3f50113062ff9b366a6994f3ba86cc4c531a1a1fb9d0e0"
+  },
+  "sequence_plan_sha256": "73c8e81b5d5d69f90c21ffb6e21df85c29b7e2c5dc4317386e9486fb8c446aee",
+  "achieved_goal_plan_sha256": "a4ec83a8c50d8f3057d32e362b49b5d26f9384d27c2b877b4c3b475daefd0a59",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,20 @@
+{
+  "contract_tests": 10,
+  "contract_tests_passed": true,
+  "real_input_preflight_rows": 32,
+  "real_input_split": "originalDEV; tensor/probability/gradient check only, no optimizer or parameter update",
+  "parameters": 150599,
+  "finite_command_likelihoods": true,
+  "likelihood_decode_agreement": true,
+  "goal_target_time_diagnostic": {
+    "TRAIN_available": 215365,
+    "TRAIN_median_future_round_gap": 9,
+    "DEV_available": 5593,
+    "DEV_median_future_round_gap": 10,
+    "same_round_available_targets": 0
+  },
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0,
+  "qualification": "Checks establish implementation contracts, not learned policy quality, strategic intent recovery or closed-loop strength."
+}
