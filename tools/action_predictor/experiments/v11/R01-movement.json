@@ -1,0 +1,897 @@
+{
+  "plan_sha256": "06835092dd4d5b271b4ac898fd796fa284575c1ef20c7fb21552491584111fbc",
+  "source_sha256": "3a5f988eaa81bce660f7327c627e9de33f10d60b24bf833a8ee6f51ce1027c7d",
+  "summaries": {
+    "train": {
+      "all": {
+        "rows": 2606,
+        "relationships": {
+          "no_progress_to_current_goal_family": 274,
+          "covered_by_fixed_library": 1679,
+          "alternative_optimal_greedy_tie": 389,
+          "terrain_field_optimum_only": 264
+        },
+        "G00_joint": 1476,
+        "G00_true_family_parameter": 1607,
+        "greedy_optimum_oracle": 2068,
+        "terrain_optimum_oracle": 2237,
+        "progress_oracle": 2068,
+        "at_any_goal": 406,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 1351,
+            "correct": 383
+          },
+          "past5_goal/greedy/yx": {
+            "available": 2034,
+            "correct": 697
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 1351,
+            "correct": 383
+          },
+          "past5_goal/greedy/xy": {
+            "available": 2034,
+            "correct": 697
+          },
+          "nearest_camp/field/yx": {
+            "available": 1383,
+            "correct": 437
+          },
+          "past5_goal/field/yx": {
+            "available": 2143,
+            "correct": 805
+          },
+          "nearest_camp/field/xy": {
+            "available": 1383,
+            "correct": 437
+          },
+          "past5_goal/field/xy": {
+            "available": 2143,
+            "correct": 805
+          }
+        }
+      },
+      "continuing": {
+        "rows": 1357,
+        "relationships": {
+          "no_progress_to_current_goal_family": 136,
+          "covered_by_fixed_library": 879,
+          "alternative_optimal_greedy_tie": 195,
+          "terrain_field_optimum_only": 147
+        },
+        "G00_joint": 1157,
+        "G00_true_family_parameter": 1247,
+        "greedy_optimum_oracle": 1074,
+        "terrain_optimum_oracle": 1181,
+        "progress_oracle": 1074,
+        "at_any_goal": 157,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 673,
+            "correct": 196
+          },
+          "past5_goal/greedy/yx": {
+            "available": 1143,
+            "correct": 457
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 673,
+            "correct": 196
+          },
+          "past5_goal/greedy/xy": {
+            "available": 1143,
+            "correct": 457
+          },
+          "nearest_camp/field/yx": {
+            "available": 700,
+            "correct": 228
+          },
+          "past5_goal/field/yx": {
+            "available": 1206,
+            "correct": 509
+          },
+          "nearest_camp/field/xy": {
+            "available": 700,
+            "correct": 228
+          },
+          "past5_goal/field/xy": {
+            "available": 1206,
+            "correct": 509
+          }
+        }
+      },
+      "change": {
+        "rows": 1240,
+        "relationships": {
+          "covered_by_fixed_library": 796,
+          "no_progress_to_current_goal_family": 136,
+          "alternative_optimal_greedy_tie": 193,
+          "terrain_field_optimum_only": 115
+        },
+        "G00_joint": 317,
+        "G00_true_family_parameter": 357,
+        "greedy_optimum_oracle": 989,
+        "terrain_optimum_oracle": 1049,
+        "progress_oracle": 989,
+        "at_any_goal": 241,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 675,
+            "correct": 187
+          },
+          "past5_goal/greedy/yx": {
+            "available": 891,
+            "correct": 240
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 675,
+            "correct": 187
+          },
+          "past5_goal/greedy/xy": {
+            "available": 891,
+            "correct": 240
+          },
+          "nearest_camp/field/yx": {
+            "available": 680,
+            "correct": 209
+          },
+          "past5_goal/field/yx": {
+            "available": 937,
+            "correct": 296
+          },
+          "nearest_camp/field/xy": {
+            "available": 680,
+            "correct": 209
+          },
+          "past5_goal/field/xy": {
+            "available": 937,
+            "correct": 296
+          }
+        }
+      },
+      "G00_errors": {
+        "rows": 1130,
+        "relationships": {
+          "covered_by_fixed_library": 653,
+          "no_progress_to_current_goal_family": 152,
+          "alternative_optimal_greedy_tie": 206,
+          "terrain_field_optimum_only": 119
+        },
+        "G00_joint": 0,
+        "G00_true_family_parameter": 131,
+        "greedy_optimum_oracle": 859,
+        "terrain_optimum_oracle": 932,
+        "progress_oracle": 859,
+        "at_any_goal": 241,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 630,
+            "correct": 138
+          },
+          "past5_goal/greedy/yx": {
+            "available": 822,
+            "correct": 182
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 630,
+            "correct": 138
+          },
+          "past5_goal/greedy/xy": {
+            "available": 822,
+            "correct": 182
+          },
+          "nearest_camp/field/yx": {
+            "available": 635,
+            "correct": 164
+          },
+          "past5_goal/field/yx": {
+            "available": 845,
+            "correct": 234
+          },
+          "nearest_camp/field/xy": {
+            "available": 635,
+            "correct": 164
+          },
+          "past5_goal/field/xy": {
+            "available": 845,
+            "correct": 234
+          }
+        }
+      }
+    },
+    "validation": {
+      "all": {
+        "rows": 2362,
+        "relationships": {
+          "covered_by_fixed_library": 1593,
+          "terrain_field_optimum_only": 180,
+          "no_progress_to_current_goal_family": 294,
+          "alternative_optimal_greedy_tie": 295
+        },
+        "G00_joint": 1318,
+        "G00_true_family_parameter": 1434,
+        "greedy_optimum_oracle": 1888,
+        "terrain_optimum_oracle": 2008,
+        "progress_oracle": 1888,
+        "at_any_goal": 406,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 1310,
+            "correct": 470
+          },
+          "past5_goal/greedy/yx": {
+            "available": 1835,
+            "correct": 714
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 1310,
+            "correct": 470
+          },
+          "past5_goal/greedy/xy": {
+            "available": 1835,
+            "correct": 714
+          },
+          "nearest_camp/field/yx": {
+            "available": 1346,
+            "correct": 503
+          },
+          "past5_goal/field/yx": {
+            "available": 1898,
+            "correct": 783
+          },
+          "nearest_camp/field/xy": {
+            "available": 1346,
+            "correct": 504
+          },
+          "past5_goal/field/xy": {
+            "available": 1898,
+            "correct": 782
+          }
+        }
+      },
+      "continuing": {
+        "rows": 1198,
+        "relationships": {
+          "covered_by_fixed_library": 821,
+          "terrain_field_optimum_only": 95,
+          "alternative_optimal_greedy_tie": 128,
+          "no_progress_to_current_goal_family": 154
+        },
+        "G00_joint": 1053,
+        "G00_true_family_parameter": 1120,
+        "greedy_optimum_oracle": 949,
+        "terrain_optimum_oracle": 1021,
+        "progress_oracle": 949,
+        "at_any_goal": 153,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 646,
+            "correct": 236
+          },
+          "past5_goal/greedy/yx": {
+            "available": 1006,
+            "correct": 435
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 646,
+            "correct": 236
+          },
+          "past5_goal/greedy/xy": {
+            "available": 1006,
+            "correct": 435
+          },
+          "nearest_camp/field/yx": {
+            "available": 667,
+            "correct": 251
+          },
+          "past5_goal/field/yx": {
+            "available": 1043,
+            "correct": 461
+          },
+          "nearest_camp/field/xy": {
+            "available": 667,
+            "correct": 251
+          },
+          "past5_goal/field/xy": {
+            "available": 1043,
+            "correct": 461
+          }
+        }
+      },
+      "change": {
+        "rows": 1158,
+        "relationships": {
+          "terrain_field_optimum_only": 85,
+          "no_progress_to_current_goal_family": 138,
+          "covered_by_fixed_library": 768,
+          "alternative_optimal_greedy_tie": 167
+        },
+        "G00_joint": 263,
+        "G00_true_family_parameter": 311,
+        "greedy_optimum_oracle": 935,
+        "terrain_optimum_oracle": 983,
+        "progress_oracle": 935,
+        "at_any_goal": 250,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 660,
+            "correct": 232
+          },
+          "past5_goal/greedy/yx": {
+            "available": 829,
+            "correct": 279
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 660,
+            "correct": 232
+          },
+          "past5_goal/greedy/xy": {
+            "available": 829,
+            "correct": 279
+          },
+          "nearest_camp/field/yx": {
+            "available": 675,
+            "correct": 250
+          },
+          "past5_goal/field/yx": {
+            "available": 855,
+            "correct": 322
+          },
+          "nearest_camp/field/xy": {
+            "available": 675,
+            "correct": 251
+          },
+          "past5_goal/field/xy": {
+            "available": 855,
+            "correct": 321
+          }
+        }
+      },
+      "G00_errors": {
+        "rows": 1044,
+        "relationships": {
+          "terrain_field_optimum_only": 77,
+          "no_progress_to_current_goal_family": 147,
+          "covered_by_fixed_library": 635,
+          "alternative_optimal_greedy_tie": 185
+        },
+        "G00_joint": 0,
+        "G00_true_family_parameter": 116,
+        "greedy_optimum_oracle": 820,
+        "terrain_optimum_oracle": 869,
+        "progress_oracle": 820,
+        "at_any_goal": 239,
+        "fixed_forecasts": {
+          "nearest_camp/greedy/yx": {
+            "available": 600,
+            "correct": 166
+          },
+          "past5_goal/greedy/yx": {
+            "available": 761,
+            "correct": 209
+          },
+          "nearest_camp/greedy/xy": {
+            "available": 600,
+            "correct": 166
+          },
+          "past5_goal/greedy/xy": {
+            "available": 761,
+            "correct": 209
+          },
+          "nearest_camp/field/yx": {
+            "available": 608,
+            "correct": 185
+          },
+          "past5_goal/field/yx": {
+            "available": 773,
+            "correct": 241
+          },
+          "nearest_camp/field/xy": {
+            "available": 608,
+            "correct": 185
+          },
+          "past5_goal/field/xy": {
+            "available": 773,
+            "correct": 240
+          }
+        }
+      }
+    }
+  },
+  "full_context_rates": {
+    "train": {
+      "all/continuing": {
+        "rows": 25918,
+        "joint": 22499,
+        "true_family_destination": 24345
+      },
+      "all/change": {
+        "rows": 22279,
+        "joint": 5777,
+        "true_family_destination": 6616
+      },
+      "history16/continuing": {
+        "rows": 25731,
+        "joint": 22330,
+        "true_family_destination": 24163
+      },
+      "history16/change": {
+        "rows": 22191,
+        "joint": 5742,
+        "true_family_destination": 6578
+      },
+      "history_lt16/continuing": {
+        "rows": 187,
+        "joint": 169,
+        "true_family_destination": 182
+      },
+      "history_lt16/change": {
+        "rows": 88,
+        "joint": 35,
+        "true_family_destination": 38
+      },
+      "near_obstacle/continuing": {
+        "rows": 13751,
+        "joint": 11873,
+        "true_family_destination": 12920
+      },
+      "near_obstacle/change": {
+        "rows": 13938,
+        "joint": 4073,
+        "true_family_destination": 4613
+      },
+      "away_obstacle/continuing": {
+        "rows": 12167,
+        "joint": 10626,
+        "true_family_destination": 11425
+      },
+      "away_obstacle/change": {
+        "rows": 8341,
+        "joint": 1704,
+        "true_family_destination": 2003
+      },
+      "visible_set_changed/continuing": {
+        "rows": 875,
+        "joint": 616,
+        "true_family_destination": 699
+      },
+      "visible_set_changed/change": {
+        "rows": 1843,
+        "joint": 568,
+        "true_family_destination": 671
+      },
+      "visible_set_same/continuing": {
+        "rows": 25043,
+        "joint": 21883,
+        "true_family_destination": 23646
+      },
+      "visible_set_same/change": {
+        "rows": 20436,
+        "joint": 5209,
+        "true_family_destination": 5945
+      }
+    },
+    "validation": {
+      "all/continuing": {
+        "rows": 1198,
+        "joint": 1053,
+        "true_family_destination": 1120
+      },
+      "all/change": {
+        "rows": 1158,
+        "joint": 263,
+        "true_family_destination": 311
+      },
+      "history16/continuing": {
+        "rows": 1183,
+        "joint": 1040,
+        "true_family_destination": 1105
+      },
+      "history16/change": {
+        "rows": 1151,
+        "joint": 259,
+        "true_family_destination": 307
+      },
+      "history_lt16/continuing": {
+        "rows": 15,
+        "joint": 13,
+        "true_family_destination": 15
+      },
+      "history_lt16/change": {
+        "rows": 7,
+        "joint": 4,
+        "true_family_destination": 4
+      },
+      "near_obstacle/continuing": {
+        "rows": 611,
+        "joint": 527,
+        "true_family_destination": 559
+      },
+      "near_obstacle/change": {
+        "rows": 764,
+        "joint": 198,
+        "true_family_destination": 230
+      },
+      "away_obstacle/continuing": {
+        "rows": 587,
+        "joint": 526,
+        "true_family_destination": 561
+      },
+      "away_obstacle/change": {
+        "rows": 394,
+        "joint": 65,
+        "true_family_destination": 81
+      },
+      "visible_set_changed/continuing": {
+        "rows": 50,
+        "joint": 35,
+        "true_family_destination": 38
+      },
+      "visible_set_changed/change": {
+        "rows": 107,
+        "joint": 33,
+        "true_family_destination": 42
+      },
+      "visible_set_same/continuing": {
+        "rows": 1148,
+        "joint": 1018,
+        "true_family_destination": 1082
+      },
+      "visible_set_same/change": {
+        "rows": 1051,
+        "joint": 230,
+        "true_family_destination": 269
+      }
+    }
+  },
+  "bindings": [
+    {
+      "raw": "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c",
+      "split": "train",
+      "rows": 737,
+      "turns_sha256": "cf92c7f469a4e909630086922541c902c9c84af90d06ec4b021bc1df29f895d3",
+      "shard_sha256": "ce0a61b8b1e933c1e6d22efacdb026b6160fda5b1bb04b7aa558a76104be33de"
+    },
+    {
+      "raw": "25f8ba6fd49ef31a29f6796a57a799ca6058e1c3640437fc1dc3cb46fd2894e1",
+      "split": "train",
+      "rows": 855,
+      "turns_sha256": "d77667aff0d9c4dd6d1994f0876c8ac5fecac1a5798e63e7cd14a95813d4f68a",
+      "shard_sha256": "093087ddf6ab04b098e278dedcded6212cfbf8c2351a5c1be67923b05d2d4b9d"
+    },
+    {
+      "raw": "de077771b12b1ef5be997f8a9f9cd2f539aa69e0326aaa3cb2b639f591f8e646",
+      "split": "train",
+      "rows": 1044,
+      "turns_sha256": "f0a0c7f903a011861945f347e8bcf45f3f89e5101e1f9321670068b9ee031291",
+      "shard_sha256": "545bd9c0f0988f83f0cf30f9ae5251944b4c66d17b80f9659ccbc5d711c4af93"
+    },
+    {
+      "raw": "f821a388eb19ed125a5dd9e35204e201a8bf8ab7e0fdaea1ce55fd2512c6a143",
+      "split": "train",
+      "rows": 1031,
+      "turns_sha256": "91ec46a8814ea2c4734e1857837db491020c3b26e61874167fc85c6a84a9becd",
+      "shard_sha256": "c50276aee612b04beca222fd0893515c4711bb825fbf70ddbaa0bdc28d723f18"
+    },
+    {
+      "raw": "14075d3f764a34da9965a4e43838a0b36e0de9ef02b42346396b02baa7ccae95",
+      "split": "train",
+      "rows": 993,
+      "turns_sha256": "e817e0b203803de691b8e0e79a757902ea43ceb8b48972430b45da3153b6d7b3",
+      "shard_sha256": "766b7a5f33326133c9fe96506e493b943c54dfed5b4e6ac1a95ee6f8c28d4a64"
+    },
+    {
+      "raw": "0ccad082f7ece25e2865c81683398d9eb959ddc64de61d378ed89908ff96bb90",
+      "split": "train",
+      "rows": 891,
+      "turns_sha256": "ea78230073dd3350e1d62856a90465b42f09d3c4c9be375f4c0f286ae1afd722",
+      "shard_sha256": "ae28ccaf3829fa00faee288398b4fc777c78c1796761842d345aecd62f2f1d6b"
+    },
+    {
+      "raw": "8737cb1754dec8ac8ac9780922ce81c0f4c5e323d10e7c5389a1ef21e280c38e",
+      "split": "train",
+      "rows": 939,
+      "turns_sha256": "f04f27f5fb64ea465f056cc43fa699a19d279ab26d48f1fff110bd05c6eea7e7",
+      "shard_sha256": "72dfad1a98b05bb0324746df8a0230e0eecb46bd08606d835eac17b100c09f8e"
+    },
+    {
+      "raw": "56b741190216a1c60fd4526a7feb1c451943dadee04a58c780051d453d6c05b1",
+      "split": "train",
+      "rows": 989,
+      "turns_sha256": "5bc740bfb5f6c40c9342afef01d28924622193ab6f94d144001e3b968968c37b",
+      "shard_sha256": "10af591fc3ee120c5f7663547c48ea57dad1d661d00b4ec42185d82ea7461525"
+    },
+    {
+      "raw": "0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc",
+      "split": "train",
+      "rows": 1058,
+      "turns_sha256": "5dddefd6bd0aaedf5aaefa5db5cb8aa1e25344ea74343d7b13065630271c4c65",
+      "shard_sha256": "32a58643af4356b9c44f0868bacc76d93ac6c11e47e61328410e8e8defef42a2"
+    },
+    {
+      "raw": "3dda868990b6ef52660bfc80a63179445f60da1ade4745ec4bc9a6f23ff92a8b",
+      "split": "train",
+      "rows": 981,
+      "turns_sha256": "7f35a3953361a827ce06945e137ffb395887add96a9441210c63fa8ea4f7d624",
+      "shard_sha256": "90bfe3c38d8b48f95cb1688d75d49957848f175935480ecf320b99a9e846599f"
+    },
+    {
+      "raw": "a1a72e102153c6dbf42d34ff7f336ebd4f0daa3279ad6334031651714d21914c",
+      "split": "train",
+      "rows": 1036,
+      "turns_sha256": "21426dfc8cd168ccbc0987b2bee965761a26c1abc140bdd63b82f164ce02d741",
+      "shard_sha256": "7e0b5352cdecd67cb677602cad1cf6f4b64f7614ffc713af382b865d4d1b4dfa"
+    },
+    {
+      "raw": "98a08765364b783272e09710805954afe0bec767110ae22ac6617bc657f5e8bc",
+      "split": "train",
+      "rows": 1051,
+      "turns_sha256": "b527f78686bfd76de4f199cfd499c28dd088cda662afc9465fd419ff324c4f02",
+      "shard_sha256": "bef2eb096f764d1fbda64a4c03bce46e96f5db8d8281f475f7b03a204dd5fe33"
+    },
+    {
+      "raw": "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c",
+      "split": "train",
+      "rows": 735,
+      "turns_sha256": "ccf89032d6623340d67123791bbbb62f4ee350ff1b890e4c336c137061db744d",
+      "shard_sha256": "2933681277601c1cb8d0e10d9cdf23bc924db01df11d4b4fc80f991da98149cb"
+    },
+    {
+      "raw": "b947e34a5bb067454301a5288419bf71a66b24debd253c40ca6f0d2d4d1778dc",
+      "split": "train",
+      "rows": 1050,
+      "turns_sha256": "14a17931f5c8c8579e9610db5ba861abb8463cb269085559aaa1b0fc67abfb31",
+      "shard_sha256": "0b86d3fc8f87be053b4988f1a3e12066ec6e7e15c096f3a11b4a17323f3ab0ca"
+    },
+    {
+      "raw": "17ce48055bebb84dbdd312d1c6bee66f1cd75d9d436326b771d21f59c3234f36",
+      "split": "train",
+      "rows": 732,
+      "turns_sha256": "b34f44366ca551db6060dac0c04bcfc3778f683a1e5bd2a8690f6b712f608414",
+      "shard_sha256": "be39a9ce5547c3b98b4a4dded0b5f26ec120351275b8a2200d2b70eab2d57212"
+    },
+    {
+      "raw": "0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361",
+      "split": "train",
+      "rows": 1110,
+      "turns_sha256": "2d30c7758458811d9cfcef88b90654d656967bd9f4b51601f9b3aba742e6018b",
+      "shard_sha256": "0625f97f44d0c4ada4eed80913db7548934134bd20a3686ac31a208a77776110"
+    },
+    {
+      "raw": "3e7b1d70c1e398f443921f93d7f555a806440771b7e3522e487fb6d4001c455f",
+      "split": "train",
+      "rows": 1049,
+      "turns_sha256": "a81c739a298f2377d0a06c749b3447cea3d58dc243fc5f6e13d3854395f89d73",
+      "shard_sha256": "263adca364458c93511b793f3c242cc9b9ce286207d7de87b316d444a5726efc"
+    },
+    {
+      "raw": "41034a4e1640d95dc58bbd909dff2cca092661bfec3c3d79fb120088f8e26077",
+      "split": "train",
+      "rows": 819,
+      "turns_sha256": "f16cd93a60746c7eac0fa6e1e51ebdd50300ea0db00aea85f3e9d6d1d01d995a",
+      "shard_sha256": "0d71300e8b8715196a5cdc6025b17f50d2c045dd4508e9be3bdda2957a49f183"
+    },
+    {
+      "raw": "e7ce86e910be5820136af0dec4fa754211cfe144ed141a973b3fbf89e117657a",
+      "split": "train",
+      "rows": 986,
+      "turns_sha256": "beaf333108099bbefe5464b46bfb335b81f697591abf957e69dd9633abcb2781",
+      "shard_sha256": "39c6fc810151e0c06947e125e5db9ec3851e4ea4054a9e9f765a3470c7517712"
+    },
+    {
+      "raw": "84012e44d398ad09fd22858522498e01f7052f2b98cf177d99c8a339343da430",
+      "split": "train",
+      "rows": 902,
+      "turns_sha256": "b0b88ef2512464040da3851f5f81010359178427044bb5e74a3f09dc60661a1a",
+      "shard_sha256": "c0e508d44032c486baea3174fae7aa3576ed2a97c62c7888309fe495ae3164fd"
+    },
+    {
+      "raw": "32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68",
+      "split": "train",
+      "rows": 853,
+      "turns_sha256": "4d0682d4d3fc1bb9cb2c69eb878708670f6a85890f8d03386212b23f7404f25d",
+      "shard_sha256": "1d3154da14f5f6742c979d5a43ee453eea8c56ac894c2637901122cf84dd5fae"
+    },
+    {
+      "raw": "4e46c36a68962046ef1eeb7e65e04c89ee07906967b76ebd001c91520a3b5b22",
+      "split": "train",
+      "rows": 725,
+      "turns_sha256": "57fded1384f0fdafae07ff37d64d1033967542e0723630ed084c2f78de45c675",
+      "shard_sha256": "0324447a56162c3534a499fdd4ece41a80d7d5b028b73d84c0683293e90e01a2"
+    },
+    {
+      "raw": "9b800142aa635f80595fdb507faaedbc80d89e4d4104a6e001e7100581138696",
+      "split": "train",
+      "rows": 1026,
+      "turns_sha256": "1d6c2de14800f0f8da609a3c2214c5a87fa0301423335200af760e6e72e71a7f",
+      "shard_sha256": "c9e9c744e3418935a1f62e8aeead33c53650d38560306b6b7de715b8dbd4aa7c"
+    },
+    {
+      "raw": "c28c851defc0d224982b479aab20279a1794511f8aced39caa91b3bb6dd72c05",
+      "split": "train",
+      "rows": 1028,
+      "turns_sha256": "63ffd9113f54bf713ccd2ea29bed12d608446da713f37aed7f7755f3876652f9",
+      "shard_sha256": "4668e630a873a52179a12d0c8a73e6e7e85a2297b334f9ba25dff5a54c95feae"
+    },
+    {
+      "raw": "213b526318b71ea4f8e5951d108b8e77eaedb51368c4b33874ae51a07dbdc891",
+      "split": "validation",
+      "rows": 511,
+      "turns_sha256": "2493a72043ff2b65328572d8b08c8d4e3080d563a032025071c0e30685d7fad6",
+      "shard_sha256": "df912b7e661b9604e546d370c346a48c6d4aff9e897b61747be6beb4f6132025"
+    },
+    {
+      "raw": "0d7cbc1ea5d12541d03aadf95297ae88bd86be6d2104af4d08d4f2c00336397f",
+      "split": "validation",
+      "rows": 715,
+      "turns_sha256": "b643b7ddb5032e8f8a33a0e56dfa78258fa9749c406b7f14351acbdec7da269d",
+      "shard_sha256": "0b4c5cdf6a23a72bda44be9c8415ea21b140ee0d626ce5aadc8d35ba42c9b77b"
+    },
+    {
+      "raw": "1489e159553b4aced0304fba858ec39266fe6ab8f2e607bd1d411dd1ce8efaa1",
+      "split": "validation",
+      "rows": 291,
+      "turns_sha256": "b175c3ddfba9fe1a2e991d98082520cb205640fa1177825a74e4645b2cdb0cfa",
+      "shard_sha256": "8142007ec0531511825e0b771ac2d34f5478b1cada4efb71bce197cc6d1517aa"
+    },
+    {
+      "raw": "748a155fe5fe70dee7a65b8293c631abd81bf24805fc7a1099e9b1145f77d7c0",
+      "split": "validation",
+      "rows": 518,
+      "turns_sha256": "6cb69d5ec447c6c302bc4eea2c0b6841022c1c5e5bf8aa3da96002ef9fac4e29",
+      "shard_sha256": "25f66566177867124264f6b0a87af83f1f855903050112050404c142961e1627"
+    },
+    {
+      "raw": "e376369aa8c54f9f38937632e4e80f42d1f443ad1b03499e4bbb7ca1d949a0aa",
+      "split": "validation",
+      "rows": 718,
+      "turns_sha256": "bd5b812f01f61ab8d97462b316fa3866fa1f207ac3560b8f70cb0f0e2dc39981",
+      "shard_sha256": "ea89a59e87e6311eca4521d11ab2b2e15f716bb7fc137ade9e21d3764b2d4695"
+    },
+    {
+      "raw": "4a10e87aed5187146862b5800152a2fde1ca69c85bc805084da96358399a225c",
+      "split": "validation",
+      "rows": 536,
+      "turns_sha256": "3d519e381f9e307467e1f1def03849f41ab19bdd398422586fa5164448f1c906",
+      "shard_sha256": "815b7fec2cf85e7f94733994d6ef943f90ce3ab0b6caa43a487bea180726c9a0"
+    },
+    {
+      "raw": "46cd250e7d311ea71bd6e6984fc3cc194b3c82ad1981bb54d0496d69b0ad3c46",
+      "split": "validation",
+      "rows": 625,
+      "turns_sha256": "7078962c528e4de38867606ec837937fb4501b05579e0b192c7d98f8fd251a87",
+      "shard_sha256": "95ee6eed8f71715e832e3764d6b7710998438d9bc2405cb40a2bdfe5dfc8374c"
+    },
+    {
+      "raw": "2bf54e5c110677a4c1fa4352ab31994986afaab7d9f525bc2379d8cca4bdd062",
+      "split": "validation",
+      "rows": 501,
+      "turns_sha256": "a421d122d9ebf73481d484cac7f1df06adc8f0813fff27829c169bcefc668a4f",
+      "shard_sha256": "06fd6329046f644f42a5418199877af9f9179076c5e887881d84246975b5ddee"
+    },
+    {
+      "raw": "d98f7f7b11d54ac46122ccd9b687a82ebf1a63104b52a36fd7691ccc1fb0867f",
+      "split": "validation",
+      "rows": 715,
+      "turns_sha256": "d27b0c74adef3be47535ac03154667c30453611d240c7df270888de0ca295a93",
+      "shard_sha256": "7624b83718ba1a2ffaaae186f8f20ea269423d80e5655dc7553c853336fc8281"
+    },
+    {
+      "raw": "895c046b02bc35bcab039da89498c5a531e029acf8e6bfe589da7549f707b4b2",
+      "split": "validation",
+      "rows": 734,
+      "turns_sha256": "53ae0ff1d739eefd87aff9d865535e410ee7b78d7f6f97841a232c56d59b9909",
+      "shard_sha256": "f3101a2fc56fa5fca4eb308e22ca52e79d57d53ce9cafd3525bddb8cf377188c"
+    },
+    {
+      "raw": "64d2bdf9c7287cc22b924141b1bb84d75bfa90d0a1c55506b94aa9fdc655b08e",
+      "split": "validation",
+      "rows": 731,
+      "turns_sha256": "1d2cc7aeff00c99879b8ff902ec8b26816413170f38ef8f3ab4a3aca36449565",
+      "shard_sha256": "28eda63ba0ae82d0ef2e3e33d9aedffc6ce151bc02d185d22235f5143ae7366f"
+    },
+    {
+      "raw": "ccd105bb21396542d1666926a532fc0c2af069102d341315acd7622d61140a98",
+      "split": "validation",
+      "rows": 444,
+      "turns_sha256": "77e6966e3d1502b91ca86558886198a3e3299ed16f1e7ea8ec7504dad9394b32",
+      "shard_sha256": "cc84fe911aef5d62b10fa19cc27296981611ece142da288dad7bb6f170fb672c"
+    },
+    {
+      "raw": "2efc76771b78a267d4a7d82535a7f4a4d59e649b2d48378b4e44a2e479e100ce",
+      "split": "validation",
+      "rows": 444,
+      "turns_sha256": "6f8e7ada0d08c27d9f1da5275cff1391beb639b2532f921ee4c6d559bc579e62",
+      "shard_sha256": "4d0ee6078d19268409b0407ba33e3963e8c9090b0d04238584c1a795322200ce"
+    },
+    {
+      "raw": "f2009d38b647f2c6d00d09b76efbe22070f0bc8ee4cbe342c785cb43e71273e1",
+      "split": "validation",
+      "rows": 482,
+      "turns_sha256": "ac36233c95a6ef8939cf5d4918f29afe0cd7a969132cb72988b55be6aa61bb79",
+      "shard_sha256": "50f67869ad87000580a73e31ffbaf7546262636bae13aea257d659d106038bab"
+    },
+    {
+      "raw": "30d801fb5abc183f0adaf499f577da7f1542eede102e1c8bd6d5fc5d913836f5",
+      "split": "validation",
+      "rows": 725,
+      "turns_sha256": "250278094f97faa6fbba36b7bf711b16b168b65a1474dd9d830f50692995c03c",
+      "shard_sha256": "e22ee7c3b673f5a332a7f765ae5cbc2ee604547ef661c9ca70996acebcb8e119"
+    },
+    {
+      "raw": "58fcf5d043c58fff897da0040bf2961c33a5553b62ca07d6c3afe3c682cd9437",
+      "split": "validation",
+      "rows": 459,
+      "turns_sha256": "1e3511e4569dda5e34cfebf04208bd056bf46e0ffb2e513f69f33f024dd34494",
+      "shard_sha256": "a7e3e2941e4f188dcb4a7143aa36dcba073e86ef4c919ad2737923784c9fed5a"
+    },
+    {
+      "raw": "d048b3c63611636cfeaa37e57c93b5f0bfc0e0d7c51fa661a49e50aafcae6c8d",
+      "split": "validation",
+      "rows": 578,
+      "turns_sha256": "5c0d74c47f8d3b21ef7247ca2cfba2a9ccf88c4388f605fdc07f80e50a4009d9",
+      "shard_sha256": "99f3c74a811d29e1bd72696f8806a0ef60f138f4d3870379b3e2a34983a802cd"
+    },
+    {
+      "raw": "c136bf775b228cd285ec59e2437a13dbd7c8191b21a53ca2f14469fda3a22d5b",
+      "split": "validation",
+      "rows": 714,
+      "turns_sha256": "30c7675e76dd7f434af52898a14b32a581d15839d0683ac23c06327cbd386213",
+      "shard_sha256": "ebbca16ef5b02f11c0b68f5819dfe00169e0aaac10182dfbeed2395f066a16bd"
+    },
+    {
+      "raw": "6531a13db23a276e8abb21794c46650cf401b5152e0fbe9e85bf919d7f0d12d3",
+      "split": "validation",
+      "rows": 796,
+      "turns_sha256": "8a2bea41a885f2bb3660277715e0a96cac0b39bd3dbad9fe65d5ed89e202a3e6",
+      "shard_sha256": "f166eb4a7eb88d20bfc85346c421855fdc472775bd8813ed2db0e4c99c460275"
+    },
+    {
+      "raw": "e161b6b5426f0ae569dbfa339a3a6ba588f8006812fc403bcfbcc22363a4ffc6",
+      "split": "validation",
+      "rows": 490,
+      "turns_sha256": "6a6e42d21fdf2e1b49431f558946f6125bb3a2f4f3982262002cbdebd73416bf",
+      "shard_sha256": "4fd7fd154cfb0f0eb2c8e69dde37c5b879204725a2afff9a631824d9847d4cdc"
+    },
+    {
+      "raw": "675cc775d6158e3bea5937066b954994ce017b54d4a5e9a22df976dff531a432",
+      "split": "validation",
+      "rows": 490,
+      "turns_sha256": "8b390e44d9485242947b862a065c6e1ef6cb87837d48dc1268359e5f8172cda5",
+      "shard_sha256": "df1127925e62cfecafb14acc9b7e86e65a4c979dbd7918a224392ba646022f86"
+    },
+    {
+      "raw": "4f0fc92e67ac94421958d835f161875b0b78f63a9944ba03311602732988f524",
+      "split": "validation",
+      "rows": 455,
+      "turns_sha256": "37f083f0d471fa47eb362963d41719818607d65172e84ee5e612f37aeb1e21c2",
+      "shard_sha256": "fee28e4d9d8e42708d1c306a71a59e43dfc2d0d5cd3f5f8373d7310301f9ee66"
+    },
+    {
+      "raw": "b08b3e4fa1827f86d060e49c7b7523df72348347cf21668eabfc80d91929798b",
+      "split": "validation",
+      "rows": 714,
+      "turns_sha256": "ddae036ff9c63a0e16b776717fecc79bf4327c74dd9eb5ba3161d60e5d3b4a4d",
+      "shard_sha256": "800d7e51eea5ff97b35bf7bfc9efe7e254bcd3d28a47f2f3a2ff246684cd1524"
+    },
+    {
+      "raw": "02930b1f6290d7f786c3eb1006bcbf77b9a153464a1df44e9a60679ecd08bf8b",
+      "split": "validation",
+      "rows": 638,
+      "turns_sha256": "6c0b1bcb696d900e9f851d72bbe676ae130bb7cab51e29f72dbef5886ffbbfb1",
+      "shard_sha256": "0179e4f91e11f1a9c1c89a2032006b1a981e2dd1309ef5fb7856dece7c67b4da"
+    },
+    {
+      "raw": "7821e163c66ff783c9fb5e58e2980c8485f075497577af4923e7d4c750ddbf7d",
+      "split": "validation",
+      "rows": 415,
+      "turns_sha256": "30c60dda2fa89ec3a687d5ce3af2ad6ebb6afcf6a2265b8e7251e567fe689a2c",
+      "shard_sha256": "322d1488f7c21b131e454cd9416c5dac02c90ccaf42a2747e5bbf9fd855e2fbe"
+    }
+  ],
+  "row_diagnostics_sha256": "96db8d9e8a87265a7467f2874279755c543902f9b42ed1dcc392e6471cd12018",
+  "interpretation": "Relationship partitions are diagnostic compatibility with declared5goals/costs,not trueFishintent or definitive causalattribution. Optimal tie/progress sets are broader oracle diagnostics,not actual candidate-librarycoverage. Uniform8neighbourterrainfield not verified historical route cost. Fixedpast5goal scoring is causal earliertrajectory proxy,not recoveredpersistentstate. All originalDEVmovement rows scored;TRAINgeometry is24game naturalrows subset.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,5 +1,15 @@
 # Intercontinental Fish GRU action predictor
 
+## Current root-cause investigation — production training paused
+
+The [ranked root-cause report](experiments/v11/ROOT-CAUSE-REPORT.md) separates
+command-support ceilings from selection failures, corrects TRAIN/DEV sampling,
+and tests movement explanations and small-subset fitting. The existing model
+memorizes the diagnostic movement sample but transfers poorly; observation
+sufficiency, persistent objectives and policy variation remain unresolved.
+No new architecture or large-model phase is allocated. The single bounded
+capacity probe and its fresh review are preserved with additive corrections.
+
 ## Current learned algorithmic phase
 
 V10 measures executable candidate coverage before learning causal command selection.

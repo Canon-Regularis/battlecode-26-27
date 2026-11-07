@@ -1,0 +1,14 @@
+# Response to the diagnostic review
+
+The review found the core measurements valid and reproduced every final R02 prediction. No further fit or checkpoint selection was performed after its findings.
+
+1. **Support ceilings:** accepted. The final report distinguishes the 1,301 unavailable A00 commands from 1,516 available-but-missed commands and states configuration-specific category ceilings. It does not equate oracle coverage with prediction accuracy or data sufficiency.
+2. **Selection and decoding:** accepted. The report includes rescue capture, the recall concentration of gains and the matched G00 probability-decoder control. A01 is not treated as a pure geometry ablation.
+3. **Capacity versus memorization:** accepted. All 294 fitted errors are enumerated. Movement fitting is demonstrated; complete-command fitting is not. Final-step results are retained, with the worsening control NLL and finite-budget/one-fold qualifications. No retrospective update-100 checkpoint selection.
+4. **Blocked-attempt flags:** corrected additively in R02-review-addendum.json. The original legacy summary remains hash-bound. Successful-move, blocked-attempt and other-readiness flags are separated; no aggregate is called an illegal-command rate. Strict predictions and outcome accounting are unchanged.
+5. **Goal/path/tie/persistence interpretation:** accepted. Relationship counts are compatibility diagnostics, not definitive cause labels. Matched-availability decomposition is now recorded: direction-change gain is +9 shared, +102 newly available successes, minus39 lost successes. This still does not isolate history or persistent objective identity. The recommended next experiment holds candidate family, cost, ties and availability fixed, without another fit.
+6. **Representation:** accepted. Omitted/aggregated observable evidence is documented; its causal error fraction and observation sufficiency remain unresolved. Memorization and nearly unique inputs do not establish sufficiency.
+7. **Sampling/version:** accepted. Natural and standardized comparisons retain their scope. Engine-3 DEV has only one group. Existing TRAIN outputs are in-sample, whereas only the scratch R02 diagnostic has a fresh withheld-TRAIN-group control.
+8. **Labels/policy:** accepted as unresolved. The final report distinguishes known shop/target/blocked/end-origin limitations from unproven contradictory full-evidence labels or policy changes. Eligible metadata has no Fish policy fingerprint; no hidden intent, randomness or policy mixture is asserted.
+
+All source outputs and old evidence remain preserved. The exhaustive R00 group/confusion export stays local with a hash-bound compact report to avoid a bulk git export. Production training remains paused. Both reserved partitions remain sealed; no replay downloads, matches, proposed-action simulations, bot edits or deployment occurred.
