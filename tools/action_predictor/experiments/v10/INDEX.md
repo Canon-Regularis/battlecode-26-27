@@ -1,5 +1,7 @@
 # V10 learned algorithmic command prediction
 
+Latest non-fitting work: [C01/C02 TRAIN support report](C01-C02-REPORT.md) and [ranked plan r2](ranked-plan-r2.json). C02covers41.49%blocked attempts and81.00%move commands on TRAIN; its full category gate still fails. No further fit or DEVcandidateevaluation is allocated. These are oracle support measurements, not achieved predictions; all initial pilots/results remain below.
+
 Post-A01 review corrections are authoritative in [A01-review-corrections.json](A01-review-corrections.json) and [response](A01-review-response.md). They replace the original unused-field priority errors, D00 change count and A01 reproduction commands without overwriting historical reports. D00 changes1052semantic commands; its probability/confidence describes the modeled observed representation including a marginalized shop bucket, not complete purchase-command probability. The posthoc matched G00probability control gets11950strict successes; D00's additional gain is89. Direct paired A01–A00 strict differences are negative; macro differences remain uncertain. The review reproduced all TRAIN/DEV descriptors, weights and commands; no promotion or repeats.
 
 This phase asks whether executable algorithm hypotheses explain recorded Fish commands and whether a causal learner can select them. No Fish source or internal intent has been recovered. These are replay command predictions, not playing strength or strategy similarity.

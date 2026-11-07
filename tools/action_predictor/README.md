@@ -8,6 +8,9 @@ candidate scorer loses against A00. A separate decoder diagnostic increases
 accuracy while worsening macro F1 and ward performance. None is promoted or meets
 the original category targets. See [V10 results, evidence and ranked next work](experiments/v10/INDEX.md).
 Both reserved partitions stay sealed; all prior V4–V9 artifacts are retained.
+Subsequent TRAIN-only C01/C02 support studies improve blocked-attempt and
+ground/ward coverage but still fail their frozen category gate; no additional
+selector fit or DEV candidate evaluation is allocated.
 
 ## Current completed movement pair
 
