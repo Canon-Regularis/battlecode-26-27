@@ -1,0 +1,31 @@
+{
+  "splits": {
+    "train": {
+      "rows": 433071,
+      "table_path": ".cambc\\action-predictor\\v9\\frequency\\train-family-argmax.npy",
+      "table_sha256": "a096082eceda4800d3ee018dd55b52be01a558011dc0578be536586620617b13",
+      "priority_sha256": "f2884f34ad8252e31dd020d1731897881b34830fb0113e75bccddff98dd8b30b",
+      "outcome_preference_sha256": "ce305ada1232ab428bdc3b1231d6323f7e25d0a8377737fa6b40ba5618476dda",
+      "G00_prediction_sha256": "00c975b5165e2d0f36ad3925e272edce1f23bc984e234a1cc5ad7929cfc62b5e",
+      "all_original_true_and_predicted_family_coordinates_equal": true,
+      "priority_all_rows_integer": true
+    },
+    "validation": {
+      "rows": 14439,
+      "table_path": ".cambc\\action-predictor\\v9\\frequency\\validation-family-argmax.npy",
+      "table_sha256": "5883dea6d22d9db762967e4de5dde0ace199d94595d8c3a3d56adf985c221e8f",
+      "priority_sha256": "ad693b3ca233081c2c659d108c1ae95a32f5c6615919941a59f3155e368ab809",
+      "outcome_preference_sha256": "a399a896fca72e6df119a09c23ff3deabb5728932f0565b07603477c84a2176b",
+      "G00_prediction_sha256": "f6ca6a970b05e519d28dc378703a338012718b675806d292d467f043a15f24ea",
+      "all_original_true_and_predicted_family_coordinates_equal": true,
+      "priority_all_rows_integer": true
+    }
+  },
+  "P05_checkpoint_sha256": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+  "G00_checkpoint_sha256": "89be763b881a665332e50ddd98c99021c11c6ffaae4193090efc16277b25c97b",
+  "cache_producer_receipt_sha256": "f62296222c4a1aa0e468fe3d08b939da0a5eee380ac3f54002dc206d10ba8793",
+  "source_sha256": "72cce8466a3b983992c4471b991ff02bf115940ed41f20c562e4c9fe068595ba",
+  "meaning": "All9familyargs/P05priority available independently of chosen or recordedaction. Truefamilyusedonlyforcacheparity,neverproposalconstruction.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,5 +1,21 @@
 # Intercontinental Fish GRU action predictor
 
+## Current command-generator repair — no new training
+
+The [C03 repair](experiments/v12/GENERATOR-REPAIR.md) exposes the existing P05
+integer prediction on every PRE independently of the action classifier and
+position. It also exposes all existing conditional spatial heads and repairs
+ground casts, range-two wards, attempted moves, personal altar-lock targets and
+position-independent utilities. `proposal_predictor.load_proposal_predictor()`
+is the current proposal entry point. Its 57-slot bundle has no fitted selector;
+historical A00 weights are incompatible and remain frozen.
+
+All 14,439 original DEV rows are retained. The generator repair recovers 236
+previously unsupported commands and loses support on three movement outcomes;
+385 raw-PRE cases reproduce exactly. These are oracle coverage measurements,
+not achieved prediction accuracy. Training remains paused and both reserved
+partitions remain sealed.
+
 ## Current root-cause investigation — production training paused
 
 The [unsupported-command and TRAIN-rescue audit](experiments/v11/UNSUPPORTED-AND-TRAINING-RESCUES.md)
@@ -33,7 +49,8 @@ the original category targets. See [V10 results, evidence and ranked next work](
 Both reserved partitions stay sealed; all prior V4–V9 artifacts are retained.
 Subsequent TRAIN-only C01/C02 support studies improve blocked-attempt and
 ground/ward coverage but still fail their frozen category gate; no additional
-selector fit or DEV candidate evaluation is allocated.
+selector fit or DEV candidate evaluation was allocated by those frozen studies.
+The later user-directed C03 generator repair above has its own frozen evaluation.
 
 ## Current completed movement pair
 

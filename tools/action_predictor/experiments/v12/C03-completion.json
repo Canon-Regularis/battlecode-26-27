@@ -1,0 +1,43 @@
+{
+  "commands": [
+    "python -m unittest tools.action_predictor.test_proposal_generator",
+    "python -m tools.action_predictor.proposal_study train",
+    "python -m tools.action_predictor.proposal_study validation",
+    "python -m tools.action_predictor.proposal_roundtrip",
+    "python -m tools.action_predictor.proposal_analysis"
+  ],
+  "cwd": "F:\\Code\\battlecode-26-27",
+  "interpreter": "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+  "reports": {
+    "tools\\action_predictor\\experiments\\v12\\C03-arguments.json": "274adf5ed729919f1822dbeb22d83bab270c4f1a02f2e196e4c63e06e9b59575",
+    "tools\\action_predictor\\experiments\\v12\\C03-attribution.json": "164ce5830c3b20b7f8a68116dccd3c4d86ac21a76f251653d00af825faabb547",
+    "tools\\action_predictor\\experiments\\v12\\C03-causal-roundtrip.json": "87d68e5ea72ffa16ace4c068045f96fc4a4e2a7288a62b128372fef8d3e6ae60",
+    "tools\\action_predictor\\experiments\\v12\\C03-plan.json": "467b109e7c5551b591fae58dd1ea767f2564915ec13280bd5fe9379e0a9aee74",
+    "tools\\action_predictor\\experiments\\v12\\C03-train-targets.json": "75710098a197d68a4840e5228eef3604363a72ce0c9d08a82ee7f1c11380e2a2",
+    "tools\\action_predictor\\experiments\\v12\\C03-train.json": "94dad16a34f16a070649ed9717c92db710ccacb497074263c7e3872b701bf297",
+    "tools\\action_predictor\\experiments\\v12\\C03-validation-targets.json": "5ee2a0b53625ac70aeb7772bff3e9107b1336626b5248627d2ea71d5aa0fe532",
+    "tools\\action_predictor\\experiments\\v12\\C03-validation.json": "ff2e95d1c9a6cfde4dffde101fe4158c1e91a1f2d6ab905dd116c3bbaa8eadbd"
+  },
+  "models": {
+    ".cambc\\action-predictor\\v5\\runs\\M01\\model.pt": "906261a160de839a9e536462e84d6c19360b8fd9e584764d70fd0eb80f378936",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    ".cambc\\action-predictor\\v9\\runs\\G00\\model.pt": "89be763b881a665332e50ddd98c99021c11c6ffaae4193090efc16277b25c97b"
+  },
+  "local_outputs": {
+    ".cambc\\action-predictor\\v12\\train-candidates.npy": "6a8423c2ded2f3bd9769892441a8dfa456bc9152ff70c6fb70300040efbf55b7",
+    ".cambc\\action-predictor\\v12\\train-indices.npy": "f7b8b156f715108374f860e7e9a742d8cd75f4b64dab9b65b80feee4643328b9",
+    ".cambc\\action-predictor\\v12\\train-prefer-blocked.npy": "ce305ada1232ab428bdc3b1231d6323f7e25d0a8377737fa6b40ba5618476dda",
+    ".cambc\\action-predictor\\v12\\train-priority.npy": "f2884f34ad8252e31dd020d1731897881b34830fb0113e75bccddff98dd8b30b",
+    ".cambc\\action-predictor\\v12\\validation-candidates.npy": "36eaecd7a3b60663b0fe1ae05f130caced8931c8bec3b69c5c8b60c1b558fc3c",
+    ".cambc\\action-predictor\\v12\\validation-indices.npy": "4b1456b362a018225897843baa151e0d83d503cdfb393fc155231ba72dcb81d9",
+    ".cambc\\action-predictor\\v12\\validation-prefer-blocked.npy": "a399a896fca72e6df119a09c23ff3deabb5728932f0565b07603477c84a2176b",
+    ".cambc\\action-predictor\\v12\\validation-priority.npy": "ad693b3ca233081c2c659d108c1ae95a32f5c6615919941a59f3155e368ab809"
+  },
+  "analysis_source_sha256": "062293fc9e73ed0114cbba54f29f6e5261d5b232bb0101dc70fda3bcbb3602b3",
+  "new_fits": 0,
+  "new_selector_checkpoint": null,
+  "achieved_accuracy_change": null,
+  "claims": "Generator repair and oracle coverage only. Not a promoted complete predictor. Old A00/G00/P05 results unchanged. Full TRAIN bridge/priority diagnostic plus24-game TRAIN geometry cohort, then all original DEV. Both reserved75-game partitions sealed; no matches/downloads/deployment.",
+  "missing_shop_arguments": "All43DEV original purchase commands remain unavailable/unassessed strict failures.",
+  "qualifications": "Unit-coordinate agreement cannot uniquely certify original entity identity. Full engine legality unassessed. Sparse altar/teleport/submit uncertified. No unchanged495-game extraction audit repeated."
+}
