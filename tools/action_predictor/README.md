@@ -1,15 +1,23 @@
 # Intercontinental Fish GRU action predictor
 
-## Latest V9 representation studies
+## Current movement study
+
+G00, the unrestricted two-expert movement control, gets 11,510/14,439 complete
+commands right (79.71%), 38 more than P05. This small single-seed development
+gain does not meet the reliability targets or justify certification. The
+continuation/change treatment G01 has not run. See the
+[current V9 index](experiments/v9/INDEX-G00.md).
+
+## Prior V9 entity studies
 
 The matched trainable-GRU entity-input pair did not improve complete-command
 prediction: E00 has 11,461/14,439 strict successes and E01 has 11,437, versus
 P05's 11,472. Neither is promoted or triggers identical repeats. See the
 [V9 study index](experiments/v9/INDEX.md) for the measured bottlenecks, full
 category results, uncertainty, serving costs and next substantial hypotheses.
-E01 is pending its fresh completed-fit review. Reserved games remain sealed.
+E01 has passed its completed-fit execution/negative-result review. Reserved games remain sealed.
 
-## Current research status: 7 November 2026
+## Preserved V8 priority study: 7 November 2026
 
 The predictor has **not met the reliability targets**. The latest reviewed
 experiment, P05, gets 11,472/14,439 complete recorded commands right (79.45%),
