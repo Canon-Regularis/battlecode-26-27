@@ -1,0 +1,12 @@
+{
+  "review_sha256": "3d02e8a5c21de192cc6379de926680814523b2508e9a4bd79694d81a8e93ad06",
+  "serving_correction": {
+    "preserved_receipt_sha256": "fe2cf059069279c9502b0762994e2bde0e8cd9f6b3b41a422a92b7df2852f13e",
+    "relabel": "Reduced-kernel measurement, not the actual current predictor. It skips one teacher-coordinate calculation on proposed movement. No prediction metric changes.",
+    "replacement": "Actual predictor.distributions prepared-input timings will be measured after G01 finishes, including both teacher-coordinate calls, for P05/G00/G01."
+  },
+  "loss_interpretation": "On eligible G01 moves, disjoint supports make primaryNLL=gateBCE+within-partition destinationNLL. Extraweight0.05 raises gate coefficient1.00to1.05. Report package effect; frozen training/source/selection unchanged.",
+  "next_classifier_priority": "After the bounded G00/G01 movement pair, independently test natural-frequency and augmentation/weight correction with classifier retraining; no indefinite frozen-classifier sequence.",
+  "new_fits_in_response": 0,
+  "reserved_opened": 0
+}

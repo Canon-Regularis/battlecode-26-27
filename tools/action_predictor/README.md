@@ -1,6 +1,13 @@
 # Intercontinental Fish GRU action predictor
 
-## Current movement study
+## Current completed movement pair
+
+G01 does not improve the unrestricted G00 control: 11,505 versus 11,510
+complete commands, and it fails the fixed continuation guard. No identical
+repeats or promotion. Actual serving-cost accounting is corrected separately.
+See the [current results and next classifier priority](experiments/v9/INDEX-G01.md).
+
+## Prior movement control
 
 G00, the unrestricted two-expert movement control, gets 11,510/14,439 complete
 commands right (79.71%), 38 more than P05. This small single-seed development

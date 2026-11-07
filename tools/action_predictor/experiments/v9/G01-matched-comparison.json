@@ -1,0 +1,318 @@
+{
+  "reports": {
+    "G00": "613b2c7f6799fe72e9b75544c61e132dad129b1107973e2e92921e03547f67ae",
+    "G01": "4d681c8ba1a8a07dc0fdac9cf9dddbd373c05a1c48d0e8383a83dcb7ff7d7932"
+  },
+  "source_sha256": "a823a0ddb100a999751cdb9595ac9d9714da1b19007998dd2dd5c02e604729bf",
+  "initial_states_reconstructed_equal": true,
+  "initial_scope": "Reconstructed from pinned M01/seed26/source; original warm decoded parity asserted before each fit. Epoch-zero tensors were not separately serialized.",
+  "matching_saved_shuffle_rng_epochs": 7,
+  "actual_fit_accounting": {
+    "G00": {
+      "selected_epoch": 1,
+      "completed_epochs": 7,
+      "optimizer_calls": 11844,
+      "head_updates": 11844,
+      "seconds": 246.7967806000088
+    },
+    "G01": {
+      "selected_epoch": 2,
+      "completed_epochs": 8,
+      "optimizer_calls": 13536,
+      "head_updates": 13536,
+      "seconds": 289.90447519999
+    }
+  },
+  "overall": {
+    "support": 14439,
+    "G00_correct": 11510,
+    "G01_correct": 11505,
+    "fixed": 70,
+    "regressed": 75,
+    "paired_gain": {
+      "low": -0.002061572292468389,
+      "high": 0.0012601512181461775,
+      "valid_draws": 2000
+    }
+  },
+  "categories": {
+    "altar": {
+      "support": 2,
+      "G00_correct": 0,
+      "G01_correct": 0,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      }
+    },
+    "attack": {
+      "support": 985,
+      "G00_correct": 874,
+      "G01_correct": 874,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "blocked": {
+      "support": 110,
+      "G00_correct": 8,
+      "G01_correct": 10,
+      "fixed": 5,
+      "regressed": 3,
+      "paired_gain": {
+        "low": -0.017699115044247787,
+        "high": 0.0625,
+        "valid_draws": 2000
+      }
+    },
+    "cancel": {
+      "support": 2589,
+      "G00_correct": 2535,
+      "G01_correct": 2535,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "cast_0": {
+      "support": 213,
+      "G00_correct": 154,
+      "G01_correct": 154,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "cast_1": {
+      "support": 243,
+      "G00_correct": 95,
+      "G01_correct": 95,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "end": {
+      "support": 4096,
+      "G00_correct": 3957,
+      "G01_correct": 3957,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "move": {
+      "support": 2362,
+      "G00_correct": 1318,
+      "G01_correct": 1311,
+      "fixed": 65,
+      "regressed": 72,
+      "paired_gain": {
+        "low": -0.01231945624468989,
+        "high": 0.006092254134029591,
+        "valid_draws": 2000
+      }
+    },
+    "priority": {
+      "support": 576,
+      "G00_correct": 71,
+      "G01_correct": 71,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "recall": {
+      "support": 3084,
+      "G00_correct": 2472,
+      "G01_correct": 2472,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "shop": {
+      "support": 43,
+      "G00_correct": 0,
+      "G01_correct": 0,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "submit": {
+      "support": 22,
+      "G00_correct": 19,
+      "G01_correct": 19,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    },
+    "teleport": {
+      "support": 2,
+      "G00_correct": 0,
+      "G01_correct": 0,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      }
+    },
+    "ward": {
+      "support": 112,
+      "G00_correct": 7,
+      "G01_correct": 7,
+      "fixed": 0,
+      "regressed": 0,
+      "paired_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "movement_contexts": {
+    "continuing": {
+      "joint": {
+        "support": 1198,
+        "G00_correct": 1053,
+        "G01_correct": 1037,
+        "fixed": 9,
+        "regressed": 25,
+        "paired_gain": {
+          "low": -0.02392739273927393,
+          "high": -0.003434041549940395,
+          "valid_draws": 2000
+        }
+      },
+      "parameter": {
+        "support": 1198,
+        "G00_correct": 1120,
+        "G01_correct": 1103,
+        "fixed": 11,
+        "regressed": 28,
+        "paired_gain": {
+          "low": -0.022935779816513763,
+          "high": -0.004629629629629629,
+          "valid_draws": 2000
+        }
+      }
+    },
+    "direction_change": {
+      "joint": {
+        "support": 1158,
+        "G00_correct": 263,
+        "G01_correct": 272,
+        "fixed": 56,
+        "regressed": 47,
+        "paired_gain": {
+          "low": -0.0027881040892193307,
+          "high": 0.017123287671232876,
+          "valid_draws": 2000
+        }
+      },
+      "parameter": {
+        "support": 1158,
+        "G00_correct": 311,
+        "G01_correct": 325,
+        "fixed": 67,
+        "regressed": 53,
+        "paired_gain": {
+          "low": -0.006505576208178439,
+          "high": 0.028225806451612902,
+          "valid_draws": 2000
+        }
+      }
+    },
+    "no_previous": {
+      "joint": {
+        "support": 6,
+        "G00_correct": 2,
+        "G01_correct": 2,
+        "fixed": 0,
+        "regressed": 0,
+        "paired_gain": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        }
+      },
+      "parameter": {
+        "support": 6,
+        "G00_correct": 3,
+        "G01_correct": 3,
+        "fixed": 0,
+        "regressed": 0,
+        "paired_gain": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_draws": 2000
+        }
+      }
+    },
+    "zero": {
+      "joint": {
+        "support": 0,
+        "G00_correct": 0,
+        "G01_correct": 0,
+        "fixed": 0,
+        "regressed": 0,
+        "paired_gain": {
+          "low": null,
+          "high": null,
+          "valid_draws": 0
+        }
+      },
+      "parameter": {
+        "support": 0,
+        "G00_correct": 0,
+        "G01_correct": 0,
+        "fixed": 0,
+        "regressed": 0,
+        "paired_gain": {
+          "low": null,
+          "high": null,
+          "valid_draws": 0
+        }
+      }
+    }
+  },
+  "gate_interpretation": "G01 disjoint supports already supervise gate through primary NLL; extra0.05BCE raises gate coefficient1.00to1.05. Package effect includes support/optimization/weighting and separately loss-selected epochs; no isolated auxiliary claim.",
+  "scope": "All14439original rows retained, including43unassessed strict shop failures. Parameter effects only for actual moves with required recorded destinations. Five-group pointwise uncertainty conditional on checkpoint selection, not3seed/untouched/generalization proof.",
+  "reserved_opened": 0,
+  "new_fits": 0
+}
