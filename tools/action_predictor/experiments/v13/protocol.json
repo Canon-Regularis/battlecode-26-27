@@ -1,0 +1,75 @@
+{
+  "id": "V13",
+  "question": "Does consistent joint-probability decoding repair the fallback mismatch, and do current goal information or bounded causal persistent goal evidence improve selection?",
+  "first": "Resolve the probability contract before fitting: exact modeled observed-representation MAP over all point commands plus one global conditional mode per fallback family. Same Q for observed likelihood and candidate probability; sum duplicate explanations. No opaque fallback-weight veto.",
+  "qualifications": "Shop remains a marginalized observed bucket with unavailable arguments and strict failures. Coordinate/entity identity ambiguity and outside/missing coordinate buckets remain explicit. This is not exact probability over complete original shop API commands or engine-legality certification.",
+  "variants": {
+    "B00": "baseline",
+    "B01": "current_goals",
+    "B02": "current_goals_and_causal_memory"
+  },
+  "features": {
+    "global_dim": 506,
+    "candidate_dim": 60,
+    "baseline": "445legacyPRE+last8actualrootfeatures;44staticcandidategrid/action/sourcefeatures",
+    "goals": "40currentgoalglobalfeatures+10perpointdistance/progressfeatures for same5objectivefamilies",
+    "memory": "21global+6perpointfeatures from forward actual-root goal identity filter. .93decay per actualroot; bounded64identitystates; only personally available action-PRE goals receive movement-progress evidence; missing PRE count explicit; last known remembered location and current-visibility/age explicit. IDs internal association only. No backward smoothing/currentaction/future/sampledrowrecurrence."
+  },
+  "architecture": "Same506->64tanh/dropout.1 context and60->64sharedcandidateembedding;score64->1,fallback64->1. Ignored feature blocks zeroed AFTER same fullTRAINnormalization. Same parameter initialization, architecture, update budget, row order, seed, point library57, fallbackQ, loss, decoder and regularization in every arm.",
+  "training": {
+    "seed": 20261110,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch": 512,
+    "gradient_clip": 5,
+    "max_rounds": 35,
+    "patience": 6,
+    "minimum_improvement": 0.0001,
+    "checkpoint": "full original DEV observed joint NLL",
+    "rows": 433071,
+    "sampling": "original augmented TRAIN, unweighted; matched natural TRAIN results reported separately",
+    "initialization": "zero output weights;fallbackbias0;pointbias-log57, roughly half initial mass to fallback when all slots available"
+  },
+  "controls": [
+    "G00 original action-first hard prediction",
+    "Q-only global observed-command MAP",
+    "fixed .9fallback/.1uniform available-point mixture using identical decoder",
+    "retained A00/A01 and D00 diagnostics, clearly different historical support/decoder"
+  ],
+  "budget": "Exactly3 small selector pilots B00/B01/B02, sequential fresh requested Solxhighreview after each substantivefit. No large model, automatic architecture search, threshold tuning or checkpoint replacement. Repeat seeds only under a separately reported promising allocation after original macro/movement/loss/targeting guards; three-seed claim unavailable until actually run.",
+  "metrics": [
+    "all original14439DEVrows/categories",
+    "paired whole-group2000resamples seed20261106",
+    "TRAIN natural vs augmented, identical metric definitions",
+    "rescues/regressions on available point opportunities, destination continuation/change",
+    "actionmacroF1/confusion/typeFP/jointFP",
+    "all-family parameters from all-family mixture conditional modes, correctlytyped conditional separate",
+    "effective fallback probability and selected-command fallback contribution",
+    "no claims that oracle coverage is achieved accuracy"
+  ],
+  "ranked": [
+    "Verify same mixture probability algebra and exhaustive finite MAP examples",
+    "Prepare repaired fullTRAIN and DEV proposals plus matched goal/memory features from alreadyrecordedeligibleevidence",
+    "Measure Q-only/fixedmixture controls and rawPRE parity",
+    "Fit B00, review, then B01, review, then B02, review",
+    "Report paired deltas and diagnostic limitations; update DRAFTPR11 only"
+  ],
+  "datasets": {
+    "train": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+    "validation": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed"
+  },
+  "jobs_sha256": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+  "sources": {
+    "tools\\action_predictor\\command_mixture.py": "aaeeace5cbe55758f4618dfa839733b6a35022ec26a5674d603f8bbfa9754400",
+    "tools\\action_predictor\\goal_memory.py": "a0e940c09745086e1ff231ce3e26a48deabadbdb1772bf4918c0dcf72f20a61c",
+    "tools\\action_predictor\\consistent_data.py": "7b253510940c96f60c517c54bd560cfd85e4ee42166bc0a188f9226b1edac046",
+    "tools\\action_predictor\\consistent_study.py": "cb478c56be4ecefb78b6177a233838eebe75fcce73658f6774b989b21092840e",
+    "tools\\action_predictor\\test_command_mixture.py": "c53d0d126308951262d66f62393f0ff8f68fdf0fb5d1fc0dcbb145f3ca2f3307",
+    "tools\\action_predictor\\test_goal_memory.py": "d5801c7b8f209906c65da04a9f2b3bbc44586ee339a8694188fe93dedb166486",
+    "tools\\action_predictor\\proposal_generator.py": "880fdb3b17b6b3048ad2f27feae2b46ecd6788cca6238844c3bfcaba57980b46",
+    "tools\\action_predictor\\proposal_predictor.py": "766fda9b9ad8b0b90374cd0e8b8cac80548c9542d36fa44034a5f652baae8e37",
+    "tools\\action_predictor\\proposal_targets.cjs": "ea9fadc95ad225e35cdfa37148f79fa8d417b271dca5e8ef7b01dcc0650cb180"
+  },
+  "safety": "Both75+75reservedpartitionssealed. No matches/proposedaction simulations/downloads/bot edits/deployment. No game/group/mapID features. All43DEVshops strictunassessed failures; sparsealtar/teleport/submit uncertified. Original targets unchanged; no promotion on aggregate gain."
+}

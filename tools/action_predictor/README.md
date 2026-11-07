@@ -1,5 +1,21 @@
 # Intercontinental Fish GRU action predictor
 
+## Current probability-consistency and goal-memory study
+
+V13 replaces opaque fallback routing with the same joint mixture probabilities
+used by observed-command likelihood. Its no-refit A00 decoder correction gets
+12,044 strict DEV commands versus 11,622, while macro F1 falls to 0.613; it is
+not promoted. The shared probability/serving path reproduces 347 raw personal
+PRE cases, including causal goal memory and unavailable-history markers.
+
+[The frozen matched protocol](experiments/v13/protocol-r3.json) allocates three
+small selector pilots with identical repaired support, architecture, sampling,
+seed, loss and decoder: baseline, current goal descriptors, and forward causal
+goal memory. Existing support still imposes 1,068 unreachable DEV commands.
+Preparation/controls are complete on DEV; full eligible TRAIN preparation is
+in progress. No V13 selector fit has completed at this checkpoint. Both reserved
+partitions stay sealed and PR11 remains draft only.
+
 ## Current command-generator repair — no new training
 
 The [C03 repair](experiments/v12/GENERATOR-REPAIR.md) exposes the existing P05
