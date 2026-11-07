@@ -38,4 +38,7 @@ class ConsistentPredictor:
             elif self.variant=='B01':x[:,485:]=0;d[:,:,54:]=0
             scores=self.model(torch.from_numpy(x),torch.from_numpy(d),torch.from_numpy(np.r_[True,commands[:,0]>=0])[None]).numpy()
         point_logq=q.log_prob(commands[None]);command,confidence,fraction=decode(scores,commands[None],point_logq,modes,mode_logq)
-        return dict(command=command[0],command_log_probability=float(confidence[0]),point_probability_fraction=float(fraction[0]),features=features,descriptors=desc,commands=commands,log_weights=scores[0],point_logq=point_logq[0],modes=modes[0],mode_logq=mode_logq[0],Q=q)
+        unavailable=[]
+        if command[0,0]==11:unavailable.append('original_shop_arguments')
+        if command[0,0] in (1,2,3,5,6,8,12,13,14) and command[0,1]>=289:unavailable.append('outside_or_missing_coordinate')
+        return dict(command=command[0],command_log_probability=float(confidence[0]),point_probability_fraction=float(fraction[0]),features=features,descriptors=desc,commands=commands,log_weights=scores[0],point_logq=point_logq[0],modes=modes[0],mode_logq=mode_logq[0],Q=q,unassessed_required_parameters=unavailable,probability_representation='observed_variables_including_marginalized_shop_bucket',entity_identity_certified=False,full_engine_legality='unassessed')

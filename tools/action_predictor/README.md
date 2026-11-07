@@ -12,9 +12,12 @@ PRE cases, including causal goal memory and unavailable-history markers.
 small selector pilots with identical repaired support, architecture, sampling,
 seed, loss and decoder: baseline, current goal descriptors, and forward causal
 goal memory. Existing support still imposes 1,068 unreachable DEV commands.
-Preparation/controls are complete on DEV; full eligible TRAIN preparation is
-in progress. No V13 selector fit has completed at this checkpoint. Both reserved
-partitions stay sealed and PR11 remains draft only.
+[B00 baseline results](experiments/v13/RESULTS-B00.md) are complete:12,061 strict
+DEV commands, macro F1 .6246 and observed joint NLL .6761; no promotion. It has
+zero measured probability/decoder ordering violations. The current serving path
+is `consistent_predictor.ConsistentPredictor`, paired with `consistent_study`.
+The requested fresh postfit review precedes the unrun goal and memory arms.
+Both reserved partitions stay sealed and PR11 remains draft only.
 
 ## Current command-generator repair — no new training
 

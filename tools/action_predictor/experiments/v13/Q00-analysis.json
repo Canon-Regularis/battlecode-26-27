@@ -1,0 +1,2951 @@
+{
+  "identifier": "Q00",
+  "prediction_sha256": "737ebab2812e9bace402c9bacbd03c8735bda61ec666128d5e39546eccf25a7f",
+  "comparisons": {
+    "G00": {
+      "overall": {
+        "rows": 14439,
+        "new_correct": 11953,
+        "reference_correct": 11510,
+        "rescues": 493,
+        "regressions": 50,
+        "new_nll": 0.7265556943655516,
+        "reference_nll": 0.7265556454658508,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.027126828575486428,
+            "high": 0.03447311376826789,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.01875406440290439,
+            "high": -0.005947397996665882,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 2.1771863201180963e-09,
+            "high": 4.663022652728878e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -6.930969043139612e-08,
+          "high": -2.866838988424547e-09,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 70,
+          "10": 86,
+          "11": 107,
+          "17": 94,
+          "31": 86
+        }
+      },
+      "except_recall": {
+        "rows": 11355,
+        "new_correct": 9069,
+        "reference_correct": 9038,
+        "rescues": 81,
+        "regressions": 50,
+        "new_nll": 0.7616546010445516,
+        "reference_nll": 0.7616544961929321,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.00045289855072461194,
+            "high": 0.005477107402652948,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.05697903388889569,
+            "high": -0.03626172402064909,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -7.755745712323403e-09,
+            "high": 2.6595818361507783e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -4.037808176704516e-08,
+          "high": 9.394192312939253e-09,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 2,
+          "10": 10,
+          "11": 17,
+          "17": 3,
+          "31": -1
+        }
+      },
+      "move_continuing": {
+        "rows": 1198,
+        "new_correct": 1070,
+        "reference_correct": 1053,
+        "rescues": 26,
+        "regressions": 9,
+        "new_nll": 0.6290144110625012,
+        "reference_nll": 0.6290144324302673,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0072727272727273196,
+            "high": 0.0210280373831776,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.00033564444029908806,
+            "high": 0.0007833213911542097,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 3.4341608445842553e-09,
+            "high": 3.777656554238007e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -6.802615493128883e-08,
+          "high": -4.899366023991547e-09,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 5,
+          "10": 7,
+          "11": 2,
+          "17": 2,
+          "31": 1
+        }
+      },
+      "move_changing": {
+        "rows": 1158,
+        "new_correct": 262,
+        "reference_correct": 263,
+        "rescues": 7,
+        "regressions": 8,
+        "new_nll": 2.216559259572598,
+        "reference_nll": 2.2165591716766357,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.008870967741935493,
+            "high": 0.00874125874125875,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.000432500908600697,
+            "high": 0.00035007576356013703,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -1.000549270435691e-07,
+            "high": 2.8997640288963566e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -1.3202326565320277e-08,
+          "high": 4.458945549179458e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": -3,
+          "11": 4,
+          "17": -2,
+          "31": 0
+        }
+      },
+      "altar": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 2.4262010584733917,
+        "reference_nll": 2.426201105117798,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "joint_nll": {
+            "low": -9.091814567874223e-08,
+            "high": -2.3706667739986642e-09,
+            "valid_draws": 1836
+          }
+        },
+        "loss_reduction95": {
+          "low": 7.648065514231916e-10,
+          "high": 5.187296470143821e-08,
+          "valid_draws": 1836
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "attack": {
+        "rows": 985,
+        "new_correct": 897,
+        "reference_correct": 874,
+        "rescues": 23,
+        "regressions": 0,
+        "new_nll": 0.34790282026762637,
+        "reference_nll": 0.347902774810791,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.01019870212235839,
+            "high": 0.03461178671655751,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.00029269801296707976,
+            "high": 0.0013348633655822645,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 2.8499159365757976e-08,
+            "high": 5.813712083968525e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -1.8632100329263324e-07,
+          "high": -7.222788211969089e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": 6,
+          "11": 10,
+          "17": 1,
+          "31": 5
+        }
+      },
+      "blocked": {
+        "rows": 110,
+        "new_correct": 6,
+        "reference_correct": 8,
+        "rescues": 0,
+        "regressions": 2,
+        "new_nll": 4.084982161221605,
+        "reference_nll": 4.084982395172119,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.05797101449275362,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.009504246751764724,
+            "high": -0.006016557566422793,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -5.0963917974655715e-08,
+            "high": 1.6669980773542648e-07,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -4.060124747518046e-08,
+          "high": 1.3351715399956277e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -1,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": -1
+        }
+      },
+      "cancel": {
+        "rows": 2589,
+        "new_correct": 2537,
+        "reference_correct": 2535,
+        "rescues": 2,
+        "regressions": 0,
+        "new_nll": 0.07423105813984243,
+        "reference_nll": 0.07423103600740433,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0016949152542372614,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 6.25301704760689e-05,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 2.1712656284034182e-08,
+            "high": 2.901502230145958e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -4.98154621109137e-07,
+          "high": -2.4226492922885257e-07,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 1,
+          "31": 1
+        }
+      },
+      "cast_0": {
+        "rows": 213,
+        "new_correct": 157,
+        "reference_correct": 154,
+        "rescues": 3,
+        "regressions": 0,
+        "new_nll": 0.835278793355598,
+        "reference_nll": 0.8352788090705872,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.030456852791878264,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0012675905038135038,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -7.053050032901353e-08,
+            "high": 4.9819673719753155e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -6.103108329824636e-08,
+          "high": 8.433903730953318e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 1,
+          "17": 0,
+          "31": 2
+        }
+      },
+      "cast_1": {
+        "rows": 243,
+        "new_correct": 93,
+        "reference_correct": 95,
+        "rescues": 4,
+        "regressions": 6,
+        "new_nll": 2.138848915289565,
+        "reference_nll": 2.1388487815856934,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.03862660944206009,
+            "high": 0.01532567049808431,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.004345456262177999,
+            "high": -0.0007833007592988397,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -1.1911902442207634e-07,
+            "high": 6.030940458146006e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -2.723104719493108e-08,
+          "high": 5.8387218615507663e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -1,
+          "10": 0,
+          "11": 1,
+          "17": 1,
+          "31": -3
+        }
+      },
+      "end": {
+        "rows": 4096,
+        "new_correct": 3972,
+        "reference_correct": 3957,
+        "rescues": 15,
+        "regressions": 0,
+        "new_nll": 0.10737289252991222,
+        "reference_nll": 0.10737287998199463,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0019379844961240345,
+            "high": 0.006103515625,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 7.10781814345085e-05,
+            "high": 0.00022621887247645245,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 1.2337344784674187e-08,
+            "high": 1.6748256351228896e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -1.8193918437936497e-07,
+          "high": -9.996911387588625e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 3,
+          "10": 1,
+          "11": 2,
+          "17": 7,
+          "31": 2
+        }
+      },
+      "move": {
+        "rows": 2362,
+        "new_correct": 1334,
+        "reference_correct": 1318,
+        "rescues": 33,
+        "regressions": 17,
+        "new_nll": 1.4095811520666888,
+        "reference_nll": 1.409581184387207,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0024843889354410954,
+            "high": 0.011255411255411296,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -3.724304792568631e-05,
+            "high": 0.0005488133911830118,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -4.105780404550785e-08,
+            "high": 1.3970824497278045e-10,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -1.0095058122772116e-10,
+          "high": 2.85055083981689e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 5,
+          "10": 4,
+          "11": 6,
+          "17": 0,
+          "31": 1
+        }
+      },
+      "priority": {
+        "rows": 576,
+        "new_correct": 52,
+        "reference_correct": 71,
+        "rescues": 0,
+        "regressions": 19,
+        "new_nll": 4.683632837059583,
+        "reference_nll": 4.683632850646973,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.04278074866310161,
+            "high": -0.01985111662531018,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.016697087427835607,
+            "high": -0.01155999122367806,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -1.5936868802413073e-07,
+            "high": 4.827666177931178e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -1.0447097853472087e-08,
+          "high": 3.202089449150236e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -2,
+          "10": -1,
+          "11": -2,
+          "17": -7,
+          "31": -7
+        }
+      },
+      "recall": {
+        "rows": 3084,
+        "new_correct": 2884,
+        "reference_correct": 2472,
+        "rescues": 412,
+        "regressions": 0,
+        "new_nll": 0.5973247976923851,
+        "reference_nll": 0.5973248481750488,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.11745268849504353,
+            "high": 0.1493789862369923,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.004748966898173987,
+            "high": 0.006237747470810337,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -1.4879025311831381e-08,
+            "high": 2.7188458484594946e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -4.379185325475987e-08,
+          "high": 2.386004305798821e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 68,
+          "10": 76,
+          "11": 90,
+          "17": 91,
+          "31": 87
+        }
+      },
+      "shop": {
+        "rows": 43,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.08499125463705014,
+        "reference_nll": 0.08499124646186829,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0019659239842726023,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -1.043014444084e-09,
+            "high": 2.024355463814409e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -2.483347805171121e-07,
+          "high": 8.475887836034701e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "submit": {
+        "rows": 22,
+        "new_correct": 20,
+        "reference_correct": 19,
+        "rescues": 1,
+        "regressions": 0,
+        "new_nll": 0.2836500545824366,
+        "reference_nll": 0.2836500406265259,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.1428571428571429,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0054994113029827,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -2.1770994194578174e-08,
+            "high": 5.8931626132491214e-08,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -4.570687188731881e-07,
+          "high": 2.6647756323772143e-07,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 1,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "teleport": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.57742022108862,
+        "reference_nll": 4.577420234680176,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "joint_nll": {
+            "low": -1.3591555436676117e-08,
+            "high": -1.3591555436676117e-08,
+            "valid_draws": 1344
+          }
+        },
+        "loss_reduction95": {
+          "low": 2.9692610592491064e-09,
+          "high": 2.9692610592491064e-09,
+          "valid_draws": 1344
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "ward": {
+        "rows": 112,
+        "new_correct": 1,
+        "reference_correct": 7,
+        "rescues": 0,
+        "regressions": 6,
+        "new_nll": 4.248322048205773,
+        "reference_nll": 4.248322010040283,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.12222222222222223,
+            "high": -0.014492753623188406,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.03917378917378917,
+            "high": -0.026525671152887557,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -1.878519544362689e-07,
+            "high": 2.4463851433509376e-07,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -6.31553418450892e-08,
+          "high": 4.3567848551084865e-08,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -3,
+          "10": -1,
+          "11": -1,
+          "17": 0,
+          "31": -1
+        }
+      }
+    },
+    "A00": {
+      "overall": {
+        "rows": 14439,
+        "new_correct": 11953,
+        "reference_correct": 11622,
+        "rescues": 446,
+        "regressions": 115,
+        "new_nll": 0.7265556943655516,
+        "reference_nll": 0.6813114227984288,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.019573315272604197,
+            "high": 0.026431718061673992,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.02387485228700259,
+            "high": -0.01528530800948602,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.040600777810847366,
+            "high": 0.05065903900065838,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.07978572673176054,
+          "high": -0.05624081545052473,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 46,
+          "10": 65,
+          "11": 80,
+          "17": 67,
+          "31": 73
+        }
+      },
+      "except_recall": {
+        "rows": 11355,
+        "new_correct": 9069,
+        "reference_correct": 9052,
+        "rescues": 92,
+        "regressions": 75,
+        "new_nll": 0.7616546010445516,
+        "reference_nll": 0.7662567207314752,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.00036231884057968955,
+            "high": 0.004007837548984705,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.05567702002959962,
+            "high": -0.040618813489526895,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.007399089307206785,
+            "high": -0.0012264947260031134,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.0017918708038001663,
+          "high": 0.009454292141760079,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -1,
+          "10": 4,
+          "11": 14,
+          "17": 2,
+          "31": -2
+        }
+      },
+      "move_continuing": {
+        "rows": 1198,
+        "new_correct": 1070,
+        "reference_correct": 1053,
+        "rescues": 30,
+        "regressions": 13,
+        "new_nll": 0.6290144110625012,
+        "reference_nll": 0.6336902652611265,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.005245444701415747,
+            "high": 0.022208735787555535,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.00019290841604055616,
+            "high": 0.0007833213911542097,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.020138648800891,
+            "high": 0.00840429624186323,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.01192628441146959,
+          "high": 0.031112717096951514,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 4,
+          "10": 7,
+          "11": 5,
+          "17": 0,
+          "31": 1
+        }
+      },
+      "move_changing": {
+        "rows": 1158,
+        "new_correct": 262,
+        "reference_correct": 275,
+        "rescues": 9,
+        "regressions": 22,
+        "new_nll": 2.216559259572598,
+        "reference_nll": 2.1217516282806392,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.022307692307692306,
+            "high": 0.0017482517482517446,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0005619010434419758,
+            "high": 0.00019414502424238992,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.0780251312769189,
+            "high": 0.11157783720641623,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.05282966427685687,
+          "high": -0.036569857299424635,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -2,
+          "10": -7,
+          "11": 3,
+          "17": -5,
+          "31": -2
+        }
+      },
+      "altar": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 2.4262010584733917,
+        "reference_nll": 2.9941234816797078,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "joint_nll": {
+            "low": -1.1298186802728885,
+            "high": -0.006026166139743827,
+            "valid_draws": 1836
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.00342642312144803,
+          "high": 0.2671273584703523,
+          "valid_draws": 1836
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "attack": {
+        "rows": 985,
+        "new_correct": 897,
+        "reference_correct": 881,
+        "rescues": 24,
+        "regressions": 8,
+        "new_nll": 0.34790282026762637,
+        "reference_nll": 0.31615627096206395,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.008146639511201648,
+            "high": 0.02298850574712641,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0003044680215182338,
+            "high": 0.0008816150641892534,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.00999027914026046,
+            "high": 0.0600589655440148,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.19605576716935103,
+          "high": -0.026909656116707703,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 4,
+          "11": 6,
+          "17": 2,
+          "31": 4
+        }
+      },
+      "blocked": {
+        "rows": 110,
+        "new_correct": 6,
+        "reference_correct": 8,
+        "rescues": 0,
+        "regressions": 2,
+        "new_nll": 4.084982161221605,
+        "reference_nll": 4.3171056349809405,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.05797101449275362,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.009504246751764724,
+            "high": -0.006016557566422793,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.2682051220398689,
+            "high": -0.16249943270932032,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.04134725014380369,
+          "high": 0.060995855428766954,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -1,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": -1
+        }
+      },
+      "cancel": {
+        "rows": 2589,
+        "new_correct": 2537,
+        "reference_correct": 2535,
+        "rescues": 2,
+        "regressions": 0,
+        "new_nll": 0.07423105813984243,
+        "reference_nll": 0.0732147941045885,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0016949152542372614,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 6.25301704760689e-05,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.0007658407553805535,
+            "high": 0.003947600112793104,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.06134068137553572,
+          "high": 0.011710514858331744,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 1,
+          "31": 1
+        }
+      },
+      "cast_0": {
+        "rows": 213,
+        "new_correct": 157,
+        "reference_correct": 152,
+        "rescues": 5,
+        "regressions": 0,
+        "new_nll": 0.835278793355598,
+        "reference_nll": 0.9471604092192072,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.004587155963302725,
+            "high": 0.04597701149425282,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.00021286110715115075,
+            "high": 0.001912812033128819,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.15526467816143152,
+            "high": -0.060244321310256255,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.06353491120967869,
+          "high": 0.16612092056659353,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 1,
+          "17": 2,
+          "31": 2
+        }
+      },
+      "cast_1": {
+        "rows": 243,
+        "new_correct": 93,
+        "reference_correct": 92,
+        "rescues": 7,
+        "regressions": 6,
+        "new_nll": 2.138848915289565,
+        "reference_nll": 2.2707949578140463,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.02145922746781115,
+            "high": 0.024193548387096753,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0026231722434254118,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.16717642423185097,
+            "high": -0.10080550650174702,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.046138846232141595,
+          "high": 0.07162728647047334,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 1,
+          "17": 2,
+          "31": -2
+        }
+      },
+      "end": {
+        "rows": 4096,
+        "new_correct": 3972,
+        "reference_correct": 3959,
+        "rescues": 14,
+        "regressions": 1,
+        "new_nll": 0.10737289252991222,
+        "reference_nll": 0.10307397634274558,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0014763779527559029,
+            "high": 0.00528846153846152,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 5.4646948318776145e-05,
+            "high": 0.00019477483475764668,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.001720174459319204,
+            "high": 0.007594869165723689,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.06219316331774771,
+          "high": -0.018489256328013324,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 3,
+          "10": 1,
+          "11": 1,
+          "17": 6,
+          "31": 2
+        }
+      },
+      "move": {
+        "rows": 2362,
+        "new_correct": 1334,
+        "reference_correct": 1330,
+        "rescues": 39,
+        "regressions": 35,
+        "new_nll": 1.4095811520666888,
+        "reference_nll": 1.3649925039964428,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.005659555942533756,
+            "high": 0.010272443054935243,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.00017418644290953522,
+            "high": 0.0004669763618157796,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.029229854557985435,
+            "high": 0.06061173072619774,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.042807521038300544,
+          "high": -0.02192869666488173,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 2,
+          "10": 0,
+          "11": 8,
+          "17": -5,
+          "31": -1
+        }
+      },
+      "priority": {
+        "rows": 576,
+        "new_correct": 52,
+        "reference_correct": 69,
+        "rescues": 1,
+        "regressions": 18,
+        "new_nll": 4.683632837059583,
+        "reference_nll": 4.83574268878217,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.034712950600801054,
+            "high": -0.01985111662531018,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.015300354051423347,
+            "high": -0.010739625062816026,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.18305390922406506,
+            "high": -0.1225712821729319,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.027289130279797846,
+          "high": 0.03578005500885262,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -2,
+          "10": -1,
+          "11": -2,
+          "17": -5,
+          "31": -7
+        }
+      },
+      "recall": {
+        "rows": 3084,
+        "new_correct": 2884,
+        "reference_correct": 2570,
+        "rescues": 354,
+        "regressions": 40,
+        "new_nll": 0.5973247976923851,
+        "reference_nll": 0.3685507684437782,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.08752449379490534,
+            "high": 0.11784399062604611,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0034341385650412596,
+            "high": 0.004828850060729875,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.20702463497645496,
+            "high": 0.25099391189242776,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.681959519478039,
+          "high": -0.5553763895343384,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 47,
+          "10": 61,
+          "11": 66,
+          "17": 65,
+          "31": 75
+        }
+      },
+      "shop": {
+        "rows": 43,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.08499125463705014,
+        "reference_nll": 0.08597551351309174,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0019659239842726023,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.0016200536447811315,
+            "high": -0.0007934477617903835,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.008744636482267976,
+          "high": 0.10878046825282461,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "submit": {
+        "rows": 22,
+        "new_correct": 20,
+        "reference_correct": 21,
+        "rescues": 0,
+        "regressions": 1,
+        "new_nll": 0.2836500545824366,
+        "reference_nll": 0.21283205238382494,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.09090909090909083,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0037414965986394405,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.04775915709965038,
+            "high": 0.1353400315081658,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.9829533715358367,
+          "high": 0.37859331061978685,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": -1,
+          "31": 0
+        }
+      },
+      "teleport": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.57742022108862,
+        "reference_nll": 4.579382211202756,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "joint_nll": {
+            "low": -0.001961990114135226,
+            "high": -0.001961990114135226,
+            "valid_draws": 1344
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.0004284399125574767,
+          "high": 0.0004284399125574767,
+          "valid_draws": 1344
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "ward": {
+        "rows": 112,
+        "new_correct": 1,
+        "reference_correct": 5,
+        "rescues": 0,
+        "regressions": 4,
+        "new_nll": 4.248322048205773,
+        "reference_nll": 4.609202851908896,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.1111111111111111,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.03725205611998065,
+            "high": -0.025770070337133154,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.3727360204636465,
+            "high": -0.3370560153234168,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.07553872554577812,
+          "high": 0.0838102007057917,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -3,
+          "10": 0,
+          "11": -1,
+          "17": 0,
+          "31": 0
+        }
+      }
+    },
+    "U00": {
+      "overall": {
+        "rows": 14439,
+        "new_correct": 11953,
+        "reference_correct": 11953,
+        "rescues": 13,
+        "regressions": 13,
+        "new_nll": 0.7265556943655516,
+        "reference_nll": 0.7929189781449886,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0004023882481617114,
+            "high": 0.0003579866828954392,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.001891514476147993,
+            "high": 0.0005189057805223829,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.07055306905003977,
+            "high": -0.06313760987617434,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.0723639515116619,
+          "high": 0.10018341095443994,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": -2,
+          "11": -1,
+          "17": 1,
+          "31": 1
+        }
+      },
+      "except_recall": {
+        "rows": 11355,
+        "new_correct": 9069,
+        "reference_correct": 9067,
+        "rescues": 13,
+        "regressions": 11,
+        "new_nll": 0.7616546010445516,
+        "reference_nll": 0.823227304638619,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0002623983206507807,
+            "high": 0.0006340579710144567,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0024914617510448656,
+            "high": 0.0006649867392314324,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.06632397294200998,
+            "high": -0.057726273423300056,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.06320643741310272,
+          "high": 0.09061078020255608,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": -1,
+          "11": -1,
+          "17": 1,
+          "31": 2
+        }
+      },
+      "move_continuing": {
+        "rows": 1198,
+        "new_correct": 1070,
+        "reference_correct": 1069,
+        "rescues": 5,
+        "regressions": 4,
+        "new_nll": 0.6290144110625012,
+        "reference_nll": 0.6837161647824799,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0027002700270027935,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -9.013591729412421e-05,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.06541235285599933,
+            "high": -0.042002076884957495,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.05359468533720069,
+          "high": 0.10946255340393596,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 1,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "move_changing": {
+        "rows": 1158,
+        "new_correct": 262,
+        "reference_correct": 261,
+        "rescues": 6,
+        "regressions": 5,
+        "new_nll": 2.216559259572598,
+        "reference_nll": 2.2101240345905238,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.004180602006688988,
+            "high": 0.007964601769911511,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.00028069167710292886,
+            "high": -7.455311331014403e-05,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.0006236336139382459,
+            "high": 0.012024165120231967,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.005440939438351222,
+          "high": -0.0002827211196714252,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": -1,
+          "11": -1,
+          "17": -1,
+          "31": 3
+        }
+      },
+      "altar": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 2.4262010584733917,
+        "reference_nll": 2.419615238798986,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "joint_nll": {
+            "low": -0.06834053104437365,
+            "high": 0.08151217039318448,
+            "valid_draws": 1836
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.027007039937912314,
+          "high": 0.03752812943016015,
+          "valid_draws": 1836
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "attack": {
+        "rows": 985,
+        "new_correct": 897,
+        "reference_correct": 898,
+        "rescues": 0,
+        "regressions": 1,
+        "new_nll": 0.34790282026762637,
+        "reference_nll": 0.4011829421572838,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0032223415682062218,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.07119766243709663,
+            "high": -0.030474297198213207,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.06489883711801236,
+          "high": 0.20952506425333794,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": -1
+        }
+      },
+      "blocked": {
+        "rows": 110,
+        "new_correct": 6,
+        "reference_correct": 6,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.084982161221605,
+        "reference_nll": 4.064939833446054,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.032588934405218595,
+            "high": 0.06893642698142255,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.017028580802574078,
+          "high": 0.008480464943122379,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "cancel": {
+        "rows": 2589,
+        "new_correct": 2537,
+        "reference_correct": 2537,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.07423105813984243,
+        "reference_nll": 0.1608873831589501,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.0876199667033846,
+            "high": -0.08555083832852946,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.48271562289646663,
+          "high": 0.6013918179950877,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "cast_0": {
+        "rows": 213,
+        "new_correct": 157,
+        "reference_correct": 157,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.835278793355598,
+        "reference_nll": 0.8145277196402798,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.02878143182015991,
+            "high": 0.06917552409255717,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.07277826947849982,
+          "high": 0.04104225199239542,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "cast_1": {
+        "rows": 243,
+        "new_correct": 93,
+        "reference_correct": 92,
+        "rescues": 2,
+        "regressions": 1,
+        "new_nll": 2.138848915289565,
+        "reference_nll": 2.182342129589407,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.012295081967213128,
+            "high": 0.022140221402214055,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0006719319696418882,
+            "high": 0.0011472246010563183,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.06853249974222893,
+            "high": -0.01835874411952476,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.00865245422473171,
+          "high": 0.031196966383710945,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": -1,
+          "17": 2,
+          "31": 0
+        }
+      },
+      "end": {
+        "rows": 4096,
+        "new_correct": 3972,
+        "reference_correct": 3972,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.10737289252991222,
+        "reference_nll": 0.18397957551199942,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.07945729760344022,
+            "high": -0.0743049271769081,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.37317277133190496,
+          "high": 0.4702788166380979,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "move": {
+        "rows": 2362,
+        "new_correct": 1334,
+        "reference_correct": 1332,
+        "rescues": 11,
+        "regressions": 9,
+        "new_nll": 1.4095811520666888,
+        "reference_nll": 1.4342101711584874,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0015686274509804088,
+            "high": 0.004090909090909145,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.00014001487681516989,
+            "high": -7.558222805936765e-05,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.03145018080255646,
+            "high": -0.017536895862305668,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.011563607011062627,
+          "high": 0.023350401171524204,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": -1,
+          "11": 0,
+          "17": -1,
+          "31": 3
+        }
+      },
+      "priority": {
+        "rows": 576,
+        "new_correct": 52,
+        "reference_correct": 52,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.683632837059583,
+        "reference_nll": 4.753960205373992,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.08087685673918088,
+            "high": -0.05906913002756954,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.012546678045500803,
+          "high": 0.01606307169670762,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "recall": {
+        "rows": 3084,
+        "new_correct": 2884,
+        "reference_correct": 2886,
+        "rescues": 0,
+        "regressions": 2,
+        "new_nll": 0.5973247976923851,
+        "reference_nll": 0.6813265503449973,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.001350894967916294,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -5.165982372458411e-05,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.08638185179557656,
+            "high": -0.08223357607697401,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.11093031676477727,
+          "high": 0.13844177111187594,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": -1,
+          "11": 0,
+          "17": 0,
+          "31": -1
+        }
+      },
+      "shop": {
+        "rows": 43,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.08499125463705014,
+        "reference_nll": 0.1903517702948764,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.10536051565782631,
+            "high": -0.10536051565782623,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.49678856961047524,
+          "high": 0.8984296713612804,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "submit": {
+        "rows": 22,
+        "new_correct": 20,
+        "reference_correct": 20,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.2836500545824366,
+        "reference_nll": 0.3616624176738528,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.09467472921769919,
+            "high": -0.06341959001065922,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.12333823612648132,
+          "high": 0.5470486717576075,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "teleport": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.57742022108862,
+        "reference_nll": 4.682780736746446,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "joint_nll": {
+            "low": -0.10536051565782589,
+            "high": -0.10536051565782589,
+            "valid_draws": 1344
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.02249956202968184,
+          "high": 0.02249956202968184,
+          "valid_draws": 1344
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "ward": {
+        "rows": 112,
+        "new_correct": 1,
+        "reference_correct": 1,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.248322048205773,
+        "reference_nll": 4.243608505034727,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.05691279928766857,
+            "high": 0.06811845192973894,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.015661685904968373,
+          "high": 0.01384003183948923,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      }
+    },
+    "D01": {
+      "overall": {
+        "rows": 14439,
+        "new_correct": 11953,
+        "reference_correct": 12044,
+        "rescues": 107,
+        "regressions": 198,
+        "new_nll": 0.7265556943655516,
+        "reference_nll": 0.6813114366736105,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0075784155497859995,
+            "high": -0.004854368932038833,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.003424313789962552,
+            "high": 0.01789438367982321,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.040600763403233264,
+            "high": 0.05065902511262277,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.07978570096724913,
+          "high": -0.056240796745479216,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -20,
+          "10": -17,
+          "11": -10,
+          "17": -24,
+          "31": -20
+        }
+      },
+      "except_recall": {
+        "rows": 11355,
+        "new_correct": 9069,
+        "reference_correct": 9071,
+        "rescues": 103,
+        "regressions": 105,
+        "new_nll": 0.7616546010445516,
+        "reference_nll": 0.7662567374422119,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.002529130159877102,
+            "high": 0.002616659398168353,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.002149252753021247,
+            "high": 0.023294205630571715,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.007399105947397677,
+            "high": -0.0012265111704078402,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.0017918947855163347,
+          "high": 0.009454315471273511,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -9,
+          "10": 0,
+          "11": 11,
+          "17": -3,
+          "31": -1
+        }
+      },
+      "move_continuing": {
+        "rows": 1198,
+        "new_correct": 1070,
+        "reference_correct": 1054,
+        "rescues": 32,
+        "regressions": 16,
+        "new_nll": 0.6290144110625012,
+        "reference_nll": 0.6336902744337889,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0016380352036089868,
+            "high": 0.031192660550458662,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0005085964819540323,
+            "high": -0.00011106971512302166,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.02013866258553698,
+            "high": 0.00840429440929602,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.011926281779913728,
+          "high": 0.031112735422252125,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -1,
+          "10": 5,
+          "11": 11,
+          "17": -1,
+          "31": 2
+        }
+      },
+      "move_changing": {
+        "rows": 1158,
+        "new_correct": 262,
+        "reference_correct": 310,
+        "rescues": 17,
+        "regressions": 65,
+        "new_nll": 2.216559259572598,
+        "reference_nll": 2.121751636502991,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.05828779599271405,
+            "high": -0.028350515463917536,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0009418779916796349,
+            "high": -0.0002641597253786737,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.07802512801446237,
+            "high": 0.11157782555644546,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.052829658469441876,
+          "high": -0.03656985494611109,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -8,
+          "10": -7,
+          "11": -5,
+          "17": -11,
+          "31": -17
+        }
+      },
+      "altar": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 2.4262010584733917,
+        "reference_nll": 2.9941234423718623,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          },
+          "joint_nll": {
+            "low": -1.129818677954907,
+            "high": -0.006026089842034343,
+            "valid_draws": 1836
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.003426379887909947,
+          "high": 0.267127358068702,
+          "valid_draws": 1836
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "attack": {
+        "rows": 985,
+        "new_correct": 897,
+        "reference_correct": 904,
+        "rescues": 12,
+        "regressions": 19,
+        "new_nll": 0.34790282026762637,
+        "reference_nll": 0.31615629755355296,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.012487992315081575,
+            "high": -0.0010438413361169019,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0004219877662474114,
+            "high": 0.00016733524408338307,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.009990256562066757,
+            "high": 0.0600589375496951,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.19605565256196567,
+          "high": -0.026909584738418202,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -3,
+          "10": -1,
+          "11": -3,
+          "17": 1,
+          "31": -1
+        }
+      },
+      "blocked": {
+        "rows": 110,
+        "new_correct": 6,
+        "reference_correct": 5,
+        "rescues": 1,
+        "regressions": 0,
+        "new_nll": 4.084982161221605,
+        "reference_nll": 4.3171056505650585,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.019480519480519487,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0010076328186008968,
+            "high": 0.005103668261562999,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.2682051443582729,
+            "high": -0.16249942448237453,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.04134724813704693,
+          "high": 0.06099586019487513,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 1,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "cancel": {
+        "rows": 2589,
+        "new_correct": 2537,
+        "reference_correct": 2538,
+        "rescues": 0,
+        "regressions": 1,
+        "new_nll": 0.07423105813984243,
+        "reference_nll": 0.07321481853097381,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0011173184357541333,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -4.075737164488391e-05,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.0007658640295637592,
+            "high": 0.003947572568001337,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.06134025025198242,
+          "high": 0.011710904521683885,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": -1,
+          "31": 0
+        }
+      },
+      "cast_0": {
+        "rows": 213,
+        "new_correct": 157,
+        "reference_correct": 147,
+        "rescues": 10,
+        "regressions": 0,
+        "new_nll": 0.835278793355598,
+        "reference_nll": 0.9471604591169455,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.00917431192660556,
+            "high": 0.09478672985781988,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0007027273867295722,
+            "high": 0.004725704431822519,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.15526473232498872,
+            "high": -0.060244360719447054,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.0635349435057444,
+          "high": 0.16612096893789008,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 2,
+          "17": 2,
+          "31": 6
+        }
+      },
+      "cast_1": {
+        "rows": 243,
+        "new_correct": 93,
+        "reference_correct": 78,
+        "rescues": 15,
+        "regressions": 0,
+        "new_nll": 2.138848915289565,
+        "reference_nll": 2.270794986899141,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.03829787234042553,
+            "high": 0.08607843659073158,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0036738731100748948,
+            "high": 0.00693375957210822,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.16717646055313562,
+            "high": -0.10080552678225807,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.046138856124943284,
+          "high": 0.07162730091778458,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": 2,
+          "11": 5,
+          "17": 3,
+          "31": 4
+        }
+      },
+      "end": {
+        "rows": 4096,
+        "new_correct": 3972,
+        "reference_correct": 3971,
+        "rescues": 3,
+        "regressions": 2,
+        "new_nll": 0.10737289252991222,
+        "reference_nll": 0.1030739885713656,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.0004960317460317443,
+            "high": 0.0009842519685039353,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -1.838868391039472e-05,
+            "high": 3.611397147297579e-05,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.0017201623275993805,
+            "high": 0.007594856492751226,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.06219304737466169,
+          "high": -0.018489123891912894,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 1,
+          "11": -1,
+          "17": 0,
+          "31": 1
+        }
+      },
+      "move": {
+        "rows": 2362,
+        "new_correct": 1334,
+        "reference_correct": 1367,
+        "rescues": 49,
+        "regressions": 82,
+        "new_nll": 1.4095811520666888,
+        "reference_nll": 1.364992512692667,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.02690008539709643,
+            "high": 0.0012224938875305957,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0006488374785551115,
+            "high": -0.00019936466010525341,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.029229841503477516,
+            "high": 0.0606117241173989,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.042807516170978444,
+          "high": -0.021928688311339206,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -9,
+          "10": -3,
+          "11": 6,
+          "17": -12,
+          "31": -15
+        }
+      },
+      "priority": {
+        "rows": 576,
+        "new_correct": 52,
+        "reference_correct": 40,
+        "rescues": 12,
+        "regressions": 0,
+        "new_nll": 4.683632837059583,
+        "reference_nll": 4.835742700634659,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.010204081632653059,
+            "high": 0.029159519725557456,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.006901797547271944,
+            "high": 0.013933140185481464,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.18305392611888038,
+            "high": -0.12257128517938654,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.027289130930885364,
+          "high": 0.03578005819298824,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": 0,
+          "11": 2,
+          "17": 5,
+          "31": 4
+        }
+      },
+      "recall": {
+        "rows": 3084,
+        "new_correct": 2884,
+        "reference_correct": 2973,
+        "rescues": 4,
+        "regressions": 93,
+        "new_nll": 0.5973247976923851,
+        "reference_nll": 0.3685507718787112,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.03390399462907012,
+            "high": -0.02291597475921614,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0012833493543534386,
+            "high": -0.0008510660784549345,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": 0.20702463168568835,
+            "high": 0.25099390831020973,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.6819595000697278,
+          "high": -0.5553763787117063,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": -11,
+          "10": -17,
+          "11": -21,
+          "17": -21,
+          "31": -19
+        }
+      },
+      "shop": {
+        "rows": 43,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 0.08499125463705014,
+        "reference_nll": 0.0859755274026798,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.0016200509916047723,
+            "high": -0.000793463330479735,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.008744799735850961,
+          "high": 0.1087806072348606,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "submit": {
+        "rows": 22,
+        "new_correct": 20,
+        "reference_correct": 21,
+        "rescues": 0,
+        "regressions": 1,
+        "new_nll": 0.2836500545824366,
+        "reference_nll": 0.2128320536307381,
+        "paired95": {
+          "joint_accuracy": {
+            "low": -0.09090909090909083,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": -0.0037414965986394405,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.04775914533692245,
+            "high": 0.13534002316382726,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": -0.9829531621911141,
+          "high": 0.37859325267687727,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": -1,
+          "31": 0
+        }
+      },
+      "teleport": {
+        "rows": 2,
+        "new_correct": 0,
+        "reference_correct": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "new_nll": 4.57742022108862,
+        "reference_nll": 4.579382194594925,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          },
+          "joint_nll": {
+            "low": -0.0019619735063045596,
+            "high": -0.0019619735063045596,
+            "valid_draws": 1344
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.0004284362874582559,
+          "high": 0.0004284362874582559,
+          "valid_draws": 1344
+        },
+        "group_net": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      },
+      "ward": {
+        "rows": 112,
+        "new_correct": 1,
+        "reference_correct": 0,
+        "rescues": 1,
+        "regressions": 0,
+        "new_nll": 4.248322048205773,
+        "reference_nll": 4.609202878149431,
+        "paired95": {
+          "joint_accuracy": {
+            "low": 0.0,
+            "high": 0.03333333333333333,
+            "valid_draws": 2000
+          },
+          "macro_f1": {
+            "low": 0.0,
+            "high": 0.005772005772005773,
+            "valid_draws": 2000
+          },
+          "joint_nll": {
+            "low": -0.37273605105051644,
+            "high": -0.33705603782507776,
+            "valid_draws": 2000
+          }
+        },
+        "loss_reduction95": {
+          "low": 0.07553873130719935,
+          "high": 0.0838102061677225,
+          "valid_draws": 2000
+        },
+        "group_net": {
+          "1": 1,
+          "10": 0,
+          "11": 0,
+          "17": 0,
+          "31": 0
+        }
+      }
+    }
+  },
+  "opportunity": {
+    "library_covered_G00_errors": 1861,
+    "rescued": 493,
+    "missed": 1368,
+    "missing_point_support_errors": 1068,
+    "coverage_is_not_achieved_accuracy": true
+  },
+  "parameter_metrics": {
+    "altar": {
+      "rows": 2,
+      "all_true_family_exact": 2,
+      "all_true_family_accuracy": 1.0,
+      "correctly_typed": 0,
+      "correctly_typed_parameter_accuracy": null
+    },
+    "attack": {
+      "rows": 985,
+      "all_true_family_exact": 943,
+      "all_true_family_accuracy": 0.9573604060913705,
+      "correctly_typed": 932,
+      "correctly_typed_parameter_accuracy": 0.9624463519313304
+    },
+    "blocked": {
+      "rows": 110,
+      "all_true_family_exact": 24,
+      "all_true_family_accuracy": 0.21818181818181817,
+      "correctly_typed": 30,
+      "correctly_typed_parameter_accuracy": 0.2
+    },
+    "cast_0": {
+      "rows": 213,
+      "all_true_family_exact": 193,
+      "all_true_family_accuracy": 0.9061032863849765,
+      "correctly_typed": 171,
+      "correctly_typed_parameter_accuracy": 0.9181286549707602
+    },
+    "cast_1": {
+      "rows": 243,
+      "all_true_family_exact": 146,
+      "all_true_family_accuracy": 0.6008230452674898,
+      "correctly_typed": 151,
+      "correctly_typed_parameter_accuracy": 0.6158940397350994
+    },
+    "move": {
+      "rows": 2362,
+      "all_true_family_exact": 1434,
+      "all_true_family_accuracy": 0.607112616426757,
+      "correctly_typed": 2142,
+      "correctly_typed_parameter_accuracy": 0.6227824463118581
+    },
+    "priority": {
+      "rows": 576,
+      "all_true_family_exact": 109,
+      "all_true_family_accuracy": 0.1892361111111111,
+      "correctly_typed": 218,
+      "correctly_typed_parameter_accuracy": 0.23853211009174313
+    },
+    "submit": {
+      "rows": 22,
+      "all_true_family_exact": 22,
+      "all_true_family_accuracy": 1.0,
+      "correctly_typed": 20,
+      "correctly_typed_parameter_accuracy": 1.0
+    },
+    "teleport": {
+      "rows": 2,
+      "all_true_family_exact": 0,
+      "all_true_family_accuracy": 0.0,
+      "correctly_typed": 2,
+      "correctly_typed_parameter_accuracy": 0.0
+    },
+    "ward": {
+      "rows": 112,
+      "all_true_family_exact": 24,
+      "all_true_family_accuracy": 0.21428571428571427,
+      "correctly_typed": 2,
+      "correctly_typed_parameter_accuracy": 0.5
+    }
+  },
+  "priority": {
+    "all": {
+      "rows": 576,
+      "joint": 52,
+      "correctly_typed": 218,
+      "correctly_typed_MAE": 109.8211009174312,
+      "correctly_typed_max_abs_error": 826,
+      "all_true_family_MAE": 144.56597222222223
+    },
+    "rare": {
+      "rows": 65,
+      "joint": 5,
+      "correctly_typed": 32,
+      "correctly_typed_MAE": 144.1875,
+      "correctly_typed_max_abs_error": 819,
+      "all_true_family_MAE": 254.1076923076923
+    },
+    "unseen": {
+      "rows": 4,
+      "joint": 1,
+      "correctly_typed": 3,
+      "correctly_typed_MAE": 252.33333333333334,
+      "correctly_typed_max_abs_error": 680,
+      "all_true_family_MAE": 323.5
+    }
+  },
+  "partial_checks": {
+    "successful_move_forecast": {
+      "rows": 2283,
+      "mask_rejections": 0
+    },
+    "blocked_attempt_forecast": {
+      "rows": 53,
+      "mask_rejections": 52
+    },
+    "other_readiness_flags": 17,
+    "full_engine_illegality": null,
+    "meaning": "Blocked mask rejection may be a correct attempted-move outcome; never aggregate this into illegal successful moves."
+  },
+  "command_confidence_bins": [
+    {
+      "lo": 0.0,
+      "hi": 0.1,
+      "rows": 94,
+      "mean_modeled_confidence": 0.07866533449838697,
+      "strict_command_rate": 0.1702127659574468
+    },
+    {
+      "lo": 0.1,
+      "hi": 0.2,
+      "rows": 384,
+      "mean_modeled_confidence": 0.15493106433011708,
+      "strict_command_rate": 0.265625
+    },
+    {
+      "lo": 0.2,
+      "hi": 0.30000000000000004,
+      "rows": 606,
+      "mean_modeled_confidence": 0.25266124773028265,
+      "strict_command_rate": 0.41089108910891087
+    },
+    {
+      "lo": 0.30000000000000004,
+      "hi": 0.4,
+      "rows": 773,
+      "mean_modeled_confidence": 0.3529126922719574,
+      "strict_command_rate": 0.5122897800776197
+    },
+    {
+      "lo": 0.4,
+      "hi": 0.5,
+      "rows": 877,
+      "mean_modeled_confidence": 0.4506613887173154,
+      "strict_command_rate": 0.6419612314709237
+    },
+    {
+      "lo": 0.5,
+      "hi": 0.6000000000000001,
+      "rows": 922,
+      "mean_modeled_confidence": 0.5475381497970921,
+      "strict_command_rate": 0.6789587852494577
+    },
+    {
+      "lo": 0.6000000000000001,
+      "hi": 0.7000000000000001,
+      "rows": 856,
+      "mean_modeled_confidence": 0.6475012030759931,
+      "strict_command_rate": 0.7406542056074766
+    },
+    {
+      "lo": 0.7000000000000001,
+      "hi": 0.8,
+      "rows": 819,
+      "mean_modeled_confidence": 0.7490375450479346,
+      "strict_command_rate": 0.8034188034188035
+    },
+    {
+      "lo": 0.8,
+      "hi": 0.9,
+      "rows": 995,
+      "mean_modeled_confidence": 0.8512384693480924,
+      "strict_command_rate": 0.8130653266331658
+    },
+    {
+      "lo": 0.9,
+      "hi": 1.0,
+      "rows": 8113,
+      "mean_modeled_confidence": 0.9870104953505533,
+      "strict_command_rate": 0.9737458400098608
+    }
+  ],
+  "calibration_qualification": "Modeled observed-representation probability, including marginalized shop and unavailable-coordinate buckets. Strict empirical accuracy below it is diagnostic, not certification of complete API-command calibration.",
+  "mixture_usage": {
+    "mean_fallback_weight": 1.0,
+    "selected_command_mean_point_fraction": 0.0,
+    "fallback_only_commands": 14439,
+    "not_a_hard_route": true
+  },
+  "uncertainty": "2000paired whole-original-group draws,seed20261106;5reusedDEVgroups;conditional on checkpoint selection, not untouched/selection-adjusted/3seed.",
+  "source_sha256": "8df446b166fd4ddc83ba86db292065822b0e4e793d9b3b31328a2acd5ffe0735",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
