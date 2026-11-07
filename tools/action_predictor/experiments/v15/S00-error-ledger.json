@@ -1,0 +1,113 @@
+{
+  "results": {
+    "train": {
+      "all": {
+        "all": {
+          "rows": 433071,
+          "complete_correct": 326256,
+          "wrong_type": 45884,
+          "correctly_typed_missing_shop_arguments": 16706,
+          "correctly_typed_incorrect_or_unassessed_parameters": 44225,
+          "correct_parameter_but_wrong_type": 27489,
+          "perfect_parameters_under_fixed_types_ceiling": 370481,
+          "perfect_types_under_current_parameters_ceiling": 353745
+        },
+        "move": {
+          "rows": 71945,
+          "complete_correct": 39385,
+          "wrong_type": 7842,
+          "correctly_typed_missing_shop_arguments": 0,
+          "correctly_typed_incorrect_or_unassessed_parameters": 24718,
+          "correct_parameter_but_wrong_type": 3983,
+          "perfect_parameters_under_fixed_types_ceiling": 64103,
+          "perfect_types_under_current_parameters_ceiling": 43368
+        },
+        "blocked": {
+          "rows": 10065,
+          "complete_correct": 584,
+          "wrong_type": 5289,
+          "correctly_typed_missing_shop_arguments": 0,
+          "correctly_typed_incorrect_or_unassessed_parameters": 4192,
+          "correct_parameter_but_wrong_type": 845,
+          "perfect_parameters_under_fixed_types_ceiling": 4776,
+          "perfect_types_under_current_parameters_ceiling": 1429
+        }
+      },
+      "natural": {
+        "all": {
+          "rows": 288801,
+          "complete_correct": 235336,
+          "wrong_type": 27108,
+          "correctly_typed_missing_shop_arguments": 1167,
+          "correctly_typed_incorrect_or_unassessed_parameters": 25190,
+          "correct_parameter_but_wrong_type": 20308,
+          "perfect_parameters_under_fixed_types_ceiling": 260526,
+          "perfect_types_under_current_parameters_ceiling": 255644
+        },
+        "move": {
+          "rows": 48286,
+          "complete_correct": 27532,
+          "wrong_type": 4804,
+          "correctly_typed_missing_shop_arguments": 0,
+          "correctly_typed_incorrect_or_unassessed_parameters": 15950,
+          "correct_parameter_but_wrong_type": 2677,
+          "perfect_parameters_under_fixed_types_ceiling": 43482,
+          "perfect_types_under_current_parameters_ceiling": 30209
+        },
+        "blocked": {
+          "rows": 1906,
+          "complete_correct": 123,
+          "wrong_type": 902,
+          "correctly_typed_missing_shop_arguments": 0,
+          "correctly_typed_incorrect_or_unassessed_parameters": 881,
+          "correct_parameter_but_wrong_type": 148,
+          "perfect_parameters_under_fixed_types_ceiling": 1004,
+          "perfect_types_under_current_parameters_ceiling": 271
+        }
+      }
+    },
+    "validation": {
+      "all": {
+        "all": {
+          "rows": 14439,
+          "complete_correct": 11469,
+          "wrong_type": 1627,
+          "correctly_typed_missing_shop_arguments": 42,
+          "correctly_typed_incorrect_or_unassessed_parameters": 1301,
+          "correct_parameter_but_wrong_type": 1132,
+          "perfect_parameters_under_fixed_types_ceiling": 12770,
+          "perfect_types_under_current_parameters_ceiling": 12601
+        },
+        "move": {
+          "rows": 2362,
+          "complete_correct": 1283,
+          "wrong_type": 235,
+          "correctly_typed_missing_shop_arguments": 0,
+          "correctly_typed_incorrect_or_unassessed_parameters": 844,
+          "correct_parameter_but_wrong_type": 101,
+          "perfect_parameters_under_fixed_types_ceiling": 2127,
+          "perfect_types_under_current_parameters_ceiling": 1384
+        },
+        "blocked": {
+          "rows": 110,
+          "complete_correct": 2,
+          "wrong_type": 70,
+          "correctly_typed_missing_shop_arguments": 0,
+          "correctly_typed_incorrect_or_unassessed_parameters": 38,
+          "correct_parameter_but_wrong_type": 7,
+          "perfect_parameters_under_fixed_types_ceiling": 40,
+          "perfect_types_under_current_parameters_ceiling": 9
+        }
+      }
+    }
+  },
+  "prediction_sha256": {
+    "train": "e1faa5588c70f83e7450fef62299a4dcbdd0ad8346fb54fbd8f751ee37004d45",
+    "validation": "0d292bbecff78310d9ec5adc21062c34e6db0ed3b69e18152b7131e8b11b940c"
+  },
+  "source_sha256": "82a46d2ba9c0c3082b6d4977e382174755d11b7455a696b5f2ee149f11b750f8",
+  "command": "python -m tools.action_predictor.movement_experts.error_ledger S00",
+  "qualification": "Disjoint empirical command failures; representation/optimization/history/policy causes remain unresolved and can overlap. Ceilings are for the declared recorded representation/current heads or fixed types, not observation sufficiency or complete unseen API argument recovery. Shops never counted correct.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
