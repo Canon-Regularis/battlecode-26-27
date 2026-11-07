@@ -26,3 +26,7 @@ T00 completed selected3/9; predicts0DEVwards, strict11738/14439,macro.622921,
 NLL.702711. Negative; no promotion/seeds. RawPRE380cases passed. Constant-prior
 posthoc control has exactlysame DEVcommands. Fresh T00 Solxhigh review NEXT;
 T01 remains UNRUN. Complete T00 review before finalfit.
+
+AUTHORITATIVE USER REDIRECTION: ward experimentation DISCONTINUED at3/4fits.
+T01 must remain UNRUN. See USER-DISCONTINUATION.json and T00-REVIEW.md. The fourfit
+protocol is NOT complete. Switch to movement_experts / experiments/v15.
