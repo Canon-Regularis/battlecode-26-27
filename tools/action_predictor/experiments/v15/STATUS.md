@@ -19,3 +19,7 @@ covering full final experiment. No additional fit without separatebudget; origin
 successcriteria unchanged. Both75+75sealed;no matches/simulations/downloads/botchanges.
 PR11 DRAFT/open/unmerged only, noautomerge/queue/defaultpush. Immediately link after
 an eventualpush; local commits notyetpushed. Preserve unrelated untracked files.
+
+S00 review COMPLETED: validnegative, no promotion/seeds. Two reporting gaps fixed
+additively via S00-loss-supplement.json (percategory NLL +6V7diagnostic hashes).
+X00isNEXT, finalfitof2. Component diagnostics prospectivelydeclared separately.

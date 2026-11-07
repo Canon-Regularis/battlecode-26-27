@@ -1,0 +1,28 @@
+{
+  "review_task": "0ca4a334-85d3-4856-91f4-8b68d29a1c8a",
+  "reviewed_head": "86a298dcf5ec5b912d491e98fc26dbbe2dff2330",
+  "verdict": "Valid negative, no promotion/repeat seeds",
+  "findings": [
+    {
+      "id": 1,
+      "status": "acknowledged_demonstrated_failure",
+      "evidence": "S00-REPORT.md",
+      "note": "Support exists, weaker destination fit already on naturalTRAIN; no definitive cause assigned."
+    },
+    {
+      "id": 2,
+      "status": "resolved_additively",
+      "evidence": "S00-loss-supplement.json",
+      "note": "Complete per-category observed joint/type/argument loss, unchanged nonmovement loss explicit; shops arguments absent."
+    },
+    {
+      "id": 3,
+      "status": "resolved_additively",
+      "evidence": "S00-loss-supplement.json",
+      "note": "Six diagnostic arrays and originalV7receipt hash bound and verified; no extraction repeated."
+    }
+  ],
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "approval_scope": "S00 only; fresh review still required after X00."
+}
