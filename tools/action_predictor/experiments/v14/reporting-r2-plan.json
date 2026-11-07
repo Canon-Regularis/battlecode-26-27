@@ -1,0 +1,42 @@
+{
+  "id": "ward-reporting-r2",
+  "reason": "FreshP00review: addall-familyconditionalmetrics,pairedspecialistcomparisons,TRAINcontexts and correctcompletionbindings;no newfits/thresholds/checkpointchoices.",
+  "strata": {
+    "ward_state": [
+      "available",
+      "unavailable"
+    ],
+    "charges": [
+      "zero",
+      "one",
+      "two_or_more"
+    ],
+    "prior_ward": [
+      "present_in32actualownroots",
+      "unavailable"
+    ],
+    "coverage": [
+      "ward_state_unavailable",
+      "no_known_allyordinaryward",
+      "known_allyward_disabled_or_not_covering_actor",
+      "active_allyward_geometriccoverage_at_actor"
+    ],
+    "readiness": [
+      "channelled",
+      "free"
+    ],
+    "movement": [
+      "previous_direction_continuation",
+      "direction_change",
+      "no_previous"
+    ],
+    "champion": "allobservedchampiontypeswithsupport",
+    "engine": "2/3separately;engine3DEVonegroupconfounded"
+  },
+  "comparison": "P01-P00 andT01-T00 directmatchedfeaturecontrols, alongsideeachcompletepredictionvsG00. C-vsA isolates typinggivenplacement;C-vsB isolatesplacementgiventyping. Samepaired2000wholeoriginalDEVgroupdraws seed20261106. Correctlytypedconditional ownsubsets andmatchedtypedintersection separated. Emptydenominatorsnull;nosparse-categorycertification.",
+  "coverage": "GeometricallywithinSDKwardradius of knownnon-disabledallyward,notactualLOS. OriginalallDEVrowsretained;contextstrata diagnosticsneverreplaceoverallbenchmark.",
+  "no_fit_change": true,
+  "source_sha256": "3f391f4dad42eda554a9fdb6a35d05b8497602d79095fd0a7f2d2db471760e04",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

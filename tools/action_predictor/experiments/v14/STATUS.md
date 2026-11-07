@@ -1,58 +1,32 @@
-# Current ward experiment continuation checkpoint
+# Ward experiment continuation checkpoint
 
-Latest user task is the FOUR-FIT ward specialization experiment. It supersedes
-the unrun V13 B01/B02 goal/memory allocation. Do not restart those fits or partial
-memory preparation. Preserve all unrelated untracked frequency/benchmark files.
+Four frozen fits: P00 completed and independently reviewed; P01 is next;
+T00/T01 remain unrun. No model repeats, no extra goal/memory fits.
 
-Completed: all changed ward input preparation on470TRAINgames/433071rows and
-25DEVgames/14439rows;305992TRAINpersonalAPIwardqueries;100%candidate coverage on
-10842TRAIN/112DEVwardlabels. Fullcontrol reproduces G00 complete primarycommands.
-Frozen four-fit protocol and no-fit baselines exist. Current source checkpoint
-before P00 fit isba95616 (get fullSHA read-only); existing pushed DRAFT PR11 is
-still39dd724, V13/V14 localcommits not pushed yet.
+P00 is a valid negative result: conditional DEV25/112 versus24/112,
+joint7/112 unchanged. Its fresh review reporting findings are resolved in
+P00-review-response.json and P00-REPORT-ADDENDUM.md. The original receipts stay
+frozen. The corrected pure uniform control is10/112DEV; maskedG00 remains24/112.
+The reporting-r2-plan prospectively fixes context strata and direct feature
+comparisons before the remaining fits. Use completion_v2 for future receipts.
 
-P00 COMPLETED, selected18/24; never rerun it. Conditional DEV25/112 versus24;
-TRAIN2247/10842 versus2274; natural445/2192 versus449. No primary joint gain:
-7/112ward,overall11510/14439,macro.6323935. RawPRE408cases passed. No promotion
-or repeat seeds. Fresh required GPT6.1Sol xhigh review is the NEXT action with
-the exact user question. Follow its async next/end-turn rule.
+Next commands (pinned interpreter, repository root):
+- python -m tools.action_predictor.ward_experts.fit P01
+- python -m tools.action_predictor.ward_experts.evaluate A P01
+- python -m tools.action_predictor.ward_experts.roundtrip A P01
+- python -m tools.action_predictor.ward_experts.diagnose P01
+- python -m tools.action_predictor.ward_experts.reporting A control P00-head
+- python -m tools.action_predictor.ward_experts.completion_v2 P01 A
+Then obtain a FRESH requested GPT-6.1 Sol xhigh review before another fit.
 
-After addressing that review, execute P01 ONCE, fresh review; T00 ONCE, fresh
-review; T01 ONCE, fresh review of the completed experiment. Fourinitialfits only,
-no extra optimizer/capacity probes. Existing R02 fitted110/128wardexamples; P00
-input-use probe is forward-only. Do not treat one review as approval for later
-results. Shared protocol remains frozen; do not tune thresholds/checkpoints.
+T00 evaluates as T00-only - T00. T01 official B uses - T01; C uses P01 T01.
+A is always P01 regardless which placement wins. No retrospective substitutions.
+Primary hierarchical type/conditional decoding preserves A's fixed actions;
+secondary joint MAP is separately predeclared with the identical distribution.
 
-Commands from F:/Code/battlecode-26-27 with pinned .venv-action-predictor/Scripts/python.exe:
-
-- -m tools.action_predictor.ward_experts.fit P01
-- -m tools.action_predictor.ward_experts.evaluate A P01
-- -m tools.action_predictor.ward_experts.roundtrip A P01
-- -m tools.action_predictor.ward_experts.diagnose P01
-- -m tools.action_predictor.ward_experts.completion P01 A
-
-Typing fits T00/T01 use same fitter. Evaluate T01 B with `evaluate B - T01`,
-combined C with `evaluate C P01 T01`; use runtime roundtrip equivalent args.
-P00-head is a simpler-control evaluation; officialAusesP01, BusesT01, Cusesboth,
-regardless which model wins DEV. T00is the matched simpler typingcontrol.
-Extend completion.py for proper typing/combined commands if needed; its current
-two-argument convenience lists placement commands. Do not issue false receipts.
-
-Primary ALLarms typeargmax thenconditionalargmax preserves A action choices
-exactly. Its type/conditional factors are normalized but it is NOT jointMAP.
-Secondary fulljointMAP uses identical probabilitytables in everyarm againstQ00,
-reported separately; no retrospective decoder selection. Neither route uses
-recorded currentfamily at inference. Conditional givenrecordedward is diagnostic.
-
-Natural-prevalence classweights use TRAIN labels only; all433071typingrows remain.
-This corrects binaryclassmarginals, notunknown withinclass sampling. Report
-calibration/FP/recallconfusion, originalnonwardregressions, naturalTRAINvsDEV,
-champion/enginecontextsupport andpaired whole-groupuncertainty. No seed budget
-spent unless protocolpartialbenefitguard passes and a separatebudgetis frozen.
-Original>=90%everyadequatecategory/macro/move/NLL/targeting/3seed goals unchanged.
-
-Finally update PR11 as DRAFT/open/unmerged only; immediately link after push.
-Never ready/merge/automerge/queue/deploy/defaultpush. Both75+75reserved SEALED.
-No matches, hypotheticalproposedactions, replaydownloads, playingbotchanges or
-unchanged495-game audit. Shops43strictunassessed, missingargumentloss absent;
-sparsealtar/teleport/submit andambiguousentityIDs uncertified.
+Preserve all earlier caches, checkpoints, negative results and unrelated
+untracked preparation. No reserved75+75payloads, matches, simulations, downloads,
+playing-bot changes or deployment. Original DEV denominator fixed. Shop43 strict
+unassessed failures; sparse categories and ambiguous entity identities uncertified.
+PR11 DRAFT/open/unmerged only, no auto-merge/queue/default push. Local V13/V14
+commits remain unpushed; immediately link PR after any eventual push.

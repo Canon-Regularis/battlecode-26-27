@@ -1,0 +1,97 @@
+{
+  "original_receipt_sha256": "3a9fecbb4ad060a5e33700e32617435497cd40f5d88ca8caf11557cceda4c72f",
+  "results": {
+    "train": {
+      "TRAIN_offset_prior": {
+        "rows": 10842,
+        "exact": 1080,
+        "accuracy": 0.0996126175982291,
+        "conditional_nll": 2.9364056288121323,
+        "natural": {
+          "rows": 2192,
+          "exact": 218,
+          "accuracy": 0.09945255474452555
+        }
+      },
+      "masked_G00": {
+        "rows": 10842,
+        "exact": 2325,
+        "accuracy": 0.2144438295517432,
+        "conditional_nll": 2.545624600601081,
+        "natural": {
+          "rows": 2192,
+          "exact": 458,
+          "accuracy": 0.20894160583941607
+        }
+      },
+      "original_G00": {
+        "rows": 10842,
+        "exact": 2274,
+        "accuracy": 0.2097399003873824,
+        "conditional_nll": 2.565663974735618
+      },
+      "uniform_plus_G00_tail": {
+        "rows": 10842,
+        "exact": 2325,
+        "accuracy": 0.2144438295517432,
+        "conditional_nll": 3.198093186632989,
+        "natural": {
+          "rows": 2192,
+          "exact": 458,
+          "accuracy": 0.20894160583941607
+        }
+      },
+      "pure_uniform": {
+        "rows": 10842,
+        "exact": 1083,
+        "accuracy": 0.09988931931377974,
+        "conditional_nll": 3.198265018340475,
+        "unsupported_target_rows": 0,
+        "tie": "Lowest coordinate index among valid cells; no G00 probabilities or learned tail",
+        "natural": {
+          "rows": 2192,
+          "exact": 216,
+          "accuracy": 0.09854014598540146
+        }
+      }
+    },
+    "validation": {
+      "TRAIN_offset_prior": {
+        "rows": 112,
+        "exact": 10,
+        "accuracy": 0.08928571428571429,
+        "conditional_nll": 2.9906198443179255
+      },
+      "masked_G00": {
+        "rows": 112,
+        "exact": 24,
+        "accuracy": 0.21428571428571427,
+        "conditional_nll": 2.6728258621558227
+      },
+      "original_G00": {
+        "rows": 112,
+        "exact": 24,
+        "accuracy": 0.21428571428571427,
+        "conditional_nll": 2.6958318392786986
+      },
+      "uniform_plus_G00_tail": {
+        "rows": 112,
+        "exact": 24,
+        "accuracy": 0.21428571428571427,
+        "conditional_nll": 3.204060942806844
+      },
+      "pure_uniform": {
+        "rows": 112,
+        "exact": 10,
+        "accuracy": 0.08928571428571429,
+        "conditional_nll": 3.2042266713739096,
+        "unsupported_target_rows": 0,
+        "tie": "Lowest coordinate index among valid cells; no G00 probabilities or learned tail"
+      }
+    }
+  },
+  "correction": "The old uniform control was mixed with1e-4G00tail, which selects its mode on exactuniformties. Preserve itsmeasurement withcorrectname; pureuniformdoesnotuseG00. No model/checkpoint/prediction changes.",
+  "source_sha256": "a0cffe0c2e228a9558e563e0d60613f20fbcb8cbae737f6f1d2f25f806aa7696",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
