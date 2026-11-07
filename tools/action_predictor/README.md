@@ -2,6 +2,12 @@
 
 ## Current root-cause investigation — production training paused
 
+The [unsupported-command and TRAIN-rescue audit](experiments/v11/UNSUPPORTED-AND-TRAINING-RESCUES.md)
+attributes all1,301 hard-support misses to specific restrictions, confirms an
+omitted personally observable altar-lock target category, and partitions the
+28,903 natural TRAIN rescue opportunities. It also measures why forcing the
+point branch destroys many existing correct predictions. No fit was run.
+
 The [selector-specific follow-up](experiments/v11/WHY-SELECTION-FAILS.md)
 quantifies a training/decoder mismatch: the correct point command ranks first in
 886 available-command failures but is overridden by the fallback. On571 failures,

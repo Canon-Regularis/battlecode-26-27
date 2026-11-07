@@ -1,0 +1,442 @@
+{
+  "plan_sha256": "8e95837968455893f42696db15dbdba13e5140aa9b90bb26825e9ef10662db77",
+  "source_sha256": "98891ce6f0b40b95c7a4674a29d5c668bd8c5155eab85914cca415b93cfd1740",
+  "DEV": {
+    "rows": 14439,
+    "missing": 1301,
+    "per_family": {
+      "altar": {
+        "rows": 2,
+        "no_true_family_in_point_or_G00_forecast": 2,
+        "true_family_emitted_but_wrong_parameter": 0,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 2,
+        "G00_type_correct_but_parameter_wrong": 0,
+        "G00_type_and_parameter_both_wrong": 0
+      },
+      "attack": {
+        "rows": 13,
+        "no_true_family_in_point_or_G00_forecast": 4,
+        "true_family_emitted_but_wrong_parameter": 9,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 4,
+        "G00_type_correct_but_parameter_wrong": 8,
+        "G00_type_and_parameter_both_wrong": 1
+      },
+      "blocked": {
+        "rows": 102,
+        "no_true_family_in_point_or_G00_forecast": 70,
+        "true_family_emitted_but_wrong_parameter": 32,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 16,
+        "G00_type_correct_but_parameter_wrong": 32,
+        "G00_type_and_parameter_both_wrong": 54
+      },
+      "cast_0": {
+        "rows": 7,
+        "no_true_family_in_point_or_G00_forecast": 0,
+        "true_family_emitted_but_wrong_parameter": 7,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 0,
+        "G00_type_correct_but_parameter_wrong": 6,
+        "G00_type_and_parameter_both_wrong": 1
+      },
+      "cast_1": {
+        "rows": 118,
+        "no_true_family_in_point_or_G00_forecast": 51,
+        "true_family_emitted_but_wrong_parameter": 67,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 27,
+        "G00_type_correct_but_parameter_wrong": 63,
+        "G00_type_and_parameter_both_wrong": 28
+      },
+      "move": {
+        "rows": 409,
+        "no_true_family_in_point_or_G00_forecast": 1,
+        "true_family_emitted_but_wrong_parameter": 408,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 31,
+        "G00_type_correct_but_parameter_wrong": 327,
+        "G00_type_and_parameter_both_wrong": 51
+      },
+      "priority": {
+        "rows": 505,
+        "no_true_family_in_point_or_G00_forecast": 0,
+        "true_family_emitted_but_wrong_parameter": 505,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 38,
+        "G00_type_correct_but_parameter_wrong": 272,
+        "G00_type_and_parameter_both_wrong": 195
+      },
+      "shop": {
+        "rows": 43,
+        "no_true_family_in_point_or_G00_forecast": 1,
+        "true_family_emitted_but_wrong_parameter": 42,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 0,
+        "G00_type_correct_but_parameter_wrong": 42,
+        "G00_type_and_parameter_both_wrong": 1
+      },
+      "teleport": {
+        "rows": 2,
+        "no_true_family_in_point_or_G00_forecast": 0,
+        "true_family_emitted_but_wrong_parameter": 2,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 0,
+        "G00_type_correct_but_parameter_wrong": 2,
+        "G00_type_and_parameter_both_wrong": 0
+      },
+      "ward": {
+        "rows": 100,
+        "no_true_family_in_point_or_G00_forecast": 0,
+        "true_family_emitted_but_wrong_parameter": 100,
+        "oracle_conditional_parameter_correct_but_wrong_G00_type": 17,
+        "G00_type_correct_but_parameter_wrong": 26,
+        "G00_type_and_parameter_both_wrong": 57
+      }
+    },
+    "primitive_reasons": {
+      "altar": {
+        "action_family_has_no_point_generator": 2
+      },
+      "attack": {
+        "eligible_target_not_chosen_by_near_hp_fraction_ranks": 9,
+        "no_compatible_living_personally_visible_entity_at_recorded_target": 4
+      },
+      "blocked": {
+        "no_blocked_outcome_generator": 102
+      },
+      "cast_0": {
+        "eligible_target_not_chosen_by_near_hp_fraction_ranks": 7
+      },
+      "cast_1": {
+        "ground_only_target_mode_not_implemented": 106,
+        "eligible_target_not_chosen_by_near_hp_fraction_ranks": 11,
+        "ground_capable_target_not_in_compatible_unit_proposals": 1
+      },
+      "move": {
+        "terrain_field_optimum_only": 77,
+        "no_progress_to_current_goal_family": 147,
+        "alternative_optimal_greedy_tie": 185
+      },
+      "priority": {
+        "priority_proposal_only_zero": 500,
+        "missing_position_global_abstention": 5
+      },
+      "shop": {
+        "original_item_count_arguments_unavailable_strict_failure": 43
+      },
+      "teleport": {
+        "action_family_has_no_point_generator": 2
+      },
+      "ward": {
+        "ward_direction_not_self_or_one_step_toward_bank": 12,
+        "ward_range2_absent_from_self_or_bank_step1": 88
+      }
+    },
+    "blocked_context": {
+      "rows": 102,
+      "empty_mask": 88,
+      "move_flag_unavailable": 88
+    },
+    "ward_context": {
+      "rows": 100,
+      "offset_distribution": {
+        "1": 12,
+        "2": 88
+      },
+      "charges_distribution": {
+        "1": 100
+      }
+    },
+    "cast1_masks": {
+      "16": 106,
+      "3": 10,
+      "19": 2
+    },
+    "other_existing_predictions_correct_on_missing": {
+      "C00_terrain_library": 65,
+      "M01": 22,
+      "P05": 15,
+      "G01": 22
+    },
+    "conditional_argument_overlay_total": 135,
+    "limits": "Otherpreviouspredictions/conditionalheadvaluesareORACLEdiagnostics,notavailableA00commands.No neworacleinferenceor expandedlibraryaccuracyclaim."
+  },
+  "natural_TRAIN": {
+    "opportunities": 28903,
+    "partition": {
+      "rescued": 3814,
+      "correct_point_top_but_fallback_veto": 15422,
+      "wrong_global_point_rank_but_correct_within_true_family": 3980,
+      "wrong_within_true_family_parameter_rank": 5687
+    },
+    "original_router_partition": {
+      "correct_top_fallback": 15422,
+      "wrong_top_fallback": 9461,
+      "wrong_top_point_selected": 206
+    },
+    "per_family": {
+      "attack": {
+        "opportunities": 1631,
+        "rescued": 439,
+        "correct_global_point_rank": 1024,
+        "correct_point_vetoed": 585,
+        "wrong_global_type_rank_but_correct_within_family": 394,
+        "wrong_within_family_parameter_rank": 213
+      },
+      "cancel": {
+        "opportunities": 874,
+        "rescued": 30,
+        "correct_global_point_rank": 724,
+        "correct_point_vetoed": 694,
+        "wrong_global_type_rank_but_correct_within_family": 150,
+        "wrong_within_family_parameter_rank": 0
+      },
+      "cast_0": {
+        "opportunities": 739,
+        "rescued": 8,
+        "correct_global_point_rank": 20,
+        "correct_point_vetoed": 12,
+        "wrong_global_type_rank_but_correct_within_family": 589,
+        "wrong_within_family_parameter_rank": 130
+      },
+      "cast_1": {
+        "opportunities": 387,
+        "rescued": 1,
+        "correct_global_point_rank": 3,
+        "correct_point_vetoed": 2,
+        "wrong_global_type_rank_but_correct_within_family": 336,
+        "wrong_within_family_parameter_rank": 48
+      },
+      "end": {
+        "opportunities": 2220,
+        "rescued": 121,
+        "correct_global_point_rank": 882,
+        "correct_point_vetoed": 761,
+        "wrong_global_type_rank_but_correct_within_family": 1338,
+        "wrong_within_family_parameter_rank": 0
+      },
+      "move": {
+        "opportunities": 11936,
+        "rescued": 764,
+        "correct_global_point_rank": 6153,
+        "correct_point_vetoed": 5389,
+        "wrong_global_type_rank_but_correct_within_family": 487,
+        "wrong_within_family_parameter_rank": 5296
+      },
+      "recall": {
+        "opportunities": 11012,
+        "rescued": 2436,
+        "correct_global_point_rank": 10405,
+        "correct_point_vetoed": 7969,
+        "wrong_global_type_rank_but_correct_within_family": 607,
+        "wrong_within_family_parameter_rank": 0
+      },
+      "submit": {
+        "opportunities": 28,
+        "rescued": 15,
+        "correct_global_point_rank": 25,
+        "correct_point_vetoed": 10,
+        "wrong_global_type_rank_but_correct_within_family": 3,
+        "wrong_within_family_parameter_rank": 0
+      },
+      "ward": {
+        "opportunities": 76,
+        "rescued": 0,
+        "correct_global_point_rank": 0,
+        "correct_point_vetoed": 0,
+        "wrong_global_type_rank_but_correct_within_family": 76,
+        "wrong_within_family_parameter_rank": 0
+      }
+    },
+    "forced_point_decoder": {
+      "rows": 288801,
+      "correct": 189438,
+      "accuracy": 0.6559464821797708,
+      "fixes_A00_errors": 15422,
+      "regresses_A00_correct": 65782,
+      "rescuable_errors_fixed": 19236,
+      "not_promoted": true
+    },
+    "optimizer_exposure": {
+      "all_augmented_TRAIN": {
+        "both_G00_and_point_correct": {
+          "rows": 303410,
+          "fraction": 0.7006010561778554,
+          "mean_fallback_logit_derivative": 0.00775144761428237,
+          "contribution_to_overall_fallback_bias_derivative": 0.005430672317743301
+        },
+        "rescuable_G00_error": {
+          "rows": 37915,
+          "fraction": 0.08754915475753398,
+          "mean_fallback_logit_derivative": 0.15802797675132751,
+          "contribution_to_overall_fallback_bias_derivative": 0.01383521594107151
+        },
+        "only_G00_hard_command_correct": {
+          "rows": 26649,
+          "fraction": 0.061534944616471667,
+          "mean_fallback_logit_derivative": -0.050570905208587646,
+          "contribution_to_overall_fallback_bias_derivative": -0.0031118779443204403
+        },
+        "neither_hard_option_correct": {
+          "rows": 65097,
+          "fraction": 0.150314844448139,
+          "mean_fallback_logit_derivative": -0.09730982035398483,
+          "contribution_to_overall_fallback_bias_derivative": -0.014627110213041306
+        }
+      },
+      "natural": {
+        "both_G00_and_point_correct": {
+          "rows": 218236,
+          "fraction": 0.7556622033857223,
+          "mean_fallback_logit_derivative": 0.009396862238645554,
+          "contribution_to_overall_fallback_bias_derivative": 0.00473532872274518
+        },
+        "rescuable_G00_error": {
+          "rows": 28903,
+          "fraction": 0.1000792933542474,
+          "mean_fallback_logit_derivative": 0.17017416656017303,
+          "contribution_to_overall_fallback_bias_derivative": 0.011357361450791359
+        },
+        "only_G00_hard_command_correct": {
+          "rows": 17971,
+          "fraction": 0.06222623882881292,
+          "mean_fallback_logit_derivative": -0.0340476855635643,
+          "contribution_to_overall_fallback_bias_derivative": -0.0014128652401268482
+        },
+        "neither_hard_option_correct": {
+          "rows": 23691,
+          "fraction": 0.08203226443121735,
+          "mean_fallback_logit_derivative": -0.1021360456943512,
+          "contribution_to_overall_fallback_bias_derivative": -0.005587317049503326
+        }
+      },
+      "augmentation_only": {
+        "both_G00_and_point_correct": {
+          "rows": 85174,
+          "fraction": 0.5903791502044777,
+          "mean_fallback_logit_derivative": 0.0035355056170374155,
+          "contribution_to_overall_fallback_bias_derivative": 0.0006953435949981213
+        },
+        "rescuable_G00_error": {
+          "rows": 9012,
+          "fraction": 0.06246620919110002,
+          "mean_fallback_logit_derivative": 0.11907318234443665,
+          "contribution_to_overall_fallback_bias_derivative": 0.0024778558872640133
+        },
+        "only_G00_hard_command_correct": {
+          "rows": 8678,
+          "fraction": 0.060151105565952726,
+          "mean_fallback_logit_derivative": -0.08478833734989166,
+          "contribution_to_overall_fallback_bias_derivative": -0.0016990129370242357
+        },
+        "neither_hard_option_correct": {
+          "rows": 41406,
+          "fraction": 0.28700353503846954,
+          "mean_fallback_logit_derivative": -0.09454841166734695,
+          "contribution_to_overall_fallback_bias_derivative": -0.00903979130089283
+        }
+      }
+    },
+    "interpretation": "Analyticgradientnegative=>descentincreasesfallbacklogit;positive=>decreasesit. UncoveredrowsmustuseG00distributionfornonzero likelihood,evenwhenitshardforecastiswrong. This is structuralpressure,notproofsampling/optimizercausedrankingfailure. Known-familydiagnosticusesrecordedfamilyonlytoaudit,notforecast."
+  },
+  "PRE_sources": [
+    {
+      "raw": "213b526318b71ea4f8e5951d108b8e77eaedb51368c4b33874ae51a07dbdc891",
+      "source": "2493a72043ff2b65328572d8b08c8d4e3080d563a032025071c0e30685d7fad6"
+    },
+    {
+      "raw": "0d7cbc1ea5d12541d03aadf95297ae88bd86be6d2104af4d08d4f2c00336397f",
+      "source": "b643b7ddb5032e8f8a33a0e56dfa78258fa9749c406b7f14351acbdec7da269d"
+    },
+    {
+      "raw": "1489e159553b4aced0304fba858ec39266fe6ab8f2e607bd1d411dd1ce8efaa1",
+      "source": "b175c3ddfba9fe1a2e991d98082520cb205640fa1177825a74e4645b2cdb0cfa"
+    },
+    {
+      "raw": "748a155fe5fe70dee7a65b8293c631abd81bf24805fc7a1099e9b1145f77d7c0",
+      "source": "6cb69d5ec447c6c302bc4eea2c0b6841022c1c5e5bf8aa3da96002ef9fac4e29"
+    },
+    {
+      "raw": "e376369aa8c54f9f38937632e4e80f42d1f443ad1b03499e4bbb7ca1d949a0aa",
+      "source": "bd5b812f01f61ab8d97462b316fa3866fa1f207ac3560b8f70cb0f0e2dc39981"
+    },
+    {
+      "raw": "4a10e87aed5187146862b5800152a2fde1ca69c85bc805084da96358399a225c",
+      "source": "3d519e381f9e307467e1f1def03849f41ab19bdd398422586fa5164448f1c906"
+    },
+    {
+      "raw": "46cd250e7d311ea71bd6e6984fc3cc194b3c82ad1981bb54d0496d69b0ad3c46",
+      "source": "7078962c528e4de38867606ec837937fb4501b05579e0b192c7d98f8fd251a87"
+    },
+    {
+      "raw": "2bf54e5c110677a4c1fa4352ab31994986afaab7d9f525bc2379d8cca4bdd062",
+      "source": "a421d122d9ebf73481d484cac7f1df06adc8f0813fff27829c169bcefc668a4f"
+    },
+    {
+      "raw": "d98f7f7b11d54ac46122ccd9b687a82ebf1a63104b52a36fd7691ccc1fb0867f",
+      "source": "d27b0c74adef3be47535ac03154667c30453611d240c7df270888de0ca295a93"
+    },
+    {
+      "raw": "895c046b02bc35bcab039da89498c5a531e029acf8e6bfe589da7549f707b4b2",
+      "source": "53ae0ff1d739eefd87aff9d865535e410ee7b78d7f6f97841a232c56d59b9909"
+    },
+    {
+      "raw": "64d2bdf9c7287cc22b924141b1bb84d75bfa90d0a1c55506b94aa9fdc655b08e",
+      "source": "1d2cc7aeff00c99879b8ff902ec8b26816413170f38ef8f3ab4a3aca36449565"
+    },
+    {
+      "raw": "ccd105bb21396542d1666926a532fc0c2af069102d341315acd7622d61140a98",
+      "source": "77e6966e3d1502b91ca86558886198a3e3299ed16f1e7ea8ec7504dad9394b32"
+    },
+    {
+      "raw": "2efc76771b78a267d4a7d82535a7f4a4d59e649b2d48378b4e44a2e479e100ce",
+      "source": "6f8e7ada0d08c27d9f1da5275cff1391beb639b2532f921ee4c6d559bc579e62"
+    },
+    {
+      "raw": "f2009d38b647f2c6d00d09b76efbe22070f0bc8ee4cbe342c785cb43e71273e1",
+      "source": "ac36233c95a6ef8939cf5d4918f29afe0cd7a969132cb72988b55be6aa61bb79"
+    },
+    {
+      "raw": "30d801fb5abc183f0adaf499f577da7f1542eede102e1c8bd6d5fc5d913836f5",
+      "source": "250278094f97faa6fbba36b7bf711b16b168b65a1474dd9d830f50692995c03c"
+    },
+    {
+      "raw": "58fcf5d043c58fff897da0040bf2961c33a5553b62ca07d6c3afe3c682cd9437",
+      "source": "1e3511e4569dda5e34cfebf04208bd056bf46e0ffb2e513f69f33f024dd34494"
+    },
+    {
+      "raw": "d048b3c63611636cfeaa37e57c93b5f0bfc0e0d7c51fa661a49e50aafcae6c8d",
+      "source": "5c0d74c47f8d3b21ef7247ca2cfba2a9ccf88c4388f605fdc07f80e50a4009d9"
+    },
+    {
+      "raw": "c136bf775b228cd285ec59e2437a13dbd7c8191b21a53ca2f14469fda3a22d5b",
+      "source": "30c7675e76dd7f434af52898a14b32a581d15839d0683ac23c06327cbd386213"
+    },
+    {
+      "raw": "6531a13db23a276e8abb21794c46650cf401b5152e0fbe9e85bf919d7f0d12d3",
+      "source": "8a2bea41a885f2bb3660277715e0a96cac0b39bd3dbad9fe65d5ed89e202a3e6"
+    },
+    {
+      "raw": "e161b6b5426f0ae569dbfa339a3a6ba588f8006812fc403bcfbcc22363a4ffc6",
+      "source": "6a6e42d21fdf2e1b49431f558946f6125bb3a2f4f3982262002cbdebd73416bf"
+    },
+    {
+      "raw": "675cc775d6158e3bea5937066b954994ce017b54d4a5e9a22df976dff531a432",
+      "source": "8b390e44d9485242947b862a065c6e1ef6cb87837d48dc1268359e5f8172cda5"
+    },
+    {
+      "raw": "4f0fc92e67ac94421958d835f161875b0b78f63a9944ba03311602732988f524",
+      "source": "37f083f0d471fa47eb362963d41719818607d65172e84ee5e612f37aeb1e21c2"
+    },
+    {
+      "raw": "b08b3e4fa1827f86d060e49c7b7523df72348347cf21668eabfc80d91929798b",
+      "source": "ddae036ff9c63a0e16b776717fecc79bf4327c74dd9eb5ba3161d60e5d3b4a4d"
+    },
+    {
+      "raw": "02930b1f6290d7f786c3eb1006bcbf77b9a153464a1df44e9a60679ecd08bf8b",
+      "source": "6c0b1bcb696d900e9f851d72bbe676ae130bb7cab51e29f72dbef5886ffbbfb1"
+    },
+    {
+      "raw": "7821e163c66ff783c9fb5e58e2980c8485f075497577af4923e7d4c750ddbf7d",
+      "source": "30c60dda2fa89ec3a687d5ce3af2ad6ebb6afcf6a2265b8e7251e567fe689a2c"
+    }
+  ],
+  "witnesses_sha256": "e88f776d796274dc33b23211608e673902a53fc749c20c18c9e2b73274da186a",
+  "old_S00_receipt_sha256": "fbd6bb0b0ab12217c56365989b418e79ec64b92cac24fe1fc2757099735ab2a6",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "original_checkpoints_unchanged": true
+}

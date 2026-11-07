@@ -1,0 +1,20 @@
+{
+  "files": {
+    "tools\\action_predictor\\diagnosis\\support_and_rescue.py": "98891ce6f0b40b95c7a4674a29d5c668bd8c5155eab85914cca415b93cfd1740",
+    "tools\\action_predictor\\diagnosis\\missing_target_kinds.cjs": "e514558e47a5be44dae2ba43eebeb6c226a9f8769d26c0ee954a17d9f093a038",
+    "tools\\action_predictor\\experiments\\v11\\U00-plan.json": "8e95837968455893f42696db15dbdba13e5140aa9b90bb26825e9ef10662db77",
+    "tools\\action_predictor\\experiments\\v11\\U00-support-rescue.json": "cb62c851562c143d63aa6154acdf719db98650eda31b641f53de4d71138c6d8c",
+    "tools\\action_predictor\\experiments\\v11\\U00-target-kinds.json": "0b5a9648f5af0b6c41a42524295cfa2967b3dfd1fb09b845e2baef9859050dd3",
+    "tools\\action_predictor\\experiments\\v11\\U00-qualifications.json": "805df5e21d930747c78fff19dc152f3e6590e9b90bd0792f9f151053f17058fb",
+    "tools\\action_predictor\\experiments\\v11\\UNSUPPORTED-AND-TRAINING-RESCUES.md": "da6726ac70920382676109f1143d0d73ff286010e154125d279190118c666588"
+  },
+  "local_witnesses_sha256": "e88f776d796274dc33b23211608e673902a53fc749c20c18c9e2b73274da186a",
+  "local_target_query_sha256": "0a51aa8ab3d0cb789133aaa996c390fae332fe5880a3cf3eb7a3284d4cbc62d2",
+  "commands": [
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.support_and_rescue",
+    "node tools/action_predictor/diagnosis/missing_target_kinds.cjs"
+  ],
+  "verification": "1301rowpartition;28903TRAINopportunitypartition;forcedpointnet arithmetic;4targetqueries originalDEVmembership,personalactor/perspectiveandpinnedenginechecks. Oldreports/checkpoints unchanged. Newforensics not productiontraining.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
