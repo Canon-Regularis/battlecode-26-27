@@ -1,0 +1,33 @@
+{
+  "bindings": {
+    "tools\\action_predictor\\priority_diagnosis\\calibration.py": "6c4edac591e2d130efbe39a38ebeaa989d552326247d0a2ff05bb22d2cc47087",
+    "tools\\action_predictor\\experiments\\v19\\PC00.json": "df7ac3e050e7fcfe9f0a3372168ccb44a68852e24080b38db94cef5edd1f0dee",
+    "tools\\action_predictor\\experiments\\v21\\PC01.json": "94fe10bd3cffb2a0faed356b1ce9ae11ecdc1b9deabf650b934e18d1d4f6010d",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-0000-raw.npy": "276841fe98e5c309f0197cb2c609b440ebcae04fab2ced8ed12bab3a422c7264",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-0000-predictions.npz": "610d67bb20d520a8f19d0050b4069b3f114969a027266d7c75450ff47dac7050",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-2000-raw.npy": "1e70704b6f0392a467d984b05cadd41a50f0d50bc7356ff18ea0f5756c186b29",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-2000-predictions.npz": "8bcdb6a3d460c05a2f14f08a286b0d39526ef2cbf061166fbe7ac3b4f84c0d7a",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\original_fit-step-2000-raw.npy": "3f0c8107d6005658a3a7538435262ddceb00511148afa86027c8b042d14bde12",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\original_fit-step-2000-predictions.npz": "3e24d084b809092d4190a2332109f029c827bf7b0811d7bfe1984aff66752ff0",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-0000-raw.npy": "e806d5ad3040fbbba50bf2f6ea6447a80a08cde4ecb83fb99ffebc302fe6e2b2",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-0000-predictions.npz": "19f799048f7ab6cb9036365d1945995df5f6ea8e98fb67d4fc6c78c4dddf81a2",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-2000-raw.npy": "0ba5c87cced13aec34fcec8ad30b442a0761f14480a3a568b902e7bb621fd1c5",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-2000-predictions.npz": "49154a7bf24b9351d879e8568be4c2adc4c9033ca703a1469e4c3e900ce276dc",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\same_fit_groups-step-2000-raw.npy": "0f11c2cce318a73aa2e33b7276e7e7a4301a0536e10995195a9297f4903b52dd",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\same_fit_groups-step-2000-predictions.npz": "e007da5c40c9754b2434e47838e5cd3801c779a61deb3cbb8169f779ed652e5b",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-0000-raw.npy": "173910dd5a645acac4af1d8865b3188ad092da11b001660621bcb5c1e6aa3e79",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-0000-predictions.npz": "5c37bf4b2f032b57e7c123826ffe0827cdf7ac53cc2c412c5af0ade4b9131ab1",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-2000-raw.npy": "1350e693812498adcf181356413656fcd01d701455622d24f5bde23d52b99808",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-2000-predictions.npz": "c7f77bcc5b1af82e4fa4169e746a5fe5dd1550fed8977947733796df4b252efe",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\held_groups-step-2000-raw.npy": "7211441724e1b8bb44375cfca29679036333aa984ede308f6ebdc384479b687f",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\held_groups-step-2000-predictions.npz": "c5403a0ea652a86bd21851d95f50bc40581c9003b117ea2c139d50d86e7c2a37"
+  },
+  "purpose": "Distinguish higher confidence in wrong integer commands from lower recorded-target probability without sharper winning commands. Posthoc diagnostic, not a causal explanation of fitting/transfer or a calibration remedy.",
+  "bins": "Fixed 10 equal-width probability bins [0,.1),...,[.9,1], empty-bin accuracy null.",
+  "metrics": "Exact conditional integer-mode confidence; mode confidence on correct/error rows; fixed-bin ECE; binary correctness Brier (not full integer-distribution Brier); mean recorded-target probability and target rank from retained prediction archives.",
+  "comparisons": "Warm P05, fixed PC00 final, fixed PC01 final on identical 128-row cohorts. Original fit in-sample in both; controls excluded only from new optimization, previously seen by warm head and frozen encoder.",
+  "scoring": "Original normalized P05 probability arithmetic. No neural recomputation; reuse saved raw neural outputs. No fitting, threshold selection or score changes.",
+  "constraints": "TRAINonly; no DEV payload, reserved access, matches, downloads or bot/runtime work.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
