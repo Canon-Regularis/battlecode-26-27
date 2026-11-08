@@ -1,0 +1,20 @@
+{
+  "results": {
+    "direct": {
+      "max_next_type_probability_difference": 0.011260026029128137,
+      "max_next_state_prior_difference": 0.0
+    },
+    "hierarchy": {
+      "max_next_type_probability_difference": 0.0,
+      "max_next_state_prior_difference": 2.220446049250313e-16
+    }
+  },
+  "source_sha256": "77b51dc7276c96ae341949ad40e18217be9fbd738a909525e015e1055dbcf706",
+  "model_sha256": "3225908c75f333fbf590f2e9e0875944b4ac4194a34c73a4d8c68839e8a09a32",
+  "finding": "Direct recurrence explicitly encodes earlier integer values. In the original H01 prototype, the fixed integer likelihood is common to states and cancels from the Bayes posterior; its separate priority_value argument is unused. Both use causal evidence, but the effective prior-integer interface differs.",
+  "consequence": "H00 remains a valid direct policy fit. Resolve or explicitly control this effective-input difference BEFORE treating H01-minus-H00 as a matched duration-structure result. H01 is unrun. No current fit or frozen artifact is silently changed.",
+  "limits": "Synthetic no-update mechanism test, not a measured contribution to Fish movement errors. It does not justify blaming priority information or abandoning the movement study.",
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0
+}
