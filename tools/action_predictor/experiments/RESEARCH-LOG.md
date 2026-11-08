@@ -170,3 +170,14 @@ U01errors2410=1293wrongtypes+1076wrongargsaftercorrecttype+41typedmissingshops.
 No meaningfulbenefitfromthisnamedchannelwithfrozenforecaster,notrejectionof
 strategicgoals/historyorproofdatainsufficient. Alloriginalgoalsunmet, no
 promotion/seeds. NewfreshSolxhighreviewnext;chooseadistinctnextstudyafterit.
+
+U01freshSolxhighreviewvalidatesnegativecommandcounts; no newimplementation
+defectoverturnsresults. SurfaceNLLdecomposition: prioritytypingaccountsfor98.8%
+ofsmallU01-U00netlossreduction(-.630671/-.638083nats), whilemovementloss
+worsens+.322783nats. PoorL02prior-meanendpointdoesnotdiagnosewholemixture
+forecaster; componentalternatives/proxyquality/redundancy/optimizationremain
+unresolved. R02singlelogistic3/128cannotdiagnoseactualP05. Nextreview-
+recommendedexperiment: boundedactualP05capacity/transferprobe, usingfrozen
+M01contexts+recoveredcausalintegerinputs/int64anchors, disjointnew-head-control
+rows/groups withpriortrainingexposureexplicit. No morecurrentgeom/retention
+variants ornewarchitectureallocated. ReviewedstableV17/V18draftPRupdatefirst.
