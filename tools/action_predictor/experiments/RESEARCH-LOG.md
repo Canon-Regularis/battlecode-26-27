@@ -129,3 +129,16 @@ Versioned preflight passed: U01 full DEV prediction archive byte-identical L02;
 U00 semantic commands identical Q01 mean-geometry baseline, maxNLLdiff8.59e-6
 within prospective2e-5 contract. Initialization tensors identical across arms.
 U00 mean-control fit now authorized under frozen protocol; fresh review beforeU01.
+
+U00 mean-geometry readout control completed1fit, selectedround3of9 by unchanged
+NLL rule (5227selected/15678completed updates). DEV12033vsL0212064,45rescues
+76regressions; NLL.665298vs.656567, macro.609951vs.610444. Direction changes
+conditional304->321,joint273->288; continuation conditional1121->1099,
+joint1089->1065: continuation/change tradeoff already present without dynamic
+projection geometry. NaturalTRAIN strict247646->247810, change6297->6604,
+continue24489->24193; no DEV-only explanation of tradeoff. Current conditional
+mode reweight bound1514/2362below1541pointtarget. All originalcategorytargets
+remainunmet. U00 isnegative versusretainedL02 and initialmeancontrol (-32strict),
+not evidenceaboutincrementaldynamicgeometryuntilmatchedU01. Noepoch0promotion.
+Allcheckpoints/predictions/reviews/failuresretained. FreshSolxhighreviewnext;
+U01remainsunrunpendingreview. PR11remoteunchangedDRAFT; noreserved/botwork.

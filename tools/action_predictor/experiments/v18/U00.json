@@ -1,0 +1,90 @@
+{
+  "identifier": "U00",
+  "dynamic": false,
+  "source_commit": "9eedd4c58b90cb010d215c3cbc9b9edf2055c4d6",
+  "selected_round": 3,
+  "trace": [
+    {
+      "round": 1,
+      "train_command_nll": 0.6399833128367525,
+      "DEV_command_nll": 0.6722826962562104,
+      "updates": 1739,
+      "seconds": 27.86339879996376
+    },
+    {
+      "round": 2,
+      "train_command_nll": 0.6381527724688331,
+      "DEV_command_nll": 0.6894933047938987,
+      "updates": 3488,
+      "seconds": 27.695518900000025
+    },
+    {
+      "round": 3,
+      "train_command_nll": 0.6373007616065949,
+      "DEV_command_nll": 0.665297502308926,
+      "updates": 5227,
+      "seconds": 27.562128099962138
+    },
+    {
+      "round": 4,
+      "train_command_nll": 0.636658573507564,
+      "DEV_command_nll": 0.667125212735548,
+      "updates": 6970,
+      "seconds": 28.09218660002807
+    },
+    {
+      "round": 5,
+      "train_command_nll": 0.6361107033018271,
+      "DEV_command_nll": 0.680260442672369,
+      "updates": 8712,
+      "seconds": 27.63669710000977
+    },
+    {
+      "round": 6,
+      "train_command_nll": 0.6357075145280157,
+      "DEV_command_nll": 0.6708337032080777,
+      "updates": 10455,
+      "seconds": 27.71940810000524
+    },
+    {
+      "round": 7,
+      "train_command_nll": 0.6353028364128184,
+      "DEV_command_nll": 0.6719750889999256,
+      "updates": 12196,
+      "seconds": 27.49258959997678
+    },
+    {
+      "round": 8,
+      "train_command_nll": 0.6350879587364179,
+      "DEV_command_nll": 0.6768349585830866,
+      "updates": 13937,
+      "seconds": 27.619240499974694
+    },
+    {
+      "round": 9,
+      "train_command_nll": 0.6347004142868498,
+      "DEV_command_nll": 0.6671871366810725,
+      "updates": 15678,
+      "seconds": 27.73606920003658
+    }
+  ],
+  "selected_updates": 5227,
+  "completed_updates": 15678,
+  "trainable_parameters": 13662,
+  "resident_parameters": 104928,
+  "frozen_parameters_unchanged": true,
+  "initial_state_sha256": "cb173a28c83d4fd57b7d023a43852d34e07e787289efe9bf2d2433164102cbf8",
+  "checkpoint_sha256": "68b2f1861d1f1e63de2d025041547fa48da52e3519a7601179ee4a193bb8b183",
+  "predictions_sha256": {
+    "train": "ca571a04445b95a6cda44f5a2cb19e92c237bd909c1bd7f9ab3839ab63fc567e",
+    "validation": "51a25cac29e15a0003bc844391ffd014c4d035226f7b27f13bd65021fd22acc9"
+  },
+  "protocol_sha256": "5eb07edf1a23528084383e2d734a8f0dd6ddabb909aed643d81e2548283eb16f",
+  "upstream_receipt_sha256": "f06e795a1df27fa8aba8d6121882c55a3b694a2f7159005673b4c0c1b480b12d",
+  "seconds": 562.2059985999949,
+  "timing_scope": "After loading through optimization, DEV selection, final inference and serialization; not pure optimization time or full experiment cost.",
+  "new_fits": 1,
+  "reserved_opened": 0,
+  "promoted": false,
+  "three_seed_confirmed": false
+}
