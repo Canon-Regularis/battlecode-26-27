@@ -1,0 +1,16 @@
+{
+  "question": "Do state-conditioned emissions supply useful distinct movement alternatives, and does causal selection recover them?",
+  "endpoint": "Only the original selected H01checkpoint, never a different round or variant",
+  "scope": "All14439originalDEVrows forecast allfourcomponenttype/movement distributions before currentanswerassimilation; all2362truefamilymoves enter diagnostics afterward. Same original direction strata and predicted completecommands. No data deletion.",
+  "measures": [
+    "component-mode union vs actual conditional/joint accuracy",
+    "common-wrong dominance upperbound with frozen emissions and inputs",
+    "correct available mode only in lower conditional-state-weight heads vs mixture failure despite top-weight correct head",
+    "component total variation, distinct modes, target rank/probability and continuation/change",
+    "primary family-coordinate/type/prior parity"
+  ],
+  "interpretation": "Mode union is an oracle diagnostic, not achieved selection accuracy or a general mixture ceiling. Only the common-wrong first-argmax certificate proves impossibility under current nonnegative reweighting. Retraining execution or changing encoded observations can change that bound. Component names have no assumed intent.",
+  "source_sha256": "71b28e4337dc3e3d9cbb12e80c2481a719c10ca0eee506b6b30bfb4f1970c983",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
