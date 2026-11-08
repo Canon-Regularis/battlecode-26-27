@@ -67,3 +67,15 @@ checkpoint selection or variant promotion. Three intervention algebra/missing-
 position/mean-preservation tests pass. TRAIN references use all288801natural rows
 under original augmented traversal, never labels/future targets to define means.
 Fresh Sol6.1xhigh review after the full study, then continue automatically.
+
+Q01 original attempts hit their preregistered conditional-normalization guard:
+L01 4.7429367e-6 and L02 5.2645560e-6 versus2e-6. Both had seen all14439rows
+and unchanged-weight fingerprints. The producer wrongly asserted before writing
+forecast arrays; those first-attempt in-memory arrays were lost. Old sources,
+protocol, completed TRAIN references, failed directories and traces are retained.
+Versioned v2 recovery archives outputs before checks and keeps the original
+criterion explicitly failed where applicable. It separates padded/real rows,
+stores worst full-batch contexts and independently diagnoses float64 conditional
+and complete-command mixture arithmetic. No primary model, decoder, reference,
+contrast, benchmark row or training/checkpoint changes. Do not claim a numeric
+cause of policy failures until this diagnosis resolves it. See v17 recovery plan.

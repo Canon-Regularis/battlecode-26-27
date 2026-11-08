@@ -1,0 +1,30 @@
+{
+  "purpose": "Preserve primary outputs and diagnose failed conditional-probability normalization before interpreting Q01. This addendum does not convert the original failed criterion into a pass.",
+  "original_plan_sha256": "824f085fadb43caa0817d138e3245422c1a330d9ed90adc71a26911dce578afc",
+  "failure_receipt_sha256": "fc190812649c456f9a1708770447b4e98c66539e29ae60b9dc12df34b11e7ca6",
+  "original_normalization_limit": 2e-06,
+  "original_status": "FAILED for both original model runs; remains reported separately in v2.",
+  "unchanged": "Frozen L01/L02 weights, every input and14439DEV rows, TRAIN references, six contrasts, fixed/readout and causal-refilter logic, primary model.decode and model.observed calls and original metric definitions. No fitted model or checkpoint changes.",
+  "measurement_changes": [
+    "Archive every primary forecast/diagnostic before checks, never discard an attempt on a measurement failure.",
+    "Record probability-sum error separately for all batch rows and actual nonpadding decisions. Save worst full-batch contexts/geometry/primary forecasts/current observed labels only after forecasting, with padding flags.",
+    "For conditional move/blocked probabilities, independently normalize frozen component log probabilities in float64 and marginalize; report sum error, TV, mode discrepancies and observed-family NLL differences without overwriting any primary forecast.",
+    "Check complete MAP and observed NLL with independent float64 mixture arithmetic on all saved worst-case batches, preserving original batch shape. This is bounded numeric diagnosis, not a new policy, full independent filter, fresh test or strategy proof."
+  ],
+  "separate_numerical_assessment": {
+    "double_normalization_limit": 1e-12,
+    "observed_NLL_comparison_limit": 2e-05,
+    "semantic_MAP_agreement": "Report exact discrepancy counts; do not hide ties/mismatches or promote any alternative.",
+    "qualification": "These new diagnostic criteria are named separately from original2e-6 check, original benchmark success targets and all-bucket log checks. Original failure remains a failure even if higher precision explains it."
+  },
+  "paths": "New .cambc/action-predictor/v17/Q01-v2/<model>/ outputs; old Q01 attempt directories/source/plan preserved. Reuse original Q01 TRAIN references.",
+  "sources": {
+    "pathway_study_v2.py": "0b9e957a80544bf0463e251269c5e01b6320610ae85d7fd29779d55cfed368e0",
+    "pathway_evaluate_v2.py": "d889f1d4129f44baa29dc486a86e48b46406b670a2ae5361be76f27527d40675",
+    "pathway_numerics.py": "5a6b3aa2b95f3ed3f06406c7bfbdf36c093f36474b1c489664b5ebd2da06a4c5",
+    "pathway_numerical_cases.py": "ea96f0319a3ccdd9130b9f8a7f69383c6c2f2253e15ba0553e622a706e7653cb",
+    "test_pathway_numerics.py": "4ab3476f4915c4a0527d224e71be06e43ab5f837d460a545426890437d058d67"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}
