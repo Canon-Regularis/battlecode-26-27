@@ -1,0 +1,67 @@
+﻿{
+  "thread": {
+    "threadId": "thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v22-pc02-warm-regularized-priority-postfit-review-20261108",
+    "projectId": "b799910c-0e3c-47bc-a21c-c2e3e1dba78e",
+    "title": "PC02 warm-regularized priority model: independent post-fit challenge",
+    "link": "<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v22-pc02-warm-regularized-priority-postfit-review-20261108>",
+    "createdBy": "agent",
+    "creationSource": "mcp",
+    "status": "completed",
+    "latestRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v22-pc02-warm-regularized-priority-postfit-review-20261108:ordinal:1",
+    "activeRunId": null,
+    "providerInstanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "runtimeMode": "full-access",
+    "interactionMode": "default",
+    "linkedPullRequest": null,
+    "pullRequests": [],
+    "titleRegeneration": null,
+    "branch": null,
+    "worktreePath": null,
+    "parentThreadId": "mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891",
+    "relationshipToParent": "subagent",
+    "runCount": 1,
+    "itemCount": 91,
+    "pendingRequestCount": 0,
+    "archived": false,
+    "settled": false,
+    "settledAt": null,
+    "snoozed": false,
+    "snoozedUntil": null,
+    "createdAt": "2026-11-08T06:43:21.132Z",
+    "updatedAt": "2026-11-08T06:52:57.867Z"
+  },
+  "recentRuns": [
+    {
+      "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v22-pc02-warm-regularized-priority-postfit-review-20261108:ordinal:1",
+      "ordinal": 1,
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "requestedAt": "2026-11-08T06:43:21.133Z",
+      "startedAt": "2026-11-08T06:43:21.567Z",
+      "completedAt": "2026-11-08T06:52:57.867Z"
+    }
+  ],
+  "items": [
+    {
+      "position": 89,
+      "visibility": "local",
+      "sourceThreadId": "thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v22-pc02-warm-regularized-priority-postfit-review-20261108",
+      "itemId": "turn-item:provider:codex:native-item:msg_06e72c9bf31035bc016af01c2b227087d2b4d4c8ee85dbdae7",
+      "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v22-pc02-warm-regularized-priority-postfit-review-20261108:ordinal:1",
+      "messageId": "message:provider:codex:native-item:msg_06e72c9bf31035bc016af01c2b227087d2b4d4c8ee85dbdae7",
+      "createdBy": "agent",
+      "creationSource": "provider",
+      "type": "assistant_message",
+      "status": "completed",
+      "title": null,
+      "text": "**PC02 is a reproducible negative result. I found one remaining provenance defect, but no probability, anchor, gradient-accumulation or optimizer-step error that overturns its measurements. Another regularization variant would now be less informative than a controlled test of omitted observable information.**\n\nI successfully read the [parent thread](<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891>) using the exact environment and thread arguments. Coverage includes all **248 exported messages**, the **three-message delta**, and **three subsequent live messages through position 5407**. The export excludes tool activities; implementation and execution claims were checked against local sources, artifacts and saved reviews.\n\nThe ranked findings are:\n\n1. **High — regularization mitigates deterioration; it does not establish improved imitation.**\n\n   PC02 fits **4,671/5,876** training integers, but controls finish at **14/128 and 23/128**, below warm P05’s **25/128 and 28/128**.\n\n   Against PC01, the held-group gain of seven commands has a positive exploratory paired interval. Against warm P05, however:\n\n   - Same-group controls have **5 rescues and 16 regressions**.\n   - Held-group controls have **13 rescues and 18 regressions**.\n   - Mean NLL worsens by **2.972 and 2.828 nats**.\n   - Mean recorded-value ranks worsen from **13.26→31.13** and **14.65→38.60**.\n\n   This remains a discrimination failure as well as a confidence problem. Recovering some performance from a severely degraded comparator is insufficient. The report correctly records failure of three of four gate conditions.\n\n2. **High — these experiments still do not identify the dominant cause of poor transfer.**\n\n   PC02 establishes the effect of this particular displacement penalty under this optimization budget. It does not isolate observation omissions, frozen-representation limitations, conditional data coverage, forgetting or optimization.\n\n   Important distinctions remain:\n\n   - PC00’s full-row-rank sample permits arbitrary-label interpolation; memorization is weak evidence of reusable rules.\n   - PC01’s broader fitting removes that particular interpolation setting, but does not establish a capacity ceiling.\n   - PD00 demonstrates continued original TRAIN fitting after checkpoint selection, contradicting “the optimizer stopped learning.”\n   - PD02’s mixed parameter blocks reproduce, but are untrained hybrids—not retrained feature ablations.\n   - A failed single-strength penalty does not reject regularization generally or justify a sweep.\n\n   Both the warm head and encoder previously saw the controls. Group separation from **new head optimization** does not make these untouched full-policy generalization results. Repeatedly inspected controls also cannot support confirmatory uncertainty claims.\n\n3. **Medium — PC02 still lacks a complete binding of its control inputs.**\n\n   [experiment.py](F:/Code/battlecode-26-27/tools/action_predictor/priority_regularized/experiment.py:56) loads controls through [data.py](F:/Code/battlecode-26-27/tools/action_predictor/priority_capacity/data.py:116), but PC02’s input and completion bindings omit:\n\n   - `PC00-data-ready.json` and its protocol.\n   - The three consumed control/cohort NPZ files.\n\n   The loader validates archives against the manifest currently on disk, without anchoring that manifest to PC02’s preserved prerequisites.\n\n   **I reproduced the loophole without writing files:** changing held-control group metadata and its manifest hash in memory allowed the actual training callback to reach an optimizer-construction tripwire. All output writes were intercepted; no optimizer was constructed.\n\n   **Current PC02 remains valid:** the actual control archives and manifests still match PC00’s preserved completion hashes.\n\n   Before another fit, bind these inputs into the plan, preflight and completion inventory using independently preserved hashes. Explicitly recheck original-fit inclusion, row exclusion and held-group separation. Add a failure-injection test for changed control data plus a self-consistent changed manifest.\n\n4. **High project limitation — successful priority diagnostics would still leave the requested policy substantially unfinished.**\n\n   These probes supply the recorded action family. They do not demonstrate improved action selection, complete commands or learned strategic execution.\n\n   The movement evidence independently shows that changing mixture weights cannot recover enough commands while component distributions and past state remain fixed. Longer retention and the tested goal-geometry channel have not produced useful policy gains. More generic retention, geometry or head-weight variants would therefore need new evidence.\n\n   All original category, movement, macro-F1, NLL, targeting and three-seed requirements remain unmet. The 43 missing shop arguments remain strict failures; sparse categories remain uncertified; entity identity, full legality and global calibration remain unassessed.\n\n5. **Historical engineering errors were substantive, but should not be recycled as current PC02 defects.**\n\n   The thread documents objective/decoder disagreement, incomplete generators, conditional-coordinate accounting mistakes, ineffective intervention tests, lost arrays, PC00 prerequisite fall-through and PC01 source-gate omissions.\n\n   PC02’s relevant corrections work: optimized Python is rejected, the previously omitted modules are covered, the penalty includes weights and bias exactly once per update, and assessment actually archives raw outputs before measurement. These fixes improve trustworthiness; they do not themselves improve imitation.\n\nMy independent verification reproduced:\n\n- **All 31,300 PC02 forecasts:** raw neural outputs bit-for-bit; zero integer-mode or rank mismatches.\n- Independent NumPy probability arithmetic: maximum NLL error **\\(2.01\\times10^{-13}\\)**.\n- All **96 completion bindings** and **33 source blobs** against fit commit `da1c7e3658a6a62f0c8b0d47487312dcc938df18`.\n- Shared initial head, optimizer, RNG and all common initial prediction arrays.\n- Every stored penalty and final optimizer counters of **2,000**.\n- All rescue/regression counts and group-bootstrap intervals.\n- All **3,072 PD02 predictions** across eight block combinations.\n- **Ten existing contract tests**, all passing.\n\nSquared parameter displacement is **13.986% of PC01’s**, correctly described as an approximately **86% reduction in squared displacement**, not in L2 distance.\n\n**My one recommended next experiment is a matched causal action-order input contrast.**\n\nThe inspected extraction and encoding paths retain own priority history but omit other champions’ current and scheduled priorities. That is a concrete representation omission worth testing; historical engine-2/3 personal availability and predictive usefulness remain unverified.\n\nMake availability verification the prerequisite within this experiment, then:\n\n- Compare identical, equally sized input interfaces: zero-filled additional channels versus verified personal-PRE action-order information, with explicit availability masks.\n- Hold population, initialization, probability arithmetic, optimizer budget, penalty strength and endpoint fixed.\n- Freeze the fields and decision criteria before optimization; do not select them using the existing control outcomes.\n- Judge conditional exactness, NLL and ranks against both warm P05 and PC02. Any full-policy claim must additionally recompute normalized joint probabilities and winning action families.\n\nThis tests whether **new observable relational information** helps where repeated fitting and drift restriction did not. It is more informative than another λ, bias or parameter-block variation. Failure would still not prove hidden intent or insufficient observations.\n\nI made no repository edits, commits, fits, optimizer updates, downloads, reserved accesses, simulations or PR changes. The shared checkout advanced to `0d0d8487c843e978d7cca094f1841dc7a3e43700`; all 96 PC02 bindings still matched. Later PD03 results are outside this review. This review approves no future results.\n\nPR https://github.com/Canon-Regularis/battlecode-26-27/pull/11 — **supplied last-verified head** `3d10b9e501e701d1c2149a958a3382b474da8bc0`; DRAFT/open/unmerged, auto-merge null, **0 checks / 0 reviews**. No live PR verification performed.",
+      "textTruncated": false,
+      "nextTextOffset": null,
+      "updatedAt": "2026-11-08T06:52:57.799Z"
+    }
+  ],
+  "nextPosition": 89,
+  "hasMore": false
+}

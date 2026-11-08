@@ -1,0 +1,28 @@
+{
+  "bindings": {
+    "tools/action_predictor/experiments/v19/PC00-completion.json": "447166d435e37387133875f296eb567be5245c5926c42c11b75c96a60e3b900c",
+    "tools/action_predictor/experiments/v22/PC02-completion.json": "71345392889a4232197b471d51b1ecc0ce972af2507d975abb37a6e1ad644817",
+    "tools/action_predictor/experiments/v19/PC00-data-ready.json": "c9d05d1c904ac6fcbbeae2bb1c03e5609ef974dd21c9eca26cd4c1aa335e587d",
+    "tools/action_predictor/experiments/v19/PC00-plan.json": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+    ".cambc/action-predictor/v19/PC00-cohorts/fit.npz": "e4348e643f084c3838c7d60d779fc7ee14a56fea20c06266967453266815292e",
+    ".cambc/action-predictor/v19/PC00-cohorts/same_fit_groups.npz": "3b175a7094bc321a0f5fe720ea9af7214078941e213f954c71c283ff7586a978",
+    ".cambc/action-predictor/v19/PC00-cohorts/held_groups.npz": "759347e10040bb267b3635227399569405cb1775d8b20c4f5cc29e9a21a35418",
+    ".cambc/action-predictor/v21/PC01-cohort.npz": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83"
+  },
+  "independent_anchors": {
+    "PC00": "72b1237e5cbd4bcd4c0297155932db996a339f19",
+    "PC02": "275b717b01b2f45341de341d65b28cbe248691d1"
+  },
+  "broad_rows": 5876,
+  "control_rows": {
+    "fit": 128,
+    "same_fit_groups": 128,
+    "held_groups": 128
+  },
+  "qualification": "Posthoc inventory and prospective loader fix. Current files match independent committed receipts. Original PC02 execution did not enforce this complete control-input anchor; no retroactive claim or rerun.",
+  "original_fit_inclusion": true,
+  "held_group_separation": true,
+  "both_controls_excluded": true,
+  "new_fits": 0,
+  "reserved_opened": 0
+}
