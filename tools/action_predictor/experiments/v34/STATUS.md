@@ -34,7 +34,7 @@ arrays are byte-equivalent as arrays. All conditional destinations match.
 `diagnostic-attempt-1.json` preserves the failure and bindings. No fit was rerun.
 
 Three focused tests pass. Parent checks independently reproduced AUC using
-SciPy ranks and verified raw archive hashes and first/second-attempt forecast
+positive/negative pair counts and verified raw archive hashes and first/second-attempt forecast
 equality. Neither the group decomposition nor missing-frame strata establish
 causal shortcuts, observation sufficiency or legality. The next intervention
 must address execution learning with a concrete hypothesis; no new fit or
