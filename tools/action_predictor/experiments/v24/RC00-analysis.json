@@ -1,0 +1,1930 @@
+{
+  "results": {
+    "fit": {
+      "all": {
+        "rows": 4208,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 4208,
+            "exact": 1051,
+            "accuracy": 0.24976235741444866,
+            "mean_NLL": 3.003190979113415,
+            "MAE": 165.54111216730038,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.034220532319392,
+            "mean_mode_probability": 0.18688889637592299,
+            "marginalized_target_source_shares": [
+              0.6736595198198276,
+              0.3225076949581866,
+              0.003832785221985192
+            ]
+          },
+          "RC00": {
+            "rows": 4208,
+            "exact": 1431,
+            "accuracy": 0.34006653992395436,
+            "mean_NLL": 2.7052005297747233,
+            "MAE": 163.61858365019012,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.707937262357415,
+            "mean_mode_probability": 0.2942079905990153,
+            "marginalized_target_source_shares": [
+              0.6736942849030264,
+              0.32253522268861295,
+              0.003770492408359478
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 4208,
+            "groups": 40,
+            "rescues": 520,
+            "regressions": 140,
+            "net": 380,
+            "accuracy_difference": 0.0903041825095057,
+            "mean_NLL_difference": -0.2979904493386911,
+            "mean_bounded_rank_difference": -1.326283269961977,
+            "paired_accuracy_interval": [
+              0.07864811589187015,
+              0.10073163105466758
+            ],
+            "paired_NLL_interval": [
+              -0.3228552869064416,
+              -0.2715969745871967
+            ],
+            "positive_groups": 39,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 14,
+              "12": 10,
+              "13": 15,
+              "15": 5,
+              "22": 9,
+              "23": 13,
+              "25": 9,
+              "29": 2,
+              "30": 7,
+              "35": 0,
+              "36": 7,
+              "37": 4,
+              "38": 16,
+              "39": 11,
+              "43": 7,
+              "45": 11,
+              "48": 7,
+              "50": 18,
+              "52": 15,
+              "54": 7,
+              "57": 6,
+              "58": 1,
+              "59": 18,
+              "62": 7,
+              "64": 3,
+              "65": 10,
+              "71": 15,
+              "77": 5,
+              "78": 12,
+              "82": 11,
+              "83": 14,
+              "85": 5,
+              "88": 3,
+              "93": 5,
+              "94": 9,
+              "95": 8,
+              "97": 14,
+              "98": 14,
+              "100": 16
+            }
+          }
+        }
+      },
+      "other_available": {
+        "rows": 4010,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 4010,
+            "exact": 976,
+            "accuracy": 0.2433915211970075,
+            "mean_NLL": 3.0467398475175567,
+            "MAE": 172.78802992518703,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.419201995012468,
+            "mean_mode_probability": 0.18265264911748186,
+            "marginalized_target_source_shares": [
+              0.6612643686886713,
+              0.3347216507533104,
+              0.004013980558017754
+            ]
+          },
+          "RC00": {
+            "rows": 4010,
+            "exact": 1348,
+            "accuracy": 0.33615960099750625,
+            "mean_NLL": 2.740072394829933,
+            "MAE": 170.9561097256858,
+            "max_error": 1532,
+            "mean_bounded_rank": 11.046633416458853,
+            "mean_mode_probability": 0.29352292493917487,
+            "marginalized_target_source_shares": [
+              0.6613008501564638,
+              0.33475053766588175,
+              0.0039486121776535245
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 4010,
+            "groups": 40,
+            "rescues": 511,
+            "regressions": 139,
+            "net": 372,
+            "accuracy_difference": 0.09276807980049875,
+            "mean_NLL_difference": -0.3066674526876237,
+            "mean_bounded_rank_difference": -1.372568578553616,
+            "paired_accuracy_interval": [
+              0.08097200208090413,
+              0.10372347121338732
+            ],
+            "paired_NLL_interval": [
+              -0.3322411519882555,
+              -0.2792664919708213
+            ],
+            "positive_groups": 39,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 13,
+              "12": 10,
+              "13": 15,
+              "15": 5,
+              "22": 9,
+              "23": 13,
+              "25": 9,
+              "29": 2,
+              "30": 7,
+              "35": 0,
+              "36": 7,
+              "37": 3,
+              "38": 15,
+              "39": 11,
+              "43": 6,
+              "45": 11,
+              "48": 7,
+              "50": 18,
+              "52": 15,
+              "54": 7,
+              "57": 6,
+              "58": 1,
+              "59": 18,
+              "62": 7,
+              "64": 3,
+              "65": 10,
+              "71": 14,
+              "77": 5,
+              "78": 12,
+              "82": 10,
+              "83": 13,
+              "85": 6,
+              "88": 3,
+              "93": 4,
+              "94": 9,
+              "95": 8,
+              "97": 14,
+              "98": 14,
+              "100": 15
+            }
+          }
+        }
+      },
+      "other_unavailable": {
+        "rows": 198,
+        "groups": 39,
+        "models": {
+          "warm": {
+            "rows": 198,
+            "exact": 75,
+            "accuracy": 0.3787878787878788,
+            "mean_NLL": 2.1212164220396312,
+            "MAE": 18.772727272727273,
+            "max_error": 733,
+            "mean_bounded_rank": 4.237373737373737,
+            "mean_mode_probability": 0.27268360095344313,
+            "marginalized_target_source_shares": [
+              0.9246926311124415,
+              0.07514424678421208,
+              0.00016312210334596381
+            ]
+          },
+          "RC00": {
+            "rows": 198,
+            "exact": 83,
+            "accuracy": 0.41919191919191917,
+            "mean_NLL": 1.998957202141443,
+            "MAE": 15.015151515151516,
+            "max_error": 729,
+            "mean_bounded_rank": 3.8484848484848486,
+            "mean_mode_probability": 0.3080823001745723,
+            "marginalized_target_source_shares": [
+              0.9246926350733193,
+              0.07514424764392261,
+              0.00016311728275780814
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 198,
+            "groups": 39,
+            "rescues": 9,
+            "regressions": 1,
+            "net": 8,
+            "accuracy_difference": 0.04040404040404041,
+            "mean_NLL_difference": -0.12225921989818826,
+            "mean_bounded_rank_difference": -0.3888888888888889,
+            "paired_accuracy_interval": [
+              0.015228426395939087,
+              0.06818458980044344
+            ],
+            "paired_NLL_interval": [
+              -0.1729311007290536,
+              -0.07791012651180466
+            ],
+            "positive_groups": 9,
+            "negative_groups": 1,
+            "zero_groups": 29,
+            "group_net_commands": {
+              "3": 0,
+              "4": 1,
+              "12": 0,
+              "13": 0,
+              "15": 0,
+              "23": 0,
+              "25": 0,
+              "29": 0,
+              "30": 0,
+              "35": 0,
+              "36": 0,
+              "37": 1,
+              "38": 1,
+              "39": 0,
+              "43": 1,
+              "45": 0,
+              "48": 0,
+              "50": 0,
+              "52": 0,
+              "54": 0,
+              "57": 0,
+              "58": 0,
+              "59": 0,
+              "62": 0,
+              "64": 0,
+              "65": 0,
+              "71": 1,
+              "77": 0,
+              "78": 0,
+              "82": 1,
+              "83": 1,
+              "85": -1,
+              "88": 0,
+              "93": 1,
+              "94": 0,
+              "95": 0,
+              "97": 0,
+              "98": 0,
+              "100": 1
+            }
+          }
+        }
+      },
+      "correction_fit_seen_integer": {
+        "rows": 4208,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 4208,
+            "exact": 1051,
+            "accuracy": 0.24976235741444866,
+            "mean_NLL": 3.003190979113415,
+            "MAE": 165.54111216730038,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.034220532319392,
+            "mean_mode_probability": 0.18688889637592299,
+            "marginalized_target_source_shares": [
+              0.6736595198198276,
+              0.3225076949581866,
+              0.003832785221985192
+            ]
+          },
+          "RC00": {
+            "rows": 4208,
+            "exact": 1431,
+            "accuracy": 0.34006653992395436,
+            "mean_NLL": 2.7052005297747233,
+            "MAE": 163.61858365019012,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.707937262357415,
+            "mean_mode_probability": 0.2942079905990153,
+            "marginalized_target_source_shares": [
+              0.6736942849030264,
+              0.32253522268861295,
+              0.003770492408359478
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 4208,
+            "groups": 40,
+            "rescues": 520,
+            "regressions": 140,
+            "net": 380,
+            "accuracy_difference": 0.0903041825095057,
+            "mean_NLL_difference": -0.2979904493386911,
+            "mean_bounded_rank_difference": -1.326283269961977,
+            "paired_accuracy_interval": [
+              0.07864811589187015,
+              0.10073163105466758
+            ],
+            "paired_NLL_interval": [
+              -0.3228552869064416,
+              -0.2715969745871967
+            ],
+            "positive_groups": 39,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 14,
+              "12": 10,
+              "13": 15,
+              "15": 5,
+              "22": 9,
+              "23": 13,
+              "25": 9,
+              "29": 2,
+              "30": 7,
+              "35": 0,
+              "36": 7,
+              "37": 4,
+              "38": 16,
+              "39": 11,
+              "43": 7,
+              "45": 11,
+              "48": 7,
+              "50": 18,
+              "52": 15,
+              "54": 7,
+              "57": 6,
+              "58": 1,
+              "59": 18,
+              "62": 7,
+              "64": 3,
+              "65": 10,
+              "71": 15,
+              "77": 5,
+              "78": 12,
+              "82": 11,
+              "83": 14,
+              "85": 5,
+              "88": 3,
+              "93": 5,
+              "94": 9,
+              "95": 8,
+              "97": 14,
+              "98": 14,
+              "100": 16
+            }
+          }
+        }
+      },
+      "correction_fit_unseen_integer": {
+        "rows": 0,
+        "groups": 0,
+        "models": {
+          "warm": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC00": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          }
+        }
+      },
+      "latest_argument_outside16": {
+        "rows": 1129,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 1129,
+            "exact": 279,
+            "accuracy": 0.2471213463241807,
+            "mean_NLL": 2.9793135338062955,
+            "MAE": 185.99202834366696,
+            "max_error": 1512,
+            "mean_bounded_rank": 14.388839681133748,
+            "mean_mode_probability": 0.17503030999075328,
+            "marginalized_target_source_shares": [
+              0.8197452403702424,
+              0.17407213482267345,
+              0.006182624807083972
+            ]
+          },
+          "RC00": {
+            "rows": 1129,
+            "exact": 300,
+            "accuracy": 0.2657218777679362,
+            "mean_NLL": 2.885879852456907,
+            "MAE": 190.66873339238265,
+            "max_error": 1512,
+            "mean_bounded_rank": 13.676705048715677,
+            "mean_mode_probability": 0.1896874986808597,
+            "marginalized_target_source_shares": [
+              0.8198014264893468,
+              0.17414032586949704,
+              0.0060582476411566
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1129,
+            "groups": 40,
+            "rescues": 38,
+            "regressions": 17,
+            "net": 21,
+            "accuracy_difference": 0.018600531443755536,
+            "mean_NLL_difference": -0.09343368134938876,
+            "mean_bounded_rank_difference": -0.7121346324180691,
+            "paired_accuracy_interval": [
+              0.0026808455682761226,
+              0.03388575405131303
+            ],
+            "paired_NLL_interval": [
+              -0.1054763369470221,
+              -0.0808366546473152
+            ],
+            "positive_groups": 20,
+            "negative_groups": 8,
+            "zero_groups": 12,
+            "group_net_commands": {
+              "3": 1,
+              "4": -3,
+              "12": 0,
+              "13": 0,
+              "15": 2,
+              "22": 2,
+              "23": -2,
+              "25": 0,
+              "29": 1,
+              "30": 2,
+              "35": -1,
+              "36": 0,
+              "37": -1,
+              "38": 2,
+              "39": 1,
+              "43": 1,
+              "45": 0,
+              "48": 1,
+              "50": 1,
+              "52": 1,
+              "54": 0,
+              "57": 0,
+              "58": 0,
+              "59": 2,
+              "62": 1,
+              "64": -1,
+              "65": 0,
+              "71": 2,
+              "77": 0,
+              "78": 0,
+              "82": -1,
+              "83": 5,
+              "85": 1,
+              "88": 1,
+              "93": 1,
+              "94": 1,
+              "95": -1,
+              "97": 0,
+              "98": -1,
+              "100": 3
+            }
+          }
+        }
+      },
+      "current_scheduled_different": {
+        "rows": 0,
+        "groups": 0,
+        "models": {
+          "warm": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC00": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          }
+        }
+      },
+      "engine2": {
+        "rows": 2484,
+        "groups": 23,
+        "models": {
+          "warm": {
+            "rows": 2484,
+            "exact": 631,
+            "accuracy": 0.25402576489533013,
+            "mean_NLL": 2.9982056802587795,
+            "MAE": 163.47342995169083,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.10829307568438,
+            "mean_mode_probability": 0.18996792362179138,
+            "marginalized_target_source_shares": [
+              0.6667373996971352,
+              0.32954862273758145,
+              0.003713977565283834
+            ]
+          },
+          "RC00": {
+            "rows": 2484,
+            "exact": 866,
+            "accuracy": 0.34863123993558776,
+            "mean_NLL": 2.6885570599685673,
+            "MAE": 158.39492753623188,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.74597423510467,
+            "mean_mode_probability": 0.2981664003493208,
+            "marginalized_target_source_shares": [
+              0.6667611828967562,
+              0.32958191096977196,
+              0.0036569061334726233
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 2484,
+            "groups": 23,
+            "rescues": 308,
+            "regressions": 73,
+            "net": 235,
+            "accuracy_difference": 0.09460547504025765,
+            "mean_NLL_difference": -0.3096486202902121,
+            "mean_bounded_rank_difference": -1.3623188405797102,
+            "paired_accuracy_interval": [
+              0.07959212665042403,
+              0.1086619974291313
+            ],
+            "paired_NLL_interval": [
+              -0.3437362747972367,
+              -0.275044837021972
+            ],
+            "positive_groups": 22,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 14,
+              "12": 10,
+              "13": 15,
+              "15": 5,
+              "22": 9,
+              "35": 0,
+              "36": 7,
+              "37": 4,
+              "38": 16,
+              "39": 11,
+              "43": 7,
+              "45": 11,
+              "48": 7,
+              "50": 18,
+              "52": 15,
+              "88": 3,
+              "93": 5,
+              "94": 9,
+              "95": 8,
+              "97": 14,
+              "98": 14,
+              "100": 16
+            }
+          }
+        }
+      },
+      "engine3": {
+        "rows": 1724,
+        "groups": 17,
+        "models": {
+          "warm": {
+            "rows": 1724,
+            "exact": 420,
+            "accuracy": 0.24361948955916474,
+            "mean_NLL": 3.010373973518817,
+            "MAE": 168.52030162412993,
+            "max_error": 1512,
+            "mean_bounded_rank": 11.927494199535962,
+            "mean_mode_probability": 0.182452525332572,
+            "marginalized_target_source_shares": [
+              0.6836331546137758,
+              0.31236287790249484,
+              0.004003967483728922
+            ]
+          },
+          "RC00": {
+            "rows": 1724,
+            "exact": 565,
+            "accuracy": 0.3277262180974478,
+            "mean_NLL": 2.7291810280337097,
+            "MAE": 171.1450116009281,
+            "max_error": 1512,
+            "mean_bounded_rank": 10.653132250580047,
+            "mean_mode_probability": 0.28850457423024567,
+            "marginalized_target_source_shares": [
+              0.683683742782134,
+              0.31238210569882296,
+              0.003934151519043322
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1724,
+            "groups": 17,
+            "rescues": 212,
+            "regressions": 67,
+            "net": 145,
+            "accuracy_difference": 0.08410672853828306,
+            "mean_NLL_difference": -0.2811929454851075,
+            "mean_bounded_rank_difference": -1.2743619489559164,
+            "paired_accuracy_interval": [
+              0.06708281880163873,
+              0.10028500678290707
+            ],
+            "paired_NLL_interval": [
+              -0.3159216629735476,
+              -0.24115464835311343
+            ],
+            "positive_groups": 17,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "23": 13,
+              "25": 9,
+              "29": 2,
+              "30": 7,
+              "54": 7,
+              "57": 6,
+              "58": 1,
+              "59": 18,
+              "62": 7,
+              "64": 3,
+              "65": 10,
+              "71": 15,
+              "77": 5,
+              "78": 12,
+              "82": 11,
+              "83": 14,
+              "85": 5
+            }
+          }
+        }
+      }
+    },
+    "held": {
+      "all": {
+        "rows": 1668,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 1668,
+            "exact": 412,
+            "accuracy": 0.24700239808153476,
+            "mean_NLL": 3.0014045570627954,
+            "MAE": 163.21043165467626,
+            "max_error": 1515,
+            "mean_bounded_rank": 12.23621103117506,
+            "mean_mode_probability": 0.18987095832733922,
+            "marginalized_target_source_shares": [
+              0.6751089919316597,
+              0.3209871297794343,
+              0.003903878288905367
+            ]
+          },
+          "RC00": {
+            "rows": 1668,
+            "exact": 567,
+            "accuracy": 0.33992805755395683,
+            "mean_NLL": 2.6804143020495683,
+            "MAE": 157.11630695443645,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.916666666666666,
+            "mean_mode_probability": 0.29780551182876164,
+            "marginalized_target_source_shares": [
+              0.6751677455904638,
+              0.32100543193080755,
+              0.0038268224787289667
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1668,
+            "groups": 15,
+            "rescues": 222,
+            "regressions": 67,
+            "net": 155,
+            "accuracy_difference": 0.09292565947242207,
+            "mean_NLL_difference": -0.3209902550132267,
+            "mean_bounded_rank_difference": -1.3195443645083933,
+            "paired_accuracy_interval": [
+              0.07638056592379686,
+              0.11129365716579687
+            ],
+            "paired_NLL_interval": [
+              -0.3720098939922214,
+              -0.27066640809476333
+            ],
+            "positive_groups": 15,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 5,
+              "16": 11,
+              "32": 23,
+              "33": 12,
+              "42": 22,
+              "53": 10,
+              "55": 6,
+              "56": 10,
+              "60": 6,
+              "66": 5,
+              "68": 12,
+              "80": 7,
+              "81": 7,
+              "86": 9,
+              "87": 10
+            }
+          }
+        }
+      },
+      "other_available": {
+        "rows": 1585,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 1585,
+            "exact": 384,
+            "accuracy": 0.24227129337539433,
+            "mean_NLL": 3.0449105766981313,
+            "MAE": 170.66624605678234,
+            "max_error": 1515,
+            "mean_bounded_rank": 12.618296529968454,
+            "mean_mode_probability": 0.18535704822323443,
+            "marginalized_target_source_shares": [
+              0.6630587959917809,
+              0.33283465410292146,
+              0.004106549905297303
+            ]
+          },
+          "RC00": {
+            "rows": 1585,
+            "exact": 536,
+            "accuracy": 0.33817034700315457,
+            "mean_NLL": 2.7140709548053885,
+            "MAE": 164.26246056782335,
+            "max_error": 1515,
+            "mean_bounded_rank": 11.25993690851735,
+            "mean_mode_probability": 0.29703761800445594,
+            "marginalized_target_source_shares": [
+              0.6631206054211308,
+              0.33285390182584207,
+              0.004025492753027648
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1585,
+            "groups": 15,
+            "rescues": 218,
+            "regressions": 66,
+            "net": 152,
+            "accuracy_difference": 0.09589905362776026,
+            "mean_NLL_difference": -0.33083962189274335,
+            "mean_bounded_rank_difference": -1.358359621451104,
+            "paired_accuracy_interval": [
+              0.07887859562206158,
+              0.11391027159074216
+            ],
+            "paired_NLL_interval": [
+              -0.3812999486286921,
+              -0.28061194247171345
+            ],
+            "positive_groups": 15,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 4,
+              "16": 11,
+              "32": 22,
+              "33": 11,
+              "42": 22,
+              "53": 10,
+              "55": 6,
+              "56": 10,
+              "60": 6,
+              "66": 6,
+              "68": 12,
+              "80": 7,
+              "81": 7,
+              "86": 8,
+              "87": 10
+            }
+          }
+        }
+      },
+      "other_unavailable": {
+        "rows": 83,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 83,
+            "exact": 28,
+            "accuracy": 0.3373493975903614,
+            "mean_NLL": 2.1705968327012375,
+            "MAE": 20.83132530120482,
+            "max_error": 819,
+            "mean_bounded_rank": 4.9397590361445785,
+            "mean_mode_probability": 0.2760703259780156,
+            "marginalized_target_source_shares": [
+              0.9052241794582638,
+              0.09474223757790576,
+              3.3582963830449444e-05
+            ]
+          },
+          "RC00": {
+            "rows": 83,
+            "exact": 31,
+            "accuracy": 0.37349397590361444,
+            "mean_NLL": 2.037693884965528,
+            "MAE": 20.650602409638555,
+            "max_error": 819,
+            "mean_bounded_rank": 4.36144578313253,
+            "mean_mode_probability": 0.3124695083531533,
+            "marginalized_target_source_shares": [
+              0.9052245789445978,
+              0.09474248273044915,
+              3.2938324952939145e-05
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 83,
+            "groups": 15,
+            "rescues": 4,
+            "regressions": 1,
+            "net": 3,
+            "accuracy_difference": 0.03614457831325301,
+            "mean_NLL_difference": -0.13290294773571032,
+            "mean_bounded_rank_difference": -0.5783132530120482,
+            "paired_accuracy_interval": [
+              -0.01098901098901099,
+              0.09334374999999995
+            ],
+            "paired_NLL_interval": [
+              -0.25716595651945856,
+              -0.05339761459224064
+            ],
+            "positive_groups": 4,
+            "negative_groups": 1,
+            "zero_groups": 10,
+            "group_net_commands": {
+              "9": 1,
+              "16": 0,
+              "32": 1,
+              "33": 1,
+              "42": 0,
+              "53": 0,
+              "55": 0,
+              "56": 0,
+              "60": 0,
+              "66": -1,
+              "68": 0,
+              "80": 0,
+              "81": 0,
+              "86": 1,
+              "87": 0
+            }
+          }
+        }
+      },
+      "correction_fit_seen_integer": {
+        "rows": 1621,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 1621,
+            "exact": 407,
+            "accuracy": 0.2510795805058606,
+            "mean_NLL": 2.946250179541555,
+            "MAE": 160.062924120913,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.466378778531771,
+            "mean_mode_probability": 0.1903877089716248,
+            "marginalized_target_source_shares": [
+              0.6888717050785985,
+              0.3087363512905414,
+              0.002391943630859138
+            ]
+          },
+          "RC00": {
+            "rows": 1621,
+            "exact": 559,
+            "accuracy": 0.34484885872917953,
+            "mean_NLL": 2.6142741987404934,
+            "MAE": 153.6218383713757,
+            "max_error": 1515,
+            "mean_bounded_rank": 9.125231338679827,
+            "mean_mode_probability": 0.29909466964393533,
+            "marginalized_target_source_shares": [
+              0.6889317392098888,
+              0.30875483672597265,
+              0.00231342406413828
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1621,
+            "groups": 15,
+            "rescues": 219,
+            "regressions": 67,
+            "net": 152,
+            "accuracy_difference": 0.09376927822331894,
+            "mean_NLL_difference": -0.3319759808010612,
+            "mean_bounded_rank_difference": -1.3411474398519432,
+            "paired_accuracy_interval": [
+              0.07732413857099145,
+              0.11189202953908835
+            ],
+            "paired_NLL_interval": [
+              -0.3857651921282346,
+              -0.2811921522857413
+            ],
+            "positive_groups": 15,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 5,
+              "16": 11,
+              "32": 22,
+              "33": 12,
+              "42": 22,
+              "53": 10,
+              "55": 6,
+              "56": 9,
+              "60": 6,
+              "66": 5,
+              "68": 12,
+              "80": 7,
+              "81": 6,
+              "86": 9,
+              "87": 10
+            }
+          }
+        }
+      },
+      "correction_fit_unseen_integer": {
+        "rows": 47,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 47,
+            "exact": 5,
+            "accuracy": 0.10638297872340426,
+            "mean_NLL": 4.903643832848539,
+            "MAE": 271.7659574468085,
+            "max_error": 1389,
+            "mean_bounded_rank": 73.27659574468085,
+            "mean_mode_probability": 0.17204855844676656,
+            "marginalized_target_source_shares": [
+              0.20044180020425062,
+              0.7435086602155051,
+              0.056049539580244466
+            ]
+          },
+          "RC00": {
+            "rows": 47,
+            "exact": 8,
+            "accuracy": 0.1702127659574468,
+            "mean_NLL": 4.961544248092329,
+            "MAE": 277.63829787234044,
+            "max_error": 1389,
+            "mean_bounded_rank": 72.70212765957447,
+            "mean_mode_probability": 0.2533432816501101,
+            "marginalized_target_source_shares": [
+              0.2004563911843242,
+              0.7435206410167023,
+              0.05602296779897358
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 47,
+            "groups": 15,
+            "rescues": 3,
+            "regressions": 0,
+            "net": 3,
+            "accuracy_difference": 0.06382978723404255,
+            "mean_NLL_difference": 0.05790041524379147,
+            "mean_bounded_rank_difference": -0.574468085106383,
+            "paired_accuracy_interval": [
+              0.0,
+              0.1320754716981132
+            ],
+            "paired_NLL_interval": [
+              -0.12312549364466913,
+              0.22603587082110727
+            ],
+            "positive_groups": 3,
+            "negative_groups": 0,
+            "zero_groups": 12,
+            "group_net_commands": {
+              "9": 0,
+              "16": 0,
+              "32": 1,
+              "33": 0,
+              "42": 0,
+              "53": 0,
+              "55": 0,
+              "56": 1,
+              "60": 0,
+              "66": 0,
+              "68": 0,
+              "80": 0,
+              "81": 1,
+              "86": 0,
+              "87": 0
+            }
+          }
+        }
+      },
+      "latest_argument_outside16": {
+        "rows": 406,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 406,
+            "exact": 105,
+            "accuracy": 0.25862068965517243,
+            "mean_NLL": 2.8623567592915866,
+            "MAE": 144.48768472906403,
+            "max_error": 1463,
+            "mean_bounded_rank": 11.120689655172415,
+            "mean_mode_probability": 0.1778448513664195,
+            "marginalized_target_source_shares": [
+              0.8178836112078889,
+              0.17882283689326872,
+              0.0032935518988415307
+            ]
+          },
+          "RC00": {
+            "rows": 406,
+            "exact": 101,
+            "accuracy": 0.24876847290640394,
+            "mean_NLL": 2.777754690855738,
+            "MAE": 153.79802955665025,
+            "max_error": 1463,
+            "mean_bounded_rank": 10.761083743842365,
+            "mean_mode_probability": 0.19634769700560367,
+            "marginalized_target_source_shares": [
+              0.8179068349603575,
+              0.17883589298855235,
+              0.003257272051089233
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 406,
+            "groups": 15,
+            "rescues": 16,
+            "regressions": 20,
+            "net": -4,
+            "accuracy_difference": -0.009852216748768473,
+            "mean_NLL_difference": -0.08460206843584946,
+            "mean_bounded_rank_difference": -0.35960591133004927,
+            "paired_accuracy_interval": [
+              -0.035955056179775284,
+              0.01763391364436815
+            ],
+            "paired_NLL_interval": [
+              -0.10595635159793834,
+              -0.06556630364767488
+            ],
+            "positive_groups": 4,
+            "negative_groups": 6,
+            "zero_groups": 5,
+            "group_net_commands": {
+              "9": -1,
+              "16": 2,
+              "32": 0,
+              "33": 0,
+              "42": -1,
+              "53": 0,
+              "55": -3,
+              "56": 0,
+              "60": 0,
+              "66": -1,
+              "68": -3,
+              "80": -1,
+              "81": 1,
+              "86": 2,
+              "87": 1
+            }
+          }
+        }
+      },
+      "current_scheduled_different": {
+        "rows": 0,
+        "groups": 0,
+        "models": {
+          "warm": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC00": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          }
+        }
+      },
+      "engine2": {
+        "rows": 559,
+        "groups": 5,
+        "models": {
+          "warm": {
+            "rows": 559,
+            "exact": 128,
+            "accuracy": 0.22898032200357782,
+            "mean_NLL": 3.041544128502646,
+            "MAE": 155.12880143112702,
+            "max_error": 1463,
+            "mean_bounded_rank": 12.84257602862254,
+            "mean_mode_probability": 0.18744279583710455,
+            "marginalized_target_source_shares": [
+              0.6518865613583996,
+              0.34412945970608455,
+              0.003983978935516211
+            ]
+          },
+          "RC00": {
+            "rows": 559,
+            "exact": 185,
+            "accuracy": 0.33094812164579607,
+            "mean_NLL": 2.7513938772466333,
+            "MAE": 142.34883720930233,
+            "max_error": 1463,
+            "mean_bounded_rank": 11.610017889087656,
+            "mean_mode_probability": 0.28966957503204294,
+            "marginalized_target_source_shares": [
+              0.6519159309457758,
+              0.3441420616222208,
+              0.003942007432003505
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 559,
+            "groups": 5,
+            "rescues": 81,
+            "regressions": 24,
+            "net": 57,
+            "accuracy_difference": 0.10196779964221825,
+            "mean_NLL_difference": -0.2901502512560128,
+            "mean_bounded_rank_difference": -1.2325581395348837,
+            "paired_accuracy_interval": [
+              0.07377049180327869,
+              0.12724550898203593
+            ],
+            "paired_NLL_interval": [
+              -0.37763221664851543,
+              -0.1807687849697305
+            ],
+            "positive_groups": 5,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 5,
+              "16": 11,
+              "42": 22,
+              "86": 9,
+              "87": 10
+            }
+          }
+        }
+      },
+      "engine3": {
+        "rows": 1109,
+        "groups": 10,
+        "models": {
+          "warm": {
+            "rows": 1109,
+            "exact": 284,
+            "accuracy": 0.2560865644724977,
+            "mean_NLL": 2.981171896616558,
+            "MAE": 167.28403967538324,
+            "max_error": 1515,
+            "mean_bounded_rank": 11.930568079350767,
+            "mean_mode_probability": 0.19109489235082092,
+            "marginalized_target_source_shares": [
+              0.6868144370988852,
+              0.30932205996068113,
+              0.003863502940433354
+            ]
+          },
+          "RC00": {
+            "rows": 1109,
+            "exact": 382,
+            "accuracy": 0.34445446348061315,
+            "mean_NLL": 2.644636499943924,
+            "MAE": 164.55996393146978,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.567177637511271,
+            "mean_mode_probability": 0.30190649349635923,
+            "marginalized_target_source_shares": [
+              0.6868880020254324,
+              0.3093432353595727,
+              0.003768762614995449
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1109,
+            "groups": 10,
+            "rescues": 141,
+            "regressions": 43,
+            "net": 98,
+            "accuracy_difference": 0.08836789900811542,
+            "mean_NLL_difference": -0.3365353966726338,
+            "mean_bounded_rank_difference": -1.363390441839495,
+            "paired_accuracy_interval": [
+              0.06896551724137931,
+              0.11155482689989822
+            ],
+            "paired_NLL_interval": [
+              -0.3934530473649282,
+              -0.2814419112117733
+            ],
+            "positive_groups": 10,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "32": 23,
+              "33": 12,
+              "53": 10,
+              "55": 6,
+              "56": 10,
+              "60": 6,
+              "66": 5,
+              "68": 12,
+              "80": 7,
+              "81": 7
+            }
+          }
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "fit": {
+      "warm": {
+        "rows": 4208,
+        "groups": 40,
+        "rescues": 520,
+        "regressions": 140,
+        "net": 380,
+        "accuracy_difference": 0.0903041825095057,
+        "mean_NLL_difference": -0.2979904493386911,
+        "mean_bounded_rank_difference": -1.326283269961977,
+        "paired_accuracy_interval": [
+          0.07864811589187015,
+          0.10073163105466758
+        ],
+        "paired_NLL_interval": [
+          -0.3228552869064416,
+          -0.2715969745871967
+        ],
+        "positive_groups": 39,
+        "negative_groups": 0,
+        "zero_groups": 1,
+        "group_net_commands": {
+          "3": 17,
+          "4": 14,
+          "12": 10,
+          "13": 15,
+          "15": 5,
+          "22": 9,
+          "23": 13,
+          "25": 9,
+          "29": 2,
+          "30": 7,
+          "35": 0,
+          "36": 7,
+          "37": 4,
+          "38": 16,
+          "39": 11,
+          "43": 7,
+          "45": 11,
+          "48": 7,
+          "50": 18,
+          "52": 15,
+          "54": 7,
+          "57": 6,
+          "58": 1,
+          "59": 18,
+          "62": 7,
+          "64": 3,
+          "65": 10,
+          "71": 15,
+          "77": 5,
+          "78": 12,
+          "82": 11,
+          "83": 14,
+          "85": 5,
+          "88": 3,
+          "93": 5,
+          "94": 9,
+          "95": 8,
+          "97": 14,
+          "98": 14,
+          "100": 16
+        }
+      }
+    },
+    "held": {
+      "warm": {
+        "rows": 1668,
+        "groups": 15,
+        "rescues": 222,
+        "regressions": 67,
+        "net": 155,
+        "accuracy_difference": 0.09292565947242207,
+        "mean_NLL_difference": -0.3209902550132267,
+        "mean_bounded_rank_difference": -1.3195443645083933,
+        "paired_accuracy_interval": [
+          0.07638056592379686,
+          0.11129365716579687
+        ],
+        "paired_NLL_interval": [
+          -0.3720098939922214,
+          -0.27066640809476333
+        ],
+        "positive_groups": 15,
+        "negative_groups": 0,
+        "zero_groups": 0,
+        "group_net_commands": {
+          "9": 5,
+          "16": 11,
+          "32": 23,
+          "33": 12,
+          "42": 22,
+          "53": 10,
+          "55": 6,
+          "56": 10,
+          "60": 6,
+          "66": 5,
+          "68": 12,
+          "80": 7,
+          "81": 7,
+          "86": 9,
+          "87": 10
+        }
+      }
+    }
+  },
+  "conditional_reliability": {
+    "fit": {
+      "warm": {
+        "rows": 4208,
+        "ECE": 0.0628734610385257,
+        "mode_correctness_Brier": 0.16636753213328676,
+        "observed_probability_range": [
+          0.0166490062711985,
+          0.8133188873646936
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 1068,
+            "exact": 111,
+            "accuracy": 0.10393258426966293,
+            "mean_mode_probability": 0.0701583000309049
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 1750,
+            "exact": 334,
+            "accuracy": 0.19085714285714286,
+            "mean_mode_probability": 0.14409513276120886
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 754,
+            "exact": 252,
+            "accuracy": 0.33421750663129973,
+            "mean_mode_probability": 0.24226617133640557
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 311,
+            "exact": 143,
+            "accuracy": 0.45980707395498394,
+            "mean_mode_probability": 0.3431869220304821
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 170,
+            "exact": 92,
+            "accuracy": 0.5411764705882353,
+            "mean_mode_probability": 0.4438887706169156
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 76,
+            "exact": 58,
+            "accuracy": 0.7631578947368421,
+            "mean_mode_probability": 0.5424101681586941
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 55,
+            "exact": 39,
+            "accuracy": 0.7090909090909091,
+            "mean_mode_probability": 0.638873836092666
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 19,
+            "exact": 17,
+            "accuracy": 0.8947368421052632,
+            "mean_mode_probability": 0.7407155083443918
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 5,
+            "exact": 5,
+            "accuracy": 1.0,
+            "mean_mode_probability": 0.8074367634111406
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_mode_probability": null
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      },
+      "RC00": {
+        "rows": 4208,
+        "ECE": 0.05682611424053036,
+        "mode_correctness_Brier": 0.18543672110653078,
+        "observed_probability_range": [
+          0.021463908471919767,
+          0.9849886037036524
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 769,
+            "exact": 87,
+            "accuracy": 0.11313394018205461,
+            "mean_mode_probability": 0.06754718336063592
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 1191,
+            "exact": 253,
+            "accuracy": 0.21242653232577666,
+            "mean_mode_probability": 0.14673983055886314
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 729,
+            "exact": 222,
+            "accuracy": 0.3045267489711934,
+            "mean_mode_probability": 0.24366824657603534
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 429,
+            "exact": 185,
+            "accuracy": 0.43123543123543123,
+            "mean_mode_probability": 0.3469365191820135
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 285,
+            "exact": 138,
+            "accuracy": 0.4842105263157895,
+            "mean_mode_probability": 0.4487488933483114
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 249,
+            "exact": 130,
+            "accuracy": 0.5220883534136547,
+            "mean_mode_probability": 0.5493126945873319
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 208,
+            "exact": 136,
+            "accuracy": 0.6538461538461539,
+            "mean_mode_probability": 0.6474098963230491
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 154,
+            "exact": 126,
+            "accuracy": 0.8181818181818182,
+            "mean_mode_probability": 0.7481554164664986
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 133,
+            "exact": 102,
+            "accuracy": 0.7669172932330827,
+            "mean_mode_probability": 0.8504006000699461
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 61,
+            "exact": 52,
+            "accuracy": 0.8524590163934426,
+            "mean_mode_probability": 0.9376002593582885
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      }
+    },
+    "held": {
+      "warm": {
+        "rows": 1668,
+        "ECE": 0.05904573080705017,
+        "mode_correctness_Brier": 0.1718861369274848,
+        "observed_probability_range": [
+          0.019302317851697736,
+          0.8228698426571278
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 401,
+            "exact": 43,
+            "accuracy": 0.10723192019950124,
+            "mean_mode_probability": 0.07155941107261708
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 691,
+            "exact": 146,
+            "accuracy": 0.21128798842257598,
+            "mean_mode_probability": 0.14759686336616368
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 322,
+            "exact": 100,
+            "accuracy": 0.3105590062111801,
+            "mean_mode_probability": 0.2419999861191524
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 137,
+            "exact": 58,
+            "accuracy": 0.4233576642335766,
+            "mean_mode_probability": 0.34541493994142713
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 60,
+            "exact": 31,
+            "accuracy": 0.5166666666666667,
+            "mean_mode_probability": 0.44437231276110833
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 34,
+            "exact": 17,
+            "accuracy": 0.5,
+            "mean_mode_probability": 0.5469564334729634
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 17,
+            "exact": 11,
+            "accuracy": 0.6470588235294118,
+            "mean_mode_probability": 0.6416251077117116
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 5,
+            "exact": 5,
+            "accuracy": 1.0,
+            "mean_mode_probability": 0.7569611168034446
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 1,
+            "exact": 1,
+            "accuracy": 1.0,
+            "mean_mode_probability": 0.8228698426571278
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_mode_probability": null
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      },
+      "RC00": {
+        "rows": 1668,
+        "ECE": 0.04855709579574989,
+        "mode_correctness_Brier": 0.18587274093724565,
+        "observed_probability_range": [
+          0.02075984998056117,
+          0.9826549707257821
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 273,
+            "exact": 34,
+            "accuracy": 0.12454212454212454,
+            "mean_mode_probability": 0.06977628533775929
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 485,
+            "exact": 100,
+            "accuracy": 0.20618556701030927,
+            "mean_mode_probability": 0.15002155730276
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 309,
+            "exact": 99,
+            "accuracy": 0.32038834951456313,
+            "mean_mode_probability": 0.24545202351552492
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 182,
+            "exact": 68,
+            "accuracy": 0.37362637362637363,
+            "mean_mode_probability": 0.34854153053617165
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 112,
+            "exact": 51,
+            "accuracy": 0.45535714285714285,
+            "mean_mode_probability": 0.45251956214955946
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 87,
+            "exact": 53,
+            "accuracy": 0.6091954022988506,
+            "mean_mode_probability": 0.5474962913079954
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 78,
+            "exact": 49,
+            "accuracy": 0.6282051282051282,
+            "mean_mode_probability": 0.648375882503459
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 59,
+            "exact": 44,
+            "accuracy": 0.7457627118644068,
+            "mean_mode_probability": 0.7452575534586136
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 55,
+            "exact": 46,
+            "accuracy": 0.8363636363636363,
+            "mean_mode_probability": 0.8496104974793303
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 28,
+            "exact": 23,
+            "accuracy": 0.8214285714285714,
+            "mean_mode_probability": 0.9308756629360576
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      }
+    }
+  },
+  "bindings": {
+    "tools/action_predictor/experiments/v24/RC-plan.json": "50f59beeb14dd844c1fc01b7a9fe4eea46ae6440cac13136f0cce01dd19a90b2",
+    "tools/action_predictor/experiments/v24/RC-data-ready.json": "05e869e17d7e6eeac0f3656b36daa8ce37f714960bff5ed661a1da20a43961e0",
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/order_information/__init__.py": "4fdb527a783ae1b4dce55921d6143ac82c2b0ad2a6cbc5ac2475aa8ecd257beb",
+    "tools/action_predictor/order_information/anchored.py": "5a8f18159ab514dc1250f2edccbf34053a3e964bb871248b04f24852d6f6895e",
+    "tools/action_predictor/order_information/data.py": "7c6908413a89a5412519e22c0c7cc91e758f5140d14441f4011df5c0ae01d1ec",
+    "tools/action_predictor/order_information/relation_discrimination_v3.py": "2541035ce79c0a22eddec2efcc26cda7ea40bc000e338dc3df917c1369dfacc5",
+    "tools/action_predictor/order_information/schema.py": "5d978a3494199c7e42ad9bfcd8843f102d8d9a111a924d045abb8d465471d281",
+    "tools/action_predictor/order_information/schema_asinh.py": "8b65cbc88b258235a4e5706f372bf07fa6489459234de3f47fb07906524188f9",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_capacity/__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_capacity/protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/relational_priority/__init__.py": "b55a7da0dea4e4ae3c407ded0e75f797e3983fca5a4e998408686f915bf7ec7d",
+    "tools/action_predictor/relational_priority/data.py": "baab09ffe88f3e2a4dde152af7698c43136e933a797257c92a2fa4d94a1888a6",
+    "tools/action_predictor/relational_priority/model.py": "12cf8ba7f1b126cb5bb287eb8deab48b3ea59e9c326d0a5022bbf3dd7a199e41",
+    "tools/action_predictor/relational_priority/protocol.py": "102926b924bb1aaba9f50af44fbe82e83403ffb23d293413db6f26a4324c2f26",
+    "tools/action_predictor/relational_priority/test_data.py": "d69655a084bdbb8aec92c228c9424aab6155b463f3d4f798b64b456c68d522bb",
+    "tools/action_predictor/relational_priority/test_model.py": "d8707b91c4c4de8b441077f2f2df0d058dc3b8669b69b1d4a70b985b41b967ac",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83",
+    ".cambc\\action-predictor\\v24\\data\\metadata.npz": "552734612f86b5bdae8beb877d3d5bff81b3be3dfba212f25d358636d317576f",
+    ".cambc\\action-predictor\\v24\\data\\other-real.npy": "b4130f95f90dffc935dc0f596660252107d4fa76093e1c00b7bdd0b4c90b400e",
+    ".cambc\\action-predictor\\v24\\data\\other-shuffled.npy": "e1954a373b81c890c65374dc1cc6ef1a2d233d43ac54f45098b8ee659a0a1640",
+    ".cambc\\action-predictor\\v24\\data\\own.npy": "694cd019ba96ed47e51eafe3c2a4a363b3b1b0999da08881b88ce753ba02b66c",
+    ".cambc\\action-predictor\\v24\\data\\points.npy": "e5039495c37f94244cdd604c01dc4c3110e5346e620a945e201753af8cf38448",
+    "tools/action_predictor/experiments/v19/PC00-completion.json": "447166d435e37387133875f296eb567be5245c5926c42c11b75c96a60e3b900c",
+    "tools/action_predictor/experiments/v22/PC02-completion.json": "71345392889a4232197b471d51b1ecc0ce972af2507d975abb37a6e1ad644817",
+    "tools/action_predictor/experiments/v19/PC00-data-ready.json": "c9d05d1c904ac6fcbbeae2bb1c03e5609ef974dd21c9eca26cd4c1aa335e587d",
+    "tools/action_predictor/experiments/v19/PC00-plan.json": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+    ".cambc/action-predictor/v19/PC00-cohorts/fit.npz": "e4348e643f084c3838c7d60d779fc7ee14a56fea20c06266967453266815292e",
+    ".cambc/action-predictor/v19/PC00-cohorts/same_fit_groups.npz": "3b175a7094bc321a0f5fe720ea9af7214078941e213f954c71c283ff7586a978",
+    ".cambc/action-predictor/v19/PC00-cohorts/held_groups.npz": "759347e10040bb267b3635227399569405cb1775d8b20c4f5cc29e9a21a35418",
+    ".cambc/action-predictor/v21/PC01-cohort.npz": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83",
+    ".cambc/action-predictor/v22/runs/PC02/broad_fit-step-0000-raw.npy": "809f9a390cfc20e7da59ba454b7013a1b5c54293aed42f9a27c41cb911dc3dd5",
+    ".cambc/action-predictor/v22/runs/PC02/broad_fit-step-0000-predictions.npz": "5d0d01bcf37289af054cd852421a9efacb025582e95bdd96d322e69ed472aa04",
+    ".cambc/action-predictor/v8/runs/P05/model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    "tools/action_predictor/experiments/v8/P05.json": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+    "tools/action_predictor/experiments/v8/priority-residual-modes-vocabulary.json": "1fd6470d9572ff92eae489616c8a92fbed0b65d22a61084e587ad1fb174d4147",
+    "tools\\action_predictor\\experiments\\v24\\RC00.json": "725563768cc88ca6a3cb2b64d0037e208f97b8e911a721b1a8d78a2acfe31734",
+    "tools\\action_predictor\\relational_priority\\results.py": "f25e7bf5909b969c8e737190dc3fc90a636926efa5231382aa22fdd5ae59e2f7"
+  },
+  "allocation_checks": null,
+  "exploratory_allocation_gate_passed": null,
+  "allocation_status": "Treatment required; no control-only allocation verdict",
+  "uncertainty": "2000paired whole-group draws seed20261106. New-fit group exclusion only; warm model/vocabulary and earlier TRAIN research exposed these groups. In-sample fit and exploratory held diagnostics, not untouched or selection-adjusted policy evidence.",
+  "units": {
+    "accuracy": "Difference in conditional integer accuracy fraction",
+    "NLL": "Mean integer NLL difference in nats"
+  },
+  "no_action_type_or_complete_policy_assessment": true,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

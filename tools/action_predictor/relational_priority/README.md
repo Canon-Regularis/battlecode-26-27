@@ -1,5 +1,7 @@
 # Shared signed priority correction
 
+Current results: [V24 index](../experiments/v24/INDEX.md). RC00 has completed; its fresh review precedes the unrun RC01 treatment. The design-stage description below is retained, rather than treated as the current execution status.
+
 This is an unfitted experimental component. No new policy prediction, training result or promotion is established by its contract tests.
 
 For each available P05 point component with exact integer value `p`, construct the same 72 candidate-relative Boolean features: 24 own current/scheduled/latest/history relations and all 48 other-unit relations declared in OD03. A shared learned vector adds `w dot features(p)` to that component's original logit. Duplicate explanations at the same integer receive the same correction. The original P05 core is frozen.
