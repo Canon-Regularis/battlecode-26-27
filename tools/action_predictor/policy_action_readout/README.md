@@ -28,3 +28,6 @@ python -m unittest tools.action_predictor.policy_action_readout.test_model tools
 ```
 
 Tests perform no optimizer updates and establish contracts, not model quality.
+# Closure addendum
+
+Both AB00 and AB01 are completed negative results. Any earlier next-arm wording below is superseded by `experiments/v28/AB01-closure-correction.json` and `AB01-review-response.json`. The current main research direction is jointly trained movement/sequence execution and a neural semi-Markov hierarchy in `segment_policy`; no further priority-only fits are planned here.

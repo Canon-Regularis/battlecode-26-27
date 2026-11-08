@@ -1,0 +1,19 @@
+{
+  "review_sha256": "898927e44d6a2fb2dc4d5a7d20ed054abb47fef890a4ce391b30d0b54db15d90",
+  "delegation_sha256": "12ff3e5a21993e4c734d5fbd770ebedd84b0c18e7bb34121f2fb3935dfcf528e",
+  "launch_sha256": "73dcd258bbd2865e7221d8e227cb2a94daf12f6d380f5af33372f715938ff9be",
+  "reviewed_checkpoint_sha256": "fcc2a471d6cb7fc3847df802e978430301d5494c5f335529876959a5ded88fe3",
+  "correction_sha256": "025c165ffa36a9c8efa199be7994a296606fa38a860cae378bea4b56e33a7813",
+  "responses": {
+    "stale_language": "Additive closure supersedes next-arm/control-only text; both arms complete and negative.",
+    "augmented_only": "Saved-output correction supplies all144270augmented-only rows and complete category/NLL metrics; no refit or denominator change.",
+    "main_bottleneck": "Frozen movement modes miss934/2362even with perfect action choice. Main effort jointly trains actual movement execution and neural duration/state inference against a direct sequence control.",
+    "limits": "No information-insufficiency, hidden-intent, robustness, promotion or complete-policy-success claim. Later segment-policy implementation is outside AB01 review scope."
+  },
+  "caught_closure_writer_failure": "An attempted addition changed the producer hash embedded in an already immutable correction. The rewrite was refused. Original producer bytes restored; separate review-response producer added. No fit or original report changed.",
+  "reproduction": "python -m tools.action_predictor.action_readout_analysis.review_closure",
+  "correctness_findings_addressed": true,
+  "promoted": false,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

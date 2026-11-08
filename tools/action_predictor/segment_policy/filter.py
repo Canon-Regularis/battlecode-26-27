@@ -18,14 +18,14 @@ class NeuralSemiMarkov(nn.Module):
     def initial_logp(self,context):
         # Unknown segment prefix is a distribution over age, not a fabricated
         # segment start or a claim that every prior own root was observed.
-        return self.initial(context).log_softmax(-1).reshape(-1,self.states,self.max_age)
+        return self.initial(context).double().log_softmax(-1).reshape(-1,self.states,self.max_age)
 
     def factors(self,context):
         n=len(context)
-        logits=self.transition(context).reshape(n,self.states,self.states-1).log_softmax(-1)
-        transition=torch.full((n,self.states,self.states),-torch.inf,dtype=context.dtype,device=context.device)
+        logits=self.transition(context).double().reshape(n,self.states,self.states-1).log_softmax(-1)
+        transition=torch.full((n,self.states,self.states),-torch.inf,dtype=logits.dtype,device=context.device)
         transition=transition.scatter(2,self.destinations[None].expand(n,-1,-1),logits)
-        hazard=self.termination(context)[:,:,None]+self.age_logits[None]
+        hazard=self.termination(context).double()[:,:,None]+self.age_logits.double()[None]
         log_end=F.logsigmoid(hazard)
         # A declared finite duration truncation, not a Fish duration rule.
         log_end=torch.cat((log_end,torch.zeros_like(log_end[:,:,-1:])),2)

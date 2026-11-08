@@ -6,9 +6,9 @@ The finite age support is an explicit computational truncation, not a Fish durat
 
 Missing own roots reset to a learned joint distribution over state and age. The filter does not apply the current observation retrospectively to unobserved roots or assume a segment survived a gap. Unknown-prefix ages are distributions, not a fabricated age zero. A matched direct sequence control must reset at the same gaps. This conservative reset loses potentially useful long-term state; that limitation must be measured and cannot be called complete gap marginalization.
 
-`StateExecutionCondition` supplies learned multiplicative/additive state-conditioned contexts. The future training integration must update the observation encoder, action head and spatial executor jointly. Reweighting frozen L02/G00 movement distributions is explicitly insufficient. No fit runner has yet been allocated or launched here; numerical tests are not evidence of Fish imitation.
+`model.py` integrates trainable current/action-history and observation-history encoders, personally known entity/public tokens, action choice and spatial execution. `StateExecutionCondition` supplies learned multiplicative/additive state-conditioned contexts. `fit.py` runs one arm, and `protocol.py` freezes the initial matched contrast before optimization. Reweighting frozen L02/G00 movement distributions is explicitly insufficient. Numerical tests are not evidence of Fish imitation.
 
-The initial controlled study will separate direct sequence learning from explicit duration structure using the same personal-PRE information and comparable trainable capacity/update allocation. Exact parameter counts, initial states, likelihood/decoder and full evaluation rules must freeze before optimization. No receding endpoint auxiliary is used as the sole segment supervision: causal forward sequence likelihood marginalizes variable-length latent segments.
+The initial controlled study compares H00 direct command-updated recurrence with H01 explicit duration/state-conditioned execution using the same personal-PRE information, identical common initial tensors and comparable capacity (148,986 versus149,194 trainable parameters). Both reset recurrent state at missing own roots, while retaining the same explicitly available earlier observation windows. The executable protocol specifies likelihood/decoder, allocation and evaluation before optimization. No receding endpoint auxiliary is used: causal forward sequence likelihood marginalizes variable-length latent segments.
 
 Entity grounding is a separate design question, not supplied by an HSMM. V9 tokens omit identity, so persistent selection of a particular camp requires a causally bound identity sidecar from existing eligible personal observations, with explicit no-target, unknown/unavailable and death handling. IDs may serve only as within-stream identity keys, never learnable numeric features. No entity objective meaning is inferred from a state index. A grounding treatment must have its own matched control before attributing gains to it.
 
@@ -18,6 +18,9 @@ Tests enumerate the state/age transition distribution, check gap resets and demo
 
 ```text
 python -m unittest tools.action_predictor.segment_policy.test_filter -v
+python -m unittest tools.action_predictor.segment_policy.test_model tools.action_predictor.segment_policy.test_entry -v
+python -m tools.action_predictor.segment_policy.protocol
+python -m tools.action_predictor.segment_policy.fit H00
 ```
 
-Original benchmark, all DEV rows, both sealed partitions and every prior negative result remain preserved. No new priority fits, matches, downloads, bot/runtime or deployment work. AB01's outstanding fresh review is independent of this new implementation and must not certify it by implication.
+Original benchmark, all DEV rows, both sealed partitions and every prior negative result remain preserved. No new priority fits, matches, downloads, bot/runtime or deployment work. AB01's completed fresh review closes that negative study and does not certify this implementation. After each new fit a separate fresh Sol xhigh review is required; no automatic multi-fit script exists.
