@@ -1,0 +1,21 @@
+{
+  "verdict": "APPROVE",
+  "reviewed_head": "497d7db",
+  "review_task_id": "node:delegated-task:command%3Amcp%3Af5f199c3-d88e-464c-b423-4c127fef8ba3%3Adelegate-task%3Acadence-probe-u00-postfit-review-20261109",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "protocol_sha256": "45c623972b591d39c814a52c6a7fbe86c12c5ab60cda03f6bd5f92685f37c14b",
+  "result_sha256": "118a03ddfa5fbd10d3dec273021ae4697c92a0f0f9790254992f43fecc91b685",
+  "findings": [],
+  "verification": [
+    "92sources,91inputs,38runarchives andprefitreviewbindings match;19tests pass.",
+    "ExactAinitial139292parameters andemptyoptimizer;16schedules/RNG/coverage,128updates with1024rowdenominators,131072presentations verified.",
+    "All40parametertensorschanged;normsfinite;0of128updatesclipped.",
+    "Initial/final8192rowforecasts,movementarchives andeverysummary reproduce exactly;causalordering,likelihood,jointdecoder,decomposition andfinalpass16selection consistent.",
+    "Finalstrictcounts6060commands,659moves,28changes,631continuations;changecoordinateNLL3.0831905362582117 reproduce."
+  ],
+  "scope": "U00 eligible matchedreference. After binding this actualreview, frozenU01 may execute once within combinedtwohourcap. No future-result,promotion,generalization orstrategyapproval.",
+  "limits": "Weakfittingcontrol. Fullpopulationreview,strongreferences,category90percent,reliability,three-seed anddatalimitrequirements remain.",
+  "actual_data_optimizer_updates": 0,
+  "new_fits": 0
+}
