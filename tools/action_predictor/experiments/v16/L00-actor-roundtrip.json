@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "cases": 128,
+    "engine_2.0.0": 64,
+    "forecast_cancel": 18,
+    "forecast_attack": 15,
+    "forecast_cast_0": 2,
+    "forecast_recall": 33,
+    "forecast_end": 41,
+    "forecast_blocked": 1,
+    "forecast_move": 16,
+    "forecast_cast_1": 1,
+    "engine_3.0.0": 64,
+    "forecast_priority": 1
+  },
+  "bindings": [
+    {
+      "raw": "213b526318b71ea4f8e5951d108b8e77eaedb51368c4b33874ae51a07dbdc891",
+      "index_sha256": "ea1e6e3a7fddef936fbccacf2cf617a7b5521f25e99b8aa907c368edb2324739",
+      "frames_sha256": "758cee04b1e05c9ddfc3ab854f3a0cf84d446c9556558f24c14af9a7c70ba5f5",
+      "priority_sha256": "ff3f856279cd803aed90243179f0f8775d383fcb6685d02563ebe18def67bf74"
+    },
+    {
+      "raw": "675cc775d6158e3bea5937066b954994ce017b54d4a5e9a22df976dff531a432",
+      "index_sha256": "146854eb9e61db3876b72c32abb510236bb3e3b52f1f5d11cc87957e4923216a",
+      "frames_sha256": "62a47d65825c6747979cddfa224153d0f5d2203d338f64badfd5bb5b80be242f",
+      "priority_sha256": "abc4618e79e926e72b3a36a5408622ee31f8029d99d3643c839ae9b744790fe9"
+    }
+  ],
+  "max_nll_discrepancy": 4.291534423828125e-06,
+  "max_portable_actor_nll_discrepancy": 2.384185791015625e-06,
+  "portable_actor_commands_exact": true,
+  "exact_semantic_commands": true,
+  "checkpoint_sha256": "89893fdd80a6b33eacc40d20403a8ee89c7abdba3cf18a5da67663ce046ca33b",
+  "actual_raw_PRE_inference_ms": {
+    "mean": 14.17488593597227,
+    "median": 13.64774999092333,
+    "p95": 18.424019980011504
+  },
+  "timing_scope": "Current personal input construction, frozen M01/P05 distribution, Torch learned goal policy and all-family joint MAP PLUS independent portable actor/P05. Initialization, history replay, SDK dispatch excluded; combined verification cost, not production bot latency or a speed comparison.",
+  "qualification": "First32 selected decisions of first2 actor streams per engine, forward from each first sampled decision with explicit unknown prefix. Cached/full benchmark retains every row separately. Replay teacher forcing and no actual engine execution; does not certify WASI, full legality or closed-loop strength.",
+  "source_sha256": "10b736333ce198ab72f72473dd3724493ba43b052519794470341de4df5f3cc3",
+  "actor_sha256": "61dc0c12298280968ab73e2519db3f4b50da76a87d022c02d851d1cee2785abb",
+  "personal_inputs_sha256": "5adf8954654faea2159b639cda09bda818351af712a277851d6d9be4d8ba678d",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -16,6 +16,21 @@ def read(path):
         return {k: z[k] for k in z.files}
 
 
+def readiness_flags(raw, p):
+    """Reuse historical partial checks, separate from attempted-move masks."""
+    alive = raw['hp_alive']; free = raw['channel'] == 0
+    flags, restrictions = raw['flags'], raw['restrictions']
+    checks = dict(attack=alive & free & ((flags & 2) != 0) & ((restrictions & 2) == 0),
+                  ward=alive & free & (raw['ward_charges'] > 0),
+                  submit=alive & free & (raw['gems'] > 0),
+                  recall=alive & free, shop=raw['shop'])
+    for slot in (0, 1):
+        checks[f'cast_{slot}'] = alive & free & raw['ability_ready'][:, slot] & ((flags & 1024) != 0) & ((restrictions & 4) == 0)
+    return dict(by_predicted_family={name:dict(assessed=int((p['prediction'] == rt.LABELS.index(name)).sum()),
+        flagged=int(((p['prediction'] == rt.LABELS.index(name)) & ~ok).sum())) for name, ok in checks.items()},
+        full_engine_legality=None, meaning='Historical partial readiness/resource formulas reused from reliable_train.invalid_rate. Not complete SDK target/range/identity legality. Successful-move and blocked-attempt mask rejections are reported separately, never pooled into an illegal-success rate.')
+
+
 def freeze():
     immutable_json(REPORT / 'analysis-plan.json', dict(
         purpose='Diagnose learned sequential policy without changing the two-fit design, support, checkpoints, thresholds or seeds.',
@@ -70,6 +85,8 @@ def run(identifier):
     for split in ('train', 'validation'):
         raw = read(BASE / 'combined-train.npz' if split == 'train' else BASE.parent / 'v4/validation.npz')
         path = WORK / f'runs/{identifier}/{split}-predictions.npz'; p = read(path)
+        assert np.isfinite(p['nll']).all() and (p['nll'] >= -1e-5).all()
+        np.testing.assert_allclose(p['type_nll'] + p['param_nll'], p['nll'], atol=2e-5, rtol=0)
         gp = WORK / f'runs/{identifier}/{split}-goals.npz'; goals = read(gp)
         target = read(WORK / f'{split}-goals.npz'); seq = read(WORK / f'{split}-sequences.npz')
         gap = np.empty_like(seq['gap']); gap[seq['order']] = seq['gap']
@@ -109,13 +126,17 @@ def run(identifier):
                     observed_nll=float(p['nll'][m].mean()) if n else None,
                     type_nll=float(p['type_nll'][m].mean()) if n else None,
                     parameter_nll=float(p['param_nll'][m].mean()) if n and action != 'shop' else None))
+            classified_failures = sum(c['wrong_type'] + (c['wrong_argument_after_correct_type'] or 0) + c['typed_missing_shop_arguments'] for c in categories)
+            assert classified_failures == int((mask & ~joint).sum())
             prior = goals['prior'][mask]; entropy = -(prior * np.log(prior.clip(1e-30))).sum(-1)
-            worlds = goals['world'][mask]; separation = np.abs(worlds[:, :, None] - worlds[:, None, :]).max(-1) * 32
+            geometry_rows = mask & target['position_known']
+            worlds = goals['world'][geometry_rows]; separation = np.abs(worlds[:, :, None] - worlds[:, None, :]).max(-1) * 32
             gm = mask & np.isfinite(goals['achievement_nll'])
             g = dict(rows=int(mask.sum()), mean_prior=prior.mean(0).tolist(),
                      prior_argmax_usage=np.bincount(prior.argmax(-1), minlength=4).tolist(),
                      mean_prior_entropy=float(entropy.mean()),
-                     median_max_pairwise_goal_tile_distance=float(np.median(separation.max((1, 2)))),
+                     known_origin_goal_geometry_support=int(geometry_rows.sum()),
+                     median_max_pairwise_goal_tile_distance=float(np.median(separation.max((1, 2)))) if geometry_rows.any() else None,
                      effective_gap_retention_quantiles=np.quantile(goals['retention'][mask], [0, .25, .5, .75, 1]).tolist(),
                      achieved_target_support=int(gm.sum()),
                      achieved_position_nll=float(goals['achievement_nll'][gm].mean()) if gm.any() else None)
@@ -135,7 +156,10 @@ def run(identifier):
                     meaning='One prior-weighted predicted waypoint, never best component chosen using future truth. Continuous Gaussian goal-density NLL is separate from command probability and strategic intent.')
             summaries[name] = dict(overall=summary(d, p, mask), category_losses_and_failures=categories,
                                    contexts={k: summary(d, p, mask & m) for k, m in contexts.items()}, goal_behavior=g)
-        result[split] = dict(sampling=summaries, movement_support_and_partial_legality=support(d, p))
+        result[split] = dict(sampling=summaries, movement_support_and_partial_legality=support(d, p),
+                            partial_readiness_resource_diagnostic=readiness_flags(raw, p))
+        if split == 'train':
+            result[split]['natural_sampling_qualification'] = ('Natural membership is identity-verified, but these selected-checkpoint predictions traverse the original augmented actor stream. The extra selected actions affect transition-gap features and, for L01, latent filter updates. Natural-row point scores are in-sample diagnostics, not a matched natural-cadence replay or evidence isolating group shift. Root-gap strata are reported separately; no nonconsecutive rows are stitched.')
         run_metrics = {}
         for width in (2, 4, 8):
             blocks = []
