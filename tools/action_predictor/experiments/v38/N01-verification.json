@@ -1,0 +1,33 @@
+{
+  "result_sha256": "7897444a5c4f78151e0a1a478a8232131ad42a4c5f2e32bec10e230a71f293a7",
+  "verification_script_sha256": "c3f697450d7d9f37625d59ff848a8a7c116ad99b650246954c8e034b7aecb5f1",
+  "source_bindings": 101,
+  "input_bindings": 113,
+  "run_bindings": 22,
+  "frozen_parameters": 139292,
+  "trainable_parameters": 5697,
+  "changed_tensors": [
+    "tile_projection.weight",
+    "tile_projection.bias",
+    "context_projection.weight",
+    "context_projection.bias",
+    "residual_readout.weight",
+    "residual_readout.bias"
+  ],
+  "matched_schedules": 8,
+  "updates": 272,
+  "row_presentations": 277760,
+  "all_saved_summaries_and_comparisons_exact": true,
+  "full_forecast_rows_per_checkpoint": 34720,
+  "full_movement_rows_per_checkpoint": 5472,
+  "frozen_base_exact_all_checkpoints": true,
+  "clipped": 0,
+  "seconds": 80.59274420002475,
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "scope": "Parent read-only verification after completed N01; independent negative-result review remains required.",
+  "protocol_sha256": "15d1de1d496795b96f1f30f005e98f0b3b1b4e42b66aa88e6cdfcca5e7cec17d",
+  "fit_process_exit_code": 0,
+  "full_initial_and_final_forecasts_reproduced": true,
+  "independent_review_pending": true
+}
