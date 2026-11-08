@@ -105,3 +105,17 @@ Supplementary encoded-domain/mask inspection found all spatial py labels inside
 range/unit/move mask sets;4attack rows use existing empty-set fallback. This
 rules out that particular hard-mask/window explanation for spatial DEV errors,
 not current learned mode reachability, raw-label correctness or full legality.
+
+Q01 fresh Sol xhigh review reproduced107bindings/all26branch counts and challenged
+the proposed new scorer: the existing head already scores goal-conditioned tiles.
+Supersede earlier weak-injection wording with weak measured dependence through
+this trained projection. Preserve original tests; new nondegenerate8example
+fixture rejects skipped geometry/uncertainty/all-availability-only mutants.
+Both the original lost-array failure and failed2e-6 criterion remain recorded.
+A separate unused numerical helper improves bounded conditional normalization
+without changing retained forecasts; no imitation gain is claimed.
+Next V18 protocol follows review: freeze L02 forecaster/representations/priors
+and baseline causal filtering, train identical existing readout copies with
+dynamic versus TRAIN-mean projection geometry. No new scorer architecture.
+This tests incremental input usefulness at fixed upstream state, not Fish intent
+or independently retrained persistence. All original targets remain binding.
