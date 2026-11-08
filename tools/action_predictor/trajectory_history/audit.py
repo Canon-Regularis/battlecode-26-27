@@ -98,7 +98,7 @@ def selected_matches(target, expected, priority):
         (target['family'] != 'priority' or target['priority'] == priority))
 
 
-def audit_game(job, selection, canonical_priority):
+def audit_game(job, selection, canonical_priority, extra_events=None):
     payload = job['record']['raw_sha256']; bindings = {}
     def checked(path, expected=None):
         value = digest(path)
@@ -136,7 +136,14 @@ def audit_game(job, selection, canonical_priority):
                 raise ValueError('Selected/cache observation disagreement')
             observations[event] = frame
     extras = sorted(set(observations)-set(selected), key=cursor)
-    keep = set(selected) | set(extras[:selection['max_extra_roots']])
+    if extra_events is None:
+        chosen_extra = set(extras[:selection['max_extra_roots']])
+    else:
+        chosen_extra = set(extra_events)
+        if (len(chosen_extra) != len(extra_events) or len(chosen_extra) > selection['max_extra_roots'] or
+                not chosen_extra.issubset(extras)):
+            raise ValueError('Proposed extra roots exceed budget or available unselected roots')
+    keep = set(selected) | chosen_extra
     actual = defaultdict(list); events = set()
     for line in index.open(encoding='utf-8'):
         turn = json.loads(line)
