@@ -1,0 +1,3193 @@
+{
+  "results": {
+    "fit": {
+      "all": {
+        "rows": 4208,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 4208,
+            "exact": 1051,
+            "accuracy": 0.24976235741444866,
+            "mean_NLL": 3.003190979113415,
+            "MAE": 165.54111216730038,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.034220532319392,
+            "mean_mode_probability": 0.18688889637592299,
+            "marginalized_target_source_shares": [
+              0.6736595198198276,
+              0.3225076949581866,
+              0.003832785221985192
+            ]
+          },
+          "RC01": {
+            "rows": 4208,
+            "exact": 1541,
+            "accuracy": 0.36620722433460073,
+            "mean_NLL": 2.613734323972121,
+            "MAE": 151.30537072243345,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.240494296577946,
+            "mean_mode_probability": 0.3167494911627449,
+            "marginalized_target_source_shares": [
+              0.6737240266900554,
+              0.3225788640639872,
+              0.003697109245957331
+            ]
+          },
+          "RC00": {
+            "rows": 4208,
+            "exact": 1431,
+            "accuracy": 0.34006653992395436,
+            "mean_NLL": 2.7052005297747233,
+            "MAE": 163.61858365019012,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.707937262357415,
+            "mean_mode_probability": 0.2942079905990153,
+            "marginalized_target_source_shares": [
+              0.6736942849030264,
+              0.32253522268861295,
+              0.003770492408359478
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 4208,
+            "groups": 40,
+            "rescues": 648,
+            "regressions": 158,
+            "net": 490,
+            "accuracy_difference": 0.11644486692015209,
+            "mean_NLL_difference": -0.3894566551412934,
+            "mean_bounded_rank_difference": -1.793726235741445,
+            "paired_accuracy_interval": [
+              0.10247068410879835,
+              0.12839562410587227
+            ],
+            "paired_NLL_interval": [
+              -0.4160415999015934,
+              -0.3622770448188633
+            ],
+            "positive_groups": 39,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 21,
+              "12": 13,
+              "13": 17,
+              "15": 7,
+              "22": 12,
+              "23": 17,
+              "25": 10,
+              "29": 4,
+              "30": 12,
+              "35": 0,
+              "36": 10,
+              "37": 5,
+              "38": 21,
+              "39": 12,
+              "43": 14,
+              "45": 12,
+              "48": 11,
+              "50": 21,
+              "52": 17,
+              "54": 9,
+              "57": 7,
+              "58": 3,
+              "59": 18,
+              "62": 8,
+              "64": 5,
+              "65": 12,
+              "71": 22,
+              "77": 9,
+              "78": 15,
+              "82": 13,
+              "83": 18,
+              "85": 8,
+              "88": 3,
+              "93": 6,
+              "94": 12,
+              "95": 12,
+              "97": 22,
+              "98": 16,
+              "100": 19
+            }
+          },
+          "RC00": {
+            "rows": 4208,
+            "groups": 40,
+            "rescues": 172,
+            "regressions": 62,
+            "net": 110,
+            "accuracy_difference": 0.02614068441064639,
+            "mean_NLL_difference": -0.0914662058026023,
+            "mean_bounded_rank_difference": -0.4674429657794677,
+            "paired_accuracy_interval": [
+              0.02060855979360915,
+              0.0319129087478249
+            ],
+            "paired_NLL_interval": [
+              -0.10340857106275349,
+              -0.08067762847074766
+            ],
+            "positive_groups": 36,
+            "negative_groups": 0,
+            "zero_groups": 4,
+            "group_net_commands": {
+              "3": 0,
+              "4": 7,
+              "12": 3,
+              "13": 2,
+              "15": 2,
+              "22": 3,
+              "23": 4,
+              "25": 1,
+              "29": 2,
+              "30": 5,
+              "35": 0,
+              "36": 3,
+              "37": 1,
+              "38": 5,
+              "39": 1,
+              "43": 7,
+              "45": 1,
+              "48": 4,
+              "50": 3,
+              "52": 2,
+              "54": 2,
+              "57": 1,
+              "58": 2,
+              "59": 0,
+              "62": 1,
+              "64": 2,
+              "65": 2,
+              "71": 7,
+              "77": 4,
+              "78": 3,
+              "82": 2,
+              "83": 4,
+              "85": 3,
+              "88": 0,
+              "93": 1,
+              "94": 3,
+              "95": 4,
+              "97": 8,
+              "98": 2,
+              "100": 3
+            }
+          }
+        }
+      },
+      "other_available": {
+        "rows": 4010,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 4010,
+            "exact": 976,
+            "accuracy": 0.2433915211970075,
+            "mean_NLL": 3.0467398475175567,
+            "MAE": 172.78802992518703,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.419201995012468,
+            "mean_mode_probability": 0.18265264911748186,
+            "marginalized_target_source_shares": [
+              0.6612643686886713,
+              0.3347216507533104,
+              0.004013980558017754
+            ]
+          },
+          "RC01": {
+            "rows": 4010,
+            "exact": 1458,
+            "accuracy": 0.3635910224438903,
+            "mean_NLL": 2.644113621974418,
+            "MAE": 158.03491271820448,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.556109725685786,
+            "mean_mode_probability": 0.3171958138937389,
+            "marginalized_target_source_shares": [
+              0.6613320604912222,
+              0.3347963339023253,
+              0.0038716056064530997
+            ]
+          },
+          "RC00": {
+            "rows": 4010,
+            "exact": 1348,
+            "accuracy": 0.33615960099750625,
+            "mean_NLL": 2.740072394829933,
+            "MAE": 170.9561097256858,
+            "max_error": 1532,
+            "mean_bounded_rank": 11.046633416458853,
+            "mean_mode_probability": 0.29352292493917487,
+            "marginalized_target_source_shares": [
+              0.6613008501564638,
+              0.33475053766588175,
+              0.0039486121776535245
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 4010,
+            "groups": 40,
+            "rescues": 639,
+            "regressions": 157,
+            "net": 482,
+            "accuracy_difference": 0.12019950124688279,
+            "mean_NLL_difference": -0.4026262255431384,
+            "mean_bounded_rank_difference": -1.8630922693266834,
+            "paired_accuracy_interval": [
+              0.10555806929216319,
+              0.13268110301156927
+            ],
+            "paired_NLL_interval": [
+              -0.42989102271164226,
+              -0.37428332426447397
+            ],
+            "positive_groups": 39,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 20,
+              "12": 13,
+              "13": 17,
+              "15": 7,
+              "22": 12,
+              "23": 17,
+              "25": 10,
+              "29": 4,
+              "30": 12,
+              "35": 0,
+              "36": 10,
+              "37": 4,
+              "38": 20,
+              "39": 12,
+              "43": 13,
+              "45": 12,
+              "48": 11,
+              "50": 21,
+              "52": 17,
+              "54": 9,
+              "57": 7,
+              "58": 3,
+              "59": 18,
+              "62": 8,
+              "64": 5,
+              "65": 12,
+              "71": 21,
+              "77": 9,
+              "78": 15,
+              "82": 12,
+              "83": 17,
+              "85": 9,
+              "88": 3,
+              "93": 5,
+              "94": 12,
+              "95": 12,
+              "97": 22,
+              "98": 16,
+              "100": 18
+            }
+          },
+          "RC00": {
+            "rows": 4010,
+            "groups": 40,
+            "rescues": 172,
+            "regressions": 62,
+            "net": 110,
+            "accuracy_difference": 0.02743142144638404,
+            "mean_NLL_difference": -0.09595877285551467,
+            "mean_bounded_rank_difference": -0.49052369077306734,
+            "paired_accuracy_interval": [
+              0.021612200416978585,
+              0.03346163084117558
+            ],
+            "paired_NLL_interval": [
+              -0.10828444568504865,
+              -0.0847966642276723
+            ],
+            "positive_groups": 36,
+            "negative_groups": 0,
+            "zero_groups": 4,
+            "group_net_commands": {
+              "3": 0,
+              "4": 7,
+              "12": 3,
+              "13": 2,
+              "15": 2,
+              "22": 3,
+              "23": 4,
+              "25": 1,
+              "29": 2,
+              "30": 5,
+              "35": 0,
+              "36": 3,
+              "37": 1,
+              "38": 5,
+              "39": 1,
+              "43": 7,
+              "45": 1,
+              "48": 4,
+              "50": 3,
+              "52": 2,
+              "54": 2,
+              "57": 1,
+              "58": 2,
+              "59": 0,
+              "62": 1,
+              "64": 2,
+              "65": 2,
+              "71": 7,
+              "77": 4,
+              "78": 3,
+              "82": 2,
+              "83": 4,
+              "85": 3,
+              "88": 0,
+              "93": 1,
+              "94": 3,
+              "95": 4,
+              "97": 8,
+              "98": 2,
+              "100": 3
+            }
+          }
+        }
+      },
+      "other_unavailable": {
+        "rows": 198,
+        "groups": 39,
+        "models": {
+          "warm": {
+            "rows": 198,
+            "exact": 75,
+            "accuracy": 0.3787878787878788,
+            "mean_NLL": 2.1212164220396312,
+            "MAE": 18.772727272727273,
+            "max_error": 733,
+            "mean_bounded_rank": 4.237373737373737,
+            "mean_mode_probability": 0.27268360095344313,
+            "marginalized_target_source_shares": [
+              0.9246926311124415,
+              0.07514424678421208,
+              0.00016312210334596381
+            ]
+          },
+          "RC01": {
+            "rows": 198,
+            "exact": 83,
+            "accuracy": 0.41919191919191917,
+            "mean_NLL": 1.9984768240266118,
+            "MAE": 15.015151515151516,
+            "max_error": 729,
+            "mean_bounded_rank": 3.8484848484848486,
+            "mean_mode_probability": 0.30771032878251375,
+            "marginalized_target_source_shares": [
+              0.9246926350603805,
+              0.07514424764107618,
+              0.00016311729854300532
+            ]
+          },
+          "RC00": {
+            "rows": 198,
+            "exact": 83,
+            "accuracy": 0.41919191919191917,
+            "mean_NLL": 1.998957202141443,
+            "MAE": 15.015151515151516,
+            "max_error": 729,
+            "mean_bounded_rank": 3.8484848484848486,
+            "mean_mode_probability": 0.3080823001745723,
+            "marginalized_target_source_shares": [
+              0.9246926350733193,
+              0.07514424764392261,
+              0.00016311728275780814
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 198,
+            "groups": 39,
+            "rescues": 9,
+            "regressions": 1,
+            "net": 8,
+            "accuracy_difference": 0.04040404040404041,
+            "mean_NLL_difference": -0.12273959801302,
+            "mean_bounded_rank_difference": -0.3888888888888889,
+            "paired_accuracy_interval": [
+              0.015228426395939087,
+              0.06818458980044344
+            ],
+            "paired_NLL_interval": [
+              -0.1731760215458953,
+              -0.07924490060617471
+            ],
+            "positive_groups": 9,
+            "negative_groups": 1,
+            "zero_groups": 29,
+            "group_net_commands": {
+              "3": 0,
+              "4": 1,
+              "12": 0,
+              "13": 0,
+              "15": 0,
+              "23": 0,
+              "25": 0,
+              "29": 0,
+              "30": 0,
+              "35": 0,
+              "36": 0,
+              "37": 1,
+              "38": 1,
+              "39": 0,
+              "43": 1,
+              "45": 0,
+              "48": 0,
+              "50": 0,
+              "52": 0,
+              "54": 0,
+              "57": 0,
+              "58": 0,
+              "59": 0,
+              "62": 0,
+              "64": 0,
+              "65": 0,
+              "71": 1,
+              "77": 0,
+              "78": 0,
+              "82": 1,
+              "83": 1,
+              "85": -1,
+              "88": 0,
+              "93": 1,
+              "94": 0,
+              "95": 0,
+              "97": 0,
+              "98": 0,
+              "100": 1
+            }
+          },
+          "RC00": {
+            "rows": 198,
+            "groups": 39,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": 0.0,
+            "mean_NLL_difference": -0.0004803781148317296,
+            "mean_bounded_rank_difference": 0.0,
+            "paired_accuracy_interval": [
+              0.0,
+              0.0
+            ],
+            "paired_NLL_interval": [
+              -0.0010817711681507737,
+              0.0001344697419924766
+            ],
+            "positive_groups": 0,
+            "negative_groups": 0,
+            "zero_groups": 39,
+            "group_net_commands": {
+              "3": 0,
+              "4": 0,
+              "12": 0,
+              "13": 0,
+              "15": 0,
+              "23": 0,
+              "25": 0,
+              "29": 0,
+              "30": 0,
+              "35": 0,
+              "36": 0,
+              "37": 0,
+              "38": 0,
+              "39": 0,
+              "43": 0,
+              "45": 0,
+              "48": 0,
+              "50": 0,
+              "52": 0,
+              "54": 0,
+              "57": 0,
+              "58": 0,
+              "59": 0,
+              "62": 0,
+              "64": 0,
+              "65": 0,
+              "71": 0,
+              "77": 0,
+              "78": 0,
+              "82": 0,
+              "83": 0,
+              "85": 0,
+              "88": 0,
+              "93": 0,
+              "94": 0,
+              "95": 0,
+              "97": 0,
+              "98": 0,
+              "100": 0
+            }
+          }
+        }
+      },
+      "correction_fit_seen_integer": {
+        "rows": 4208,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 4208,
+            "exact": 1051,
+            "accuracy": 0.24976235741444866,
+            "mean_NLL": 3.003190979113415,
+            "MAE": 165.54111216730038,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.034220532319392,
+            "mean_mode_probability": 0.18688889637592299,
+            "marginalized_target_source_shares": [
+              0.6736595198198276,
+              0.3225076949581866,
+              0.003832785221985192
+            ]
+          },
+          "RC01": {
+            "rows": 4208,
+            "exact": 1541,
+            "accuracy": 0.36620722433460073,
+            "mean_NLL": 2.613734323972121,
+            "MAE": 151.30537072243345,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.240494296577946,
+            "mean_mode_probability": 0.3167494911627449,
+            "marginalized_target_source_shares": [
+              0.6737240266900554,
+              0.3225788640639872,
+              0.003697109245957331
+            ]
+          },
+          "RC00": {
+            "rows": 4208,
+            "exact": 1431,
+            "accuracy": 0.34006653992395436,
+            "mean_NLL": 2.7052005297747233,
+            "MAE": 163.61858365019012,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.707937262357415,
+            "mean_mode_probability": 0.2942079905990153,
+            "marginalized_target_source_shares": [
+              0.6736942849030264,
+              0.32253522268861295,
+              0.003770492408359478
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 4208,
+            "groups": 40,
+            "rescues": 648,
+            "regressions": 158,
+            "net": 490,
+            "accuracy_difference": 0.11644486692015209,
+            "mean_NLL_difference": -0.3894566551412934,
+            "mean_bounded_rank_difference": -1.793726235741445,
+            "paired_accuracy_interval": [
+              0.10247068410879835,
+              0.12839562410587227
+            ],
+            "paired_NLL_interval": [
+              -0.4160415999015934,
+              -0.3622770448188633
+            ],
+            "positive_groups": 39,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 21,
+              "12": 13,
+              "13": 17,
+              "15": 7,
+              "22": 12,
+              "23": 17,
+              "25": 10,
+              "29": 4,
+              "30": 12,
+              "35": 0,
+              "36": 10,
+              "37": 5,
+              "38": 21,
+              "39": 12,
+              "43": 14,
+              "45": 12,
+              "48": 11,
+              "50": 21,
+              "52": 17,
+              "54": 9,
+              "57": 7,
+              "58": 3,
+              "59": 18,
+              "62": 8,
+              "64": 5,
+              "65": 12,
+              "71": 22,
+              "77": 9,
+              "78": 15,
+              "82": 13,
+              "83": 18,
+              "85": 8,
+              "88": 3,
+              "93": 6,
+              "94": 12,
+              "95": 12,
+              "97": 22,
+              "98": 16,
+              "100": 19
+            }
+          },
+          "RC00": {
+            "rows": 4208,
+            "groups": 40,
+            "rescues": 172,
+            "regressions": 62,
+            "net": 110,
+            "accuracy_difference": 0.02614068441064639,
+            "mean_NLL_difference": -0.0914662058026023,
+            "mean_bounded_rank_difference": -0.4674429657794677,
+            "paired_accuracy_interval": [
+              0.02060855979360915,
+              0.0319129087478249
+            ],
+            "paired_NLL_interval": [
+              -0.10340857106275349,
+              -0.08067762847074766
+            ],
+            "positive_groups": 36,
+            "negative_groups": 0,
+            "zero_groups": 4,
+            "group_net_commands": {
+              "3": 0,
+              "4": 7,
+              "12": 3,
+              "13": 2,
+              "15": 2,
+              "22": 3,
+              "23": 4,
+              "25": 1,
+              "29": 2,
+              "30": 5,
+              "35": 0,
+              "36": 3,
+              "37": 1,
+              "38": 5,
+              "39": 1,
+              "43": 7,
+              "45": 1,
+              "48": 4,
+              "50": 3,
+              "52": 2,
+              "54": 2,
+              "57": 1,
+              "58": 2,
+              "59": 0,
+              "62": 1,
+              "64": 2,
+              "65": 2,
+              "71": 7,
+              "77": 4,
+              "78": 3,
+              "82": 2,
+              "83": 4,
+              "85": 3,
+              "88": 0,
+              "93": 1,
+              "94": 3,
+              "95": 4,
+              "97": 8,
+              "98": 2,
+              "100": 3
+            }
+          }
+        }
+      },
+      "correction_fit_unseen_integer": {
+        "rows": 0,
+        "groups": 0,
+        "models": {
+          "warm": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC01": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC00": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          },
+          "RC00": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          }
+        }
+      },
+      "latest_argument_outside16": {
+        "rows": 1129,
+        "groups": 40,
+        "models": {
+          "warm": {
+            "rows": 1129,
+            "exact": 279,
+            "accuracy": 0.2471213463241807,
+            "mean_NLL": 2.9793135338062955,
+            "MAE": 185.99202834366696,
+            "max_error": 1512,
+            "mean_bounded_rank": 14.388839681133748,
+            "mean_mode_probability": 0.17503030999075328,
+            "marginalized_target_source_shares": [
+              0.8197452403702424,
+              0.17407213482267345,
+              0.006182624807083972
+            ]
+          },
+          "RC01": {
+            "rows": 1129,
+            "exact": 347,
+            "accuracy": 0.3073516386182462,
+            "mean_NLL": 2.7461321842929247,
+            "MAE": 168.17714791851196,
+            "max_error": 1512,
+            "mean_bounded_rank": 12.91496899911426,
+            "mean_mode_probability": 0.2200286896217828,
+            "marginalized_target_source_shares": [
+              0.81989627502126,
+              0.17426892311813913,
+              0.0058348018606005055
+            ]
+          },
+          "RC00": {
+            "rows": 1129,
+            "exact": 300,
+            "accuracy": 0.2657218777679362,
+            "mean_NLL": 2.885879852456907,
+            "MAE": 190.66873339238265,
+            "max_error": 1512,
+            "mean_bounded_rank": 13.676705048715677,
+            "mean_mode_probability": 0.1896874986808597,
+            "marginalized_target_source_shares": [
+              0.8198014264893468,
+              0.17414032586949704,
+              0.0060582476411566
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1129,
+            "groups": 40,
+            "rescues": 96,
+            "regressions": 28,
+            "net": 68,
+            "accuracy_difference": 0.06023029229406555,
+            "mean_NLL_difference": -0.23318134951337122,
+            "mean_bounded_rank_difference": -1.4738706820194862,
+            "paired_accuracy_interval": [
+              0.041739473603834884,
+              0.07761030039255841
+            ],
+            "paired_NLL_interval": [
+              -0.2592174949826813,
+              -0.20738298462117413
+            ],
+            "positive_groups": 33,
+            "negative_groups": 3,
+            "zero_groups": 4,
+            "group_net_commands": {
+              "3": 1,
+              "4": 1,
+              "12": 1,
+              "13": 1,
+              "15": 3,
+              "22": 3,
+              "23": -3,
+              "25": 2,
+              "29": 2,
+              "30": 5,
+              "35": 1,
+              "36": 3,
+              "37": -2,
+              "38": 2,
+              "39": 1,
+              "43": 4,
+              "45": 0,
+              "48": 3,
+              "50": 2,
+              "52": 2,
+              "54": 1,
+              "57": 2,
+              "58": -1,
+              "59": 1,
+              "62": 2,
+              "64": 0,
+              "65": 1,
+              "71": 3,
+              "77": 2,
+              "78": 2,
+              "82": 0,
+              "83": 6,
+              "85": 3,
+              "88": 0,
+              "93": 2,
+              "94": 1,
+              "95": 2,
+              "97": 4,
+              "98": 2,
+              "100": 3
+            }
+          },
+          "RC00": {
+            "rows": 1129,
+            "groups": 40,
+            "rescues": 68,
+            "regressions": 21,
+            "net": 47,
+            "accuracy_difference": 0.04162976085031001,
+            "mean_NLL_difference": -0.13974766816398243,
+            "mean_bounded_rank_difference": -0.7617360496014172,
+            "paired_accuracy_interval": [
+              0.027162755436373004,
+              0.056091148115687994
+            ],
+            "paired_NLL_interval": [
+              -0.1607278699900023,
+              -0.12099121382120026
+            ],
+            "positive_groups": 29,
+            "negative_groups": 5,
+            "zero_groups": 6,
+            "group_net_commands": {
+              "3": 0,
+              "4": 4,
+              "12": 1,
+              "13": 1,
+              "15": 1,
+              "22": 1,
+              "23": -1,
+              "25": 2,
+              "29": 1,
+              "30": 3,
+              "35": 2,
+              "36": 3,
+              "37": -1,
+              "38": 0,
+              "39": 0,
+              "43": 3,
+              "45": 0,
+              "48": 2,
+              "50": 1,
+              "52": 1,
+              "54": 1,
+              "57": 2,
+              "58": -1,
+              "59": -1,
+              "62": 1,
+              "64": 1,
+              "65": 1,
+              "71": 1,
+              "77": 2,
+              "78": 2,
+              "82": 1,
+              "83": 1,
+              "85": 2,
+              "88": -1,
+              "93": 1,
+              "94": 0,
+              "95": 3,
+              "97": 4,
+              "98": 3,
+              "100": 0
+            }
+          }
+        }
+      },
+      "current_scheduled_different": {
+        "rows": 0,
+        "groups": 0,
+        "models": {
+          "warm": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC01": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC00": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          },
+          "RC00": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          }
+        }
+      },
+      "engine2": {
+        "rows": 2484,
+        "groups": 23,
+        "models": {
+          "warm": {
+            "rows": 2484,
+            "exact": 631,
+            "accuracy": 0.25402576489533013,
+            "mean_NLL": 2.9982056802587795,
+            "MAE": 163.47342995169083,
+            "max_error": 1532,
+            "mean_bounded_rank": 12.10829307568438,
+            "mean_mode_probability": 0.18996792362179138,
+            "marginalized_target_source_shares": [
+              0.6667373996971352,
+              0.32954862273758145,
+              0.003713977565283834
+            ]
+          },
+          "RC01": {
+            "rows": 2484,
+            "exact": 931,
+            "accuracy": 0.3747987117552335,
+            "mean_NLL": 2.5983039562117436,
+            "MAE": 147.66022544283413,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.365942028985508,
+            "mean_mode_probability": 0.32107432046183504,
+            "marginalized_target_source_shares": [
+              0.6667744057467762,
+              0.32962914551415146,
+              0.003596448739073004
+            ]
+          },
+          "RC00": {
+            "rows": 2484,
+            "exact": 866,
+            "accuracy": 0.34863123993558776,
+            "mean_NLL": 2.6885570599685673,
+            "MAE": 158.39492753623188,
+            "max_error": 1532,
+            "mean_bounded_rank": 10.74597423510467,
+            "mean_mode_probability": 0.2981664003493208,
+            "marginalized_target_source_shares": [
+              0.6667611828967562,
+              0.32958191096977196,
+              0.0036569061334726233
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 2484,
+            "groups": 23,
+            "rescues": 388,
+            "regressions": 88,
+            "net": 300,
+            "accuracy_difference": 0.12077294685990338,
+            "mean_NLL_difference": -0.39990172404703594,
+            "mean_bounded_rank_difference": -1.7423510466988728,
+            "paired_accuracy_interval": [
+              0.10156493660832816,
+              0.13787958935072567
+            ],
+            "paired_NLL_interval": [
+              -0.4385572225057429,
+              -0.3632436033665276
+            ],
+            "positive_groups": 22,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "3": 17,
+              "4": 21,
+              "12": 13,
+              "13": 17,
+              "15": 7,
+              "22": 12,
+              "35": 0,
+              "36": 10,
+              "37": 5,
+              "38": 21,
+              "39": 12,
+              "43": 14,
+              "45": 12,
+              "48": 11,
+              "50": 21,
+              "52": 17,
+              "88": 3,
+              "93": 6,
+              "94": 12,
+              "95": 12,
+              "97": 22,
+              "98": 16,
+              "100": 19
+            }
+          },
+          "RC00": {
+            "rows": 2484,
+            "groups": 23,
+            "rescues": 102,
+            "regressions": 37,
+            "net": 65,
+            "accuracy_difference": 0.026167471819645734,
+            "mean_NLL_difference": -0.09025310375682388,
+            "mean_bounded_rank_difference": -0.38003220611916266,
+            "paired_accuracy_interval": [
+              0.018093933414998303,
+              0.03452590678717303
+            ],
+            "paired_NLL_interval": [
+              -0.10588498470750299,
+              -0.07531436629827214
+            ],
+            "positive_groups": 20,
+            "negative_groups": 0,
+            "zero_groups": 3,
+            "group_net_commands": {
+              "3": 0,
+              "4": 7,
+              "12": 3,
+              "13": 2,
+              "15": 2,
+              "22": 3,
+              "35": 0,
+              "36": 3,
+              "37": 1,
+              "38": 5,
+              "39": 1,
+              "43": 7,
+              "45": 1,
+              "48": 4,
+              "50": 3,
+              "52": 2,
+              "88": 0,
+              "93": 1,
+              "94": 3,
+              "95": 4,
+              "97": 8,
+              "98": 2,
+              "100": 3
+            }
+          }
+        }
+      },
+      "engine3": {
+        "rows": 1724,
+        "groups": 17,
+        "models": {
+          "warm": {
+            "rows": 1724,
+            "exact": 420,
+            "accuracy": 0.24361948955916474,
+            "mean_NLL": 3.010373973518817,
+            "MAE": 168.52030162412993,
+            "max_error": 1512,
+            "mean_bounded_rank": 11.927494199535962,
+            "mean_mode_probability": 0.182452525332572,
+            "marginalized_target_source_shares": [
+              0.6836331546137758,
+              0.31236287790249484,
+              0.004003967483728922
+            ]
+          },
+          "RC01": {
+            "rows": 1724,
+            "exact": 610,
+            "accuracy": 0.3538283062645012,
+            "mean_NLL": 2.6359669420212963,
+            "MAE": 156.5574245939675,
+            "max_error": 1512,
+            "mean_bounded_rank": 10.059744779582367,
+            "mean_mode_probability": 0.31051812458563377,
+            "marginalized_target_source_shares": [
+              0.6837372856361742,
+              0.3124205699095734,
+              0.0038421444542523957
+            ]
+          },
+          "RC00": {
+            "rows": 1724,
+            "exact": 565,
+            "accuracy": 0.3277262180974478,
+            "mean_NLL": 2.7291810280337097,
+            "MAE": 171.1450116009281,
+            "max_error": 1512,
+            "mean_bounded_rank": 10.653132250580047,
+            "mean_mode_probability": 0.28850457423024567,
+            "marginalized_target_source_shares": [
+              0.683683742782134,
+              0.31238210569882296,
+              0.003934151519043322
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1724,
+            "groups": 17,
+            "rescues": 260,
+            "regressions": 70,
+            "net": 190,
+            "accuracy_difference": 0.11020881670533643,
+            "mean_NLL_difference": -0.3744070314975205,
+            "mean_bounded_rank_difference": -1.8677494199535962,
+            "paired_accuracy_interval": [
+              0.092544749266139,
+              0.12512269007369745
+            ],
+            "paired_NLL_interval": [
+              -0.4096279977964662,
+              -0.3332407032923144
+            ],
+            "positive_groups": 17,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "23": 17,
+              "25": 10,
+              "29": 4,
+              "30": 12,
+              "54": 9,
+              "57": 7,
+              "58": 3,
+              "59": 18,
+              "62": 8,
+              "64": 5,
+              "65": 12,
+              "71": 22,
+              "77": 9,
+              "78": 15,
+              "82": 13,
+              "83": 18,
+              "85": 8
+            }
+          },
+          "RC00": {
+            "rows": 1724,
+            "groups": 17,
+            "rescues": 70,
+            "regressions": 25,
+            "net": 45,
+            "accuracy_difference": 0.026102088167053363,
+            "mean_NLL_difference": -0.093214086012413,
+            "mean_bounded_rank_difference": -0.5933874709976799,
+            "paired_accuracy_interval": [
+              0.01981906767621053,
+              0.03207005433493967
+            ],
+            "paired_NLL_interval": [
+              -0.10882644811984986,
+              -0.07739212378376886
+            ],
+            "positive_groups": 16,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "23": 4,
+              "25": 1,
+              "29": 2,
+              "30": 5,
+              "54": 2,
+              "57": 1,
+              "58": 2,
+              "59": 0,
+              "62": 1,
+              "64": 2,
+              "65": 2,
+              "71": 7,
+              "77": 4,
+              "78": 3,
+              "82": 2,
+              "83": 4,
+              "85": 3
+            }
+          }
+        }
+      }
+    },
+    "held": {
+      "all": {
+        "rows": 1668,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 1668,
+            "exact": 412,
+            "accuracy": 0.24700239808153476,
+            "mean_NLL": 3.0014045570627954,
+            "MAE": 163.21043165467626,
+            "max_error": 1515,
+            "mean_bounded_rank": 12.23621103117506,
+            "mean_mode_probability": 0.18987095832733922,
+            "marginalized_target_source_shares": [
+              0.6751089919316597,
+              0.3209871297794343,
+              0.003903878288905367
+            ]
+          },
+          "RC01": {
+            "rows": 1668,
+            "exact": 618,
+            "accuracy": 0.37050359712230213,
+            "mean_NLL": 2.5977133206734853,
+            "MAE": 146.44364508393286,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.531774580335732,
+            "mean_mode_probability": 0.31972726954435643,
+            "marginalized_target_source_shares": [
+              0.675182552268128,
+              0.3210337808086436,
+              0.0037836669232278004
+            ]
+          },
+          "RC00": {
+            "rows": 1668,
+            "exact": 567,
+            "accuracy": 0.33992805755395683,
+            "mean_NLL": 2.6804143020495683,
+            "MAE": 157.11630695443645,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.916666666666666,
+            "mean_mode_probability": 0.29780551182876164,
+            "marginalized_target_source_shares": [
+              0.6751677455904638,
+              0.32100543193080755,
+              0.0038268224787289667
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1668,
+            "groups": 15,
+            "rescues": 281,
+            "regressions": 75,
+            "net": 206,
+            "accuracy_difference": 0.12350119904076738,
+            "mean_NLL_difference": -0.40369123638930987,
+            "mean_bounded_rank_difference": -1.7044364508393286,
+            "paired_accuracy_interval": [
+              0.10513992796813315,
+              0.14218480393971933
+            ],
+            "paired_NLL_interval": [
+              -0.4522405798410974,
+              -0.355807612505313
+            ],
+            "positive_groups": 15,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 5,
+              "16": 17,
+              "32": 27,
+              "33": 14,
+              "42": 23,
+              "53": 11,
+              "55": 13,
+              "56": 11,
+              "60": 6,
+              "66": 14,
+              "68": 19,
+              "80": 10,
+              "81": 11,
+              "86": 13,
+              "87": 12
+            }
+          },
+          "RC00": {
+            "rows": 1668,
+            "groups": 15,
+            "rescues": 81,
+            "regressions": 30,
+            "net": 51,
+            "accuracy_difference": 0.030575539568345324,
+            "mean_NLL_difference": -0.08270098137608319,
+            "mean_bounded_rank_difference": -0.38489208633093525,
+            "paired_accuracy_interval": [
+              0.01889189355294696,
+              0.04441494525082552
+            ],
+            "paired_NLL_interval": [
+              -0.09530028969331793,
+              -0.07090647785390794
+            ],
+            "positive_groups": 13,
+            "negative_groups": 0,
+            "zero_groups": 2,
+            "group_net_commands": {
+              "9": 0,
+              "16": 6,
+              "32": 4,
+              "33": 2,
+              "42": 1,
+              "53": 1,
+              "55": 7,
+              "56": 1,
+              "60": 0,
+              "66": 9,
+              "68": 7,
+              "80": 3,
+              "81": 4,
+              "86": 4,
+              "87": 2
+            }
+          }
+        }
+      },
+      "other_available": {
+        "rows": 1585,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 1585,
+            "exact": 384,
+            "accuracy": 0.24227129337539433,
+            "mean_NLL": 3.0449105766981313,
+            "MAE": 170.66624605678234,
+            "max_error": 1515,
+            "mean_bounded_rank": 12.618296529968454,
+            "mean_mode_probability": 0.18535704822323443,
+            "marginalized_target_source_shares": [
+              0.6630587959917809,
+              0.33283465410292146,
+              0.004106549905297303
+            ]
+          },
+          "RC01": {
+            "rows": 1585,
+            "exact": 587,
+            "accuracy": 0.37034700315457414,
+            "mean_NLL": 2.6269578082067726,
+            "MAE": 153.03091482649842,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.854258675078864,
+            "mean_mode_probability": 0.3201204999850475,
+            "marginalized_target_source_shares": [
+              0.6631361875325477,
+              0.33288373526129544,
+              0.0039800772061567785
+            ]
+          },
+          "RC00": {
+            "rows": 1585,
+            "exact": 536,
+            "accuracy": 0.33817034700315457,
+            "mean_NLL": 2.7140709548053885,
+            "MAE": 164.26246056782335,
+            "max_error": 1515,
+            "mean_bounded_rank": 11.25993690851735,
+            "mean_mode_probability": 0.29703761800445594,
+            "marginalized_target_source_shares": [
+              0.6631206054211308,
+              0.33285390182584207,
+              0.004025492753027648
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1585,
+            "groups": 15,
+            "rescues": 277,
+            "regressions": 74,
+            "net": 203,
+            "accuracy_difference": 0.1280757097791798,
+            "mean_NLL_difference": -0.4179527684913595,
+            "mean_bounded_rank_difference": -1.7640378548895899,
+            "paired_accuracy_interval": [
+              0.10774556066558078,
+              0.1481522738524648
+            ],
+            "paired_NLL_interval": [
+              -0.46506904516492387,
+              -0.3714289788696266
+            ],
+            "positive_groups": 15,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 4,
+              "16": 17,
+              "32": 26,
+              "33": 13,
+              "42": 23,
+              "53": 11,
+              "55": 13,
+              "56": 11,
+              "60": 6,
+              "66": 15,
+              "68": 19,
+              "80": 10,
+              "81": 11,
+              "86": 12,
+              "87": 12
+            }
+          },
+          "RC00": {
+            "rows": 1585,
+            "groups": 15,
+            "rescues": 81,
+            "regressions": 30,
+            "net": 51,
+            "accuracy_difference": 0.032176656151419555,
+            "mean_NLL_difference": -0.08711314659861621,
+            "mean_bounded_rank_difference": -0.4056782334384858,
+            "paired_accuracy_interval": [
+              0.019759329064508648,
+              0.046875
+            ],
+            "paired_NLL_interval": [
+              -0.10085752884303788,
+              -0.07470421174640886
+            ],
+            "positive_groups": 13,
+            "negative_groups": 0,
+            "zero_groups": 2,
+            "group_net_commands": {
+              "9": 0,
+              "16": 6,
+              "32": 4,
+              "33": 2,
+              "42": 1,
+              "53": 1,
+              "55": 7,
+              "56": 1,
+              "60": 0,
+              "66": 9,
+              "68": 7,
+              "80": 3,
+              "81": 4,
+              "86": 4,
+              "87": 2
+            }
+          }
+        }
+      },
+      "other_unavailable": {
+        "rows": 83,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 83,
+            "exact": 28,
+            "accuracy": 0.3373493975903614,
+            "mean_NLL": 2.1705968327012375,
+            "MAE": 20.83132530120482,
+            "max_error": 819,
+            "mean_bounded_rank": 4.9397590361445785,
+            "mean_mode_probability": 0.2760703259780156,
+            "marginalized_target_source_shares": [
+              0.9052241794582638,
+              0.09474223757790576,
+              3.3582963830449444e-05
+            ]
+          },
+          "RC01": {
+            "rows": 83,
+            "exact": 31,
+            "accuracy": 0.37349397590361444,
+            "mean_NLL": 2.0392493117546833,
+            "MAE": 20.650602409638555,
+            "max_error": 819,
+            "mean_bounded_rank": 4.373493975903615,
+            "mean_mode_probability": 0.31221798944200385,
+            "marginalized_target_source_shares": [
+              0.905224577640367,
+              0.09474248192366334,
+              3.294043596962037e-05
+            ]
+          },
+          "RC00": {
+            "rows": 83,
+            "exact": 31,
+            "accuracy": 0.37349397590361444,
+            "mean_NLL": 2.037693884965528,
+            "MAE": 20.650602409638555,
+            "max_error": 819,
+            "mean_bounded_rank": 4.36144578313253,
+            "mean_mode_probability": 0.3124695083531533,
+            "marginalized_target_source_shares": [
+              0.9052245789445978,
+              0.09474248273044915,
+              3.2938324952939145e-05
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 83,
+            "groups": 15,
+            "rescues": 4,
+            "regressions": 1,
+            "net": 3,
+            "accuracy_difference": 0.03614457831325301,
+            "mean_NLL_difference": -0.1313475209465547,
+            "mean_bounded_rank_difference": -0.5662650602409639,
+            "paired_accuracy_interval": [
+              -0.01098901098901099,
+              0.09334374999999995
+            ],
+            "paired_NLL_interval": [
+              -0.2542436644593049,
+              -0.0516540682659424
+            ],
+            "positive_groups": 4,
+            "negative_groups": 1,
+            "zero_groups": 10,
+            "group_net_commands": {
+              "9": 1,
+              "16": 0,
+              "32": 1,
+              "33": 1,
+              "42": 0,
+              "53": 0,
+              "55": 0,
+              "56": 0,
+              "60": 0,
+              "66": -1,
+              "68": 0,
+              "80": 0,
+              "81": 0,
+              "86": 1,
+              "87": 0
+            }
+          },
+          "RC00": {
+            "rows": 83,
+            "groups": 15,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": 0.0,
+            "mean_NLL_difference": 0.001555426789155671,
+            "mean_bounded_rank_difference": 0.012048192771084338,
+            "paired_accuracy_interval": [
+              0.0,
+              0.0
+            ],
+            "paired_NLL_interval": [
+              -0.0005271329305972631,
+              0.00419262275428528
+            ],
+            "positive_groups": 0,
+            "negative_groups": 0,
+            "zero_groups": 15,
+            "group_net_commands": {
+              "9": 0,
+              "16": 0,
+              "32": 0,
+              "33": 0,
+              "42": 0,
+              "53": 0,
+              "55": 0,
+              "56": 0,
+              "60": 0,
+              "66": 0,
+              "68": 0,
+              "80": 0,
+              "81": 0,
+              "86": 0,
+              "87": 0
+            }
+          }
+        }
+      },
+      "correction_fit_seen_integer": {
+        "rows": 1621,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 1621,
+            "exact": 407,
+            "accuracy": 0.2510795805058606,
+            "mean_NLL": 2.946250179541555,
+            "MAE": 160.062924120913,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.466378778531771,
+            "mean_mode_probability": 0.1903877089716248,
+            "marginalized_target_source_shares": [
+              0.6888717050785985,
+              0.3087363512905414,
+              0.002391943630859138
+            ]
+          },
+          "RC01": {
+            "rows": 1621,
+            "exact": 612,
+            "accuracy": 0.3775447254780999,
+            "mean_NLL": 2.529103806799403,
+            "MAE": 142.28192473781615,
+            "max_error": 1515,
+            "mean_bounded_rank": 8.737199259716224,
+            "mean_mode_probability": 0.3216943089032539,
+            "marginalized_target_source_shares": [
+              0.6889469765852051,
+              0.3087840087020487,
+              0.0022690147127451613
+            ]
+          },
+          "RC00": {
+            "rows": 1621,
+            "exact": 559,
+            "accuracy": 0.34484885872917953,
+            "mean_NLL": 2.6142741987404934,
+            "MAE": 153.6218383713757,
+            "max_error": 1515,
+            "mean_bounded_rank": 9.125231338679827,
+            "mean_mode_probability": 0.29909466964393533,
+            "marginalized_target_source_shares": [
+              0.6889317392098888,
+              0.30875483672597265,
+              0.00231342406413828
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1621,
+            "groups": 15,
+            "rescues": 278,
+            "regressions": 73,
+            "net": 205,
+            "accuracy_difference": 0.12646514497223935,
+            "mean_NLL_difference": -0.41714637274215177,
+            "mean_bounded_rank_difference": -1.7291795188155459,
+            "paired_accuracy_interval": [
+              0.1091015294052924,
+              0.14443830713187752
+            ],
+            "paired_NLL_interval": [
+              -0.46741476811534693,
+              -0.36886470738811855
+            ],
+            "positive_groups": 15,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 6,
+              "16": 17,
+              "32": 26,
+              "33": 15,
+              "42": 23,
+              "53": 11,
+              "55": 13,
+              "56": 10,
+              "60": 6,
+              "66": 14,
+              "68": 19,
+              "80": 10,
+              "81": 10,
+              "86": 13,
+              "87": 12
+            }
+          },
+          "RC00": {
+            "rows": 1621,
+            "groups": 15,
+            "rescues": 81,
+            "regressions": 28,
+            "net": 53,
+            "accuracy_difference": 0.03269586674892042,
+            "mean_NLL_difference": -0.08517039194109051,
+            "mean_bounded_rank_difference": -0.3880320789636027,
+            "paired_accuracy_interval": [
+              0.021073870527486945,
+              0.04623916752652059
+            ],
+            "paired_NLL_interval": [
+              -0.09833485771715496,
+              -0.07297748474432036
+            ],
+            "positive_groups": 14,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "9": 1,
+              "16": 6,
+              "32": 4,
+              "33": 3,
+              "42": 1,
+              "53": 1,
+              "55": 7,
+              "56": 1,
+              "60": 0,
+              "66": 9,
+              "68": 7,
+              "80": 3,
+              "81": 4,
+              "86": 4,
+              "87": 2
+            }
+          }
+        }
+      },
+      "correction_fit_unseen_integer": {
+        "rows": 47,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 47,
+            "exact": 5,
+            "accuracy": 0.10638297872340426,
+            "mean_NLL": 4.903643832848539,
+            "MAE": 271.7659574468085,
+            "max_error": 1389,
+            "mean_bounded_rank": 73.27659574468085,
+            "mean_mode_probability": 0.17204855844676656,
+            "marginalized_target_source_shares": [
+              0.20044180020425062,
+              0.7435086602155051,
+              0.056049539580244466
+            ]
+          },
+          "RC01": {
+            "rows": 47,
+            "exact": 6,
+            "accuracy": 0.1276595744680851,
+            "mean_NLL": 4.96401166088384,
+            "MAE": 289.97872340425533,
+            "max_error": 1389,
+            "mean_bounded_rank": 72.42553191489361,
+            "mean_mode_probability": 0.25188533761302007,
+            "marginalized_target_source_shares": [
+              0.20045634337488513,
+              0.7435206017616243,
+              0.05602305486349072
+            ]
+          },
+          "RC00": {
+            "rows": 47,
+            "exact": 8,
+            "accuracy": 0.1702127659574468,
+            "mean_NLL": 4.961544248092329,
+            "MAE": 277.63829787234044,
+            "max_error": 1389,
+            "mean_bounded_rank": 72.70212765957447,
+            "mean_mode_probability": 0.2533432816501101,
+            "marginalized_target_source_shares": [
+              0.2004563911843242,
+              0.7435206410167023,
+              0.05602296779897358
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 47,
+            "groups": 15,
+            "rescues": 3,
+            "regressions": 2,
+            "net": 1,
+            "accuracy_difference": 0.02127659574468085,
+            "mean_NLL_difference": 0.06036782803530147,
+            "mean_bounded_rank_difference": -0.851063829787234,
+            "paired_accuracy_interval": [
+              -0.0678062403697997,
+              0.11904761904761904
+            ],
+            "paired_NLL_interval": [
+              -0.11599561373875147,
+              0.22389781786846086
+            ],
+            "positive_groups": 3,
+            "negative_groups": 2,
+            "zero_groups": 10,
+            "group_net_commands": {
+              "9": -1,
+              "16": 0,
+              "32": 1,
+              "33": -1,
+              "42": 0,
+              "53": 0,
+              "55": 0,
+              "56": 1,
+              "60": 0,
+              "66": 0,
+              "68": 0,
+              "80": 0,
+              "81": 1,
+              "86": 0,
+              "87": 0
+            }
+          },
+          "RC00": {
+            "rows": 47,
+            "groups": 15,
+            "rescues": 0,
+            "regressions": 2,
+            "net": -2,
+            "accuracy_difference": -0.0425531914893617,
+            "mean_NLL_difference": 0.002467412791510011,
+            "mean_bounded_rank_difference": -0.2765957446808511,
+            "paired_accuracy_interval": [
+              -0.09433962264150944,
+              0.0
+            ],
+            "paired_NLL_interval": [
+              -0.008937815210114646,
+              0.012363485442508662
+            ],
+            "positive_groups": 0,
+            "negative_groups": 2,
+            "zero_groups": 13,
+            "group_net_commands": {
+              "9": -1,
+              "16": 0,
+              "32": 0,
+              "33": -1,
+              "42": 0,
+              "53": 0,
+              "55": 0,
+              "56": 0,
+              "60": 0,
+              "66": 0,
+              "68": 0,
+              "80": 0,
+              "81": 0,
+              "86": 0,
+              "87": 0
+            }
+          }
+        }
+      },
+      "latest_argument_outside16": {
+        "rows": 406,
+        "groups": 15,
+        "models": {
+          "warm": {
+            "rows": 406,
+            "exact": 105,
+            "accuracy": 0.25862068965517243,
+            "mean_NLL": 2.8623567592915866,
+            "MAE": 144.48768472906403,
+            "max_error": 1463,
+            "mean_bounded_rank": 11.120689655172415,
+            "mean_mode_probability": 0.1778448513664195,
+            "marginalized_target_source_shares": [
+              0.8178836112078889,
+              0.17882283689326872,
+              0.0032935518988415307
+            ]
+          },
+          "RC01": {
+            "rows": 406,
+            "exact": 131,
+            "accuracy": 0.3226600985221675,
+            "mean_NLL": 2.6563838531042436,
+            "MAE": 128.94334975369458,
+            "max_error": 1463,
+            "mean_bounded_rank": 10.357142857142858,
+            "mean_mode_probability": 0.22289247338120802,
+            "marginalized_target_source_shares": [
+              0.8178853864512137,
+              0.17885989931191013,
+              0.0032547142368753628
+            ]
+          },
+          "RC00": {
+            "rows": 406,
+            "exact": 101,
+            "accuracy": 0.24876847290640394,
+            "mean_NLL": 2.777754690855738,
+            "MAE": 153.79802955665025,
+            "max_error": 1463,
+            "mean_bounded_rank": 10.761083743842365,
+            "mean_mode_probability": 0.19634769700560367,
+            "marginalized_target_source_shares": [
+              0.8179068349603575,
+              0.17883589298855235,
+              0.003257272051089233
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 406,
+            "groups": 15,
+            "rescues": 41,
+            "regressions": 15,
+            "net": 26,
+            "accuracy_difference": 0.06403940886699508,
+            "mean_NLL_difference": -0.20597290618734376,
+            "mean_bounded_rank_difference": -0.7635467980295566,
+            "paired_accuracy_interval": [
+              0.029627805145046527,
+              0.09780427197110243
+            ],
+            "paired_NLL_interval": [
+              -0.23982295619127222,
+              -0.1682735808562721
+            ],
+            "positive_groups": 9,
+            "negative_groups": 2,
+            "zero_groups": 4,
+            "group_net_commands": {
+              "9": 0,
+              "16": 6,
+              "32": 2,
+              "33": 2,
+              "42": 0,
+              "53": 1,
+              "55": 4,
+              "56": -1,
+              "60": -1,
+              "66": 3,
+              "68": 0,
+              "80": 0,
+              "81": 3,
+              "86": 3,
+              "87": 4
+            }
+          },
+          "RC00": {
+            "rows": 406,
+            "groups": 15,
+            "rescues": 37,
+            "regressions": 7,
+            "net": 30,
+            "accuracy_difference": 0.07389162561576355,
+            "mean_NLL_difference": -0.12137083775149432,
+            "mean_bounded_rank_difference": -0.4039408866995074,
+            "paired_accuracy_interval": [
+              0.044386229857710076,
+              0.10360387495929664
+            ],
+            "paired_NLL_interval": [
+              -0.15220136364497755,
+              -0.08830003676906703
+            ],
+            "positive_groups": 13,
+            "negative_groups": 2,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 1,
+              "16": 4,
+              "32": 2,
+              "33": 2,
+              "42": 1,
+              "53": 1,
+              "55": 7,
+              "56": -1,
+              "60": -1,
+              "66": 4,
+              "68": 3,
+              "80": 1,
+              "81": 2,
+              "86": 1,
+              "87": 3
+            }
+          }
+        }
+      },
+      "current_scheduled_different": {
+        "rows": 0,
+        "groups": 0,
+        "models": {
+          "warm": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC01": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          },
+          "RC00": {
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "MAE": null,
+            "mean_bounded_rank": null
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          },
+          "RC00": {
+            "rows": 0,
+            "groups": 0,
+            "rescues": 0,
+            "regressions": 0,
+            "net": 0,
+            "accuracy_difference": null,
+            "mean_NLL_difference": null,
+            "paired_accuracy_interval": null,
+            "paired_NLL_interval": null
+          }
+        }
+      },
+      "engine2": {
+        "rows": 559,
+        "groups": 5,
+        "models": {
+          "warm": {
+            "rows": 559,
+            "exact": 128,
+            "accuracy": 0.22898032200357782,
+            "mean_NLL": 3.041544128502646,
+            "MAE": 155.12880143112702,
+            "max_error": 1463,
+            "mean_bounded_rank": 12.84257602862254,
+            "mean_mode_probability": 0.18744279583710455,
+            "marginalized_target_source_shares": [
+              0.6518865613583996,
+              0.34412945970608455,
+              0.003983978935516211
+            ]
+          },
+          "RC01": {
+            "rows": 559,
+            "exact": 198,
+            "accuracy": 0.3542039355992844,
+            "mean_NLL": 2.670328768712979,
+            "MAE": 138.1323792486583,
+            "max_error": 1463,
+            "mean_bounded_rank": 11.34525939177102,
+            "mean_mode_probability": 0.30915455626644334,
+            "marginalized_target_source_shares": [
+              0.6518974829268803,
+              0.34416003637089704,
+              0.003942480702222395
+            ]
+          },
+          "RC00": {
+            "rows": 559,
+            "exact": 185,
+            "accuracy": 0.33094812164579607,
+            "mean_NLL": 2.7513938772466333,
+            "MAE": 142.34883720930233,
+            "max_error": 1463,
+            "mean_bounded_rank": 11.610017889087656,
+            "mean_mode_probability": 0.28966957503204294,
+            "marginalized_target_source_shares": [
+              0.6519159309457758,
+              0.3441420616222208,
+              0.003942007432003505
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 559,
+            "groups": 5,
+            "rescues": 94,
+            "regressions": 24,
+            "net": 70,
+            "accuracy_difference": 0.1252236135957066,
+            "mean_NLL_difference": -0.37121535978966713,
+            "mean_bounded_rank_difference": -1.4973166368515205,
+            "paired_accuracy_interval": [
+              0.09016393442622951,
+              0.15171288743882544
+            ],
+            "paired_NLL_interval": [
+              -0.46095116925656626,
+              -0.2625988409839876
+            ],
+            "positive_groups": 5,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "9": 5,
+              "16": 17,
+              "42": 23,
+              "86": 13,
+              "87": 12
+            }
+          },
+          "RC00": {
+            "rows": 559,
+            "groups": 5,
+            "rescues": 24,
+            "regressions": 11,
+            "net": 13,
+            "accuracy_difference": 0.023255813953488372,
+            "mean_NLL_difference": -0.08106510853365433,
+            "mean_bounded_rank_difference": -0.26475849731663686,
+            "paired_accuracy_interval": [
+              0.007541478129713424,
+              0.04365079365079365
+            ],
+            "paired_NLL_interval": [
+              -0.10184149164095377,
+              -0.060978908780273344
+            ],
+            "positive_groups": 4,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "9": 0,
+              "16": 6,
+              "42": 1,
+              "86": 4,
+              "87": 2
+            }
+          }
+        }
+      },
+      "engine3": {
+        "rows": 1109,
+        "groups": 10,
+        "models": {
+          "warm": {
+            "rows": 1109,
+            "exact": 284,
+            "accuracy": 0.2560865644724977,
+            "mean_NLL": 2.981171896616558,
+            "MAE": 167.28403967538324,
+            "max_error": 1515,
+            "mean_bounded_rank": 11.930568079350767,
+            "mean_mode_probability": 0.19109489235082092,
+            "marginalized_target_source_shares": [
+              0.6868144370988852,
+              0.30932205996068113,
+              0.003863502940433354
+            ]
+          },
+          "RC01": {
+            "rows": 1109,
+            "exact": 420,
+            "accuracy": 0.3787195671776375,
+            "mean_NLL": 2.56111094424961,
+            "MAE": 150.63300270513977,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.121731289449954,
+            "mean_mode_probability": 0.3250565271839898,
+            "marginalized_target_source_shares": [
+              0.686919570989281,
+              0.3093768133971922,
+              0.0037036156135271904
+            ]
+          },
+          "RC00": {
+            "rows": 1109,
+            "exact": 382,
+            "accuracy": 0.34445446348061315,
+            "mean_NLL": 2.644636499943924,
+            "MAE": 164.55996393146978,
+            "max_error": 1515,
+            "mean_bounded_rank": 10.567177637511271,
+            "mean_mode_probability": 0.30190649349635923,
+            "marginalized_target_source_shares": [
+              0.6868880020254324,
+              0.3093432353595727,
+              0.003768762614995449
+            ]
+          }
+        },
+        "versus": {
+          "warm": {
+            "rows": 1109,
+            "groups": 10,
+            "rescues": 187,
+            "regressions": 51,
+            "net": 136,
+            "accuracy_difference": 0.12263300270513977,
+            "mean_NLL_difference": -0.4200609523669476,
+            "mean_bounded_rank_difference": -1.8088367899008115,
+            "paired_accuracy_interval": [
+              0.0999962742175857,
+              0.14673501947294973
+            ],
+            "paired_NLL_interval": [
+              -0.4707911894491545,
+              -0.36999987200924894
+            ],
+            "positive_groups": 10,
+            "negative_groups": 0,
+            "zero_groups": 0,
+            "group_net_commands": {
+              "32": 27,
+              "33": 14,
+              "53": 11,
+              "55": 13,
+              "56": 11,
+              "60": 6,
+              "66": 14,
+              "68": 19,
+              "80": 10,
+              "81": 11
+            }
+          },
+          "RC00": {
+            "rows": 1109,
+            "groups": 10,
+            "rescues": 57,
+            "regressions": 19,
+            "net": 38,
+            "accuracy_difference": 0.034265103697024346,
+            "mean_NLL_difference": -0.0835255556943138,
+            "mean_bounded_rank_difference": -0.4454463480613165,
+            "paired_accuracy_interval": [
+              0.018816699005578464,
+              0.05248982262285546
+            ],
+            "paired_NLL_interval": [
+              -0.1010204545778381,
+              -0.0686972827450246
+            ],
+            "positive_groups": 9,
+            "negative_groups": 0,
+            "zero_groups": 1,
+            "group_net_commands": {
+              "32": 4,
+              "33": 2,
+              "53": 1,
+              "55": 7,
+              "56": 1,
+              "60": 0,
+              "66": 9,
+              "68": 7,
+              "80": 3,
+              "81": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "fit": {
+      "warm": {
+        "rows": 4208,
+        "groups": 40,
+        "rescues": 648,
+        "regressions": 158,
+        "net": 490,
+        "accuracy_difference": 0.11644486692015209,
+        "mean_NLL_difference": -0.3894566551412934,
+        "mean_bounded_rank_difference": -1.793726235741445,
+        "paired_accuracy_interval": [
+          0.10247068410879835,
+          0.12839562410587227
+        ],
+        "paired_NLL_interval": [
+          -0.4160415999015934,
+          -0.3622770448188633
+        ],
+        "positive_groups": 39,
+        "negative_groups": 0,
+        "zero_groups": 1,
+        "group_net_commands": {
+          "3": 17,
+          "4": 21,
+          "12": 13,
+          "13": 17,
+          "15": 7,
+          "22": 12,
+          "23": 17,
+          "25": 10,
+          "29": 4,
+          "30": 12,
+          "35": 0,
+          "36": 10,
+          "37": 5,
+          "38": 21,
+          "39": 12,
+          "43": 14,
+          "45": 12,
+          "48": 11,
+          "50": 21,
+          "52": 17,
+          "54": 9,
+          "57": 7,
+          "58": 3,
+          "59": 18,
+          "62": 8,
+          "64": 5,
+          "65": 12,
+          "71": 22,
+          "77": 9,
+          "78": 15,
+          "82": 13,
+          "83": 18,
+          "85": 8,
+          "88": 3,
+          "93": 6,
+          "94": 12,
+          "95": 12,
+          "97": 22,
+          "98": 16,
+          "100": 19
+        }
+      },
+      "RC00": {
+        "rows": 4208,
+        "groups": 40,
+        "rescues": 172,
+        "regressions": 62,
+        "net": 110,
+        "accuracy_difference": 0.02614068441064639,
+        "mean_NLL_difference": -0.0914662058026023,
+        "mean_bounded_rank_difference": -0.4674429657794677,
+        "paired_accuracy_interval": [
+          0.02060855979360915,
+          0.0319129087478249
+        ],
+        "paired_NLL_interval": [
+          -0.10340857106275349,
+          -0.08067762847074766
+        ],
+        "positive_groups": 36,
+        "negative_groups": 0,
+        "zero_groups": 4,
+        "group_net_commands": {
+          "3": 0,
+          "4": 7,
+          "12": 3,
+          "13": 2,
+          "15": 2,
+          "22": 3,
+          "23": 4,
+          "25": 1,
+          "29": 2,
+          "30": 5,
+          "35": 0,
+          "36": 3,
+          "37": 1,
+          "38": 5,
+          "39": 1,
+          "43": 7,
+          "45": 1,
+          "48": 4,
+          "50": 3,
+          "52": 2,
+          "54": 2,
+          "57": 1,
+          "58": 2,
+          "59": 0,
+          "62": 1,
+          "64": 2,
+          "65": 2,
+          "71": 7,
+          "77": 4,
+          "78": 3,
+          "82": 2,
+          "83": 4,
+          "85": 3,
+          "88": 0,
+          "93": 1,
+          "94": 3,
+          "95": 4,
+          "97": 8,
+          "98": 2,
+          "100": 3
+        }
+      }
+    },
+    "held": {
+      "warm": {
+        "rows": 1668,
+        "groups": 15,
+        "rescues": 281,
+        "regressions": 75,
+        "net": 206,
+        "accuracy_difference": 0.12350119904076738,
+        "mean_NLL_difference": -0.40369123638930987,
+        "mean_bounded_rank_difference": -1.7044364508393286,
+        "paired_accuracy_interval": [
+          0.10513992796813315,
+          0.14218480393971933
+        ],
+        "paired_NLL_interval": [
+          -0.4522405798410974,
+          -0.355807612505313
+        ],
+        "positive_groups": 15,
+        "negative_groups": 0,
+        "zero_groups": 0,
+        "group_net_commands": {
+          "9": 5,
+          "16": 17,
+          "32": 27,
+          "33": 14,
+          "42": 23,
+          "53": 11,
+          "55": 13,
+          "56": 11,
+          "60": 6,
+          "66": 14,
+          "68": 19,
+          "80": 10,
+          "81": 11,
+          "86": 13,
+          "87": 12
+        }
+      },
+      "RC00": {
+        "rows": 1668,
+        "groups": 15,
+        "rescues": 81,
+        "regressions": 30,
+        "net": 51,
+        "accuracy_difference": 0.030575539568345324,
+        "mean_NLL_difference": -0.08270098137608319,
+        "mean_bounded_rank_difference": -0.38489208633093525,
+        "paired_accuracy_interval": [
+          0.01889189355294696,
+          0.04441494525082552
+        ],
+        "paired_NLL_interval": [
+          -0.09530028969331793,
+          -0.07090647785390794
+        ],
+        "positive_groups": 13,
+        "negative_groups": 0,
+        "zero_groups": 2,
+        "group_net_commands": {
+          "9": 0,
+          "16": 6,
+          "32": 4,
+          "33": 2,
+          "42": 1,
+          "53": 1,
+          "55": 7,
+          "56": 1,
+          "60": 0,
+          "66": 9,
+          "68": 7,
+          "80": 3,
+          "81": 4,
+          "86": 4,
+          "87": 2
+        }
+      }
+    }
+  },
+  "conditional_reliability": {
+    "fit": {
+      "warm": {
+        "rows": 4208,
+        "ECE": 0.0628734610385257,
+        "mode_correctness_Brier": 0.16636753213328676,
+        "observed_probability_range": [
+          0.0166490062711985,
+          0.8133188873646936
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 1068,
+            "exact": 111,
+            "accuracy": 0.10393258426966293,
+            "mean_mode_probability": 0.0701583000309049
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 1750,
+            "exact": 334,
+            "accuracy": 0.19085714285714286,
+            "mean_mode_probability": 0.14409513276120886
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 754,
+            "exact": 252,
+            "accuracy": 0.33421750663129973,
+            "mean_mode_probability": 0.24226617133640557
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 311,
+            "exact": 143,
+            "accuracy": 0.45980707395498394,
+            "mean_mode_probability": 0.3431869220304821
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 170,
+            "exact": 92,
+            "accuracy": 0.5411764705882353,
+            "mean_mode_probability": 0.4438887706169156
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 76,
+            "exact": 58,
+            "accuracy": 0.7631578947368421,
+            "mean_mode_probability": 0.5424101681586941
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 55,
+            "exact": 39,
+            "accuracy": 0.7090909090909091,
+            "mean_mode_probability": 0.638873836092666
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 19,
+            "exact": 17,
+            "accuracy": 0.8947368421052632,
+            "mean_mode_probability": 0.7407155083443918
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 5,
+            "exact": 5,
+            "accuracy": 1.0,
+            "mean_mode_probability": 0.8074367634111406
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_mode_probability": null
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      },
+      "RC01": {
+        "rows": 4208,
+        "ECE": 0.06062388849395643,
+        "mode_correctness_Brier": 0.19222117193375376,
+        "observed_probability_range": [
+          0.02227737544495291,
+          0.9959586677116308
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 690,
+            "exact": 94,
+            "accuracy": 0.13623188405797101,
+            "mean_mode_probability": 0.06778349388449315
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 1057,
+            "exact": 225,
+            "accuracy": 0.21286660359508042,
+            "mean_mode_probability": 0.14703602890892303
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 787,
+            "exact": 240,
+            "accuracy": 0.30495552731893266,
+            "mean_mode_probability": 0.24531388306516433
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 425,
+            "exact": 186,
+            "accuracy": 0.4376470588235294,
+            "mean_mode_probability": 0.34516015651918514
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 351,
+            "exact": 170,
+            "accuracy": 0.4843304843304843,
+            "mean_mode_probability": 0.4489010508429154
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 254,
+            "exact": 144,
+            "accuracy": 0.5669291338582677,
+            "mean_mode_probability": 0.5467066600340466
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 226,
+            "exact": 143,
+            "accuracy": 0.6327433628318584,
+            "mean_mode_probability": 0.6499724247745867
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 179,
+            "exact": 145,
+            "accuracy": 0.8100558659217877,
+            "mean_mode_probability": 0.7487023558136872
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 121,
+            "exact": 92,
+            "accuracy": 0.7603305785123967,
+            "mean_mode_probability": 0.8432687086065908
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 118,
+            "exact": 102,
+            "accuracy": 0.864406779661017,
+            "mean_mode_probability": 0.9454602462478445
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      },
+      "RC00": {
+        "rows": 4208,
+        "ECE": 0.05682611424053036,
+        "mode_correctness_Brier": 0.18543672110653078,
+        "observed_probability_range": [
+          0.021463908471919767,
+          0.9849886037036524
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 769,
+            "exact": 87,
+            "accuracy": 0.11313394018205461,
+            "mean_mode_probability": 0.06754718336063592
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 1191,
+            "exact": 253,
+            "accuracy": 0.21242653232577666,
+            "mean_mode_probability": 0.14673983055886314
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 729,
+            "exact": 222,
+            "accuracy": 0.3045267489711934,
+            "mean_mode_probability": 0.24366824657603534
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 429,
+            "exact": 185,
+            "accuracy": 0.43123543123543123,
+            "mean_mode_probability": 0.3469365191820135
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 285,
+            "exact": 138,
+            "accuracy": 0.4842105263157895,
+            "mean_mode_probability": 0.4487488933483114
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 249,
+            "exact": 130,
+            "accuracy": 0.5220883534136547,
+            "mean_mode_probability": 0.5493126945873319
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 208,
+            "exact": 136,
+            "accuracy": 0.6538461538461539,
+            "mean_mode_probability": 0.6474098963230491
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 154,
+            "exact": 126,
+            "accuracy": 0.8181818181818182,
+            "mean_mode_probability": 0.7481554164664986
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 133,
+            "exact": 102,
+            "accuracy": 0.7669172932330827,
+            "mean_mode_probability": 0.8504006000699461
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 61,
+            "exact": 52,
+            "accuracy": 0.8524590163934426,
+            "mean_mode_probability": 0.9376002593582885
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      }
+    },
+    "held": {
+      "warm": {
+        "rows": 1668,
+        "ECE": 0.05904573080705017,
+        "mode_correctness_Brier": 0.1718861369274848,
+        "observed_probability_range": [
+          0.019302317851697736,
+          0.8228698426571278
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 401,
+            "exact": 43,
+            "accuracy": 0.10723192019950124,
+            "mean_mode_probability": 0.07155941107261708
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 691,
+            "exact": 146,
+            "accuracy": 0.21128798842257598,
+            "mean_mode_probability": 0.14759686336616368
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 322,
+            "exact": 100,
+            "accuracy": 0.3105590062111801,
+            "mean_mode_probability": 0.2419999861191524
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 137,
+            "exact": 58,
+            "accuracy": 0.4233576642335766,
+            "mean_mode_probability": 0.34541493994142713
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 60,
+            "exact": 31,
+            "accuracy": 0.5166666666666667,
+            "mean_mode_probability": 0.44437231276110833
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 34,
+            "exact": 17,
+            "accuracy": 0.5,
+            "mean_mode_probability": 0.5469564334729634
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 17,
+            "exact": 11,
+            "accuracy": 0.6470588235294118,
+            "mean_mode_probability": 0.6416251077117116
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 5,
+            "exact": 5,
+            "accuracy": 1.0,
+            "mean_mode_probability": 0.7569611168034446
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 1,
+            "exact": 1,
+            "accuracy": 1.0,
+            "mean_mode_probability": 0.8228698426571278
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 0,
+            "exact": 0,
+            "accuracy": null,
+            "mean_mode_probability": null
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      },
+      "RC01": {
+        "rows": 1668,
+        "ECE": 0.05940781094708777,
+        "mode_correctness_Brier": 0.1920242898330225,
+        "observed_probability_range": [
+          0.02301574919135236,
+          0.9874787593827015
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 243,
+            "exact": 29,
+            "accuracy": 0.11934156378600823,
+            "mean_mode_probability": 0.06970657834238206
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 424,
+            "exact": 91,
+            "accuracy": 0.21462264150943397,
+            "mean_mode_probability": 0.1476245998591243
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 316,
+            "exact": 107,
+            "accuracy": 0.33860759493670883,
+            "mean_mode_probability": 0.24624834917912788
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 202,
+            "exact": 81,
+            "accuracy": 0.400990099009901,
+            "mean_mode_probability": 0.34804600503151306
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 145,
+            "exact": 66,
+            "accuracy": 0.45517241379310347,
+            "mean_mode_probability": 0.44942334377487425
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 97,
+            "exact": 58,
+            "accuracy": 0.5979381443298969,
+            "mean_mode_probability": 0.5496172559852385
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 78,
+            "exact": 56,
+            "accuracy": 0.717948717948718,
+            "mean_mode_probability": 0.6513669858936222
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 67,
+            "exact": 48,
+            "accuracy": 0.7164179104477612,
+            "mean_mode_probability": 0.747997811889236
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 47,
+            "exact": 41,
+            "accuracy": 0.8723404255319149,
+            "mean_mode_probability": 0.8546647799586612
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 49,
+            "exact": 41,
+            "accuracy": 0.8367346938775511,
+            "mean_mode_probability": 0.9404653823119525
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      },
+      "RC00": {
+        "rows": 1668,
+        "ECE": 0.04855709579574989,
+        "mode_correctness_Brier": 0.18587274093724565,
+        "observed_probability_range": [
+          0.02075984998056117,
+          0.9826549707257821
+        ],
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "rows": 273,
+            "exact": 34,
+            "accuracy": 0.12454212454212454,
+            "mean_mode_probability": 0.06977628533775929
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "rows": 485,
+            "exact": 100,
+            "accuracy": 0.20618556701030927,
+            "mean_mode_probability": 0.15002155730276
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "rows": 309,
+            "exact": 99,
+            "accuracy": 0.32038834951456313,
+            "mean_mode_probability": 0.24545202351552492
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "rows": 182,
+            "exact": 68,
+            "accuracy": 0.37362637362637363,
+            "mean_mode_probability": 0.34854153053617165
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "rows": 112,
+            "exact": 51,
+            "accuracy": 0.45535714285714285,
+            "mean_mode_probability": 0.45251956214955946
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "rows": 87,
+            "exact": 53,
+            "accuracy": 0.6091954022988506,
+            "mean_mode_probability": 0.5474962913079954
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "rows": 78,
+            "exact": 49,
+            "accuracy": 0.6282051282051282,
+            "mean_mode_probability": 0.648375882503459
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "rows": 59,
+            "exact": 44,
+            "accuracy": 0.7457627118644068,
+            "mean_mode_probability": 0.7452575534586136
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "rows": 55,
+            "exact": 46,
+            "accuracy": 0.8363636363636363,
+            "mean_mode_probability": 0.8496104974793303
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "rows": 28,
+            "exact": 23,
+            "accuracy": 0.8214285714285714,
+            "mean_mode_probability": 0.9308756629360576
+          }
+        ],
+        "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+      }
+    }
+  },
+  "bindings": {
+    "tools/action_predictor/experiments/v24/RC-plan.json": "50f59beeb14dd844c1fc01b7a9fe4eea46ae6440cac13136f0cce01dd19a90b2",
+    "tools/action_predictor/experiments/v24/RC-data-ready.json": "05e869e17d7e6eeac0f3656b36daa8ce37f714960bff5ed661a1da20a43961e0",
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/order_information/__init__.py": "4fdb527a783ae1b4dce55921d6143ac82c2b0ad2a6cbc5ac2475aa8ecd257beb",
+    "tools/action_predictor/order_information/anchored.py": "5a8f18159ab514dc1250f2edccbf34053a3e964bb871248b04f24852d6f6895e",
+    "tools/action_predictor/order_information/data.py": "7c6908413a89a5412519e22c0c7cc91e758f5140d14441f4011df5c0ae01d1ec",
+    "tools/action_predictor/order_information/relation_discrimination_v3.py": "2541035ce79c0a22eddec2efcc26cda7ea40bc000e338dc3df917c1369dfacc5",
+    "tools/action_predictor/order_information/schema.py": "5d978a3494199c7e42ad9bfcd8843f102d8d9a111a924d045abb8d465471d281",
+    "tools/action_predictor/order_information/schema_asinh.py": "8b65cbc88b258235a4e5706f372bf07fa6489459234de3f47fb07906524188f9",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_capacity/__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_capacity/protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/relational_priority/__init__.py": "b55a7da0dea4e4ae3c407ded0e75f797e3983fca5a4e998408686f915bf7ec7d",
+    "tools/action_predictor/relational_priority/data.py": "baab09ffe88f3e2a4dde152af7698c43136e933a797257c92a2fa4d94a1888a6",
+    "tools/action_predictor/relational_priority/model.py": "12cf8ba7f1b126cb5bb287eb8deab48b3ea59e9c326d0a5022bbf3dd7a199e41",
+    "tools/action_predictor/relational_priority/protocol.py": "102926b924bb1aaba9f50af44fbe82e83403ffb23d293413db6f26a4324c2f26",
+    "tools/action_predictor/relational_priority/test_data.py": "d69655a084bdbb8aec92c228c9424aab6155b463f3d4f798b64b456c68d522bb",
+    "tools/action_predictor/relational_priority/test_model.py": "d8707b91c4c4de8b441077f2f2df0d058dc3b8669b69b1d4a70b985b41b967ac",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83",
+    ".cambc\\action-predictor\\v24\\data\\metadata.npz": "552734612f86b5bdae8beb877d3d5bff81b3be3dfba212f25d358636d317576f",
+    ".cambc\\action-predictor\\v24\\data\\other-real.npy": "b4130f95f90dffc935dc0f596660252107d4fa76093e1c00b7bdd0b4c90b400e",
+    ".cambc\\action-predictor\\v24\\data\\other-shuffled.npy": "e1954a373b81c890c65374dc1cc6ef1a2d233d43ac54f45098b8ee659a0a1640",
+    ".cambc\\action-predictor\\v24\\data\\own.npy": "694cd019ba96ed47e51eafe3c2a4a363b3b1b0999da08881b88ce753ba02b66c",
+    ".cambc\\action-predictor\\v24\\data\\points.npy": "e5039495c37f94244cdd604c01dc4c3110e5346e620a945e201753af8cf38448",
+    "tools/action_predictor/experiments/v19/PC00-completion.json": "447166d435e37387133875f296eb567be5245c5926c42c11b75c96a60e3b900c",
+    "tools/action_predictor/experiments/v22/PC02-completion.json": "71345392889a4232197b471d51b1ecc0ce972af2507d975abb37a6e1ad644817",
+    "tools/action_predictor/experiments/v19/PC00-data-ready.json": "c9d05d1c904ac6fcbbeae2bb1c03e5609ef974dd21c9eca26cd4c1aa335e587d",
+    "tools/action_predictor/experiments/v19/PC00-plan.json": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+    ".cambc/action-predictor/v19/PC00-cohorts/fit.npz": "e4348e643f084c3838c7d60d779fc7ee14a56fea20c06266967453266815292e",
+    ".cambc/action-predictor/v19/PC00-cohorts/same_fit_groups.npz": "3b175a7094bc321a0f5fe720ea9af7214078941e213f954c71c283ff7586a978",
+    ".cambc/action-predictor/v19/PC00-cohorts/held_groups.npz": "759347e10040bb267b3635227399569405cb1775d8b20c4f5cc29e9a21a35418",
+    ".cambc/action-predictor/v21/PC01-cohort.npz": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83",
+    ".cambc/action-predictor/v22/runs/PC02/broad_fit-step-0000-raw.npy": "809f9a390cfc20e7da59ba454b7013a1b5c54293aed42f9a27c41cb911dc3dd5",
+    ".cambc/action-predictor/v22/runs/PC02/broad_fit-step-0000-predictions.npz": "5d0d01bcf37289af054cd852421a9efacb025582e95bdd96d322e69ed472aa04",
+    ".cambc/action-predictor/v8/runs/P05/model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    "tools/action_predictor/experiments/v8/P05.json": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+    "tools/action_predictor/experiments/v8/priority-residual-modes-vocabulary.json": "1fd6470d9572ff92eae489616c8a92fbed0b65d22a61084e587ad1fb174d4147",
+    "tools/action_predictor/experiments/v24/RC00.json": "725563768cc88ca6a3cb2b64d0037e208f97b8e911a721b1a8d78a2acfe31734",
+    ".cambc\\action-predictor\\v24\\runs\\RC00\\actual-step-2000-predictions.npz": "73b8106e19823c8cc24417ca8a8adbc2dc7e75ec2cc15a84caee279baf80d0b0",
+    "tools\\action_predictor\\experiments\\v24\\RC01.json": "0dd34ad817dbc3225670b1c0158b881c29f90d487cf80db9a8eca684e77a8ba3",
+    "tools\\action_predictor\\relational_priority\\results.py": "f25e7bf5909b969c8e737190dc3fc90a636926efa5231382aa22fdd5ae59e2f7"
+  },
+  "allocation_checks": {
+    "held_exact_gain2pp_over_warm": true,
+    "held_exact_gain1pp_over_control": true,
+    "held_NLL_lower_than_both": true,
+    "majority_held_groups_net_positive_over_warm": true
+  },
+  "exploratory_allocation_gate_passed": true,
+  "allocation_status": "Registered paired point criteria; not original success or certification",
+  "uncertainty": "2000paired whole-group draws seed20261106. New-fit group exclusion only; warm model/vocabulary and earlier TRAIN research exposed these groups. In-sample fit and exploratory held diagnostics, not untouched or selection-adjusted policy evidence.",
+  "units": {
+    "accuracy": "Difference in conditional integer accuracy fraction",
+    "NLL": "Mean integer NLL difference in nats"
+  },
+  "no_action_type_or_complete_policy_assessment": true,
+  "new_fits": 0,
+  "reserved_opened": 0
+}
