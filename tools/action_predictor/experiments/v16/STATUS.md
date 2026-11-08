@@ -40,3 +40,7 @@ Fresh L00Solxhigh review COMPLETE: core predictions/LL/selection valid; no
 promotion. LP01component diversity weak (same mode2223/2362moves); preserve and
 compare with L01. Additive outcome-contract tests4pass; frozen fit sources
 unchanged. L01 is authorized NEXT under existing two-fit protocol.
+
+USER REDIRECTION: MODEL TRAINING ONLY. Bot/runtime/native/SDK/fuel/export work
+paused; completed local prototype artifacts preserved. Continue L01 and model
+diagnostics/review only. Do not launch L01native/actor/portable execution audits.

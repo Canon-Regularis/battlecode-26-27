@@ -1,0 +1,10 @@
+{
+  "purpose": "LP-01: compare diversity of execution, not just separation of predicted waypoints.",
+  "scope": "L00 review-driven diagnostic; identical procedure prospective for uncompleted L01. All original DEV move/blocked rows and identity-verified natural TRAIN move/blocked rows; causal state traverses full original streams.",
+  "metrics": "Per-component conditional modes, union, mode agreement, actual mixture mode, typed failures with/without correct component modes, mixture successes outside all modes, conditional-goal weight entropy and component Jensen-Shannon divergence.",
+  "interpretation": "Current component-mode union is an oracle diagnostic, NOT achieved accuracy, full distribution support or an architecture ceiling. Mixture MAP can lie outside component modes. Recorded family/answer enters conditional diagnosis and only postprediction filter update, never goal proposal.",
+  "no_selection": "Do not choose checkpoints, thresholds, seeds or intervention by these diagnostics.",
+  "source_sha256": "cd392b2854527ba5f1998246205a667ff5fad101b3ae44c195e9eac0bfcb063c",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
