@@ -1,3 +1,5 @@
+Latest research status: [V23 information and decoder investigation](experiments/v23/INDEX.md). O01 is independently reviewed as a reproducible negative result. Subsequent no-fit diagnostics separate integer support, marginal-family beliefs, joint-command selection and exact relational information. No model is promoted. Model training/evaluation only; both reservations sealed; PR11 draft/unmerged. Earlier status sections are retained chronologically.
+
 # Intercontinental Fish GRU action predictor
 
 ## Current status: learned-policy model research

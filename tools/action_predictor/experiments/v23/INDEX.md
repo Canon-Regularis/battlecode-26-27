@@ -1,5 +1,7 @@
 # Current research log: personal action-order information
 
+Latest update: O01's fresh Sol xhigh review is complete and reproduces the negative result. The following numbered entries retain their original chronology. New no-fit OD00/ED00/OD03 results and their qualifications are summarized below. No new fit has followed O01.
+
 Model training and evaluation only. No policy is promoted; both 75-game reserved partitions remain sealed. No matches, replay downloads, bot/runtime work or deployment. PR11 stays draft and unmerged.
 
 1. **PC02 reviewed: valid negative result.** The warm penalty reduces drift but leaves both conditional priority controls worse than warm P05. Its remaining control-manifest binding gap is repaired prospectively with independently committed PC00/PC02 receipts. A coherent archive-plus-manifest forgery is rejected through the actual O01 entrypoint before optimizer construction. The old fit's execution claims are not rewritten.
@@ -15,3 +17,11 @@ The actual fit uses committed source `f51965a59c6d7f4776188927f8b9122ea59d61cc`.
 This is conditional integer prediction with the recorded priority family supplied. It does not establish complete-command improvement, priority action selection, or useful learned strategic execution. Controls were previously seen by the warm head and encoder and are excluded only from this optimization. All uncertainty is exploratory on repeatedly inspected eligible TRAIN cohorts. Original complete-command/category/macro/movement/NLL/targeting and three-seed targets remain unmet. Shops remain strict failures; sparse categories, entity identity, full legality and global calibration remain unassessed.
 
 Read [O01 report](O01-REPORT.md), [paired analysis](O01-analysis.json), [completion inventory](O01-completion.json), and [zero-control equivalence](zero-control-equivalence.json). Reproduction commands are preserved in the completion inventory; completed immutable fitting must not be restarted.
+
+## Subsequent root-cause diagnostics
+
+- **OD00:** all 5,876 fitting integers have existing P05 point support. Simple other-priority relations match 1,267 targets but add no vocabulary support. These are oracle diagnostics, not learned accuracy.
+- **ED00:** marginal priority argmax differs from full-command MAP. On the 576 true DEV priority rows, L02 has 335 correct marginal-family choices versus 184 correct joint-selected families, but only 109 correct conditional integer modes. Of those 109, 50 become complete commands, 44 already lack marginal priority and 15 lose in joint competition. Consistent joint MAP is not a decoder bug; no type-first policy is selected. Exact priority inputs remain omitted from GoalPolicy action context; the older matched classifier-input prototype is unfit. [Attribution](ED00-NOTE.md).
+- **OD01/OD02:** two prerequisite/schema errors stopped before relation assessment. Original source, plans and failures remain; no fitting or query repetition. OD02's computed candidate arrays were not saved, and no identity claim is made. OD03 binds the correct historical artifacts and archives candidate pairs before checks.
+- **OD03:** exact per-unit relation discrimination against 64 availability-matched within-group swaps is complete. The pooled primary contrast is?.002795, paired interval[?.017257,.012137], so its gate fails. Individual predeclared relations have opposing exploratory effects; pooled failure does not show every relation is useless. All 48 effects are reported, with no chosen replacement rule or weakened primary gate. [Report](OD03-REPORT.md), [completion](OD03-completion.json).
+- **Next:** obtain a fresh Sol xhigh challenge of the new no-fit evidence and assess which single controlled training intervention it supports. A future candidate-relative scorer is a hypothesis; neither it nor another generic head/penalty variant is fitted or approved by these diagnostics. Original complete-policy goals remain binding.
