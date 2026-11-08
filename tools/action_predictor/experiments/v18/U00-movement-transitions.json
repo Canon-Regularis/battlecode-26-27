@@ -1,0 +1,697 @@
+{
+  "results": {
+    "train": {
+      "all": {
+        "move": {
+          "rows": 71945,
+          "old_to_new_state_matrix": [
+            [
+              2041,
+              77,
+              250,
+              10
+            ],
+            [
+              71,
+              1585,
+              6,
+              299
+            ],
+            [
+              244,
+              10,
+              21955,
+              589
+            ],
+            [
+              13,
+              188,
+              553,
+              44054
+            ]
+          ],
+          "rescues": 898,
+          "regressions": 754,
+          "before": {
+            "wrong_type": 4339,
+            "correctly_typed_wrong_destination": 22798,
+            "correct_destination_wrong_type": 1961
+          },
+          "after": {
+            "wrong_type": 4229,
+            "correctly_typed_wrong_destination": 22764,
+            "correct_destination_wrong_type": 1860
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 979,
+          "correctly_typed_destination_errors_without_correct_head_mode": 21785,
+          "correctly_typed_destination_errors_common_wrong": 20731
+        },
+        "blocked": {
+          "rows": 10065,
+          "old_to_new_state_matrix": [
+            [
+              5126,
+              102,
+              181,
+              7
+            ],
+            [
+              96,
+              1551,
+              3,
+              29
+            ],
+            [
+              22,
+              2,
+              2154,
+              44
+            ],
+            [
+              1,
+              4,
+              35,
+              708
+            ]
+          ],
+          "rescues": 80,
+          "regressions": 40,
+          "before": {
+            "wrong_type": 7095,
+            "correctly_typed_wrong_destination": 2222,
+            "correct_destination_wrong_type": 1679
+          },
+          "after": {
+            "wrong_type": 6904,
+            "correctly_typed_wrong_destination": 2373,
+            "correct_destination_wrong_type": 1659
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 47,
+          "correctly_typed_destination_errors_without_correct_head_mode": 2326,
+          "correctly_typed_destination_errors_common_wrong": 1975
+        },
+        "startup": {
+          "rows": 121,
+          "old_to_new_state_matrix": [
+            [
+              7,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              8,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              29,
+              1
+            ],
+            [
+              0,
+              6,
+              1,
+              65
+            ]
+          ],
+          "rescues": 1,
+          "regressions": 7,
+          "before": {
+            "wrong_type": 18,
+            "correctly_typed_wrong_destination": 31,
+            "correct_destination_wrong_type": 8
+          },
+          "after": {
+            "wrong_type": 22,
+            "correctly_typed_wrong_destination": 33,
+            "correct_destination_wrong_type": 14
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 1,
+          "correctly_typed_destination_errors_without_correct_head_mode": 32,
+          "correctly_typed_destination_errors_common_wrong": 32
+        },
+        "continue": {
+          "rows": 36368,
+          "old_to_new_state_matrix": [
+            [
+              235,
+              3,
+              26,
+              0
+            ],
+            [
+              35,
+              680,
+              2,
+              137
+            ],
+            [
+              23,
+              0,
+              1787,
+              18
+            ],
+            [
+              8,
+              96,
+              384,
+              32934
+            ]
+          ],
+          "rescues": 155,
+          "regressions": 488,
+          "before": {
+            "wrong_type": 1118,
+            "correctly_typed_wrong_destination": 1828,
+            "correct_destination_wrong_type": 854
+          },
+          "after": {
+            "wrong_type": 1080,
+            "correctly_typed_wrong_destination": 2199,
+            "correct_destination_wrong_type": 779
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 599,
+          "correctly_typed_destination_errors_without_correct_head_mode": 1600,
+          "correctly_typed_destination_errors_common_wrong": 1540
+        },
+        "change": {
+          "rows": 35456,
+          "old_to_new_state_matrix": [
+            [
+              1799,
+              74,
+              221,
+              10
+            ],
+            [
+              36,
+              897,
+              4,
+              162
+            ],
+            [
+              220,
+              10,
+              20139,
+              570
+            ],
+            [
+              5,
+              86,
+              168,
+              11055
+            ]
+          ],
+          "rescues": 742,
+          "regressions": 259,
+          "before": {
+            "wrong_type": 3203,
+            "correctly_typed_wrong_destination": 20939,
+            "correct_destination_wrong_type": 1099
+          },
+          "after": {
+            "wrong_type": 3127,
+            "correctly_typed_wrong_destination": 20532,
+            "correct_destination_wrong_type": 1067
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 379,
+          "correctly_typed_destination_errors_without_correct_head_mode": 20153,
+          "correctly_typed_destination_errors_common_wrong": 19159
+        }
+      },
+      "natural": {
+        "move": {
+          "rows": 48286,
+          "old_to_new_state_matrix": [
+            [
+              1177,
+              48,
+              111,
+              5
+            ],
+            [
+              45,
+              925,
+              3,
+              155
+            ],
+            [
+              140,
+              7,
+              15552,
+              399
+            ],
+            [
+              11,
+              101,
+              390,
+              29217
+            ]
+          ],
+          "rescues": 559,
+          "regressions": 502,
+          "before": {
+            "wrong_type": 2469,
+            "correctly_typed_wrong_destination": 16098,
+            "correct_destination_wrong_type": 1128
+          },
+          "after": {
+            "wrong_type": 2454,
+            "correctly_typed_wrong_destination": 16056,
+            "correct_destination_wrong_type": 1081
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 701,
+          "correctly_typed_destination_errors_without_correct_head_mode": 15355,
+          "correctly_typed_destination_errors_common_wrong": 14635
+        },
+        "blocked": {
+          "rows": 1906,
+          "old_to_new_state_matrix": [
+            [
+              914,
+              20,
+              36,
+              0
+            ],
+            [
+              10,
+              267,
+              0,
+              6
+            ],
+            [
+              5,
+              0,
+              499,
+              10
+            ],
+            [
+              1,
+              2,
+              11,
+              125
+            ]
+          ],
+          "rescues": 16,
+          "regressions": 14,
+          "before": {
+            "wrong_type": 1253,
+            "correctly_typed_wrong_destination": 514,
+            "correct_destination_wrong_type": 283
+          },
+          "after": {
+            "wrong_type": 1219,
+            "correctly_typed_wrong_destination": 546,
+            "correct_destination_wrong_type": 289
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 10,
+          "correctly_typed_destination_errors_without_correct_head_mode": 536,
+          "correctly_typed_destination_errors_common_wrong": 457
+        },
+        "startup": {
+          "rows": 89,
+          "old_to_new_state_matrix": [
+            [
+              5,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              20,
+              0
+            ],
+            [
+              0,
+              5,
+              1,
+              48
+            ]
+          ],
+          "rescues": 0,
+          "regressions": 6,
+          "before": {
+            "wrong_type": 14,
+            "correctly_typed_wrong_destination": 21,
+            "correct_destination_wrong_type": 7
+          },
+          "after": {
+            "wrong_type": 18,
+            "correctly_typed_wrong_destination": 23,
+            "correct_destination_wrong_type": 12
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 1,
+          "correctly_typed_destination_errors_without_correct_head_mode": 22,
+          "correctly_typed_destination_errors_common_wrong": 22
+        },
+        "continue": {
+          "rows": 25918,
+          "old_to_new_state_matrix": [
+            [
+              144,
+              2,
+              11,
+              0
+            ],
+            [
+              22,
+              451,
+              0,
+              106
+            ],
+            [
+              15,
+              0,
+              1244,
+              13
+            ],
+            [
+              8,
+              61,
+              281,
+              23560
+            ]
+          ],
+          "rescues": 119,
+          "regressions": 350,
+          "before": {
+            "wrong_type": 736,
+            "correctly_typed_wrong_destination": 1272,
+            "correct_destination_wrong_type": 579
+          },
+          "after": {
+            "wrong_type": 703,
+            "correctly_typed_wrong_destination": 1536,
+            "correct_destination_wrong_type": 514
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 445,
+          "correctly_typed_destination_errors_without_correct_head_mode": 1091,
+          "correctly_typed_destination_errors_common_wrong": 1052
+        },
+        "change": {
+          "rows": 22279,
+          "old_to_new_state_matrix": [
+            [
+              1028,
+              46,
+              98,
+              5
+            ],
+            [
+              23,
+              467,
+              3,
+              49
+            ],
+            [
+              124,
+              7,
+              14288,
+              386
+            ],
+            [
+              3,
+              35,
+              108,
+              5609
+            ]
+          ],
+          "rescues": 440,
+          "regressions": 146,
+          "before": {
+            "wrong_type": 1719,
+            "correctly_typed_wrong_destination": 14805,
+            "correct_destination_wrong_type": 542
+          },
+          "after": {
+            "wrong_type": 1733,
+            "correctly_typed_wrong_destination": 14497,
+            "correct_destination_wrong_type": 555
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 255,
+          "correctly_typed_destination_errors_without_correct_head_mode": 14242,
+          "correctly_typed_destination_errors_common_wrong": 13561
+        }
+      }
+    },
+    "validation": {
+      "all": {
+        "move": {
+          "rows": 2362,
+          "old_to_new_state_matrix": [
+            [
+              82,
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              57,
+              1,
+              2
+            ],
+            [
+              11,
+              0,
+              817,
+              20
+            ],
+            [
+              0,
+              7,
+              24,
+              1334
+            ]
+          ],
+          "rescues": 22,
+          "regressions": 31,
+          "before": {
+            "wrong_type": 149,
+            "correctly_typed_wrong_destination": 848,
+            "correct_destination_wrong_type": 63
+          },
+          "after": {
+            "wrong_type": 163,
+            "correctly_typed_wrong_destination": 843,
+            "correct_destination_wrong_type": 67
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 41,
+          "correctly_typed_destination_errors_without_correct_head_mode": 802,
+          "correctly_typed_destination_errors_common_wrong": 770
+        },
+        "blocked": {
+          "rows": 110,
+          "old_to_new_state_matrix": [
+            [
+              64,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              16,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              22,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              4
+            ]
+          ],
+          "rescues": 1,
+          "regressions": 0,
+          "before": {
+            "wrong_type": 83,
+            "correctly_typed_wrong_destination": 23,
+            "correct_destination_wrong_type": 18
+          },
+          "after": {
+            "wrong_type": 82,
+            "correctly_typed_wrong_destination": 23,
+            "correct_destination_wrong_type": 16
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 2,
+          "correctly_typed_destination_errors_without_correct_head_mode": 21,
+          "correctly_typed_destination_errors_common_wrong": 18
+        },
+        "startup": {
+          "rows": 6,
+          "old_to_new_state_matrix": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              3
+            ]
+          ],
+          "rescues": 0,
+          "regressions": 0,
+          "before": {
+            "wrong_type": 0,
+            "correctly_typed_wrong_destination": 3,
+            "correct_destination_wrong_type": 0
+          },
+          "after": {
+            "wrong_type": 0,
+            "correctly_typed_wrong_destination": 3,
+            "correct_destination_wrong_type": 0
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 0,
+          "correctly_typed_destination_errors_without_correct_head_mode": 3,
+          "correctly_typed_destination_errors_common_wrong": 3
+        },
+        "continue": {
+          "rows": 1198,
+          "old_to_new_state_matrix": [
+            [
+              12,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              28,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              63,
+              0
+            ],
+            [
+              0,
+              6,
+              19,
+              1064
+            ]
+          ],
+          "rescues": 1,
+          "regressions": 25,
+          "before": {
+            "wrong_type": 44,
+            "correctly_typed_wrong_destination": 65,
+            "correct_destination_wrong_type": 32
+          },
+          "after": {
+            "wrong_type": 50,
+            "correctly_typed_wrong_destination": 83,
+            "correct_destination_wrong_type": 34
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 29,
+          "correctly_typed_destination_errors_without_correct_head_mode": 54,
+          "correctly_typed_destination_errors_common_wrong": 53
+        },
+        "change": {
+          "rows": 1158,
+          "old_to_new_state_matrix": [
+            [
+              70,
+              3,
+              1,
+              0
+            ],
+            [
+              1,
+              29,
+              0,
+              1
+            ],
+            [
+              9,
+              0,
+              751,
+              20
+            ],
+            [
+              0,
+              1,
+              5,
+              267
+            ]
+          ],
+          "rescues": 21,
+          "regressions": 6,
+          "before": {
+            "wrong_type": 105,
+            "correctly_typed_wrong_destination": 780,
+            "correct_destination_wrong_type": 31
+          },
+          "after": {
+            "wrong_type": 113,
+            "correctly_typed_wrong_destination": 757,
+            "correct_destination_wrong_type": 33
+          },
+          "correctly_typed_destination_errors_with_correct_head_mode": 12,
+          "correctly_typed_destination_errors_without_correct_head_mode": 745,
+          "correctly_typed_destination_errors_common_wrong": 714
+        }
+      }
+    }
+  },
+  "state_order": [
+    "wrong_type_wrong_conditional_destination",
+    "wrong_type_correct_conditional_destination",
+    "correct_type_wrong_destination",
+    "correct_complete_command"
+  ],
+  "meaning": "Movement/blocked diagnostic only. When type is wrong the archived coordinate is the recorded-family conditional diagnostic, NOT an emitted movement command. Matrices describe overlapping changes; no single-cause or hidden-intent attribution. Head-mode availability is an oracle diagnostic, not achieved routing or full coordinate support. No new policy, inference, fit, variant selection or changed denominator.",
+  "bindings": {
+    ".cambc\\action-predictor\\v16\\runs\\L02\\train-predictions.npz": "f53aa40ab103f0bf6771a545fe2299f04b31ea1b2ec6d9f8e093e79f8af5a40e",
+    ".cambc\\action-predictor\\v18\\runs\\U00\\train-predictions.npz": "ca571a04445b95a6cda44f5a2cb19e92c237bd909c1bd7f9ab3839ab63fc567e",
+    ".cambc\\action-predictor\\v9\\frequency\\natural-mask.npy": "09217d8fc3d5673d980c8b8a4434861aa26dddb37e506bbfa22cbaafc0e525bd",
+    ".cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+    ".cambc\\action-predictor\\v7\\train-direction.npy": "97a4ca1b39099b49d4e283ba824ef1421cf73de39645f043a9a3173b4cd66546",
+    ".cambc\\action-predictor\\v18\\runs\\U00\\train-diagnostics.npz": "35e630af67e2962014e0b5bf724d23cc3e27ef7845e2ff98a323287ed99aac5c",
+    ".cambc\\action-predictor\\v16\\runs\\L02\\validation-predictions.npz": "b0340c29feffe2d119e4c1be930c9bcc68b61fd2945155c30e44bff0853bd984",
+    ".cambc\\action-predictor\\v18\\runs\\U00\\validation-predictions.npz": "51a25cac29e15a0003bc844391ffd014c4d035226f7b27f13bd65021fd22acc9",
+    ".cambc\\action-predictor\\v4\\validation.npz": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+    ".cambc\\action-predictor\\v7\\validation-direction.npy": "6e6cb5f2b9619137082c75fa086bfcfa1122833a1bf6f58e89e777130a8dbbcb",
+    ".cambc\\action-predictor\\v18\\runs\\U00\\validation-diagnostics.npz": "117a0b111c6713d9fbbbf2eb2460b6b0f964f100c7ad1747d03bb1e9afea27dd"
+  },
+  "source_sha256": "6c55456913469cddc618bf03766d2cd7c22ac2d1753b999030aad65cd4d4dc4d",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

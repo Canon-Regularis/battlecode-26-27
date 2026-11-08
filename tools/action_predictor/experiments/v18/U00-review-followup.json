@@ -1,0 +1,104 @@
+{
+  "B00_corrected_conditional_counts": {
+    "altar": {
+      "support": 2,
+      "old_B00_conditional_correct": 1,
+      "corrected_B00_conditional_correct": 2,
+      "U00_conditional_correct": 2
+    },
+    "attack": {
+      "support": 985,
+      "old_B00_conditional_correct": 905,
+      "corrected_B00_conditional_correct": 945,
+      "U00_conditional_correct": 943
+    },
+    "blocked": {
+      "support": 110,
+      "old_B00_conditional_correct": 7,
+      "corrected_B00_conditional_correct": 24,
+      "U00_conditional_correct": 21
+    },
+    "cast_0": {
+      "support": 213,
+      "old_B00_conditional_correct": 151,
+      "corrected_B00_conditional_correct": 193,
+      "U00_conditional_correct": 192
+    },
+    "cast_1": {
+      "support": 243,
+      "old_B00_conditional_correct": 72,
+      "corrected_B00_conditional_correct": 146,
+      "U00_conditional_correct": 143
+    },
+    "move": {
+      "support": 2362,
+      "old_B00_conditional_correct": 1387,
+      "corrected_B00_conditional_correct": 1465,
+      "U00_conditional_correct": 1423
+    },
+    "priority": {
+      "support": 576,
+      "old_B00_conditional_correct": 45,
+      "corrected_B00_conditional_correct": 109,
+      "U00_conditional_correct": 109
+    },
+    "submit": {
+      "support": 22,
+      "old_B00_conditional_correct": 22,
+      "corrected_B00_conditional_correct": 22,
+      "U00_conditional_correct": 22
+    },
+    "teleport": {
+      "support": 2,
+      "old_B00_conditional_correct": 0,
+      "corrected_B00_conditional_correct": 0,
+      "U00_conditional_correct": 0
+    },
+    "ward": {
+      "support": 112,
+      "old_B00_conditional_correct": 0,
+      "corrected_B00_conditional_correct": 24,
+      "U00_conditional_correct": 25
+    }
+  },
+  "complete_counts_NLL_and_correctly_typed_comparisons_unchanged": true,
+  "mean_mutants_detected": [
+    "zero_reference",
+    "swapped_components",
+    "dropped_uncertainty",
+    "dropped_availability",
+    "removed_bias"
+  ],
+  "new_tests_passed": 3,
+  "legacy_U00_diagnosis_reproduced_exact": true,
+  "priority_loss_contribution": {
+    "code": 9,
+    "support": 576,
+    "joint_NLL_sum_difference": 85.89842230081558,
+    "type_NLL_sum_difference": 85.89842286333442,
+    "parameter_NLL_sum_difference": -2.7418136596679688e-06,
+    "fraction_of_net_NLL_difference": 0.681386422489256
+  },
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v18\\U00-review.json": "807ac0fb5e71788bf5745e52642acfd25b0b7183c987ba8c7afe9b7eea920062",
+    "tools\\action_predictor\\experiments\\v18\\U00-review-response.json": "ddadc0152246bee95e1a2f496dbbb385660e36940c8d2cedf6c26ea19134ce7d",
+    "tools\\action_predictor\\experiments\\v18\\U00-evaluation-v2.json": "f947c38aba1a68e39beed7622cee24c5654ae7e35b178eb65a1fe2f7d6df9d81",
+    "tools\\action_predictor\\experiments\\v18\\U00-diagnosis-v2.json": "c7ac885f90febc2fe2992cde8e1e0b6f64843c60c15c2b06eb81d2fabdd1284c",
+    "tools\\action_predictor\\experiments\\v18\\U00-movement-transitions.json": "43392e7c085909fce848d79add7a1da6a3fd84c9078feaab2a0ea37bab54de69",
+    "tools\\action_predictor\\goal_readout\\comparator_schema.py": "aa4200f3d08247a1f7925dfbdd9972216381292cba198e9ba445bd3ec148ea79",
+    "tools\\action_predictor\\goal_readout\\evaluate_v2.py": "3180b34527988c633c3ae20eba697d523e67d95e5fea7c614e43959c30606d96",
+    "tools\\action_predictor\\goal_readout\\diagnose.py": "69eaa683050fc96b1f3b18279f8e192ddebd22753af324aef8655ff57f681bca",
+    "tools\\action_predictor\\goal_readout\\test_model_v2.py": "1883c3babe666a181cd91521a0f08803c3b9d7a770021e68e3ca83630b9373d8",
+    "tools\\action_predictor\\goal_readout\\test_comparator_schema.py": "406b8f7a7bfc1fb96a87002737352c77e938d5bb19f5047fb31ab5ce494da2a0",
+    "tools\\action_predictor\\goal_readout\\transitions.py": "6c55456913469cddc618bf03766d2cd7c22ac2d1753b999030aad65cd4d4dc4d"
+  },
+  "commands": [
+    ".venv-action-predictor/Scripts/python.exe -m unittest tools.action_predictor.goal_readout.test_model_v2 tools.action_predictor.goal_readout.test_comparator_schema",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.goal_readout.evaluate_v2 U00",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.goal_readout.diagnose U00",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.goal_readout.transitions"
+  ],
+  "qualification": "Corrections/diagnostics only. Frozen original reports, protocol, checkpoints and decoder retained. U01 remains unrun and receives no approval from U00 review.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
