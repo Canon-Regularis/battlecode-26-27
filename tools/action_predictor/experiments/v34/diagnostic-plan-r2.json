@@ -1,0 +1,19 @@
+{
+  "source_sha256": "2fdc7f22d962f272c325e22912ba12343a8c9b0001420af3817dd8545cf59f9d",
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v33\\A.json": "17d6df0fe4ee4ca05dc41e3b45ee28bc2ed805d32ff873da2a6042c2b81eda5e",
+    "tools\\action_predictor\\experiments\\v33\\C-review.json": "e876fecdb3cf499e8e00b1140e578666c10a9579bfb89a908c0fbd96040b84a6",
+    "tools\\action_predictor\\experiments\\v33\\protocol.json": "4117cf30c9647bcdc29f86805e6731a54d941222fc59140d3efc7eb5e95273a5",
+    "tools\\action_predictor\\experiments\\v32\\assembly.json": "eb4092987dc162a91c6ce6c4624ceb93bd785116c592a5b787082224c492212c",
+    ".cambc\\action-predictor\\v32\\features-v1\\normalizer.npz": "cd1005fce3b630f87ec4bea709f7fb200d6286403df58182ec86996ba210cf71",
+    ".cambc\\action-predictor\\v33\\runs\\A\\selected-12-fit.npz": "48b7aa05d6fcf0f49f2050a1ea6d11821ef8fc6720744ec7b790400892596998",
+    ".cambc\\action-predictor\\v33\\runs\\A\\initial.pt": "74dcc632187b190fb48a167524aaeb97bd29663c523eee58334504d85b431082",
+    ".cambc\\action-predictor\\v33\\runs\\A\\round-12.pt": "a0b19c85a7c1aaf782089e5557bc5a8e2e29db0c0c15716996d6df727235ce3a"
+  },
+  "checkpoint_policy": "Only A initial and its frozen primary selected checkpoint; no retrospective model/selector selection.",
+  "partition": "Only all65465fittingrows,10400recordedmoves. Causal replay of existinginputs; no tuning/assessment loading.",
+  "metrics": "Type/coordinate NLL; exact-repeat/complement decomposition; conditional gold rank; oracle forced-nonrepeat mode; fixedthreshold.5,AUC,Brier and10equalwidth reliability bins; full16/missingframe strata.",
+  "correction": "Preserve original diagnostic attempt. r2 records the original observed-loss path separately from all-row movement-conditional evaluation; differentfloat32batch shapes can differ by a few1e-6. Require exact original-loss reproduction and retain the cross-batch discrepancy.",
+  "restrictions": "No optimizer, training, fitted recalibration, new labels, deployment, reservedgames or matches. No repeated fits or modelpromotion.",
+  "new_fits": 0
+}

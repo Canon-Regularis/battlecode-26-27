@@ -1,0 +1,359 @@
+{
+  "plan_sha256": "c69777e7cb8c5a3199c0865b9358f98f4049a5417092f9f1279e28fd70617619",
+  "source_sha256": "2fdc7f22d962f272c325e22912ba12343a8c9b0001420af3817dd8545cf59f9d",
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v33\\A.json": "17d6df0fe4ee4ca05dc41e3b45ee28bc2ed805d32ff873da2a6042c2b81eda5e",
+    "tools\\action_predictor\\experiments\\v33\\C-review.json": "e876fecdb3cf499e8e00b1140e578666c10a9579bfb89a908c0fbd96040b84a6",
+    "tools\\action_predictor\\experiments\\v33\\protocol.json": "4117cf30c9647bcdc29f86805e6731a54d941222fc59140d3efc7eb5e95273a5",
+    "tools\\action_predictor\\experiments\\v32\\assembly.json": "eb4092987dc162a91c6ce6c4624ceb93bd785116c592a5b787082224c492212c",
+    ".cambc\\action-predictor\\v32\\features-v1\\normalizer.npz": "cd1005fce3b630f87ec4bea709f7fb200d6286403df58182ec86996ba210cf71",
+    ".cambc\\action-predictor\\v33\\runs\\A\\selected-12-fit.npz": "48b7aa05d6fcf0f49f2050a1ea6d11821ef8fc6720744ec7b790400892596998",
+    ".cambc\\action-predictor\\v33\\runs\\A\\initial.pt": "74dcc632187b190fb48a167524aaeb97bd29663c523eee58334504d85b431082",
+    ".cambc\\action-predictor\\v33\\runs\\A\\round-12.pt": "a0b19c85a7c1aaf782089e5557bc5a8e2e29db0c0c15716996d6df727235ce3a"
+  },
+  "archives": {
+    ".cambc\\action-predictor\\v34\\r2\\initial.npz": "da8beb14362a6f49bc81bafc09f1030f69cf779dc6f5437622b3ff93b544b168",
+    ".cambc\\action-predictor\\v34\\r2\\selected.npz": "204b49e76d3bd48e9786bc5123f472d33cfe09b091104112b51d5fece6bca5a0"
+  },
+  "results": {
+    "initial": {
+      "total_movement_rows": 10400,
+      "known_previous_tile_rows": 10381,
+      "unassessed_previous_or_gold": 19,
+      "strata": {
+        "all_known_previous": {
+          "rows": 10381,
+          "current_support": 10381,
+          "coordinate_correct": 853,
+          "type_argmax_move": 0,
+          "type_nll": 2.74592833695975,
+          "coordinate_nll": 2.600486134836028,
+          "repeat_vs_other_nll": 1.4579950022610701,
+          "within_chosen_group_nll": 1.142491132574958,
+          "average_repeat_probability": 0.10067621308402631,
+          "gold_rank_median": 4.0,
+          "gold_top3": 3454,
+          "gold_is_exact_repeat": 5349,
+          "mode_repeats_previous": 768,
+          "forced_nonrepeat_correct": 595
+        },
+        "change": {
+          "rows": 5032,
+          "current_support": 5032,
+          "coordinate_correct": 525,
+          "type_argmax_move": 0,
+          "type_nll": 2.745588258902952,
+          "coordinate_nll": 2.4778943076716953,
+          "repeat_vs_other_nll": 0.12093873389175881,
+          "within_chosen_group_nll": 2.356955573779936,
+          "average_repeat_probability": 0.09829439462748663,
+          "gold_rank_median": 4.0,
+          "gold_top3": 2245,
+          "gold_is_exact_repeat": 0,
+          "mode_repeats_previous": 440,
+          "forced_nonrepeat_correct": 595
+        },
+        "continue": {
+          "rows": 5349,
+          "current_support": 5349,
+          "coordinate_correct": 328,
+          "type_argmax_move": 0,
+          "type_nll": 2.74624826082997,
+          "coordinate_nll": 2.715812751828162,
+          "repeat_vs_other_nll": 2.715812751828162,
+          "within_chosen_group_nll": 0.0,
+          "average_repeat_probability": 0.10291687684796491,
+          "gold_rank_median": 4.0,
+          "gold_top3": 1209,
+          "gold_is_exact_repeat": 5349,
+          "mode_repeats_previous": 328,
+          "forced_nonrepeat_correct": 0
+        },
+        "change_full16": {
+          "rows": 3751,
+          "current_support": 3751,
+          "coordinate_correct": 387,
+          "type_argmax_move": 0,
+          "type_nll": 2.746189022610738,
+          "coordinate_nll": 2.4860404310775555,
+          "repeat_vs_other_nll": 0.1235707848201265,
+          "within_chosen_group_nll": 2.362469646257429,
+          "average_repeat_probability": 0.10042675398643079,
+          "gold_rank_median": 4.0,
+          "gold_top3": 1673,
+          "gold_is_exact_repeat": 0,
+          "mode_repeats_previous": 340,
+          "forced_nonrepeat_correct": 442
+        },
+        "change_missing_frames": {
+          "rows": 1281,
+          "current_support": 1281,
+          "coordinate_correct": 138,
+          "type_argmax_move": 0,
+          "type_nll": 2.7438291139631357,
+          "coordinate_nll": 2.454040983007072,
+          "repeat_vs_other_nll": 0.11323161208667905,
+          "within_chosen_group_nll": 2.340809370920393,
+          "average_repeat_probability": 0.09205046023607402,
+          "gold_rank_median": 4.0,
+          "gold_top3": 572,
+          "gold_is_exact_repeat": 0,
+          "mode_repeats_previous": 100,
+          "forced_nonrepeat_correct": 153
+        }
+      },
+      "nonrepeat_discrimination": {
+        "rows": 10381,
+        "positive": 5032,
+        "AUC": 0.5750037672524558,
+        "Brier": 0.4387122677112038,
+        "threshold_half_accuracy": 0.48800693574800114,
+        "reliability": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "rows": 0,
+            "predicted": null,
+            "observed": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "rows": 9,
+            "predicted": 0.1740093948310135,
+            "observed": 0.1111111111111111
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "rows": 20,
+            "predicted": 0.255727628077613,
+            "observed": 0.55
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "rows": 176,
+            "predicted": 0.3409559009840609,
+            "observed": 0.38636363636363635
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "rows": 161,
+            "predicted": 0.43967129509789804,
+            "observed": 0.5341614906832298
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "rows": 315,
+            "predicted": 0.5688226266193993,
+            "observed": 0.692063492063492
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "rows": 307,
+            "predicted": 0.6622573599147226,
+            "observed": 0.3257328990228013
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "rows": 558,
+            "predicted": 0.7324862772513805,
+            "observed": 0.6093189964157706
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "rows": 368,
+            "predicted": 0.8839057571369316,
+            "observed": 0.453804347826087
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "rows": 8467,
+            "predicted": 0.9545184220578886,
+            "observed": 0.4772646746191095
+          }
+        ]
+      },
+      "interpretation": "Conditional head diagnostics, not achieved full commands. Forced-nonrepeat mode is an oracle intervention, not available policy accuracy or a complete ceiling. No causal shortcut or observation-sufficiency inference."
+    },
+    "selected": {
+      "total_movement_rows": 10400,
+      "known_previous_tile_rows": 10381,
+      "unassessed_previous_or_gold": 19,
+      "strata": {
+        "all_known_previous": {
+          "rows": 10381,
+          "current_support": 10381,
+          "coordinate_correct": 5503,
+          "type_argmax_move": 10012,
+          "type_nll": 0.18941667650369007,
+          "coordinate_nll": 1.5210921232726493,
+          "repeat_vs_other_nll": 0.6075012283977326,
+          "within_chosen_group_nll": 0.913590894874917,
+          "average_repeat_probability": 0.5651996095805757,
+          "gold_rank_median": 1.0,
+          "gold_top3": 7773,
+          "gold_is_exact_repeat": 5349,
+          "mode_repeats_previous": 8424,
+          "forced_nonrepeat_correct": 1079
+        },
+        "change": {
+          "rows": 5032,
+          "current_support": 5032,
+          "coordinate_correct": 410,
+          "type_argmax_move": 4752,
+          "type_nll": 0.25710438743377306,
+          "coordinate_nll": 2.6712965685032275,
+          "repeat_vs_other_nll": 0.7865614572757806,
+          "within_chosen_group_nll": 1.8847351112274473,
+          "average_repeat_probability": 0.4401355564924195,
+          "gold_rank_median": 4.0,
+          "gold_top3": 2429,
+          "gold_is_exact_repeat": 0,
+          "mode_repeats_previous": 3331,
+          "forced_nonrepeat_correct": 1079
+        },
+        "continue": {
+          "rows": 5349,
+          "current_support": 5349,
+          "coordinate_correct": 5093,
+          "type_argmax_move": 5260,
+          "type_nll": 0.12574037039036465,
+          "coordinate_nll": 0.4390527199448744,
+          "repeat_vs_other_nll": 0.4390527199448744,
+          "within_chosen_group_nll": 0.0,
+          "average_repeat_probability": 0.6828519399487945,
+          "gold_rank_median": 1.0,
+          "gold_top3": 5344,
+          "gold_is_exact_repeat": 5349,
+          "mode_repeats_previous": 5093,
+          "forced_nonrepeat_correct": 0
+        },
+        "change_full16": {
+          "rows": 3751,
+          "current_support": 3751,
+          "coordinate_correct": 295,
+          "type_argmax_move": 3527,
+          "type_nll": 0.2682704383201242,
+          "coordinate_nll": 2.6870778562081163,
+          "repeat_vs_other_nll": 0.7921503874338514,
+          "within_chosen_group_nll": 1.8949274687742645,
+          "average_repeat_probability": 0.4417557275107073,
+          "gold_rank_median": 4.0,
+          "gold_top3": 1783,
+          "gold_is_exact_repeat": 0,
+          "mode_repeats_previous": 2484,
+          "forced_nonrepeat_correct": 789
+        },
+        "change_missing_frames": {
+          "rows": 1281,
+          "current_support": 1281,
+          "coordinate_correct": 115,
+          "type_argmax_move": 1225,
+          "type_nll": 0.22440816817170978,
+          "coordinate_nll": 2.6250860999778287,
+          "repeat_vs_other_nll": 0.7701960575701415,
+          "within_chosen_group_nll": 1.854890042407687,
+          "average_repeat_probability": 0.4353914023241155,
+          "gold_rank_median": 3.0,
+          "gold_top3": 646,
+          "gold_is_exact_repeat": 0,
+          "mode_repeats_previous": 847,
+          "forced_nonrepeat_correct": 290
+        }
+      },
+      "nonrepeat_discrimination": {
+        "rows": 10381,
+        "positive": 5032,
+        "AUC": 0.7318436636299789,
+        "Brier": 0.21112136947050583,
+        "threshold_half_accuracy": 0.6679510644446585,
+        "reliability": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "rows": 810,
+            "predicted": 0.0709117238811608,
+            "observed": 0.2419753086419753
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "rows": 1861,
+            "predicted": 0.14859444697249843,
+            "observed": 0.28049435787211174
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "rows": 1486,
+            "predicted": 0.24871666564258063,
+            "observed": 0.36002691790040375
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "rows": 1350,
+            "predicted": 0.34827631375184,
+            "observed": 0.4074074074074074
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "rows": 1103,
+            "predicted": 0.4479081792880598,
+            "observed": 0.499546690843155
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "rows": 958,
+            "predicted": 0.5494336830910747,
+            "observed": 0.5135699373695198
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "rows": 840,
+            "predicted": 0.6470966037119169,
+            "observed": 0.5654761904761905
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "rows": 573,
+            "predicted": 0.7467653949651271,
+            "observed": 0.675392670157068
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "rows": 316,
+            "predicted": 0.8412929909456353,
+            "observed": 0.7658227848101266
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "rows": 1084,
+            "predicted": 0.9983557272571929,
+            "observed": 0.9981549815498155
+          }
+        ]
+      },
+      "interpretation": "Conditional head diagnostics, not achieved full commands. Forced-nonrepeat mode is an oracle intervention, not available policy accuracy or a complete ceiling. No causal shortcut or observation-sufficiency inference."
+    }
+  },
+  "selected_allrow_vs_observed_nll_max_difference": 3.2511068930318743e-06,
+  "selected_original_observed_nll_max_difference": 0.0,
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0
+}
