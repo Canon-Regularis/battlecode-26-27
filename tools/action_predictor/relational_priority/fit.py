@@ -21,6 +21,7 @@ from ..order_information.anchored import committed_manifest
 from .data import load
 from .model import SignedPointCorrection
 from .protocol import ROOT,LOCAL,OUT,ARMS,TRAIN_SEED,STRENGTH,UPDATES,V23_COMMIT
+from .review_contract import check_review
 
 TESTS=('tools.action_predictor.relational_priority.test_model',
        'tools.action_predictor.relational_priority.test_data',
@@ -50,11 +51,15 @@ def require_control_review(arm,commit):
     review_path=OUT/'RC00-review.json';response_path=OUT/'RC00-review-response.json'
     if not review_path.is_file() or not response_path.is_file():
         raise RuntimeError('RC01_REQUIRES_COMPLETED_CONTROL_REVIEW')
-    for path in (review_path,response_path,OUT/'RC00.json',OUT/'RC00-completion.json'):
+    for path in (review_path,response_path,OUT/'RC00.json',OUT/'RC00-completion.json',
+                 OUT/'RC00-review-delegation.json',OUT/'RC00-review-scope.json'):
         value,more=committed_manifest(commit,path.relative_to(ROOT).as_posix());bindings.update(more)
         if path==review_path:review=value
         elif path==response_path:response=value
         elif path.name=='RC00.json':control=value
+        elif path.name=='RC00-completion.json':completion=value
+        elif path.name=='RC00-review-delegation.json':delegation=value
+        elif path.name=='RC00-review-scope.json':scope=value
     if review['thread']['status']!='completed' or review['thread']['model']!='gpt-6.1-sol':
         raise RuntimeError('RC00 independent review is not complete on requested model')
     if not response.get('ready_for_registered_treatment') or control['optimizer_updates']!=UPDATES:
@@ -64,6 +69,7 @@ def require_control_review(arm,commit):
         raise RuntimeError('Control-review checkpoint binding mismatch')
     if control['protocol_sha256']!=digest(OUT/'RC-plan.json'):
         raise RuntimeError('Control protocol differs from matched treatment')
+    check_review(review,delegation,scope,response,control,completion)
     bindings[str(checkpoint.relative_to(ROOT))]=digest(checkpoint)
     return bindings
 

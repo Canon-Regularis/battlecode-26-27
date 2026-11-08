@@ -35,8 +35,25 @@ Path.read_bytes=read
 """
             elif kind=='review':
                 code+="original=Path.is_file\ndef exists(self):\n return False if self.name=='RC00-review.json' else original(self)\nPath.is_file=exists\n"
-            code+=f"sys.argv=['correction-fit',{'RC01' if kind=='review' else 'RC00'!r}]\n"
-            code+="runpy.run_module('tools.action_predictor.relational_priority.fit',run_name='__main__')\n"
+            review_fault=kind.startswith('review_')
+            code+=f"sys.argv=['correction-fit',{'RC01' if kind=='review' or review_fault else 'RC00'!r}]\n"
+            if review_fault:
+                code+="from tools.action_predictor.relational_priority import fit as f\noriginal_manifest=f.committed_manifest\n"
+                code+=f"fault={kind!r}\n"
+                code+="""def forged_manifest(commit,path):
+ value,bindings=original_manifest(commit,path)
+ if str(path).endswith('RC00-review.json'):
+  if fault=='review_empty':value['items']=[]
+  if fault=='review_wrong_checkpoint':value['items'][0]['text']=value['items'][0]['text'].replace('e1e46cab0a343e1b65dd96eb3b9fc59a9d61d2da71439815b142aa9f8181006a','0'*64)
+  if fault=='review_stale':value['thread']['createdAt']='2000-01-01T00:00:00Z'
+ if str(path).endswith('RC00-review-delegation.json') and fault=='review_effort':value['options']=[{'id':'reasoningEffort','value':'high'}]
+ if str(path).endswith('RC00-review-scope.json') and fault=='review_sources':value['reviewed_sources']={}
+ if str(path).endswith('RC00-review-response.json') and fault=='review_response':value['review_sha256']='0'*64
+ return value,bindings
+f.committed_manifest=forged_manifest
+f.main()
+"""
+            else:code+="runpy.run_module('tools.action_predictor.relational_priority.fit',run_name='__main__')\n"
             result=subprocess.run([sys.executable,*(['-O'] if kind=='optimized' else []),'-c',code],
                                   cwd=ROOT,capture_output=True,text=True,timeout=30)
             self.assertNotEqual(result.returncode,0,result.stdout)
@@ -54,6 +71,13 @@ Path.read_bytes=read
 
     def test_treatment_requires_completed_fresh_control_review(self):
         self.assertIn('RC01_REQUIRES_COMPLETED_CONTROL_REVIEW',self.tripwire('review'))
+
+    def test_actual_treatment_entrypoint_rejects_inadequate_review_before_optimizer(self):
+        for kind,reason in (('review_empty','empty review'),('review_wrong_checkpoint','review checkpoint'),
+                            ('review_stale','predates'),('review_effort','effort'),
+                            ('review_sources','execution sources'),('review_response','response binding')):
+            with self.subTest(kind=kind):
+                self.assertIn('RC00_REVIEW_CONTRACT: '+reason,self.tripwire(kind))
 
 
 if __name__=='__main__':unittest.main()
