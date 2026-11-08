@@ -188,10 +188,33 @@ def run(arm):
         f"then `python -m tools.action_predictor.relational_priority.results {arm}`. Do not rerun completed fitting. "
         'A fresh Sol xhigh post-fit challenge follows each arm before another substantive fit. '
         'No matches, downloads, new replay queries, reserved accesses, bot/runtime work or deployment.','']
+    supplemental=[]
+    bound_path=OUT/'RC-bound.json'
+    if bound_path.exists():
+        bound=json.loads(bound_path.read_text());v=bound['results']['held']
+        lines+=['','Additional frozen-configuration diagnostic: all held integers have point '
+            f"support, but at least {v['any_weight_unreachable_at_least']}/{v['rows']} cannot become "
+            'MAP under any shared correction weights with these base distributions and feature '
+            f"values fixed. The conservative conditional upper bound is {v['conditional_MAP_upper_bound']}/{v['rows']}. "
+            'Most witnesses are same-zero-feature candidates whose existing ordering cannot change. '
+            'This is not an observation or architecture ceiling; retraining the core or changing '
+            'features/context invalidates it. It does not select a replacement configuration.','']
+        bindings.update(bound['bindings']);bindings.update(bound['sources'])
+        supplemental.extend([bound_path,OUT/'RC-bound-plan.json'])
+    parity_path=OUT/f'{arm}-roundtrip.json'
+    if parity_path.exists():
+        parity=json.loads(parity_path.read_text())
+        lines+=['',f"Bounded nonzero-head input parity: passed `{parity['passed']}` on32distinct "
+            'personal-API input cases, with batch256padding and separate batch1 checks. Exact '
+            'other-unit fields are rebuilt from saved getter records; own history and M01 contexts '
+            'reuse validated caches. This is not full raw-observation encoder/filter or native '
+            'serving certification. Original numerical criteria and any failures remain preserved.','']
+        bindings.update(parity['bindings']);bindings.update(parity['sources'])
+        supplemental.extend([parity_path,OUT/f'{arm}-roundtrip-plan.json'])
     report.write_text('\n'.join(lines),encoding='utf-8')
     bindings.update(info['inputs']);bindings.update(info['sources']);bindings.update(info['bindings'])
     for p in (report,OUT/f'{arm}-analysis.json',OUT/f'{arm}-execution-plan.json',OUT/f'{arm}-preflight.json',
-              OUT/'RC-plan.json',OUT/'RC-data-ready.json'):
+              OUT/'RC-plan.json',OUT/'RC-data-ready.json',*supplemental):
         bindings[str(p.relative_to(ROOT))]=digest(p)
     for relative,expected in bindings.items():
         if digest(ROOT/relative)!=expected:raise RuntimeError('Completion binding mismatch: '+relative)
