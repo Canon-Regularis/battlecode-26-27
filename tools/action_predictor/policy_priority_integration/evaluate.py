@@ -60,6 +60,24 @@ def priority_diagnostics(raw,p,forecast,mask,vocabulary,frequency):
     return out
 
 
+def competition(raw,p,forecast,type_logp,mode_joint_logp):
+    other=np.array(mode_joint_logp,dtype=np.float64);other[:,9]=-np.inf
+    best=other.argmax(1);r=np.arange(len(best));peak=other[r,best]
+    priority_type=np.asarray(type_logp[:,9],dtype=np.float64)
+    # Optimistic conditional point mass ONE; a diagnostic bound, never a forecast.
+    possible=(priority_type>peak)|((priority_type==peak)&(9<best))
+    actual=priority_type+forecast['mode_logp'];margin=actual-peak
+    true=raw['y']==9;correct=p['priority']==raw['priority'];typed=p['prediction']==9
+    return dict(priority_rows=int(true.sum()),conditional_mode_correct=int((true&correct).sum()),
+        joint_correct=int((true&correct&typed).sum()),correct_integer_loses_family_competition=int((true&correct&~typed).sum()),
+        wrong_integer_but_priority_selected=int((true&~correct&typed).sum()),
+        optimistic_fixed_type_and_other_heads_priority_joint_ceiling=int((true&possible).sum()),
+        priority_unreachable_even_with_unit_conditional_mass=int((true&~possible).sum()),
+        true_priority_joint_margin_quantiles=np.quantile(margin[true],[0,.25,.5,.75,1]).tolist(),
+        marginal_priority_type_argmax_correct=int((true&(np.asarray(type_logp).argmax(1)==9)).sum()),
+        meaning='Oracle probability upper bound with frozen family beliefs and other conditional heads, not achieved accuracy or a proposed decoder. Correct-integer mode can lose joint competition; diffuse Q is consistently discounted. No type-first replacement is selected.')
+
+
 def run():
     reject_optimized_python();torch.set_num_threads(4)
     commit,sources=committed_sources(ROOT,dependency_files(ROOT,('tools.action_predictor.policy_priority_integration.evaluate',
@@ -85,10 +103,14 @@ def run():
         baseline_path=ROOT/f'.cambc/action-predictor/v16/runs/L02/{split}-predictions.npz'
         if digest(baseline_path)!=baseline_receipt['predictions_sha256'][split]:raise RuntimeError('Baseline predictions changed')
         bindings[str(baseline_path.relative_to(ROOT))]=digest(baseline_path);old=read(baseline_path)
-        fc=ROOT/f'.cambc/action-predictor/v26/family-cache/{split}/family_coordinate.npy'
-        key=str(fc.relative_to(ROOT));expected=family['results'][split]['files'][key]
-        if digest(fc)!=expected:raise RuntimeError('All-family coordinate cache changed')
-        bindings[key]=expected;coordinate=np.load(fc,mmap_mode='r')[np.arange(n),raw['y']]
+        family_arrays={}
+        for field in ('family_coordinate','type_logp','mode_joint_logp'):
+            fc=ROOT/f'.cambc/action-predictor/v26/family-cache/{split}/{field}.npy'
+            key=str(fc.relative_to(ROOT));expected=family['results'][split]['files'][key]
+            if digest(fc)!=expected:raise RuntimeError('All-family cache changed')
+            bindings[key]=expected;family_arrays[field]=np.load(fc,mmap_mode='r')
+        consumed[split]=family_arrays
+        coordinate=family_arrays['family_coordinate'][np.arange(n),raw['y']]
         with np.load(ROOT/f'.cambc/action-predictor/v8/priority-{split}.npz') as z:values=z['values']
         predictions[split]={};forecasts[split]={}
         for arm,model in heads.items():
@@ -154,7 +176,9 @@ def run():
                     contexts={k:category_summary(d,p,mask&m) for k,m in masks(d).items() if k in ('move','blocked','continue','change','startup','zero_displacement')},
                     priority=priority_diagnostics(raw,p,forecasts[split][arm],mask,
                         np.array(receipts['absolute_vocabulary']['values']),receipts['absolute_vocabulary']['counts']))
-            row['partial_legality']=support(d,p);row['partial_readiness']=readiness_flags(raw,p);results[split][arm]=row
+            row['partial_legality']=support(d,p);row['partial_readiness']=readiness_flags(raw,p)
+            row['priority_competition']=competition(raw,p,forecasts[split][arm],consumed[split]['type_logp'],consumed[split]['mode_joint_logp'])
+            results[split][arm]=row
         if split=='validation':
             for arm in ARMS:
                 comparisons[arm]={}
