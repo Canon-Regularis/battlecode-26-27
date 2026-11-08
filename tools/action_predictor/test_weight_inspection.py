@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 import torch
-from .weight_inspection import stats,distribution,diagnostics
+from .weight_inspection import stats,distribution,diagnostics,margin_components
 
 
 class WeightInspectionTests(unittest.TestCase):
@@ -33,6 +33,15 @@ class WeightInspectionTests(unittest.TestCase):
         r=diagnostics(p,np.array([0,0]),np.array([3,2]))
         self.assertEqual(r['change']['conditional_correct'],1)
         self.assertEqual(r['continue']['conditional_correct'],0)
+
+    def test_overlapping_cohort_names_do_not_mix(self):
+        pair={}
+        for cohort,n in [('strongest_wrong',3),('strongest_wrong_nonrepeat',2)]:
+            for name in ('baseline_margin','dynamic_margin','initial_bias_margin','learned_bias_update_margin','N01_correction_margin'):
+                pair[cohort+'_'+name]=np.arange(n,dtype=float)
+        r=margin_components(pair,'strongest_wrong',np.array([True,False,True]))
+        self.assertEqual(len(r),5)
+        self.assertEqual(r['baseline_margin']['n'],2)
 
 
 if __name__=='__main__':unittest.main()

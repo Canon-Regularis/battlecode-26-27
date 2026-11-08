@@ -13,7 +13,7 @@ from .data import digest
 from .audit import immutable_json
 
 REPORT=ROOT/'tools/action_predictor/experiments/v39'
-WORK=ROOT/'.cambc/action-predictor/v39'
+WORK=ROOT/'.cambc/action-predictor/v39/r2'
 
 
 def stats(x):
@@ -43,9 +43,14 @@ def diagnostics(lp,gold,direction):
     return result
 
 
+def margin_components(pair,cohort,mask):
+    names=('baseline_margin','dynamic_margin','initial_bias_margin','learned_bias_update_margin','N01_correction_margin')
+    return {name:stats(pair[cohort+'_'+name][mask]) for name in names}
+
+
 @torch.no_grad()
 def run():
-    plan_path=REPORT/'plan.json';plan=json.loads(plan_path.read_text())
+    plan_path=REPORT/'plan-r2.json';plan=json.loads(plan_path.read_text())
     for k,v in plan['bindings'].items():
         if digest(ROOT/k)!=v:raise ValueError('Bound artifact changed: '+k)
     WORK.mkdir(parents=True,exist_ok=False)
@@ -166,7 +171,7 @@ def run():
             wrong_dynamic_favors_gold=int((pair[prefix+'dynamic_margin'][bad]<0).sum()),
             wrong_N01_correction_favors_gold=int((pair[prefix+'N01_correction_margin'][bad]<0).sum()),
             wrong_N01_correction_exceeds_original_margin=int((pair[prefix+'N01_correction_margin'][bad]<-margin[bad]).sum()),
-            components={k:stats(v[bad]) for k,v in pair.items() if k.startswith(prefix) and k.endswith('margin')},
+            components=margin_components(pair,cohort,bad),
             max_decomposition_error=float(np.max(np.abs(total-margin))))
     result=dict(plan_sha256=digest(plan_path),weights=weights,movement_offset_bias=bias_stats,
         causal_rows=len(raw['y']),movement_rows=n,parity=parity,activations=act,pair_decomposition=pairs,
