@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import subprocess
 import sys
 import time
 import traceback
@@ -135,9 +136,16 @@ def execute(arm,bank,tests,prior_bindings):
                      'tools/action_predictor/experiments/v23/OD03-review-response.json'):
         _,more=committed_manifest(V23_COMMIT,relative);bindings.update(more)
     all_ids=np.arange(5876)
+    preflight_directory=LOCAL/f'preflight/{arm}/{commit}'
+    if preflight_directory.exists():raise FileExistsError('Preserve prior preflight attempt')
+    preflight_directory.mkdir(parents=True)
+    torch.save(dict(state=model.state_dict(),arm=arm,source_commit=commit,new_optimizer_updates=0),
+               preflight_directory/'initial-state.pt')
     initial_raw=raw_forecast(model,bank,all_ids)
+    initial=archive_then_measure(initial_raw,preflight_directory/'initial-actual-raw.npy',
+                                lambda saved:predictions(model,bank,saved,all_ids))
+    np.savez_compressed(preflight_directory/'initial-predictions.npz',**initial)
     np.testing.assert_array_equal(initial_raw,bank.raw)
-    initial=predictions(model,bank,initial_raw,all_ids)
     for name in ('integer','rank','nll','credit'):
         np.testing.assert_array_equal(initial[name],bank.baseline[name])
     points=np.load(LOCAL/'data/points.npy',mmap_mode='r')
@@ -147,6 +155,7 @@ def execute(arm,bank,tests,prior_bindings):
             generated,_=model.components(torch.from_numpy(np.array(bank.raw[sl],copy=True)),bank.broad['values'][sl])
             np.testing.assert_array_equal(generated.numpy(),points[sl])
     gradients=gradient_contract(model,bank,arm)
+    immutable_json(preflight_directory/'gradient-contract.json',gradients)
     if base_fingerprint(model)!=core or not torch.equal(torch.get_rng_state(),rng) or torch.count_nonzero(model.weights):
         raise RuntimeError('Preflight changed weights/core/RNG')
     if float(penalty(model).detach())!=0:raise RuntimeError('Initial displacement penalty not zero')
@@ -223,7 +232,7 @@ def execute(arm,bank,tests,prior_bindings):
             supervised_presentations=len(bank.fit_ids)*UPDATES,trainable_parameters=model.weights.numel(),
             resident_parameters=sum(p.numel() for p in model.parameters()),core_unchanged=True,core_sha256=core,
             protocol_sha256=digest(OUT/'RC-plan.json'),data_ready_sha256=digest(OUT/'RC-data-ready.json'),
-            bindings={str(p.relative_to(ROOT)):digest(p) for p in directory.iterdir()},
+            bindings={str(p.relative_to(ROOT)):digest(p) for p in [*directory.iterdir(),*preflight_directory.iterdir()]},
             seconds=time.perf_counter()-tick,timing_scope='After preflight through training, assessment and serialization',
             conditional_diagnostic_only=True,new_fits=1,reserved_opened=0,policy_replaced=False,promoted=False))
     except BaseException:
@@ -241,7 +250,13 @@ def main():
     if (LOCAL/f'runs/{arm}').exists():raise FileExistsError('Preserve attempted correction fit')
     prior=require_control_review(arm,commit)
     bank=load()  # Committed data manifests and independent historical input anchors first.
-    checked_execution([TEST_COMMAND],lambda tests:execute(arm,bank,tests,prior),ROOT)
+    try:
+        checked_execution([TEST_COMMAND],lambda tests:execute(arm,bank,tests,prior),ROOT)
+    except subprocess.CalledProcessError as error:
+        immutable_json(OUT/f'{arm}-prerequisite-failure-{time.time_ns()}.json',dict(
+            command=error.cmd,returncode=error.returncode,stdout=error.stdout,stderr=error.stderr,
+            source_commit=commit,new_fits=0,optimizer_updates=0,reserved_opened=0))
+        raise
 
 
 if __name__=='__main__':main()
