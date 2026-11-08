@@ -56,3 +56,14 @@ no DEV): geometry removal changes0/1 potential move modes for L01/L02 and no
 L02 complete observed mode. This measures bounded dependence, not usefulness;
 combined uncertainty/availability removal also removes constant offsets. The
 full next study must resolve these confounds before another architecture fit.
+
+Q01 protocol frozen before reference production/DEV counterfactual scoring:
+selected L01/L02 weights, separate geometry/logscale/availability TRAIN-mean
+contrasts (bias preserved), plus bias-only/full-projection controls. Each runs
+as fixed-state shadow readout and separately causal refilter. All14439original
+DEV rows, original complete-command/category metrics, movement probability/rank,
+component diversity/dominance and paired whole-group uncertainty. No optimizer,
+checkpoint selection or variant promotion. Three intervention algebra/missing-
+position/mean-preservation tests pass. TRAIN references use all288801natural rows
+under original augmented traversal, never labels/future targets to define means.
+Fresh Sol6.1xhigh review after the full study, then continue automatically.

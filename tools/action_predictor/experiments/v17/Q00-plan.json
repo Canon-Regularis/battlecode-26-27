@@ -1,0 +1,21 @@
+{
+  "id": "Q00-frozen-TRAIN-goal-pathways",
+  "models": [
+    "L01",
+    "L02"
+  ],
+  "selection": "Same twelve distinct TRAIN groups, six per engine, as the already fixed retention-gradient cohort. First actor/first64 selected nodes; first16 known-position, noninitial decisions after8 prefix nodes. No action label, future-target availability or correctness condition in selection.",
+  "treatments": [
+    "geometry_off",
+    "uncertainty_availability_off",
+    "all_variables_off",
+    "bias_off",
+    "full_projection_off"
+  ],
+  "treatment": "Subtract only specified linear goal_condition contributions from the current conditioned context. Keep all other goal paths. Original causal baseline filter always advances after the actual command; counterfactual readouts never update future state. Frozen-weight/fixed-state sensitivity, not a causally refiltered policy.",
+  "measurements": "Semantic mode changes in observed command representation; type changes; TV of15-way type probabilities and conditional move291-bucket distribution; conditional move mode changes; context perturbation norms; archived baseline semantic-command parity. No accuracy ranking, threshold/checkpoint/seed selection or architecture change.",
+  "interpretation": "Functional dependence is not usefulness, Fish intent, observation sufficiency or achieved deployable accuracy. All TRAIN only, bounded early streams, fixed selected weights.",
+  "source_sha256": "33ed3fef250b3afe04b22e7afe104afb9ff9a8465b6d3b9bba559255f00fd70f",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
