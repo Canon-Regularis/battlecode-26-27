@@ -1,0 +1,29 @@
+{
+  "question": "Read my thread and find all the errors my model has now made and how we could improve all of it substantially",
+  "reviewed_commit": "4e1e54cb90de6062b2d0ffb9ba2c32b39dbd157f",
+  "requested_target": {
+    "providerInstanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "options": {
+      "reasoningEffort": "xhigh"
+    }
+  },
+  "parent_environment_id": "7309f52a-c52b-4287-b6af-6acae8ea63d1",
+  "parent_thread_id": "mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891",
+  "reviewed_fits": [
+    "RC01"
+  ],
+  "fresh_child_required": true,
+  "artifact_bindings": {
+    "tools/action_predictor/experiments/v24/RC-plan.json": "50f59beeb14dd844c1fc01b7a9fe4eea46ae6440cac13136f0cce01dd19a90b2",
+    "tools/action_predictor/experiments/v24/RC01.json": "0dd34ad817dbc3225670b1c0158b881c29f90d487cf80db9a8eca684e77a8ba3",
+    "tools/action_predictor/experiments/v24/RC01-completion.json": "829e7c0f0e36b0d52bfa8dc9789b71b250bb6f597603f770cb7e9c957a001ca4",
+    "tools/action_predictor/experiments/v24/RC01-analysis.json": "235fc1efc5bc6e2e08d019f5e246dbea84b897388f2a89d2645dfe99ad272935",
+    "tools/action_predictor/experiments/v24/RC01-roundtrip.json": "ac4a733a1184cfb077ad6e8490fa067d020d5b433d11f3fd99d902b3b71af23b",
+    "tools/action_predictor/experiments/v25/CC00.json": "38e216cbdcaf2b73ca21996cfb988d5bf8c17ffb6083626a657b3eb29fef07af",
+    ".cambc/action-predictor/v24/runs/RC01/step-2000.pt": "000352a4030b13a9ae090b1fbfb56576c1c27863ef2418a908ddf25314bed6f2"
+  },
+  "scope": "Completed RC01, direct matched RC00 comparison, V25 retained-reference/error evidence and prospective review-gate fixes. No future fit approval.",
+  "receipt": "This records requested settings before delegation. Preserve the actual initial T3 receipt and terminal model/effort metadata separately; this manifest alone does not establish actual execution.",
+  "reserved_opened": 0
+}
