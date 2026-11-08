@@ -53,15 +53,21 @@ def label(turn, root, frame):
             own['entity'] != dict(kind=1, index=actor) or
             cursor(root['pre']) >= cursor(root['event'])):
         raise ValueError('Actor/PRE ordering mismatch')
-    if 'pre_header' in frame:
-        h = frame['pre_header']
-        if h['phase'] != 10 or h['currentChampion'] != actor or h['team'] != own['team']:
-            raise ValueError('Not a personal decision PRE')
+    h = frame.get('pre_header')
+    if not isinstance(h, dict): raise ValueError('Audited PRE header required')
+    if (h['phase'] != 10 or h['currentChampion'] != actor or h['team'] != own['team'] or
+            obs.get('perspective') != dict(team=own['team'], champion=actor)):
+        raise ValueError('Not a personal decision PRE')
+    before, after = cursor(root['pre']), cursor(root['event'])
+    if (before != (h['inputPosition'], h['step']['substep']) or
+            after != (header['inputPosition'], step['substep']) or
+            after != (before[0]+1, 0)):
+        raise ValueError('PRE/event header cursor mismatch')
     # Header describes the event's resulting state: end legitimately enters
     # phase13. The recorded command carries its own originating phase/round.
     if step['phase'] != 10 or step['actor'] != own['entity']:
         raise ValueError('Command actor/phase mismatch')
-    if frame.get('round', turn['round']) != turn['round'] or step['round'] != turn['round']:
+    if frame['round'] != turn['round'] or step['round'] != turn['round'] or h['round'] != turn['round']:
         raise ValueError('Round mismatch')
     name = ROOT_NAMES.get(step['kind'])
     if name == 'cast': name = 'cast_'+str(step.get('abilitySlot'))
@@ -119,7 +125,8 @@ def audit_game(job, selection, canonical_priority, extra_events=None):
             event = d['event_cursor']
             if event in selected: raise ValueError('Duplicate selected root')
             selected[event] = d
-            observations[event] = dict(actor=t['actor'], pre=d['pre_cursor'], round=t['round'], observation=d['observation'])
+            observations[event] = dict(actor=t['actor'], pre=d['pre_cursor'], round=t['round'],
+                pre_header=d['audit']['pre_header'], observation=d['observation'])
     priority_by_event = dict(zip(selected, canonical_priority[job['offset']:job['offset']+job['rows']]))
     turns_path = Path(job['record']['augmented_path']) if 'augmented_path' in job['record'] else source/'turns.jsonl'
     checked(turns_path, job['record'].get('augmented_sha256', job['record']['turns_sha256']))

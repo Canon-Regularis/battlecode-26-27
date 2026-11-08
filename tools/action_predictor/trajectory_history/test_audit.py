@@ -6,14 +6,26 @@ from .audit import label, window_counts, selected_matches
 def example():
     own = dict(entity=dict(kind=1, index=4), team=1, position=dict(x=5, y=6))
     turn = dict(actor=4, round=9)
-    root = dict(pre='3:4', event='4:0', header=dict(phase=10, currentChampion=4, round=9,
-        step=dict(kind=4, phase=10, round=9, actor=own['entity'], to=dict(x=6, y=6), **{'from': own['position']})))
-    frame = dict(actor=4, pre='3:4', round=9, observation=dict(own=own),
-        pre_header=dict(phase=10, currentChampion=4, team=1))
+    root = dict(pre='3:4', event='4:0', header=dict(phase=10, currentChampion=4, round=9, inputPosition=4,
+        step=dict(kind=4, phase=10, round=9, substep=0, actor=own['entity'], to=dict(x=6, y=6), **{'from': own['position']})))
+    frame = dict(actor=4, pre='3:4', round=9, observation=dict(own=own, perspective=dict(team=1, champion=4)),
+        pre_header=dict(phase=10, currentChampion=4, team=1, round=9, inputPosition=3, step=dict(substep=4)))
     return turn, root, frame
 
 
 class CacheAuditTests(unittest.TestCase):
+    def test_missing_header_round_cursor_and_perspective_are_rejected(self):
+        mutations = (lambda r, f: f.pop('pre_header'),
+            lambda r, f: f['pre_header'].update(round=10),
+            lambda r, f: f['pre_header'].update(inputPosition=2),
+            lambda r, f: f['pre_header']['step'].update(substep=3),
+            lambda r, f: r['header'].update(inputPosition=5),
+            lambda r, f: f['observation'].update(perspective=dict(team=0, champion=4)),
+            lambda r, f: f['observation'].update(perspective=dict(team=1, champion=3)))
+        for mutate in mutations:
+            t, r, f = example(); mutate(r, f)
+            with self.assertRaises(ValueError): label(t, r, f)
+
     def test_priority_uses_canonical_integer_not_absent_compact_label_field(self):
         target = dict(family='priority', priority=604, destination=None)
         expected = dict(root_class='priority', kind=9, slot=None)
