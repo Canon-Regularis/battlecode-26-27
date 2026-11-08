@@ -16,7 +16,7 @@ class ActionBeliefCorrection(nn.Module):
         self.correction=nn.Linear(features,classes,bias=False,dtype=torch.float64)
         nn.init.zeros_(self.correction.weight)
 
-    def forward(self,baseline_family_logp,features):
+    def logits(self,baseline_family_logp,features):
         if baseline_family_logp.ndim!=2 or baseline_family_logp.shape[1]!=15:
             raise ValueError('Original family distribution required')
         if features.shape!=(len(baseline_family_logp),self.correction.in_features):
@@ -26,7 +26,10 @@ class ActionBeliefCorrection(nn.Module):
         # Normalizing in float64 retains a complete family distribution. Baseline
         # rounding may make zero-initialization differ from archived logp by a
         # tiny common offset; no zero-weight branch may remove its gradients.
-        return (baseline_family_logp.double()+self.correction(features.double())).log_softmax(-1)
+        return baseline_family_logp.double()+self.correction(features.double())
+
+    def forward(self,baseline_family_logp,features):
+        return self.logits(baseline_family_logp,features).log_softmax(-1)
 
 
 def command_mode_scores(family_logp,conditional_mode_logp):
