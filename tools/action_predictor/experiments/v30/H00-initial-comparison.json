@@ -1,0 +1,747 @@
+{
+  "comparison": {
+    "overall": {
+      "rows": 14439,
+      "rescues": 406,
+      "regressions": 200,
+      "paired95": {
+        "joint_accuracy": {
+          "low": 0.011875824710049332,
+          "high": 0.016610810163269717,
+          "valid_draws": 2000
+        },
+        "macro_f1": {
+          "low": -0.018576668178254097,
+          "high": 0.01133994612366529,
+          "valid_draws": 2000
+        },
+        "joint_nll": {
+          "low": -0.11938691248297484,
+          "high": -0.08978567765629775,
+          "valid_draws": 2000
+        }
+      },
+      "group_net": {
+        "1": 39,
+        "10": 34,
+        "11": 49,
+        "17": 52,
+        "31": 32
+      }
+    },
+    "<unknown>": {
+      "support": 0,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll_difference": null,
+      "targeting": {
+        "joint": {
+          "new_correct": 0,
+          "new_support": 0,
+          "reference_correct": 0,
+          "reference_support": 0,
+          "paired95": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        },
+        "all_true_family_parameter": null,
+        "correctly_typed_parameter": null,
+        "matched_correctly_typed_parameter": null
+      },
+      "nll_difference_paired95": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      }
+    },
+    "altar": {
+      "support": 2,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll_difference": 2.9118608731571953,
+      "targeting": {
+        "joint": {
+          "new_correct": 0,
+          "new_support": 2,
+          "reference_correct": 0,
+          "reference_support": 2,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 2,
+          "new_support": 2,
+          "reference_correct": 2,
+          "reference_support": 2,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1836
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 0,
+          "new_support": 0,
+          "reference_correct": 0,
+          "reference_support": 0,
+          "paired95": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 0,
+          "new_support": 0,
+          "reference_correct": 0,
+          "reference_support": 0,
+          "paired95": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": 2.742489250245358,
+        "high": 3.0812324960690325,
+        "valid_draws": 1836
+      }
+    },
+    "attack": {
+      "support": 985,
+      "rescues": 26,
+      "regressions": 15,
+      "mean_nll_difference": -0.07829714791586248,
+      "targeting": {
+        "joint": {
+          "new_correct": 900,
+          "new_support": 985,
+          "reference_correct": 889,
+          "reference_support": 985,
+          "paired95": {
+            "low": 0.0010775862068965747,
+            "high": 0.02210433244915999,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 943,
+          "new_support": 985,
+          "reference_correct": 946,
+          "reference_support": 985,
+          "paired95": {
+            "low": -0.006903353057199246,
+            "high": 0.0020387359836900876,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 900,
+          "new_support": 937,
+          "reference_correct": 889,
+          "reference_support": 921,
+          "paired95": {
+            "low": -0.012777279196468205,
+            "high": 0.004541862212291803,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 876,
+          "new_support": 909,
+          "reference_correct": 878,
+          "reference_support": 909,
+          "paired95": {
+            "low": -0.006282722513089034,
+            "high": 0.0023724792408066353,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": -0.11740196932929625,
+        "high": -0.04825020926782416,
+        "valid_draws": 2000
+      }
+    },
+    "blocked": {
+      "support": 110,
+      "rescues": 3,
+      "regressions": 0,
+      "mean_nll_difference": 0.06353025015729873,
+      "targeting": {
+        "joint": {
+          "new_correct": 4,
+          "new_support": 110,
+          "reference_correct": 1,
+          "reference_support": 110,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.047244094488188976,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 23,
+          "new_support": 110,
+          "reference_correct": 18,
+          "reference_support": 110,
+          "paired95": {
+            "low": 0.030303030303030304,
+            "high": 0.07246376811594205,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 4,
+          "new_support": 30,
+          "reference_correct": 1,
+          "reference_support": 28,
+          "paired95": {
+            "low": -0.006521739130434787,
+            "high": 0.18518518518518517,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 3,
+          "new_support": 24,
+          "reference_correct": 1,
+          "reference_support": 24,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.16666666666666666,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": -0.2894757507074397,
+        "high": 0.31631824330145814,
+        "valid_draws": 2000
+      }
+    },
+    "cancel": {
+      "support": 2589,
+      "rescues": 6,
+      "regressions": 26,
+      "mean_nll_difference": 0.012238160938438006,
+      "targeting": {
+        "joint": {
+          "new_correct": 2515,
+          "new_support": 2589,
+          "reference_correct": 2535,
+          "reference_support": 2589,
+          "paired95": {
+            "low": -0.011399371069182318,
+            "high": -0.0034456355283307705,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": null,
+        "correctly_typed_parameter": null,
+        "matched_correctly_typed_parameter": null
+      },
+      "nll_difference_paired95": {
+        "low": 0.0030504020401211068,
+        "high": 0.02044234516018399,
+        "valid_draws": 2000
+      }
+    },
+    "cast_0": {
+      "support": 213,
+      "rescues": 3,
+      "regressions": 13,
+      "mean_nll_difference": 0.19317507011898125,
+      "targeting": {
+        "joint": {
+          "new_correct": 148,
+          "new_support": 213,
+          "reference_correct": 158,
+          "reference_support": 213,
+          "paired95": {
+            "low": -0.10362694300518138,
+            "high": 0.004807692307692291,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 193,
+          "new_support": 213,
+          "reference_correct": 192,
+          "reference_support": 213,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.01388888888888895,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 148,
+          "new_support": 161,
+          "reference_correct": 158,
+          "reference_support": 172,
+          "paired95": {
+            "low": -0.042046542608550896,
+            "high": 0.04102765366501637,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 145,
+          "new_support": 156,
+          "reference_correct": 145,
+          "reference_support": 156,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": 0.09109025339871912,
+        "high": 0.27722262378377954,
+        "valid_draws": 2000
+      }
+    },
+    "cast_1": {
+      "support": 243,
+      "rescues": 2,
+      "regressions": 39,
+      "mean_nll_difference": 0.5423318641457525,
+      "targeting": {
+        "joint": {
+          "new_correct": 69,
+          "new_support": 243,
+          "reference_correct": 106,
+          "reference_support": 243,
+          "paired95": {
+            "low": -0.20341764528756398,
+            "high": -0.10373443983402492,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 141,
+          "new_support": 243,
+          "reference_correct": 144,
+          "reference_support": 243,
+          "paired95": {
+            "low": -0.031746031746031744,
+            "high": 0.009569377990430561,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 69,
+          "new_support": 109,
+          "reference_correct": 106,
+          "reference_support": 180,
+          "paired95": {
+            "low": -0.00490021382751249,
+            "high": 0.1359212117721592,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 68,
+          "new_support": 106,
+          "reference_correct": 71,
+          "reference_support": 106,
+          "paired95": {
+            "low": -0.04629629629629639,
+            "high": -0.009615384615384581,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": 0.46016201505557536,
+        "high": 0.6262923947425868,
+        "valid_draws": 2000
+      }
+    },
+    "end": {
+      "support": 4096,
+      "rescues": 29,
+      "regressions": 8,
+      "mean_nll_difference": -0.037640298681936794,
+      "targeting": {
+        "joint": {
+          "new_correct": 3990,
+          "new_support": 4096,
+          "reference_correct": 3969,
+          "reference_support": 4096,
+          "paired95": {
+            "low": 0.0014423076923076872,
+            "high": 0.009672619047619069,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": null,
+        "correctly_typed_parameter": null,
+        "matched_correctly_typed_parameter": null
+      },
+      "nll_difference_paired95": {
+        "low": -0.04834437901112142,
+        "high": -0.027265574670573233,
+        "valid_draws": 2000
+      }
+    },
+    "move": {
+      "support": 2362,
+      "rescues": 139,
+      "regressions": 68,
+      "mean_nll_difference": -0.13867225917693657,
+      "targeting": {
+        "joint": {
+          "new_correct": 1322,
+          "new_support": 2362,
+          "reference_correct": 1251,
+          "reference_support": 2362,
+          "paired95": {
+            "low": 0.020954598370197974,
+            "high": 0.03864059590316571,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 1406,
+          "new_support": 2362,
+          "reference_correct": 1401,
+          "reference_support": 2362,
+          "paired95": {
+            "low": -0.0093131548311991,
+            "high": 0.014432029795158341,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 1322,
+          "new_support": 2166,
+          "reference_correct": 1251,
+          "reference_support": 2045,
+          "paired95": {
+            "low": -0.013988635819845885,
+            "high": 0.009033604458594802,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 1240,
+          "new_support": 2012,
+          "reference_correct": 1235,
+          "reference_support": 2012,
+          "paired95": {
+            "low": -0.005977011494252893,
+            "high": 0.012439156300703136,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": -0.15140700943977922,
+        "high": -0.12687236007531402,
+        "valid_draws": 2000
+      }
+    },
+    "priority": {
+      "support": 576,
+      "rescues": 11,
+      "regressions": 16,
+      "mean_nll_difference": 0.05411246373461219,
+      "targeting": {
+        "joint": {
+          "new_correct": 120,
+          "new_support": 576,
+          "reference_correct": 125,
+          "reference_support": 576,
+          "paired95": {
+            "low": -0.0228310502283105,
+            "high": 0.011086474501108654,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 248,
+          "new_support": 576,
+          "reference_correct": 248,
+          "reference_support": 576,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 120,
+          "new_support": 235,
+          "reference_correct": 125,
+          "reference_support": 234,
+          "paired95": {
+            "low": -0.04307973030147085,
+            "high": 0.008322154425066059,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 109,
+          "new_support": 206,
+          "reference_correct": 109,
+          "reference_support": 206,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": -0.052378802999613165,
+        "high": 0.12640127021100114,
+        "valid_draws": 2000
+      }
+    },
+    "recall": {
+      "support": 3084,
+      "rescues": 186,
+      "regressions": 11,
+      "mean_nll_difference": -0.42221697466949176,
+      "targeting": {
+        "joint": {
+          "new_correct": 3003,
+          "new_support": 3084,
+          "reference_correct": 2828,
+          "reference_support": 3084,
+          "paired95": {
+            "low": 0.05086774386594861,
+            "high": 0.06284722222222217,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": null,
+        "correctly_typed_parameter": null,
+        "matched_correctly_typed_parameter": null
+      },
+      "nll_difference_paired95": {
+        "low": -0.47072640710584857,
+        "high": -0.37323483417173303,
+        "valid_draws": 2000
+      }
+    },
+    "shop": {
+      "support": 43,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll_difference": -0.0033351574027527713,
+      "targeting": {
+        "joint": {
+          "new_correct": 0,
+          "new_support": 43,
+          "reference_correct": 0,
+          "reference_support": 43,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": null,
+        "correctly_typed_parameter": null,
+        "matched_correctly_typed_parameter": null
+      },
+      "nll_difference_paired95": {
+        "low": -0.09068143360087004,
+        "high": 0.26313535149380674,
+        "valid_draws": 2000
+      }
+    },
+    "submit": {
+      "support": 22,
+      "rescues": 1,
+      "regressions": 1,
+      "mean_nll_difference": 0.09846668264540526,
+      "targeting": {
+        "joint": {
+          "new_correct": 20,
+          "new_support": 22,
+          "reference_correct": 20,
+          "reference_support": 22,
+          "paired95": {
+            "low": -0.23076923076923073,
+            "high": 0.08333333333333326,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 22,
+          "new_support": 22,
+          "reference_correct": 22,
+          "reference_support": 22,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 20,
+          "new_support": 20,
+          "reference_correct": 20,
+          "reference_support": 20,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 19,
+          "new_support": 19,
+          "reference_correct": 19,
+          "reference_support": 19,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": -0.1408968732367779,
+        "high": 0.9407572330859817,
+        "valid_draws": 2000
+      }
+    },
+    "teleport": {
+      "support": 2,
+      "rescues": 0,
+      "regressions": 0,
+      "mean_nll_difference": 1.8917097065937636,
+      "targeting": {
+        "joint": {
+          "new_correct": 0,
+          "new_support": 2,
+          "reference_correct": 0,
+          "reference_support": 2,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 0,
+          "new_support": 2,
+          "reference_correct": 0,
+          "reference_support": 2,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 0,
+          "new_support": 1,
+          "reference_correct": 0,
+          "reference_support": 2,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 0,
+          "new_support": 1,
+          "reference_correct": 0,
+          "reference_support": 1,
+          "paired95": {
+            "low": 0.0,
+            "high": 0.0,
+            "valid_draws": 1344
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": 1.8917097065937636,
+        "high": 1.8917097065937636,
+        "valid_draws": 1344
+      }
+    },
+    "ward": {
+      "support": 112,
+      "rescues": 0,
+      "regressions": 3,
+      "mean_nll_difference": 0.8397008977617351,
+      "targeting": {
+        "joint": {
+          "new_correct": 0,
+          "new_support": 112,
+          "reference_correct": 3,
+          "reference_support": 112,
+          "paired95": {
+            "low": -0.07407407407407407,
+            "high": 0.0,
+            "valid_draws": 2000
+          }
+        },
+        "all_true_family_parameter": {
+          "new_correct": 27,
+          "new_support": 112,
+          "reference_correct": 22,
+          "reference_support": 112,
+          "paired95": {
+            "low": 0.0078125,
+            "high": 0.10389610389610388,
+            "valid_draws": 2000
+          }
+        },
+        "correctly_typed_parameter": {
+          "new_correct": 0,
+          "new_support": 0,
+          "reference_correct": 3,
+          "reference_support": 9,
+          "paired95": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        },
+        "matched_correctly_typed_parameter": {
+          "new_correct": 0,
+          "new_support": 0,
+          "reference_correct": 0,
+          "reference_support": 0,
+          "paired95": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        }
+      },
+      "nll_difference_paired95": {
+        "low": 0.6929904177206645,
+        "high": 0.9388510341028465,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "scope": "Saved selected checkpoint versus registered nonselectable roundzero, not a new model or retrospective endpoint choice. Both use causal direct recurrence and the same normalized joint decoder; this does not isolate memory benefit from other trained paths.",
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v30\\H00.json": "104388aaaf5922b42b7968ad3806489be1bbf3a5da23add432db93e0208dfe1d",
+    ".cambc\\action-predictor\\v30\\runs\\H00\\validation-predictions.npz": "bcc099f8db0418d6a91c685b2c4a3da045f840708829eff16fef1d277a312024",
+    ".cambc\\action-predictor\\v30\\runs\\H00\\initial-validation-diagnostic\\predictions.npz": "4dfbaac17c13bffc3d404039eab77839d32239363141f4cb85cbb930c2de064a",
+    "tools\\action_predictor\\segment_policy\\report.py": "ca641ddeac282f4ebddc3f5914cb2e479b225f8e3418a4a1614292877dfad71a"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}
