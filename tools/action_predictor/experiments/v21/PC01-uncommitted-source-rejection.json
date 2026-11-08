@@ -1,0 +1,10 @@
+{
+  "expected_failure": true,
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_broad\\experiment.py\", line 254, in <module>\n    committed_sources(ROOT, source_paths())\n  File \"F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_broad\\guard.py\", line 12, in committed_sources\n    blob = subprocess.run(['git', 'show', f'{commit}:{relative}'], cwd=root,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Subhan\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'show', '61403086a0efee6dd98a4f39f8de2f4eab009dad:tools/action_predictor/priority_broad/__init__.py']' returned non-zero exit status 128.\n",
+  "reason": "Negative preflight: normal entrypoint refused source not yet committed in HEAD.",
+  "optimizer_reached": false,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

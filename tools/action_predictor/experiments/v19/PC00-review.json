@@ -1,0 +1,67 @@
+﻿{
+  "thread": {
+    "threadId": "thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v19-pc00-actual-priority-capacity-review-20261108",
+    "projectId": "b799910c-0e3c-47bc-a21c-c2e3e1dba78e",
+    "title": "PC00 actual priority-head capacity: independent post-fit challenge",
+    "link": "<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v19-pc00-actual-priority-capacity-review-20261108>",
+    "createdBy": "agent",
+    "creationSource": "mcp",
+    "status": "completed",
+    "latestRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v19-pc00-actual-priority-capacity-review-20261108:ordinal:1",
+    "activeRunId": null,
+    "providerInstanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "runtimeMode": "full-access",
+    "interactionMode": "default",
+    "linkedPullRequest": null,
+    "pullRequests": [],
+    "titleRegeneration": null,
+    "branch": null,
+    "worktreePath": null,
+    "parentThreadId": "mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891",
+    "relationshipToParent": "subagent",
+    "runCount": 1,
+    "itemCount": 63,
+    "pendingRequestCount": 0,
+    "archived": false,
+    "settled": false,
+    "settledAt": null,
+    "snoozed": false,
+    "snoozedUntil": null,
+    "createdAt": "2026-11-08T05:59:05.002Z",
+    "updatedAt": "2026-11-08T06:06:00.069Z"
+  },
+  "recentRuns": [
+    {
+      "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v19-pc00-actual-priority-capacity-review-20261108:ordinal:1",
+      "ordinal": 1,
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "requestedAt": "2026-11-08T05:59:05.003Z",
+      "startedAt": "2026-11-08T05:59:05.391Z",
+      "completedAt": "2026-11-08T06:06:00.069Z"
+    }
+  ],
+  "items": [
+    {
+      "position": 61,
+      "visibility": "local",
+      "sourceThreadId": "thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v19-pc00-actual-priority-capacity-review-20261108",
+      "itemId": "turn-item:provider:codex:native-item:msg_07d80bb5425c789e016af011258cac87d28ba55c1389b4b4c5",
+      "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v19-pc00-actual-priority-capacity-review-20261108:ordinal:1",
+      "messageId": "message:provider:codex:native-item:msg_07d80bb5425c789e016af011258cac87d28ba55c1389b4b4c5",
+      "createdBy": "agent",
+      "creationSource": "provider",
+      "type": "assistant_message",
+      "status": "completed",
+      "title": null,
+      "text": "**PC00’s measurements reproduce. I found a serious execution-control failure and substantial limits on interpretation, but no probability, anchor or scoring defect that overturns the result.**\n\nI paginated the [parent thread](<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891>), inspected the specified code and prior objections, and independently checked the saved artifacts.\n\nThe ranked findings are:\n\n1. **High — Failure handling failed twice, and the fit runner still lacks an enforced provenance gate.**\n\n   The initial failed unit test did not prevent plan production. Later, the newline reconstruction assertion failed, staging/commit failed, and the parent nevertheless launched fitting. These were consequential workflow errors.\n\n   [fit.py:26](F:/Code/battlecode-26-27/tools/action_predictor/priority_capacity/fit.py:26) records `git rev-parse HEAD`; it does not verify that this commit contains the executed sources. I confirmed execution HEAD `3d10b9e…` lacks PC00’s code.\n\n   The recovery is credible but must retain its temporal qualification: current sources, the **post-execution** source bundle and commit `f55ec55` match the pre-fit manifest. All **79 completion bindings** match. This supports content reproducibility; it does not turn execution into a clean committed-source run.\n\n   Future fits need one checked dependency sequence that refuses optimization after any failed prerequisite. Recording that intention in prose is insufficient; verify the failure path without running optimization. Preserve the current checkpoints and their original commit fields.\n\n2. **High — The capacity pass is substantially weaker evidence than it first appears.**\n\n   Independently, the fitted input matrix—including bias—is **128×168 with rank 128**. Every target has an absolute point in the vocabulary.\n\n   Consequently, this affine head can, in principle, interpolate arbitrary absolute labels on these rows. That is a linear-algebra implication, not a random-label experiment. The fit contains **72 absolute labels, 48 occurring only once**.\n\n   PC00 establishes that the actual P05 implementation can optimize these examples. It does **not** establish reusable priority rules, sufficient observations, representative full-data capacity or successful policy learning. The [report](F:/Code/battlecode-26-27/tools/action_predictor/experiments/v19/PC00-REPORT.md) mostly respects this distinction; the full-rank result should make it explicit.\n\n3. **High — Control deterioration does not identify its cause.**\n\n   Both the frozen encoder **and warm head** previously saw the controls. These are controls for the new optimization only.\n\n   My paired arithmetic finds:\n\n   - Same-fit-group controls: **7 rescues, 22 regressions**; NLL worsens on **104/128** rows.\n   - Held-group controls: **6 rescues, 22 regressions**; NLL worsens on **112/128** rows.\n\n   Absolute-label coverage alone cannot explain this: previously represented absolute labels still decline **18→10/83** and **20→10/70**. But “label seen” does not match contexts, frequencies, anchor combinations or competing explanations. These strata cannot separate forgetting, narrow training coverage, representation limitations and transfer.\n\n   There is also no demonstrated additional group-shift penalty here: both controls deteriorate similarly. Avoid assigning the decline specifically to held-group generalization.\n\n4. **High — PC00 still does not explain original P05’s weak full-data fit.**\n\n   Original P05 achieved **3,727/14,816 augmented** and **2,416/9,815 natural** TRAIN integers exactly. PC00 changes the training population, repetition, batch composition, learning-rate schedule, clipping and weight decay.\n\n   Original P05 averaged approximately **8.76 supervised priority rows per update**; PC00 repeatedly uses the same 128. Its successful memorization cannot isolate which original training choice matters.\n\n   Also, do not immediately blame `SUM / full minibatch length`. With the other heads frozen, there is no competing action-loss gradient in this optimizer. Adam is substantially insensitive to constant gradient rescaling; varying batch composition, clipping, epsilon and decay complicate that relationship. “Diluted loss caused failure” remains untested.\n\n5. **Medium — Conditional success remains far from the binding objective.**\n\n   PC00 supplies the priority family and changes no complete policy. It establishes neither priority typing improvement nor full-command improvement, robustness or three-seed consistency.\n\n   Candidate ranks and marginalized explanation credits are computed correctly within their declared scope. They remain bounded candidate ranks and posterior probability shares—not global integer ranks or recovered Fish intent.\n\n   Any eventual integration must recompute normalized joint command probabilities and winning families. Original category targets, unavailable shop failures and sparse-category qualifications remain binding.\n\nMy independent checks reproduced:\n\n- **All 1,920 predictions** across 384 rows and five checkpoints.\n- Neural raw outputs **bit-for-bit**.\n- Independent NumPy mixture arithmetic with **zero mode or rank mismatches**, maximum NLL difference **3.57×10⁻¹⁴**, and credit difference **3.55×10⁻¹⁵**.\n- Exact cohort reconstruction from bound TRAIN inputs, including natural membership, normalization, targets and anchors.\n- **55 fit groups, 49 represented same-fit-control groups, 20 disjoint held groups**, with all row identities disjoint.\n- All **207,816 trainable parameters**, unchanged vocabulary buffers, and checkpoint optimizer counters/settings consistent with the protocol.\n\nThe historical fallback decoder, missing generators, B00 conditional-coordinate accounting, ineffective intervention tests and lost forecast arrays were substantive errors. Their corrections should remain in the ledger. I found no evidence that they invalidate PC00. Likewise, R02’s different single-logistic result cannot diagnose P05, and U01 does not justify another geometry or retention variation.\n\n**My single recommended next experiment is a broad-cohort P05 fitting-and-transfer contrast.**\n\nUse the same step-zero warm head, frozen inputs, exact anchors, probability arithmetic and fixed 2,000-update optimization. Change only the training population to **all 5,876 natural priority rows from PC00’s actual 55 fit groups, excluding the same-fit control rows**. Keep both control cohorts excluded.\n\nI independently counted **430 absolute labels and 560 available residual labels** in that pool. Every control target has an absolute **or available residual** label represented there. This also removes the unrestricted 128-row affine-interpolation setting.\n\nCompute each full-batch mean gradient through chunks if needed, accumulating before **one** optimizer update. Preserve PC00’s schedule, clipping and fixed final checkpoint. Compare against the saved PC00 trace; do not select a replacement checkpoint retrospectively.\n\nThis tests whether the existing head can fit a much broader population and whether the control collapse persists with broad label/context coverage. It will not separately identify coverage versus diversity, or establish untouched generalization, but it directly advances the unresolved question without another architecture change.\n\nI made no edits, training or optimizer probes, reserved-data accesses, simulations, downloads or PR changes.\n\nPR https://github.com/Canon-Regularis/battlecode-26-27/pull/11 — supplied last-verified remote head `3d10b9e501e701d1c2149a958a3382b474da8bc0`; DRAFT/open/unmerged, auto-merge/queue null, checks/reviews **0/0**. Reviewed local HEAD `72b1237e5cbd4bcd4c0297155932db996a339f19`; PC00 unpushed.",
+      "textTruncated": false,
+      "nextTextOffset": null,
+      "updatedAt": "2026-11-08T06:06:00.020Z"
+    }
+  ],
+  "nextPosition": 61,
+  "hasMore": false
+}
