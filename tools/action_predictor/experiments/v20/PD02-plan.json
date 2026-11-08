@@ -1,0 +1,28 @@
+{
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v21\\PC01.json": "94fe10bd3cffb2a0faed356b1ce9ae11ecdc1b9deabf650b934e18d1d4f6010d",
+    "tools\\action_predictor\\priority_diagnosis\\blocks.py": "f94b89824c5ae1434383bf046bc1433f63979275ba496669d991bab0e5f755b8",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\step-0000.pt": "c9715be4b6c17b1921c5ca199e93ffdf278b45ce54c4cd21a6c0d9c104c897d5",
+    ".cambc\\action-predictor\\v21\\runs\\PC01\\step-2000.pt": "16b481f8f8c17819cdea0856a2601b4e4447105dca860a9e933a851df33362d0",
+    "tools\\action_predictor\\experiments\\v19\\PC00-data-ready.json": "c9d05d1c904ac6fcbbeae2bb1c03e5609ef974dd21c9eca26cd4c1aa335e587d",
+    ".cambc\\action-predictor\\v19\\PC00-cohorts\\fit.npz": "e4348e643f084c3838c7d60d779fc7ee14a56fea20c06266967453266815292e",
+    ".cambc\\action-predictor\\v19\\PC00-cohorts\\same_fit_groups.npz": "3b175a7094bc321a0f5fe720ea9af7214078941e213f954c71c283ff7586a978",
+    ".cambc\\action-predictor\\v19\\PC00-cohorts\\held_groups.npz": "759347e10040bb267b3635227399569405cb1775d8b20c4f5cc29e9a21a35418",
+    "tools\\action_predictor\\priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools\\action_predictor\\priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools\\action_predictor\\priority_capacity\\data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools\\action_predictor\\priority_capacity\\measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299"
+  },
+  "purpose": "Locate fixed-weight dependence in the learned PC01-minus-warm readout changes. This is not a training-process causal decomposition or a replacement search.",
+  "factors": [
+    "context linear-weight columns0:128",
+    "explicit priority linear-weight columns128:167",
+    "all output biases, including fallback location/scale"
+  ],
+  "contrasts": "ALL8 binary combinations of warm versus PC01final blocks, no branch selection. Same unchanged raw inputs/anchors/probability arithmetic. All mode, fallback-gate and fallback-parameter rows participate.",
+  "cohorts": "Original128fit plus same two128controls; all previously seen by warm encoder/head. Fit rows in-sample, controls excluded only from PC01 optimization.",
+  "metrics": "Conditional integer exactness, normalized NLL, bounded candidate rank, marginalized explanation shares; preserve both endpoint parity.",
+  "limitations": "Explicit-input weight intervention does not remove indirect priority information from context or analytic exact anchor. Block effects can interact through probability normalization and duplicate point aggregation. No Fish-intent attribution.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
