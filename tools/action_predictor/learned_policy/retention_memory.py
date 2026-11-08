@@ -43,8 +43,8 @@ def run(identifier, split):
                     decay_age=step['age'][:,0],effective_retention=step['retain'],initial=initial,
                     world_held_without_current_position=held)
                 for key,value in values.items():arrays[key][ids[valid]]=value.numpy()[valid]
-                max_world_difference=max(max_world_difference,float(np.abs(step['world'].numpy()[valid]-archived_world[ids[valid]]).max()))
-                max_retention_difference=max(max_retention_difference,float(np.abs(step['retain'].numpy()[valid]-archived_retention[ids[valid]]).max()))
+                if valid.any():max_world_difference=max(max_world_difference,float(np.abs(step['world'].numpy()[valid]-archived_world[ids[valid]]).max()))
+                if valid.any():max_retention_difference=max(max_retention_difference,float(np.abs(step['retain'].numpy()[valid]-archived_retention[ids[valid]]).max()))
                 target=targets(d,ix)
                 _,post=model.observed(step,**geometry(d,ix),**{k:target[k] for k in ('y','py','priority_parameter_nll')})
                 state=select_state(state,post,mask);seen[ids[valid]]+=1

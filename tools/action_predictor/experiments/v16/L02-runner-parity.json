@@ -1,0 +1,17 @@
+{
+  "fit_commit": "530fa3a",
+  "base_fit_source": "learned_policy/fit.py frozen L00/L01 source",
+  "new_fit_source": "learned_policy/retention_fit.py",
+  "AST_exact_after_allowed_transformations": true,
+  "allowed_transformations": [
+    "freeze() to new frozen protocol",
+    "persistent=True exactly as L01 arm",
+    "objective.backward() to registered retention-only loss-gradient routing",
+    "L02 identity/checkpoint metadata points to new protocol",
+    "direct retained control L01 instead of L00"
+  ],
+  "unchanged": "seed/constructor and parameter RNG order; data/normalization; shuffled actor order and8-node BPTT; losses and.05weight; AdamW/clip; all-row checking; full-DEV inference; early stop and selection; checkpoint/prediction saving; summary functions",
+  "diagnostic_only": true,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,60 @@
+{
+  "results": {
+    "all": {
+      "rows": 14439,
+      "noninitial": 14311,
+      "direct_per_root_gate_quantiles": [
+        0.0015216615283861756,
+        0.23397332429885864,
+        0.5258742570877075,
+        0.7542930245399475,
+        0.9139501750469208,
+        0.9862666130065918
+      ],
+      "direct_log_per_root_gate_quantiles": [
+        -6.487952709197998,
+        -1.4525482058525085,
+        -0.6426931619644165,
+        -0.2819743752479553,
+        -0.08997925743460655,
+        -0.013828547671437263
+      ],
+      "effective_retention_quantiles": [
+        0.0,
+        0.007215257966890931,
+        0.25939521193504333,
+        0.696830153465271,
+        0.9118206977844235,
+        0.9862666130065918
+      ],
+      "exact_decay_age_feature_quantiles": [
+        0.0,
+        0.02307937853038311,
+        0.3855091333389282,
+        0.824043333530426,
+        1.2905614256858813,
+        6.709785461425781
+      ],
+      "zero_effective_retention_noninitial": 848,
+      "direct_gates_where_effective_underflowed": [
+        0.012031568214297295,
+        0.2211867980659008,
+        0.33881330490112305,
+        0.45454517006874084,
+        0.627729257941246,
+        0.818355917930603
+      ],
+      "world_held_without_current_position": 325
+    }
+  },
+  "artifact_sha256": "90771f506bf85a9ee78571b84bbb4b3d5b90d1d75323beb7eded0a2f7c9cce83",
+  "checkpoint_sha256": "8221a4b679451995b708b1399f530ce6251847736be1ace49cce9d7fbfa8a2ee",
+  "archived_goals_sha256": "07e1c08e29a3e0c712d2e47aa9cfd18a70721d196e57bf3087a0d9b43b18dfdf",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "source_sha256": "3a99d349a57c0fe62d346242702dd62db05e19227f95ade7212722b423b60ad1",
+  "archived_world_max_difference": 0.0,
+  "archived_retention_max_difference": 0.0,
+  "qualification": "Direct sigmoid/logsigmoid before gap exponentiation, no inversion of underflowed effective retention. Exact forward decay-age feature is not the lifetime of all recurrent information: absent current position can preserve old world coordinates with blend1, and old memory also reaches new forecasts through attention. Initial-row gate is unused; direct per-root summaries exclude it. TRAIN in-sample, original augmented traversal.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

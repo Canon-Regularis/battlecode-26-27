@@ -1,0 +1,11 @@
+{
+  "failure": "First L01 TRAIN direct-memory traversal called max() on an empty all-padding tail row from the original chunks iterator. No optimizer/model modification, no new fit failure. No TRAIN output was written.",
+  "fix": "Only calculate saved-array maximum discrepancies for valid.any(). Continue the same forward/masked-state path for padding.",
+  "preserved_original_source": "tools\\action_predictor\\learned_policy\\completion_sources\\retention_memory_3a99d349a57c0fe62d346242702dd62db05e19227f95ade7212722b423b60ad1.py",
+  "preserved_original_source_sha256": "3a99d349a57c0fe62d346242702dd62db05e19227f95ade7212722b423b60ad1",
+  "current_source_sha256": "b8135901e709d2e3b8365331ca1698de750363d5fd6eea8b682b38233c50d271",
+  "prior_DEV_receipt": "L01-validation-direct-memory.json binds original producer bytes preserved above. Its direct gate/age/world outputs remain valid and are not rewritten.",
+  "training": "L02 continues unaffected under frozen fit source. Corrected TRAIN diagnostic rerun authorized as new code changed.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
