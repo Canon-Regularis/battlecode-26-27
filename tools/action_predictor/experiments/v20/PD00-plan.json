@@ -1,0 +1,33 @@
+{
+  "id": "PD00-original-P05-TRAIN-trajectory",
+  "bindings": {
+    ".cambc\\action-predictor\\v8\\priority-context\\ec2ec627d3c5e621\\train.npy": "8e27fe1e499555823ed141db1c968dad342a0e4a15819589b6c94bde6584da02",
+    ".cambc\\action-predictor\\v8\\priority-context\\ec2ec627d3c5e621\\extra-normalization.npz": "1007f9e7dfad65fc8cc008fee06e37f6859b1a3c548938871784a72bb49dd7ac",
+    ".cambc\\action-predictor\\v8\\priority-train.npz": "7847b7c9252c3443f517c30a082be05ffe8b244b586eead55b262bd385a6de2b",
+    ".cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+    ".cambc\\action-predictor\\v9\\frequency\\natural-mask.npy": "09217d8fc3d5673d980c8b8a4434861aa26dddb37e506bbfa22cbaafc0e525bd",
+    ".cambc\\action-predictor\\v9\\runs\\G00\\train-predictions.npz": "00c975b5165e2d0f36ad3925e272edce1f23bc984e234a1cc5ad7929cfc62b5e",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    "tools\\action_predictor\\experiments\\v8\\P05.json": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+    "tools\\action_predictor\\priority_diagnosis\\trajectory.py": "c893cc790ef9184c44ac6d9119fd521c00a5fc1c972955ecb903947b7ab074ba",
+    "tools\\action_predictor\\priority_diagnosis\\__init__.py": "8c37ff4b1127d97ed99f37ef49875c40222629d41734b28ad77fc9d6a438d5ef",
+    "tools\\action_predictor\\priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools\\action_predictor\\priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools\\action_predictor\\priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-1.pt": "94310ac1554df4a6f8494a6e2180961ec56ea5a9a6e5600a8835acc2f9093ca5",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-2.pt": "807c9b5c54d52e0262b5533b40e9f6d965e0e73d8b8d8d15eb1db419ff818494",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-3.pt": "8af52976ac9a2a3a6ecc4151d14a7cf2d04f8d5f74255e161a58c10de36b2fea",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-4.pt": "543b481323bbd463d58902f4fe3b49df16d8031adb1cc1c25efdf6bc8a2091e9",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-5.pt": "379eec611e39339d0bf6ed040c2459da144dbc8b7d53fa978c807ddb5e4d5412",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-6.pt": "87087fe083b2335b2932d741f3ce6e8b99488b38099a90517b508a1aaaed2790",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-7.pt": "89e20203c85d2ecabf7e25d6011a917f954843ac0d1cd1666aed3e8112bc1df0",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\epoch-8.pt": "7e568c5a45087fc584044012ed121c979e6b251bbdf65d86a15a9f4f666b194e"
+  },
+  "purpose": "Determine whether original full-data fitting continues after DEV selection. Same natural/augmented TRAIN rows and normalized integer likelihood at every checkpoint.",
+  "operations": "Read-only frozen-model inference on all TRAIN priority rows. No fitting, no DEV payload read, no replacement checkpoint or treatment selection.",
+  "metrics": "Exact integer, NLL, MAE, target probability; natural and augmented denominators plus fixed natural-frequency strata 1-9 /10-99 /100+ and anchor availability. Whole-group descriptive train aggregates, not out-of-sample estimates.",
+  "claims": "TRAIN is in-sample for encoder/head. Historical DEV losses copied only; online original TRAIN losses are not static checkpoint losses. No strategy/intent inference.",
+  "original_selected_epoch": 2,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

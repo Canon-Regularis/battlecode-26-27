@@ -200,3 +200,5 @@ notrewritten,nofitrerun. Futuredependentcallsnowgatedbyexit_code. Earlierunit
 fixtureavailabilityerrorandfailedbyte-reconstructionpreserved.2testspass.
 ActualP05canmemorizesmallset;R02singlelogistic3/128wasnotitscapacitytest.
 No fullpolicyreplacement/promotion/robustnessclaim. FreshSolxhighreviewnext.
+
+PD00 read-only original P05 trajectory: all eight frozen epochs scored on identical TRAIN priority rows. Selected epoch2 exactly reproduces retained G00/P05 integer modes. Natural TRAIN exact rises 2416/9815 to 4112/9815 by epoch8, NLL 3.007926 to 2.157002; 2228 rescues/532 regressions, positive net in all94 TRAIN groups. Historical full DEV joint NLL worsens .730903 to .748819. No checkpoint replacement, new fit or DEV payload read. Frequent values also fit poorly:100+ natural-frequency stratum1367/4372 to1733/4372. This demonstrates continued in-sample fitting with worsening historical DEV loss, not observation sufficiency or a specific cause of transfer failure. PC00 review still running; PD00 is separate later evidence outside its declared scope. Both reservations sealed.
