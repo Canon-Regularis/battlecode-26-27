@@ -44,3 +44,13 @@ unchanged. L01 is authorized NEXT under existing two-fit protocol.
 USER REDIRECTION: MODEL TRAINING ONLY. Bot/runtime/native/SDK/fuel/export work
 paused; completed local prototype artifacts preserved. Continue L01 and model
 diagnostics/review only. Do not launch L01native/actor/portable execution audits.
+
+MODEL-ONLY L01 COMPLETE: selected3/9,12079strict vsL0012076; NLL.655216
+vs.654770. No established persistence gain or promotion. Model-only component,
+dominance, natural-cadence, sensitivity and localTRAINgradient diagnostics done.
+Both initial allocated fits complete; NO third fit. Fresh Solxhigh review NEXT.
+Expected softage median.386roots, not a hard cutoff or trueobjective lifetime.
+Local initial weightedaux retention-bias gradient~3160xcommand absolutegradient;
+this is partial frozen-past evidence, not fullBPTT or proof of training cause.
+Bot/runtime/native/SDK/fuel/export work remains PAUSED under user direction;
+completed local untracked prototypes remain preserved and excluded from staging.

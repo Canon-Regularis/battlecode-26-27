@@ -1,0 +1,10 @@
+{
+  "reason": "A model-only inventory producer was extended after the first L01 inventory was saved. The immutable guard correctly refused replacement; no checkpoint, prediction or primary fit report changed.",
+  "action": "Preserved both byte-exact producer snapshots. Restored the first L01 producer at model_completion.py; later L00-model-completion is a historical inventory whose producer is retained by its hash. Current complete inventories use separately named model_completion_v2 and -model-completion-v2.json. Original receipts are not overwritten.",
+  "producer_snapshots": {
+    "0efbf0cd67b5e9bdc61579038925b02987b3b6e4fbd1c61b4ae531d7e952d573": "tools/action_predictor/learned_policy/completion_sources/model_completion_0efbf0cd67b5e9bdc61579038925b02987b3b6e4fbd1c61b4ae531d7e952d573.py",
+    "4c9cfebe40efeb2acb804760b8f9541ce1e0429fb9a606f114ee6f5217f3d9da": "tools/action_predictor/learned_policy/completion_sources/model_completion_4c9cfebe40efeb2acb804760b8f9541ce1e0429fb9a606f114ee6f5217f3d9da.py"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}
