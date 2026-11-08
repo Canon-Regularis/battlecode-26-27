@@ -1,0 +1,12 @@
+{
+  "original_plan_sha256": "4f59e1b6a1252f232c48f4f1c79e706c2f4e8a68aa6ca0b47616f2c66d885482",
+  "source_sha256": "e497ed0e32cd57999b9b89207a0afd2a826f11c210036179729b148b1cfd4717",
+  "raw_events_sha256": "11ecdcace868a94ea4d768b58d50b6377323f991b220cfdec1783c7b9fb23d5b",
+  "raw_events": "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v23\\order-availability-events.jsonl",
+  "summary_written": false,
+  "new_features_consumed": false,
+  "reason": "Probe omitted little-endian=true for DataView.getInt32. First nonzero negative own-priority control failed before availability result. Initial zero values passed; signed control correctly stopped.",
+  "correction": "New order_availability_v2.cjs changes only getInt32(output,true); original source/plan/raw failure preserved. No existing model uses this getter path.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

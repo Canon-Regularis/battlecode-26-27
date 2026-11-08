@@ -1,0 +1,36 @@
+{
+  "purpose": "Inventory omitted other-champion scheduling fields in the two previously audited eligible TRAIN games. Not a new availability certification or predictive experiment.",
+  "selected_jobs": [
+    {
+      "raw": "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c",
+      "engine": "2.0.0",
+      "rows": 737
+    },
+    {
+      "raw": "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c",
+      "engine": "3.0.0",
+      "rows": 735
+    }
+  ],
+  "selection": "Exactly original two-engine priority-audit games, fixed before reading their fields. No reserved records, no new sample chosen by model error.",
+  "operations": "Read source and existing personal observation JSON only; no engine/API query, replay restoration, matching, fitting, new features or command predictions.",
+  "limitations": "Current SDK or old wrapper presence alone does not prove historical engine2/3 availability. Viewer snapshot priority fields must not be consumed as personal features without direct historical personal-API/visibility verification.",
+  "bindings": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_diagnosis\\available_inputs.py": "b4d6fa675985d4c545f3352f16eae9f7a9f949948f61cc36d2b0ef1c44d8a110",
+    "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\tools\\replay_eval\\frozen_v1_5\\micro_playback.cjs": "c80271c51f8a378c3a0d5aaacac766ccd4ea4b4a45e513e3bae0058cb208541a",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_inputs.py": "6a6e16d582db93108dfa0722e3f0b1495d48c91578bca8ab2d1f05f78dce9929",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\entity_set.py": "adda3d96bf5f140b659e772c3112975c7f14443daecb7ac98c48185c28fe5b32",
+    "F:\\Code\\battlecode-26-27\\sdk\\python\\cambc\\__init__.py": "ce44e89057e364e00a554947971d587f3274b9729b7f5f677a9133fcf36b2efe",
+    "F:\\Code\\battlecode-26-27\\sdk\\cpp\\cambc.h": "20019ec6602c12b26ab306735f7b61dc780060f6f487525d1728dccfd3f127fb",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\jobs.json": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v8\\priority-two-engine-audit.json": "b01a4cbb90e931321e536fc26a311cc3aecb322ac914c466bb630ce47d3cfa28"
+  },
+  "historical_sdk": {
+    "commit": "0095e8e",
+    "path": "sdk/python/cambc/__init__.py",
+    "blob_sha256": "8301471ea713ed2bfa094488c151a15457c427ea909a4a9fe0251ce48c6557ee"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}
