@@ -1,0 +1,9 @@
+{
+  "authority": "User instruction after the interrupted R01 review",
+  "instruction": "Use gpt 6 astra high to review if you get a negative result in training, for code review use 6.1 sol xhigh",
+  "negative_training_result_review": {"model": "gpt-6-astra", "reasoning_effort": "high"},
+  "code_review": {"model": "gpt-6.1-sol", "reasoning_effort": "xhigh"},
+  "interrupted_review_task": "node:delegated-task:command%3Amcp%3Af5f199c3-d88e-464c-b423-4c127fef8ba3%3Adelegate-task%3Agradient-routing-r01-postfit-review-20261109",
+  "interrupted_review_is_approval": false,
+  "scope": "Overrides the earlier reviewer-model requirement for R01 negative-result review and future negative training results. Existing code approvals and frozen experiment design remain unchanged."
+}
