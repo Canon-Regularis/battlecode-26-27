@@ -79,3 +79,29 @@ stores worst full-batch contexts and independently diagnoses float64 conditional
 and complete-command mixture arithmetic. No primary model, decoder, reference,
 contrast, benchmark row or training/checkpoint changes. Do not claim a numeric
 cause of policy failures until this diagnosis resolves it. See v17 recovery plan.
+
+Q01 complete with explicit numerical qualification. Original2e-6 normalization
+criterion remains FAILED (real-row maxima4.7429/5.2646e-6). Worst cases are end
+commands with extremely small hypothetical-move probability; float32 conditional
+log-mass subtraction loses precision. Independent float64 checks: normalized
+conditional error<1.6e-15,0conditional mode discrepancies,0complete MAP mismatches
+in saved worst batches, observed-family NLL discrepancy<1.2e-6. All26archived
+branches preserve selected-command/conditional-argument equality. Baselines
+exactly reproduce original integer arrays. Primary forecasts were not repaired.
+Geometry-to-TRAIN-mean changes3/6 observed modes in L01/L02, complete commands
+-1/+1, and no correct-movement counts. All defined projection mean contrasts
+change12/21modes, net-1/+3; whole projection removal changes228/223fixed-state
+modes and loses30/10complete commands. Fixed/refiltered mean results nearly
+coincide. This shows weak current dependence on variable geometry in this
+projection, not lack of useful geometry in principle or all-goal-path removal.
+The original whole-projection ablation overstates evidence for useful waypoints;
+mean offsets/availability-dependent reference structure matter. See v17/Q01-REPORT.md.
+Fresh Sol6.1xhigh review next. Proposed next training question: identical-capacity
+candidate-conditioned head with dynamic predicted-goal geometry versus TRAIN-mean
+geometry control; no new fit/architecture is predetermined before review.
+
+Supplementary encoded-domain/mask inspection found all spatial py labels inside
+0..288 in both TRAIN/DEV and no DEV gold exclusions by the current nonempty
+range/unit/move mask sets;4attack rows use existing empty-set fallback. This
+rules out that particular hard-mask/window explanation for spatial DEV errors,
+not current learned mode reachability, raw-label correctness or full legality.

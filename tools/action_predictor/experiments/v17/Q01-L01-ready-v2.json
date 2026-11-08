@@ -1,0 +1,209 @@
+{
+  "execution_commit": "8afb7acab2df00070b8cccf6a15a1b7bc0a0013e",
+  "branches": {
+    "baseline": {
+      "predictions_sha256": "2e7c0b566dd3e01b9a44da9fecd605ae404b5d96f3706518cfaff70d86532f85",
+      "diagnostics_sha256": "3afe0e0c38dbdaf3a8d8871530904f7a4439871e27c7913e86be0c6abc799258"
+    },
+    "fixed/geometry_mean": {
+      "predictions_sha256": "e207975d05f88bfcd8dc439c3d86b24ad8af2756ba679a1e60f8637dc7a01064",
+      "diagnostics_sha256": "b36af65bffbb5f700f742243f6324fc0364bcd2237cea25acae84525af1756b2"
+    },
+    "fixed/uncertainty_mean": {
+      "predictions_sha256": "166de2d4c61515fb38e2ce1198e10f74e234decc9a41766f204fe4b69550bd51",
+      "diagnostics_sha256": "f6ecf9cd8f8783b707c3d04ea836fee5171db0d207bb4fe11e0279ad6046d6b7"
+    },
+    "fixed/availability_mean": {
+      "predictions_sha256": "da3bfe7e0c40bcaed4c9d0622b28cab878d86d39ee9e5dc9672d31ee0cbcb889",
+      "diagnostics_sha256": "6d798bc85cd4f581e21fb3f94e8e48f816fa89ef108a87c20555b20b1cb338a3"
+    },
+    "fixed/all_means": {
+      "predictions_sha256": "74238a7dea8a4f1504ff0f5b5f072475743498f60cc9b1d6ec2aa921ca9ae717",
+      "diagnostics_sha256": "785007ea9a4e2a221cb059e12805684e93a5a6456fd11b6e4e676c61ef68ef23"
+    },
+    "fixed/bias_off": {
+      "predictions_sha256": "170bfc7c9edee72a63a24cc62f074e7d31127537836b754fe3ba0059f207fc05",
+      "diagnostics_sha256": "418d4ccd49c8e370e305d93b3da823debd977c22698ec596c586f4c7342c7037"
+    },
+    "fixed/projection_off": {
+      "predictions_sha256": "4d6b1b28e9fcf79d9a5e94039714cff2baa3d01b53c4214b49868d219a7b9508",
+      "diagnostics_sha256": "8324d5e9704e6d6a2daa653f39c096a42aa85329e471fd75fba0f1b06e129a31"
+    },
+    "refilter/geometry_mean": {
+      "predictions_sha256": "0020410db0403c8e253d8f7aa289e23b1e368568cc0363b3e2f51513d9b10e52",
+      "diagnostics_sha256": "232a821c19bdcc4ddc3d6e2287083b3f923f00df9b10f9c54235e84c2cd8dfb7"
+    },
+    "refilter/uncertainty_mean": {
+      "predictions_sha256": "2935029d69109099afc119019ee77f4696e9ad5a47bb86f74852ef257cfaa394",
+      "diagnostics_sha256": "69c6f706252d6ff3abf48ec6e42de0cb4d6c4241afef2dd25d51033943a7118b"
+    },
+    "refilter/availability_mean": {
+      "predictions_sha256": "108db3a71c4ca2480e995f7b651262ccf0781fad322d65401e496ea8f7ef1759",
+      "diagnostics_sha256": "fa56b27ad09d81f0acbdd7b676354f15b95398249794cc8973ac45ae1e6fa85f"
+    },
+    "refilter/all_means": {
+      "predictions_sha256": "7197de39c957804d29df270b8c0dfc8dfed5465895045e65892354fcf6d61b53",
+      "diagnostics_sha256": "bd1a2a0c02ea023b00837c46bdd499ffd4aa1be06ec5e4155f083e58a0fc329e"
+    },
+    "refilter/bias_off": {
+      "predictions_sha256": "172bc6e07caa97ab69a13b05ffbfc34e94ba6c112db8df9929687407282334b6",
+      "diagnostics_sha256": "83c6666fee5a5bb0da7ac7d0695c124244f1cb9a78b6b88567fee2abd32e57aa"
+    },
+    "refilter/projection_off": {
+      "predictions_sha256": "869debbf99f9930164569d2dfb2dc70626d064ad443580a0c51526c49c24fbcc",
+      "diagnostics_sha256": "d3c13dba4a6fcaa059d1566fbd61d0326d365490d4e2dc5d329b6915897fdd80"
+    }
+  },
+  "rows": 14439,
+  "baseline_integer_arrays_exact": true,
+  "baseline_loss_max_discrepancy": {
+    "nll": 0.0,
+    "type_nll": 0.0,
+    "param_nll": 0.0
+  },
+  "maximum_probability_normalization_error": 4.74293672514392e-06,
+  "original_normalization_criterion_passed": false,
+  "numerical_checks": {
+    "baseline": {
+      "max_sum_error_all_batch_rows": 4.5180714571824154e-06,
+      "max_sum_error_valid_decisions": 4.5180714571824154e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.2590357331260074e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 6.158280267953842e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "fixed/geometry_mean": {
+      "max_sum_error_all_batch_rows": 4.59468444224953e-06,
+      "max_sum_error_valid_decisions": 4.59468444224953e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.297342276442122e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 7.247624420614329e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "fixed/uncertainty_mean": {
+      "max_sum_error_all_batch_rows": 4.538412778254397e-06,
+      "max_sum_error_valid_decisions": 4.538412778254397e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.2720113430797488e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 8.1289851472377e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "fixed/availability_mean": {
+      "max_sum_error_all_batch_rows": 4.498973088518099e-06,
+      "max_sum_error_valid_decisions": 4.498973088518099e-06,
+      "max_conditional64_sum_error": 8.881784197001252e-16,
+      "max_conditional_probability_TV": 2.2520061680481197e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 8.247095486524358e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "fixed/all_means": {
+      "max_sum_error_all_batch_rows": 4.3308553268062155e-06,
+      "max_sum_error_valid_decisions": 4.3308553268062155e-06,
+      "max_conditional64_sum_error": 9.992007221626409e-16,
+      "max_conditional_probability_TV": 2.1654487584504886e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 1.0746646861292675e-06,
+      "observed_family_rows_checked": 2472
+    },
+    "fixed/bias_off": {
+      "max_sum_error_all_batch_rows": 4.253959544064934e-06,
+      "max_sum_error_valid_decisions": 4.253959544064934e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.1269799902317395e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 1.0602600504228121e-06,
+      "observed_family_rows_checked": 2472
+    },
+    "fixed/projection_off": {
+      "max_sum_error_all_batch_rows": 4.74293672514392e-06,
+      "max_sum_error_valid_decisions": 4.74293672514392e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.3715730067135977e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 7.285013721158862e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "refilter/geometry_mean": {
+      "max_sum_error_all_batch_rows": 4.37393377528128e-06,
+      "max_sum_error_valid_decisions": 4.37393377528128e-06,
+      "max_conditional64_sum_error": 8.881784197001252e-16,
+      "max_conditional_probability_TV": 2.190993703967874e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 8.508526052608545e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "refilter/uncertainty_mean": {
+      "max_sum_error_all_batch_rows": 4.258078484031813e-06,
+      "max_sum_error_valid_decisions": 4.258078484031813e-06,
+      "max_conditional64_sum_error": 1.3322676295501878e-15,
+      "max_conditional_probability_TV": 2.1290392572386315e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 7.358847717853223e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "refilter/availability_mean": {
+      "max_sum_error_all_batch_rows": 4.498973088518099e-06,
+      "max_sum_error_valid_decisions": 4.498973088518099e-06,
+      "max_conditional64_sum_error": 8.881784197001252e-16,
+      "max_conditional_probability_TV": 2.251995249474529e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 8.247095486524358e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "refilter/all_means": {
+      "max_sum_error_all_batch_rows": 4.627573232607318e-06,
+      "max_sum_error_valid_decisions": 4.627573232607318e-06,
+      "max_conditional64_sum_error": 8.881784197001252e-16,
+      "max_conditional_probability_TV": 2.3137866193225595e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 7.075355101804348e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "refilter/bias_off": {
+      "max_sum_error_all_batch_rows": 4.08484957592492e-06,
+      "max_sum_error_valid_decisions": 4.08484957592492e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.0424283308299265e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 7.196808340381722e-07,
+      "observed_family_rows_checked": 2472
+    },
+    "refilter/projection_off": {
+      "max_sum_error_all_batch_rows": 4.208467708544106e-06,
+      "max_sum_error_valid_decisions": 4.208467708544106e-06,
+      "max_conditional64_sum_error": 1.1102230246251565e-15,
+      "max_conditional_probability_TV": 2.104980898343756e-06,
+      "conditional_mode_mismatches_valid": 0,
+      "conditional_rows_checked": 17140,
+      "max_observed_family_nll_difference": 7.232668473022841e-07,
+      "observed_family_rows_checked": 2472
+    }
+  },
+  "worst_cases_sha256": "4bb11ef1b04b577f77da2a6b3951cd27e795cab7472215e31395b61e848cef64",
+  "weights_unchanged": true,
+  "checkpoint_sha256": "8221a4b679451995b708b1399f530ce6251847736be1ace49cce9d7fbfa8a2ee",
+  "reference_receipt_sha256": "d7ec6b6f0c2c630526fd5ffd22410de4ae6becc5e85209f41db13f5c0c7e9c95",
+  "original_predictions_sha256": "2e7c0b566dd3e01b9a44da9fecd605ae404b5d96f3706518cfaff70d86532f85",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "protocol_sha256": "824f085fadb43caa0817d138e3245422c1a330d9ed90adc71a26911dce578afc",
+  "source_sha256": "0b9e957a80544bf0463e251269c5e01b6320610ae85d7fd29779d55cfed368e0",
+  "recovery_plan_sha256": "4ad3514c5d0e95c100dbac1442852467764580dfa2caddf7c6facc5dd1f8ef49",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

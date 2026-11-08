@@ -1,0 +1,22 @@
+{
+  "purpose": "Supplementary root-cause inspection of existing encoded parameter domain/masks, not achieved accuracy, algorithm-library coverage or full API legality.",
+  "observation": "All recorded spatial py labels in both eligible TRAIN and original DEV are0..288; no289/290/negative spatial buckets were observed in this inspection. All DEV recorded target coordinates have valid-map flags.",
+  "DEV_rows": {
+    "altar": 2,
+    "attack": 985,
+    "blocked": 110,
+    "cast_0": 213,
+    "cast_1": 243,
+    "move": 2362,
+    "submit": 22,
+    "teleport": 2,
+    "ward": 112
+  },
+  "current_mask_check": "Applied the current constrained parameter_logits valid/range/unit/move formulas to each recorded DEV spatial target. Zero gold targets fall outside a nonempty allowed set in every spatial family. Four attack rows have empty allowed sets and use the existing full fallback. Blocked checks use valid-map only, never successful-move mask.",
+  "qualification": "Rules out these specific encoded-window/current-mask exclusions as the cause of DEV spatial errors. Does not show all coordinates are selectable by current learned scores, validate raw extraction independently, certify entity identity, prove all Fish commands fit this window, or establish complete legality. No model/prediction changes.",
+  "provenance": "Read-only parent tool calculations on immutable cached arrays, with source formula in reliable_model.JointModel.parameter_logits and current load_base/data helpers; no replay queries or new fit. These descriptive checks are supplemental, not part of Q01 contrast selection.",
+  "model_source_sha256": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
