@@ -1,0 +1,3369 @@
+{
+  "plan_sha256": "bf0d2d6a1cd9ff722a4e1ffae70056673712cd85e6ec17b2fb5e89134b2f8c4d",
+  "totals": {
+    "fit": {
+      "extra_roots": 65000,
+      "windows32": 543,
+      "groups_with_windows32": 40,
+      "windows32_across_rounds": 543
+    },
+    "tuning": {
+      "extra_roots": 15000,
+      "windows32": 151,
+      "groups_with_windows32": 10,
+      "windows32_across_rounds": 151
+    },
+    "assessment": {
+      "extra_roots": 20000,
+      "windows32": 182,
+      "groups_with_windows32": 10,
+      "windows32_across_rounds": 182
+    }
+  },
+  "feasibility_gate_passed": false,
+  "games": [
+    {
+      "payload": "1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2",
+      "group": "84669309-87ca-410f-97f6-bfd4ec953d1b",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 34,
+        "selected_roots": 919
+      },
+      "families": {
+        "move": 440,
+        "recall": 515,
+        "end": 701,
+        "cancel": 415,
+        "attack": 118,
+        "cast_0": 27,
+        "priority": 173,
+        "ward": 25,
+        "submit": 20,
+        "shop": 34,
+        "cast_1": 43,
+        "blocked": 29,
+        "altar": 4
+      },
+      "candidate_extra_roots_before_cap": 2976,
+      "windows": {
+        "8": {
+          "windows": 231,
+          "across_rounds": 229,
+          "roots": 1848
+        },
+        "16": {
+          "windows": 107,
+          "across_rounds": 107,
+          "roots": 1712
+        },
+        "32": {
+          "windows": 15,
+          "across_rounds": 15,
+          "roots": 480
+        }
+      },
+      "max_run": 74,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2\\receipt.json": "92ff0d758caf776353b30e53f318fe8371b554198a21ed5a68cd9869f1d6ff80",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2\\index.jsonl": "33bd2bf0c117f38f3f3eb6b8cafcda2c79a03ed9664fc9233c62e35e6827c09b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2\\receipt.json": "36cdad885fa12174e7876c9a4fcb7fe1091664e49d189c5df5b3fd2c480ad2c1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2\\frames.jsonl.gz": "ca87a5211699f6224ff2d1220da0628379e015a4a9a190e8bf6147b05e0c2fb1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2\\turns.jsonl": "e6bfaa28f8f5709d7f95ce3d431beb3626f542d98798ae103508baed8a869029",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4",
+      "group": "01a1abc2-51be-7562-a189-8e625e7b889f",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 43,
+        "selected_roots": 702
+      },
+      "families": {
+        "cancel": 317,
+        "move": 312,
+        "cast_0": 33,
+        "attack": 186,
+        "priority": 85,
+        "recall": 462,
+        "end": 769,
+        "cast_1": 36,
+        "shop": 43,
+        "ward": 44,
+        "teleport": 11,
+        "submit": 7,
+        "blocked": 22
+      },
+      "candidate_extra_roots_before_cap": 2532,
+      "windows": {
+        "8": {
+          "windows": 218,
+          "across_rounds": 217,
+          "roots": 1744
+        },
+        "16": {
+          "windows": 100,
+          "across_rounds": 100,
+          "roots": 1600
+        },
+        "32": {
+          "windows": 7,
+          "across_rounds": 7,
+          "roots": 224
+        }
+      },
+      "max_run": 62,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4\\receipt.json": "9d2f8989faed190e83f9257a0d82b66d7a0d93589e603e4e4e97eb85c7a92222",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4\\index.jsonl": "035147d252813008a331b66a045ed3a5fabff70940b1bf48f95a33404a198c24",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4\\receipt.json": "d0e97b4772e097706420e2ccdc04b31c52fb82ae587ef670097fb4d355afbbfd",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4\\frames.jsonl.gz": "d894a27d9473a1aa463b88da9b60ff522fa9cc22177adad7802fc1eb6a898332",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4\\turns.jsonl": "ee07c1b486375df8741803ca9fdc1b54b86537ee087edb566deefbcfc9f97dd2",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d",
+      "group": "01a1b1d6-b860-78de-931c-e081a5dda467",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 50,
+        "selected_roots": 1056
+      },
+      "families": {
+        "cancel": 496,
+        "move": 463,
+        "recall": 578,
+        "end": 721,
+        "cast_1": 55,
+        "blocked": 70,
+        "ward": 29,
+        "attack": 128,
+        "cast_0": 28,
+        "priority": 46,
+        "shop": 50,
+        "submit": 17
+      },
+      "candidate_extra_roots_before_cap": 3618,
+      "windows": {
+        "8": {
+          "windows": 221,
+          "across_rounds": 219,
+          "roots": 1768
+        },
+        "16": {
+          "windows": 100,
+          "across_rounds": 100,
+          "roots": 1600
+        },
+        "32": {
+          "windows": 10,
+          "across_rounds": 10,
+          "roots": 320
+        }
+      },
+      "max_run": 59,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d\\receipt.json": "2a74d1cd92b692c0a6cd2b80f4f9949603db0c7a5fe74ffbdceec31212227305",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d\\index.jsonl": "85436f149fa6f674a4320945b31321a5866645a60eb49fe603c3e05f431ae990",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d\\receipt.json": "aa4bae57e9327342afb5fc24b5750d3bce94c47d3770fda31494874d78dcff1a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d\\frames.jsonl.gz": "31add8e7ff341875b5b3ed1711a2615cb79bfabbd90c007f9130da060979114a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d\\turns.jsonl": "d43e8b6b3f2d3e192e4d1d785ae265668b45edb1c4e7a5cf347392788cb95c13",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805",
+      "group": "01a1a8ef-b076-7d18-b6e2-48b4b00cb8bf",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 58,
+        "selected_roots": 1024
+      },
+      "families": {
+        "move": 321,
+        "recall": 552,
+        "end": 774,
+        "cancel": 358,
+        "cast_0": 54,
+        "attack": 251,
+        "priority": 118,
+        "blocked": 37,
+        "ward": 55,
+        "shop": 58,
+        "cast_1": 53,
+        "submit": 18
+      },
+      "candidate_extra_roots_before_cap": 3294,
+      "windows": {
+        "8": {
+          "windows": 227,
+          "across_rounds": 221,
+          "roots": 1816
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 10,
+          "across_rounds": 10,
+          "roots": 320
+        }
+      },
+      "max_run": 50,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805\\receipt.json": "ee406d77c748dfe95199dbeeadae3360a6939b0b5a3bf578fdb594c80c9f8973",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805\\index.jsonl": "322ccb2248c348b5e285afec8944aa5e0775adaf702fde4bd43bbb9d8a693510",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805\\receipt.json": "2181b52f504c47924213cf2491c27a84f1128bb9e7c0cfa42f51973d01f36fc6",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805\\frames.jsonl.gz": "fd0127b534c58f997a046814160d793b7eae46429e481a2972850d434193d439",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805\\turns.jsonl": "153331181334fab9d07771ccf54c69b414e3cc03daf27b9c8cf59c2b154c4a82",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996",
+      "group": "01a1a993-de17-7c19-b4b0-2d63dee1b297",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 34,
+        "selected_roots": 907
+      },
+      "families": {
+        "move": 379,
+        "priority": 69,
+        "recall": 529,
+        "end": 726,
+        "cancel": 417,
+        "attack": 197,
+        "blocked": 60,
+        "submit": 19,
+        "altar": 9,
+        "cast_0": 29,
+        "shop": 34,
+        "cast_1": 37,
+        "ward": 27
+      },
+      "candidate_extra_roots_before_cap": 3059,
+      "windows": {
+        "8": {
+          "windows": 224,
+          "across_rounds": 221,
+          "roots": 1792
+        },
+        "16": {
+          "windows": 101,
+          "across_rounds": 101,
+          "roots": 1616
+        },
+        "32": {
+          "windows": 7,
+          "across_rounds": 7,
+          "roots": 224
+        }
+      },
+      "max_run": 46,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996\\receipt.json": "1b67fce5bef7582d98ea2111cceb3ca940b59698563f6371c9e9d21ea404407c",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996\\index.jsonl": "a01b3ffa4a9c25d37a7519f803451cd2e46afd2ba696b9f70fd62ac236b3c63a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996\\receipt.json": "770b77d6e71d349eff8f0a9d6f37edecd5cc6158859508ad7feee0849903d3b5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996\\frames.jsonl.gz": "dcd06bf152c9a30c88ddbd4d23068cc20517f537b0a77a32ca7b47b17fcae833",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996\\turns.jsonl": "fc96eb0bc8ae9a67b665373c5237cfd0ed36204752a3aab31398798e90da7e23",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e",
+      "group": "01a1ad30-867c-708c-8a14-36e083bb67d6",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 48,
+        "selected_roots": 1016
+      },
+      "families": {
+        "priority": 71,
+        "recall": 557,
+        "end": 774,
+        "cancel": 419,
+        "move": 328,
+        "attack": 279,
+        "cast_0": 54,
+        "ward": 26,
+        "cast_1": 50,
+        "shop": 48,
+        "altar": 3,
+        "submit": 17,
+        "blocked": 15
+      },
+      "candidate_extra_roots_before_cap": 3223,
+      "windows": {
+        "8": {
+          "windows": 239,
+          "across_rounds": 236,
+          "roots": 1912
+        },
+        "16": {
+          "windows": 110,
+          "across_rounds": 110,
+          "roots": 1760
+        },
+        "32": {
+          "windows": 25,
+          "across_rounds": 25,
+          "roots": 800
+        }
+      },
+      "max_run": 66,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e\\receipt.json": "d6d3b8e4c3c19b6b2963d48b51038845e5a327b38cc36fa49ae2572ec1d32ee1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e\\index.jsonl": "987b0e3cd85b006c5d2215224c15f89c1eb0b4ee0f288afe4986844d703a03b8",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e\\receipt.json": "c1224f1f4a3c7bccdfe267c4e7a6dd51a65678c458d695783368ad8ab7c31250",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e\\frames.jsonl.gz": "429c9d2b9446908ad13cb282ba6dad232892cb529c4b50db88029ee9beb52f98",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e\\turns.jsonl": "0599ca5da87d3d6196c9df180ba3eec0980ac7ff3f743f11a525325a324535f7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f",
+      "group": "01a1b1c4-6b09-71ae-8bc3-08531a76faf5",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 18,
+        "selected_roots": 1014
+      },
+      "families": {
+        "cancel": 528,
+        "move": 526,
+        "recall": 586,
+        "end": 754,
+        "ward": 21,
+        "blocked": 34,
+        "submit": 14,
+        "priority": 28,
+        "shop": 18,
+        "attack": 78,
+        "cast_1": 34,
+        "cast_0": 14,
+        "altar": 4
+      },
+      "candidate_extra_roots_before_cap": 3392,
+      "windows": {
+        "8": {
+          "windows": 232,
+          "across_rounds": 232,
+          "roots": 1856
+        },
+        "16": {
+          "windows": 104,
+          "across_rounds": 104,
+          "roots": 1664
+        },
+        "32": {
+          "windows": 15,
+          "across_rounds": 15,
+          "roots": 480
+        }
+      },
+      "max_run": 52,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f\\receipt.json": "0247e5ecefc8dd3a50bf3c6cab182c619dd98f8ca6327ebf11701817fe92a212",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f\\index.jsonl": "90c5c0309aa16f2c9174b62171b8a0733747fe15c9d9b3c78387ad1f40c937dd",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f\\receipt.json": "6bb2168e9c2a638b7593ff920ee06542c914e90eb595df52b183d6e80d3c541e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f\\frames.jsonl.gz": "adc2ef7a8fa6966d22bfba6b531b04e3010cdc851558d4ea774d33b394092015",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f\\turns.jsonl": "43c104f9f752735823988e1f0852041b73a1084e262d538ff54dc5bd22b1a41e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533",
+      "group": "01a1a637-448c-7beb-986a-4cc264d1deb7",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 20,
+        "selected_roots": 748
+      },
+      "families": {
+        "move": 474,
+        "recall": 505,
+        "end": 707,
+        "cancel": 474,
+        "priority": 55,
+        "submit": 18,
+        "shop": 20,
+        "altar": 4,
+        "attack": 42,
+        "ward": 28,
+        "cast_0": 9,
+        "cast_1": 18,
+        "blocked": 19
+      },
+      "candidate_extra_roots_before_cap": 2571,
+      "windows": {
+        "8": {
+          "windows": 225,
+          "across_rounds": 224,
+          "roots": 1800
+        },
+        "16": {
+          "windows": 104,
+          "across_rounds": 104,
+          "roots": 1664
+        },
+        "32": {
+          "windows": 12,
+          "across_rounds": 12,
+          "roots": 384
+        }
+      },
+      "max_run": 49,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533\\receipt.json": "7625251729dbf12b4678b8aec31656da787b2ae29f74579bb3ff56463f42fff3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533\\index.jsonl": "27373c5aef28de1ee4c75bb704c282c5e0726dd659ec1e4530da74b94e997b2e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533\\receipt.json": "e0fc4e9fba4b36ada2ba0e96889ed4f053b300a2166241e1f2f53ebbe237c649",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533\\frames.jsonl.gz": "8341b9db88e7d0cfb04be535b380083f9953348c84c46afcbe1456462c00990e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533\\turns.jsonl": "7b0bd19b12e199908019e5b2fdcc22f2d57fbe4185ee6f6996d1f752c4135414",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47",
+      "group": "01a1a837-f284-7053-b1e7-431b4a556400",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 40,
+        "selected_roots": 1010
+      },
+      "families": {
+        "cancel": 403,
+        "attack": 194,
+        "recall": 556,
+        "end": 779,
+        "move": 386,
+        "cast_0": 28,
+        "cast_1": 52,
+        "shop": 40,
+        "altar": 7,
+        "submit": 18,
+        "blocked": 34,
+        "priority": 118,
+        "ward": 20
+      },
+      "candidate_extra_roots_before_cap": 3599,
+      "windows": {
+        "8": {
+          "windows": 223,
+          "across_rounds": 221,
+          "roots": 1784
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 11,
+          "across_rounds": 11,
+          "roots": 352
+        }
+      },
+      "max_run": 57,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47\\receipt.json": "ea7d043d45ad0aa14c2112a0a3dbf1ee040b67690771d1174313da20a45b1a4d",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47\\index.jsonl": "b65b9a47813e5de6ed94c5a22fc38f0e09eab40225eaedf537379b78be38e8b7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47\\receipt.json": "a62ad88a9b869ebd8fe770b2ae3649dd940903500e4512872d770957ef9c3656",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47\\frames.jsonl.gz": "0774071f0e077cf1563b65aaa4a19afa305a480f5915bf12fb3ad5f7182ef5ff",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47\\turns.jsonl": "6d48a5a789fbc53a0522086837dc8a356642bfc0b232ff1f28849cd0f4e619d3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17",
+      "group": "01a1a652-b6de-771c-8757-689a8e7ad1db",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 61,
+        "selected_roots": 897
+      },
+      "families": {
+        "attack": 173,
+        "recall": 525,
+        "end": 723,
+        "cancel": 360,
+        "cast_1": 43,
+        "blocked": 49,
+        "shop": 61,
+        "move": 362,
+        "ward": 39,
+        "cast_0": 35,
+        "priority": 141,
+        "submit": 11
+      },
+      "candidate_extra_roots_before_cap": 3185,
+      "windows": {
+        "8": {
+          "windows": 223,
+          "across_rounds": 217,
+          "roots": 1784
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 12,
+          "across_rounds": 12,
+          "roots": 384
+        }
+      },
+      "max_run": 46,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17\\receipt.json": "3c83fca824e44898ab1494d58149a41483f6331fe75f4e05b2520e5e0ac4d0a1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17\\index.jsonl": "5b8e31a43303335a42665f6ed45cca0b494a738b1faa44b5b048f473e98a1deb",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17\\receipt.json": "d6a08c01880f7896f3961e8358a7377a07f366b6c4f2e54d34313d8e62422007",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17\\frames.jsonl.gz": "43110797753d519daf40317f26b12b772940b23605145af1df94e26027469250",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17\\turns.jsonl": "b154002134cfad19c65114ba11f6c00ee2023c54edf0d7fd5998d17732881f32",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626",
+      "group": "01a1a8e5-e3f9-786b-947f-6c399da9488b",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 40,
+        "selected_roots": 1029
+      },
+      "families": {
+        "recall": 573,
+        "end": 754,
+        "cancel": 401,
+        "move": 356,
+        "priority": 73,
+        "ward": 33,
+        "attack": 272,
+        "cast_1": 54,
+        "cast_0": 49,
+        "shop": 40,
+        "altar": 7,
+        "submit": 14,
+        "blocked": 28
+      },
+      "candidate_extra_roots_before_cap": 3217,
+      "windows": {
+        "8": {
+          "windows": 234,
+          "across_rounds": 232,
+          "roots": 1872
+        },
+        "16": {
+          "windows": 101,
+          "across_rounds": 101,
+          "roots": 1616
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 53,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626\\receipt.json": "4b743e64c41ea4da9980688b9721601cf65391ddfdde82e3f37e40f19ee92c93",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626\\index.jsonl": "9e2bb9a7e6bbd54318f9a03988d815558db4b8bbf8bb6d11e3550c066a37ea82",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626\\receipt.json": "1197a282f1ab8119c45d80d3a37747218b19c8eba35b663c85eecf497b1ce807",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626\\frames.jsonl.gz": "2a63f59bc79ae89266d24233b9653b1db6515bdcd0dd102cf73fd91f1de762c8",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626\\turns.jsonl": "e4870b6641d165037e04d8d29531a3d4047d8ea65d6145baa2e7561779b5a73c",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae",
+      "group": "01a1a54c-7042-7293-a690-8480823dae4c",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "selected_roots": 719,
+        "unavailable_shop_arguments": 49,
+        "extra_roots": 1625
+      },
+      "families": {
+        "cast_1": 43,
+        "move": 308,
+        "priority": 58,
+        "ward": 48,
+        "recall": 486,
+        "end": 764,
+        "attack": 201,
+        "cancel": 327,
+        "cast_0": 38,
+        "blocked": 15,
+        "shop": 49,
+        "teleport": 3,
+        "submit": 4
+      },
+      "candidate_extra_roots_before_cap": 2431,
+      "windows": {
+        "8": {
+          "windows": 221,
+          "across_rounds": 220,
+          "roots": 1768
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 47,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae\\receipt.json": "aafa7f51809ff990beb82f39552c9ef57b38c9088aae13079ecc4c6065a8172c",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae\\index.jsonl": "ba571ae32197894088b13c4c609cba7466f5b381e1a4b0778b1e953a343c667f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae\\receipt.json": "9b04d327b29e17b99339be20a60b504def0c9e43d4e708748a2e80d082a89073",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae\\frames.jsonl.gz": "b0f14ea67dc29d3ff950ea31dc99f2be68c0d806089e91f45eedf5425fc1abdc",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae\\turns.jsonl": "82d419bd930671a8fe63151207e59810107076c8fdfdfcd44894af8085f799e6",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185",
+      "group": "01a1a8b8-23c4-75fb-8dcd-f7e3a27947d4",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 26,
+        "selected_roots": 1020
+      },
+      "families": {
+        "recall": 555,
+        "end": 718,
+        "cancel": 455,
+        "move": 417,
+        "submit": 20,
+        "priority": 44,
+        "shop": 26,
+        "ward": 52,
+        "cast_1": 52,
+        "attack": 187,
+        "cast_0": 35,
+        "blocked": 84
+      },
+      "candidate_extra_roots_before_cap": 3288,
+      "windows": {
+        "8": {
+          "windows": 235,
+          "across_rounds": 232,
+          "roots": 1880
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 19,
+          "across_rounds": 19,
+          "roots": 608
+        }
+      },
+      "max_run": 73,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185\\receipt.json": "a9373c168d3d2894983f3f389205ebec1134ec40e8737965ad0892f1299f2b81",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185\\index.jsonl": "c37cb72d0f05ba5c1c30d463f29a9cf0f95c874315a8dff030d6f1eb33ebdf71",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185\\receipt.json": "0766e13f8f23f19f0447b772a254cd20c9f68c57827c1c8c1b09f3cb711c04d4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185\\frames.jsonl.gz": "cc0403a0f1c25d536f5abb44050fc07bdb4309a47e2fa65f74a1d1a402c70362",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185\\turns.jsonl": "36150fe6e9436022d5176d55bc10513e700d9b4df617f9f2e215ffdac45d717a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc",
+      "group": "01a1b10d-5122-7b91-a640-e909b99d9bd7",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 29,
+        "selected_roots": 745
+      },
+      "families": {
+        "cancel": 326,
+        "attack": 89,
+        "recall": 436,
+        "end": 858,
+        "move": 358,
+        "priority": 134,
+        "cast_0": 20,
+        "ward": 37,
+        "cast_1": 35,
+        "shop": 29,
+        "altar": 9,
+        "blocked": 33,
+        "submit": 6
+      },
+      "candidate_extra_roots_before_cap": 2493,
+      "windows": {
+        "8": {
+          "windows": 229,
+          "across_rounds": 227,
+          "roots": 1832
+        },
+        "16": {
+          "windows": 102,
+          "across_rounds": 102,
+          "roots": 1632
+        },
+        "32": {
+          "windows": 19,
+          "across_rounds": 19,
+          "roots": 608
+        }
+      },
+      "max_run": 69,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc\\receipt.json": "c1f5327be2826c0075b1d636f0fe3cb4413eeaf82c9d604cd09052be05940f8f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc\\index.jsonl": "e78ab45951d88393f5d18a6d0bd2ae88008d37a5aec5bb2b05edf89bde3e3917",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc\\receipt.json": "83e503ed96d93f95ed746922c4bc10cc2095358240bc1a9d81848bbc67925817",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc\\frames.jsonl.gz": "f9578a0e80a31856a3c922922372686319966ca27c9797ec59e801d942a6385e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc\\turns.jsonl": "d2bf64fc171a130d76b60ee50570aba686300d5897d52ef09a89c0e12b0c84c9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4",
+      "group": "01a1b131-edd6-796c-bd83-4915102172a9",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 61,
+        "selected_roots": 761
+      },
+      "families": {
+        "recall": 517,
+        "end": 717,
+        "cancel": 327,
+        "attack": 215,
+        "cast_1": 43,
+        "move": 314,
+        "blocked": 17,
+        "ward": 34,
+        "cast_0": 44,
+        "shop": 61,
+        "priority": 70,
+        "teleport": 13,
+        "submit": 14
+      },
+      "candidate_extra_roots_before_cap": 2503,
+      "windows": {
+        "8": {
+          "windows": 225,
+          "across_rounds": 223,
+          "roots": 1800
+        },
+        "16": {
+          "windows": 107,
+          "across_rounds": 107,
+          "roots": 1712
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 59,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4\\receipt.json": "ea32e3400ead5b0f9e1d140690f4bfe7473ce90b413bf9bb9d7cc6a2160e48d4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4\\index.jsonl": "31e814e1294cc569f4b522553cf88cb52b6b0747e42af7c3827e7610aea7f787",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4\\receipt.json": "0dfaeba564705c3dc13f028c979242ef8d864395d645aa9410a3bbe5b19b4f4f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4\\frames.jsonl.gz": "cc9fbf76c3473552f8a7938486e054bf4c803638fd6e75dfe26d044be7a3954e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4\\turns.jsonl": "a3f0ba74e90a158c27d5b8d0259c568634805d42d9249df1e70e32346ccb323d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652",
+      "group": "20e8d21c-08a9-41fa-940a-32d1fa6f856d",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 31,
+        "selected_roots": 989
+      },
+      "families": {
+        "cancel": 469,
+        "move": 456,
+        "recall": 577,
+        "end": 733,
+        "attack": 147,
+        "ward": 40,
+        "submit": 15,
+        "priority": 38,
+        "shop": 31,
+        "cast_1": 50,
+        "blocked": 29,
+        "cast_0": 29
+      },
+      "candidate_extra_roots_before_cap": 3331,
+      "windows": {
+        "8": {
+          "windows": 228,
+          "across_rounds": 228,
+          "roots": 1824
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 14,
+          "across_rounds": 14,
+          "roots": 448
+        }
+      },
+      "max_run": 50,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652\\receipt.json": "08d60cbaf7e34a80db8eaab8d606b09f2ba89903dfdcfd0036a2df6a1227a86d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652\\index.jsonl": "4522444db9a0c093ea9cf19822a78bc219a37af3fbecb1e5215051aa342c6f45",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652\\receipt.json": "7d20e6ebe44d49804273e2433b7fcd0b2105169cd6f29300a913cdb38765739f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652\\frames.jsonl.gz": "c10f04f9a3a454eca56accf78afa46b7553b88495ea0344880c4f00b7d8f620e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652\\turns.jsonl": "88e20fd521f2c437fdcc8a7dc7bd2a4e67752d78e7b1c33a706024c5532c3851",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8",
+      "group": "01a1adf9-f11d-79f9-b42c-c810a7f93e9c",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 35,
+        "selected_roots": 868
+      },
+      "families": {
+        "move": 398,
+        "priority": 110,
+        "end": 709,
+        "recall": 502,
+        "cancel": 380,
+        "cast_1": 49,
+        "blocked": 66,
+        "ward": 31,
+        "submit": 18,
+        "shop": 35,
+        "altar": 2,
+        "attack": 161,
+        "cast_0": 32
+      },
+      "candidate_extra_roots_before_cap": 2750,
+      "windows": {
+        "8": {
+          "windows": 234,
+          "across_rounds": 231,
+          "roots": 1872
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 19,
+          "across_rounds": 19,
+          "roots": 608
+        }
+      },
+      "max_run": 81,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8\\receipt.json": "7c2dbf1c6abc51d6d57652e55351108a7960d278cb1f66e188a6bde7e609c8c8",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8\\index.jsonl": "7a8b179a6a1348353f8c9af44875dff1e82760d089c7ab7489ad6f27da5f0ec4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8\\receipt.json": "9a6276eaa19c5689e0fa104670ea76a8f099763ca801ec3358f09ab980eedc47",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8\\frames.jsonl.gz": "9bb1dd5daa210336581db81d857eb7eec6a9e53f5e13fb5387e542b582488bd9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8\\turns.jsonl": "dc0aaf00365b327896f0f384940fa546df1f0b8a57f9f72fd189dbc642598f8e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef",
+      "group": "01a1a5c0-42d2-7fd0-821b-847aeab23d4b",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 43,
+        "selected_roots": 1048
+      },
+      "families": {
+        "cancel": 471,
+        "move": 349,
+        "recall": 575,
+        "end": 724,
+        "attack": 290,
+        "cast_0": 49,
+        "cast_1": 65,
+        "ward": 19,
+        "submit": 23,
+        "priority": 53,
+        "shop": 43,
+        "blocked": 12
+      },
+      "candidate_extra_roots_before_cap": 3176,
+      "windows": {
+        "8": {
+          "windows": 234,
+          "across_rounds": 232,
+          "roots": 1872
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 16,
+          "across_rounds": 16,
+          "roots": 512
+        }
+      },
+      "max_run": 57,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef\\receipt.json": "3fbc83f4425086306699051379fe7f1020fbf1387b97377efe7698a1cdd56897",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef\\index.jsonl": "248f0d9f05c790bc2e1cf85eeb11a47670fc0e92f581d7870dd85d94373489d8",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef\\receipt.json": "2b958c5980c5d320a1fb08255fe040790b58b96554905680f68c125028a423a7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef\\frames.jsonl.gz": "06701e595b13baf19cf0a9895e2aa8f24dac107ac8c16cda9d1002f18dc2a540",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef\\turns.jsonl": "6bebdc0e6b25c573ba09411467c60260a5239ed06b325dba37660f02cb3be725",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183",
+      "group": "01a1b11f-9f01-7a34-93ab-4763488c5c67",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 39,
+        "selected_roots": 1036
+      },
+      "families": {
+        "attack": 182,
+        "recall": 567,
+        "end": 719,
+        "cancel": 439,
+        "move": 415,
+        "priority": 77,
+        "blocked": 92,
+        "cast_0": 32,
+        "cast_1": 47,
+        "shop": 39,
+        "ward": 31,
+        "submit": 15,
+        "altar": 6
+      },
+      "candidate_extra_roots_before_cap": 3436,
+      "windows": {
+        "8": {
+          "windows": 234,
+          "across_rounds": 232,
+          "roots": 1872
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 88,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183\\receipt.json": "89b10fc887fa14e0dd4bead140345bf1a205a6d8ac73cac77007fc568eb7f334",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183\\index.jsonl": "d82f72c96ca13d78af92f269cf296e18a39fabc86d2ce3e1d5914b49cc78a792",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183\\receipt.json": "d6f5526ba72ed75172f89a4cc3993b4806b698ca025bf322a152f759ec45eaf4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183\\frames.jsonl.gz": "b7423c73b34b10b0318f11b23f938cd035353d0abf7f87697b14fcc764dcfe81",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183\\turns.jsonl": "5a739310b6fe4fcb6c597448a858784c342337c71863bee58ea9b297136fb9f9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91",
+      "group": "01a1a689-c42b-730d-9afe-a0b2ff00ab37",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 43,
+        "selected_roots": 1027
+      },
+      "families": {
+        "end": 724,
+        "move": 478,
+        "priority": 16,
+        "recall": 604,
+        "cancel": 502,
+        "shop": 43,
+        "cast_1": 28,
+        "cast_0": 21,
+        "attack": 162,
+        "ward": 22,
+        "submit": 17,
+        "blocked": 35
+      },
+      "candidate_extra_roots_before_cap": 3561,
+      "windows": {
+        "8": {
+          "windows": 220,
+          "across_rounds": 220,
+          "roots": 1760
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 12,
+          "across_rounds": 12,
+          "roots": 384
+        }
+      },
+      "max_run": 53,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91\\receipt.json": "9400cfdcf4814b04e809dd313f1158a98c9d18bc00619b6a25b876d3d26967bf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91\\index.jsonl": "f9984b0664465ab92bc2b98935e614ab15243da87bb4949aafc71c99bdd17b89",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91\\receipt.json": "6b4f4746c15c7e51e7aa94aa7e782307f5dd2dbf0a0f5a157906f29f6bf775dd",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91\\frames.jsonl.gz": "ee1dad6fd43b5d870f03c746f565c424e28f35b280dfaf04a34defd279b74c43",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91\\turns.jsonl": "f8c2c43921c37ebd53a4542c7f9b96f56ba085acdb88b36f1d62b587ff5d2133",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc",
+      "group": "01a1a78a-001c-75ce-9dfd-ae52c863185e",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 39,
+        "selected_roots": 1058
+      },
+      "families": {
+        "recall": 589,
+        "end": 709,
+        "cancel": 518,
+        "move": 500,
+        "blocked": 46,
+        "submit": 18,
+        "priority": 37,
+        "ward": 32,
+        "cast_1": 36,
+        "attack": 132,
+        "cast_0": 27,
+        "shop": 39
+      },
+      "candidate_extra_roots_before_cap": 3618,
+      "windows": {
+        "8": {
+          "windows": 223,
+          "across_rounds": 223,
+          "roots": 1784
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 10,
+          "across_rounds": 10,
+          "roots": 320
+        }
+      },
+      "max_run": 38,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc\\receipt.json": "0b2407e6208dbc5ce9fb3957c523f8db19d06e5ef07a82642da29de063ffb79d",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc\\index.jsonl": "4d782d3eab3858001018cb5ca714bec5ab6e53d97a4c0b12ceb42d77c11e8724",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc\\receipt.json": "9a12e26544b54c492689fb1e489e93f970facf1ef1b97d85f318148a869c58b3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc\\frames.jsonl.gz": "5eec99dcc4ca38641c931bfbdd503c5833ef754932d8295ac9042f9d589b562b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc\\turns.jsonl": "5dddefd6bd0aaedf5aaefa5db5cb8aa1e25344ea74343d7b13065630271c4c65",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19",
+      "group": "01a1a7a5-7794-7073-8001-0fb675efc877",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 40,
+        "selected_roots": 894
+      },
+      "families": {
+        "cancel": 404,
+        "move": 441,
+        "priority": 133,
+        "ward": 47,
+        "recall": 493,
+        "end": 727,
+        "cast_1": 36,
+        "blocked": 44,
+        "attack": 101,
+        "cast_0": 21,
+        "shop": 40,
+        "teleport": 12,
+        "submit": 15,
+        "altar": 5
+      },
+      "candidate_extra_roots_before_cap": 3218,
+      "windows": {
+        "8": {
+          "windows": 217,
+          "across_rounds": 213,
+          "roots": 1736
+        },
+        "16": {
+          "windows": 102,
+          "across_rounds": 102,
+          "roots": 1632
+        },
+        "32": {
+          "windows": 8,
+          "across_rounds": 8,
+          "roots": 256
+        }
+      },
+      "max_run": 49,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19\\receipt.json": "1ce5a54fee037fb4c849dcc77bb929c487b6f9ae6355c93790a63ecfeedd40bd",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19\\index.jsonl": "2978059dbafecc52e2d13a2012f66c60cce37505b219fee867e1d578c5b7c37f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19\\receipt.json": "6c094b55260835b7c1a703c40d6e1f1285fb43161c1d5d1af267b3643fadbe6a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19\\frames.jsonl.gz": "e597f9c3a2110eff027498f3fcced771f7cc986a377e65b52877ed7ca26355c7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19\\turns.jsonl": "ce713c434b5f9ec3a7e11d47c31d466d677a2a3b477ebb9c550f2df82d9cfc47",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77",
+      "group": "01a1b18d-7d98-7781-af67-3b8c62103505",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 30,
+        "selected_roots": 988
+      },
+      "families": {
+        "cancel": 470,
+        "move": 460,
+        "recall": 550,
+        "end": 734,
+        "submit": 16,
+        "priority": 107,
+        "shop": 30,
+        "cast_1": 40,
+        "blocked": 33,
+        "ward": 27,
+        "attack": 119,
+        "cast_0": 24,
+        "altar": 3
+      },
+      "candidate_extra_roots_before_cap": 3533,
+      "windows": {
+        "8": {
+          "windows": 227,
+          "across_rounds": 222,
+          "roots": 1816
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 14,
+          "across_rounds": 14,
+          "roots": 448
+        }
+      },
+      "max_run": 55,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77\\receipt.json": "4c33c66f4ab196189ed5ee24c0dea25e2fbaac06c5a68308cf3783012f8c60cc",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77\\index.jsonl": "ff4900ffdddd9236def8fc0c2c989e177c3be0174a5fd7db1345bb106a8c919b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77\\receipt.json": "3d303061aef81314753485299cc3b3d797cf0bfdebb95a6ffe15654149fef7f9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77\\frames.jsonl.gz": "a3171712ccae89de5a1b95f3ba2eb77d05e25a9b6e8ad6de2abe8acc2f182a66",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77\\turns.jsonl": "69c21545ac38f670da55d22620153cf4a10162afdbf31716ad870f3bc626c267",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8",
+      "group": "01a1a5ee-03db-7176-993c-afb0e8c91bc2",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 58,
+        "selected_roots": 895
+      },
+      "families": {
+        "recall": 502,
+        "end": 785,
+        "cancel": 362,
+        "move": 402,
+        "blocked": 83,
+        "cast_1": 42,
+        "ward": 45,
+        "priority": 103,
+        "attack": 106,
+        "cast_0": 26,
+        "shop": 58,
+        "altar": 1,
+        "submit": 5
+      },
+      "candidate_extra_roots_before_cap": 3164,
+      "windows": {
+        "8": {
+          "windows": 219,
+          "across_rounds": 217,
+          "roots": 1752
+        },
+        "16": {
+          "windows": 99,
+          "across_rounds": 99,
+          "roots": 1584
+        },
+        "32": {
+          "windows": 9,
+          "across_rounds": 9,
+          "roots": 288
+        }
+      },
+      "max_run": 44,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8\\receipt.json": "2598f3b37e584aeb874f24eace29c89eb329804e9e21fcde7ecd800ca43f79e1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8\\index.jsonl": "c992b85379541bb4258f0724b82af737f868b402f97f784e0f30e75e745ea4e3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8\\receipt.json": "be0110bde054afbf43cff3a094dcb7272bbbdeca3ad5775a62ab33d5665fc50d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8\\frames.jsonl.gz": "8bd09cc842f20e84e429a3805480153f15dac48d20bde37094a831afcba27b89",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8\\turns.jsonl": "3f733437b2db8fb9b76b57d98fb17af95932a2c7b647514a368eac5d3f248cdd",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5",
+      "group": "01a1b19f-c782-7f80-8059-b6d7de565977",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 37,
+        "selected_roots": 979
+      },
+      "families": {
+        "priority": 44,
+        "end": 784,
+        "move": 387,
+        "blocked": 41,
+        "recall": 574,
+        "cancel": 389,
+        "ward": 33,
+        "cast_0": 34,
+        "attack": 211,
+        "cast_1": 51,
+        "submit": 19,
+        "shop": 37
+      },
+      "candidate_extra_roots_before_cap": 3421,
+      "windows": {
+        "8": {
+          "windows": 226,
+          "across_rounds": 225,
+          "roots": 1808
+        },
+        "16": {
+          "windows": 101,
+          "across_rounds": 101,
+          "roots": 1616
+        },
+        "32": {
+          "windows": 10,
+          "across_rounds": 10,
+          "roots": 320
+        }
+      },
+      "max_run": 52,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5\\receipt.json": "9af93387bea8bbed9cd4d17b6d8c2e60bff9fa10b5ae135e198c0928aefdf2bf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5\\index.jsonl": "8abb2aa7e274cfd701137b70df5f953a488097eb5820b4111dddba63cc0fcf1a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5\\receipt.json": "0e8b99b13ac18e8c431136de400808d86a3a3069521c71a4f5e6992845a7700e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5\\frames.jsonl.gz": "9d0de53d82f4cf59f6c09323b5c7055945426b24d565208cb7bc7926ac5710f6",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5\\turns.jsonl": "a400776b58eb6ab3ad214d1cab8b3ab77fbbf072b01ea00310db25d122c42271",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68",
+      "group": "01a1a8d3-9747-7867-a3eb-e7469f8e3c0b",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 36,
+        "selected_roots": 853
+      },
+      "families": {
+        "priority": 138,
+        "end": 754,
+        "move": 399,
+        "blocked": 34,
+        "cancel": 396,
+        "recall": 473,
+        "cast_1": 41,
+        "ward": 29,
+        "shop": 36,
+        "attack": 132,
+        "cast_0": 26,
+        "altar": 4,
+        "submit": 16
+      },
+      "candidate_extra_roots_before_cap": 2810,
+      "windows": {
+        "8": {
+          "windows": 228,
+          "across_rounds": 222,
+          "roots": 1824
+        },
+        "16": {
+          "windows": 104,
+          "across_rounds": 104,
+          "roots": 1664
+        },
+        "32": {
+          "windows": 18,
+          "across_rounds": 18,
+          "roots": 576
+        }
+      },
+      "max_run": 50,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68\\receipt.json": "905fff5fc8a1819e7a28ad9a2926d106e156e860841e1f6ab36abfc705f7c06c",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68\\index.jsonl": "05649f8bf6045d96710069b8261bc3e14eeba29d758a31b0c079d7d8fd298b69",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68\\receipt.json": "ad06258de3ccf98a495154f480c6d6cbb58d9439f4e5837b0b2275ae1e36747d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68\\frames.jsonl.gz": "d71a46a6d58090ad6048a7ae3d33e5c82bc108552b7d405e3280149a7620a5f5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68\\turns.jsonl": "4d0682d4d3fc1bb9cb2c69eb878708670f6a85890f8d03386212b23f7404f25d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1",
+      "group": "01a1ae5e-abaa-75cd-8515-ab921035e653",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 42,
+        "selected_roots": 998
+      },
+      "families": {
+        "cancel": 421,
+        "cast_1": 50,
+        "move": 413,
+        "priority": 81,
+        "recall": 558,
+        "end": 756,
+        "attack": 190,
+        "cast_0": 36,
+        "shop": 42,
+        "ward": 22,
+        "altar": 6,
+        "submit": 17,
+        "blocked": 31
+      },
+      "candidate_extra_roots_before_cap": 3451,
+      "windows": {
+        "8": {
+          "windows": 229,
+          "across_rounds": 228,
+          "roots": 1832
+        },
+        "16": {
+          "windows": 105,
+          "across_rounds": 105,
+          "roots": 1680
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 63,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1\\receipt.json": "2eedad054b3b673b1ea3f26e6ffc9bd45cc3a9734c7e2bfea76483d3a0e26dd8",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1\\index.jsonl": "a9b8e1c67cc652a1f059f7790f6d2d85677cc8bd164f553ffa377a17a134a687",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1\\receipt.json": "8d9be29a27238fba87360e3e5e2b850a404a06bc8be3201d2066127f49d1e588",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1\\frames.jsonl.gz": "0da43466e5088f4d56f9123111a811882b7f78b3488eac3dcc564656c514880d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1\\turns.jsonl": "2915bcf9d15d6f6fe7072726ce57a181fee9dcf16962290126bcc00a52538a88",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5",
+      "group": "01a1a69b-ff55-7bb0-882f-56e22af01dda",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 39,
+        "selected_roots": 1046
+      },
+      "families": {
+        "recall": 585,
+        "end": 721,
+        "cancel": 468,
+        "attack": 249,
+        "cast_0": 48,
+        "move": 406,
+        "priority": 30,
+        "shop": 39,
+        "cast_1": 49,
+        "submit": 20,
+        "ward": 24,
+        "blocked": 32
+      },
+      "candidate_extra_roots_before_cap": 3414,
+      "windows": {
+        "8": {
+          "windows": 228,
+          "across_rounds": 227,
+          "roots": 1824
+        },
+        "16": {
+          "windows": 104,
+          "across_rounds": 104,
+          "roots": 1664
+        },
+        "32": {
+          "windows": 17,
+          "across_rounds": 17,
+          "roots": 544
+        }
+      },
+      "max_run": 51,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5\\receipt.json": "eb301a257a6ecd0cc756b133ed10812a9313c546c04335eb5c7e1f9fda24ca22",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5\\index.jsonl": "0358f67a34d1092bc7e1cd5fdab21ca697b22af78301b927f14bb61499694db5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5\\receipt.json": "8b351a54aa6412c8eaf66f91cc0d3d5bd3504cadf52c66edc1ea0994ef1cbe21",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5\\frames.jsonl.gz": "f1bdd1a37e41b6abfe00cf4c3e4eafe8fe9547f873943400cc07228a164e5706",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5\\turns.jsonl": "e1f33aae285bc6f5b54f0c8d25b7663722e5218318c6073efaffbdbdef930f9a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776",
+      "group": "c786009a-6afa-42d9-b0a8-14ac001fa18b",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 36,
+        "selected_roots": 1034
+      },
+      "families": {
+        "cancel": 475,
+        "move": 431,
+        "recall": 589,
+        "end": 731,
+        "submit": 22,
+        "shop": 36,
+        "attack": 191,
+        "cast_0": 35,
+        "priority": 47,
+        "ward": 21,
+        "altar": 11,
+        "blocked": 27,
+        "cast_1": 43
+      },
+      "candidate_extra_roots_before_cap": 3536,
+      "windows": {
+        "8": {
+          "windows": 225,
+          "across_rounds": 224,
+          "roots": 1800
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 12,
+          "across_rounds": 12,
+          "roots": 384
+        }
+      },
+      "max_run": 76,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776\\receipt.json": "d5eb9bd8f9da7cb150e6d05d57856274b3ed9492aecedd8920f18d607b311f8a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776\\index.jsonl": "de21e5e3292c8c0c533410354bf91f47aa411b35cf01e93d5ee9acede24394ef",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776\\receipt.json": "a1fb364112433e0d3a2c38a3372792ed23bcd197cdf30ad9a8be0d071551ddb1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776\\frames.jsonl.gz": "e0695eb29a1fe17b85471cddc7cd5f3d708f6c56c99b98d57337bd92d3914c3f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776\\turns.jsonl": "654b515dff520d613da8b7530022b9df2af34105fe1bed9be4cbd273bbed27bb",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a",
+      "group": "01a1b096-4849-7571-8d89-325e184a10ea",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 42,
+        "selected_roots": 1023
+      },
+      "families": {
+        "cancel": 421,
+        "move": 407,
+        "recall": 590,
+        "end": 742,
+        "cast_1": 57,
+        "attack": 231,
+        "priority": 39,
+        "shop": 42,
+        "submit": 22,
+        "ward": 38,
+        "cast_0": 34,
+        "blocked": 25
+      },
+      "candidate_extra_roots_before_cap": 3434,
+      "windows": {
+        "8": {
+          "windows": 224,
+          "across_rounds": 221,
+          "roots": 1792
+        },
+        "16": {
+          "windows": 102,
+          "across_rounds": 102,
+          "roots": 1632
+        },
+        "32": {
+          "windows": 9,
+          "across_rounds": 9,
+          "roots": 288
+        }
+      },
+      "max_run": 62,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a\\receipt.json": "d3a112834ceb93d8d278d98918b74d204f83c9255b267e903cf36e0de9745faf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a\\index.jsonl": "9317a1d8c9fb78dc379e3feaa1706e4eb05e222bbca3b249ed762f8e19a3ec90",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a\\receipt.json": "f30ca4d4d916447c9e7ca3ee6dfb365145922cc7e2730dc208465937b55d7146",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a\\frames.jsonl.gz": "80a87490432acb4a83eee3d30c7345af5c0e53b80a4f0a978d6f9a48e1f66218",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a\\turns.jsonl": "d51f8a0184372f08d78e79f03f1b4f6831a89c97c62c718beab11ae60e696d27",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03",
+      "group": "01a1b14d-643f-7bdd-8a6c-3e6d68db04fe",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 33,
+        "selected_roots": 1067
+      },
+      "families": {
+        "move": 434,
+        "priority": 152,
+        "recall": 556,
+        "end": 728,
+        "cancel": 440,
+        "blocked": 31,
+        "attack": 176,
+        "cast_0": 34,
+        "submit": 17,
+        "ward": 35,
+        "cast_1": 52,
+        "shop": 33,
+        "altar": 4
+      },
+      "candidate_extra_roots_before_cap": 3417,
+      "windows": {
+        "8": {
+          "windows": 230,
+          "across_rounds": 229,
+          "roots": 1840
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 15,
+          "across_rounds": 15,
+          "roots": 480
+        }
+      },
+      "max_run": 70,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03\\receipt.json": "7c7dd1cf0ecbfe7f0d6adfb665c6a69221e2476395c85fc42013fc34c39a0d53",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03\\index.jsonl": "8923c11e9baf0bba04282028f2092482222a6170f4834b473f4e64363b6d9ae8",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03\\receipt.json": "61ae24891114f6d9c23deeb6d1c98e67810cd03922e17230189174e237910015",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03\\frames.jsonl.gz": "345a985cba3669992bb426df7cefddbb3892c38af89441f5ec931fcf895e477a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03\\turns.jsonl": "6142116ba8c9422546ed45b67c2d468e80cddea480f60799729bdb0ae1bec303",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378",
+      "group": "01a1b196-a555-734c-999a-cb8a05bb5289",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 28,
+        "selected_roots": 1005
+      },
+      "families": {
+        "recall": 562,
+        "end": 729,
+        "cancel": 463,
+        "move": 395,
+        "blocked": 47,
+        "ward": 44,
+        "attack": 214,
+        "cast_1": 49,
+        "priority": 44,
+        "submit": 18,
+        "shop": 28,
+        "cast_0": 37
+      },
+      "candidate_extra_roots_before_cap": 3408,
+      "windows": {
+        "8": {
+          "windows": 230,
+          "across_rounds": 228,
+          "roots": 1840
+        },
+        "16": {
+          "windows": 104,
+          "across_rounds": 104,
+          "roots": 1664
+        },
+        "32": {
+          "windows": 18,
+          "across_rounds": 18,
+          "roots": 576
+        }
+      },
+      "max_run": 56,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378\\receipt.json": "dff08d1fc658cb5d7f719c03498c857a12e6ff20d65e6c58015373631ce49ee0",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378\\index.jsonl": "e3e0e4ea90ba892b3184a8bfe15a220eb63b729cb1bf9afa9e3b307c81672531",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378\\receipt.json": "23bff780603e27d022970a418395dac07858ebd8217498c87016635ebc356ce3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378\\frames.jsonl.gz": "7ced0682fe8a2f794d02eecf94df64db9c76f32d17051c0cf919da6c33eb9104",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378\\turns.jsonl": "9268c5e46f7b2b269e697e69518439306bf0a6204c4ebefebbccb7f9b70a11fc",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b",
+      "group": "01a1ac1d-e499-7aad-b90d-31ea3d437854",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 40,
+        "selected_roots": 1029
+      },
+      "families": {
+        "move": 397,
+        "priority": 36,
+        "recall": 568,
+        "end": 767,
+        "cancel": 471,
+        "attack": 232,
+        "cast_1": 49,
+        "shop": 40,
+        "blocked": 26,
+        "submit": 14,
+        "cast_0": 31,
+        "ward": 20,
+        "altar": 3
+      },
+      "candidate_extra_roots_before_cap": 3191,
+      "windows": {
+        "8": {
+          "windows": 235,
+          "across_rounds": 234,
+          "roots": 1880
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 17,
+          "across_rounds": 17,
+          "roots": 544
+        }
+      },
+      "max_run": 72,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b\\receipt.json": "561ab5aef689c16fff471043d30af2d8bf6327e64fb3f99de67a384dd979762a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b\\index.jsonl": "cf1e1edd0990c06e963b996eac5b96eb14c4f8ad64f021846f3cc376e86b9252",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b\\receipt.json": "7ee1fb2330a0309b29a519197200739e6db7a6f7e0fb4be6aaac68de417c8752",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b\\frames.jsonl.gz": "ead4671acb8733798dce18343cf5cd37c004f115c21473447bd775c9f8b1094e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b\\turns.jsonl": "1d1c9403b9a33a24613a2b455f5b1b148ae9aa3fc257dd96edbf6c626a955f8d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee",
+      "group": "01a1b144-3cb1-70a0-ab2d-27f313ed1aac",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 7,
+        "selected_roots": 799
+      },
+      "families": {
+        "recall": 390,
+        "end": 911,
+        "cancel": 316,
+        "move": 346,
+        "ward": 55,
+        "cast_1": 41,
+        "attack": 101,
+        "cast_0": 26,
+        "priority": 221,
+        "shop": 7,
+        "blocked": 10
+      },
+      "candidate_extra_roots_before_cap": 2246,
+      "windows": {
+        "8": {
+          "windows": 245,
+          "across_rounds": 241,
+          "roots": 1960
+        },
+        "16": {
+          "windows": 109,
+          "across_rounds": 109,
+          "roots": 1744
+        },
+        "32": {
+          "windows": 30,
+          "across_rounds": 30,
+          "roots": 960
+        }
+      },
+      "max_run": 99,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee\\receipt.json": "c87170722019382381229cded38f7ba9ec4cb5be324593a1003e21a740669440",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee\\index.jsonl": "00956a9de967a56d6c8b0d554fb380f4dfcaf4f3688018466821ffedd04d2a52",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee\\receipt.json": "fc263972f9d1bb33423323a51e57b1fd097496e03712f20a883fba921c0fd8e7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee\\frames.jsonl.gz": "498cb0e8be92b316daf814780b66bb1c32604a0a3784d8079f0485653d8d300f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee\\turns.jsonl": "3eadfe24afa3e785e75cc5a268d282cd4ffe25587cdcfa91f0742694959dfc36",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612",
+      "group": "01a1aef1-2251-7279-967e-c54f011977e5",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 33,
+        "selected_roots": 792
+      },
+      "families": {
+        "cancel": 273,
+        "move": 316,
+        "recall": 400,
+        "end": 926,
+        "submit": 5,
+        "priority": 158,
+        "shop": 33,
+        "cast_1": 39,
+        "attack": 161,
+        "cast_0": 33,
+        "ward": 39,
+        "altar": 3,
+        "blocked": 31
+      },
+      "candidate_extra_roots_before_cap": 3068,
+      "windows": {
+        "8": {
+          "windows": 222,
+          "across_rounds": 216,
+          "roots": 1776
+        },
+        "16": {
+          "windows": 101,
+          "across_rounds": 101,
+          "roots": 1616
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 55,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612\\receipt.json": "c12855b75f89b2098b1f6768b220fdb02e600fde695704c445f7b4bcc77bca4a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612\\index.jsonl": "3309b19456de2dcfd3cf47daafa5d78064b94230699c05190fd64f42f6dd4dbb",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612\\receipt.json": "065c3592f3932949b4ac439c9986524af0659d62f7818ca98fa95d469e43489f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612\\frames.jsonl.gz": "1e8f9097ae55fd20de4166c7dadec3aef879ba9641a0c652d478e53f5c1b3eca",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612\\turns.jsonl": "f205b8515e49b3b77af40e089586c4f0f007e690343e42518768528da989340a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f",
+      "group": "01a1a85c-a615-7784-836a-daef15eb089b",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 33,
+        "selected_roots": 775
+      },
+      "families": {
+        "attack": 152,
+        "cast_0": 27,
+        "blocked": 67,
+        "recall": 495,
+        "end": 709,
+        "cancel": 399,
+        "move": 351,
+        "altar": 7,
+        "ward": 52,
+        "shop": 33,
+        "cast_1": 44,
+        "priority": 45,
+        "submit": 19
+      },
+      "candidate_extra_roots_before_cap": 2678,
+      "windows": {
+        "8": {
+          "windows": 218,
+          "across_rounds": 216,
+          "roots": 1744
+        },
+        "16": {
+          "windows": 102,
+          "across_rounds": 102,
+          "roots": 1632
+        },
+        "32": {
+          "windows": 6,
+          "across_rounds": 6,
+          "roots": 192
+        }
+      },
+      "max_run": 51,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f\\receipt.json": "902402404de593c6412b1614a76a7c06940c8b55caa26d36805362110a5c505a",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f\\index.jsonl": "f27bfe1a4f6c296b84a75bf6c10c3791284e2ace7a392d4422cb60a9c2e29e47",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f\\receipt.json": "f75df4df7c89d551ecba68c7aa2ddc298a05f50becfe4689517111e442e81dea",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f\\frames.jsonl.gz": "30f2ce0d8058c5489eb30df7aff1fd85104a8ccabec466bf4f5d851797ee2e3e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f\\turns.jsonl": "658af349cb30ea2521bf0aaa59a92f5111855cdefa54e0f9243146d1dcbc2b79",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf",
+      "group": "01a1a91c-e2c0-7f48-a8c2-fe3671ba4e7e",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 71,
+        "selected_roots": 976
+      },
+      "families": {
+        "cancel": 349,
+        "move": 337,
+        "recall": 506,
+        "end": 808,
+        "cast_0": 50,
+        "attack": 190,
+        "priority": 124,
+        "ward": 53,
+        "shop": 71,
+        "cast_1": 44,
+        "submit": 17,
+        "blocked": 52
+      },
+      "candidate_extra_roots_before_cap": 3437,
+      "windows": {
+        "8": {
+          "windows": 231,
+          "across_rounds": 225,
+          "roots": 1848
+        },
+        "16": {
+          "windows": 101,
+          "across_rounds": 101,
+          "roots": 1616
+        },
+        "32": {
+          "windows": 14,
+          "across_rounds": 14,
+          "roots": 448
+        }
+      },
+      "max_run": 56,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf\\receipt.json": "432141cce419d9c6f80224a0a60fcad7125e4425de20f7ecea61f589c5cf875b",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf\\index.jsonl": "e282c0c85616a4434f5f2e8fd6e482370dd683aae080a1769ce5c0fabd3081e3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf\\receipt.json": "1a373ab5a67ab4b58e25db51fa33d99dafa7da234d93ef8022cb6fcc4951becc",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf\\frames.jsonl.gz": "3ea5daef0a4d8a5534551dd0c5ed36cb671a3f35a05d7be982ec3300ae5c6458",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf\\turns.jsonl": "757b4981b94723d7b7149a3124a146f6e98a3a0a63bf68c2df468a5e948b72f9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc",
+      "group": "f6ef1f44-2bf0-4882-beca-95bd6573287d",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 39,
+        "selected_roots": 983
+      },
+      "families": {
+        "end": 825,
+        "cancel": 359,
+        "move": 364,
+        "recall": 552,
+        "blocked": 39,
+        "cast_1": 52,
+        "priority": 68,
+        "shop": 39,
+        "attack": 220,
+        "cast_0": 41,
+        "ward": 32,
+        "submit": 17
+      },
+      "candidate_extra_roots_before_cap": 3560,
+      "windows": {
+        "8": {
+          "windows": 219,
+          "across_rounds": 218,
+          "roots": 1752
+        },
+        "16": {
+          "windows": 101,
+          "across_rounds": 101,
+          "roots": 1616
+        },
+        "32": {
+          "windows": 9,
+          "across_rounds": 9,
+          "roots": 288
+        }
+      },
+      "max_run": 68,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc\\receipt.json": "e70ed4f59e0e792b3fef2cab35f917a1f760e6be8a9cef6914efef115321b756",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc\\index.jsonl": "a5550818118566c936f2b1c44a1f5c8d6e8dff50be92145e6f06e45db22591e4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc\\receipt.json": "5826c8a597abad7875f68a8646762885478be7a4d4441b65b3ba7ab9342af0b0",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc\\frames.jsonl.gz": "c378bd95c88beb78a2760bafef612b3800ef4b2378441f2a4d220aec80eaebc5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc\\turns.jsonl": "71a99473823deb74982703e37688a8d233774db908927db213af7faab11b625f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361",
+      "group": "01a1a8ca-6cfc-7aca-a360-a49138f436d6",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 25,
+        "selected_roots": 1110
+      },
+      "families": {
+        "end": 760,
+        "priority": 240,
+        "move": 424,
+        "recall": 523,
+        "cancel": 439,
+        "blocked": 85,
+        "attack": 120,
+        "cast_1": 29,
+        "cast_0": 42,
+        "shop": 25,
+        "ward": 39,
+        "altar": 1,
+        "submit": 8
+      },
+      "candidate_extra_roots_before_cap": 3328,
+      "windows": {
+        "8": {
+          "windows": 232,
+          "across_rounds": 226,
+          "roots": 1856
+        },
+        "16": {
+          "windows": 102,
+          "across_rounds": 102,
+          "roots": 1632
+        },
+        "32": {
+          "windows": 15,
+          "across_rounds": 15,
+          "roots": 480
+        }
+      },
+      "max_run": 65,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361\\receipt.json": "c538efb52da453208dfc5e633db630cd529374215590b3e5836c591e7ee0e469",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361\\index.jsonl": "fe0bc2021e7c4df424ed1d51f11e4c136110d1dde0f44df6fe89926a45c0aaac",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361\\receipt.json": "6b7322c48279904fe7d59a7bcdf100ac3b1cc0968b784914604dcbf587e443ea",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361\\frames.jsonl.gz": "f15858e5ac6d1936f9e45d7f71282238d189d9aed3447870a1375b9dfe04ceb5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361\\turns.jsonl": "2d30c7758458811d9cfcef88b90654d656967bd9f4b51601f9b3aba742e6018b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd",
+      "group": "01a1aa2f-8318-7f46-8e51-77cadbf791ef",
+      "partition": "fit",
+      "max_extra_roots": 1625,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1625,
+        "unavailable_shop_arguments": 59,
+        "selected_roots": 834
+      },
+      "families": {
+        "attack": 186,
+        "recall": 496,
+        "end": 791,
+        "cancel": 325,
+        "cast_1": 46,
+        "move": 352,
+        "shop": 59,
+        "priority": 81,
+        "teleport": 17,
+        "blocked": 35,
+        "cast_0": 34,
+        "ward": 24,
+        "submit": 12,
+        "altar": 1
+      },
+      "candidate_extra_roots_before_cap": 2878,
+      "windows": {
+        "8": {
+          "windows": 225,
+          "across_rounds": 221,
+          "roots": 1800
+        },
+        "16": {
+          "windows": 102,
+          "across_rounds": 102,
+          "roots": 1632
+        },
+        "32": {
+          "windows": 11,
+          "across_rounds": 11,
+          "roots": 352
+        }
+      },
+      "max_run": 66,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd\\receipt.json": "5d6748b8e5426ed7938d5b6f19caec98471fb5d190290ae39de72aa841984fbf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd\\index.jsonl": "458a3258d0d84c63bb4e0dc1e76e7c6fec8219ec690ee5fd34728f5babfd2460",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd\\receipt.json": "3d27be9d04a093336def74a0488a22fc76ffb2c5c677cb528b5b47aa1051bb5b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd\\frames.jsonl.gz": "c1d14c28dd66c8dae6913ae46d7a549cb90beee645b0c65fd70440c0f32da92d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd\\turns.jsonl": "5066ffe7fce61c2ec6640c9a27b2c642b4c440c45a80b59adce64076b12d6839",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0fd999395728cd9674c64bfb7ac49a6e69d1496a3e861b68284d545da6c3624f",
+      "group": "01a1afba-9119-738b-99ab-2c15a9a1af7d",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 67,
+        "selected_roots": 1012
+      },
+      "families": {
+        "priority": 83,
+        "ward": 28,
+        "end": 709,
+        "move": 341,
+        "recall": 519,
+        "cancel": 378,
+        "attack": 260,
+        "cast_1": 52,
+        "shop": 67,
+        "cast_0": 46,
+        "altar": 2,
+        "submit": 19,
+        "blocked": 8
+      },
+      "candidate_extra_roots_before_cap": 3411,
+      "windows": {
+        "8": {
+          "windows": 210,
+          "across_rounds": 207,
+          "roots": 1680
+        },
+        "16": {
+          "windows": 97,
+          "across_rounds": 97,
+          "roots": 1552
+        },
+        "32": {
+          "windows": 16,
+          "across_rounds": 16,
+          "roots": 512
+        }
+      },
+      "max_run": 61,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0fd999395728cd9674c64bfb7ac49a6e69d1496a3e861b68284d545da6c3624f\\receipt.json": "5d5d7d7f0b5bd078fc8c8ad6cf7a8ec29b698833d26222fef762bad2986fd784",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0fd999395728cd9674c64bfb7ac49a6e69d1496a3e861b68284d545da6c3624f\\index.jsonl": "c780545ba7af64e86e4dfd1c4f3ab3e1fdffd9282bcea0ef0e5b63bb20877e06",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0fd999395728cd9674c64bfb7ac49a6e69d1496a3e861b68284d545da6c3624f\\receipt.json": "4a0ece187c26c1312266a344fc906f78e2f2c19fe71994a85a02c41c84837735",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0fd999395728cd9674c64bfb7ac49a6e69d1496a3e861b68284d545da6c3624f\\frames.jsonl.gz": "cef59856bf5813e70ffa7a7fd9c7934d83b67224e75d455e94242fd372855c9b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\0fd999395728cd9674c64bfb7ac49a6e69d1496a3e861b68284d545da6c3624f\\turns.jsonl": "2e3542ace2c4e5ef942b0b3517e3988214d42ade6b4ca7a921edd1aab99ac3ae",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "37e4e42030dfbcf44a60f78604733c3218d9d2631093def98380164672712512",
+      "group": "01a1b056-32b6-7c2f-8fe3-284f6c731a62",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 23,
+        "selected_roots": 712
+      },
+      "families": {
+        "cast_0": 34,
+        "attack": 138,
+        "recall": 436,
+        "end": 722,
+        "cancel": 310,
+        "move": 320,
+        "ward": 54,
+        "priority": 123,
+        "cast_1": 36,
+        "shop": 23,
+        "altar": 2,
+        "blocked": 12,
+        "submit": 2
+      },
+      "candidate_extra_roots_before_cap": 2435,
+      "windows": {
+        "8": {
+          "windows": 218,
+          "across_rounds": 211,
+          "roots": 1744
+        },
+        "16": {
+          "windows": 98,
+          "across_rounds": 98,
+          "roots": 1568
+        },
+        "32": {
+          "windows": 21,
+          "across_rounds": 21,
+          "roots": 672
+        }
+      },
+      "max_run": 61,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\37e4e42030dfbcf44a60f78604733c3218d9d2631093def98380164672712512\\receipt.json": "589df2f4682aec54d188ba9720fbde8365729feaea7e4937443f0a024b7c2000",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\37e4e42030dfbcf44a60f78604733c3218d9d2631093def98380164672712512\\index.jsonl": "47bec117ef12ad7b07d972db4d90b6d665c72b174252702fca8fc2cf14a3d970",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\37e4e42030dfbcf44a60f78604733c3218d9d2631093def98380164672712512\\receipt.json": "16064d899c0f851f747205a73926a147910df48382bb4088988091102aeada8b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\37e4e42030dfbcf44a60f78604733c3218d9d2631093def98380164672712512\\frames.jsonl.gz": "dcde544390b7697a2f399937d6110da80f9afb7fc9f65e8045e2a59626e23715",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\37e4e42030dfbcf44a60f78604733c3218d9d2631093def98380164672712512\\turns.jsonl": "0704abed9263f5e87b5a33c0338c7343942391c3223b665497e3b255d182d819",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "1dc546b0eec4a28f05f3fa4b100e736808eb6c6432d90ad9ca3d6a8447859c03",
+      "group": "01a1a82e-d003-72f7-8bdd-6a2512d678af",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 24,
+        "selected_roots": 748
+      },
+      "families": {
+        "cancel": 430,
+        "move": 432,
+        "recall": 456,
+        "end": 675,
+        "ward": 30,
+        "priority": 84,
+        "cast_1": 26,
+        "shop": 24,
+        "altar": 7,
+        "submit": 18,
+        "attack": 34,
+        "cast_0": 18,
+        "blocked": 14
+      },
+      "candidate_extra_roots_before_cap": 2581,
+      "windows": {
+        "8": {
+          "windows": 207,
+          "across_rounds": 206,
+          "roots": 1656
+        },
+        "16": {
+          "windows": 95,
+          "across_rounds": 95,
+          "roots": 1520
+        },
+        "32": {
+          "windows": 10,
+          "across_rounds": 10,
+          "roots": 320
+        }
+      },
+      "max_run": 73,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\1dc546b0eec4a28f05f3fa4b100e736808eb6c6432d90ad9ca3d6a8447859c03\\receipt.json": "3ef73d1af17be01068c07bbbdde41902f5223010fb178a946848750f0e56bff9",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\1dc546b0eec4a28f05f3fa4b100e736808eb6c6432d90ad9ca3d6a8447859c03\\index.jsonl": "a0877de38293baf68dbebcdb3ee5952b3e862be0ea32c5b32c973aaf3ea42bf1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1dc546b0eec4a28f05f3fa4b100e736808eb6c6432d90ad9ca3d6a8447859c03\\receipt.json": "8105009506d31c98fc4784d551b4a864d0c43422da2f284e000f9da0ca224e10",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1dc546b0eec4a28f05f3fa4b100e736808eb6c6432d90ad9ca3d6a8447859c03\\frames.jsonl.gz": "15a9fe1e52abd7dd414e61e20b889856120ec149119cbf63e4a83ececa5695f7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\1dc546b0eec4a28f05f3fa4b100e736808eb6c6432d90ad9ca3d6a8447859c03\\turns.jsonl": "3131da099c61ccdd2d77314225432895b0ce5a241a3ac5b036fc54f893037ddf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0d482ab901a8febc41a25e556bfaf915fe0cea4af70f35f820109196716f4a93",
+      "group": "7b9f0ab1-006e-40e2-bacd-2bb95c2be87e",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "selected_roots": 881,
+        "unavailable_shop_arguments": 23,
+        "extra_roots": 1500
+      },
+      "families": {
+        "priority": 99,
+        "ward": 21,
+        "end": 765,
+        "cancel": 288,
+        "move": 472,
+        "recall": 404,
+        "attack": 185,
+        "shop": 23,
+        "cast_0": 41,
+        "cast_1": 17,
+        "blocked": 66
+      },
+      "candidate_extra_roots_before_cap": 3594,
+      "windows": {
+        "8": {
+          "windows": 203,
+          "across_rounds": 202,
+          "roots": 1624
+        },
+        "16": {
+          "windows": 97,
+          "across_rounds": 97,
+          "roots": 1552
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 67,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0d482ab901a8febc41a25e556bfaf915fe0cea4af70f35f820109196716f4a93\\receipt.json": "57ba158e140ea59b3911ecae3b3d245309cd98d76a449968cdbf70b6d1754edf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0d482ab901a8febc41a25e556bfaf915fe0cea4af70f35f820109196716f4a93\\index.jsonl": "64ba53abbd0d7a8942e44b143960d2af8f95e698782ac73c3c7e7adabf762be6",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0d482ab901a8febc41a25e556bfaf915fe0cea4af70f35f820109196716f4a93\\receipt.json": "ded8bcf05b10d904aa29dc872715716b451b5db2b6833e2c7461057a8311607b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0d482ab901a8febc41a25e556bfaf915fe0cea4af70f35f820109196716f4a93\\frames.jsonl.gz": "3d7f57531cff66052e45057e983a38fe77c9fb31039853c82520772448225f34",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\0d482ab901a8febc41a25e556bfaf915fe0cea4af70f35f820109196716f4a93\\turns.jsonl": "53ae307f1b53419b3448aa18f751b987997c01e4e7692824ab65b67348fd3d4d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "2e84f97250e04a62d4d6a210526f0e604dc02ff8651a318daf649eb449c87e2f",
+      "group": "9593bb49-f8e9-4d52-8b98-0ea0a8c4883d",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 49,
+        "selected_roots": 781
+      },
+      "families": {
+        "end": 673,
+        "cancel": 380,
+        "move": 365,
+        "ward": 37,
+        "recall": 464,
+        "shop": 49,
+        "cast_0": 27,
+        "attack": 134,
+        "priority": 76,
+        "cast_1": 40,
+        "blocked": 17,
+        "submit": 19
+      },
+      "candidate_extra_roots_before_cap": 2445,
+      "windows": {
+        "8": {
+          "windows": 211,
+          "across_rounds": 211,
+          "roots": 1688
+        },
+        "16": {
+          "windows": 97,
+          "across_rounds": 97,
+          "roots": 1552
+        },
+        "32": {
+          "windows": 16,
+          "across_rounds": 16,
+          "roots": 512
+        }
+      },
+      "max_run": 90,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2e84f97250e04a62d4d6a210526f0e604dc02ff8651a318daf649eb449c87e2f\\receipt.json": "5f16676466dded6b4e46578634750a62719b443d0b54cff6d6d7e8ab219d1687",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\2e84f97250e04a62d4d6a210526f0e604dc02ff8651a318daf649eb449c87e2f\\index.jsonl": "69fa314c150645d53b3b209312e5b5b98cb978975b9b5f16e9531aefeaa6d63c",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2e84f97250e04a62d4d6a210526f0e604dc02ff8651a318daf649eb449c87e2f\\receipt.json": "5359da7ac37881a32cf683527e6c4116aed07c1dac076744379d9a84e6fa8a90",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\2e84f97250e04a62d4d6a210526f0e604dc02ff8651a318daf649eb449c87e2f\\frames.jsonl.gz": "16752718742793606c5f13518b7ad955e2022afbddbca8267c20bc5f08641a22",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\2e84f97250e04a62d4d6a210526f0e604dc02ff8651a318daf649eb449c87e2f\\turns.jsonl": "c6301e82d96044f342acb1d2956da53f71926b58990ff667a6543e259e8c396a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "07b90f139b23a866dd12e5ee229ce1398525a57139a3dbda0c8701dd4908d790",
+      "group": "01a1a5a5-b09d-773e-bb14-0a4a210c6b05",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 34,
+        "selected_roots": 751
+      },
+      "families": {
+        "cancel": 418,
+        "move": 414,
+        "recall": 460,
+        "end": 631,
+        "submit": 23,
+        "priority": 118,
+        "shop": 34,
+        "attack": 62,
+        "cast_0": 17,
+        "ward": 29,
+        "altar": 7,
+        "blocked": 12,
+        "cast_1": 26
+      },
+      "candidate_extra_roots_before_cap": 2512,
+      "windows": {
+        "8": {
+          "windows": 209,
+          "across_rounds": 208,
+          "roots": 1672
+        },
+        "16": {
+          "windows": 97,
+          "across_rounds": 97,
+          "roots": 1552
+        },
+        "32": {
+          "windows": 12,
+          "across_rounds": 12,
+          "roots": 384
+        }
+      },
+      "max_run": 54,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\07b90f139b23a866dd12e5ee229ce1398525a57139a3dbda0c8701dd4908d790\\receipt.json": "4a1e3ea3b9d76694deb853d79dbe75de2660d4ef617c5f2e74853b9a0954a08a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\07b90f139b23a866dd12e5ee229ce1398525a57139a3dbda0c8701dd4908d790\\index.jsonl": "0487bd92885cabd1fba45faf9ce7b1b341c854d5c2ecbb82dfa22126ec2207ec",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\07b90f139b23a866dd12e5ee229ce1398525a57139a3dbda0c8701dd4908d790\\receipt.json": "8c81a4cc7b151757da3bcf54b5092c09aacf22e5c0c8c677f3c9bfc6a5758f73",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\07b90f139b23a866dd12e5ee229ce1398525a57139a3dbda0c8701dd4908d790\\frames.jsonl.gz": "15275f44eec73a03aeefe00b530dd1d5d7765a293af053df557ef26c3afe9663",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\07b90f139b23a866dd12e5ee229ce1398525a57139a3dbda0c8701dd4908d790\\turns.jsonl": "e7607aa48f8d4ce13acfe43e02dae7e8e7eb97f7eb8c21564c6249a6d54d0ef0",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "4a450bd898a33a4c1ae998f043ab4fcb32f7c4446232f6d2b21ee4bb5ff92f3b",
+      "group": "3bff55bc-f363-498b-be59-e9adb2d87f8e",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 69,
+        "selected_roots": 853
+      },
+      "families": {
+        "cast_0": 31,
+        "attack": 162,
+        "recall": 468,
+        "end": 759,
+        "cancel": 352,
+        "move": 353,
+        "priority": 62,
+        "shop": 69,
+        "teleport": 16,
+        "cast_1": 30,
+        "ward": 24,
+        "submit": 8,
+        "blocked": 18,
+        "altar": 1
+      },
+      "candidate_extra_roots_before_cap": 2863,
+      "windows": {
+        "8": {
+          "windows": 209,
+          "across_rounds": 206,
+          "roots": 1672
+        },
+        "16": {
+          "windows": 97,
+          "across_rounds": 97,
+          "roots": 1552
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 51,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\4a450bd898a33a4c1ae998f043ab4fcb32f7c4446232f6d2b21ee4bb5ff92f3b\\receipt.json": "4c667c24be3f058efcabed40c7e7522e7c9475eafb0d159370a23d758cb242b7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\4a450bd898a33a4c1ae998f043ab4fcb32f7c4446232f6d2b21ee4bb5ff92f3b\\index.jsonl": "ae36050e32ed18895d0e27363cd98386ac0c09501ecc6eab47083a6fce162b6f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\4a450bd898a33a4c1ae998f043ab4fcb32f7c4446232f6d2b21ee4bb5ff92f3b\\receipt.json": "64231a0b4bb2a10397fabc462174ddd1b094a857f40137ed2ff8ce2f4ceeb591",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\4a450bd898a33a4c1ae998f043ab4fcb32f7c4446232f6d2b21ee4bb5ff92f3b\\frames.jsonl.gz": "635c09f38a5eca1edcdcd20ee4f43ce7d3fe147fb1c3c1dfa1f7f0e6afeb7c39",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\4a450bd898a33a4c1ae998f043ab4fcb32f7c4446232f6d2b21ee4bb5ff92f3b\\turns.jsonl": "a36f0dd80f0612a797401c478792f9b0fb471e65bff5ccc04b33b9df342a23d1",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "105dc7379ba225f26ed358736dab717cc76debfe99be5d9e5bff62eb4677865c",
+      "group": "01a1a71c-2481-775f-9e57-74b739f67b99",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "selected_roots": 1039,
+        "unavailable_shop_arguments": 28,
+        "extra_roots": 1500
+      },
+      "families": {
+        "priority": 36,
+        "end": 691,
+        "cast_1": 45,
+        "move": 384,
+        "recall": 551,
+        "cancel": 438,
+        "submit": 18,
+        "shop": 28,
+        "attack": 239,
+        "ward": 27,
+        "cast_0": 41,
+        "blocked": 41
+      },
+      "candidate_extra_roots_before_cap": 2919,
+      "windows": {
+        "8": {
+          "windows": 227,
+          "across_rounds": 226,
+          "roots": 1816
+        },
+        "16": {
+          "windows": 103,
+          "across_rounds": 103,
+          "roots": 1648
+        },
+        "32": {
+          "windows": 22,
+          "across_rounds": 22,
+          "roots": 704
+        }
+      },
+      "max_run": 95,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\105dc7379ba225f26ed358736dab717cc76debfe99be5d9e5bff62eb4677865c\\receipt.json": "6ff563a1fbfaaff4e361b4b4e1399adbe27832c2a4762b7317dd3b09d638db6e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\105dc7379ba225f26ed358736dab717cc76debfe99be5d9e5bff62eb4677865c\\index.jsonl": "bcb55e6187b07ded0f07e004d7aea0176d11c7837841efc086a897b569619817",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\105dc7379ba225f26ed358736dab717cc76debfe99be5d9e5bff62eb4677865c\\receipt.json": "235023ac3903b9e56f5659b830dab862f66f0008fe10fe5ac6054151b30a8903",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\105dc7379ba225f26ed358736dab717cc76debfe99be5d9e5bff62eb4677865c\\frames.jsonl.gz": "458a70f8bbcb76d81515d699d62d919b270ab5b7167f2c91f5691bfdb8c9b76b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\105dc7379ba225f26ed358736dab717cc76debfe99be5d9e5bff62eb4677865c\\turns.jsonl": "b8a95e4db00458db1885a101f847e97c46401469c7c62a2c3e5219f430d170e9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "286eaa3a67f5fe66af787803941a88eb926cae392b41394dcbfacc9beb4f815c",
+      "group": "01a1a8f8-3500-7e58-8265-0c4326f7e91f",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 47,
+        "selected_roots": 790
+      },
+      "families": {
+        "end": 680,
+        "cancel": 343,
+        "move": 316,
+        "recall": 472,
+        "priority": 76,
+        "shop": 47,
+        "cast_1": 48,
+        "cast_0": 45,
+        "attack": 199,
+        "blocked": 17,
+        "submit": 17,
+        "altar": 5,
+        "ward": 25
+      },
+      "candidate_extra_roots_before_cap": 2523,
+      "windows": {
+        "8": {
+          "windows": 211,
+          "across_rounds": 210,
+          "roots": 1688
+        },
+        "16": {
+          "windows": 95,
+          "across_rounds": 95,
+          "roots": 1520
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 47,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\286eaa3a67f5fe66af787803941a88eb926cae392b41394dcbfacc9beb4f815c\\receipt.json": "89da2b2caba528ae4ae58dc3ecdb16929a331d379d7c9c7f0809a4deeb1a3d3d",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\286eaa3a67f5fe66af787803941a88eb926cae392b41394dcbfacc9beb4f815c\\index.jsonl": "bb7691cef895a93016aeac159006e6f51f7556d05e261d782387c51839d65069",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\286eaa3a67f5fe66af787803941a88eb926cae392b41394dcbfacc9beb4f815c\\receipt.json": "bbceb24f2daec5a5774601fb5eb82dcb88614286abfb5c5b092d9c2b2702ca13",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\286eaa3a67f5fe66af787803941a88eb926cae392b41394dcbfacc9beb4f815c\\frames.jsonl.gz": "a4343b9a04570b46fa5092bb688c64a753a35323695167abc23871f55499b63e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\286eaa3a67f5fe66af787803941a88eb926cae392b41394dcbfacc9beb4f815c\\turns.jsonl": "2db28714565798743d07213518079c7517cbaf8015ae62ac0606ff7fb887f6bf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "139c5c2a1b4280b9150c4e1817d740d68e8c77e1ec48960c05c4212716959b07",
+      "group": "01a1a865-bfd5-70ad-b3e2-11623b5e68b9",
+      "partition": "tuning",
+      "max_extra_roots": 1500,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 1500,
+        "unavailable_shop_arguments": 36,
+        "selected_roots": 754
+      },
+      "families": {
+        "end": 649,
+        "cancel": 342,
+        "attack": 202,
+        "cast_0": 31,
+        "priority": 46,
+        "recall": 480,
+        "move": 306,
+        "cast_1": 50,
+        "shop": 36,
+        "submit": 17,
+        "blocked": 63,
+        "ward": 32
+      },
+      "candidate_extra_roots_before_cap": 2521,
+      "windows": {
+        "8": {
+          "windows": 210,
+          "across_rounds": 210,
+          "roots": 1680
+        },
+        "16": {
+          "windows": 98,
+          "across_rounds": 98,
+          "roots": 1568
+        },
+        "32": {
+          "windows": 15,
+          "across_rounds": 15,
+          "roots": 480
+        }
+      },
+      "max_run": 71,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\139c5c2a1b4280b9150c4e1817d740d68e8c77e1ec48960c05c4212716959b07\\receipt.json": "45a1e716e74d00fb05e0d8bc6a41eceba786205e4cdeee7b6978d35d24c67965",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\139c5c2a1b4280b9150c4e1817d740d68e8c77e1ec48960c05c4212716959b07\\index.jsonl": "56e41952ea32436c4af8313d9c3647b0f61a2f4056ee63f53cf02154ae7c41d5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\139c5c2a1b4280b9150c4e1817d740d68e8c77e1ec48960c05c4212716959b07\\receipt.json": "7ae0e8fc4b8c463e598539b9e7d9db20fee0235eb3349e636f3170509e8a1b2b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\139c5c2a1b4280b9150c4e1817d740d68e8c77e1ec48960c05c4212716959b07\\frames.jsonl.gz": "8e157428aad40bb00be6c72a49d87e8d6b709579011287cbe46e54c1088402d9",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\139c5c2a1b4280b9150c4e1817d740d68e8c77e1ec48960c05c4212716959b07\\turns.jsonl": "058f56a58659c6ff89ca60b9519875a5754b1db918ac33eb49ea70736f7d2f80",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "02b61a1f36397c516aa206631322cf87ae4dd33e364196e7b520f53c0e38f90f",
+      "group": "187fc33f-c333-4c91-9ac5-5ba9ca878a7c",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 32,
+        "selected_roots": 969
+      },
+      "families": {
+        "cancel": 485,
+        "move": 463,
+        "recall": 614,
+        "end": 936,
+        "cast_1": 43,
+        "attack": 192,
+        "cast_0": 27,
+        "priority": 87,
+        "ward": 41,
+        "submit": 13,
+        "shop": 32,
+        "blocked": 36
+      },
+      "candidate_extra_roots_before_cap": 3215,
+      "windows": {
+        "8": {
+          "windows": 283,
+          "across_rounds": 281,
+          "roots": 2264
+        },
+        "16": {
+          "windows": 128,
+          "across_rounds": 128,
+          "roots": 2048
+        },
+        "32": {
+          "windows": 26,
+          "across_rounds": 26,
+          "roots": 832
+        }
+      },
+      "max_run": 72,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\02b61a1f36397c516aa206631322cf87ae4dd33e364196e7b520f53c0e38f90f\\receipt.json": "bf7ab552dc97dbcec1b72856574f07a0a9142db47cf5ea0a765b73671e4ebaf4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\02b61a1f36397c516aa206631322cf87ae4dd33e364196e7b520f53c0e38f90f\\index.jsonl": "15fcea631c1cd75434993ce9f01661183cc7e705086fa33142fb4c6200c02b6f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\02b61a1f36397c516aa206631322cf87ae4dd33e364196e7b520f53c0e38f90f\\receipt.json": "bd855c3f7c0ec922596348f25ddf34bd4454e097ccba19d797cbc839eb64bf61",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\02b61a1f36397c516aa206631322cf87ae4dd33e364196e7b520f53c0e38f90f\\frames.jsonl.gz": "3a1c87fee52eab5e88af34b90e24fb004153993d2a44610e2e38e83f2a12b881",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\02b61a1f36397c516aa206631322cf87ae4dd33e364196e7b520f53c0e38f90f\\turns.jsonl": "04c3f92eaaf8f4311a16f3a5bd8e2fe992b4711eed468580716460a1d9c231da",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "033890125440a33280692a342f231bf484c9fc615c6cb42129a0f5f3a1882240",
+      "group": "01a1a6ee-5b84-7360-8ba0-79df222464de",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 60,
+        "selected_roots": 715
+      },
+      "families": {
+        "cast_1": 59,
+        "move": 335,
+        "priority": 59,
+        "ward": 36,
+        "recall": 570,
+        "end": 909,
+        "cancel": 376,
+        "attack": 231,
+        "cast_0": 37,
+        "blocked": 17,
+        "shop": 60,
+        "teleport": 15,
+        "submit": 11
+      },
+      "candidate_extra_roots_before_cap": 2596,
+      "windows": {
+        "8": {
+          "windows": 265,
+          "across_rounds": 264,
+          "roots": 2120
+        },
+        "16": {
+          "windows": 127,
+          "across_rounds": 127,
+          "roots": 2032
+        },
+        "32": {
+          "windows": 10,
+          "across_rounds": 10,
+          "roots": 320
+        }
+      },
+      "max_run": 62,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\033890125440a33280692a342f231bf484c9fc615c6cb42129a0f5f3a1882240\\receipt.json": "f7cc67c62b43b4fc052eac5664c2315ef45181f8f17da4bcdb9c1214d5c80a91",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\033890125440a33280692a342f231bf484c9fc615c6cb42129a0f5f3a1882240\\index.jsonl": "bd6af544f33529bb518f5910fa97d0f84baf7a19c27191e347b29f88185f902d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\033890125440a33280692a342f231bf484c9fc615c6cb42129a0f5f3a1882240\\receipt.json": "ef777666d31acf62641db3990f33c1b086b66ca6ec6e9f10b4589bc2d1780d01",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\033890125440a33280692a342f231bf484c9fc615c6cb42129a0f5f3a1882240\\frames.jsonl.gz": "e710f35585ce2b44db445aaea4bd7dc1d6adc6fd7782818fccc01d3f46af2f09",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\033890125440a33280692a342f231bf484c9fc615c6cb42129a0f5f3a1882240\\turns.jsonl": "f991b3e9d03d71d93544d7f6f29948eabb52ba51b16b1b44f3d155964e81c9cb",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "045c4dafbcf085960b96e975f4a1f6b6fa4df4537a10c4083bf95ed56d0e69b2",
+      "group": "868e469b-d29d-4cdb-81f4-b1e28bea40c9",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 45,
+        "selected_roots": 1077
+      },
+      "families": {
+        "cancel": 531,
+        "move": 438,
+        "recall": 670,
+        "end": 824,
+        "submit": 22,
+        "priority": 67,
+        "shop": 45,
+        "ward": 75,
+        "altar": 2,
+        "attack": 269,
+        "cast_1": 46,
+        "cast_0": 44,
+        "blocked": 44
+      },
+      "candidate_extra_roots_before_cap": 3403,
+      "windows": {
+        "8": {
+          "windows": 282,
+          "across_rounds": 280,
+          "roots": 2256
+        },
+        "16": {
+          "windows": 129,
+          "across_rounds": 129,
+          "roots": 2064
+        },
+        "32": {
+          "windows": 20,
+          "across_rounds": 20,
+          "roots": 640
+        }
+      },
+      "max_run": 85,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\045c4dafbcf085960b96e975f4a1f6b6fa4df4537a10c4083bf95ed56d0e69b2\\receipt.json": "604aadac507a50391c0cedb38c0786eeb4ca454b0b90c3caacb2a9591bc03fee",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\045c4dafbcf085960b96e975f4a1f6b6fa4df4537a10c4083bf95ed56d0e69b2\\index.jsonl": "12ecc5785625964397ad3142a9ecd3a581e9189d5e7933d7689e5b260b806b84",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\045c4dafbcf085960b96e975f4a1f6b6fa4df4537a10c4083bf95ed56d0e69b2\\receipt.json": "65a1c71d568b4198cb3947d59561daec26359c2590958f57d30dd2f526626352",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\045c4dafbcf085960b96e975f4a1f6b6fa4df4537a10c4083bf95ed56d0e69b2\\frames.jsonl.gz": "77c75d6a795e0ef8247d6dbe9d15bb04e77a357dafdf9c8f5459d808cd74b4a0",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\045c4dafbcf085960b96e975f4a1f6b6fa4df4537a10c4083bf95ed56d0e69b2\\turns.jsonl": "c48bfe09fcbb7f7da084863e264b63130baea7fbb7052ef0d6ee240af75f4732",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "04e347a1411f10c39c170e2af915e7b699a9e8d2e6acc3339b88d189c3f92356",
+      "group": "01a1aab8-d343-753c-98c2-7867e975646b",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 38,
+        "selected_roots": 990
+      },
+      "families": {
+        "cast_1": 39,
+        "move": 482,
+        "recall": 619,
+        "end": 944,
+        "cancel": 491,
+        "submit": 15,
+        "priority": 97,
+        "blocked": 29,
+        "attack": 168,
+        "cast_0": 30,
+        "teleport": 14,
+        "shop": 38,
+        "ward": 24
+      },
+      "candidate_extra_roots_before_cap": 3408,
+      "windows": {
+        "8": {
+          "windows": 275,
+          "across_rounds": 274,
+          "roots": 2200
+        },
+        "16": {
+          "windows": 127,
+          "across_rounds": 127,
+          "roots": 2032
+        },
+        "32": {
+          "windows": 22,
+          "across_rounds": 22,
+          "roots": 704
+        }
+      },
+      "max_run": 57,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\04e347a1411f10c39c170e2af915e7b699a9e8d2e6acc3339b88d189c3f92356\\receipt.json": "e872147f5855c00dc4bdbcd70037c85c87745908c0a7c0bf619155fe4a713903",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\04e347a1411f10c39c170e2af915e7b699a9e8d2e6acc3339b88d189c3f92356\\index.jsonl": "18684382dd9b18b41bcbc5d2ad062a41141b8b09e2836d39c768c06ed02c5f04",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\04e347a1411f10c39c170e2af915e7b699a9e8d2e6acc3339b88d189c3f92356\\receipt.json": "f946fc42b2f9f42ab89e2df1e560544e7bb9dfd205b6ba8eb6901c931c435f1f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\04e347a1411f10c39c170e2af915e7b699a9e8d2e6acc3339b88d189c3f92356\\frames.jsonl.gz": "48e9d161016366de80da9227ae9a3de8283daa4493eb6a5c63bcd7e18e47896e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\04e347a1411f10c39c170e2af915e7b699a9e8d2e6acc3339b88d189c3f92356\\turns.jsonl": "195f6d6c6547f08b3cc571e2bd135b6149b20756489d6203c5d3fe773a5e52d4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "02ba9eb00c757849501db4d1855a49bcbbcd66b22769339d0f514b9bddebee3c",
+      "group": "01a1a9d3-f0d7-7ac2-80d5-9f6cb21fe0ea",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 32,
+        "selected_roots": 999
+      },
+      "families": {
+        "recall": 611,
+        "end": 897,
+        "attack": 212,
+        "cast_1": 53,
+        "priority": 143,
+        "cancel": 444,
+        "shop": 32,
+        "move": 442,
+        "ward": 39,
+        "submit": 18,
+        "altar": 11,
+        "cast_0": 49,
+        "blocked": 48
+      },
+      "candidate_extra_roots_before_cap": 3493,
+      "windows": {
+        "8": {
+          "windows": 271,
+          "across_rounds": 269,
+          "roots": 2168
+        },
+        "16": {
+          "windows": 126,
+          "across_rounds": 126,
+          "roots": 2016
+        },
+        "32": {
+          "windows": 14,
+          "across_rounds": 14,
+          "roots": 448
+        }
+      },
+      "max_run": 95,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\02ba9eb00c757849501db4d1855a49bcbbcd66b22769339d0f514b9bddebee3c\\receipt.json": "c96335158891a1c8e35fa7a9d6aed274362c2ea4a079a51089cef6bf3af3e8d4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\02ba9eb00c757849501db4d1855a49bcbbcd66b22769339d0f514b9bddebee3c\\index.jsonl": "d7257814a3a909634d71d25bd6c33230cb87c01ca10bc9fb0e9ae01972597e2f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\02ba9eb00c757849501db4d1855a49bcbbcd66b22769339d0f514b9bddebee3c\\receipt.json": "9c6704e96c63577d344563981310d62dbf2fe36d34e87e1f209b39b92ac86b89",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\02ba9eb00c757849501db4d1855a49bcbbcd66b22769339d0f514b9bddebee3c\\frames.jsonl.gz": "7fa5991239c678f7929ed77050f237a67b8aadf279e7a4103799b577cd5b87c3",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\02ba9eb00c757849501db4d1855a49bcbbcd66b22769339d0f514b9bddebee3c\\turns.jsonl": "65fc84f79ebf7682f251454ad6d9d0077468b498f61e49fc521d44dca8a7a860",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "09ea523377017807c9e39b64bdb19499738d6b838c66a26191df35bf71d4c817",
+      "group": "01a1a75c-46e5-7c7d-8deb-dca512c88431",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 28,
+        "selected_roots": 871
+      },
+      "families": {
+        "cancel": 455,
+        "move": 464,
+        "recall": 599,
+        "end": 875,
+        "blocked": 46,
+        "submit": 23,
+        "priority": 100,
+        "attack": 171,
+        "cast_0": 32,
+        "cast_1": 48,
+        "shop": 28,
+        "ward": 30
+      },
+      "candidate_extra_roots_before_cap": 3092,
+      "windows": {
+        "8": {
+          "windows": 265,
+          "across_rounds": 265,
+          "roots": 2120
+        },
+        "16": {
+          "windows": 127,
+          "across_rounds": 127,
+          "roots": 2032
+        },
+        "32": {
+          "windows": 17,
+          "across_rounds": 17,
+          "roots": 544
+        }
+      },
+      "max_run": 41,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\09ea523377017807c9e39b64bdb19499738d6b838c66a26191df35bf71d4c817\\receipt.json": "beaf36e04ddbb49917f61dfbc2c19cbdeaf99acb443d871494ca979ad71d3e0f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\09ea523377017807c9e39b64bdb19499738d6b838c66a26191df35bf71d4c817\\index.jsonl": "70eb212aacb0a2c1aaa50132b1281498525b3cc785f3506555846960db8d9947",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\09ea523377017807c9e39b64bdb19499738d6b838c66a26191df35bf71d4c817\\receipt.json": "be18ae7af644e8056b16ed459c13b587bdde8f0ff6d4f8efdcf240b467a8776f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\09ea523377017807c9e39b64bdb19499738d6b838c66a26191df35bf71d4c817\\frames.jsonl.gz": "cc5f17c1130feee51f225ea02c2f9d05057a0af0b9be292922ca09de41346df4",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\09ea523377017807c9e39b64bdb19499738d6b838c66a26191df35bf71d4c817\\turns.jsonl": "75e962d49a5abcfcfe33917014a08b2b1481bec233516538caab718d8c9fc70e",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "1e7b3b92a9a6d5477567891815af61b07ac95718a96449cabfe4fe88e8607b25",
+      "group": "01a1a7b7-ca8e-76ea-9deb-35357c8e6682",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 25,
+        "selected_roots": 961
+      },
+      "families": {
+        "cancel": 494,
+        "move": 470,
+        "recall": 588,
+        "end": 966,
+        "cast_1": 51,
+        "blocked": 43,
+        "submit": 22,
+        "priority": 74,
+        "shop": 25,
+        "attack": 157,
+        "ward": 39,
+        "cast_0": 32
+      },
+      "candidate_extra_roots_before_cap": 3006,
+      "windows": {
+        "8": {
+          "windows": 290,
+          "across_rounds": 289,
+          "roots": 2320
+        },
+        "16": {
+          "windows": 130,
+          "across_rounds": 130,
+          "roots": 2080
+        },
+        "32": {
+          "windows": 23,
+          "across_rounds": 23,
+          "roots": 736
+        }
+      },
+      "max_run": 62,
+      "bindings": {
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\1e7b3b92a9a6d5477567891815af61b07ac95718a96449cabfe4fe88e8607b25\\receipt.json": "868eca1146c19f52230a70fdc1fbf052a6bbe227c8a39cab03b2144263cd7c3a",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\1e7b3b92a9a6d5477567891815af61b07ac95718a96449cabfe4fe88e8607b25\\index.jsonl": "957e72df40a6ccbc6a487097fea74477a63aea89837d6249e9c42e5aefd3de75",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1e7b3b92a9a6d5477567891815af61b07ac95718a96449cabfe4fe88e8607b25\\receipt.json": "4eba123debf97dbdd12ed039b378a9d7137e98c90ecba490968647a98e04b9a7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\1e7b3b92a9a6d5477567891815af61b07ac95718a96449cabfe4fe88e8607b25\\frames.jsonl.gz": "e93ef92858a9168d72898a2223cbba05fec87448a5a69e3fa5d5b954b937100d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\augmentation\\1e7b3b92a9a6d5477567891815af61b07ac95718a96449cabfe4fe88e8607b25\\turns.jsonl": "e92b36db1848705299d3f69c1f171b3fd6efcabf9623f345701a9d420f8a8efc",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "22aafbf1d1bb6ff2482201f345d8bb3f87c6455e5245f0d88ff5a880b7d89c5f",
+      "group": "01a1a709-d53d-7e25-bf86-214685a1e66d",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 26,
+        "selected_roots": 871
+      },
+      "families": {
+        "move": 521,
+        "recall": 581,
+        "end": 873,
+        "cancel": 522,
+        "blocked": 40,
+        "submit": 21,
+        "priority": 106,
+        "ward": 52,
+        "cast_1": 41,
+        "attack": 65,
+        "shop": 26,
+        "altar": 6,
+        "cast_0": 17
+      },
+      "candidate_extra_roots_before_cap": 2978,
+      "windows": {
+        "8": {
+          "windows": 277,
+          "across_rounds": 277,
+          "roots": 2216
+        },
+        "16": {
+          "windows": 126,
+          "across_rounds": 126,
+          "roots": 2016
+        },
+        "32": {
+          "windows": 13,
+          "across_rounds": 13,
+          "roots": 416
+        }
+      },
+      "max_run": 74,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\22aafbf1d1bb6ff2482201f345d8bb3f87c6455e5245f0d88ff5a880b7d89c5f\\receipt.json": "3633452e4adbbc96e966ed3bb7ea69691e82d9456c89b01b3505d55404e706ec",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\22aafbf1d1bb6ff2482201f345d8bb3f87c6455e5245f0d88ff5a880b7d89c5f\\index.jsonl": "83ddf8344b8336f750349ac3b29c47f9af5a3bc4320bc4f318a82cdf1d18f9b7",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\22aafbf1d1bb6ff2482201f345d8bb3f87c6455e5245f0d88ff5a880b7d89c5f\\receipt.json": "4d5c738c06ff84aa99a4ba42ea1687ef424a1e6c14bd705b5f646b78dc85b7f2",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\22aafbf1d1bb6ff2482201f345d8bb3f87c6455e5245f0d88ff5a880b7d89c5f\\frames.jsonl.gz": "be16d10274c7fa518b78d699524fddeed02b550684d1c298e321d54ed7ecb37b",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\22aafbf1d1bb6ff2482201f345d8bb3f87c6455e5245f0d88ff5a880b7d89c5f\\turns.jsonl": "a09fb45f2499fd53f0f9fd9a1c0eb4183f8110ed111ffcd55ea6fa0d2e7dc4e5",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "0345aa176b71c12f8462b2a79837cb62baa38785f057b32c9c6f95e8e66dd6fd",
+      "group": "e4c23234-eb55-4500-8cda-a7706137284b",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "2.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 28,
+        "selected_roots": 764
+      },
+      "families": {
+        "cancel": 499,
+        "move": 447,
+        "ward": 57,
+        "recall": 554,
+        "end": 860,
+        "cast_0": 30,
+        "attack": 81,
+        "cast_1": 39,
+        "altar": 13,
+        "shop": 28,
+        "blocked": 27,
+        "priority": 109,
+        "submit": 20
+      },
+      "candidate_extra_roots_before_cap": 2618,
+      "windows": {
+        "8": {
+          "windows": 272,
+          "across_rounds": 270,
+          "roots": 2176
+        },
+        "16": {
+          "windows": 126,
+          "across_rounds": 126,
+          "roots": 2016
+        },
+        "32": {
+          "windows": 12,
+          "across_rounds": 12,
+          "roots": 384
+        }
+      },
+      "max_run": 54,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0345aa176b71c12f8462b2a79837cb62baa38785f057b32c9c6f95e8e66dd6fd\\receipt.json": "d4891a6ee520fa31190e463f3d7bde043a2d5b8ed8fe52826a86f3b18ab5b070",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\0345aa176b71c12f8462b2a79837cb62baa38785f057b32c9c6f95e8e66dd6fd\\index.jsonl": "aa56ec766dae73bd477c90a108b886b50da5f282248fdc613d49c5ed0f385439",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0345aa176b71c12f8462b2a79837cb62baa38785f057b32c9c6f95e8e66dd6fd\\receipt.json": "0bbc50a46fe64da38fcd2a100365a42f74b1a6efe499348803acd75ebdaf4938",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\0345aa176b71c12f8462b2a79837cb62baa38785f057b32c9c6f95e8e66dd6fd\\frames.jsonl.gz": "771bdb62fc30f3fb63f8ee7f85a5b7abee9e41408d873ed4cae225dc0b75962a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\0345aa176b71c12f8462b2a79837cb62baa38785f057b32c9c6f95e8e66dd6fd\\turns.jsonl": "d045a576b80c143d6e7b5400e0e52237d19aeca52330b451699748fea9250298",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    },
+    {
+      "payload": "b41e14413570c55cad7306494d67dd3a814fb70957a4a58e09ba72bdc7c3127d",
+      "group": "01a1b1a8-f02b-730c-a7a5-05645a537fec",
+      "partition": "assessment",
+      "max_extra_roots": 2000,
+      "engine": "3.0.0",
+      "counts": {
+        "extra_roots": 2000,
+        "unavailable_shop_arguments": 46,
+        "selected_roots": 931
+      },
+      "families": {
+        "move": 454,
+        "recall": 605,
+        "end": 893,
+        "cancel": 473,
+        "attack": 255,
+        "cast_1": 60,
+        "priority": 70,
+        "shop": 46,
+        "ward": 14,
+        "cast_0": 46,
+        "altar": 2,
+        "submit": 1,
+        "blocked": 12
+      },
+      "candidate_extra_roots_before_cap": 2898,
+      "windows": {
+        "8": {
+          "windows": 289,
+          "across_rounds": 289,
+          "roots": 2312
+        },
+        "16": {
+          "windows": 128,
+          "across_rounds": 128,
+          "roots": 2048
+        },
+        "32": {
+          "windows": 25,
+          "across_rounds": 25,
+          "roots": 800
+        }
+      },
+      "max_run": 77,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\b41e14413570c55cad7306494d67dd3a814fb70957a4a58e09ba72bdc7c3127d\\receipt.json": "337a16591e451b9be1fbe2ccd1744c37e7d549f86bfae9bd40ffe4f819afa6c6",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\source\\extracted\\b41e14413570c55cad7306494d67dd3a814fb70957a4a58e09ba72bdc7c3127d\\index.jsonl": "3fc429b49d9f63bfba5f448a5cf453190064d90dad8dd8d2fc625c62d64fad6c",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\b41e14413570c55cad7306494d67dd3a814fb70957a4a58e09ba72bdc7c3127d\\receipt.json": "9fc0c523d6d4c7f23efe35dc000ad0dd3ed1d976fadcaecd1b762a521ffb385d",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\b41e14413570c55cad7306494d67dd3a814fb70957a4a58e09ba72bdc7c3127d\\frames.jsonl.gz": "b0e0724b113def04ed36b6158ca8caccafc5be04e00073c69afd0789f9c4d458",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\augmentation\\b41e14413570c55cad7306494d67dd3a814fb70957a4a58e09ba72bdc7c3127d\\turns.jsonl": "a101bdf4a1eade8aaa3b654b95772a6380f6f92626aad8ab83d564f96a5389bf",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb"
+      },
+      "label_scope": "Recorded command header and personal PRE identity/chronology validated; selected labels matched. No new POST/outcome verification, hidden intent, full engine legality or resolved entity target identity claimed. Shop arguments unavailable.",
+      "new_training_rows": 0
+    }
+  ],
+  "new_fits": 0,
+  "new_training_rows": 0,
+  "reserved_opened": 0,
+  "next": "Review label/provenance and capacity evidence before any training-array assembly or temporal fit. This gate is feasibility, not benefit or untouched-test evidence."
+}
