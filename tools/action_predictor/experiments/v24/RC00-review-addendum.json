@@ -1,0 +1,369 @@
+{
+  "source_commit": "0d664434a69454223dc0c4931fa1ca26f9011f35",
+  "sources": {
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/order_information/__init__.py": "4fdb527a783ae1b4dce55921d6143ac82c2b0ad2a6cbc5ac2475aa8ecd257beb",
+    "tools/action_predictor/order_information/anchored.py": "5a8f18159ab514dc1250f2edccbf34053a3e964bb871248b04f24852d6f6895e",
+    "tools/action_predictor/order_information/data.py": "7c6908413a89a5412519e22c0c7cc91e758f5140d14441f4011df5c0ae01d1ec",
+    "tools/action_predictor/order_information/relation_discrimination_v3.py": "2541035ce79c0a22eddec2efcc26cda7ea40bc000e338dc3df917c1369dfacc5",
+    "tools/action_predictor/order_information/schema.py": "5d978a3494199c7e42ad9bfcd8843f102d8d9a111a924d045abb8d465471d281",
+    "tools/action_predictor/order_information/schema_asinh.py": "8b65cbc88b258235a4e5706f372bf07fa6489459234de3f47fb07906524188f9",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_capacity/__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_capacity/protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/relational_priority/__init__.py": "b55a7da0dea4e4ae3c407ded0e75f797e3983fca5a4e998408686f915bf7ec7d",
+    "tools/action_predictor/relational_priority/data.py": "baab09ffe88f3e2a4dde152af7698c43136e933a797257c92a2fa4d94a1888a6",
+    "tools/action_predictor/relational_priority/model.py": "12cf8ba7f1b126cb5bb287eb8deab48b3ea59e9c326d0a5022bbf3dd7a199e41",
+    "tools/action_predictor/relational_priority/protocol.py": "102926b924bb1aaba9f50af44fbe82e83403ffb23d293413db6f26a4324c2f26",
+    "tools/action_predictor/relational_priority/review_addendum.py": "a289ef233d4324b53efe00142800dd3065a72add80a09aab3412b2cb0a12ccf2",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83"
+  },
+  "bindings": {
+    "tools/action_predictor/experiments/v24/RC-plan.json": "50f59beeb14dd844c1fc01b7a9fe4eea46ae6440cac13136f0cce01dd19a90b2",
+    "tools/action_predictor/experiments/v24/RC-data-ready.json": "05e869e17d7e6eeac0f3656b36daa8ce37f714960bff5ed661a1da20a43961e0",
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/order_information/__init__.py": "4fdb527a783ae1b4dce55921d6143ac82c2b0ad2a6cbc5ac2475aa8ecd257beb",
+    "tools/action_predictor/order_information/anchored.py": "5a8f18159ab514dc1250f2edccbf34053a3e964bb871248b04f24852d6f6895e",
+    "tools/action_predictor/order_information/data.py": "7c6908413a89a5412519e22c0c7cc91e758f5140d14441f4011df5c0ae01d1ec",
+    "tools/action_predictor/order_information/relation_discrimination_v3.py": "2541035ce79c0a22eddec2efcc26cda7ea40bc000e338dc3df917c1369dfacc5",
+    "tools/action_predictor/order_information/schema.py": "5d978a3494199c7e42ad9bfcd8843f102d8d9a111a924d045abb8d465471d281",
+    "tools/action_predictor/order_information/schema_asinh.py": "8b65cbc88b258235a4e5706f372bf07fa6489459234de3f47fb07906524188f9",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_capacity/__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_capacity/protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/relational_priority/__init__.py": "b55a7da0dea4e4ae3c407ded0e75f797e3983fca5a4e998408686f915bf7ec7d",
+    "tools/action_predictor/relational_priority/data.py": "baab09ffe88f3e2a4dde152af7698c43136e933a797257c92a2fa4d94a1888a6",
+    "tools/action_predictor/relational_priority/model.py": "12cf8ba7f1b126cb5bb287eb8deab48b3ea59e9c326d0a5022bbf3dd7a199e41",
+    "tools/action_predictor/relational_priority/protocol.py": "102926b924bb1aaba9f50af44fbe82e83403ffb23d293413db6f26a4324c2f26",
+    "tools/action_predictor/relational_priority/test_data.py": "d69655a084bdbb8aec92c228c9424aab6155b463f3d4f798b64b456c68d522bb",
+    "tools/action_predictor/relational_priority/test_model.py": "d8707b91c4c4de8b441077f2f2df0d058dc3b8669b69b1d4a70b985b41b967ac",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83",
+    ".cambc\\action-predictor\\v24\\data\\metadata.npz": "552734612f86b5bdae8beb877d3d5bff81b3be3dfba212f25d358636d317576f",
+    ".cambc\\action-predictor\\v24\\data\\other-real.npy": "b4130f95f90dffc935dc0f596660252107d4fa76093e1c00b7bdd0b4c90b400e",
+    ".cambc\\action-predictor\\v24\\data\\other-shuffled.npy": "e1954a373b81c890c65374dc1cc6ef1a2d233d43ac54f45098b8ee659a0a1640",
+    ".cambc\\action-predictor\\v24\\data\\own.npy": "694cd019ba96ed47e51eafe3c2a4a363b3b1b0999da08881b88ce753ba02b66c",
+    ".cambc\\action-predictor\\v24\\data\\points.npy": "e5039495c37f94244cdd604c01dc4c3110e5346e620a945e201753af8cf38448",
+    "tools/action_predictor/experiments/v19/PC00-completion.json": "447166d435e37387133875f296eb567be5245c5926c42c11b75c96a60e3b900c",
+    "tools/action_predictor/experiments/v22/PC02-completion.json": "71345392889a4232197b471d51b1ecc0ce972af2507d975abb37a6e1ad644817",
+    "tools/action_predictor/experiments/v19/PC00-data-ready.json": "c9d05d1c904ac6fcbbeae2bb1c03e5609ef974dd21c9eca26cd4c1aa335e587d",
+    "tools/action_predictor/experiments/v19/PC00-plan.json": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+    ".cambc/action-predictor/v19/PC00-cohorts/fit.npz": "e4348e643f084c3838c7d60d779fc7ee14a56fea20c06266967453266815292e",
+    ".cambc/action-predictor/v19/PC00-cohorts/same_fit_groups.npz": "3b175a7094bc321a0f5fe720ea9af7214078941e213f954c71c283ff7586a978",
+    ".cambc/action-predictor/v19/PC00-cohorts/held_groups.npz": "759347e10040bb267b3635227399569405cb1775d8b20c4f5cc29e9a21a35418",
+    ".cambc/action-predictor/v21/PC01-cohort.npz": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83",
+    ".cambc/action-predictor/v22/runs/PC02/broad_fit-step-0000-raw.npy": "809f9a390cfc20e7da59ba454b7013a1b5c54293aed42f9a27c41cb911dc3dd5",
+    ".cambc/action-predictor/v22/runs/PC02/broad_fit-step-0000-predictions.npz": "5d0d01bcf37289af054cd852421a9efacb025582e95bdd96d322e69ed472aa04",
+    ".cambc/action-predictor/v8/runs/P05/model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    "tools/action_predictor/experiments/v8/P05.json": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+    "tools/action_predictor/experiments/v8/priority-residual-modes-vocabulary.json": "1fd6470d9572ff92eae489616c8a92fbed0b65d22a61084e587ad1fb174d4147",
+    "tools/action_predictor/experiments/v24/RC00-review.json": "fba5e47723d6727fe6ecff5121869ded5947886161a82151d0dca63f2086a50f",
+    "tools/action_predictor/experiments/v24/RC00-review-delegation.json": "4c977b9118a1453660efec61fd8921a9399fd081b13e0711e4776a1f1eb9be72",
+    "tools/action_predictor/experiments/v24/RC00.json": "725563768cc88ca6a3cb2b64d0037e208f97b8e911a721b1a8d78a2acfe31734",
+    "tools/action_predictor/experiments/v24/RC00-completion.json": "c7b48877da784370a5c03ec13f6ebb376b5dbac6b683cfac49ad5131413905bc",
+    "tools/action_predictor/experiments/v24/RC00-analysis.json": "859c9f49135de7f8b53af1004c384d19743e353d0824047ac2562d4843296e52",
+    ".cambc\\action-predictor\\v24\\review-addendum\\corruption.npz": "2c8466ce6a1e48b1dddbe1f08e98fdc6894ef5137bb167ccf10524d93f5efc8f",
+    "tools\\action_predictor\\experiments\\v24\\RC00-review-scope.json": "fbc1edcd0d03c2e1c6f96b0eecfea9415ad70a3727ff5d2173de4a093ed3321b",
+    "tools\\action_predictor\\experiments\\v24\\RC00-review-response.json": "0c93ee3bf20dec0bd019fd9c7c1d599d5b275e56cecbde82da54363f2bc8b427"
+  },
+  "corruption": {
+    "fit": {
+      "rows": 4208,
+      "raw_values_changed": 3701,
+      "model_relation_features_changed": 3520,
+      "model_relation_features_unchanged": 688
+    },
+    "held": {
+      "rows": 1668,
+      "raw_values_changed": 1484,
+      "model_relation_features_changed": 1427,
+      "model_relation_features_unchanged": 241
+    },
+    "all": {
+      "rows": 5876,
+      "raw_values_changed": 5185,
+      "model_relation_features_changed": 4947,
+      "model_relation_features_unchanged": 929
+    }
+  },
+  "held_reliability": {
+    "warm": {
+      "rows": 1668,
+      "ECE": 0.05904573080705017,
+      "mode_correctness_Brier": 0.1718861369274848,
+      "observed_probability_range": [
+        0.019302317851697736,
+        0.8228698426571278
+      ],
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "rows": 401,
+          "exact": 43,
+          "accuracy": 0.10723192019950124,
+          "mean_mode_probability": 0.07155941107261708
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "rows": 691,
+          "exact": 146,
+          "accuracy": 0.21128798842257598,
+          "mean_mode_probability": 0.14759686336616368
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "rows": 322,
+          "exact": 100,
+          "accuracy": 0.3105590062111801,
+          "mean_mode_probability": 0.2419999861191524
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "rows": 137,
+          "exact": 58,
+          "accuracy": 0.4233576642335766,
+          "mean_mode_probability": 0.34541493994142713
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "rows": 60,
+          "exact": 31,
+          "accuracy": 0.5166666666666667,
+          "mean_mode_probability": 0.44437231276110833
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "rows": 34,
+          "exact": 17,
+          "accuracy": 0.5,
+          "mean_mode_probability": 0.5469564334729634
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "rows": 17,
+          "exact": 11,
+          "accuracy": 0.6470588235294118,
+          "mean_mode_probability": 0.6416251077117116
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "rows": 5,
+          "exact": 5,
+          "accuracy": 1.0,
+          "mean_mode_probability": 0.7569611168034446
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "rows": 1,
+          "exact": 1,
+          "accuracy": 1.0,
+          "mean_mode_probability": 0.8228698426571278
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "rows": 0,
+          "exact": 0,
+          "accuracy": null,
+          "mean_mode_probability": null
+        }
+      ],
+      "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+    },
+    "RC00": {
+      "rows": 1668,
+      "ECE": 0.04855709579574989,
+      "mode_correctness_Brier": 0.18587274093724565,
+      "observed_probability_range": [
+        0.02075984998056117,
+        0.9826549707257821
+      ],
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "rows": 273,
+          "exact": 34,
+          "accuracy": 0.12454212454212454,
+          "mean_mode_probability": 0.06977628533775929
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "rows": 485,
+          "exact": 100,
+          "accuracy": 0.20618556701030927,
+          "mean_mode_probability": 0.15002155730276
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "rows": 309,
+          "exact": 99,
+          "accuracy": 0.32038834951456313,
+          "mean_mode_probability": 0.24545202351552492
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "rows": 182,
+          "exact": 68,
+          "accuracy": 0.37362637362637363,
+          "mean_mode_probability": 0.34854153053617165
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "rows": 112,
+          "exact": 51,
+          "accuracy": 0.45535714285714285,
+          "mean_mode_probability": 0.45251956214955946
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "rows": 87,
+          "exact": 53,
+          "accuracy": 0.6091954022988506,
+          "mean_mode_probability": 0.5474962913079954
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "rows": 78,
+          "exact": 49,
+          "accuracy": 0.6282051282051282,
+          "mean_mode_probability": 0.648375882503459
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "rows": 59,
+          "exact": 44,
+          "accuracy": 0.7457627118644068,
+          "mean_mode_probability": 0.7452575534586136
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "rows": 55,
+          "exact": 46,
+          "accuracy": 0.8363636363636363,
+          "mean_mode_probability": 0.8496104974793303
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "rows": 28,
+          "exact": 23,
+          "accuracy": 0.8214285714285714,
+          "mean_mode_probability": 0.9308756629360576
+        }
+      ],
+      "meaning": "Conditional top-label reliability; Brier is binary mode-correctness, not full multiclass or global policy calibration. No calibration fit/threshold selection."
+    }
+  },
+  "held_scores": {
+    "warm": {
+      "rows": 1668,
+      "exact": 412,
+      "accuracy": 0.24700239808153476,
+      "mean_NLL": 3.0014045570627954,
+      "MAE": 163.21043165467626,
+      "max_error": 1515,
+      "mean_bounded_rank": 12.23621103117506,
+      "mean_mode_probability": 0.18987095832733922,
+      "marginalized_target_source_shares": [
+        0.6751089919316597,
+        0.3209871297794343,
+        0.003903878288905367
+      ]
+    },
+    "RC00": {
+      "rows": 1668,
+      "exact": 567,
+      "accuracy": 0.33992805755395683,
+      "mean_NLL": 2.6804143020495683,
+      "MAE": 157.11630695443645,
+      "max_error": 1515,
+      "mean_bounded_rank": 10.916666666666666,
+      "mean_mode_probability": 0.29780551182876164,
+      "marginalized_target_source_shares": [
+        0.6751677455904638,
+        0.32100543193080755,
+        0.0038268224787289667
+      ]
+    }
+  },
+  "preserved_function_AST": {
+    "execute": true,
+    "raw_forecast": true,
+    "predictions": true,
+    "gradient_contract": true,
+    "penalty": true,
+    "summary": true,
+    "base_fingerprint": true
+  },
+  "interpretation": "Exploratory diagnostic on previously exposed TRAIN. Shared active parameterization and shuffled training, not own-only or information-free control. Fixed-weight V25 interventions remain separate later evidence, not a replacement. Original targets unmet.",
+  "command": "python -m tools.action_predictor.relational_priority.review_addendum",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

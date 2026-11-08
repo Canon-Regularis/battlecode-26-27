@@ -1,6 +1,6 @@
 # Shared signed priority correction
 
-RC00 is complete; its required fresh independent review is next. RC01 is unrun. This is a conditional priority diagnostic, with the recorded family supplied, rather than a complete-policy result. Model training and evaluation only; both reserved partitions remain sealed and PR11 remains draft and unmerged.
+RC00 and its fresh independent review are complete. The [review response](RC00-REVIEW-NOTE.md) corrects the continuation safeguard and adds feature-level corruption and confidence qualifications. RC01 is unrun pending its enforced prerequisites. This is a conditional priority diagnostic, with the recorded family supplied, rather than a complete-policy result. Model training and evaluation only; both reserved partitions remain sealed and PR11 remains draft and unmerged.
 
 The [frozen protocol](RC-plan.json) compares two 72-weight shared corrections of the same frozen P05 core. Both receive exact candidate-relative own-history relations. RC00 trains with matched shuffled other-unit scheduling information; RC01 will train with real information. Every primary assessment uses real causal inputs. The split excludes 15 groups from this new correction optimization, while retaining all 5,876 rows; the warm model and earlier research already saw these eligible TRAIN games.
 
