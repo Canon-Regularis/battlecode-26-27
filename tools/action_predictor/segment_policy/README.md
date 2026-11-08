@@ -24,3 +24,5 @@ python -m tools.action_predictor.segment_policy.fit H00
 ```
 
 Original benchmark, all DEV rows, both sealed partitions and every prior negative result remain preserved. No new priority fits, matches, downloads, bot/runtime or deployment work. AB01's completed fresh review closes that negative study and does not certify this implementation. After each new fit a separate fresh Sol xhigh review is required; no automatic multi-fit script exists.
+
+H00 is now completed and negative against JP02; see `experiments/v30/H00-REPORT.md`. H01 is unrun. Before that contrast, the effective previous-integer information difference must be resolved: direct recurrence encodes earlier priority values, while the original hierarchy's fixed integer likelihood cancels from its posterior. `input_contract_probe.py` and its saved report demonstrate this limited mechanism. The original protocol/sources remain preserved; an explicit amendment is required before a repaired hierarchy fit. Preparatory entity-grounding helpers and bounded cache checks remain outside this frozen fit pair.
