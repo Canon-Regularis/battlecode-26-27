@@ -35,3 +35,8 @@ absolute-log failure remains failed. Portable P05 matches everyDEV integer mode.
 See L00-REPORT.md: +566vsG00 but525recall gains, only+4conditional destinations,
 cast1/priority/ward joint regressions. +15vsB00 accuracy interval spanszero. No
 promotion/repeats. L01 matched persistence test remains pending fresh review.
+
+Fresh L00Solxhigh review COMPLETE: core predictions/LL/selection valid; no
+promotion. LP01component diversity weak (same mode2223/2362moves); preserve and
+compare with L01. Additive outcome-contract tests4pass; frozen fit sources
+unchanged. L01 is authorized NEXT under existing two-fit protocol.

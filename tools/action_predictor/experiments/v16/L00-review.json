@@ -1,0 +1,65 @@
+{
+  "reviewer": "GPT-6.1 Sol",
+  "reasoning_effort": "xhigh",
+  "task_id": "node:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v16-l00-postfit-20261108",
+  "reviewed_head": "57d73dfbf90e1d5df70212f552bc57960f100365",
+  "question": "Read my thread and find all the errors my model has now made and how we could improve all of it substantially",
+  "verdict": "Reproducible L00; no invalidating saved-prediction/checkpoint/probability defect. No promotion; no approval of unrun L01.",
+  "independent_checks": {
+    "completion_hashes": 85,
+    "all_DEV_arrays_and_goals_exact": true,
+    "independent_NumPy_DEV_rows": 14439,
+    "type_destination_mismatches": 0,
+    "max_NLL_difference": 1.05e-05,
+    "max_probability_sum_error": 1.2e-06,
+    "recorded_answers_above_decoded_MAP": 0,
+    "contract_tests": 13
+  },
+  "findings": [
+    {
+      "id": "LP-01",
+      "severity": "high",
+      "finding": "Goal components barely differentiate movement execution",
+      "evidence": {
+        "all_same_mode": 2223,
+        "move_rows": 2362,
+        "all_same_mode_changes": 1059,
+        "change_rows": 1158,
+        "component_mode_union": 1481,
+        "mixture_conditional_correct": 1438,
+        "typed_destination_failures_without_correct_component_mode": 802,
+        "typed_destination_failures": 841,
+        "change_failures_without_correct_component_mode": 756,
+        "change_destination_failures": 772
+      }
+    },
+    {
+      "id": "LP-02",
+      "severity": "high",
+      "finding": "Aggregate recall gains conceal unmet category objectives; no promotion"
+    },
+    {
+      "id": "LP-03",
+      "severity": "high",
+      "finding": "Useful strategic conditioning and persistence unestablished; waypoint projection ablation does not remove all goal pathways"
+    },
+    {
+      "id": "LP-04",
+      "severity": "high",
+      "finding": "Host prototype and hard command/delivery ceilings remain"
+    },
+    {
+      "id": "LP-05",
+      "severity": "medium",
+      "finding": "Nonmovement Boolean SDK returns need explicit attempt/effect contract and tests"
+    },
+    {
+      "id": "LP-06",
+      "severity": "medium",
+      "finding": "Reused DEV, natural cadence and bounded raw serving limits remain"
+    }
+  ],
+  "next": "Already frozen L01-L00 comparison with component-execution diagnostics and precise fixed-checkpoint sensitivity controls. No new architecture/repeated specialists.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
