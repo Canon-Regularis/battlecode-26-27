@@ -1,0 +1,45 @@
+{
+  "games": [
+    {
+      "engine": "2.0.0",
+      "counts": {
+        "available_PREs": 3397,
+        "currently_personal_tokens": 43267,
+        "stale_memory_tokens": 267924,
+        "selected_rows_checked": 737,
+        "current_tokens_checked": 9290
+      },
+      "maximum_remembered_entities": 113,
+      "mismatches": [],
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c\\frames.jsonl.gz": "fb4f6e073d0cafe7c345938b64c9ba94b73d63fccd93da87abf8d9b614289a24",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c\\index.jsonl": "ffcfb1313bea205c548bcc9e2fe7f6bee384db12dc2a597bd788c48d71ed6f4a",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c\\receipt.json": "9cf9c89f61fc11bbdd62a6d61548fb6c3b1aa6e7a925f226b65e062a6fcbdb6f"
+      }
+    },
+    {
+      "engine": "3.0.0",
+      "counts": {
+        "available_PREs": 3212,
+        "currently_personal_tokens": 26167,
+        "stale_memory_tokens": 86666,
+        "selected_rows_checked": 735,
+        "current_tokens_checked": 5764
+      },
+      "maximum_remembered_entities": 53,
+      "mismatches": [],
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c\\frames.jsonl.gz": "ccafc347ce6010bd481edc367aa2f6d64d6fbbb9e5881716fe33912a45e73136",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c\\index.jsonl": "a1746614cb4446fba356cf27df90e0fe01cd71f4748b421874385d9cbeacaede",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c\\receipt.json": "cd1be97f1cd4c67c8833709cae3784dcc7f9b07f399ffeda0301760d75c5fd32"
+      }
+    }
+  ],
+  "source_sha256": "72d33924d9ff2272744cb1d931bc78a86a7c63ac3b93cb0af213ebc55ebe89c0",
+  "memory_source_sha256": "2f445a40523383331d451347c20f8f2300e054cf442ea89aad078ece563a33df",
+  "scope": "First eligible TRAIN game per engine. Current known entity features reproduce the existing V9 cache exactly while identity memory adds explicit stale entries. This validates bounded input construction, not target selection, death availability in every engine/context, complete labels or model performance. Numeric keys never enter neural features.",
+  "new_fits": 0,
+  "new_training_rows": 0,
+  "reserved_opened": 0,
+  "engine_queries": 0
+}
