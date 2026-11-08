@@ -41,3 +41,18 @@ fails to improve imitation. No promotion/repeat seeds. See v16/L02-REPORT.md,
 L02-INTERPRETATION.md and bound comparison artifacts. Fresh Sol6.1xhigh review
 next; then continue automatically, favoring execution/pathway diagnosis over
 another retention-weight variation. This is not the research stopping point.
+
+L02 fresh Sol6.1xhigh review completed: valid negative result; full-unroll
+routing, saved scores,79bindings and9checkpoint RNG/normalization contracts
+independently reproduced. Reporting corrections are additive: distinct CI units,
+preflight auxiliary-derivative list is before routing, and augmented TRAIN exact
+commands improve by2 while natural metrics decline. L02 remains near .99 initial
+retention, so the result does not establish learned useful persistence. See
+v16/L02-review-response.json and L02-reporting-corrections.json.
+Next: tighter TRAIN-mean/bias-preserving geometry/uncertainty/availability
+attribution, separate fixed-state and causallyrefiltered effects. A preliminary
+192-case TRAIN zero-reference sensitivity probe is complete locally (no fitting,
+no DEV): geometry removal changes0/1 potential move modes for L01/L02 and no
+L02 complete observed mode. This measures bounded dependence, not usefulness;
+combined uncertainty/availability removal also removes constant offsets. The
+full next study must resolve these confounds before another architecture fit.
