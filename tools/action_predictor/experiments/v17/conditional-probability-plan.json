@@ -1,0 +1,25 @@
+{
+  "purpose": "Test an additive, algebraically equivalent conditional-probability helper. No integration into models/decoder, training, replacement or benchmark rescoring.",
+  "cohort": "All saved worst-normalization Q01 batches for L01/L02, all spatial families. Selected numerical cohort, repeated contexts across scopes/branches and padding remain explicit. Not an independent performance sample.",
+  "assessment": {
+    "valid_probability_sum_error_limit": 2e-06,
+    "independent_float64_normalization_limit": 1e-12,
+    "observed_NLL_difference_reference_limit": 2e-05,
+    "semantic_modes": "Report all disagreements; do not select a variant."
+  },
+  "unchanged": "Selected model weights, saved contexts/priors, masks, existing decoder, saved primary forecasts, original failed Q01 checks and all historical artifacts.",
+  "independent_reference": "Normalize the frozen component outputs in float64 and sum their conditional probabilities in probability space.",
+  "sources": {
+    "conditional_assessment.py": "b8df1102c3fe9b5fae50a3a8dd357c1c561060c95385f6770809c2838a237612",
+    "conditional_probability.py": "14ff4a28f7f281a9439e7bd3ce7b63bf4587700c30c878e5c0ce3d5e5d4d7e8b",
+    "test_conditional_probability.py": "8d629b03845adc051ecad2184ccfaacafe03d3c85d68207f57c5eccd6f509c7a"
+  },
+  "inputs": {
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v17\\Q01-v2\\L01\\normalization-worst-cases.pt": "4bb11ef1b04b577f77da2a6b3951cd27e795cab7472215e31395b61e848cef64",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v17\\Q01-L01-ready-v2.json": "0592b9e55dbdaca2740bf993e5393d83ba144f5b2dd3b2ad21cb8ca3c033df73",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v17\\Q01-v2\\L02\\normalization-worst-cases.pt": "18afeebb21a5da2987a4e92b4a0be82224f475ec22edc75d699d4e95914af470",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v17\\Q01-L02-ready-v2.json": "d375523f60b92ce8339ce755b639cae3075bfa11285e3a9d22f11cebb70ea8dc"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}
