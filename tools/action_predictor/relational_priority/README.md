@@ -1,6 +1,6 @@
 # Shared signed priority correction
 
-Current results: [V24 index](../experiments/v24/INDEX.md). RC00 has completed; its fresh review precedes the unrun RC01 treatment. The design-stage description below is retained, rather than treated as the current execution status.
+Current results: [V24 index](../experiments/v24/INDEX.md). RC00 is reviewed and RC01 has completed its registered contrast, awaiting its own fresh review. The design-stage description below is retained, rather than treated as the current execution status.
 
 This is an unfitted experimental component. No new policy prediction, training result or promotion is established by its contract tests.
 
