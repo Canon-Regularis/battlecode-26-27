@@ -1,0 +1,20 @@
+{
+  "execution_git_commit": "3d10b9e501e701d1c2149a958a3382b474da8bc0",
+  "sources_uncommitted_at_execution": true,
+  "reason": "Source-archive reconstruction via read_text/write_text changed LF/CRLF bytes, causing a pre-commit assertion failure. The parent failed to gate the later fit on that error; this was a workflow defect. No capacity source/data changed as a result.",
+  "source_hash_protocol_frozen_before_fit": true,
+  "source_bundle": {
+    ".cambc\\action-predictor\\v19\\PC00-executed-sources\\ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c___init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    ".cambc\\action-predictor\\v19\\PC00-executed-sources\\3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3_protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    ".cambc\\action-predictor\\v19\\PC00-executed-sources\\c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04_data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    ".cambc\\action-predictor\\v19\\PC00-executed-sources\\87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299_measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    ".cambc\\action-predictor\\v19\\PC00-executed-sources\\02eb4276262d72c70f652d92a94287267efe88e7b323927ded1c01938a699bb3_fit.py": "02eb4276262d72c70f652d92a94287267efe88e7b323927ded1c01938a699bb3",
+    ".cambc\\action-predictor\\v19\\PC00-executed-sources\\f55f07acbd61f1884fddf3db8e3847e8d386ed414cf8dabff347e1d8cb5432b9_test_measurement.py": "f55f07acbd61f1884fddf3db8e3847e8d386ed414cf8dabff347e1d8cb5432b9"
+  },
+  "protocol_sha256": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+  "fit_result_sha256": "df7ac3e050e7fcfe9f0a3372168ccb44a68852e24080b38db94cef5edd1f0dee",
+  "qualification": "Do not claim execution_git_commit contains PC00 source. Exact executed source hashes are in the pre-fit protocol/bundle; the subsequent commit will bind those same bytes. Existing recorded checkpoint commit fields remain unchanged. No rerun or retrospective checkpoint selection.",
+  "operational_correction": "Gate each dependent tool call on preceding exit_code; no fall-through native-command chains for source/archive/commit/fit.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

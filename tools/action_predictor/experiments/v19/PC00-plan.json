@@ -1,0 +1,58 @@
+{
+  "id": "PC00-actual-P05-capacity",
+  "new_fits_allocated": 1,
+  "purpose": "Can the actual P05 value model fit a fixed small diverse set, and what happens on controls held out from this new optimization? No new architecture or full-policy promotion.",
+  "model": "Warm-start the retained selected P05 absolute/residual/logistic mixture, with all linear weight/bias parameters trainable. Frozen M01 contexts, existing39causal priority channels, original normalization and exact int64 anchor inputs. Original P05 probability arithmetic and integer MAP. No current/future argument input.",
+  "cohort": "Fit: the128natural-TRAIN priority rows in frozen R02 fit indices. Same-fit-group control:128other natural priority rows from groups actually represented in those128, fixed seed20261120, excluding fit rows. Held-group control:128priority rows from R02 held_group indices, whose groups are disjoint from fit. Freeze row identities and support before optimization. This conditional diagnostic does not drop any row or category from the original benchmark.",
+  "exposure": "Encoder, normalization, vocabulary/prior counts AND warm P05 head previously saw eligible TRAIN including control rows/groups. Controls are held out ONLY from new head optimization; not untouched full-policy/group generalization evidence.",
+  "training": {
+    "seed": 20261120,
+    "updates": 2000,
+    "full_fit_batch": 128,
+    "optimizer": "AdamW",
+    "lr_first1000": 0.003,
+    "lr_last1000": 0.001,
+    "weight_decay": 0,
+    "gradient_clip": 5,
+    "loss": "Mean normalized conditional integer NLL over all128fit rows per update. Different presentation/optimization from original full-data P05; capacity probe, not an isolated causal comparison to that training protocol."
+  },
+  "assessment_steps": [
+    0,
+    100,
+    500,
+    1000,
+    2000
+  ],
+  "checkpoint": "Fixed final2000; assessments descriptive only. No DEV lookups/selection, early stopping, threshold tuning or promotion. Original full-DEV .0001/pat6/max35 rule remains unchanged for benchmark fits.",
+  "metrics": [
+    "Exact integers, mean NLL and integer MAE/quantiles on fit and both controls",
+    "Rank among DISTINCT existing point/fallback-mode candidates, explicitly not full-Z rank",
+    "Posterior absolute/residual/fallback shares of recorded-target probability; equivalent explanations marginalized, no true-intent labels",
+    "Support/availability and trainable-parameter/optimizer/gradient checks"
+  ],
+  "preflight": "Before optimizer: exact integer-mode parity with retained G00/P05 TRAIN arguments and conditional-NLL difference<=2e-5 on all384cohort rows. Save raw outputs/checkpoint before checks. Reuse approved extraction evidence; no repeated495game audit.",
+  "diagnostic_fit_gate": {
+    "exact_at_least": 0.95,
+    "mean_NLL_at_most": 0.25,
+    "qualification": "Named finite-budget capacity criterion, not original success. Passing demonstrates small-set fitting only; failing does not prove a hard capacity limit or information insufficiency. Inspect support/gradients/optimization."
+  },
+  "continuation": "Fresh Solxhigh after this fit. If fitting succeeds but controls deteriorate, investigate representation/transfer and prior exposure. No architecture change or repeated seed automatically follows. Continuing research has no global cap.",
+  "integration": "No complete-policy replacement in this diagnostic. Any later comparison must recompute normalized joint action/parameter probabilities and predicted families; cannot merely swap integers while inheriting old hard action choices.",
+  "constraints": "EligibleTRAINonly. Both75game reservations sealed, DEVunopened by this probe. No matches/downloads/bot/runtime work/deployment. Original datasets, folds, checkpoints and all category/likelihood/three-seed targets preserved.",
+  "sources": {
+    "__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "fit.py": "02eb4276262d72c70f652d92a94287267efe88e7b323927ded1c01938a699bb3",
+    "test_measurement.py": "f55f07acbd61f1884fddf3db8e3847e8d386ed414cf8dabff347e1d8cb5432b9"
+  },
+  "dependencies": {
+    "priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "Before any capacity fit or optimizer update",
+  "failure": "Synthetic test used last_argument=-2 while last_available=0; invariant assertion failed. Initial plan was mistakenly frozen by a subsequent shell command despite failed tests; that plan/source snapshot is preserved separately.",
+  "correction": "Unavailable fixture value reset to0. Credits measurement made no-grad; gradient test uses unchanged actual P05 log_mass. Corrected2tests passed before actual fit. No original P05 source/math changes.",
+  "original_plan_sha256": "33ad730b072d50a041a3585149a2de540b3d5bb25178684fcc1f02293ac0efcb",
+  "snapshots": {
+    ".cambc\\action-predictor\\v19\\unit-failure\\data-newline-reconstruction-mismatch.py": "ae8a92c4b0349bdadca4dad0de1d880e724b109fdf832cbcbc8534288bb4d245",
+    ".cambc\\action-predictor\\v19\\unit-failure\\data.py": "0ce10bf800334782aa8f0eb23de3a5956b3a9b98086298b38f10f83c82e4cff9",
+    ".cambc\\action-predictor\\v19\\unit-failure\\measurement.py": "f696605bbe8ff98a2d46f242e1bcb9ae71cbcb9df70da4a08abed6bda27f0820",
+    ".cambc\\action-predictor\\v19\\unit-failure\\test_measurement.py": "2891dab94e3a5f269be84f6581296c04a67dcc31498ebbe2a8ce2bbb7a10b064"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}
