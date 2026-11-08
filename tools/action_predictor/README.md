@@ -1,5 +1,15 @@
 # Intercontinental Fish GRU action predictor
 
+## Current status: learned-policy model research
+
+Use the [current research index](experiments/v21/INDEX.md) for results and next work.
+Ward experimentation was user-discontinued after P00/P01/T00; T01 is unrun.
+Model research continues autonomously. Bot/runtime work is paused, both reserved
+partitions remain sealed, and PR #11 stays DRAFT and unmerged. No model is promoted.
+The chronological sections below are retained from earlier phases; their old
+"current" and "remaining fits" statements do not describe active instructions.
+
+
 ## Current four-fit ward-specialist experiment
 
 The user-directed [ward experiment](experiments/v14/ARCHITECTURE.md) now takes
