@@ -12,6 +12,7 @@ from ..targets import point
 from ..learned_policy.sequence_data import ROOT, BASE, JOBS, ROOT_NAMES
 
 REPORT = ROOT/'tools/action_predictor/experiments/v32'
+PLAN = REPORT/'cache-plan-r2.json'
 JOBS_HASH = '80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba'
 
 
@@ -35,7 +36,7 @@ def freeze():
             j = min((j for j in jobs if j['record']['group'] == group), key=lambda j: j['record']['raw_sha256'])
             chosen.append(dict(payload=j['record']['raw_sha256'], group=group,
                 partition=split, max_extra_roots=quotas[split]))
-    immutable_json(REPORT/'cache-plan.json', dict(jobs_sha256=JOBS_HASH,
+    immutable_json(PLAN, dict(jobs_sha256=JOBS_HASH,
         source_sha256=digest(__file__), group_partitions=mapping, jobs=chosen,
         selection='Hashed group order, then lowest payload hash per group; no labels/outcomes used. All sibling games share partition.',
         scope='Audit60eligibleTRAINgames, at most100000candidateadditionalroots, no new training arrays. Existing selected roots retained. Per-game extra cap applied in event order before inspecting labels; excluded roots remain genuine gaps.',
@@ -55,9 +56,11 @@ def label(turn, root, frame):
         h = frame['pre_header']
         if h['phase'] != 10 or h['currentChampion'] != actor or h['team'] != own['team']:
             raise ValueError('Not a personal decision PRE')
-    if header['phase'] != 10 or header['currentChampion'] != actor or step['actor'] != own['entity']:
+    # Header describes the event's resulting state: end legitimately enters
+    # phase13. The recorded command carries its own originating phase/round.
+    if step['phase'] != 10 or step['actor'] != own['entity']:
         raise ValueError('Command actor/phase mismatch')
-    if frame.get('round', turn['round']) != turn['round'] or header['round'] != turn['round']:
+    if frame.get('round', turn['round']) != turn['round'] or step['round'] != turn['round']:
         raise ValueError('Round mismatch')
     name = ROOT_NAMES.get(step['kind'])
     if name == 'cast': name = 'cast_'+str(step.get('abilitySlot'))
@@ -171,7 +174,7 @@ def audit_game(job, selection):
 
 
 def run():
-    plan_path = REPORT/'cache-plan.json'; plan = json.loads(plan_path.read_text())
+    plan_path = PLAN; plan = json.loads(plan_path.read_text())
     if plan['source_sha256'] != digest(__file__): raise ValueError('Frozen audit source changed')
     jobs = {j['record']['raw_sha256']: j for j in eligible_jobs()}
     results = []

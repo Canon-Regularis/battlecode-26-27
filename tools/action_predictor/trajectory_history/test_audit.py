@@ -7,13 +7,19 @@ def example():
     own = dict(entity=dict(kind=1, index=4), team=1, position=dict(x=5, y=6))
     turn = dict(actor=4, round=9)
     root = dict(pre='3:4', event='4:0', header=dict(phase=10, currentChampion=4, round=9,
-        step=dict(kind=4, actor=own['entity'], to=dict(x=6, y=6), **{'from': own['position']})))
+        step=dict(kind=4, phase=10, round=9, actor=own['entity'], to=dict(x=6, y=6), **{'from': own['position']})))
     frame = dict(actor=4, pre='3:4', round=9, observation=dict(own=own),
         pre_header=dict(phase=10, currentChampion=4, team=1))
     return turn, root, frame
 
 
 class CacheAuditTests(unittest.TestCase):
+    def test_end_uses_command_phase_not_resulting_header(self):
+        t, r, f = example()
+        r['header']['phase'] = 13
+        r['header']['step']['kind'] = 8
+        self.assertEqual(label(t, r, f)['family'], 'end')
+
     def test_recorded_move_and_shop_semantics(self):
         t, r, f = example()
         self.assertEqual(label(t, r, f)['destination'], dict(x=6, y=6))

@@ -1,0 +1,10 @@
+{
+  "status": "failed_before_first_game_result",
+  "source_commit": "933fa2e",
+  "plan": "cache-plan.json",
+  "failure": "Audit incorrectly required resulting event header phase10. Recorded end command at225:0 has command phase10 and resulting header phase13.",
+  "correction": "Use the recorded step phase and round for command provenance, while retaining personal PRE phase/actor/team checks. Add regression test; freeze revised source under cache-plan-r2.json; retain original plan.",
+  "new_training_rows": 0,
+  "new_fits": 0,
+  "reserved_opened": 0
+}
