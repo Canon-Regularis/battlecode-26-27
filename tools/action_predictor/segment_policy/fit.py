@@ -17,6 +17,8 @@ from ..data import digest
 
 def run(arm):
     if arm not in ARMS: raise ValueError('Unknown registered arm')
+    if arm == 'H01':
+        raise RuntimeError('Original H01 has a known history mismatch; use the amended hierarchy_fit entrypoint and frozen amendment')
     # Every prerequisite must pass before optimizer construction or run output.
     plan, gate = preflight()
     directory = WORK/'runs'/arm
