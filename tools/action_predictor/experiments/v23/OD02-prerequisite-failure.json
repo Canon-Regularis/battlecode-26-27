@@ -1,0 +1,12 @@
+{
+  "failure": "KeyError baseline_mode: broad cohort has context/features/values/target/index/group only",
+  "source_commit": "4fd40bc",
+  "source_sha256": "3c29b0fc4108eb48c2148d68569a724b054094635c476d5b2d94023ff096a4ae",
+  "plan_sha256": "88d42d8988257c01260b57c65459d7dfdeb1682da8880819674d4e09f3bfab93",
+  "phase": "Warm candidate parity check before scheduling relation assessment",
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "new_engine_queries": 0,
+  "reserved_opened": 0,
+  "correction": "OD03 binds independent PC02 initial prediction archive, checks cohort schema before assessment, and saves candidate-pair outputs before semantic checks. Original failed source/plan retained. The computed candidate arrays from this failed attempt were not retained; no byte-identity claim to them."
+}
