@@ -191,7 +191,13 @@ def run():
                         arguments_same_type=int((changed&~type_changed).sum()),nonpriority_type_changes=int((type_changed&(p['prediction']!=9)&(o['prediction']!=9)).sum()))
                     comparisons[arm][reference]=comparison
             for name,path in dict(G00='v9/runs/G00',B00='v13/runs/B00',L02='v16/runs/L02').items():
-                full=ROOT/f'.cambc/action-predictor/{path}/validation-predictions.npz';o=read(full)
+                full=ROOT/f'.cambc/action-predictor/{path}/validation-predictions.npz'
+                relative={'G00':'v9/G00.json','B00':'v13/B00.json','L02':'v16/L02.json'}[name]
+                receipt,more=committed_manifest('bcfc9949271de9baf9f1d10b815658e1e8eb423d','tools/action_predictor/experiments/'+relative)
+                bindings.update(more)
+                expected=receipt['predictions_sha256'] if name=='G00' else receipt['prediction_hashes']['validation'] if name=='B00' else receipt['predictions_sha256']['validation']
+                if digest(full)!=expected:raise RuntimeError('Retained comparator archive changed: '+name)
+                o=read(full)
                 if 'family_commands' in o:
                     o['coordinate']=o['family_commands'][np.arange(len(raw['y'])),raw['y'],1];o['priority']=o['family_commands'][:,9,2]
                 bindings[str(full.relative_to(ROOT))]=digest(full)

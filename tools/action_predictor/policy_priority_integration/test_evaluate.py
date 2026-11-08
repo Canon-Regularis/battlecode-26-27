@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from .evaluate import semantic_equal,priority_diagnostics
+from .evaluate import semantic_equal,priority_diagnostics,competition
 
 
 class AssessmentContracts(unittest.TestCase):
@@ -20,6 +20,17 @@ class AssessmentContracts(unittest.TestCase):
         self.assertEqual(out['absolute_frequency_at_most5']['rows'],1)
         empty=priority_diagnostics(raw,p,dict(fallback_weight=np.ones(3)),np.zeros(3,bool),np.array([2,4]),[1,10])
         self.assertIsNone(empty['all']['typed_MAE'])
+
+    def test_competition_bound_is_separate_from_correct_integer(self):
+        raw=dict(y=np.array([9,9,9]),priority=np.array([20,20,20]))
+        p=dict(prediction=np.array([2,2,9]),priority=np.array([20,20,20]))
+        types=np.full((3,15),-100.);types[:,9]=np.log([.2,.6,.6]);types[:,2]=np.log([.8,.4,.4])
+        modes=np.full((3,15),-100.);modes[:,2]=np.log(.4)
+        out=competition(raw,p,dict(mode_logp=np.log([.5,.5,.9])),types,modes)
+        self.assertEqual(out['conditional_mode_correct'],3);self.assertEqual(out['joint_correct'],1)
+        self.assertEqual(out['correct_integer_loses_family_competition'],2)
+        self.assertEqual(out['optimistic_fixed_type_and_other_heads_priority_joint_ceiling'],2)
+        self.assertEqual(out['priority_unreachable_even_with_unit_conditional_mass'],1)
 
 
 if __name__=='__main__':unittest.main()
