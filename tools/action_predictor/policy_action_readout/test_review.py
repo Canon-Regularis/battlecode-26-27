@@ -76,5 +76,13 @@ class ReviewContracts(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError,'MATCHED_SCIENCE_CHANGED'):fit.run('AB01')
             optimizer.assert_not_called()
 
+    def test_reviewed_markdown_is_verified_as_bytes_not_parsed_as_json(self):
+        from types import SimpleNamespace
+        from pathlib import Path
+        from . import review_gate
+        body=b'# Valid reviewed Markdown\nThis is not JSON.\n'
+        with patch.object(review_gate.subprocess,'run',return_value=SimpleNamespace(stdout=body)),patch.object(Path,'read_bytes',return_value=body):
+            self.assertTrue(review_gate.verify_reviewed_artifact('reviewed','AB00-REPORT.md'))
+
 
 if __name__=='__main__':unittest.main()

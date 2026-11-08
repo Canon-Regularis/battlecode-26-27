@@ -60,9 +60,17 @@ def load_review_context():
     hashes={key:digest(OUT/name) for key,name in (('review_sha256','AB00-review.json'),('delegation_sha256','AB00-review-delegation.json'),('review_scope_sha256','AB00-review-scope.json'),('launch_sha256','AB00-review-delegation-launch.json'))}
     reviewed=records['scope']['reviewed_commit']
     for name in ('AB-plan.json','AB-data-ready.json','AB00.json','AB00-completion.json','AB00-REPORT.md','AB00-fitting-diagnosis.json','AB00-completion-supplement.json'):
-        committed_manifest(reviewed,'tools/action_predictor/experiments/v28/'+name)
+        verify_reviewed_artifact(reviewed,name)
     committed_at=subprocess.run(['git','show','-s','--format=%cI',reviewed],cwd=ROOT,check=True,capture_output=True,text=True).stdout.strip()
     return records,expected,hashes,committed_at
+
+
+def verify_reviewed_artifact(commit,name):
+    # Supplemental scope includes Markdown, not only JSON manifests.
+    relative='tools/action_predictor/experiments/v28/'+name
+    blob=subprocess.run(['git','show',commit+':'+relative],cwd=ROOT,check=True,capture_output=True).stdout
+    if (OUT/name).read_bytes()!=blob:raise RuntimeError('Reviewed artifact differs from scientific commit: '+name)
+    return True
 
 
 def verify_control_predictions(completion):
