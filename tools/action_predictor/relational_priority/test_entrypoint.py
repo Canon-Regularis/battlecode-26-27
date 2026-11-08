@@ -74,8 +74,8 @@ f.main()
 
     def test_actual_treatment_entrypoint_rejects_inadequate_review_before_optimizer(self):
         for kind,reason in (('review_empty','empty review'),('review_wrong_checkpoint','review checkpoint'),
-                            ('review_stale','predates'),('review_effort','effort'),
-                            ('review_sources','execution sources'),('review_response','response binding')):
+                            ('review_stale','review predates'),('review_effort','requested effort'),
+                            ('review_sources','reviewed execution sources'),('review_response','response binding')):
             with self.subTest(kind=kind):
                 self.assertIn('RC00_REVIEW_CONTRACT: '+reason,self.tripwire(kind))
 
