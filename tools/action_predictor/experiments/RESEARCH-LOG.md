@@ -119,3 +119,13 @@ and baseline causal filtering, train identical existing readout copies with
 dynamic versus TRAIN-mean projection geometry. No new scorer architecture.
 This tests incremental input usefulness at fixed upstream state, not Fish intent
 or independently retrained persistence. All original targets remain binding.
+
+V18 common upstream cache completed433071TRAIN+14439DEV rows with exact
+latent/context reconstruction and old world/retention parity. Original preflight
+caught missing unused GoalPolicy decoder diagnostics (KeyError world), before
+training; old empty attempt/source preserved. Parameter-free interface adapter
+returns explicit None for these unavailable diagnostics, unchanged command math.
+Versioned preflight passed: U01 full DEV prediction archive byte-identical L02;
+U00 semantic commands identical Q01 mean-geometry baseline, maxNLLdiff8.59e-6
+within prospective2e-5 contract. Initialization tensors identical across arms.
+U00 mean-control fit now authorized under frozen protocol; fresh review beforeU01.
