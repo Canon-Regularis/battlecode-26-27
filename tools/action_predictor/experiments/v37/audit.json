@@ -1,0 +1,4069 @@
+{
+  "plan_sha256": "92acc0377734fa6aee9ccb3f7c00a042b3502abb5a3bb4a9afdebbdad5458e6e",
+  "sources": {
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/algorithmic/__init__.py": "e67ad15f67ce79c62fff4b95f2d169ae52991dc878aa0188c8b9a1c06a726f49",
+    "tools/action_predictor/algorithmic/library.py": "69097e04bd80c27094ac1c222907b32e5c2cbae45f9e8533be3444f0d2adce1c",
+    "tools/action_predictor/algorithmic/study.py": "f59c45ea45f28170e6930152c9c068483e3c03b94dfa59679149d5a6150ca477",
+    "tools/action_predictor/algorithmic_c01.py": "c3f43feef64e4ae6e41891a58fac92e5e0e8df720b269ceceadaeaae89b139dd",
+    "tools/action_predictor/algorithmic_c02.py": "7b03881242e774f7cc902a42eee9a05ff98dfe45f0884df75d7b81721c02764a",
+    "tools/action_predictor/algorithmic_fit.py": "055ba2122c81f73f24bb58bd932eeebd1c30196c7a86343f0772c06e038230f3",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/command_mixture.py": "aaeeace5cbe55758f4618dfa839733b6a35022ec26a5674d603f8bbfa9754400",
+    "tools/action_predictor/consistent_data.py": "df1305bb5765b1c9620bf56324cfa6aca0d309f77419c60f58ea0136d1ab4f0c",
+    "tools/action_predictor/consistent_inputs.py": "98b6d16f71d13a4b9deb6eb9070b5f43bc10b0a7625f3e2dc2230b160d4fe8c8",
+    "tools/action_predictor/consistent_study.py": "47735f02c06c56c348db668a7394bfda3a0998ec269b74f1ae330ca682d4dc89",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/destination_audit/__init__.py": "fd07070bdf286a12af6b123d5d916ffb3579a214a3d1a7317cbdfea7cc2ce420",
+    "tools/action_predictor/destination_audit/audit.py": "a550c06e618a931d4444b3dd821697ea1589037bc9e99d544f64c6fae3d7993d",
+    "tools/action_predictor/destination_audit/test_audit.py": "2a5510ab30c884a275fdee1969b57a40a7d925f3c8177969ffac4d378009dd13",
+    "tools/action_predictor/entity_set.py": "adda3d96bf5f140b659e772c3112975c7f14443daecb7ac98c48185c28fe5b32",
+    "tools/action_predictor/fundamental_audit.py": "c9182a3860fba2fbfbc325e0fb9b0e77f4e0d6885a2ace9beacc360189516c15",
+    "tools/action_predictor/goal_memory.py": "a0e940c09745086e1ff231ce3e26a48deabadbdb1772bf4918c0dcf72f20a61c",
+    "tools/action_predictor/gradient_routing/__init__.py": "f30971e395a1e3ab3a2834978c641124415ea645f52ecd373a7a00ef3fce6869",
+    "tools/action_predictor/gradient_routing/data.py": "7cfc4d9f875f432be2744eea19efca55a1fad2b6d8acf98dd89bd2d61dac239e",
+    "tools/action_predictor/history_horizon/__init__.py": "5ee45b24ff27adf0af4abad419858a416dbf1247f50a1815480e08a9e720998d",
+    "tools/action_predictor/history_horizon/assessment.py": "d3ffafaab7134fa1402fe9cc790686a7cdda1fbe43ab2a7f9c5fa7be619b83f1",
+    "tools/action_predictor/history_horizon/data.py": "cc7345b8569bada4b807d40d42d0c5e89b8f6f8578bd52824fe90bd17a0e4221",
+    "tools/action_predictor/history_horizon/engine.py": "09eccfca7f1c72988edbf29030d7d1bf68cefd41b4b5df14c0370a9dfbc681e9",
+    "tools/action_predictor/learned_policy/__init__.py": "f37c1f61827585195cf46d7b05860971cc19ed63759de61e4750818f41c9d005",
+    "tools/action_predictor/learned_policy/data.py": "98915026ab681ab6c2c8cf1a9e44c82001eaed26ae3a4c358d426c6b359a14c1",
+    "tools/action_predictor/learned_policy/public_inputs.py": "efb867d96f92b29178a59eceeaa32a15083640c7bc91798a851433a7eaf87e77",
+    "tools/action_predictor/learned_policy/sequence_data.py": "23f9296e4a8de19f4251954043c06408c5f5762fa02b68fe01df4e56f41e778c",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/movement_mixture.py": "eb7755561adb5921eab1f04194fab6ee70df883e6ceb0d0810db6c20f6c41670",
+    "tools/action_predictor/movement_predictor.py": "a7d59f893bc2d204e891bc103fe6ce8b919bcaaf12451266778bbb04f780e253",
+    "tools/action_predictor/observation_data.py": "b4a221778fcbc59fb2f28f3410de2b66e1243ae7cc9f1809aef836a09b12c0d1",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/priority_anchor_baselines.py": "c0efc6b1c8a6f0c8729fc5e5f180ed3d569c4826754bf5672f7c35b0c20fa105",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_inputs.py": "6a6e16d582db93108dfa0722e3f0b1495d48c91578bca8ab2d1f05f78dce9929",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_modes_control.py": "eb69d2f8dd46db86612763ed6c8323b9e312adbdfb400d39b8b306033cbcdeb4",
+    "tools/action_predictor/priority_modes_control_predictor.py": "4b3075f0ba01910db6898ad6c93f961832e705db706120cbab3e8efa676fe63a",
+    "tools/action_predictor/priority_modes_control_roundtrip.py": "a5471e96728e077158358a71e13f77a83eabaf0aeffe2f5b7b64fae832ba4480",
+    "tools/action_predictor/priority_modes_fit.py": "1a5370efc2b68996000d6354d4cf1f5bebc657e7d5d245e6eec9bf0a89dfe2e6",
+    "tools/action_predictor/priority_modes_predictor.py": "728175796201aff60a00ca8a7daedaff10830ca4efadef5a26c9a21e819becde",
+    "tools/action_predictor/priority_modes_roundtrip.py": "0cff295aa9949f7de368a402c66b76463b2ecde172eb13a3043ccc8cd03794e5",
+    "tools/action_predictor/priority_predictor.py": "1d24ab9615a783c01c56d3d036ed5a8a5faf5cbba6c0117f7df0fe56a57b5917",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_residual_fit.py": "1082500eb49d990c8c952b81c0f3d74707921fd159689627423d665dcf5d098a",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_residual_predictor.py": "399a92635d1f82cb2e55705c7c8b1e122e6b8c171cca4b13570f80e541cb03b9",
+    "tools/action_predictor/priority_residual_roundtrip.py": "dea8172c0ecde41638bfd43deada286e9840069ec226da2c4991b432475ee1c0",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/proposal_data.py": "72cce8466a3b983992c4471b991ff02bf115940ed41f20c562e4c9fe068595ba",
+    "tools/action_predictor/proposal_generator.py": "880fdb3b17b6b3048ad2f27feae2b46ecd6788cca6238844c3bfcaba57980b46",
+    "tools/action_predictor/proposal_predictor.py": "766fda9b9ad8b0b90374cd0e8b8cac80548c9542d36fa44034a5f652baae8e37",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_predictor.py": "bd2f01c911a8864b4347d6eeae5b80eb4d871b29c4433f6dea93f8c81687e323",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/action_predictor/trajectory_history/__init__.py": "5b297262bcec2e842efb869d17172ed6798b51f04b62e2853ba8340568815649",
+    "tools/action_predictor/trajectory_history/assemble.py": "4c3ca3d7b0cb5622902f99ac4117d4386e2e9b38c488f49c59b38d9dbf86f3d5",
+    "tools/action_predictor/trajectory_history/audit.py": "93788fafb6b853a95447bcd8f6f0da29e0cd9b8bc4cbbe8e56a7b31ee47fa0e6",
+    "tools/action_predictor/trajectory_history/feature_inputs.py": "8c390d340700aae5ea3879210b3053ced653f64c821ca642e2e70afcd8a6d209",
+    "tools/action_predictor/trajectory_history/feature_sources.py": "f5996f3f869642547ddf5e9da4f5f6af07c9b4d5a2268180a03f76c6c7b48070",
+    "tools/action_predictor/trajectory_history/reference.py": "334b9e489b0c2e6a3f171999f65da375d7cda8d167c8df0a50b892701c009cd7",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83"
+  },
+  "archive": ".cambc\\action-predictor\\v37\\pairs.jsonl.gz",
+  "archive_sha256": "a91db48f0dd595810160db9e55ceaf90f5bbb19e48f0ae9df47c55e3af8b4d02",
+  "current_PRE_parity_rows": 2669,
+  "groups": 40,
+  "results": {
+    "R00": {
+      "all_changes": {
+        "rows": 2669,
+        "tile_pairs": 2669,
+        "special_rivals": 0,
+        "unsupported_tile_rivals": 1,
+        "equal_channels": {
+          "offset": 0,
+          "move_length": 2668,
+          "support": 2668,
+          "static_destination": 2663,
+          "entity_distances": 628,
+          "entity_counts": 2669,
+          "entity_hp": 2669,
+          "altar_distance": 801,
+          "own_tile": 2669,
+          "previous_vector": 1180,
+          "task_channels": 243,
+          "all_except_xy": 113
+        },
+        "entities": {
+          "enemy": {
+            "available": 1000,
+            "same_summary_different_nearest_entities": 14,
+            "those_with_all_nearest_entities_in_current_top3": 14,
+            "those_with_some_nearest_entities_omitted": 0,
+            "represented_range_boundary_diff": 113,
+            "omitted_range_boundary_diff": 7,
+            "distance_clipping_collisions": 0
+          },
+          "ally": {
+            "available": 2142,
+            "same_summary_different_nearest_entities": 305,
+            "those_with_all_nearest_entities_in_current_top3": 270,
+            "those_with_some_nearest_entities_omitted": 35,
+            "represented_range_boundary_diff": 721,
+            "omitted_range_boundary_diff": 80,
+            "distance_clipping_collisions": 0
+          },
+          "camp": {
+            "available": 1908,
+            "same_summary_different_nearest_entities": 254,
+            "those_with_all_nearest_entities_in_current_top3": 144,
+            "those_with_some_nearest_entities_omitted": 110,
+            "represented_range_boundary_diff": 461,
+            "omitted_range_boundary_diff": 304,
+            "distance_clipping_collisions": 0
+          }
+        },
+        "same_static_destination_different_neighborhood": 1328,
+        "same_static_destination_different_neighborhood_fully_inside_grid": 1328
+      },
+      "rival_outranks_gold": {
+        "rows": 1768,
+        "tile_pairs": 1768,
+        "special_rivals": 0,
+        "unsupported_tile_rivals": 0,
+        "equal_channels": {
+          "offset": 0,
+          "move_length": 1768,
+          "support": 1768,
+          "static_destination": 1764,
+          "entity_distances": 390,
+          "entity_counts": 1768,
+          "entity_hp": 1768,
+          "altar_distance": 499,
+          "own_tile": 1768,
+          "previous_vector": 682,
+          "task_channels": 145,
+          "all_except_xy": 73
+        },
+        "entities": {
+          "enemy": {
+            "available": 718,
+            "same_summary_different_nearest_entities": 10,
+            "those_with_all_nearest_entities_in_current_top3": 10,
+            "those_with_some_nearest_entities_omitted": 0,
+            "represented_range_boundary_diff": 82,
+            "omitted_range_boundary_diff": 5,
+            "distance_clipping_collisions": 0
+          },
+          "ally": {
+            "available": 1416,
+            "same_summary_different_nearest_entities": 201,
+            "those_with_all_nearest_entities_in_current_top3": 178,
+            "those_with_some_nearest_entities_omitted": 23,
+            "represented_range_boundary_diff": 476,
+            "omitted_range_boundary_diff": 50,
+            "distance_clipping_collisions": 0
+          },
+          "camp": {
+            "available": 1296,
+            "same_summary_different_nearest_entities": 158,
+            "those_with_all_nearest_entities_in_current_top3": 91,
+            "those_with_some_nearest_entities_omitted": 67,
+            "represented_range_boundary_diff": 328,
+            "omitted_range_boundary_diff": 209,
+            "distance_clipping_collisions": 0
+          }
+        },
+        "same_static_destination_different_neighborhood": 839,
+        "same_static_destination_different_neighborhood_fully_inside_grid": 839
+      }
+    },
+    "R01": {
+      "all_changes": {
+        "rows": 2669,
+        "tile_pairs": 2669,
+        "special_rivals": 0,
+        "unsupported_tile_rivals": 1,
+        "equal_channels": {
+          "offset": 0,
+          "move_length": 2668,
+          "support": 2668,
+          "static_destination": 2665,
+          "entity_distances": 627,
+          "entity_counts": 2669,
+          "entity_hp": 2669,
+          "altar_distance": 819,
+          "own_tile": 2669,
+          "previous_vector": 1192,
+          "task_channels": 256,
+          "all_except_xy": 122
+        },
+        "entities": {
+          "enemy": {
+            "available": 1000,
+            "same_summary_different_nearest_entities": 16,
+            "those_with_all_nearest_entities_in_current_top3": 16,
+            "those_with_some_nearest_entities_omitted": 0,
+            "represented_range_boundary_diff": 114,
+            "omitted_range_boundary_diff": 7,
+            "distance_clipping_collisions": 0
+          },
+          "ally": {
+            "available": 2142,
+            "same_summary_different_nearest_entities": 312,
+            "those_with_all_nearest_entities_in_current_top3": 280,
+            "those_with_some_nearest_entities_omitted": 32,
+            "represented_range_boundary_diff": 718,
+            "omitted_range_boundary_diff": 79,
+            "distance_clipping_collisions": 0
+          },
+          "camp": {
+            "available": 1908,
+            "same_summary_different_nearest_entities": 262,
+            "those_with_all_nearest_entities_in_current_top3": 154,
+            "those_with_some_nearest_entities_omitted": 108,
+            "represented_range_boundary_diff": 469,
+            "omitted_range_boundary_diff": 301,
+            "distance_clipping_collisions": 0
+          }
+        },
+        "same_static_destination_different_neighborhood": 1328,
+        "same_static_destination_different_neighborhood_fully_inside_grid": 1328
+      },
+      "rival_outranks_gold": {
+        "rows": 1716,
+        "tile_pairs": 1716,
+        "special_rivals": 0,
+        "unsupported_tile_rivals": 0,
+        "equal_channels": {
+          "offset": 0,
+          "move_length": 1716,
+          "support": 1716,
+          "static_destination": 1713,
+          "entity_distances": 384,
+          "entity_counts": 1716,
+          "entity_hp": 1716,
+          "altar_distance": 495,
+          "own_tile": 1716,
+          "previous_vector": 642,
+          "task_channels": 155,
+          "all_except_xy": 74
+        },
+        "entities": {
+          "enemy": {
+            "available": 702,
+            "same_summary_different_nearest_entities": 10,
+            "those_with_all_nearest_entities_in_current_top3": 10,
+            "those_with_some_nearest_entities_omitted": 0,
+            "represented_range_boundary_diff": 79,
+            "omitted_range_boundary_diff": 3,
+            "distance_clipping_collisions": 0
+          },
+          "ally": {
+            "available": 1367,
+            "same_summary_different_nearest_entities": 189,
+            "those_with_all_nearest_entities_in_current_top3": 168,
+            "those_with_some_nearest_entities_omitted": 21,
+            "represented_range_boundary_diff": 456,
+            "omitted_range_boundary_diff": 48,
+            "distance_clipping_collisions": 0
+          },
+          "camp": {
+            "available": 1253,
+            "same_summary_different_nearest_entities": 161,
+            "those_with_all_nearest_entities_in_current_top3": 97,
+            "those_with_some_nearest_entities_omitted": 64,
+            "represented_range_boundary_diff": 330,
+            "omitted_range_boundary_diff": 200,
+            "distance_clipping_collisions": 0
+          }
+        },
+        "same_static_destination_different_neighborhood": 803,
+        "same_static_destination_different_neighborhood_fully_inside_grid": 803
+      }
+    }
+  },
+  "examples": [
+    {
+      "arm": "R00",
+      "row": 32,
+      "source_id": 44,
+      "group": 0,
+      "gold": 128,
+      "last": 162,
+      "rival": 145,
+      "margin": 1.5472970008850098,
+      "rival_supported": true,
+      "payload": "1a908c3a5fb3bb10d3bbb56b45c23e18a0fd75e2e316fdba58f78814f3e87eb2",
+      "event": "1524:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 3,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 1017,
+      "source_id": 2142,
+      "group": 1,
+      "gold": 128,
+      "last": 126,
+      "rival": 143,
+      "margin": 1.686168909072876,
+      "rival_supported": true,
+      "payload": "2995ad2678d97a4ae0042705570476405bd76cbf9ddfc6e5a4646e77080be3c4",
+      "event": "14256:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 9,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 1225,
+      "source_id": 2844,
+      "group": 2,
+      "gold": 162,
+      "last": 143,
+      "rival": 160,
+      "margin": 0.39737164974212646,
+      "rival_supported": true,
+      "payload": "0389195e66063c50d29880642972b10c743173b6f465a25068d7b6eea2346e0d",
+      "event": "7407:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 2853,
+      "source_id": 5954,
+      "group": 3,
+      "gold": 126,
+      "last": 160,
+      "rival": 145,
+      "margin": 1.0942251682281494,
+      "rival_supported": true,
+      "payload": "3befb2b40b6045dc2f678321fb0c6052d23c1d063a68dd599aa2027c5e129805",
+      "event": "19712:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 30,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": false,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 3181,
+      "source_id": 6748,
+      "group": 4,
+      "gold": 126,
+      "last": 161,
+      "rival": 160,
+      "margin": 1.3090403079986572,
+      "rival_supported": true,
+      "payload": "59ed1fc90707bdc6d6a56f1b38a5e68a301a349d77864853c4f09587c5a18996",
+      "event": "25260:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": true,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 4601,
+      "source_id": 9017,
+      "group": 5,
+      "gold": 128,
+      "last": 126,
+      "rival": 162,
+      "margin": 1.003218173980713,
+      "rival_supported": true,
+      "payload": "09d820cc5c7ce755aa931e7df39ea6f9b9c6c183353df5fd4de8c3689bd7a22e",
+      "event": "6388:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 10,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": true,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          -0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 5206,
+      "source_id": 10078,
+      "group": 6,
+      "gold": 126,
+      "last": 143,
+      "rival": 160,
+      "margin": 0.3134469985961914,
+      "rival_supported": true,
+      "payload": "2ed92420c67a5cf07765dfbc3634888212a6428d25dde9c2298f2a64a9c3fc8f",
+      "event": "20267:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": true,
+          "all_except_xy": true
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 3,
+        "rival_neighbor_obstacles": 3,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 6243,
+      "source_id": 11963,
+      "group": 7,
+      "gold": 161,
+      "last": 162,
+      "rival": 145,
+      "margin": 0.79257732629776,
+      "rival_supported": true,
+      "payload": "4698a7e434ba20affab7ab23b2e913ad31e5bc015b62ec38ddba1256220ef533",
+      "event": "8348:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 1,
+        "rival_neighbor_obstacles": 1,
+        "gold_offset": [
+          0,
+          1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.125,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 7212,
+      "source_id": 14069,
+      "group": 8,
+      "gold": 126,
+      "last": 128,
+      "rival": 145,
+      "margin": 0.9869670867919922,
+      "rival_supported": true,
+      "payload": "62ae707b81a23c8aba5c6a5f15c323346b1e9d0855268f8e6c09349730e73b47",
+      "event": "10498:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 7693,
+      "source_id": 15154,
+      "group": 9,
+      "gold": 162,
+      "last": 161,
+      "rival": 145,
+      "margin": 0.1804729700088501,
+      "rival_supported": true,
+      "payload": "406eba30f6edf7b56a19fb9a6efc74c44bd161839e1dd8638dfd8d15ea6deb17",
+      "event": "6859:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 1,
+        "rival_neighbor_obstacles": 1,
+        "gold_offset": [
+          1,
+          1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 8889,
+      "source_id": 17387,
+      "group": 10,
+      "gold": 160,
+      "last": 161,
+      "rival": 162,
+      "margin": 0.3148469924926758,
+      "rival_supported": true,
+      "payload": "27d187c747fd0ff7fc5e3cb3be48aa925aaa3f2948038a020a7a64fe09698626",
+      "event": "19095:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 5,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 9585,
+      "source_id": 18629,
+      "group": 11,
+      "gold": 128,
+      "last": 127,
+      "rival": 162,
+      "margin": 0.6532570123672485,
+      "rival_supported": true,
+      "payload": "5c5aea638f10f2b53ff13565067eab5e409d7ffa3d31e26f600afed8f479f4ae",
+      "event": "15152:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          -0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 10481,
+      "source_id": 20075,
+      "group": 12,
+      "gold": 161,
+      "last": 162,
+      "rival": 145,
+      "margin": 0.5430734157562256,
+      "rival_supported": true,
+      "payload": "1488d1345645891f5561feb75efd89ca3113764439d45d90ee9dae8bfa257185",
+      "event": "4657:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 5,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 2,
+        "gold_offset": [
+          0,
+          1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.125,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 10764,
+      "source_id": 20627,
+      "group": 13,
+      "gold": 128,
+      "last": 160,
+      "rival": 143,
+      "margin": 1.4068231582641604,
+      "rival_supported": true,
+      "payload": "15dd362ddda0bfce00c8cf835656a03b647ac59ae8e200008847b169dd7561dc",
+      "event": "1897:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 13,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": true,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 1,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 12028,
+      "source_id": 22871,
+      "group": 14,
+      "gold": 128,
+      "last": 145,
+      "rival": 162,
+      "margin": 1.2537025213241577,
+      "rival_supported": true,
+      "payload": "172be7b826f7463edf6b01d5516509d424d52b65b1fe43d8406835ba009139f4",
+      "event": "19155:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 12283,
+      "source_id": 23360,
+      "group": 15,
+      "gold": 128,
+      "last": 145,
+      "rival": 162,
+      "margin": 1.0791563987731934,
+      "rival_supported": true,
+      "payload": "36f889e0e7ecf4f09c96ccccb3c06f8b07a4ab49996940a69da63467c09bc652",
+      "event": "7591:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 14188,
+      "source_id": 26545,
+      "group": 16,
+      "gold": 162,
+      "last": 160,
+      "rival": 145,
+      "margin": 0.09153985977172852,
+      "rival_supported": true,
+      "payload": "7b75829268cd27c9062df3866bb01957ffc3df94da34dfa23aed333e5c59bce8",
+      "event": "12369:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 1,
+        "rival_neighbor_obstacles": 1,
+        "gold_offset": [
+          1,
+          1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 15209,
+      "source_id": 28104,
+      "group": 17,
+      "gold": 161,
+      "last": 143,
+      "rival": 160,
+      "margin": 0.36773109436035156,
+      "rival_supported": true,
+      "payload": "18081af546c5425681d2c334c1c21ab89842e1479f80090eb9ae031ef5540bef",
+      "event": "331:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 1,
+        "gold_offset": [
+          0,
+          1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 15936,
+      "source_id": 29335,
+      "group": 18,
+      "gold": 128,
+      "last": 162,
+      "rival": 145,
+      "margin": 1.3863736391067505,
+      "rival_supported": true,
+      "payload": "1f6fca14c2b6a73f3c063dde35ab54df5993d49c36413db0c98a44aacd73c183",
+      "event": "34088:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 1,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 17376,
+      "source_id": 32334,
+      "group": 19,
+      "gold": 126,
+      "last": 143,
+      "rival": 160,
+      "margin": 0.10936212539672852,
+      "rival_supported": true,
+      "payload": "15fbb8fa6e0500794f6983fae7f497b7c5e4ba6aea95f54d016d155b8d852b91",
+      "event": "27701:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 17964,
+      "source_id": 33799,
+      "group": 20,
+      "gold": 127,
+      "last": 128,
+      "rival": 145,
+      "margin": 1.0674887895584106,
+      "rival_supported": true,
+      "payload": "0764ed72b59ba690ad531d366019b02c6491382d166d9bb9676559a4e1a88afc",
+      "event": "17624:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          0,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.125,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.03125,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 18017,
+      "source_id": 33960,
+      "group": 21,
+      "gold": 161,
+      "last": 126,
+      "rival": 145,
+      "margin": 0.6926157474517822,
+      "rival_supported": true,
+      "payload": "326406c819092146167b3d687268d3ea37e1a1bf403d16d0fb85472bc310ed19",
+      "event": "1408:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 5,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 3,
+        "gold_offset": [
+          0,
+          1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.125,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 19333,
+      "source_id": 36436,
+      "group": 22,
+      "gold": 126,
+      "last": 127,
+      "rival": 145,
+      "margin": 1.261136531829834,
+      "rival_supported": true,
+      "payload": "2de06bf5efe408907748d07257e09c05a56168fc9d20586bdcab5af52a7ffd77",
+      "event": "25095:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 20215,
+      "source_id": 38466,
+      "group": 23,
+      "gold": 143,
+      "last": 160,
+      "rival": 162,
+      "margin": 0.35288429260253906,
+      "rival_supported": true,
+      "payload": "235d58e347a7dc0bd7bdda770f4bffa463a3ae177761984819b84ae2514e0bd8",
+      "event": "10928:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 1,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          0
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          -0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 20997,
+      "source_id": 40088,
+      "group": 24,
+      "gold": 126,
+      "last": 128,
+      "rival": 145,
+      "margin": 1.986310362815857,
+      "rival_supported": true,
+      "payload": "070b2c1ead42ea70b44042a64f7ef543c3e7af95e5036fde068ac94e7d8e9aa5",
+      "event": "20965:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 14,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": false,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": true,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.03125,
+          0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 21213,
+      "source_id": 40427,
+      "group": 25,
+      "gold": 161,
+      "last": 160,
+      "rival": 162,
+      "margin": 0.36271214485168457,
+      "rival_supported": true,
+      "payload": "32f6312b73537c2ce04d91628f5eb0fbbcf95c68058786c54b787b6082f80e68",
+      "event": "13816:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 22,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          0,
+          1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          -0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 22281,
+      "source_id": 42273,
+      "group": 26,
+      "gold": 128,
+      "last": 145,
+      "rival": 162,
+      "margin": 0.743044376373291,
+      "rival_supported": true,
+      "payload": "5bf21f36e7807493261ac5791d71666e2807cb11a5116a6cbfd776cf0ef9c5d1",
+      "event": "9054:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 5,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 23712,
+      "source_id": 45103,
+      "group": 27,
+      "gold": 128,
+      "last": 160,
+      "rival": 143,
+      "margin": 2.0954496860504146,
+      "rival_supported": true,
+      "payload": "363b21b935e7b5d3e29e2b6b030278fbdc5c7f61cb60426595cc99e1dde45ce5",
+      "event": "10689:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 3,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 24025,
+      "source_id": 45610,
+      "group": 28,
+      "gold": 160,
+      "last": 162,
+      "rival": 145,
+      "margin": 0.42186713218688965,
+      "rival_supported": true,
+      "payload": "1d5e970b998f38ab121a0cc12cf84598363a95da6e13ecbbfea768739f32a776",
+      "event": "22462:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0625,
+          -0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 24758,
+      "source_id": 47142,
+      "group": 29,
+      "gold": 128,
+      "last": 143,
+      "rival": 162,
+      "margin": 1.172084450721741,
+      "rival_supported": true,
+      "payload": "0866e49ef0bd8dec11dd61c178aa3b8d66b51eb3576b83651dd7465f823b7c2a",
+      "event": "6533:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": true,
+          "all_except_xy": true
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 8,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 26215,
+      "source_id": 50017,
+      "group": 30,
+      "gold": 126,
+      "last": 145,
+      "rival": 162,
+      "margin": 1.4148378372192383,
+      "rival_supported": true,
+      "payload": "0343d9b746972c566fe772513f3ea4ec43cbfbc4f3e8553963a13eb86a133e03",
+      "event": "21719:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 18,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          1
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.03125,
+          0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 26860,
+      "source_id": 51116,
+      "group": 31,
+      "gold": 162,
+      "last": 127,
+      "rival": 143,
+      "margin": 0.9585801362991333,
+      "rival_supported": true,
+      "payload": "4b7d1ec3db9405e16385e23d1a0d6857d2e8e1bd67eac5f442c05750fb334378",
+      "event": "17466:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          1
+        ],
+        "rival_offset": [
+          -1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 28697,
+      "source_id": 53999,
+      "group": 32,
+      "gold": 126,
+      "last": 143,
+      "rival": 160,
+      "margin": 0.40789353847503684,
+      "rival_supported": true,
+      "payload": "1d084012695b44bd906412181b007d7c4d50688d1143a6b5997775bbdf31cf9b",
+      "event": "15353:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": true,
+          "all_except_xy": true
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 29640,
+      "source_id": 55534,
+      "group": 33,
+      "gold": 145,
+      "last": 126,
+      "rival": 143,
+      "margin": 0.43547654151916504,
+      "rival_supported": true,
+      "payload": "345ad83c0273ab6714bef2b3bdfe1be5dc6e712987c9ecde1901e09e2120cbee",
+      "event": "8123:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": true,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": true,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 6,
+            "current_top3": 3,
+            "nearest_distance_equal": true,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 2,
+        "gold_offset": [
+          1,
+          0
+        ],
+        "rival_offset": [
+          -1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 30463,
+      "source_id": 56940,
+      "group": 34,
+      "gold": 145,
+      "last": 127,
+      "rival": 143,
+      "margin": 0.00036025047302246094,
+      "rival_supported": true,
+      "payload": "107c21e9c5acdb83ba8e66a11b1b35b1298bbadd9882f397944c161adc370612",
+      "event": "6991:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": true,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "camp": {
+            "available": true,
+            "living_known": 6,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 2,
+        "gold_offset": [
+          1,
+          0
+        ],
+        "rival_offset": [
+          -1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 30882,
+      "source_id": 57716,
+      "group": 35,
+      "gold": 128,
+      "last": 162,
+      "rival": 145,
+      "margin": 1.276775240898132,
+      "rival_supported": true,
+      "payload": "2464dfa1a76c875ccb03a3e70f6321f785a41ef9f235220df27035147f3af75f",
+      "event": "5502:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": true,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 4,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 1,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          0.0,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          -0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 31712,
+      "source_id": 59571,
+      "group": 36,
+      "gold": 128,
+      "last": 143,
+      "rival": 160,
+      "margin": 1.1650489568710327,
+      "rival_supported": true,
+      "payload": "13ff514f787b5a56f0e6a509627db97e9b4a704d71179d3b6ea07ef2505a31cf",
+      "event": "15129:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 25,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": false,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": true,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          1,
+          -1
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          -0.03125,
+          -0.0625,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 33073,
+      "source_id": 62159,
+      "group": 37,
+      "gold": 126,
+      "last": 162,
+      "rival": 145,
+      "margin": 1.1980633735656738,
+      "rival_supported": true,
+      "payload": "64b57fbbe8120f0eb969ae03f7eb05e11c7a9009e5ec2eee5d69b9aea7d34efc",
+      "event": "21833:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 27,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": false,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 0,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          -0.0625,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 33846,
+      "source_id": 63615,
+      "group": 38,
+      "gold": 126,
+      "last": 162,
+      "rival": 145,
+      "margin": 1.4879486560821533,
+      "rival_supported": true,
+      "payload": "0d9205327e3d0edd097b4545765e71865faf0687b0b5af5adb8b349d08615361",
+      "event": "9544:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": true,
+            "living_known": 1,
+            "current_top3": 1,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "ally": {
+            "available": true,
+            "living_known": 2,
+            "current_top3": 2,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": false,
+            "candidate_summary_equal": true
+          }
+        },
+        "neighbor_patterns_differ": true,
+        "neighbor_counts_differ": true,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 3,
+        "rival_neighbor_obstacles": 0,
+        "gold_offset": [
+          -1,
+          -1
+        ],
+        "rival_offset": [
+          1,
+          0
+        ],
+        "signed_candidate_difference": [
+          -0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "arm": "R00",
+      "row": 34421,
+      "source_id": 64722,
+      "group": 39,
+      "gold": 145,
+      "last": 143,
+      "rival": 160,
+      "margin": 0.307040810585022,
+      "rival_supported": true,
+      "payload": "16eb632982d329025776afd1e3e5f5b67ba7e9e9350325d602fcf7c62d7c1edd",
+      "event": "18361:0",
+      "trace": {
+        "equal": {
+          "offset": false,
+          "move_length": true,
+          "support": true,
+          "static_destination": true,
+          "entity_distances": false,
+          "entity_counts": true,
+          "entity_hp": true,
+          "altar_distance": false,
+          "own_tile": true,
+          "previous_vector": false,
+          "task_channels": false,
+          "all_except_xy": false
+        },
+        "entities": {
+          "enemy": {
+            "available": false,
+            "candidate_summary_equal": true
+          },
+          "ally": {
+            "available": true,
+            "living_known": 3,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": false,
+            "nearest_union_fully_in_current_top3": true,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": false,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          },
+          "camp": {
+            "available": true,
+            "living_known": 9,
+            "current_top3": 3,
+            "nearest_distance_equal": false,
+            "nearest_entities_differ": true,
+            "nearest_union_fully_in_current_top3": false,
+            "raw_nearest_distance_clipped_collision": false,
+            "represented_range_boundary_diff": true,
+            "omitted_range_boundary_diff": false,
+            "candidate_summary_equal": false
+          }
+        },
+        "neighbor_patterns_differ": false,
+        "neighbor_counts_differ": false,
+        "both_neighborhoods_inside_candidate_grid": true,
+        "gold_neighbor_obstacles": 2,
+        "rival_neighbor_obstacles": 2,
+        "gold_offset": [
+          1,
+          0
+        ],
+        "rival_offset": [
+          -1,
+          1
+        ],
+        "signed_candidate_difference": [
+          0.25,
+          -0.125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03125,
+          -0.03125,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0625,
+          0.0,
+          0.0,
+          0.125
+        ]
+      }
+    }
+  ],
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "limitations": "All destination offsets are distinct; equality of a selected feature subset is never a full-input collision or an achievable-accuracy ceiling. Candidate ranking cannot establish why Fish chose a destination. Preexposed fitting groups and observed histories remain."
+}
