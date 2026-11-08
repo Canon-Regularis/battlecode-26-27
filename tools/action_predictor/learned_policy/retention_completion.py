@@ -20,19 +20,19 @@ def run():
     files.extend((WORK/'runs/L01').glob('*-direct-memory.npz'))
     files.extend(p for p in REPORT.glob('L02*') if p.name!='L02-completion.json')
     files.extend(REPORT.glob('L01-*-direct-memory.json'))
-    files.extend(REPORT/name for name in ('L01-review-response-v2.json','policy-design.json','policy-input-bindings.json',
+    files.extend(REPORT/name for name in ('L01-review-response-v2.json','continuation-authority.json','policy-design.json','policy-input-bindings.json',
         'L01.json','L01-model-completion-v2.json','L01-REPORT.md','L01-analysis.json','L01-natural-cadence.json',
         'component-execution-plan.json','natural-cadence-evaluation-plan.json','analysis-plan.json'))
     files.extend(source.glob('retention_*.py'))
     files.extend((source/'completion_sources').glob('retention_memory_*.py'))
     files.extend(source/name for name in ('model.py','data.py','inference.py','fit.py','analysis.py','components.py',
-        'dominance_bounds.py','natural_evaluation.py','matched_movement.py'))
+        'dominance_bounds.py','natural_evaluation.py','matched_movement.py','current_oracles.py'))
     files.extend(WORK/f'runs/L01/{split}-predictions.npz' for split in ('train','validation'))
     files.append(WORK/f"runs/L01/round-{json.loads((REPORT/'L01.json').read_text())['selected_round']:02d}.pt")
     commands=['retention_preflight','retention_fit L02','analysis L02','matched_movement L02','retention_evaluate',
         'components L02 train','components L02 validation','dominance_bounds L02 train','dominance_bounds L02 validation',
         'natural_evaluation L02','retention_memory L01 train','retention_memory L01 validation',
-        'retention_memory L02 train','retention_memory L02 validation','retention_completion']
+        'retention_memory L02 train','retention_memory L02 validation','current_oracles L02','retention_report','retention_completion']
     immutable_json(REPORT/'L02-completion.json',dict(
         fit_source_commit=info['source_commit'],inventory_commit=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,check=True).stdout.strip(),
         protocol_sha256=digest(REPORT/'L02-protocol.json'),checkpoint_sha256=info['checkpoint_sha256'],

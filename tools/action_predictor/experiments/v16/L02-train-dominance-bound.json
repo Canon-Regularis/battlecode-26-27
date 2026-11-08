@@ -1,0 +1,53 @@
+{
+  "results": {
+    "move": {
+      "rows": 48286,
+      "actual_conditional_correct": 30847,
+      "common_top_destination_wrong": 16288,
+      "recorded_coordinate_unrepresentable": 0,
+      "conservative_conditional_ceiling_under_current_reweighting": 31998,
+      "current_conditional_errors_provably_unfixable_by_current_reweighting": 16288,
+      "typed_destination_errors": 16098,
+      "typed_destination_errors_provably_unfixable_by_current_reweighting": 15104
+    },
+    "blocked": {
+      "rows": 1906,
+      "actual_conditional_correct": 422,
+      "common_top_destination_wrong": 1285,
+      "recorded_coordinate_unrepresentable": 0,
+      "conservative_conditional_ceiling_under_current_reweighting": 621,
+      "current_conditional_errors_provably_unfixable_by_current_reweighting": 1285,
+      "typed_destination_errors": 514,
+      "typed_destination_errors_provably_unfixable_by_current_reweighting": 453
+    },
+    "continuation": {
+      "rows": 25918,
+      "actual_conditional_correct": 24489,
+      "common_top_destination_wrong": 1056,
+      "recorded_coordinate_unrepresentable": 0,
+      "conservative_conditional_ceiling_under_current_reweighting": 24862,
+      "current_conditional_errors_provably_unfixable_by_current_reweighting": 1056,
+      "typed_destination_errors": 1272,
+      "typed_destination_errors_provably_unfixable_by_current_reweighting": 938
+    },
+    "change": {
+      "rows": 22279,
+      "actual_conditional_correct": 6297,
+      "common_top_destination_wrong": 15205,
+      "recorded_coordinate_unrepresentable": 0,
+      "conservative_conditional_ceiling_under_current_reweighting": 7074,
+      "current_conditional_errors_provably_unfixable_by_current_reweighting": 15205,
+      "typed_destination_errors": 14805,
+      "typed_destination_errors_provably_unfixable_by_current_reweighting": 14146
+    }
+  },
+  "component_artifact_sha256": "5ee177c57ec441dc6a734ccfe5f3db1303b7597bbd6bada144a60082018e6d8c",
+  "component_receipt_sha256": "fb0c69614539a771077ef527af6177559607e37a5513227dc235523ea639d989",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "direction_sha256": "97a4ca1b39099b49d4e283ba824ef1421cf73de39645f043a9a3173b4cd66546",
+  "source_sha256": "e6b897a92190380d5a8c6947867c6b1b183790a9de760561756064460779fb66",
+  "proof": "If every component has the same first-argmax coordinate q and q differs from recorded t, q weakly dominates t in every component. If q<t, ties also choose q. If q>t, each component must strictly prefer q. Thus t cannot be first-argmax of any nonnegative current mixture. This includes the deterministic tie rule.",
+  "interpretation": "Conservative oracle upper bound holding CURRENT component distributions and past state fixed. Other non-common-mode rows may also be unreachable; their reachability is unresolved. It is not achieved accuracy, a full-policy/architecture ceiling, an intent label or oracle routing used by the predictor. Retraining components or changing past goal state can change the bound.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

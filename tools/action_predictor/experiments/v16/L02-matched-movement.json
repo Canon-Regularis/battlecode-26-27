@@ -1,0 +1,88 @@
+{
+  "results": {
+    "train": {
+      "G00": {
+        "startup": {
+          "rows": 89,
+          "conditional_exact": 64,
+          "joint_exact": 42
+        },
+        "continuation": {
+          "rows": 25918,
+          "conditional_exact": 24345,
+          "joint_exact": 22499
+        },
+        "change": {
+          "rows": 22279,
+          "conditional_exact": 6616,
+          "joint_exact": 5777
+        }
+      },
+      "L02": {
+        "startup": {
+          "rows": 89,
+          "conditional_exact": 61,
+          "joint_exact": 54
+        },
+        "continuation": {
+          "rows": 25918,
+          "conditional_exact": 24489,
+          "joint_exact": 23910
+        },
+        "change": {
+          "rows": 22279,
+          "conditional_exact": 6297,
+          "joint_exact": 5755
+        }
+      }
+    },
+    "validation": {
+      "G00": {
+        "startup": {
+          "rows": 6,
+          "conditional_exact": 3,
+          "joint_exact": 2
+        },
+        "continuation": {
+          "rows": 1198,
+          "conditional_exact": 1120,
+          "joint_exact": 1053
+        },
+        "change": {
+          "rows": 1158,
+          "conditional_exact": 311,
+          "joint_exact": 263
+        }
+      },
+      "L02": {
+        "startup": {
+          "rows": 6,
+          "conditional_exact": 3,
+          "joint_exact": 3
+        },
+        "continuation": {
+          "rows": 1198,
+          "conditional_exact": 1121,
+          "joint_exact": 1089
+        },
+        "change": {
+          "rows": 1158,
+          "conditional_exact": 304,
+          "joint_exact": 273
+        }
+      }
+    }
+  },
+  "bindings": {
+    ".cambc\\action-predictor\\v9\\runs\\G00\\train-predictions.npz": "00c975b5165e2d0f36ad3925e272edce1f23bc984e234a1cc5ad7929cfc62b5e",
+    ".cambc\\action-predictor\\v16\\runs\\L02\\train-predictions.npz": "f53aa40ab103f0bf6771a545fe2299f04b31ea1b2ec6d9f8e093e79f8af5a40e",
+    ".cambc\\action-predictor\\v7\\train-direction.npy": "97a4ca1b39099b49d4e283ba824ef1421cf73de39645f043a9a3173b4cd66546",
+    ".cambc\\action-predictor\\v9\\runs\\G00\\validation-predictions.npz": "f6ca6a970b05e519d28dc378703a338012718b675806d292d467f043a15f24ea",
+    ".cambc\\action-predictor\\v16\\runs\\L02\\validation-predictions.npz": "b0340c29feffe2d119e4c1be930c9bcc68b61fd2945155c30e44bff0853bd984",
+    ".cambc\\action-predictor\\v7\\validation-direction.npy": "6e6cb5f2b9619137082c75fa086bfcfa1122833a1bf6f58e89e777130a8dbbcb"
+  },
+  "qualification": "Same identity-verified natural TRAIN rows and all original DEV movement rows, identical conditional/joint definitions. TRAIN remains in-sample; learned-policy augmented filter traversal cadence differs from natural DEV and is not isolated group-shift evidence.",
+  "source_sha256": "6c37d135966a297a6f5b9d699f931b6c2c4cac7ac75d19b7a2aef7d6a5b93aa0",
+  "new_fits": 0,
+  "reserved_opened": 0
+}
