@@ -21,7 +21,8 @@ unavailable current/scheduled priority inputs. Thirteen focused tests passed.
 The immutable manifest is `assembly.json`; data are in the ignored directory
 `.cambc/action-predictor/v32/features-v1`. All source and input bindings are in
 `assembly-plan.json`. No optimizer or new model fit has run. Independent review
-of the completed assembly is pending.
+of the completed assembly approved the inputs without findings; the actual
+review is bound in `assembly-review.json`. This approval does not cover fitting.
 
 The next planned contrast separates recurrent access from gradient horizon:
 reset every eight available roots, carry state with eight-step detachment, and
