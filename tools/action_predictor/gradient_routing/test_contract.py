@@ -111,5 +111,20 @@ class Contract(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'review missing'):run('R00')
             opt.assert_not_called()
 
+    def test_final_comparison_budget_boundary_prevents_publication(self):
+        from .fit import checked_elapsed,publish_result
+        # An earlier evaluation check passes; final comparison/hash work then
+        # reaches or exceeds the cap, including time spent in the first arm.
+        for final_time in (7200.,7200.25):
+            with patch('tools.action_predictor.gradient_routing.fit.time.perf_counter',side_effect=[7199.,final_time]),patch('tools.action_predictor.gradient_routing.fit.immutable_json') as write:
+                self.assertEqual(checked_elapsed(100.,100.),7099.)
+                with self.assertRaisesRegex(RuntimeError,'budget exhausted'):
+                    publish_result('unused.json',{},100.,100.)
+                write.assert_not_called()
+        with patch('tools.action_predictor.gradient_routing.fit.time.perf_counter',return_value=7199.5) as clock,patch('tools.action_predictor.gradient_routing.fit.immutable_json') as write:
+            publish_result('unused.json',dict(arm='R01'),100.,100.)
+            clock.assert_called_once()
+            write.assert_called_once_with('unused.json',dict(arm='R01',seconds=7099.5))
+
 
 if __name__=='__main__':unittest.main()

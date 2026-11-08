@@ -16,6 +16,20 @@ from ..audit import immutable_json
 from ..data import digest
 
 
+def checked_elapsed(tick,prior_seconds):
+    elapsed=time.perf_counter()-tick
+    if prior_seconds+elapsed>=7200:
+        raise RuntimeError('Two-hour paired budget exhausted; preserve attempt, no restart/extension')
+    return elapsed
+
+
+def publish_result(path,result,tick,prior_seconds):
+    # Called after final comparison and archive hashing. Use this same checked
+    # measurement in the result, so an over-budget pair cannot be completed.
+    result['seconds']=checked_elapsed(tick,prior_seconds)
+    immutable_json(path,result)
+
+
 def run(arm):
     plan,gate=preflight(arm)
     directory=WORK/'runs'/arm
@@ -27,8 +41,7 @@ def run(arm):
     rng=np.random.default_rng(SEED);updates=0;trace=[];tick=time.perf_counter()
     schedules=json.loads((REPORT/'construction-probe.json').read_text())['schedules']
     def budget():
-        if time.perf_counter()-tick+gate['prior_seconds']>=7200:
-            raise RuntimeError('Two-hour paired budget exhausted; preserve attempt, no restart/extension')
+        return checked_elapsed(tick,gate['prior_seconds'])
     def save(name,epoch):
         torch.save(dict(state=model.state_dict(),optimizer=optimizer.state_dict(),round=epoch,updates=updates,
             torch_rng=torch.get_rng_state(),numpy_rng=rng.bit_generator.state,arm=arm,
@@ -60,12 +73,12 @@ def run(arm):
         comparisons['R00']=comparison(data,prediction,control)
     records=[s for row in trace for s in row['steps']]
     bindings={str(p.relative_to(ROOT)):digest(p) for p in directory.rglob('*') if p.is_file()}
-    immutable_json(REPORT/f'{arm}.json',dict(arm=arm,protocol_sha256=gate['protocol_sha256'],source_commit=gate['source_commit'],
+    publish_result(REPORT/f'{arm}.json',dict(arm=arm,protocol_sha256=gate['protocol_sha256'],source_commit=gate['source_commit'],
         review_bindings=gate['review_bindings'],bindings=bindings,initial=initial,final=final,comparisons=comparisons,
         trace=trace,selected_round=8,completed_rounds=8,completed_updates=updates,row_presentations=34720*8,
         gradient_conflicts=dict(steps=len(records),conflicts=sum(s['conflict'] for s in records),projected=sum(s['projected'] for s in records)),
         clipping=dict(steps=len(records),clipped=sum(s['clipped'] for s in records),fraction=float(np.mean([s['clipped'] for s in records]))),
-        seconds=time.perf_counter()-tick,new_fits=1,optimizer_updates=updates,promoted=False,reserved_opened=0))
+        new_fits=1,optimizer_updates=updates,promoted=False,reserved_opened=0),tick,gate['prior_seconds'])
     print(arm,'completed; fresh independent review required',flush=True)
 
 

@@ -1,0 +1,21 @@
+{
+  "verdict": "CHANGES",
+  "reviewed_head": "669d605a1552c0aa7759a25598da279eca9cf963",
+  "review_task_id": "node:delegated-task:command%3Amcp%3Af5f199c3-d88e-464c-b423-4c127fef8ba3%3Adelegate-task%3Agradient-routing-prefit-review-20261109-r1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "protocol_sha256": "3dc4f542dbc8007d715e25cd67c42e15bc35dd159e23798bfc85b44449a4cb72",
+  "review_summary": "VERDICT: **CHANGES**\n\n**S1 — should — [gradient_routing/fit.py:60](F:/Code/battlecode-26-27/tools/action_predictor/gradient_routing/fit.py:60): Final comparison can exceed the paired budget without failing.** The last `budget()` check occurs at line 56, before R01’s paired comparison and archive hashing. If those operations cross the 7,200-second limit, lines 63–68 still publish a completed result. This violates the combined fitting/evaluation cap.\n\nMinimal fix: measure elapsed time after comparison and hashing, reject if `prior_seconds + elapsed >= 7200`, and record that same elapsed value. Rebind the frozen sources/protocol and add a synthetic boundary test.\n\nIndependently checked:\n\n- All **22 approved tests passed**.\n- **92 source / 94 input hashes** matched protocol SHA `3dc4f542dbc8007d715e25cd67c42e15bc35dd159e23798bfc85b44449a4cb72`.\n- Canonical 1,085 windows, 34,720 distinct rows, 40 groups, exact normalized inputs, eight schedules, and 272-update accounting matched.\n- Fresh seed-27 state/RNG and 256-row forecast archives matched exactly.\n- 128-row gradient parity reproduced: maximum absolute error **1.4901161193847656e-8**, with exact unused-parameter presence.\n- Actual R00 preflight failed at missing `prefit-review.json`.\n\nNo other correctness findings in projection math, objective decomposition, detachment, normalization, inference separation, or acceptance arithmetic. Original V32 assembly provenance remains dependent on the bound approved receipt; I did not reconstruct it.\n\nReviewed HEAD `669d605a1552c0aa7759a25598da279eca9cf963`. No edits, actual-data optimizer steps, or protected payload loads. Unrelated untracked files were preserved. R00 eligibility requires resolving S1 and binding the actual prefit review; this review grants no performance or promotion approval.",
+  "findings": [
+    {
+      "id": "S1",
+      "severity": "should",
+      "status": "fixed_pending_independent_recheck",
+      "issue": "Final paired comparison and archive hashing could exceed the combined budget before a completed result was published.",
+      "fix": "Check elapsed time after comparison and archive hashing, before publishing; record that same checked measurement. Synthetic boundary test covers below, at and above cap with prior-arm time."
+    }
+  ],
+  "tests_passed": 23,
+  "actual_data_optimizer_updates": 0,
+  "new_fits": 0
+}
