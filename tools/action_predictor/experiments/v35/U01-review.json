@@ -1,0 +1,14 @@
+{
+  "verdict": "APPROVE",
+  "reviewed_head": "9f31603",
+  "review_task_id": "node:delegated-task:command%3Amcp%3Af5f199c3-d88e-464c-b423-4c127fef8ba3%3Adelegate-task%3Acadence-probe-u01-postfit-review-20261109",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "protocol_sha256": "45c623972b591d39c814a52c6a7fbe86c12c5ab60cda03f6bd5f92685f37c14b",
+  "result_sha256": "9808a989601321d47d6fa4de5b7db1a58a74787e71a66d21ad16aaa243e52d6b",
+  "findings": [],
+  "review_summary": "VERDICT: **APPROVE**\n\nFindings: none—no blocker, should-fix, or nit items.\n\nIndependently verified:\n\n- Protocol/result hashes, 92 source bindings, 91 inputs, all 38 U01 archives, and the actual U00 review gate bound at `7901d94`.\n- Exact matched initialization, empty optimizer state, Torch/NumPy RNG, all 16 schedules and coverage, 131,072 row presentations, 512 treatment updates with 256-row denominators, finite norms, and final-pass-16 selection.\n- U01 initial/final 8,192-row prediction and movement archives and every summary reproduce exactly. Causal ordering, modeled likelihood, joint decoding, decomposition, paired groups/windows, and leave-one-group-out calculations check out. All 19 permitted tests pass.\n\nThe negative allocation conclusion in [REPORT.md](F:/Code/battlecode-26-27/tools/action_predictor/experiments/v35/REPORT.md:23) is correct: change accuracy gains **1.869 pp**, below the required 5 pp; continuation accuracy loses **3.545 pp**, exceeding the allowed 1 pp. The other five conditions pass, so `all_checks_pass=False` is correct. Report arithmetic, category attribution, oracle caveats, and recorded 85.362-second combined budget also check out.\n\nApproval covers evidence and correctness only. The report appropriately limits its conclusion to this configuration and budget. It authorizes no further fit, full-population experiment, or promotion; existing reference, reliability, category-90%, three-seed, and data limitations remain.\n\nNo edits, commits, pushes, comments, new fits, actual-data optimizer updates, or held/reserved payload loading were performed.",
+  "scope": "Evidence and correctness only. Negative allocation result; no further cadence fits, full-population cadence experiment, promotion, generalization or strategy claim.",
+  "actual_data_optimizer_updates": 0,
+  "new_fits": 0
+}
