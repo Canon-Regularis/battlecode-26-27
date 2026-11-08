@@ -11,7 +11,9 @@ from ..audit import immutable_json
 from ..data import digest
 
 REPORT=ROOT/'tools/action_predictor/experiments/v34'
-WORK=ROOT/'.cambc/action-predictor/v34'
+WORK=ROOT/'.cambc/action-predictor/v34/r2'
+PLAN=REPORT/'diagnostic-plan-r2.json'
+RESULT=REPORT/'diagnostic-r2.json'
 
 
 def decomposition(logp,gold,last):
@@ -86,7 +88,7 @@ def measures(raw,ids,lp,type_lp):
 @torch.no_grad()
 def forecast(model,data):
     raw=data['arrays'];ids=np.flatnonzero(raw['y']==8);index=np.full(len(raw['y']),-1,np.int64);index[ids]=np.arange(len(ids))
-    lp=np.full((len(ids),291),np.nan);type_lp=np.full((len(ids),15),np.nan)
+    lp=np.full((len(ids),291),np.nan);type_lp=np.full((len(ids),15),np.nan);observed_nll=np.full(len(ids),np.nan)
     seen=np.zeros(len(raw['y']),np.uint8);state=model.empty(32);model.eval()
     for batch in chunks(data['sequences'],unroll=32):
         for row in batch:
@@ -103,8 +105,9 @@ def forecast(model,data):
             state=put(state,active,post);seen[at]+=1
             move=target['y']==8;where=index[at[move.numpy()]]
             lp[where]=spatial[move].numpy();type_lp[where]=typ[move].numpy()
+            observed_nll[where]=loss[move].numpy()
     if not np.all(seen==1) or not np.isfinite(lp).all() or not np.isfinite(type_lp).all():raise ValueError('Incomplete forecast')
-    return dict(ids=ids,move_logp=lp,type_logp=type_lp)
+    return dict(ids=ids,move_logp=lp,type_logp=type_lp,observed_nll=observed_nll)
 
 
 def run():
@@ -132,11 +135,12 @@ def run():
         key=str(path.relative_to(ROOT))
         if digest(path)!=result['bindings'][key]:raise ValueError('Checkpoint changed')
         bindings[key]=digest(path)
-    immutable_json(REPORT/'diagnostic-plan.json',dict(source_sha256=digest(__file__),bindings=bindings,
+    immutable_json(PLAN,dict(source_sha256=digest(__file__),bindings=bindings,
         checkpoint_policy='Only A initial and its frozen primary selected checkpoint; no retrospective model/selector selection.',
         partition='Only all65465fittingrows,10400recordedmoves. Causal replay of existinginputs; no tuning/assessment loading.',
         metrics='Type/coordinate NLL; exact-repeat/complement decomposition; conditional gold rank; oracle forced-nonrepeat mode; fixedthreshold.5,AUC,Brier and10equalwidth reliability bins; full16/missingframe strata.',
-        restrictions='No optimizer, training, fitted recalibration, new labels, deployment, reservedgames or matches. No repeats or modelpromotion.',new_fits=0))
+        correction='Preserve original diagnostic attempt. r2 records the original observed-loss path separately from all-row movement-conditional evaluation; differentfloat32batch shapes can differ by a few1e-6. Require exact original-loss reproduction and retain the cross-batch discrepancy.',
+        restrictions='No optimizer, training, fitted recalibration, new labels, deployment, reservedgames or matches. No repeated fits or modelpromotion.',new_fits=0))
     WORK.mkdir(parents=True);setup(SEED);data=load('fit');summaries={};archives={}
     with np.load(saved_path) as z:saved={k:z[k] for k in z.files}
     for name,path in checkpoints.items():
@@ -146,12 +150,15 @@ def run():
             ids=output['ids'];gold=data['arrays']['py'][ids];nll=-output['type_logp'][:,8]-output['move_logp'][np.arange(len(ids)),gold]
             if not np.array_equal(output['move_logp'].argmax(1),saved['coordinate'][ids]):raise ValueError('Selected modes changed')
             error=float(np.max(np.abs(nll-saved['nll'][ids])))
-            if error>1e-6:raise ValueError('Selected likelihood changed')
+            original_error=float(np.max(np.abs(output['observed_nll']-saved['nll'][ids])))
+            if original_error!=0:raise ValueError('Original observed-loss path changed')
+            if error>1e-5:raise ValueError('Excessive all-row/subbatch floating-point discrepancy')
         summaries[name]=measures(data['arrays'],output['ids'],output['move_logp'],output['type_logp'])
         print(name,json.dumps(summaries[name]['strata']['change']),flush=True)
-    immutable_json(REPORT/'diagnostic.json',dict(plan_sha256=digest(REPORT/'diagnostic-plan.json'),
+    immutable_json(RESULT,dict(plan_sha256=digest(PLAN),
         source_sha256=digest(__file__),bindings=bindings,archives=archives,results=summaries,
-        selected_forecast_nll_max_difference=error,new_fits=0,optimizer_updates=0,reserved_opened=0))
+        selected_allrow_vs_observed_nll_max_difference=error,selected_original_observed_nll_max_difference=original_error,
+        new_fits=0,optimizer_updates=0,reserved_opened=0))
 
 
 if __name__=='__main__':run()
