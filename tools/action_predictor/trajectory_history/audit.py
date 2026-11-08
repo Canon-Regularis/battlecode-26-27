@@ -5,6 +5,7 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+import numpy as np
 from ..audit import cursor, immutable_json
 from ..data import action_name, digest
 from ..rich_data import read_turns, SPATIAL
@@ -12,7 +13,7 @@ from ..targets import point
 from ..learned_policy.sequence_data import ROOT, BASE, JOBS, ROOT_NAMES
 
 REPORT = ROOT/'tools/action_predictor/experiments/v32'
-PLAN = REPORT/'cache-plan-r2.json'
+PLAN = REPORT/'cache-plan-r3.json'
 JOBS_HASH = '80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba'
 
 
@@ -91,7 +92,13 @@ def window_counts(streams):
     return out
 
 
-def audit_game(job, selection):
+def selected_matches(target, expected, priority):
+    return (target['family'] == action_name(expected) and
+        (target['family'] not in SPATIAL or target['destination'] == expected.get('to')) and
+        (target['family'] != 'priority' or target['priority'] == priority))
+
+
+def audit_game(job, selection, canonical_priority):
     payload = job['record']['raw_sha256']; bindings = {}
     def checked(path, expected=None):
         value = digest(path)
@@ -113,6 +120,7 @@ def audit_game(job, selection):
             if event in selected: raise ValueError('Duplicate selected root')
             selected[event] = d
             observations[event] = dict(actor=t['actor'], pre=d['pre_cursor'], round=t['round'], observation=d['observation'])
+    priority_by_event = dict(zip(selected, canonical_priority[job['offset']:job['offset']+job['rows']]))
     turns_path = Path(job['record']['augmented_path']) if 'augmented_path' in job['record'] else source/'turns.jsonl'
     checked(turns_path, job['record'].get('augmented_sha256', job['record']['turns_sha256']))
     teams = {f['observation']['own']['team'] for f in observations.values()}
@@ -154,9 +162,9 @@ def audit_game(job, selection):
                 continue
             if event in selected:
                 d = selected[event]; expected = d['label']
-                if (target['family'] != action_name(expected) or
-                    (target['family'] in SPATIAL and target['destination'] != expected.get('to')) or
-                    (target['family'] == 'priority' and target['priority'] != expected.get('priority'))):
+                # Compact selected label dictionaries omit integer arguments;
+                # compare them against the bound canonical priority array.
+                if not selected_matches(target, expected, priority_by_event[event]):
                     raise ValueError('Selected command parity failed')
                 checked_selected.add(event)
             counts['selected_roots' if event in selected else 'extra_roots'] += 1
@@ -177,11 +185,16 @@ def run():
     plan_path = PLAN; plan = json.loads(plan_path.read_text())
     if plan['source_sha256'] != digest(__file__): raise ValueError('Frozen audit source changed')
     jobs = {j['record']['raw_sha256']: j for j in eligible_jobs()}
+    canonical = BASE/'combined-train.npz'
+    canonical_hash = '39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb'
+    if digest(canonical) != canonical_hash: raise ValueError('Canonical TRAIN changed')
+    with np.load(canonical) as z: priorities = z['priority']
     results = []
     for selection in plan['jobs']:
         job = jobs[selection['payload']]
         if job['record']['group'] != selection['group']: raise ValueError('Group mismatch')
-        result = audit_game(job, selection)
+        result = audit_game(job, selection, priorities)
+        result['bindings'][str(canonical)] = canonical_hash
         immutable_json(REPORT/'games'/(selection['payload']+'.json'), result)
         results.append(result)
         print('Validated', len(results), '/', len(plan['jobs']), selection['partition'], flush=True)

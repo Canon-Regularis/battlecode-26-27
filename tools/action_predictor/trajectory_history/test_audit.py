@@ -1,6 +1,6 @@
 import copy
 import unittest
-from .audit import label, window_counts
+from .audit import label, window_counts, selected_matches
 
 
 def example():
@@ -14,6 +14,12 @@ def example():
 
 
 class CacheAuditTests(unittest.TestCase):
+    def test_priority_uses_canonical_integer_not_absent_compact_label_field(self):
+        target = dict(family='priority', priority=604, destination=None)
+        expected = dict(root_class='priority', kind=9, slot=None)
+        self.assertTrue(selected_matches(target, expected, 604))
+        self.assertFalse(selected_matches(target, expected, 603))
+
     def test_end_uses_command_phase_not_resulting_header(self):
         t, r, f = example()
         r['header']['phase'] = 13
