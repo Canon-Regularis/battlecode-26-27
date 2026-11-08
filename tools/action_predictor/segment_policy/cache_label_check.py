@@ -9,7 +9,7 @@ import numpy as np
 from ..data import action_name, digest
 from ..audit import immutable_json, cursor
 from ..rich_data import read_turns, SPATIAL
-from ..learned_policy.sequence_data import ROOT, JOBS, ROOT_NAMES
+from ..learned_policy.sequence_data import ROOT, JOBS, ROOT_NAMES, BASE
 from .. import reliable_train as rt
 from .data import REPORT
 
@@ -34,7 +34,16 @@ def run():
             for root in turn['roots']: roots[root['event']] = (turn, root)
         shard = Path(j['shard'])
         if digest(shard) != j['shard_sha256']: raise RuntimeError('Frozen shard changed')
-        with np.load(shard) as z: raw = {k: z[k] for k in ('y', 'py', 'priority')}
+        with np.load(shard) as z:
+            if set(z.files) != {'x', 'history', 'y', 'round', 'group'}:
+                raise RuntimeError('Unexpected V7 observation-only shard schema')
+            shard_y = z['y']
+        canonical = BASE/'combined-train.npz'
+        expected_train = '39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb'
+        if digest(canonical) != expected_train: raise RuntimeError('Frozen TRAIN changed')
+        with np.load(canonical) as z:
+            raw = {k: z[k][j['offset']:j['offset']+j['rows']] for k in ('y', 'py', 'priority')}
+        np.testing.assert_array_equal(shard_y, raw['y'])
         count = spatial = priorities = 0
         errors = []
         for turn in read_turns(j['manifest'], record):
@@ -63,7 +72,7 @@ def run():
                 count += 1
         if count != j['rows']: raise RuntimeError('Canonical row alignment changed')
         results.append(dict(engine=record['engine_version'], rows=count, spatial=spatial, priorities=priorities,
-            mismatches=errors, bindings={str(path): digest(path), str(shard): digest(shard)},
+            mismatches=errors, bindings={str(path): digest(path), str(shard): digest(shard), str(canonical): expected_train},
             interpretation='Bounded recorded-index/frozen-label consistency, not historical engine legality, ambiguous entity identity resolution or proof that every extra cached root supplies a complete training label.'))
     value = dict(games=results, source_sha256=digest(__file__), jobs_sha256=digest(JOBS),
         new_training_rows=0, new_fits=0, reserved_opened=0, engine_queries=0)

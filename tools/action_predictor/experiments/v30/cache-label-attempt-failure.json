@@ -1,0 +1,9 @@
+{
+  "operation": "Separate TRAIN-only index-label inventory; not a fit prerequisite or part of the frozen H00/H01 executable closure",
+  "failed_source_commit": "a6df33e",
+  "failure": "Consumer assumed V7 observation-only shards contained py and priority. Actual schema is x/history/y/round/group. KeyError occurred before measurements, training-row production or report output.",
+  "correction": "Explicit schema validation; retain V7 y identity check and read parameters from the original combined TRAIN archive at the canonical job offsets. Current H00 fit uses that original archive already and is unaffected.",
+  "new_fits": 0,
+  "new_training_rows": 0,
+  "reserved_opened": 0
+}
