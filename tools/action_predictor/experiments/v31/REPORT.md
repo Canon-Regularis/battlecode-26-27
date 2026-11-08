@@ -35,8 +35,8 @@ Both arms select round six (10,456 updates), after twelve completed rounds
 trainable parameters. All original 433,071 TRAIN and 14,439 DEV rows remain;
 natural/augmentation-only TRAIN strata are in-sample, not held-out evidence.
 
-The prefit implementation and E00 passed independent Sol xhigh reviews. E01's
-fresh postfit review is pending. No identical seed repeats or promotion follow
+The prefit implementation, E00 and E01 passed separate independent Sol xhigh
+reviews, with no findings requiring changes. No identical seed repeats or promotion follow
 this failed contrast. Both reserved 75-game partitions remain sealed. No matches,
 replay downloads, bot/runtime changes or deployment occurred.
 
