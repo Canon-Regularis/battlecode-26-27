@@ -23,9 +23,12 @@ FEATURES=tuple(['normalized_own_priority_'+str(i) for i in range(39)]+['pair_una
 
 def source_gate():
     reject_optimized_python()
-    return committed_sources(ROOT,dependency_files(ROOT,('tools.action_predictor.policy_action_readout.data',
+    result=committed_sources(ROOT,dependency_files(ROOT,('tools.action_predictor.policy_action_readout.data',
         'tools.action_predictor.policy_action_readout.fit','tools.action_predictor.policy_action_readout.test_model',
         'tools.action_predictor.policy_action_readout.test_data','tools.action_predictor.policy_action_readout.test_review')))
+    from .matched_guard import verify_scientific_contract
+    verify_scientific_contract(result[1])
+    return result
 
 
 def inputs():

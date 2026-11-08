@@ -1,15 +1,28 @@
-# Prospective action-belief readout
+# Marginal action-belief experiment
 
-This small component is untrained and has no fit runner or selected feature treatment. It prepares a probability contract for an evidence-led action-selection comparison after the V27 independent review. No experiment outcome or benefit is claimed.
+The registered study tests direct causal own-priority/history inputs using a small learned correction to frozen L02 marginal action probabilities. All conditional argument distributions stay fixed, including RC01 priorities. It learns no new strategy or recurrent state. Loss and final joint MAP use the same normalized distribution.
 
-Given frozen family beliefs, it learns an affine correction from explicitly supplied causal features and normalizes all 15 family probabilities together. Existing conditional command distributions remain fixed. Its loss uses the recorded command only as supervision, while decoding ranks each family's actual conditional mode mass multiplied by the learned family probability. It never normalizes mode scores or chooses arguments using the recorded family.
+The input package is 39 retained P05 channels plus two soft PRE indicators from the earlier unrun classifier design. Three constant-zero columns are removed using TRAIN only, leaving 38 active columns and 570 weights in both arms. The control shuffles the complete block within correction-fit group, engine and availability strata; both primary inference paths use real causal inputs. This tests the combined representation/training contrast, not individual fields or a causal information effect.
 
-This is a marginal-family correction. It is not the original per-goal action readout, a newly trained recurrent filter, or evidence of strategic learning. A future protocol must explicitly hold or recompute filtering, freeze input schemas and active-capacity controls, use full original denominators and checkpoint rules, compare complete commands and every category, and receive fresh post-fit review. The component itself allocates no fit.
+AB00 is completed at selected round18of24: 12,144/14,439 complete DEV commands versus JP02's12,137, with paired accuracy and NLL intervals spanning zero and lower macro F1. Its fresh independent review validates measurements and requires continuation-gate repairs. AB01 remains registered and unrun pending those repairs. Original targets remain unmet; fixed argument modes impose further category ceilings.
 
-No-update contract command:
+Optimization uses 243,522 natural rows from79TRAINgroups; 45,279naturalrows/15groups are excluded only from this new optimization. Every original TRAIN/DEV row remains in assessment. Warm components and earlier research already saw these groups; natural membership retains frozen augmented-cadence upstream state.
+
+The frozen protocol/reports/receipts are in `experiments/v28`. Completed and failed destinations must not be overwritten. Historical reproduction commands and the registered next arm, using the pinned interpreter from the repository root:
 
 ```text
-python -m unittest tools.action_predictor.policy_action_readout.test_model -v
+python -m tools.action_predictor.policy_action_readout.data
+python -m tools.action_predictor.policy_action_readout.fit AB00
+python -m tools.action_predictor.policy_action_readout.diagnose AB00
+python -m tools.action_predictor.policy_action_readout.fit AB01
 ```
 
-Tests use synthetic distributions and do not update parameters. They establish arithmetic and interface properties, not quality. No reserved data, matches, bot/runtime or deployment work is used.
+Data and AB00 artifacts already exist: consume their results. AB01 requires a fresh completed scoped Sol xhigh control review, verified control forecasts before optimization, and a byte-identical scientific implementation. Explicit guard-only repairs are recorded separately. No matches, downloads, reserved access, bot/runtime or deployment work is allowed. Shops remain unassessed strict failures; sparse categories, entity identity, full legality and global calibration remain uncertified.
+
+Synthetic probability/gradient and continuation tests:
+
+```text
+python -m unittest tools.action_predictor.policy_action_readout.test_model tools.action_predictor.policy_action_readout.test_data tools.action_predictor.policy_action_readout.test_review -v
+```
+
+Tests perform no optimizer updates and establish contracts, not model quality.
