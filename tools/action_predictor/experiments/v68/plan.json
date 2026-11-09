@@ -1,0 +1,37 @@
+{
+  "seed": 66001,
+  "horizons": [
+    2,
+    4,
+    8
+  ],
+  "epochs": 16,
+  "every": 4,
+  "lr": 0.001,
+  "batch": 128,
+  "clip": 5.0,
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\bounded_goal_execution.py": "61f3dcb1d5b4fbbe71e1ee590a16d6ee86fd06ece1c9461a0697b06ceda64f22",
+    "tools\\action_predictor\\behavior_segments\\bounded_goal_execution_fit.py": "034941b4a814d371e2575c1e5a44d699111600162d22b79ba07982a18a1b6206",
+    "tools\\action_predictor\\behavior_segments\\bounded_goal_execution_predictor.py": "10e4843bf3f019bbe11c623e943734521b4acd7ef64ca33b10d6784f12dcbdf0",
+    "tools\\action_predictor\\behavior_segments\\test_bounded_goal_execution.py": "2058c560881687f35c97e96120581dd1c67b657b71b0754202daad8d23a65cc6"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v66\\plan.json": "564b560151fa823f4dde4ef770ed3c88f3124e460ad75e87bc67fc3316e5927c",
+    "tools\\action_predictor\\experiments\\v66\\cache.json": "70738f6f447b727e81cb4fade0ba7efee02d2853bf26daeea22d43861f188590",
+    "tools\\action_predictor\\experiments\\v66\\fit.json": "1bb0c36cd871968af310f51456bbe8980a5eecfb093ae8537b72f61ea9bcbcfe",
+    "tools\\action_predictor\\experiments\\v66\\selection.json": "47242503cc7c8790a42fbe096ffce695532441364ed6a19e2ea84e50e86f399c",
+    "tools\\action_predictor\\experiments\\v66\\result.json": "e5d08032e5fab491fcf2e1e99363a0fe13c57542e5f95c8583cefadbfaa40e17",
+    "tools\\action_predictor\\experiments\\v66\\verification.json": "65a14229fcc817061832857ea019663c476a66eb0f0e433df2de48d345af78f6",
+    "tools\\action_predictor\\experiments\\v67\\plan.json": "c52508f8250fb4a62f5f108a01a9ebc52a0d41399fea7324a28542ddbb60478e",
+    "tools\\action_predictor\\experiments\\v67\\inspection.json": "866b2549403b46cc654b85690f173e245ec58c8d38844cdcae42b7c647ef0f7c",
+    "tools\\action_predictor\\experiments\\v67\\result.json": "3670e80005bd7755d997f0301472d471e4cf704178a780ea5a8fc576ad65221f",
+    "tools\\action_predictor\\experiments\\v67\\verification.json": "b5f90c30f1ff1700922b19c9a11247d2709ef363ea41a89c9dba2f4295ca22b0"
+  },
+  "fit_seconds_cap": 600,
+  "intervention": "Same8833parameter executor architecture and frozen V59/V62 models. Replace only8 supplied-goal features with bounded unit direction(x,y),clipped Chebyshev progress,clipped route progress,next/current goal-region membership,move-direction cosine,and availability. Each is in[-1,1]. Absolute goal distance and scalar radius are omitted; region shape still enters route progress/membership. Retrain the executor from matched fresh initialization,not by reinterpreting already-trained input weights.",
+  "matched_control": "Reuse completed V66 goal-conditioned arm as original-feature control. Same seed66001,initial tensors,training rows,horizon weighting,permutations,optimizer settings,16passes,and0/4/8/12/16selection opportunities. Verify exact schedules and initialization against original archives. No additional control repeat.",
+  "selection": "Same as V66: four fitting-game folds; select most supplied-goal diagnostic correct movements,then lowest NLL,then earlier epoch. One full refit selected duration. No evaluation-guided choices.",
+  "success": "Primary transfer test on unchanged513 queries with frozen predicted V62 goals: exceed original V66,calibrated V67,and V59 direct correct counts; NLL<=direct+0.01. Supplied-future-goal diagnostic accuracy must lose<=2points vsV66. All required;80percent still411/513. Diagnostic goals remain privileged information. No promotion automatically.",
+  "limits": "This changes representation plus learned weights,not a manual existing-weight-only edit. Removes potentially useful distance/urgency information from goal-specific channels; original map/context features remain. Bounded ranges do not prove equivalent task semantics or resolve high-level goal choice. Point-goal demonstrations versus region goals,teacher-forced history,preexposed games,one paired seed,no autonomous outcomes/strategy proof. No subagents."
+}
