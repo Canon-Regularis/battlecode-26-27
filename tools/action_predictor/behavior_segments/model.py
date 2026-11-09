@@ -8,6 +8,24 @@ from .data import FEATURES
 OFFSETS=[(x,y) for y in (-1,0,1) for x in (-1,0,1)]
 
 
+def encode_observation(row,route,keys):
+    if row['observation']['own'].get('position') is not None:return gm.encode(row,route,keys)
+    # Dead/shop PREs are real observations without a location. Preserve their state
+    # and public map, but never fabricate an origin or valid goal distribution.
+    own,entities,raw=gm.feature_dicts(row);w,h=route['width'],route['height']
+    grid=np.zeros((11,h,w),np.float32);grid[0]=1;grid[1].reshape(-1)[route['blocked']]=1
+    yy,xx=np.mgrid[:h,:w];grid[2]=xx/100;grid[3]=yy/100;grid[10]=-1
+    for p in route['altars']:grid[6,p['y'],p['x']]=1
+    team=row['observation']['own']['team']
+    for i,s in enumerate(route['spawns']):grid[7 if i==team else 8,s['minY']:s['maxY'],s['minX']:s['maxX']]=1
+    positions=[]
+    for e in raw:
+        p=gm.xy(e.get('position'));positions.append(p if p and 0<=p[0]<w and 0<=p[1]<h else (-1,-1))
+    return dict(grid=torch.from_numpy(grid),valid=torch.zeros(h,w,dtype=torch.bool),
+        own=torch.from_numpy(gm.vector(own,keys['own'])),entities=torch.from_numpy(np.stack([gm.vector(e,keys['entity']) for e in entities])),
+        positions=torch.tensor(positions),unencoded_fields=len(set(own)-set(keys['own']))+sum(len(set(e)-set(keys['entity'])) for e in entities))
+
+
 class SegmentPolicy(nn.Module):
     def __init__(self,keys,codes=8):
         super().__init__();self.maps=gm.GoalMap(keys);del self.maps.output
@@ -44,7 +62,7 @@ class SegmentPolicy(nn.Module):
 def encode_window(window,route,keys):
     encoded=[]
     for step in window['steps']:
-        if step['observed']:encoded.append(gm.encode(step['input'],route,keys))
+        if step['observed']:encoded.append(encode_observation(step['input'],route,keys))
         else:
             h,w=route['height'],route['width']
             encoded.append(dict(grid=torch.zeros(11,h,w),valid=torch.zeros(h,w,dtype=torch.bool),
@@ -61,7 +79,11 @@ def move_support(window):
     support=torch.zeros(len(window['steps']),9,dtype=torch.bool);labels=torch.full((len(window['steps']),),-1,dtype=torch.long)
     for i,s in enumerate(window['steps']):
         if not s['observed']:continue
-        own=s['input']['observation']['own']['position'];support[i,4]=True
+        own=s['input']['observation']['own'].get('position')
+        if own is None:
+            if s['movement'] is not None:raise ValueError('Movement without PRE origin')
+            continue
+        support[i,4]=True
         for p in s['input']['supplement']['movement']:
             delta=(p['x']-own['x'],p['y']-own['y'])
             if delta in OFFSETS:support[i,OFFSETS.index(delta)]=True

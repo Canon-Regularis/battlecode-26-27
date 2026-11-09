@@ -126,12 +126,12 @@ def evaluate(net,windows,maps,cache,discovery,split,deadline):
             if not s['observed']:continue
             p=(goal_pred[i]%width,goal_pred[i]//width);g=discovery['endpoints'][w['key']][i]
             step=gm.goal_guided_move(maps[w['payload']],s['input'],p) if s['movement'] is not None else None
-            origin=xy(s['input']['observation']['own']['position']);actual=(origin[0]+s['movement'][0],origin[1]+s['movement'][1]) if s['movement'] is not None else None
+            origin=xy(s['input']['observation']['own'].get('position'));actual=(origin[0]+s['movement'][0],origin[1]+s['movement'][1]) if s['movement'] is not None else None
             records.append(dict(key=w['key'],event=s['event'],group=w['group'],position=i,
                 code_label=discovery['labels'][w['key']][i],code_prediction=code_pred[i],
                 move_label=int(movement[i]) if movement[i]>=0 else None,move_prediction=move_pred[i],
                 movement_nll=float(-move_lp[i,movement[i]]) if movement[i]>=0 else None,
-                goal_prediction=list(p),goal_label=g,goal_error=max(abs(p[0]-g[0]),abs(p[1]-g[1])) if g is not None else None,
+                goal_prediction=list(p) if origin is not None else None,goal_label=g,goal_error=max(abs(p[0]-g[0]),abs(p[1]-g[1])) if g is not None else None,
                 goal_nll=float(-goal_lp[i,goals[i]]) if goals[i]>=0 else None,astar_correct=step==actual if actual is not None else None))
     return dict(summary=aggregate(records),groups={g:aggregate([r for r in records if r['group']==g]) for g in sorted({r['group'] for r in records})},records=records)
 
@@ -139,7 +139,7 @@ def evaluate(net,windows,maps,cache,discovery,split,deadline):
 def fit_arm(arm):
     plan=json.loads((REPORT/'protocol.json').read_text());check(plan);discovery=json.loads((REPORT/'discovery.json').read_text())
     if discovery['protocol_sha256']!=digest(REPORT/'protocol.json') or not discovery['feasible']:raise ValueError('Discovery not feasible/bound')
-    windows,maps=load();directory=WORK/arm;directory.mkdir(parents=True,exist_ok=False)
+    windows,maps=load();directory=WORK/(arm+'-run');directory.mkdir(parents=True,exist_ok=False)
     start=time.perf_counter();deadline=start+plan['seconds_cap_per_arm'];torch.set_num_threads(4)
     cache={};unknown=Counter()
     for w in windows:cache[w['key']],n=model.encode_window(w,maps[w['payload']],plan['schema']);unknown[w['partition']]+=n

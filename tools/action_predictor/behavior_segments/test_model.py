@@ -49,5 +49,14 @@ class CausalPolicyTests(unittest.TestCase):
         self.assertTrue(torch.all(probabilities[~support]==0))
         torch.testing.assert_close(probabilities.sum(-1),torch.ones(4))
 
+    def test_observed_dead_state_has_no_invented_origin(self):
+        w,r,k=self.fixture();w['steps'][0]['input']['observation']['own'].pop('position');w['steps'][0]['movement']=None
+        args,_=model.encode_window(w,r,k)
+        self.assertEqual(float(args['observed'][0]),1)
+        self.assertFalse(args['batch']['valid'][0].any())
+        self.assertEqual(args['batch']['positions'][0,0].tolist(),[-1,-1])
+        support,labels=model.move_support(w);self.assertEqual(int(labels[0]),-1)
+        output=model.SegmentPolicy(k)(**args);self.assertTrue(torch.isfinite(output['code']).all())
+
 
 if __name__=='__main__':unittest.main()
