@@ -1,0 +1,25 @@
+{
+  "control_sha256": "8da0df9b1e502f02e5c02d6875956677fa5de0e766d2a91de3688748e0b922b1",
+  "treatment_sha256": "2d587f71a4c71837b21eca0c74d6aac59725e25d15f0b53bd40c237e155e9c6e",
+  "checks": {
+    "movement_gain": false,
+    "goal_within2_gain": false,
+    "goal_error": false,
+    "movement_nll": true
+  },
+  "passed": false,
+  "deltas": {
+    "rows": 0,
+    "movement_rows": 0,
+    "goal_rows": 0,
+    "movement_accuracy": 0.005847953216374269,
+    "movement_nll": -0.005371503895021501,
+    "goal_within2": -0.010204081632653073,
+    "goal_exact": 0.020408163265306117,
+    "mean_goal_error": 0.09183673469387754,
+    "goal_nll": 0.08285939936735165,
+    "astar_movement_accuracy": 0.007797270955165692,
+    "code_accuracy": 0.6452074391988555
+  },
+  "qualification": "Matched code-supervision contrast on the same learned segment endpoints. No claim of verified objective discovery, improvement over historical full-command policies, or playing strength."
+}
