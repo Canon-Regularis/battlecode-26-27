@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "fit": {
+      "movement_rows": 1997,
+      "baseline": 1289,
+      "adaptive": 930,
+      "reselect": 918,
+      "utility_rows": 701,
+      "utility": {
+        "selected": 0.2022111269614836,
+        "nearest": -0.023181169757489302,
+        "uniform": 0.07201339423039335,
+        "oracle": 0.7669995244888255
+      },
+      "decisions": {
+        "select": 345,
+        "retain": 2078,
+        "switch": 277,
+        "abstain": 241,
+        "unavailable": 4
+      }
+    },
+    "evaluation": {
+      "movement_rows": 513,
+      "baseline": 318,
+      "adaptive": 219,
+      "reselect": 216,
+      "utility_rows": 146,
+      "utility": {
+        "selected": 0.11015981735159816,
+        "nearest": -0.03767123287671233,
+        "uniform": -0.022558308402388705,
+        "oracle": 0.699771689497717
+      },
+      "decisions": {
+        "select": 83,
+        "retain": 465,
+        "switch": 61,
+        "abstain": 80,
+        "unavailable": 10
+      }
+    }
+  },
+  "checks": {
+    "utility": true,
+    "movement": false
+  },
+  "all_checks_pass": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v61\\predictions.json": "318adec85143621999b95d18da166114342d3662554d1f7d85e933f3c6fde796",
+    ".cambc\\action-predictor\\v61\\selected.pt": "499450af3cb7fb18eb7e0c08904bd79304af1d69a5bc5328e393f952c5a0811a"
+  },
+  "promoted": false
+}
