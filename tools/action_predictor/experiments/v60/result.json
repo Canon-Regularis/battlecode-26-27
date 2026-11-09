@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "fit": {
+      "all": {
+        "learned": {
+          "rows": 412,
+          "mean_error": 3.4029126213592233,
+          "within2": 0.4053398058252427
+        },
+        "stay": {
+          "rows": 412,
+          "mean_error": 4.555825242718447,
+          "within2": 0.28640776699029125
+        },
+        "heading8": {
+          "rows": 412,
+          "mean_error": 7.116504854368932,
+          "within2": 0.13106796116504854
+        },
+        "v59": {
+          "rows": 412,
+          "mean_error": 4.793689320388349,
+          "within2": 0.27427184466019416
+        }
+      },
+      "far": {
+        "learned": {
+          "rows": 294,
+          "mean_error": 4.061224489795919,
+          "within2": 0.24149659863945577
+        },
+        "stay": {
+          "rows": 294,
+          "mean_error": 5.9353741496598635,
+          "within2": 0.0
+        },
+        "heading8": {
+          "rows": 294,
+          "mean_error": 7.020408163265306,
+          "within2": 0.15306122448979592
+        },
+        "v59": {
+          "rows": 294,
+          "mean_error": 6.112244897959184,
+          "within2": 0.01020408163265306
+        }
+      },
+      "movement": {
+        "rows": 1997,
+        "baseline": 1289,
+        "routed": 930,
+        "committed": 566
+      }
+    },
+    "evaluation": {
+      "all": {
+        "learned": {
+          "rows": 77,
+          "mean_error": 4.415584415584416,
+          "within2": 0.2987012987012987
+        },
+        "stay": {
+          "rows": 77,
+          "mean_error": 4.48051948051948,
+          "within2": 0.2727272727272727
+        },
+        "heading8": {
+          "rows": 77,
+          "mean_error": 7.0519480519480515,
+          "within2": 0.18181818181818182
+        },
+        "v59": {
+          "rows": 77,
+          "mean_error": 4.3896103896103895,
+          "within2": 0.3246753246753247
+        }
+      },
+      "far": {
+        "learned": {
+          "rows": 56,
+          "mean_error": 5.125,
+          "within2": 0.19642857142857142
+        },
+        "stay": {
+          "rows": 56,
+          "mean_error": 5.75,
+          "within2": 0.0
+        },
+        "heading8": {
+          "rows": 56,
+          "mean_error": 7.482142857142857,
+          "within2": 0.16071428571428573
+        },
+        "v59": {
+          "rows": 56,
+          "mean_error": 5.625,
+          "within2": 0.07142857142857142
+        }
+      },
+      "movement": {
+        "rows": 513,
+        "baseline": 318,
+        "routed": 202,
+        "committed": 111
+      }
+    }
+  },
+  "checks": {
+    "endpoint": false,
+    "far": false,
+    "movement": false
+  },
+  "all_checks_pass": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v60\\predictions.json": "ece35d1fc0bdad3c0db01fd38c476e3028c7b43214171b9b1461a861ee4d0463",
+    ".cambc\\action-predictor\\v60\\selected.pt": "1fcd56cd6e3eb341c91b43a7e871e877b4ab97825e03d92b313e41b6bc2ba23f"
+  },
+  "promoted": false
+}
