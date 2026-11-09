@@ -1,0 +1,35 @@
+{
+  "setting": {
+    "distance_scale": 1.0,
+    "zero_radius": false,
+    "output_scale": 0.75
+  },
+  "tensors": {
+    "layers.0.weight": {
+      "before_norm": 9.885186195373535,
+      "after_norm": 9.885186195373535,
+      "delta_norm": 0.0,
+      "changed": 0
+    },
+    "layers.0.bias": {
+      "before_norm": 0.6116411089897156,
+      "after_norm": 0.6116411089897156,
+      "delta_norm": 0.0,
+      "changed": 0
+    },
+    "layers.2.weight": {
+      "before_norm": 1.7970980405807495,
+      "after_norm": 1.3478235006332397,
+      "delta_norm": 0.4492745101451874,
+      "changed": 64
+    },
+    "layers.2.bias": {
+      "before_norm": 0.026425816118717194,
+      "after_norm": 0.019819362089037895,
+      "delta_norm": 0.006606454029679298,
+      "changed": 1
+    }
+  },
+  "radius_decay_max_error": 1.8700957298278809e-06,
+  "note": "The final scalar bias is shared by all9move scores; its uniform shift cancels in softmax. The selected behavior change comes from scaling the output weight contribution. No new parameters or optimizer updates."
+}

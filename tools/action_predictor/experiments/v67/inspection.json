@@ -1,0 +1,84 @@
+{
+  "bindings": {
+    ".cambc\\action-predictor\\v66\\full.pt": "0571586b201afdcc3e459f6cf9fa785d9090eed0d3f9092a0cb03ea6cc618506",
+    ".cambc\\action-predictor\\v66\\goal-selected.pt": "15401264e52c01f73b9eab25aa5250b9d2f8d00c6d8f84f197eae1a7a09bbf08",
+    ".cambc\\action-predictor\\v66\\causal.json": "ca94c88511a39113c38118065a04d19819ba40184ee768d4e4cd08a184d8b533"
+  },
+  "zero_training_columns": [
+    65,
+    66,
+    72,
+    73,
+    79,
+    80,
+    86,
+    87,
+    93,
+    94,
+    100,
+    101,
+    134
+  ],
+  "training_goal_min": [
+    -0.25,
+    -0.25,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0
+  ],
+  "training_goal_max": [
+    0.25,
+    0.25,
+    0.28125,
+    0.25,
+    2.0,
+    1.0,
+    0.0,
+    1.0
+  ],
+  "predicted_fitting_goal_min": [
+    -2.59375,
+    -2.4375,
+    0.09375,
+    0.03125,
+    0.0,
+    -1.0,
+    0.0,
+    1.0
+  ],
+  "predicted_fitting_goal_max": [
+    2.8125,
+    2.8125,
+    2.84375,
+    2.0,
+    2.0,
+    1.0,
+    0.30000001192092896,
+    1.0
+  ],
+  "outside_training_range": [
+    0.9071969985961914,
+    0.6799242496490479,
+    0.9722222089767456,
+    0.9772727489471436,
+    0.0,
+    0.0,
+    0.5359848737716675,
+    0.0
+  ],
+  "predicted_fitting_goals": 528,
+  "goal_column_weight_norms": [
+    1.6291824579238892,
+    2.3209683895111084,
+    2.138223886489868,
+    1.2509021759033203,
+    2.1851301193237305,
+    2.5106635093688965,
+    0.3962116241455078,
+    0.6258641481399536
+  ],
+  "interpretation": "Achieved goals were within8tiles; predicted fitting goals can be about90tiles away. Radius was alwayszero while its weights remain nonzero; they received no training signal beyond weight decay. These facts motivate calibration but do not prove this mismatch caused the errors. Statistics include all9candidate slots,including unsupported ones. Evaluation rows were not inspected for calibration design."
+}
