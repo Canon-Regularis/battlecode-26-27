@@ -1,0 +1,40 @@
+{
+  "plan_sha256": "e64412a0c04e96f47179fcf4e885f7946f13b8f2857f5cf9a825b7bb6b5e17b1",
+  "bindings": {
+    ".cambc\\action-predictor\\v51\\targets.pt": "45ac197c04a4fb670fdd4ecf81256c659fc8fe710fb6c6e78e8c46169208d164",
+    ".cambc\\action-predictor\\v51\\full-features.pt": "0e443654f872ddef03390e78104f4dcfd7d4e239df770f583483445ac113ff02",
+    ".cambc\\action-predictor\\v51\\fold0-features.pt": "4dd5d5a28b0fb3f5a96dd27a1246be02951fa079403916eb5546ffdc3514dc86",
+    ".cambc\\action-predictor\\v51\\fold1-features.pt": "00d2cc7b0e766cf8eca528a5de7df90a6ce3dbeab09ad08a729db30e12f3cad4",
+    ".cambc\\action-predictor\\v51\\fold2-features.pt": "9cd99f3e4ea051d78837c0b2d202f002fdf35d3af861567cbe71084ca450f994",
+    ".cambc\\action-predictor\\v51\\fold3-features.pt": "bc501bf8bb0b8461c95941617b3d279f42e0f5a06a3a1d452635eca8aef6fe3e"
+  },
+  "windows": 1607,
+  "movement_rows": 12318,
+  "parity": [
+    {
+      "backbone": "fold0",
+      "full_map_windows": 32,
+      "maximum_error": 4.76837158203125e-07
+    },
+    {
+      "backbone": "fold1",
+      "full_map_windows": 32,
+      "maximum_error": 7.152557373046875e-07
+    },
+    {
+      "backbone": "fold2",
+      "full_map_windows": 32,
+      "maximum_error": 7.152557373046875e-07
+    },
+    {
+      "backbone": "fold3",
+      "full_map_windows": 32,
+      "maximum_error": 5.960464477539062e-07
+    },
+    {
+      "backbone": "full",
+      "full_map_windows": 32,
+      "maximum_error": 5.960464477539062e-07
+    }
+  ]
+}

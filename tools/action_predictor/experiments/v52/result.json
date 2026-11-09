@@ -1,0 +1,101 @@
+{
+  "refit_sha256": "23865d78929f158f1db36e95b9b5e53b516e04e6a14a1d2b386f4eaba5ddba24",
+  "results": {
+    "constant": {
+      "fit": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.4902353530295443,
+        "movement_nll": 1.4435138696516432,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.946570598013032,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.8495755517826825
+      },
+      "evaluation": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.4405458089668616,
+        "movement_nll": 1.5465715353978076,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.3895154534554,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.8197424892703863
+      }
+    },
+    "predicted": {
+      "fit": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.49424136204306457,
+        "movement_nll": 1.4405611710801056,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.946570598013032,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.8495755517826825
+      },
+      "evaluation": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.4405458089668616,
+        "movement_nll": 1.550404509387867,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.3895154534554,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.8197424892703863
+      }
+    }
+  },
+  "comparisons": {
+    "v49": {
+      "rows": 513,
+      "rescues": 153,
+      "regressions": 61
+    },
+    "constant": {
+      "rows": 513,
+      "rescues": 3,
+      "regressions": 3
+    },
+    "s01": {
+      "rows": 513,
+      "rescues": 159,
+      "regressions": 45
+    }
+  },
+  "movement_checks": {
+    "gain_vs_v49": true,
+    "accuracy_vs_s01": true,
+    "nll_vs_v49": true,
+    "nll_vs_s01": true
+  },
+  "additional_code_checks": {
+    "gain_vs_control": false,
+    "nll_vs_control": false
+  },
+  "movement_improved": true,
+  "additional_code_benefit": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v52\\constant.pt": "70620206e790337df543b26a32e6d7d0c2edc1586104ca4f03ae74f300e6c699",
+    ".cambc\\action-predictor\\v52\\predicted.pt": "b03ed9ab75f18c619d5d72b9af7bd55b7a513bdf8467a5965cb48c36342b4ed3",
+    ".cambc\\action-predictor\\v52\\constant-fit-predictions.json": "599a108c0670f960097c60d4a28df42f4a85b7eb35c2ed599d22bc763f2d05a5",
+    ".cambc\\action-predictor\\v52\\constant-evaluation-predictions.json": "1339d7d4e9ac2c00056a3e2075f642e4d5c76f92ee420aaa45c2791024f4ec67",
+    ".cambc\\action-predictor\\v52\\predicted-fit-predictions.json": "06c0a58ab36a6a0141b1431ece87a04e30a308e3df334cec0c1fc5076f8f5561",
+    ".cambc\\action-predictor\\v52\\predicted-evaluation-predictions.json": "de51f10e76f9e032e73d330d02bfc9c06f9021af40777ed56e47ed68fd6f946f"
+  },
+  "seconds": 31.683476700040046,
+  "promoted": false,
+  "qualification": "Conditional first moves on repeatedly used research games; no verified intent or playing-strength claim."
+}

@@ -1,0 +1,101 @@
+{
+  "refit_sha256": "ed3dfa29364e19889108edf28f45bb5ee20545993117f621889ac73aeb26b126",
+  "results": {
+    "constant": {
+      "fit": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.22934401602403606,
+        "movement_nll": 1.772752893451577,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.946570598013032,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.8495755517826825
+      },
+      "evaluation": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.20077972709551656,
+        "movement_nll": 1.8353899236310993,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.3895154534554,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.8197424892703863
+      }
+    },
+    "predicted": {
+      "fit": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.26189283925888834,
+        "movement_nll": 1.7465780038026553,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.946570598013032,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.8495755517826825
+      },
+      "evaluation": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.21052631578947367,
+        "movement_nll": 1.8631279660828164,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.3895154534554,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.8197424892703863
+      }
+    }
+  },
+  "comparisons": {
+    "v49": {
+      "rows": 513,
+      "rescues": 70,
+      "regressions": 96
+    },
+    "constant": {
+      "rows": 513,
+      "rescues": 27,
+      "regressions": 22
+    },
+    "s01": {
+      "rows": 513,
+      "rescues": 61,
+      "regressions": 65
+    }
+  },
+  "movement_checks": {
+    "gain_vs_v49": false,
+    "accuracy_vs_s01": false,
+    "nll_vs_v49": false,
+    "nll_vs_s01": false
+  },
+  "additional_code_checks": {
+    "gain_vs_control": false,
+    "nll_vs_control": false
+  },
+  "movement_improved": false,
+  "additional_code_benefit": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v51\\constant.pt": "6ecaddbe84f3af48557bdd798af44c3ee2abbd66354713055f77aa109729a979",
+    ".cambc\\action-predictor\\v51\\predicted.pt": "2d372d696ffaae0d1f61c51717daaad998bdca85625613ab11e3fd0b1c315f6f",
+    ".cambc\\action-predictor\\v51\\constant-fit-predictions.json": "6276ca5a313ad19891ef5d0b64be568f52e7258443b89a0756af0905eb8443e3",
+    ".cambc\\action-predictor\\v51\\constant-evaluation-predictions.json": "dc8546a44c16c24d96ffa7d86a0c8b3bcbf80813f6b173e0e3ab32b24cf4174d",
+    ".cambc\\action-predictor\\v51\\predicted-fit-predictions.json": "8366de9156669191bab67db5d50e71c69ab0aa2fefa416688de17344ca2238c5",
+    ".cambc\\action-predictor\\v51\\predicted-evaluation-predictions.json": "ebece64685727099dbdc18ce8cd8adc5dfe0e7dd3b0b9b256f815a81540a1cbe"
+  },
+  "seconds": 29.863523499981966,
+  "promoted": false,
+  "qualification": "Conditional first-move prediction on previously exposed research games, not full-command accuracy or strategy."
+}
