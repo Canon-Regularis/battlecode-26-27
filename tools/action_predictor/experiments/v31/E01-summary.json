@@ -1,0 +1,205 @@
+{
+  "arm": "E01",
+  "result_sha256": "94752185f84ad6b1dd48eb1ce8cf8c81d5409a9649b0fc659b15f7b0ea697a13",
+  "source_sha256": "d142f919d57e70751d44218d51d6bc066b54535468c377791c72256aa0c5c339",
+  "selected_round": 6,
+  "selected_updates": 10456,
+  "completed_updates": 20910,
+  "summary": {
+    "complete": 12098,
+    "rows": 14439,
+    "macro_f1": 0.6157907246752992,
+    "joint_nll": 0.6376236878148819,
+    "movement": {
+      "move": {
+        "rows": 2362,
+        "complete": 1335
+      },
+      "continue": {
+        "rows": 1198,
+        "complete": 1044
+      },
+      "change": {
+        "rows": 1158,
+        "complete": 288
+      },
+      "startup": {
+        "rows": 6,
+        "complete": 3
+      },
+      "blocked": {
+        "rows": 110,
+        "complete": 3
+      }
+    },
+    "categories": {
+      "<unknown>": {
+        "support": 0,
+        "complete": 0,
+        "conditional_accuracy": null,
+        "type_f1": null
+      },
+      "altar": {
+        "support": 2,
+        "complete": 0,
+        "conditional_accuracy": 1.0,
+        "type_f1": 0.0
+      },
+      "attack": {
+        "support": 985,
+        "complete": 899,
+        "conditional_accuracy": 0.9573604060913705,
+        "type_f1": 0.9176470588235294
+      },
+      "blocked": {
+        "support": 110,
+        "complete": 3,
+        "conditional_accuracy": 0.2,
+        "type_f1": 0.40522875816993464
+      },
+      "cancel": {
+        "support": 2589,
+        "complete": 2528,
+        "conditional_accuracy": null,
+        "type_f1": 0.9552238805970149
+      },
+      "cast_0": {
+        "support": 213,
+        "complete": 149,
+        "conditional_accuracy": 0.9107981220657277,
+        "type_f1": 0.8358974358974359
+      },
+      "cast_1": {
+        "support": 243,
+        "complete": 73,
+        "conditional_accuracy": 0.5596707818930041,
+        "type_f1": 0.5323383084577115
+      },
+      "end": {
+        "support": 4096,
+        "complete": 3973,
+        "conditional_accuracy": null,
+        "type_f1": 0.9730590252265491
+      },
+      "move": {
+        "support": 2362,
+        "complete": 1335,
+        "conditional_accuracy": 0.5982218458933107,
+        "type_f1": 0.9243840271877655
+      },
+      "priority": {
+        "support": 576,
+        "complete": 112,
+        "conditional_accuracy": 0.4305555555555556,
+        "type_f1": 0.5467800729040098
+      },
+      "recall": {
+        "support": 3084,
+        "complete": 3007,
+        "conditional_accuracy": null,
+        "type_f1": 0.9143986620039531
+      },
+      "shop": {
+        "support": 43,
+        "complete": 0,
+        "conditional_accuracy": null,
+        "type_f1": 0.8936170212765957
+      },
+      "submit": {
+        "support": 22,
+        "complete": 19,
+        "conditional_accuracy": 1.0,
+        "type_f1": 0.4367816091954023
+      },
+      "teleport": {
+        "support": 2,
+        "complete": 0,
+        "conditional_accuracy": 0.0,
+        "type_f1": 0.2857142857142857
+      },
+      "ward": {
+        "support": 112,
+        "complete": 0,
+        "conditional_accuracy": 0.21428571428571427,
+        "type_f1": 0.0
+      }
+    }
+  },
+  "comparisons": {
+    "H01": {
+      "complete_gain": -17,
+      "movement_gains": {
+        "move": 0,
+        "continue": -1,
+        "change": 1,
+        "startup": 0,
+        "blocked": -3
+      },
+      "joint_nll_delta": 0.0010975606025172002,
+      "macro_f1_delta": 0.018066178444885894,
+      "numerical_guards": {
+        "joint_move_gain_at_least24": false,
+        "joint_change_gain_at_least12": false,
+        "lower_full_DEV_NLL": false,
+        "continuation_loss_at_most_half_point": true
+      },
+      "targeting_guards": {
+        "attack": {
+          "delta_percentage_points": 0.10152284263958977,
+          "passes_two_point_guard": true
+        },
+        "cast_0": {
+          "delta_percentage_points": 0.0,
+          "passes_two_point_guard": true
+        },
+        "cast_1": {
+          "delta_percentage_points": 0.0,
+          "passes_two_point_guard": true
+        }
+      },
+      "remaining_gate": "Inspect every original category and all stronger retained comparisons; these numerical guards alone do not certify the full gate, reliability, three-seed robustness or strategy."
+    },
+    "E00": {
+      "complete_gain": -19,
+      "movement_gains": {
+        "move": -8,
+        "continue": -4,
+        "change": -4,
+        "startup": 0,
+        "blocked": 1
+      },
+      "joint_nll_delta": 0.0007932369121198546,
+      "macro_f1_delta": 0.018823811544692592,
+      "numerical_guards": {
+        "joint_move_gain_at_least24": false,
+        "joint_change_gain_at_least12": false,
+        "lower_full_DEV_NLL": false,
+        "continuation_loss_at_most_half_point": true
+      },
+      "targeting_guards": {
+        "attack": {
+          "delta_percentage_points": 0.10152284263958977,
+          "passes_two_point_guard": true
+        },
+        "cast_0": {
+          "delta_percentage_points": 0.0,
+          "passes_two_point_guard": true
+        },
+        "cast_1": {
+          "delta_percentage_points": 1.2345679012345734,
+          "passes_two_point_guard": true
+        }
+      },
+      "remaining_gate": "Inspect every original category and all stronger retained comparisons; these numerical guards alone do not certify the full gate, reliability, three-seed robustness or strategy."
+    }
+  },
+  "reference_hashes": {
+    "H01": "e38e005636eb27acc48c41860e694b1b78bb9bcb2559ca7b8dd76f783540375b",
+    "E00": "2959c335946fdd9d0ced3d8dca09b726c20673b8ace3596471264c637ee484ef"
+  },
+  "stronger_comparisons": "Full result JSON includes paired G00/L02/JP02 comparisons; E01 includes E00.",
+  "limits": "Five repeatedly reused DEV groups, single seed, observed earlier actions; no autonomous strategy or untouched-test evidence.",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false
+}

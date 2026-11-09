@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\objective_experiment.py": "801736c26c925751356ed0c213eee875872e4575fe31c4083bbf9aa00501f8fa",
+    "tools\\action_predictor\\behavior_segments\\objective_policy.py": "fab1df0d08558f2f57130e4295e06e321d7a09659b85b14ae019450076d994c4",
+    "tools\\action_predictor\\behavior_segments\\objective_predictor.py": "c91adbc445f991bf08df7db00af27f92c6a3946024230b94faba7a59b2b5ed9f",
+    "tools\\action_predictor\\behavior_segments\\test_objective_policy.py": "4b5853ee4d7748cea858ba5965ceea3b2f2b620aa9a9192c2c8fc203fc72f1e9"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v59\\plan.json": "bf1884e84ee99aa01e83f7560cff21a2053e517d4fa8f3128c3fda02aba84848",
+    "tools\\action_predictor\\experiments\\v59\\verification.json": "4f764c5a7e350ae8c0d6359a0d5db7f2987a178fd893382f99de95d8075da83d",
+    "tools\\action_predictor\\experiments\\v60\\result.json": "fd376a4365e4a5782593f3a869a7f67b6833789d25206383ea45e9af0dfab43e"
+  },
+  "seed": 61001,
+  "epochs": 16,
+  "lr": 0.001,
+  "batch": 256,
+  "horizon": 4,
+  "margin": 0.15,
+  "cap": 1800,
+  "hypothesis": "Replace averaged future coordinate with current known camp/enemy/altar/home identities. Predict four-turn future walking progress per executed step for each candidate. Reevaluate held identity at each available PRE; switch if another predicted utility exceeds it by0.15, or held utility becomes nonpositive. Abstain when all utilities nonpositive. Remove unavailable/reached goals. No fixed commitment duration.",
+  "features": "Frozen V59 causal recurrent state48 and soft code8 plus12 current candidate features; identity only indexes memory, never learned input. Future commands only supply utility labels. Original decoder breaks equal-shortest-path step ties. No current command input.",
+  "selection": "Four fitting-game folds; epochs4,8,12,16; minimize held canonical candidate utility MSE. One full refit. Evaluation used only after selection. Matched no-persistence and heuristic nearest-goal references reported.",
+  "audit_gate": "Before optimization require candidate reducing-step coverage at least80percent of valid canonical fitting movement queries and best retrospective future progress at least0.5 on60percent of labeled canonical queries. Oracle diagnostics,not achieved accuracy.",
+  "success": "Evaluation selected objective mean four-turn utility must exceed nearest-goal and equal-weight candidates; learned persistence must improve complete conditional movement count over both V59 and always-reselect variant on same513moves. All required. No strategy/promotion claim merely from persistence.",
+  "limitations": "Replay inferred utility is not verified intent or reward; moving entities held at current positions for supervision/planning. Observed histories, preexposed groups, one seed, partial visibility. No game rollouts or subagents."
+}

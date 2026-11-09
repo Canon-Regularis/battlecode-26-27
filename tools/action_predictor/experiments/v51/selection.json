@@ -1,0 +1,239 @@
+{
+  "plan_sha256": "e64412a0c04e96f47179fcf4e885f7946f13b8f2857f5cf9a825b7bb6b5e17b1",
+  "selected": {
+    "epoch": 32,
+    "arms": {
+      "constant": {
+        "rows": 1997,
+        "correct": 421,
+        "nll": 1.8505945291946575
+      },
+      "predicted": {
+        "rows": 1997,
+        "correct": 401,
+        "nll": 1.855839153409422
+      }
+    }
+  },
+  "candidates": [
+    {
+      "epoch": 0,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 386,
+          "nll": 1.835647039641484
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 386,
+          "nll": 1.835647039641484
+        }
+      }
+    },
+    {
+      "epoch": 8,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 406,
+          "nll": 1.8447620383369128
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 389,
+          "nll": 1.8490742804351066
+        }
+      }
+    },
+    {
+      "epoch": 16,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 404,
+          "nll": 1.8344827478207764
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 392,
+          "nll": 1.8398739000111743
+        }
+      }
+    },
+    {
+      "epoch": 24,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 379,
+          "nll": 1.8483689409169066
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 380,
+          "nll": 1.8569690261892395
+        }
+      }
+    },
+    {
+      "epoch": 32,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 421,
+          "nll": 1.8505945291946575
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 401,
+          "nll": 1.855839153409422
+        }
+      }
+    },
+    {
+      "epoch": 40,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 393,
+          "nll": 1.8488998223258426
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 387,
+          "nll": 1.8591044140447064
+        }
+      }
+    },
+    {
+      "epoch": 48,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 394,
+          "nll": 1.8598668223389638
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 392,
+          "nll": 1.871765769118957
+        }
+      }
+    },
+    {
+      "epoch": 56,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 381,
+          "nll": 1.873205378256145
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 393,
+          "nll": 1.8855106079644064
+        }
+      }
+    },
+    {
+      "epoch": 64,
+      "arms": {
+        "constant": {
+          "rows": 1997,
+          "correct": 407,
+          "nll": 1.858392563830869
+        },
+        "predicted": {
+          "rows": 1997,
+          "correct": 390,
+          "nll": 1.87169672683829
+        }
+      }
+    }
+  ],
+  "seconds": 27.861264500010293,
+  "outer_evaluation_used": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-000.pt": "6c9f05bb37982458d67babe72f786695b87b0aea95f6fbdcced689b9c43eb3a3",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-008.pt": "2a3167039491f57e61c73c4b5a088c4fb3df362525a8be1b24a004b090d09a8d",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-016.pt": "f473d4eb90fb0c807500756c3fb16061da75590a6bc2d341041d1292ad754a32",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-024.pt": "49dfa065e3f6f6ba15be38176a4146f2cbd9860ea068bfec1d65445b5b5ea977",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-032.pt": "716537a246af9c0bdd4175ee20908851e6f1c39e0b9e30553501bec0a11dbed3",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-040.pt": "128bd5bd98c04a8840fc6eb8463ade9e6e8f296d5d1a0780cc6d6307c4cd0bbf",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-048.pt": "6561d17b50d32857bbdba42a59b0e18c3d05ad90ba9c4e9aab2d48203158cf25",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-056.pt": "93967232bc2b021c3cf9977ee0cb928dc06a1cb15769a583cb43201b3c7e17cb",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\epoch-064.pt": "953bfb45c073cca87308f73cec54a50e57606777b8be43cb715f484c256f7205",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold0\\trace.json": "7bd35faf640102a998bef08582e3c3ab5342bd41e45be51547246e96d7a0c486",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-000.pt": "bf36e9e85a07aecb671c3ba962c1c925799f405f4e1b43df96b60f15b757af72",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-008.pt": "e0ce2553a2015238dc2a835e784681d9860381f98abcf918860e679d3c1cc69e",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-016.pt": "6ac7a0ce7edb45d63461d054fa8a0124054ff88962b653ea7e0de6f2fb490c95",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-024.pt": "9bb89baaf8e68ffa1cca5d882f6f29f145c2427c518226038bfc5ec4a7088868",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-032.pt": "043eefb21580949882fd0f56e06b3b515ca92c25ae9347a6e40379247f7ecdd5",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-040.pt": "5384371a275d4e4faad6ca9bb792f680f9ba2fcc3357c040638f915bf9cbe674",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-048.pt": "444f73b2a521a109713c05041cac190cf447f9f0e57e7db89cd53846bc667efa",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-056.pt": "ade0bf08418f93e3e3424346d28c21a79951856eaf4705ae7fc28a2f2d8eaa45",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\epoch-064.pt": "685581a6f3bb61da79f0b1956aa265e93b2bad617c4586ded5b3222d0858feb4",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold1\\trace.json": "6be1bd3754b2d339ed09d5ebd6e9c5218d096867239b5e1e536427e5e629f9b2",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-000.pt": "013a603d66176b3ae587b2b18aa0a0619ad3ccc3d7db9f905d3bd445fbcc1006",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-008.pt": "b0d1e8f70451c8fe0c93374eedf9ee9fb17e5c8b025c5374d9e587d2609e1069",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-016.pt": "b572a00eada6687226caba862f2055bb10eca17c8cc779f252787332c9528c37",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-024.pt": "1ebc80b57b99f6f2c925452569c258cc2fa2b45c3d060ea1fedd0e630431fc6a",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-032.pt": "d54e1562ab04ca879344842dd5953ff523a8f6fe9719cc900d890efe77bd4967",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-040.pt": "c4878d74888693e367b94d597651015e11a78f15ea5b31bf32b845d91096a0ac",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-048.pt": "c67dbee48e5a836b89852cfdf36d9648f4b9dc03f315248404bf0402c759ca5c",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-056.pt": "2f7e4332118336b13b18ff1b37c616e7ad6eb12dd2eecd4a6c164ee4506c6310",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\epoch-064.pt": "7c2c2c6ab91823e1415ccd0f3afaf9ae9729d632f7e26dd23d3f09d85c68fb8a",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold2\\trace.json": "0ee878fd3b77c51b116b345fffe2f2d327e273005f34db6f1a3082af1397bd3b",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-000.pt": "30157974c5bc040e3cf90f16c07ee3a51e351f7b420016e7d657e2a8cac023b2",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-008.pt": "dfc23fb0dde7daf409fbf95af4264fd03807ebc5cc9ee006adea270cf75072f1",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-016.pt": "9fb87ef59008f3c80a0fc1826f54346afa39b9db6e4743a6e1c7f0ed77d00af9",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-024.pt": "bd7ac4155575a409bf04e1fef7c1d347e898b8b0ed2dd37cc596301eaf3f1d4e",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-032.pt": "95c788ab1d8295974af62f70903824a6f7b9197b68f2adc6cfd4057f4ab34014",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-040.pt": "2433f13750a5aa9a8f167dd51003537daf0d700def61acb785cd547f70f6776e",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-048.pt": "212fd4efe5e1476511cf9523b5dbf35b04fe50498ff10980faf7e1138465b971",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-056.pt": "2098730b402690b4b25847d2048c5c4a090f463e48407ffc99e302f446faea29",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\epoch-064.pt": "297f730d6e88b6ebe6c08c00e7342dec2ae3266e8f2cccb2a74eb51473dead1d",
+    ".cambc\\action-predictor\\v51\\tuning\\constant-fold3\\trace.json": "fc50ca605cea45099ee975010d4a71163bddc44d02e69bb0292ccf7ff98e4236",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-000.pt": "6c9f05bb37982458d67babe72f786695b87b0aea95f6fbdcced689b9c43eb3a3",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-008.pt": "b88ae59f94e032949a382ad26929ae701bde58fbcc278fcfe8392335191df61d",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-016.pt": "0ee15e323d92f2e257194cfc3563dd95bf273c07e8ee29a77dd6f9b7e8acdb66",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-024.pt": "0149475aae189973f04b2655ab48e44513d475567d714756f927c18165130286",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-032.pt": "2475bbf854e9ce3b837a6de15c573609c527d132f35dcec892a5a5695980e7d8",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-040.pt": "3187cd30cbaf0974a534bcf6d5c20be22efffab191060c48bebbdaf02a4d21ea",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-048.pt": "d7ac88a29bbcfb2329a47bdc35c294713d98cce3a2366ec541c5261ffcd2f140",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-056.pt": "34945739cb25a6787359c9c9d91722bd14dd5321144d44a2ee984a9ce3793147",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\epoch-064.pt": "eb677d42c80ff1fcc846a56ab18b353bf100745c8ba92eba2bc17b2948538571",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold0\\trace.json": "c50b2ee874ef087a74f9c0a579328aaddbc12dddd47d42ab5560e3e26d323f1c",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-000.pt": "bf36e9e85a07aecb671c3ba962c1c925799f405f4e1b43df96b60f15b757af72",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-008.pt": "c5b6f5f251a0b48dc73c2cc52831ad8d9379cca9314c29211f0e2790caeeef76",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-016.pt": "1c0272881722f1a523bb5813a4d92666d9089b1e390aed83e8e9e5634e227eb4",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-024.pt": "df9f841688bbf743308b6980d24a9947147f703c2602328fa268b21f8ab24ee5",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-032.pt": "3aa3bcb8f895474deb5c3aa540ac773820e570f0a4835b721356c4073a76969c",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-040.pt": "90fc98c2f17d33ce5b297bec6bab84677891dae2c6ae2f47fbdac6bd3b86512e",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-048.pt": "75818a8b7f0f788c0d397dc517f70c65873c41818e127801dab33319184d2a74",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-056.pt": "c0905b8517d4c6b6c6b3b8b70ece154f98f68d307ad3b562b687efd29b2b8c8c",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\epoch-064.pt": "1a408695790e4c649d8bfc52d9ddaa24549e334852a397b33c49a84214a2851b",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold1\\trace.json": "cbffb3a74937b512b5700b638c1b6f9d9e0af8837d8959a602874b0b873ab2b1",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-000.pt": "013a603d66176b3ae587b2b18aa0a0619ad3ccc3d7db9f905d3bd445fbcc1006",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-008.pt": "7aee90a033fab5c9cc7e5eae6532b0bdf86e2e00437f01bb806f7ffd1923d2ba",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-016.pt": "d7c3a9f425f712ba315f290f5510f3be72ff1b9601908aabc6d9aa6cf7bd05e1",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-024.pt": "643d88a56c3fe292858866e82b44ea23a238c4794296ed994e3243835ceba1c5",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-032.pt": "5f2b83c2cd9c244d34c6e0271b051e9cc4e582f9298aaf52679511a21d2e3134",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-040.pt": "746eb6c7873d591d9f6cc8f4ce260be8c10ff2725df5384316a8ac9768cd211d",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-048.pt": "d55134611ec984c3bf064fbbf04f864afdb0b0f746f42949e8b14438507a2d8f",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-056.pt": "51bd1a839711c633ada3031a82d62352abc6370511a1c9430c44c025ef584441",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\epoch-064.pt": "ba870521770ec30f0eb70cedeb71f89f0cf672e165476ccf83a739b67eaa792c",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold2\\trace.json": "cc7d35f0178a1259e1411cc9bf9978795ff76766de9ab6d772f3a2689770d4d6",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-000.pt": "30157974c5bc040e3cf90f16c07ee3a51e351f7b420016e7d657e2a8cac023b2",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-008.pt": "1124e079d086d1277a091a918377c3bcd71dfb7034ecf8ccf4a4dc21a4ec623f",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-016.pt": "8f86e5f263b8c790f08ce3c48dceeaccc886942ca5eb73bae2d50d94fdc5d929",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-024.pt": "42ab8aef5c8b8348209066083d517ba1638d43091aae1b2ec4fb7c6d56f0a62a",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-032.pt": "58f8329add3e8bc1e87c9818f4c2a4146754b93b28257e42e1deef0c0e8c2102",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-040.pt": "08ccccd106aa6e619353edc7a768d51412b0af7d37ba9b81f6c5371d1342df36",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-048.pt": "323f18a1e564ff8b80cc7573ebd9179d463fe83e163ab569fe4b5fb1bb272cda",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-056.pt": "13fc0e1d2bfd0fb39fed13693a89e759962cf1e59333ae18dd24604f58539c94",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\epoch-064.pt": "604656f0c41fba3771f9854f027b3f3ac6ae3c581e9c723040939202e376fb91",
+    ".cambc\\action-predictor\\v51\\tuning\\predicted-fold3\\trace.json": "f693f751081196aebbf83fa946d4780a9040498f113cb0438c67cb46fd177e93"
+  }
+}

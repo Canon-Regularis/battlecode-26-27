@@ -1,0 +1,56 @@
+{
+  "id": "V15-movement-specialization",
+  "budget": {
+    "fits": 2,
+    "S00": "single destination expert,57898parameters",
+    "X00": "two learned latent destination experts,60278parameters (+4.11%); similar total parameter budget",
+    "seeds": [
+      20261113
+    ],
+    "no_automatic_repeats": true
+  },
+  "control": "Frozen G00 with P05 priority; all original predicted action types and other argument families fixed in both arms. This is a destination specialization test, not complete action-selection training.",
+  "distinction": "G00/G01 used two full trainable GRUs and G01 direction partitions. E00/E01 globally pooled entities and changed classifier. V15 uses frozen context plus candidate-conditioned attention to ALL personally known champ/camp tokens, current five-goal public/visible geometry, and independent tile scorers; no direction supports or true-intent labels. S00-X00 isolates this latent-mixture package at similar parameter count, not superiority of all expert methods.",
+  "inputs": "613 = frozen current/history context128 + base personalPRE and last8 actual own roots445 + current goal geometry40. Explicitly EXCLUDES old goal_memory past fields485:506 due known memory defect. Candidate grid20 and all119-field entity tokens incl dead and self, no numeric IDs/nearest-k. No new replay extraction; no invisible dynamic state. Goal family is hypothesis, not true intent. History is bounded compressed actions, not complete persistent observation memory.",
+  "support": "All291 retained benchmark outcomes:289relative cells (radius8 encoding window, NOT movement range) plus2unassessed buckets. Success allowed mask from historical personal championMovementMask; blocked attempt only in-map, never success-mask rejection. Each component .9999 constrained +.0001 full distribution. Exact unavailable buckets fail strict scoring. No outcome duplication to inflate coverage.",
+  "sampling": "TRAIN natural identity mask ONLY:48286 moves+1906blocked=50192 argument examples from eligible470games94groups. Every such row retained, both arms identical uniform shuffled row budget, batch256. All433071augTRAIN/natural288801 and every14439DEV row evaluated separately. No current true family in production; family supplied by unchanged predicted action. True-family diagnostics are evaluation only.",
+  "training": {
+    "seed": 20261113,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "gradient_clip": 5,
+    "max_rounds": 35,
+    "patience": 6,
+    "min_improvement": 0.0001,
+    "batch_size": 256,
+    "normalization": "Mean/std of all naturalTRAIN rows only; floor.01, clip10. Identical independently reconstructed stats for both fits. No DEV statistics.",
+    "checkpoint": "Full original DEV observed jointNLL; epochzero not selectable; all checkpoints saved; no retrospective thresholds or selection by accuracy."
+  },
+  "probability": "Train marginalized conditional destination NLL over latent experts; inference argmax of same normalized mixture, never choose an expert hard. Complete distribution retains G00 type probabilities and unchanged nonmovement conditional distributions. Fixed hierarchical primary type then conditional argmax preserves requested movement isolation; explicitly not global joint MAP. No opaque fallback veto.",
+  "metrics": [
+    "full exact commands/type macroF1/percategoryPRF/confusion/typeFP andjointFP",
+    "move andblocked truefamily parameter/typedconditional/joint",
+    "direction continuation/change/startup",
+    "augTRAIN/naturalTRAIN/DEV matcheddefinitions",
+    "paired2000wholeDEVgroupdraws seed20261106 on full and contexts",
+    "NLL percategory, candidate support, mask rejections separately success/blocked",
+    "latent gate entropy/use not true-intent correctness",
+    "raw personalPRE serving parity and actual inference timing"
+  ],
+  "continuation": "Execute S00 then fresh Solxhigh review; execute X00 then fresh review. No other fit. Prospective repeat-allocation criterion only: >=3pp jointmove gain vs G00, paired95 lower>0, lower fulljointNLL, no overallstrict regression, continuationconditional drop<=.5pp, no changingjoint regression, no blockedjoint regression, all nonmovement predictions/parameters exactly unchanged. Compare X00 directly S00. If passed, separately freeze additionalseed budget before repeats; no robustness claim now.",
+  "limits": "Fixed classifier caps joint successful movement at2127/2362; all original category90%,macro.65,move.6520745131,NLL10% and3seed targets remain binding, not replaced by exploratory3pp allocation. Both75+75sealed. Shop43strict unassessed failures/missingarglossabsent, sparsealtar/teleport/submituncertified, ambiguousentityIDs unresolved. No matches/downloads/simulations/botchanges/deploy. PR11DRAFT only, unmerged/noautomerge/queue.",
+  "ward_discontinued": "V14 stopped by user afterP00/P01/T00; T01 never run; do not claim four-fit protocol complete.",
+  "sources": {
+    "model.py": "c810b299f8521b240a23cff75ff14f11b814480a7e89fd56df19bc1f2d4c9cd1",
+    "protocol.py": "508400630c396435b064d5d280ead4339fafea57f4200d65b8eafad79ac34e49",
+    "data.py": "34412d960bc48fe6c88e6c82a3b269ab08757296b4049166fb7b99129c26af5e",
+    "fit.py": "72ac3e7dea7d730c2166515770a4df7f8eefd938d362a8373ec2b83967ca02b0",
+    "evaluate.py": "3083e2bbc8bdd15451cf1e5a8a4056dd0ea8b00c121a230642dfa7bf7d612fea",
+    "predictor.py": "1360e4e800b070d73d2f3260ea053dc52fb55ce4fd541478e5f24f7398879a5b",
+    "roundtrip.py": "5f90dddf22aabd3a0c8baf6afd86f1ef250770608eb4d02bd870d1cefaed9474"
+  },
+  "jobs_sha256": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

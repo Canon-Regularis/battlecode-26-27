@@ -1,0 +1,41 @@
+{
+  "original_config": {
+    "id": "E06",
+    "name": "gru-rich-rare-training",
+    "history": 16,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.5,
+    "augment": true,
+    "constrain": true
+  },
+  "new_config": {
+    "id": "M01",
+    "name": "gru-rich-rare-training",
+    "history": 16,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.5,
+    "augment": true,
+    "constrain": true
+  },
+  "seed": 26,
+  "architecture_state_shapes_identical": true,
+  "benchmark_sha256": "e8bc7413c692c181e82809d458bdd9a78e115d59e61ac3f32ed03d413eba8aea",
+  "training_settings": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "original_checkpoint_sha256": "55c9cb983abab2aedffb6d3b78fd2e61653496ff090cd5118b97be03b45e00b7",
+  "original_validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "old_validation_reproduced": true,
+  "changes": "Training replay volume/composition only. Normalization and class weights refit on training data by the unchanged procedure.",
+  "caveat": "New recordings may differ in time, engine, opponent/draft and Fish policy. The unchanged epoch/patience budget allows more optimizer updates on more data; this is not randomized or equal-compute evidence of a pure volume effect."
+}

@@ -1,0 +1,42 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\destination_weights.py": "a6a34fa384ca823334f5e99ca28369f4d229a115dc77b98a373d78d276f36125",
+    "tools\\action_predictor\\behavior_segments\\destination_weight_fit.py": "6eb13fc9811de5abdca55b44ca1ed01ae4ef1e1d687e06e14e5d6b4d6d0f5513",
+    "tools\\action_predictor\\behavior_segments\\destination_weight_verify.py": "5653564c8d3a7bd54fdfc980cfb4c3db1874ecd1581b492350e71520ea0ff898",
+    "tools\\action_predictor\\behavior_segments\\destination_predictor.py": "34eb47880aced39c9f3126008a0f6515cad959b6b6eb612a6097a3529cfe4257",
+    "tools\\action_predictor\\behavior_segments\\test_destination_weights.py": "637508bb7a2334f28ac4a61d9bd19e4aceda37af017b0039d5b1370281925267"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v52\\plan.json": "218cdec07d68f453aee2e59ebcb6d317f487910b4323af8a4e5c0777857b9b2f",
+    "tools\\action_predictor\\experiments\\v52\\result.json": "b8e183c12824a69538b9fc25ba8ae00ce2db8e3c2e60fcd78850c556e7023b1b",
+    "tools\\action_predictor\\experiments\\v52\\verification.json": "8d50d79b419644ec2819a6145b752095a7b0a1f36e2878474dcba67725e2418b",
+    "tools\\action_predictor\\experiments\\v51\\cache.json": "3471e96d2038b730f0acce594b88cbeaadd71568ecf51014646af93617c61d7c",
+    ".cambc\\action-predictor\\v49\\labels.json": "99770a19eae344c7c8fd2b85ba2549cd1b59cd1c0f3422f697d275414f51d1b0"
+  },
+  "fold_backbones": [
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold0\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold1\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold2\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold3\\epoch-024.pt"
+  ],
+  "full_backbone": ".cambc\\action-predictor\\v49\\selected.pt",
+  "seed": 53001,
+  "learning_rates": [
+    0.0003,
+    0.001
+  ],
+  "epochs": 16,
+  "evaluate_every": 4,
+  "batch_rows": 16,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "tuning_seconds_cap": 1800,
+  "refit_seconds_cap": 600,
+  "trainable_parameters": 1840,
+  "unchanged_architecture": true,
+  "objective": "Supported full-map exact endpoint cross entropy. Update existing query and goal weights only; freeze final common scalar bias, map encoder, recurrent/code/embedding/movement weights and V52 correction. The original pointwise goal head is evaluated in equivalent factored linear form for caching.",
+  "labels": "Frozen V43 switching prototypes and unchanged next-segment endpoint definition. Use all1607 V49 fitting windows;2099 goal labels in32games. Verify exact original369 labels. Future frames/code assignments supply labels only, never features. No endpoint imputation or new codes.",
+  "selection": "Four fitting-game folds using corresponding V49 backbones; train expanded other24games, validate only original369 queries across held folds. Choose highest within2 correct count, then exact count, then smallest mean error, NLL, epoch and learning rate. Epoch0 is eligible. Refit selected setting on all fitting games; assess one selected checkpoint on unchanged98 evaluation goals.",
+  "success": "At least5percentage points higher within2 endpoint accuracy vsV49/V52, exact accuracy no worse, lower mean endpoint error and NLL, and A* movement correctness no worse. Code and direct V52 movement outputs must remain identical. No promotion.",
+  "limitations": "Previously exposed research games; hindsight-inferred endpoints, selected missing frames, teacher-forced histories and original backbone/discovery fitting-group exposure. No verified Fish intent, full-command or playing-strength claim. No subagents."
+}

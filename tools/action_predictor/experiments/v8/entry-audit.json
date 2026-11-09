@@ -1,0 +1,227 @@
+{
+  "audit_sha256": "5161232df3a7f124b9abfe9ca8039db16c6ff93d457630cccd086bfe6f7c86a8",
+  "accounting": {
+    "rows": 14439,
+    "strict_failures": 3028,
+    "wrong_action_type": 1627,
+    "wrong_parameter_with_correct_type": 1359,
+    "unassessed_shop_with_correct_type": 42
+  },
+  "per_action": [
+    {
+      "action": "altar",
+      "support": 2,
+      "strict_correct": 0,
+      "failures": 2,
+      "joint_correctness": 0.0,
+      "wrong_type": 2,
+      "wrong_parameter": 0,
+      "unassessed": 0,
+      "false_positives": 93
+    },
+    {
+      "action": "attack",
+      "support": 985,
+      "strict_correct": 874,
+      "failures": 111,
+      "joint_correctness": 0.8873096446700508,
+      "wrong_type": 75,
+      "wrong_parameter": 36,
+      "unassessed": 0,
+      "false_positives": 130
+    },
+    {
+      "action": "blocked",
+      "support": 110,
+      "strict_correct": 1,
+      "failures": 109,
+      "joint_correctness": 0.00909090909090909,
+      "wrong_type": 70,
+      "wrong_parameter": 39,
+      "unassessed": 0,
+      "false_positives": 57
+    },
+    {
+      "action": "cancel",
+      "support": 2589,
+      "strict_correct": 2535,
+      "failures": 54,
+      "joint_correctness": 0.9791425260718424,
+      "wrong_type": 54,
+      "wrong_parameter": 0,
+      "unassessed": 0,
+      "false_positives": 161
+    },
+    {
+      "action": "cast_0",
+      "support": 213,
+      "strict_correct": 154,
+      "failures": 59,
+      "joint_correctness": 0.7230046948356808,
+      "wrong_type": 45,
+      "wrong_parameter": 14,
+      "unassessed": 0,
+      "false_positives": 19
+    },
+    {
+      "action": "cast_1",
+      "support": 243,
+      "strict_correct": 95,
+      "failures": 148,
+      "joint_correctness": 0.39094650205761317,
+      "wrong_type": 81,
+      "wrong_parameter": 67,
+      "unassessed": 0,
+      "false_positives": 181
+    },
+    {
+      "action": "end",
+      "support": 4096,
+      "strict_correct": 3957,
+      "failures": 139,
+      "joint_correctness": 0.966064453125,
+      "wrong_type": 139,
+      "wrong_parameter": 0,
+      "unassessed": 0,
+      "false_positives": 73
+    },
+    {
+      "action": "move",
+      "support": 2362,
+      "strict_correct": 1287,
+      "failures": 1075,
+      "joint_correctness": 0.5448772226926334,
+      "wrong_type": 235,
+      "wrong_parameter": 840,
+      "unassessed": 0,
+      "false_positives": 150
+    },
+    {
+      "action": "priority",
+      "support": 576,
+      "strict_correct": 10,
+      "failures": 566,
+      "joint_correctness": 0.017361111111111112,
+      "wrong_type": 233,
+      "wrong_parameter": 333,
+      "unassessed": 0,
+      "false_positives": 185
+    },
+    {
+      "action": "recall",
+      "support": 3084,
+      "strict_correct": 2472,
+      "failures": 612,
+      "joint_correctness": 0.8015564202334631,
+      "wrong_type": 612,
+      "wrong_parameter": 0,
+      "unassessed": 0,
+      "false_positives": 225
+    },
+    {
+      "action": "shop",
+      "support": 43,
+      "strict_correct": 0,
+      "failures": 43,
+      "joint_correctness": 0.0,
+      "wrong_type": 1,
+      "wrong_parameter": 0,
+      "unassessed": 42,
+      "false_positives": 9
+    },
+    {
+      "action": "submit",
+      "support": 22,
+      "strict_correct": 19,
+      "failures": 3,
+      "joint_correctness": 0.8636363636363636,
+      "wrong_type": 3,
+      "wrong_parameter": 0,
+      "unassessed": 0,
+      "false_positives": 56
+    },
+    {
+      "action": "teleport",
+      "support": 2,
+      "strict_correct": 0,
+      "failures": 2,
+      "joint_correctness": 0.0,
+      "wrong_type": 0,
+      "wrong_parameter": 2,
+      "unassessed": 0,
+      "false_positives": 6
+    },
+    {
+      "action": "ward",
+      "support": 112,
+      "strict_correct": 7,
+      "failures": 105,
+      "joint_correctness": 0.0625,
+      "wrong_type": 77,
+      "wrong_parameter": 28,
+      "unassessed": 0,
+      "false_positives": 282
+    }
+  ],
+  "principal_failure_share": 0.7440554821664465,
+  "movement_errors": 958,
+  "direction_change_movement_errors": 881,
+  "priority_joint_correct": 10,
+  "priority_support": 576,
+  "predicted_wards": 317,
+  "recall_to_ward": 257,
+  "partial_legality": {
+    "assessed": 7084,
+    "invalid": 109,
+    "rate": 0.01538678712591756,
+    "all_command_fraction": 0.007548999238174389,
+    "full_engine_illegal_action_rate": null,
+    "meaning": "Partial observable violations: exact personal movement mask; other families readiness/resource checks only. Does not certify complete legality."
+  },
+  "blocked_flags": 92,
+  "successful_move_mask_flags": 0,
+  "training_frequencies": {
+    "natural": {
+      "<unknown>": 0,
+      "altar": 44,
+      "attack": 20108,
+      "blocked": 1906,
+      "cancel": 52935,
+      "cast_0": 3894,
+      "cast_1": 4794,
+      "end": 80256,
+      "move": 48286,
+      "priority": 9815,
+      "recall": 62903,
+      "shop": 1204,
+      "submit": 435,
+      "teleport": 29,
+      "ward": 2192
+    },
+    "augmented": {
+      "<unknown>": 0,
+      "altar": 1663,
+      "attack": 22761,
+      "blocked": 10065,
+      "cancel": 73108,
+      "cast_0": 4674,
+      "cast_1": 8273,
+      "end": 110233,
+      "move": 71945,
+      "priority": 14816,
+      "recall": 79748,
+      "shop": 17273,
+      "submit": 7076,
+      "teleport": 594,
+      "ward": 10842
+    }
+  },
+  "source_hashes": {
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\validation.npz": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\validation-data.json": "f3bb6fc366d2234b5b86a36cb5014617f63762cd307c614fd17f488f2ae6f55b",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\runs\\M01\\model.pt": "906261a160de839a9e536462e84d6c19360b8fd9e584764d70fd0eb80f378936",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\runs\\M01\\validation-predictions.npz": "b5f8bf4f7ab19b7bdf83a980895c7c767b0586416d3b6ebca9208b6c0cf075c4",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v5\\M01.json": "3d3263dc0b3459747f0d1f0d799600e820befd11f3d4519840983f94ea2f7a15"
+  },
+  "audit_independently_reproduced": true
+}

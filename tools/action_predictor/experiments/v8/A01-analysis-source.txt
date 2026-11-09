@@ -1,0 +1,87 @@
+"""Verify all frozen A01 predictions and report the complete tradeoff table."""
+from pathlib import Path
+import sys,json,csv
+import numpy as np
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor import priority_anchor_baselines as study
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.priority_fit_v3 import VAL,BASE
+from tools.action_predictor.more_replays import sha,frozen
+from tools.action_predictor.observation_metrics import correctness
+from tools.action_predictor import reliable_train as rt
+plan,priors=study.verify_protocol();approval=study.read(REPORTS/'priority-anchor-code-approval.json')
+assert approval['completion_sha256']==sha(REPORTS/'priority-anchor-prefit-completion.json')
+completion=study.read(REPORTS/'priority-anchor-prefit-completion.json')
+for key,path in [('prefit_sha256',study.PREFIT),('priors_sha256',study.PRIORS),('plan_sha256',study.PLAN),('sources_sha256',study.SOURCES)]:
+    assert completion[key]==approval[key]==sha(path)
+assert completion['tests_sha256']==sha(REPORTS/'priority-anchor-tests-v2.json')
+report=study.read(REPORTS/'A01.json');assert report['approval_sha256']==sha(REPORTS/'priority-anchor-code-approval.json')
+assert report['plan_sha256']==sha(study.PLAN) and report['priors_sha256']==sha(study.PRIORS)
+def arrays(path):
+    with np.load(path) as z:return {k:z[k] for k in z.files}
+raw=arrays(VAL);values=arrays(WORK/'priority-validation.npz')['values'];base=arrays(BASE/'runs/M01/validation-predictions.npz')
+mask=raw['y']==rt.LABELS.index('priority');rows=[];category_rows=[];artifacts={}
+vocabulary=priors['global_frequency']['prior']['values']
+for family in study.FAMILIES:
+    name=family['name'];path=WORK/'anchor-baselines'/(name+'.npz');metric=report['metrics'][name]
+    assert sha(path)==metric['predictions_sha256'];pred=arrays(path)
+    np.testing.assert_array_equal(pred['priority'],study.forecast(family,priors,values))
+    loss=-study.log_mass(family,priors,values[mask],raw['priority'][mask])
+    np.testing.assert_array_equal(loss.astype(pred['param_nll'].dtype),pred['param_nll'][mask])
+    assert float(loss.mean())==metric['priority_nll']
+    for key in ('prediction','coordinate','proposed_coordinate','top5','type_nll'):np.testing.assert_array_equal(pred[key],base[key])
+    np.testing.assert_array_equal(pred['nll'][~mask],base['nll'][~mask]);np.testing.assert_array_equal(pred['param_nll'][~mask],base['param_nll'][~mask])
+    parameter,joint=correctness(raw,pred);error=np.abs(pred['priority'][mask]-raw['priority'][mask])
+    row={key:metric[key] for key in ('priority_exact','priority_joint','priority_nll','full_observed_joint_nll','strict_correct','mean_absolute_error','median_absolute_error','maximum_absolute_error','errors_over1000','available_support','available_exact','missing_support','missing_exact')}
+    row.update(name=name,unseen_support=metric['priority_strata']['unseen_value']['support'],unseen_exact=metric['priority_strata']['unseen_value']['exact'],
+        rare_support=metric['priority_strata']['training_count_1_19']['support'],rare_exact=metric['priority_strata']['training_count_1_19']['exact'],
+        nonvocabulary_forecasts=int((~np.isin(pred['priority'][mask],vocabulary)).sum()),p90_absolute_error=float(np.quantile(error,.9)),
+        wrong_sign=int(((np.sign(pred['priority'][mask])!=np.sign(raw['priority'][mask]))&(raw['priority'][mask]!=0)).sum()))
+    assert row['priority_exact']==int((error==0).sum()) and row['priority_joint']==int(joint[mask].sum())
+    rows.append(row);artifacts[name]=dict(predictions_sha256=sha(path),all_forecasts_recomputed=True,all_priority_log_masses_recomputed=True)
+    for i,label in enumerate(rt.LABELS):
+        selected=raw['y']==i;support=int(selected.sum());guessed=int((pred['prediction']==i).sum());typed=int((selected&(pred['prediction']==i)).sum());correct=int(joint[selected].sum())
+        joint_precision=correct/guessed if guessed else 0.;joint_recall=correct/support if support else 0.
+        parameterized=label in metric['validation']['parameters'];assessed=parameterized and label!='shop'
+        category_rows.append(dict(family=name,action=label,support=support,joint_correct=correct,joint_precision=joint_precision,joint_recall=joint_recall,
+            joint_f1=2*joint_precision*joint_recall/(joint_precision+joint_recall) if joint_precision+joint_recall else 0.,type_false_positives=guessed-typed,joint_false_positives=guessed-correct,
+            **{'type_'+k:metric['validation']['per_class'][i][k] for k in ('precision','recall','f1')},
+            true_family_parameter_accuracy=float(parameter[selected].mean()) if support and assessed else None,parameter_accuracy_given_correct_type=correct/typed if typed and assessed else None,
+            unassessed_parameters=support if label=='shop' else 0,observed_joint_nll=float(pred['nll'][selected].mean()) if support else None))
+for filename,data in [('A01-summary.csv',rows),('A01-per-category.csv',category_rows)]:
+    with (REPORTS/filename).open('w',encoding='utf-8',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(data[0]));writer.writeheader();writer.writerows(data)
+descriptive={}
+for metric,direction in [('priority_exact',max),('priority_joint',max),('priority_nll',min),('full_observed_joint_nll',min),('mean_absolute_error',min)]:
+    value=direction(r[metric] for r in rows);descriptive[metric]=dict(value=value,families=[r['name'] for r in rows if r[metric]==value])
+freq_info=study.read(REPORTS/'priority-frequency-baseline.json');freq_path=Path(freq_info['predictions_path']);assert sha(freq_path)==freq_info['predictions_sha256']
+global_pred=arrays(WORK/'anchor-baselines/global_frequency.npz');old_frequency=arrays(freq_path)
+np.testing.assert_array_equal(global_pred['priority'],old_frequency['priority'])
+global_nll_error=float(np.max(np.abs(global_pred['param_nll'][mask]-old_frequency['param_nll'][mask])))
+assert global_nll_error<=1e-6
+baseline_loss=descriptive['full_observed_joint_nll']['value']
+analysis=dict(report_sha256=sha(REPORTS/'A01.json'),source_sha256=sha(__file__),rows=rows,descriptive_metric_winners=descriptive,
+    stronger_A01_hybrid_joint_nll=baseline_loss,ten_percent_reference=.9*baseline_loss,
+    selection_scope='All13 predefined families retained. Metric winners are descriptive only; no per-row oracle, sign/formula tuning, replacement or neural-model choice.',
+    uncertainty_scope='Pointwise2000whole-group paired intervals vsP03 in A01.json; not multiplicity-adjusted across13families, not selection-adjusted, not untouched-test or seed confirmation.',
+    all_archives_verified=artifacts,global_reference_maximum_param_nll_difference=global_nll_error,
+    direct_copy_controls={name:{key:report['metrics'][name][key] for key in ('available_support','available_exact','missing_support','missing_exact','priority_exact')} for name in ('current_plus_copy','scheduled_plus_copy','latest_plus_copy')},
+    common_spatial_metrics=report['metrics']['global_frequency']['validation']['parameters'],
+    historical_legality=report['metrics']['global_frequency']['validation']['observable_invalid_commands'],outcome_aware_legality=study.read(REPORTS/'audit-amendment-01.json')['outcome_aware_mask_diagnostic'],other_readiness_flags=17,full_engine_legality=None,
+    comparison_P03=study.read(REPORTS/'P03-analysis.json')['metrics']['P03'],new_neural_optimizer_steps=0,three_seed_confirmed=False,all_category_goal_met=False,unassessed_shops=43,reserved_games_opened=0)
+frozen(REPORTS/'A01-analysis.json',analysis)
+(REPORTS/'A01-analysis-source.txt').write_bytes(Path(__file__).read_bytes())
+lines=['# A01: signed-anchor and residual-frequency baselines','',
+    'All13 families were fixed from training before this development evaluation. These are arithmetic/frequency parameter baselines with M01 action/spatial predictions preserved, not newly trained GRUs. No neural optimizer ran.','',
+    '| Family | Exact priority /576 | Joint priority /576 | Priority NLL | Full observed joint NLL | Mean integer error | Unseen exact /4 | Rare exact /65 |',
+    '|---|---:|---:|---:|---:|---:|---:|---:|']
+for r in rows:lines.append(f"| {r['name']} | {r['priority_exact']} | {r['priority_joint']} | {r['priority_nll']:.5f} | {r['full_observed_joint_nll']:.6f} | {r['mean_absolute_error']:.3f} | {r['unseen_exact']} | {r['rare_exact']} |")
+lines+=['',f"Descriptive minimum full observed joint NLL: {baseline_loss:.6f}; additional10% improvement reference: {.9*baseline_loss:.6f}. All original benchmarks remain binding. Exactness, joint correctness, likelihood and error winners may differ; no family is adopted.", '',
+    'A01-summary.csv retains all families, available/missing counts, tail errors and out-of-vocabulary forecasts. A01-per-category.csv includes type and joint PRF/FP, parameter exactness over all true-family rows and among correctly typed rows, support, observed loss and unassessed arguments. A01.json preserves confusion matrices, every spatial metric, per-group counts, rare/unseen/missing/outside-window strata and pointwise paired uncertainty versus P03.', '',
+    'All14439 rows remain. Latest-argument absence uses the frozen unconditional prior, rather than dropping rows or treating missing as zero. All43 shop arguments remain unavailable and strict failures; their observed likelihood includes action loss only. Full engine legality is unknown. Historical partial flags remain0 successful-move mask rejections,92 blocked-forecast rejections and17 other flags.', '',
+    'No original goal is achieved by this study. The M01 action classifier remains frozen, so priority joint correctness is capped at343/576 (59.55%). The90%-in-every-category/three-seed and original macroF1/movement/loss/targeting requirements are unchanged. Five reused groups and two altar/teleport examples cannot certify broad reliability.', '',
+    'All baseline priors, source snapshots, interrupted-preparation evidence and prediction archives are preserved. Both75-game reserved partitions remain sealed; old exposed test unused. Fresh Sol extra-high review is required before any learned residual design or other work.']
+(REPORTS/'A01-REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps(dict(descriptive_metric_winners=descriptive,stronger_A01_hybrid_joint_nll=baseline_loss,global_reference_nll_max_difference=global_nll_error),indent=2))

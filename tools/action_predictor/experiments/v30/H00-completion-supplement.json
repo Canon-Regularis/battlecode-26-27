@@ -1,0 +1,37 @@
+{
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v30\\H00.json": "104388aaaf5922b42b7968ad3806489be1bbf3a5da23add432db93e0208dfe1d",
+    "tools\\action_predictor\\experiments\\v30\\H00-REPORT.md": "1d91ef606d819f8c2ec744e4f03371ad010c16f25418d2399e5821f24526aa07",
+    "tools\\action_predictor\\segment_policy\\report.py": "ca641ddeac282f4ebddc3f5914cb2e479b225f8e3418a4a1614292877dfad71a",
+    "tools\\action_predictor\\experiments\\v30\\H00-initial-diagnostic.json": "8fe9f522169bfcf61bbbb9813e27f85d43d82db8a49c3053fe42322483325e08",
+    "tools\\action_predictor\\experiments\\v30\\H00-initial-comparison.json": "f7d5232b4b2002b37b74e52604b0102593a6392325b4c2477e43ac1269444f9d",
+    "tools\\action_predictor\\experiments\\v30\\H00-sampler-diagnostic.json": "198d2d645accf73c325c9d87242247221366829c00bb066dc29d0e3cb0894f92",
+    "tools\\action_predictor\\experiments\\v30\\H00-sampler-provenance-correction.json": "13c5c710a01c76044729b4d7f79db8673b71f0db97267baa796489e517cb3a49",
+    "tools\\action_predictor\\experiments\\v30\\prior-command-information-probe.json": "99f2bf2869d83a1de1fb3aa9af4ec406990b7f1b514a26ca440ae1a9a0c3aaf3",
+    "tools\\action_predictor\\experiments\\v30\\protocol.json": "fbcab07198625defa96c55a8b9ae22d01cdb503b91edde1957a02bdddad685fb",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-01.npz": "dcc1eb2f5d7da08a54fda9a3f34f42c11f0ab13dbf554ac092b7faa7a5afd4bd",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-02.npz": "bbf415a3537f4c84a905909860f76dacbad7385548726df2870cb49c9db5bf93",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-03.npz": "a0bd35716c50643d9ae5c0cf32f7dd41f6ad396df9d7145e53f04fd5331548bc",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-04.npz": "bcc8d2e208089bfc28918d9427869a2a4bc5b6d17de92a91aaa8e7950a15f05c",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-05.npz": "6b0cd5c626f19603ddbec87f000bf92ee5bb6692893876fb35aaf3b0da5a77f3",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-06.npz": "4b40bfbfee22e77b3a8ea2ef4b6becc631e521d2090c36eecd7101d07ed36868",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-07.npz": "a427f312579c8281dcdf9a1b471e1b55a1e58e85ad33b1f1dd0159b71061e8b5",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-08.npz": "41281ea8400ddb1e0efa071d087eff2bca1f161a663e9b3870effe8f83e52870",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-09.npz": "3f72e314b6f348e6dbd7c31980a84da59a4c0dbc98b96a8ea020477adda86c9d",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-10.npz": "ec3355949486d66a06419efa50fa2ade721e0dfcdd066090936842669c74a3ae",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-11.npz": "fced31f5dbb01ad7e9175d9069049c960fb99e5e0ad0bb9c95ca95dfcdae8369",
+    ".cambc\\action-predictor\\v30\\sampler-diagnostic\\round-12.npz": "8d0de4321926ca7de3b891b660097adf488b5793f2eda734b79f8649e841219c"
+  },
+  "primary_report_sha256": "104388aaaf5922b42b7968ad3806489be1bbf3a5da23add432db93e0208dfe1d",
+  "checkpoint_sha256": "6be14700c51bb5f181ae4d5caeddc3acad5de7d74669f9b6b975b4429890b587",
+  "execution_source_commit": "341ee3413cb680a4ee0ca2c9e7dd1c95b20fed0d",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "reproduction": [
+    "python -m tools.action_predictor.segment_policy.initial_diagnostic",
+    "python -m tools.action_predictor.segment_policy.input_contract_probe",
+    "python -m tools.action_predictor.segment_policy.sampler_diagnostic",
+    "python -m tools.action_predictor.segment_policy.report"
+  ],
+  "warning": "Producers preserve existing outputs and refuse overwrites. Reuse bound artifacts; rerun in a separately versioned namespace only when new evidence requires it. Sampler source-field correction has its exact saved arithmetic command/provenance in the parent thread."
+}

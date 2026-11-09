@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\planner_weight_edit.py": "dd63d6ec20da1c416f227e5d10e142b94163e5ff8745c752c396c03a6b883c36",
+    "tools\\action_predictor\\behavior_segments\\planner_weight_predictor.py": "42538b4be69bcc8a360b766648a7346ab417a6c4ceef5fccb53abe4f08e3c4e9",
+    "tools\\action_predictor\\behavior_segments\\test_planner_weight_edit.py": "f154b4be3f6eed1dfa5945bc6a3e845233900c88b1985e789c0581bfc0ee722e"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v61\\plan.json": "9628019c9e08aacaf37c0c4fe9aa9f3e50fe3d397fd7f8932a40e57e66044a87",
+    "tools\\action_predictor\\experiments\\v61\\fit.json": "8e4659d72ed380e018d639fe11b1732930db86a90678bd6e8c278f66f2f5f4c0",
+    "tools\\action_predictor\\experiments\\v61\\result.json": "13d98ec669fcf6f658e837aa748ebf423b68be6629b5280bc19c07ba15195331",
+    "tools\\action_predictor\\experiments\\v61\\verification.json": "2d52818cc3c00cdfe2f33482f0ca947c1cd7deb95f222dc8713983d513df088b"
+  },
+  "scales": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "shifts": [
+    -1.0,
+    -0.75,
+    -0.5,
+    -0.25,
+    0.0,
+    0.25
+  ],
+  "minimum_activation": 0.1,
+  "selection": "Four matched fitting-fold V59/V61 checkpoints; original canonical held windows only. Select maximum movement correctness subject to at least10percent of candidate-available observed queries retaining/selecting a goal and nonnegative mean selected recorded utility. Tie lower combined squared coefficient edit norm,then scale,shift. Original identity eligible only under same guards. If none eligible stop. No evaluation-dependent weight selection.",
+  "intervention": "Multiply existing final Linear weight and bias by scale,then add shift to existing bias. Tanh and all goal candidates, routing, .15 retention margin, recurrent/code/movement weights remain unchanged. No optimizer updates. Zero weights/bias=-1 is a separately reported disabled-planner control,not eligible for selection.",
+  "success": "Must improve over original combined planner,exceed V59 movement correctness,keep selected utility positive,and remain at least10percent active on evaluation. All required for improvement beyond direct predictor. Preserved original model; no promotion.",
+  "limits": "Repeatedly exposed research groups,original fold exposure,teacher-forced history,conditional moves,utility proxy. Score scale also changes effective .15 retention behavior; not isolated calibration or learned strategy."
+}

@@ -1,0 +1,50 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\code_movement.py": "fbd2cc264470b69383c5eca6f0dcf45dd140f70ddf8d811e8622fbcb55efa38d",
+    "tools\\action_predictor\\behavior_segments\\code_movement_fit.py": "017a790fbc6da243e0630b062c732bcd283a43886ab4ed9de133f542945ca4d4",
+    "tools\\action_predictor\\behavior_segments\\code_movement_verify.py": "4979d607a8d157fc92c2e6f5b7ee7b187cda798c1addddfab944635062c6068f",
+    "tools\\action_predictor\\behavior_segments\\code_movement_predictor.py": "f9306a52e12a6c0bb52dbdfbdbc485ef23b365c1b64fd4109a2d96e7b6bf2292",
+    "tools\\action_predictor\\behavior_segments\\test_code_movement.py": "7bcea6744572cde14d3beb40265d0edbc63fe41b9c1f601fb3b7dea11478598d"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v49\\plan.json": "79e2ec7a7c78f467a935f4b3354940b8b69cb85f91efdb600a391790bc25da7b",
+    "tools\\action_predictor\\experiments\\v49\\result.json": "3d10e27983ef9133e1cb09d8d7d5fc11ae9354e89cc1ac93e95026002730ec6a",
+    "tools\\action_predictor\\experiments\\v49\\verification.json": "e1e9737342fa3744b5b8c24acd5b6010c67db3a99c62a595fc02d1399090b286",
+    "tools\\action_predictor\\experiments\\v49\\selection.json": "1641d01819cc052c015c7381b90eb72d662d5fadb9a5e84e72115cdad149fdf0",
+    "tools\\action_predictor\\experiments\\v49\\cache.json": "57e28435bf8fdaaf391bf313b8b10f02a49a805e8ce910eec4b0aa66bc28ea0d",
+    "tools\\action_predictor\\experiments\\v49\\data.json": "b104456c1da568c12f1813899874c595082f8ba11699b185e73dac454534277c",
+    ".cambc\\action-predictor\\v49\\selected.pt": "5d0cc661e118a8e87c6bdaf56bb374c2c3e668a276396e13b096a4a78a880c23",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold0\\epoch-024.pt": "02ca4460279c28d61daf0a4e67b2da944ae5d8f9ba1ce6746fe0662eb5f10b14",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold1\\epoch-024.pt": "96a05d5e417a31ad09ab3d920c153d8c689f3bc57d4d2ea8a2a5e236ecb01487",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold2\\epoch-024.pt": "c1da2a1816d8293da78db0ab38344509ae179d09dda21321b7b3ba50137c4e62",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold3\\epoch-024.pt": "a59c679b7f4a38fa2d741fe49275466126d9a64d68611b185abf65061c2f0087",
+    "tools\\action_predictor\\experiments\\v43\\r2\\S01.json": "2d587f71a4c71837b21eca0c74d6aac59725e25d15f0b53bd40c237e155e9c6e"
+  },
+  "fold_backbones": [
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold0\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold1\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold2\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold3\\epoch-024.pt"
+  ],
+  "full_backbone": ".cambc\\action-predictor\\v49\\selected.pt",
+  "seed": 51001,
+  "epochs": 64,
+  "evaluate_every": 8,
+  "batch_windows": 32,
+  "learning_rate": 0.003,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "tuning_seconds_cap": 1200,
+  "refit_seconds_cap": 600,
+  "trainable_parameters": 3528,
+  "arms": [
+    "constant",
+    "predicted"
+  ],
+  "design": "Freeze V49 context, recurrent code predictor, old movement and goal heads. Add eight linear 48-to-9 movement residual experts, zero initialized. Treatment weights experts by predicted soft code probabilities; control uses fitting-training mean probabilities. Both retain the same V49 baseline logits, which already depend on the predicted code. This tests extra code-dependent execution, not removal of all code information.",
+  "data": "All1607 existing fitting windows from32games; four whole-game folds. Fold backbone is matching V49 checkpoint. Held fold validates only its original64windows. No hindsight code labels, movement labels, future descriptors, identity or direction diagnostics enter inputs.",
+  "loss": "Supported movement cross entropy, divided by actual movement rows in each32-window batch. No movement rows means skip update. Same permutations/updates across arms. No recurrent updates.",
+  "selection": "One shared epoch for both arms selected by maximum sum of held-fitting correct moves, then minimum summed NLL, then earlier epoch; epochs0,8,...64 eligible. Refit both on all fitting windows from the full V49 backbone; evaluate selected pair once.",
+  "success": "Usable movement improvement: predicted arm gains at least3percentage points vsV49, accuracy at least originalS01, and NLL at most0.01 worse than either. Additional code benefit: at least1percentage point above constant control and strictly lower NLL. Report all group/direction/code strata, paired rescues/regressions, and code/goal parity. These are allocation thresholds, not statistical significance or promotion.",
+  "limitations": "Previously exposed research groups, original backbone/discovery fitting-group exposure, teacher-forced history, inferred labels, conditional movement only. No strategy or playing-strength claim. No subagents or playing-bot changes. Original checkpoints preserved."
+}

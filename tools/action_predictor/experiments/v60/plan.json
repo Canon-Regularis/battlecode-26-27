@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\strategic_waypoint_fit.py": "09a99672f5947af437b997693672fc0c3deee614cd1f5382816a141bd2a4e039",
+    "tools\\action_predictor\\behavior_segments\\strategic_waypoint.py": "899ddacfe26a20c2512c3159a4e630a79453d566c771e4ab46f23b6789bae232",
+    "tools\\action_predictor\\behavior_segments\\strategic_waypoint_predictor.py": "05e2bf0fce0ca42cc782ac540de162b3d24d4cb3ace6d84dfd1360bb45c444b9",
+    "tools\\action_predictor\\behavior_segments\\test_strategic_waypoint.py": "f85949219f955f65e25c480532da8502169665198b20ac0ea5b451bee9b18e91"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v59\\plan.json": "bf1884e84ee99aa01e83f7560cff21a2053e517d4fa8f3128c3fda02aba84848",
+    "tools\\action_predictor\\experiments\\v59\\selection.json": "dd54f12d446fb9c0dc72cf4b974cd1ab64b813aca73924c8ca72bd27db2c4a6f",
+    "tools\\action_predictor\\experiments\\v59\\refit.json": "2644cd00a44ec3ff97e5779b30869e4ac9c7f9ca48cefd7d42a02d15075f1c51",
+    "tools\\action_predictor\\experiments\\v59\\result.json": "e5c7bf1a46eed0e858f070ddfee2c105b411c46475d11ea40fcfb79a98f746a6",
+    "tools\\action_predictor\\experiments\\v59\\verification.json": "4f764c5a7e350ae8c0d6359a0d5db7f2987a178fd893382f99de95d8075da83d"
+  },
+  "seed": 60001,
+  "horizon": 8,
+  "epochs": 32,
+  "evaluate_every": 8,
+  "learning_rate": 0.001,
+  "batch_rows": 128,
+  "seconds_cap": 1200,
+  "selection": "Four fitting-game folds, held canonical windows only. Minimize pooled mean Chebyshev endpoint error,then maximize within2,then earlier epoch. Epoch0 stay predictor eligible. Full refit selected duration only.",
+  "labels": "Observed position eight own turns later within same32turn window. Require both endpoints observed/alive and every intervening observed position to agree with integrated executed movement; reject observed death or displacement inconsistent with walking. Missing intermediate observations remain missing, not imputed inputs. Future commands/positions only construct labels.",
+  "features": "Frozen V59 causal state48,soft code8,current geometry540,observed-heading36,previous-command72. No current/future actions or endpoint labels in forward inputs. Freeze original model. Train704-128-2 waypoint MLP with SmoothL1(offset/8), then snap prediction to nearest static-reachable tile and use A* with actual current support.",
+  "baselines": "Current position, prior direction extrapolated by8tiles, original V59 goal and V59 direct movement. Endpoint and far-displacement cohorts are reported separately. Baselines not used to select evaluation outputs.",
+  "success": "Learned endpoint mean error lower than stay,heading8,andV59; far(with displacement>=3) within2 at least5points above best baseline; committed-goal-guided movement correct count exceeds V59 on all513 movement queries. Commit for eight own-turn queries or until reached; reset on observed missing position/window/actor. Missing frames age commitment without inventing observations. All required. Never automatic promotion.",
+  "limits": "Future position is a replay-derived waypoint,not internal intent. Static route commitment is not an autonomous game rollout. Preexposed groups, inherited fitting exposure, teacher-forced history and missing intermediate observations limit causal/strategic claims. No subagents."
+}

@@ -1,0 +1,21 @@
+{
+  "report_sha256": "4d681c8ba1a8a07dc0fdac9cf9dddbd373c05a1c48d0e8383a83dcb7ff7d7932",
+  "checkpoint_sha256": "1de066be2f683144ec2179438547546aa3932f7c4db788ee449c6358d11d11a3",
+  "sources": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\movement_roundtrip.py": "b15b76cd599608832c36b9c157a37985df35df4cb8a6cd932ed8dbbe90e049d9",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\movement_predictor.py": "a7d59f893bc2d204e891bc103fe6ce8b919bcaaf12451266778bbb04f780e253"
+  },
+  "cases": 95,
+  "games": 25,
+  "movement_serving_cases": 26,
+  "missing_history_cases": 5,
+  "inputs_exact": true,
+  "all_eight_saved_arrays_reproduced": true,
+  "saved_array_scope": "Fresh checkpoint via retained frozen fitter inference function; serving independently builds raw personal PRE/action memory inputs. Not a separate implementation of expert math.",
+  "batched_reference_probabilities_sha256": "808036f37c5767efb180000973128b30ff05bc8073467beccdd73473e8e49a5e",
+  "single_row_vs_batch_probability_max_error": 1.430511474609375e-06,
+  "tolerance": 2e-06,
+  "case_selection": "First/middle/last row and first model-proposed movement/blocked per game; never correctness or future-label selected.",
+  "reserved_opened": 0,
+  "new_fits": 0
+}

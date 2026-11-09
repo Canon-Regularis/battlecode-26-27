@@ -1,0 +1,423 @@
+{
+  "source_commit": "da1c7e3658a6a62f0c8b0d47487312dcc938df18",
+  "sources": {
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_capacity/__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_capacity/protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "tools/action_predictor/priority_capacity/test_measurement.py": "f55f07acbd61f1884fddf3db8e3847e8d386ed414cf8dabff347e1d8cb5432b9",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/experiment.py": "c790232304c35836e164675cf8c2b1a10bc5370ababcec3ed476b5de773b9ca3",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_regularized/test_safety.py": "105cad703bd506f5bf999e56b5f417590bf4f429fba79bd2e8b2e27d8170e8da",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83"
+  },
+  "trace": [
+    {
+      "step": 0,
+      "seconds": 0.0053589000017382205,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 1463,
+          "accuracy": 0.2489788972089857,
+          "mean_NLL": 3.0026838736027894,
+          "MAE": 164.8795098706603,
+          "mean_bounded_candidate_rank": 12.091558883594281,
+          "mean_marginalized_explanation_shares": [
+            0.6740709765050774,
+            0.32207605732745864,
+            0.0038529661674622157
+          ],
+          "mean_mode_probability": 0.18773540409119904
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 34,
+          "accuracy": 0.265625,
+          "mean_NLL": 2.8940585720620096,
+          "MAE": 114.2890625,
+          "mean_bounded_candidate_rank": 10.6015625,
+          "mean_marginalized_explanation_shares": [
+            0.6981129435692514,
+            0.30126745955650747,
+            0.000619596874240939
+          ],
+          "mean_mode_probability": 0.20647631119432147
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 25,
+          "accuracy": 0.1953125,
+          "mean_NLL": 3.1479222086554195,
+          "MAE": 175.4296875,
+          "mean_bounded_candidate_rank": 13.2578125,
+          "mean_marginalized_explanation_shares": [
+            0.715412977183899,
+            0.28373536066554295,
+            0.0008516621505582698
+          ],
+          "mean_mode_probability": 0.1914210523678349
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 28,
+          "accuracy": 0.21875,
+          "mean_NLL": 3.051520662793017,
+          "MAE": 174.59375,
+          "mean_bounded_candidate_rank": 14.6484375,
+          "mean_marginalized_explanation_shares": [
+            0.5905873536157957,
+            0.3976986399220827,
+            0.011714006462121403
+          ],
+          "mean_mode_probability": 0.17520604722673389
+        }
+      },
+      "penalty": 0.0
+    },
+    {
+      "step": 100,
+      "seconds": 7.56629069999326,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 3744,
+          "accuracy": 0.6371681415929203,
+          "mean_NLL": 1.4901935492053007,
+          "MAE": 67.8788291354663,
+          "mean_bounded_candidate_rank": 2.6689925119128657,
+          "mean_marginalized_explanation_shares": [
+            0.6508277872340577,
+            0.3480975717363925,
+            0.0010746410295490699
+          ],
+          "mean_mode_probability": 0.40099097119890525
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 76,
+          "accuracy": 0.59375,
+          "mean_NLL": 1.5767825411222263,
+          "MAE": 74.1328125,
+          "mean_bounded_candidate_rank": 3.046875,
+          "mean_marginalized_explanation_shares": [
+            0.6695947109122418,
+            0.33026118075607885,
+            0.00014410833167926413
+          ],
+          "mean_mode_probability": 0.3900919407080939
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 20,
+          "accuracy": 0.15625,
+          "mean_NLL": 4.108561715351643,
+          "MAE": 213.234375,
+          "mean_bounded_candidate_rank": 24.9296875,
+          "mean_marginalized_explanation_shares": [
+            0.7087196460084804,
+            0.2911085630463413,
+            0.00017179094517812818
+          ],
+          "mean_mode_probability": 0.2892404489606266
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 4.115582296097765,
+          "MAE": 214.0078125,
+          "mean_bounded_candidate_rank": 29.59375,
+          "mean_marginalized_explanation_shares": [
+            0.6218456421278902,
+            0.3709676455932059,
+            0.007186712278904338
+          ],
+          "mean_mode_probability": 0.29112228284967046
+        }
+      },
+      "penalty": 0.047592013675760214
+    },
+    {
+      "step": 500,
+      "seconds": 36.445537600026,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4515,
+          "accuracy": 0.7683798502382573,
+          "mean_NLL": 0.9232482496959582,
+          "MAE": 40.346664397549354,
+          "mean_bounded_candidate_rank": 1.8173927842069435,
+          "mean_marginalized_explanation_shares": [
+            0.6459518703650894,
+            0.35285140696018436,
+            0.0011967226747234667
+          ],
+          "mean_mode_probability": 0.586728166234768
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 93,
+          "accuracy": 0.7265625,
+          "mean_NLL": 1.0040657038326128,
+          "MAE": 40.2890625,
+          "mean_bounded_candidate_rank": 2.0,
+          "mean_marginalized_explanation_shares": [
+            0.6494185957846217,
+            0.35057938848477976,
+            2.015730598754139e-06
+          ],
+          "mean_mode_probability": 0.5876133383958897
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 14,
+          "accuracy": 0.109375,
+          "mean_NLL": 5.452170244027677,
+          "MAE": 240.0625,
+          "mean_bounded_candidate_rank": 29.375,
+          "mean_marginalized_explanation_shares": [
+            0.6733322938752753,
+            0.32661997293369555,
+            4.7733191029310993e-05
+          ],
+          "mean_mode_probability": 0.4558888821931263
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 5.2867760547183185,
+          "MAE": 201.921875,
+          "mean_bounded_candidate_rank": 34.9609375,
+          "mean_marginalized_explanation_shares": [
+            0.5792272158267848,
+            0.4206730161165327,
+            9.976805668257623e-05
+          ],
+          "mean_mode_probability": 0.450540328697087
+        }
+      },
+      "penalty": 0.15598757353735423
+    },
+    {
+      "step": 1000,
+      "seconds": 71.8667054999969,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4645,
+          "accuracy": 0.790503744043567,
+          "mean_NLL": 0.8322125001276419,
+          "MAE": 35.84649421375085,
+          "mean_bounded_candidate_rank": 1.7018379850238257,
+          "mean_marginalized_explanation_shares": [
+            0.6462035354538198,
+            0.3524212235118006,
+            0.0013752410343795519
+          ],
+          "mean_mode_probability": 0.6214249831010994
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 98,
+          "accuracy": 0.765625,
+          "mean_NLL": 0.9246130498793383,
+          "MAE": 26.4375,
+          "mean_bounded_candidate_rank": 1.8515625,
+          "mean_marginalized_explanation_shares": [
+            0.6495960311574386,
+            0.35038155785075437,
+            2.2410991807041067e-05
+          ],
+          "mean_mode_probability": 0.6228032024249411
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 13,
+          "accuracy": 0.1015625,
+          "mean_NLL": 5.986533494312647,
+          "MAE": 239.0078125,
+          "mean_bounded_candidate_rank": 31.4296875,
+          "mean_marginalized_explanation_shares": [
+            0.6701649771046679,
+            0.32980583589349677,
+            2.9187001835213483e-05
+          ],
+          "mean_mode_probability": 0.5040401735465948
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 22,
+          "accuracy": 0.171875,
+          "mean_NLL": 5.731431759154375,
+          "MAE": 190.1015625,
+          "mean_bounded_candidate_rank": 36.1953125,
+          "mean_marginalized_explanation_shares": [
+            0.5785455801947754,
+            0.41364250161766813,
+            0.0078119181875564245
+          ],
+          "mean_mode_probability": 0.48696586601456904
+        }
+      },
+      "penalty": 0.20009581702080764
+    },
+    {
+      "step": 2000,
+      "seconds": 142.24697560002096,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4671,
+          "accuracy": 0.794928522804629,
+          "mean_NLL": 0.8162769276070159,
+          "MAE": 35.208985704560924,
+          "mean_bounded_candidate_rank": 1.683287950987066,
+          "mean_marginalized_explanation_shares": [
+            0.6459908518367478,
+            0.3524578705755485,
+            0.00155127758770308
+          ],
+          "mean_mode_probability": 0.627681505161848
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 99,
+          "accuracy": 0.7734375,
+          "mean_NLL": 0.9214796602710039,
+          "MAE": 26.375,
+          "mean_bounded_candidate_rank": 1.859375,
+          "mean_marginalized_explanation_shares": [
+            0.6498372902115409,
+            0.35016261841327345,
+            9.137518569170123e-08
+          ],
+          "mean_mode_probability": 0.6280256722062612
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 14,
+          "accuracy": 0.109375,
+          "mean_NLL": 6.1195754561670395,
+          "MAE": 247.3828125,
+          "mean_bounded_candidate_rank": 31.1328125,
+          "mean_marginalized_explanation_shares": [
+            0.6706606861812642,
+            0.32929895358796407,
+            4.036023077183536e-05
+          ],
+          "mean_mode_probability": 0.5151130968908915
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 5.879614137953749,
+          "MAE": 190.6796875,
+          "mean_bounded_candidate_rank": 38.6015625,
+          "mean_marginalized_explanation_shares": [
+            0.5802321524046824,
+            0.4197660249751876,
+            1.8226201300651918e-06
+          ],
+          "mean_mode_probability": 0.49698729844912193
+        }
+      },
+      "penalty": 0.2099807668523893
+    }
+  ],
+  "lambda_value": 3.029750319831723e-05,
+  "protocol_sha256": "c1c8ffb70f6f158f29bc787c85854e274f11b69cf98ca61bb9c8ff128b3007c3",
+  "preflight_sha256": "82d5caea79dc2cdc24cb43d22693d979e5d3a0bc3d76457fde12c509aecd608d",
+  "bindings": {
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0000-predictions.npz": "5d0d01bcf37289af054cd852421a9efacb025582e95bdd96d322e69ed472aa04",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0000-raw.npy": "809f9a390cfc20e7da59ba454b7013a1b5c54293aed42f9a27c41cb911dc3dd5",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0100-predictions.npz": "4645bb17ac214e340688c1817ae08fae16e4690d95d1204fff1b5cbf2981946d",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0100-raw.npy": "cd3168e4424e34156e8dba5e404566f44f7a8d1fdefb3679bfe126a86e9f72ac",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0500-predictions.npz": "0544d23fc55a559bc9d2420c6ad4518a970198c46171ecc264c2222af2f1871f",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0500-raw.npy": "02580145c91bb605f5081cc4385cbfd212ba7f1e477fa1d94b98654a9dc42a38",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-1000-predictions.npz": "275766897c0a4df9f6425f71790bce09e5208fe39aabf3f87575f9c99633a54e",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-1000-raw.npy": "b88fd325b5779d9312b9ad21042813773aa9d1045b8c111f470c38f4826a3a62",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-2000-predictions.npz": "9bcac80a00af350cb769997c0546e9886ed2a9c2044a82f992b833dc3aa82c66",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-2000-raw.npy": "981b2215d892a78ffcb9d47777863070df5f0192779cdb753d3e43acdcdcfaf3",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0000-predictions.npz": "92aa4ed0ad77f889661275f31f4d58fb73c85a22dc6c5b18f8b9d07239627f0c",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0000-raw.npy": "173910dd5a645acac4af1d8865b3188ad092da11b001660621bcb5c1e6aa3e79",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0100-predictions.npz": "6bca46c722001c6881fa892233d358044a12af84d56d654e376d3cc95e0beb2f",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0100-raw.npy": "788db7b5936245e8138e9039ba89ab3be668f052efe8b551f63e0636cda68f59",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0500-predictions.npz": "f60f127955fc17e646f9a1121a130834e4e91ed9635d1259703cd473f145b290",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0500-raw.npy": "39fc8cf2b180a31dad65478c2e05cbf6fe8a8f08837a3c238a8aa4366976fd3c",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-1000-predictions.npz": "d0371b556433a5c1c5202f332e051c6a6af4f9f85238c1308d918fffcb72bb8c",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-1000-raw.npy": "a2d5977808163e8306151509f852eb147e4c7a850a42e91053f032e0dbe498ca",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-2000-predictions.npz": "c4c4f9ed8eb720af146bc22bb6f987b51dff7b5b6c97c92c5216d8db11ec8540",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-2000-raw.npy": "e7d15f8030dc2306142e99ca3b7d2634059e0805d81ec1c83de6c66e28fb0458",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0000-predictions.npz": "475c4a0ad1786f72ed51b131707ed4b854fd88f996dda737d60432cbae7ba337",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0000-raw.npy": "276841fe98e5c309f0197cb2c609b440ebcae04fab2ced8ed12bab3a422c7264",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0100-predictions.npz": "6160fb20772d6b8dfb4f638d99b6dc6ea960f159dc8a26f86464fef9912661a6",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0100-raw.npy": "3644f36ee5f2644c453f6870d77c4986c73e657cd12483824334dbf92af0facc",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0500-predictions.npz": "4da256b02dd7dd7848b46a0b7f9e8a739af9f754db5e5e05310ea524b8ccf4b9",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0500-raw.npy": "9233752bb1032244ea7a2a3dd55726e38df304a06f05ab59e7c82f7061f160e4",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-1000-predictions.npz": "faa831be930f789d3562f38b701922f8e5c330cc57b235c032ca00ec1c2bd64d",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-1000-raw.npy": "bd5a15ee59e9502ec05a098c78dd345af4b6635a3fcbf0e9e86941e4cc89b541",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-2000-predictions.npz": "46135da9c161988eb53b025cde52ccd0997130bb6ff22ef5a78e3a70a26d8ed9",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-2000-raw.npy": "7142339f3780979477d68902a0f085cc688492a43300cc0b187030798cfce203",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0000-predictions.npz": "9eff2bb889ba3158e54dad4cf2ebf2e26869d5e26057cb3d90bcd2a0f632a303",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0000-raw.npy": "e806d5ad3040fbbba50bf2f6ea6447a80a08cde4ecb83fb99ffebc302fe6e2b2",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0100-predictions.npz": "dab4fad73681502baffc25af6c40b70038ea15d06ecfe50254a4291587998d7c",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0100-raw.npy": "d125d8e8f2c89ceabf8cffc5c1803bb77be5a21b565b0c1a89dc1d57b8deb178",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0500-predictions.npz": "6dde009ccc6b27418ece49d79b217bd4574bb5f9994b73f7fe695b3bb78b8419",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0500-raw.npy": "112bed9e0809d4ec25909df034abc0f641b430d039fd0622ce33b3f63b45bc7d",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-1000-predictions.npz": "054f260032861196b035f1fd993b827dd01ada09a76fe532266a2d08d0504f6b",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-1000-raw.npy": "a711f0a2c760f232315c6e09a6fa3936631a0b374c61be5a7a7e4819e19c4252",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-2000-predictions.npz": "73dd6785afc9d004a595969b5760d04c8d3af929141a559f1c8e47322887a720",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-2000-raw.npy": "6c413c0bd7ff8e1aedc1c738d01d4c3921cef908eb08acbb2f69047262bddcc8",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-0000.pt": "33cab545201067f08bfe5fd5635f42cd29d9ac45363705054c4f1dff8059863a",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-0100.pt": "8ee3bb849fc418cce9cfbb97993a12e81d12165b51e1a8106138a5e9b7a7b9e8",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-0500.pt": "a267c66ba0f762d69705817cdf1fe731cd7a3131214b036b58aa8663ddfa0e34",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-1000.pt": "836829e4420c96cb91acc28dcda8ab4b75bad2f3e2f4b55f8aa28042dc503b33",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-2000.pt": "6f56a68fab2b477925193e805683b541432c2991dbc4dfd0ba5287fb99953e54"
+  },
+  "cohort_sha256": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83",
+  "fixed_final_step": 2000,
+  "optimizer_updates": 2000,
+  "trainable_parameters": 207816,
+  "seconds": 142.82850240002153,
+  "gate": {
+    "broad_fit_gain": true,
+    "both_control_NLL_lower": false,
+    "both_control_exact_not_lower": false,
+    "some_control_gain5": false
+  },
+  "exploratory_gate_passed": false,
+  "new_fits": 1,
+  "reserved_opened": 0,
+  "conditional_diagnostic_only": true,
+  "policy_replaced": false,
+  "promoted": false,
+  "three_seed_confirmed": false
+}

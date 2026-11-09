@@ -1,0 +1,22 @@
+{
+  "membership_sha256": "0a0024d7ff8e279a0c9110484275ef84826a2c4ab42475f598228610d337fabd",
+  "refreshed_inventory_sha256": "09e6039c7bc891c55022df40c40f79265bc564141e8f1ccaa5f80971e628796b",
+  "unique_new_payloads": 500,
+  "complete_groups": 100,
+  "old_payload_overlap": 0,
+  "old_group_overlap": 0,
+  "cross_split_payload_overlap": 0,
+  "split_counts": {
+    "test": 75,
+    "validation": 75,
+    "train": 350
+  },
+  "all_five_positions_retained": true,
+  "whole_group_membership": true,
+  "audit_reads": "Metadata, archive integrity and raw payload hashes only.",
+  "rejected_groups": 81,
+  "rejection_reasons": {
+    "existing payload": 66,
+    "duplicate new payload": 15
+  }
+}

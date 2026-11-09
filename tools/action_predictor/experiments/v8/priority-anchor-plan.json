@@ -1,0 +1,119 @@
+{
+  "id": "A01",
+  "families": [
+    {
+      "name": "global_frequency",
+      "mode": "global"
+    },
+    {
+      "name": "current_plus_copy",
+      "mode": "copy",
+      "anchor": "current",
+      "column": 0,
+      "mask": 1,
+      "sign": 1
+    },
+    {
+      "name": "current_plus_residual",
+      "mode": "residual",
+      "anchor": "current",
+      "column": 0,
+      "mask": 1,
+      "sign": 1
+    },
+    {
+      "name": "current_minus_copy",
+      "mode": "copy",
+      "anchor": "current",
+      "column": 0,
+      "mask": 1,
+      "sign": -1
+    },
+    {
+      "name": "current_minus_residual",
+      "mode": "residual",
+      "anchor": "current",
+      "column": 0,
+      "mask": 1,
+      "sign": -1
+    },
+    {
+      "name": "scheduled_plus_copy",
+      "mode": "copy",
+      "anchor": "scheduled",
+      "column": 2,
+      "mask": 3,
+      "sign": 1
+    },
+    {
+      "name": "scheduled_plus_residual",
+      "mode": "residual",
+      "anchor": "scheduled",
+      "column": 2,
+      "mask": 3,
+      "sign": 1
+    },
+    {
+      "name": "scheduled_minus_copy",
+      "mode": "copy",
+      "anchor": "scheduled",
+      "column": 2,
+      "mask": 3,
+      "sign": -1
+    },
+    {
+      "name": "scheduled_minus_residual",
+      "mode": "residual",
+      "anchor": "scheduled",
+      "column": 2,
+      "mask": 3,
+      "sign": -1
+    },
+    {
+      "name": "latest_plus_copy",
+      "mode": "copy",
+      "anchor": "latest",
+      "column": 4,
+      "mask": 5,
+      "sign": 1
+    },
+    {
+      "name": "latest_plus_residual",
+      "mode": "residual",
+      "anchor": "latest",
+      "column": 4,
+      "mask": 5,
+      "sign": 1
+    },
+    {
+      "name": "latest_minus_copy",
+      "mode": "copy",
+      "anchor": "latest",
+      "column": 4,
+      "mask": 5,
+      "sign": -1
+    },
+    {
+      "name": "latest_minus_residual",
+      "mode": "residual",
+      "anchor": "latest",
+      "column": 4,
+      "mask": 5,
+      "sign": -1
+    }
+  ],
+  "sources_sha256": "7301787093e240effda9aef89a7ba4a4a76b9f29281f5f9f26ad78675a3f993d",
+  "P04_review_sha256": "7ce37a47f0ed28508795ff7e096dfc5370e13b87b1a28a063136367a5a9d16ff",
+  "training_sha256": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+  "priority_training_sha256": "7847b7c9252c3443f517c30a082be05ffe8b244b586eead55b262bd385a6de2b",
+  "hypothesis": "Signed causal priorities and recorded residual frequencies may outperform absolute value modes; no benefit assumed.",
+  "anchors": "Only own personal-PRE current/scheduled priority and latest actual earlier own priority argument, each with its availability bit. Fixed sign+1/-1; no target-dependent sign choice.",
+  "copy": "Predict signed anchor exactly; probabilistic score .95pointmass at residual0 plus .05trained-residual logistic fallback.",
+  "residual": "Predict anchor plus global mode of .95training-recorded residual frequencies plus .05normalized full-support integer logistic. Residual=recorded target minus causal signed anchor only in training/loss; never feature input.",
+  "fallback": "Unavailable anchor or no eligible training anchor support: unconditional training-frequency prior. Missing is explicit and all rows retained. Logistic median/std-derived from TRAIN only, old[-6,5]scale bounds; logits and parameters quantizedfloat32 then stablefloat64 log masses as retained baseline.",
+  "ties": "Smallest integer among equal-probability global maxima; compare point vocabulary union floor and ceiling of logistic location. Checked int64 arithmetic raises overflow; no clipping or label rounding.",
+  "budget": "Thirteen predeclared fixed baseline families; no neural optimizer, no seed repeats. Fresh reviewed bound approval before evaluating development behavior; fresh review after results before any learned residual design.",
+  "reporting": "All families reported, without selecting signs/formulas from validation. Report strongest baselines separately by exact/joint/loss/error, with paired whole-group uncertainty and rare/unseen/missing strata. Any stronger loss baseline only tightens comparison; all original goals unchanged.",
+  "membership": "Same433071training rows470games94groups, same14439development targets25games5groups. All43shops unassessed failures. FixedM01action/spatialpaths preserved in hybrid parameter comparisons.",
+  "guards": "All original90%percategory,3seeds,macroF1,movement10pp,loss10%,targetingguards and frozen studies unchanged; no strategy labels. Both75-game reserved partitions sealed; old exposed test unused; no downloads/matches/botchanges/deployments/PR from this runner."
+}

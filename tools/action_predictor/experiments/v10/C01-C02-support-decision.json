@@ -1,0 +1,110 @@
+{
+  "source_sha256": "f284c9b60f789c44f2d7f6cfd9852d68a8159a77ebb82972b1af1323c589ce3f",
+  "original_gate_plan_sha256": "f5cda87a85199445a4f9379d31c5875d815019f7ba6c66b33a185999b89b0ba4",
+  "study_bindings": {
+    "C01": "af4ae00a22dc5aff0a9b8268bf5098ff25d7664aa545f49d9f0254fed22393a2",
+    "C02": "8f2561e62e2769160a1934d7690aada33c0d9686d8afdf65e475282993c3f66c"
+  },
+  "roundtrip_sha256": "5482168d13592f6e700b62ea876a43516b2f59e81cd955749ce8b5fd6ff14924",
+  "gates": {
+    "C01": {
+      "checks": {
+        "move": {
+          "observed": 0.8136910139690041,
+          "required": 0.9,
+          "passes": false
+        },
+        "ground_cast1": {
+          "observed": 0.5525418474891507,
+          "required": 0.7,
+          "passes": false
+        },
+        "ward": {
+          "observed": 0.2707987456188895,
+          "required": 0.4,
+          "passes": false
+        },
+        "priority": {
+          "observed": 0.22671436285097193,
+          "required": 0.3,
+          "passes": false
+        },
+        "blocked": {
+          "observed": 0.1120715350223547,
+          "required": 0.2,
+          "passes": false
+        },
+        "attack_no_regression": {
+          "observed": 0.9826896885022627,
+          "required": 0.9861605377619612,
+          "passes": false
+        },
+        "cast_0_no_regression": {
+          "observed": 0.9413778348309799,
+          "required": 0.9717586649550706,
+          "passes": false
+        }
+      },
+      "allocate_fit": false,
+      "DEV_evaluation_allocated": false
+    },
+    "C02": {
+      "checks": {
+        "move": {
+          "observed": 0.8447008131211342,
+          "required": 0.9,
+          "passes": false
+        },
+        "ground_cast1": {
+          "observed": 0.5525418474891507,
+          "required": 0.7,
+          "passes": false
+        },
+        "ward": {
+          "observed": 0.2707987456188895,
+          "required": 0.4,
+          "passes": false
+        },
+        "priority": {
+          "observed": 0.22671436285097193,
+          "required": 0.3,
+          "passes": false
+        },
+        "blocked": {
+          "observed": 0.4484848484848485,
+          "required": 0.2,
+          "passes": true
+        },
+        "attack_no_regression": {
+          "observed": 0.9826896885022627,
+          "required": 0.9861605377619612,
+          "passes": false
+        },
+        "cast_0_no_regression": {
+          "observed": 0.9413778348309799,
+          "required": 0.9717586649550706,
+          "passes": false
+        }
+      },
+      "allocate_fit": false,
+      "DEV_evaluation_allocated": false
+    }
+  },
+  "pinned_query_source_sha256": "d3ec4f24616aeef9fd1cb208027aa74bb012b7c88ce3d9955425ef3d107d355c",
+  "query_provenance": [
+    {
+      "engine": "2.0.0",
+      "raw_sha256": "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c",
+      "query_sha256": "ea7d720a17ceb841e644442556b245ee358b8843f5506885f266ba23e816c66f"
+    },
+    {
+      "engine": "3.0.0",
+      "raw_sha256": "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c",
+      "query_sha256": "935f2b5782ec0ed7201bf7f816e25a9ad73be591506e73a002674197c1f0b91e"
+    }
+  ],
+  "decision": "No fit or DEVlibraryevaluation allocated. Retain negatives; nextdiagnosepriorityandwardobjectivestate/groundcastsemantics onTRAINbefore another frozenstudy. Noallalgorithmsexhaustedclaim.",
+  "new_fits": 0,
+  "DEV_rows_evaluated": 0,
+  "reserved_opened": 0
+}

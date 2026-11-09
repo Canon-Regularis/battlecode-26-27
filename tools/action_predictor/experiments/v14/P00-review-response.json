@@ -1,0 +1,44 @@
+{
+  "review": "Fresh GPT-6.1 Sol xhigh P00 review, task 983b558c-4c85-41e3-9211-f5ecd0cd28a9; full text in parent thread and summary P00-REVIEW.md",
+  "verdict": "Valid negative result; no refit or promotion",
+  "findings": [
+    {
+      "id": 1,
+      "status": "resolved_additively",
+      "evidence": [
+        "placement-baselines-correction.json",
+        "P00-REPORT-ADDENDUM.md"
+      ],
+      "correction": "Old uniform preserved and renamed uniform plus G00 tail; pure uniform gives TRAIN1083/10842 and DEV10/112. P00 loses78 placements vs masked G00 on TRAIN."
+    },
+    {
+      "id": 2,
+      "status": "resolved_additively",
+      "evidence": [
+        "P00-head-reporting-addendum.json"
+      ],
+      "correction": "All-family conditional metrics, correctly typed denominators and paired all-family/matched-typed/joint comparisons. Unchanged attack943/985,cast0 193/213,cast1 146/243,move1434/2362 on DEV."
+    },
+    {
+      "id": 3,
+      "status": "resolved_before_remaining_fits",
+      "evidence": [
+        "reporting-r2-plan.json",
+        "P00-head-reporting-addendum.json"
+      ],
+      "correction": "Natural and augmented TRAIN plus DEV context support, group concentration; direct matched richer-feature contrasts prospectively frozen before remaining fits."
+    },
+    {
+      "id": 4,
+      "status": "resolved_for_future_receipts",
+      "evidence": [
+        "P00-completion-v2-P00-head.json"
+      ],
+      "correction": "completion_v2 reads actual placement and typing IDs, binds both for combined forecasts, records inferred correct arguments and direct reporting references. Old P00 receipt remains unchanged."
+    }
+  ],
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "original_artifacts_unchanged": true,
+  "approval_scope": "No approval for future fits implied; fresh review after each completed fit remains required."
+}

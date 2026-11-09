@@ -1,0 +1,140 @@
+{
+  "results": {
+    "all": {
+      "rows": 2472,
+      "all_components_same_mode": 2367,
+      "component_mode_exact": [
+        1458,
+        1448,
+        1451,
+        1454
+      ],
+      "mode_union_exact": 1487,
+      "mixture_conditional_exact": 1450,
+      "mixture_joint_exact": 1369,
+      "typed_destination_failures": 871,
+      "typed_failures_with_correct_component_mode": 32,
+      "typed_failures_without_correct_component_mode": 839,
+      "mode_union_missed_by_mixture": 37,
+      "mixture_correct_outside_modes": 0,
+      "mean_component_JS_divergence": 0.0008021943384930871,
+      "mean_goal_given_family_weights": [
+        0.06308330595493317,
+        0.02214101143181324,
+        0.8813478350639343,
+        0.03342771530151367
+      ]
+    },
+    "move": {
+      "rows": 2362,
+      "all_components_same_mode": 2267,
+      "component_mode_exact": [
+        1434,
+        1426,
+        1428,
+        1430
+      ],
+      "mode_union_exact": 1462,
+      "mixture_conditional_exact": 1428,
+      "mixture_joint_exact": 1365,
+      "typed_destination_failures": 848,
+      "typed_failures_with_correct_component_mode": 30,
+      "typed_failures_without_correct_component_mode": 818,
+      "mode_union_missed_by_mixture": 34,
+      "mixture_correct_outside_modes": 0,
+      "mean_component_JS_divergence": 0.0007867433514315111,
+      "mean_goal_given_family_weights": [
+        0.06348159164190292,
+        0.022040942683815956,
+        0.8811441659927368,
+        0.0333334244787693
+      ]
+    },
+    "blocked": {
+      "rows": 110,
+      "all_components_same_mode": 100,
+      "component_mode_exact": [
+        24,
+        22,
+        23,
+        24
+      ],
+      "mode_union_exact": 25,
+      "mixture_conditional_exact": 22,
+      "mixture_joint_exact": 4,
+      "typed_destination_failures": 23,
+      "typed_failures_with_correct_component_mode": 2,
+      "typed_failures_without_correct_component_mode": 21,
+      "mode_union_missed_by_mixture": 3,
+      "mixture_correct_outside_modes": 0,
+      "mean_component_JS_divergence": 0.001133969169760746,
+      "mean_goal_given_family_weights": [
+        0.054530296474695206,
+        0.024289831519126892,
+        0.8857275247573853,
+        0.03545201197266579
+      ]
+    },
+    "continuation": {
+      "rows": 1198,
+      "all_components_same_mode": 1167,
+      "component_mode_exact": [
+        1146,
+        1122,
+        1118,
+        1137
+      ],
+      "mode_union_exact": 1146,
+      "mixture_conditional_exact": 1121,
+      "mixture_joint_exact": 1089,
+      "typed_destination_failures": 65,
+      "typed_failures_with_correct_component_mode": 21,
+      "typed_failures_without_correct_component_mode": 44,
+      "mode_union_missed_by_mixture": 25,
+      "mixture_correct_outside_modes": 0,
+      "mean_component_JS_divergence": 0.0007508163898536899,
+      "mean_goal_given_family_weights": [
+        0.05723721906542778,
+        0.020430689677596092,
+        0.8925806879997253,
+        0.02975168079137802
+      ]
+    },
+    "change": {
+      "rows": 1158,
+      "all_components_same_mode": 1094,
+      "component_mode_exact": [
+        285,
+        301,
+        307,
+        290
+      ],
+      "mode_union_exact": 313,
+      "mixture_conditional_exact": 304,
+      "mixture_joint_exact": 273,
+      "typed_destination_failures": 780,
+      "typed_failures_with_correct_component_mode": 9,
+      "typed_failures_without_correct_component_mode": 771,
+      "mode_union_missed_by_mixture": 9,
+      "mixture_correct_outside_modes": 0,
+      "mean_component_JS_divergence": 0.0008276720266921503,
+      "mean_goal_given_family_weights": [
+        0.0702286809682846,
+        0.02359774149954319,
+        0.868994414806366,
+        0.03717948496341705
+      ]
+    }
+  },
+  "artifact_sha256": "18619e57a35af37c9dcc85ca7eea9facbaa4e351a7fc4f89676fb596316abc25",
+  "checkpoint_sha256": "5aba95703ab05d7c28477d324956894ea21489a78efa8097b85fd61a3fd41e2e",
+  "forecast_sha256": "b0340c29feffe2d119e4c1be930c9bcc68b61fd2945155c30e44bff0853bd984",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "natural_mask_sha256": null,
+  "direction_sha256": "6e6cb5f2b9619137082c75fa086bfcfa1122833a1bf6f58e89e777130a8dbbcb",
+  "plan_sha256": "f35b1fbdf93a8a5601f9f3124b022bd59142f2afdfaef0798fc51374bb324e2d",
+  "source_sha256": "cd392b2854527ba5f1998246205a667ff5fad101b3ae44c195e9eac0bfcb063c",
+  "qualification": "Conditional family supplied only for diagnosis, not deployable routing. Natural TRAIN rows are from augmented filter traversal and in-sample. Oracle mode coverage is not a configuration support ceiling.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,17 @@
+"""Generate the exact paired loop/roundtrip from preserved P03 sources."""
+from pathlib import Path
+import ast,hashlib,json
+root=Path(__file__).resolve().parent.parent
+directory=root/'tools/action_predictor'
+original=directory/'priority_modes_fit.py';text=original.read_text(encoding='utf-8')
+tree=ast.parse(text);node=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='fit')
+function=ast.get_source_segment(text,node).replace('P03','P04').replace('priority-absolute-modes-code-approval.json','priority-modes-control-code-approval.json').replace('use_inputs=True','use_inputs=False')
+destination=directory/'priority_modes_control.py';control=destination.read_text(encoding='utf-8')
+assert control.count('# MATCHED_FIT_FUNCTION')==1
+destination.write_text(control.replace('# MATCHED_FIT_FUNCTION',function),encoding='utf-8')
+source=directory/'priority_modes_roundtrip.py';roundtrip=source.read_text(encoding='utf-8')
+roundtrip=roundtrip.replace('from .priority_modes_predictor import PriorityModesPredictor','from .priority_modes_control_predictor import PriorityModesControlPredictor')
+roundtrip=roundtrip.replace('from .priority_modes_fit import verify_protocol,head,read,PLAN,SOURCES,VOCAB,log','from .priority_modes_control import verify_protocol,head,read,PLAN,SOURCES,VOCAB,log')
+roundtrip=roundtrip.replace('PriorityModesPredictor(','PriorityModesControlPredictor(').replace('P03','P04').replace('priority-absolute-modes-initial-roundtrip.json','priority-modes-control-initial-roundtrip.json').replace('tools.action_predictor.priority_modes_roundtrip','tools.action_predictor.priority_modes_control_roundtrip')
+(directory/'priority_modes_control_roundtrip.py').write_text(roundtrip,encoding='utf-8')
+print(json.dumps(dict(generator_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),parent_fit_sha256=hashlib.sha256(original.read_bytes()).hexdigest(),parent_roundtrip_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),generated=[str(destination),str(directory/'priority_modes_control_roundtrip.py')]),indent=2))

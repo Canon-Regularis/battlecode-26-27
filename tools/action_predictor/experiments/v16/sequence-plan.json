@@ -1,0 +1,26 @@
+{
+  "id": "V16-learned-sequential-policy",
+  "direction": "Learn strategic latent objective persistence AND goal-conditioned action/execution from demonstrations. No manually scored objectives, banking thresholds, greedy strategy or reconstructed Fish intent labels.",
+  "initial_budget": {
+    "fits": 2,
+    "L00": "matched learned latent-goal policy with belief reset at each available decision",
+    "L01": "forward persistent latent-goal filter, learned retention and goal proposal",
+    "latent_goals": 4,
+    "seed": 20261114,
+    "extra_seeds": 0
+  },
+  "execution": "All action choices and spatial heads trainable, warm-start M01 components; retained G00/B00/S00/X00 comparisons. P05 integer conditional remains reusable initial component with trainable priority type choice. Actor predicts using only past state and commits own actual action/result AFTER execution. No Fish future actions or backward-smoothed goals at inference.",
+  "sequence": "All original433071TRAIN/14439DEV rows retain identity. Stream by eligible game and actor in actual event order. Full earlier own-root index determines ordinals, gaps and intervening action counts, EXCLUDING current action and previous action already consumed by posterior. Last16 actual-action/observation windows remain bounded inputs with explicit availability. Sampled targets are never declared adjacent. Unknown prefix memory explicit; latent state not claimed lossless history.",
+  "goal_learning": "Four learned latent objective embeddings, learned current goal proposal and root-gap-aware retention. No named true-intent labels; forward marginal command/sequence likelihood trains all equivalent latent explanations. Latent states may represent tactical stages rather than strategic objectives; persistence/behavior must be measured, not assumed. No current/future label in goal proposal.",
+  "evaluation": "Frozen original split/groups/denominators, wholeDEVjointNLL improvement.0001/patience6/max35. Exact complete commands, typePRF/confusion/FP, alltruefamily/typed parameters, continuation/change/blocked, fullsequence likelihood and persistence diagnostics; natural/augTRAIN and paired2000wholeDEVgroups seed20261106. No checkpoint selection by inferred goal stories.",
+  "runtime_delivery": "Stateful policy actor plus SDK command dispatcher are required, followed by native/no-Torch export and a live-observation adapter. Cached scoring alone is not a bot. Current SDK4 differs from historical2/3: explicit version capability contract; no unverified equivalence. Original purchases and ambiguous entity targets remain unsupported until learned/recovered, never hand-filled. Draft policy not part of current command benchmark, so full-bot completeness cannot yet be claimed.",
+  "safety": "Both75newval/75finaltest sealed. Only eligible470TRAIN/25originalDEV. No matches/proposed-action simulations/downloads/deployments; no existing playingbot changes. New isolated runtime components only. PR11DRAFT/open/unmerged/noautomerge/queue. Shops43 strictunassessed, missingarglikelihood absent; sparsecategories uncertified. Original90%eachsupportedcategory/macro/move/NLL/3seed goals unchanged.",
+  "continuation": "One fit per invocation and fresh requestedGPT6.1Solxhigh review after EACH. Run the2matched fits only after causal/normalization/probability/runtime contract checks. No more expert architectures or repeats automatically; no claim learned internal Fish goals or closed-loop strength from replay agreement.",
+  "prior": "V15S00/X00 valid negatives preserved. V14ward study user-discontinued3/4,T01unrun. Old hand-designed GoalMemory scoring is NOT the learned strategic policy.",
+  "sources": {
+    "sequence_data.py": "23f9296e4a8de19f4251954043c06408c5f5762fa02b68fe01df4e56f41e778c"
+  },
+  "jobs_sha256": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

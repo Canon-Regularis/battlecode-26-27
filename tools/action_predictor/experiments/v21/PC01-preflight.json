@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "source_commit": "76fc4d0c36dc56b278b5cb1f8d9ad56708a77e78",
+  "sources": {
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/experiment.py": "8a53098e4af116f8b7d8507c82643c3a276f69e93ac9705a23795489466802fd",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_broad/test_guard.py": "e90d651d92099377c43ea157d946f2faa05b43c5344c10c16d557bfa7bf0f69c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a"
+  },
+  "protocol_sha256": "d7abf439d17985ba2c27c1e839a89154014fbe35be309a009fd685fcf34f07d4",
+  "cohort_sha256": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83",
+  "initial_mode_mismatches": 0,
+  "initial_NLL_max_difference": 4.545912570819155e-07,
+  "accumulation_gradient_max_difference": 5.21540641784668e-08,
+  "failure_path_tests": [
+    {
+      "command": [
+        "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "tools.action_predictor.priority_broad.test_guard",
+        "tools.action_predictor.priority_capacity.test_measurement"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 1.048s\n\nOK\n"
+    }
+  ],
+  "no_optimizer_created_before_preflight": true,
+  "original128fit_input_rank": 128,
+  "broader_input_rank": 156,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

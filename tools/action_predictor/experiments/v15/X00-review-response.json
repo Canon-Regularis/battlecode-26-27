@@ -1,0 +1,33 @@
+{
+  "review_task": "4dde9213-bbbf-459b-9f16-d0eb9ebe7acb",
+  "reviewed_head": "48b016677dc0b18bb08406440f7283a1a2be9e67",
+  "verdict": "Valid negative; suitable DRAFT handoff after additive follow-up",
+  "findings": [
+    {
+      "id": 1,
+      "status": "acknowledged_demonstrated_failure",
+      "note": "Complete coordinate support, poor fit already on TRAIN; cause not identified."
+    },
+    {
+      "id": 2,
+      "status": "resolved_additively",
+      "evidence": "X00-final-review-addendum.json",
+      "note": "Saved-output decomposition independently reproduces184lower/72higherweight misses;1537of4261TRAINchange misses favorcorrectmodehead. No new fit/inference."
+    },
+    {
+      "id": 3,
+      "status": "corrected_additively",
+      "evidence": [
+        "FINAL-HANDOFF.md",
+        "X00-final-review-addendum.json"
+      ],
+      "note": "77DEV/2712augTRAIN wrong movement forecasts on recorded-nonmovement rows can change; scope precisely types/nonmovementconditional/predictednonmovementcommands/scores/losses. Oldreport/inventory preserved."
+    }
+  ],
+  "additional_fits": 0,
+  "additional_inference": 0,
+  "reserved_opened": 0,
+  "promoted": false,
+  "three_seed_confirmed": false,
+  "unrun_followup": "Exact scalar-gate MAP reachability; no allocation or architecture change."
+}

@@ -1,0 +1,9 @@
+{
+  "registration_stage": "Supplemental plan during U01 fitting, after early round1/2 DEV NLL was observed; before selected-checkpoint/sensitivity evaluation. Not represented as part of the original before-fit protocol.",
+  "intervention": "One fixed-weight TRAIN-mean replacement of the named geometry projection in selected U01. Keep uncertainty, availability, bias, all trained weights and common frozen upstream cache/filter unchanged. Other geometry paths remain.",
+  "purpose": "Separate dependence of selected readout decisions on variable geometry from the between-fit effect of dynamic versus mean training. No replacement selection or influence on checkpoint, budget, primary metrics or allocation criterion.",
+  "checks": "All14439DEV rows; save predictions/diagnostics, unknown-position equality, conditional/joint direction results, per-category paired loss/targeting, semantic mode changes and fixed-weight tensor fingerprint.",
+  "source_sha256": "470f4dac1a40f0a8994feaab4812eadd09be6191a207983652948919dd4b5949",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

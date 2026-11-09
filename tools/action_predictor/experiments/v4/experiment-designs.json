@@ -1,0 +1,70 @@
+{
+  "designs": [
+    {
+      "id": "E01",
+      "name": "stateless-basic",
+      "history": 0,
+      "rich": false,
+      "spatial": false,
+      "balance": 0.0,
+      "augment": false
+    },
+    {
+      "id": "E02",
+      "name": "stateless-rich-spatial",
+      "history": 0,
+      "rich": true,
+      "spatial": true,
+      "balance": 0.0,
+      "augment": false
+    },
+    {
+      "id": "E03",
+      "name": "gru-rich-history4",
+      "history": 4,
+      "rich": true,
+      "spatial": true,
+      "balance": 0.0,
+      "augment": false
+    },
+    {
+      "id": "E04",
+      "name": "gru-rich-history16",
+      "history": 16,
+      "rich": true,
+      "spatial": true,
+      "balance": 0.5,
+      "augment": false
+    },
+    {
+      "id": "E05",
+      "name": "stateless-rich-rare-training",
+      "history": 0,
+      "rich": true,
+      "spatial": true,
+      "balance": 0.5,
+      "augment": true
+    },
+    {
+      "id": "E06",
+      "name": "gru-rich-rare-training",
+      "history": 16,
+      "rich": true,
+      "spatial": true,
+      "balance": 0.5,
+      "augment": true
+    }
+  ],
+  "remaining_runs": [
+    "E07 best GRU seed27",
+    "E08 best GRU seed28",
+    "E09 best stateless seed27",
+    "E10 best stateless seed28"
+  ],
+  "amended_before_any_training": true,
+  "reason": "Data-quality audit found only five sampled training teleports and ten altar actions, despite additional recorded rare actions in full indexes. Use paired augmented/stateless fits and three seeds for both final configurations within ten experiments.",
+  "augmentation": "At most 64 extra complete rare-action turns per TRAIN game; select deterministically from existing full indexes, exclude original sampled turns, leave validation and test unchanged.",
+  "selection": "Original metric targets, groups and test remain unchanged. Select checkpoints by validation observed joint NLL and configurations by count of proposed targets met then joint NLL.",
+  "limits": "History4 versus history16 also changes class balancing; this combined experiment does not isolate those two effects.",
+  "benchmark_sha256": "e8bc7413c692c181e82809d458bdd9a78e115d59e61ac3f32ed03d413eba8aea"
+}

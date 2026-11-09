@@ -1,0 +1,142 @@
+{
+  "analysis_sha256": "5f9518b31c246289b9b85d0d1a6f01f7c5dd182eff67374a246c159607a8fe0a",
+  "source_sha256": "365cf99f58e5f9d47e4474a90d9cc35eb15b9ee62956b64ee506fff37910c2f8",
+  "required_exact_gain": 0.05,
+  "observed_exact_gain": 0.043402777777777776,
+  "required_extra_correct": 29,
+  "observed_extra_correct": 25,
+  "required_P04_maximum_exact": 67,
+  "observed_P04_exact": 71,
+  "exploratory_input_gate_met": false,
+  "matched_seed_repeats_triggered": false,
+  "treatment_minus_control": {
+    "priority_exact_delta": {
+      "valid_draws": 2000,
+      "interval": [
+        -0.008157381756697744,
+        0.1031331592689295
+      ]
+    },
+    "priority_joint_delta": {
+      "valid_draws": 2000,
+      "interval": [
+        -0.008113590263691683,
+        0.03534031413612566
+      ]
+    },
+    "priority_loss_relative_reduction": {
+      "valid_draws": 2000,
+      "interval": [
+        0.006700431883667246,
+        0.06196434739211193
+      ]
+    },
+    "full_joint_loss_relative_reduction": {
+      "valid_draws": 2000,
+      "interval": [
+        0.0012021059830294293,
+        0.016581491534518714
+      ]
+    },
+    "fixes": 17,
+    "regressions": 9
+  },
+  "tail_comparison": {
+    "P03": {
+      "mean_absolute_priority_error": 178.109375,
+      "maximum_absolute_priority_error": 1489,
+      "priority_errors_over1000": 12,
+      "priority_wrong_sign": 81
+    },
+    "P04": {
+      "mean_absolute_priority_error": 435.85069444444446,
+      "maximum_absolute_priority_error": 1510,
+      "priority_errors_over1000": 115,
+      "priority_wrong_sign": 197
+    }
+  },
+  "rare_unseen": {
+    "unseen_value": {
+      "support": 4,
+      "models": {
+        "M01": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 8.05436897277832
+        },
+        "P01": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 8.157703399658203
+        },
+        "P02": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 8.149181365966797
+        },
+        "P03": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 11.803250312805176
+        },
+        "frequency_hybrid": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 11.538293838500977
+        },
+        "P04": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 12.281572341918945
+        }
+      }
+    },
+    "training_count_1_19": {
+      "support": 65,
+      "models": {
+        "M01": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 8.069892883300781
+        },
+        "P01": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 7.823819160461426
+        },
+        "P02": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 7.862639904022217
+        },
+        "P03": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 8.033333778381348
+        },
+        "frequency_hybrid": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 7.632818698883057
+        },
+        "P04": {
+          "exact": 0,
+          "joint": 0,
+          "nll": 7.913186550140381
+        }
+      }
+    }
+  },
+  "analysis_generation": {
+    "argv": [
+      "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+      "F:\\Code\\battlecode-26-27\\.cambc\\build_P04_analysis.py"
+    ],
+    "generator_sha256": "650f8d12f81b7bdd072be6578f254714b470f9ba872e2f188336366e2973e224",
+    "generated_sha256": "521df845e240f084ffaed33ca132477961b82b07ea5a58e33b519864e9858b9c"
+  },
+  "interpretation": "Measured point gains in exact/joint correctness and lower loss do not meet the predeclared5pp input-followup gate. Do not weaken it or trigger identical matched-seed repeats. Lower mean/tail error is exploratory evidence only, not category-wise success.",
+  "all_original_targets_unchanged": true,
+  "three_seed_confirmed": false,
+  "reserved_games_opened": 0
+}

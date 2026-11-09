@@ -1,0 +1,141 @@
+{
+  "purpose": "Additive reporting corrections after fresh L02 review; no predictions, source, checkpoint, thresholds or frozen receipts changed.",
+  "interval_units": {
+    "joint_accuracy": {
+      "unit": "fractional exact-command accuracy difference; multiply by100 for percentage points",
+      "interval": {
+        "low": -0.0018481757820522082,
+        "high": -0.00013985036011465724,
+        "valid_draws": 2000
+      }
+    },
+    "macro_f1": {
+      "unit": "macro-F1 score difference, not accuracy",
+      "interval": {
+        "low": -0.003947848511821173,
+        "high": 0.001375025479681373,
+        "valid_draws": 2000
+      }
+    },
+    "joint_nll": {
+      "unit": "natural-log observed joint NLL per original decision (nats), not accuracy",
+      "interval": {
+        "low": -3.104484064719859e-05,
+        "high": 0.002823634880594894,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "preflight_field_correction": {
+    "original_field": "other_auxiliary_gradient_parameters",
+    "correct_meaning": "parameters with nonzero auxiliary derivatives BEFORE retention exclusions; this does not describe routed parameter gradients",
+    "nonzero_auxiliary_derivative_parameters_before_routing": [
+      "objectives",
+      "initial_offsets",
+      "execution.current.0.weight",
+      "execution.current.0.bias",
+      "execution.current.2.weight",
+      "execution.current.2.bias",
+      "execution.history.weight_ih_l0",
+      "execution.history.weight_hh_l0",
+      "execution.history.bias_ih_l0",
+      "execution.history.bias_hh_l0",
+      "execution.combine.0.weight",
+      "execution.combine.0.bias",
+      "execution.action.weight",
+      "execution.action.bias",
+      "execution.family.weight",
+      "execution.query.weight",
+      "execution.query.bias",
+      "execution.candidate.0.weight",
+      "execution.candidate.0.bias",
+      "execution.candidate.2.weight",
+      "execution.candidate.2.bias",
+      "execution.offset_bias.weight",
+      "execution.special.weight",
+      "execution.special.bias",
+      "history_projection.weight",
+      "history_projection.bias",
+      "proposal.0.weight",
+      "proposal.0.bias",
+      "proposal.2.weight",
+      "proposal.2.bias",
+      "global_entities.weight",
+      "global_entities.bias",
+      "objective_entities.weight",
+      "objective_entities.bias",
+      "retention.weight",
+      "retention.bias",
+      "goal_prediction.weight",
+      "goal_prediction.bias",
+      "goal_condition.weight",
+      "goal_condition.bias"
+    ],
+    "parameters_with_auxiliary_derivatives_retained_after_routing": [
+      "objectives",
+      "initial_offsets",
+      "execution.current.0.weight",
+      "execution.current.0.bias",
+      "execution.current.2.weight",
+      "execution.current.2.bias",
+      "execution.history.weight_ih_l0",
+      "execution.history.weight_hh_l0",
+      "execution.history.bias_ih_l0",
+      "execution.history.bias_hh_l0",
+      "execution.combine.0.weight",
+      "execution.combine.0.bias",
+      "execution.action.weight",
+      "execution.action.bias",
+      "execution.family.weight",
+      "execution.query.weight",
+      "execution.query.bias",
+      "execution.candidate.0.weight",
+      "execution.candidate.0.bias",
+      "execution.candidate.2.weight",
+      "execution.candidate.2.bias",
+      "execution.offset_bias.weight",
+      "execution.special.weight",
+      "execution.special.bias",
+      "history_projection.weight",
+      "history_projection.bias",
+      "proposal.0.weight",
+      "proposal.0.bias",
+      "proposal.2.weight",
+      "proposal.2.bias",
+      "global_entities.weight",
+      "global_entities.bias",
+      "objective_entities.weight",
+      "objective_entities.bias",
+      "goal_prediction.weight",
+      "goal_prediction.bias",
+      "goal_condition.weight",
+      "goal_condition.bias"
+    ],
+    "parameters_with_auxiliary_derivatives_excluded": [
+      "retention.weight",
+      "retention.bias"
+    ],
+    "stage": "Before unchanged shared global clipping/AdamW, which can introduce indirect interactions."
+  },
+  "TRAIN_scope": {
+    "augmented_all_rows": 433071,
+    "L01_augmented_complete": 342808,
+    "L02_augmented_complete": 342810,
+    "qualification": "Augmented complete correctness rises by2. Natural-membership and natural-cadence correctness decline. Do not claim deterioration on every TRAIN metric."
+  },
+  "retention_interpretation": {
+    "initial_per_root_gate": 0.99,
+    "L02_selected_median": 0.986763060092926,
+    "qualification": "L02 largely avoids the fall from initialization seen in L01. Nonzero command gradients are verified, but useful learned persistence/switching or objective lifetimes remain unestablished."
+  },
+  "bindings": {
+    "L02-REPORT.md": "f70753c191a4f57c0743f125577fbc65924cb76dbe38c49312ef141859d51d90",
+    "L02-INTERPRETATION.md": "bd999a937a28b741d8e7fe3404bb5567a4baa0a6646aad31de61ae4775cdda91",
+    "L02-gradient-preflight.json": "6985374cfebc62efa182044b1087f5ba2286a90a7971e306062410f38252d6bc",
+    "L01.json": "0873c0254d9fdda502ef424322a2b6447e4d45bd1285de59752998582fe1e44b",
+    "L02.json": "f2b6760107c0490e94d36b90b9e0d202e9e9499783602ae45c02419307d17c85",
+    "L02-completion.json": "6715604ab6d3850b87fc0689d377065eb5632a92bd057e011ef4b93215374f33"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

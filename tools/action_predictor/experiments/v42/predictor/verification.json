@@ -1,0 +1,82 @@
+{
+  "result_sha256": "353643c1b975ddad8ddf0347f583bf280d414adc8e9079b095457a1ede16d30a",
+  "exact_initial_tensors": true,
+  "exact_schedules": true,
+  "finite_final_tensors": true,
+  "optimizer_steps": [
+    804
+  ],
+  "recreated_rows": {
+    "fit": 1067,
+    "evaluation": 278
+  },
+  "full_forecasts_and_metrics_exact": true,
+  "current_only_inference_passed": true,
+  "fitting_anchor_diagnostics": {
+    "ward": {
+      "rows": 352,
+      "exact_goal": 0.06818181818181818,
+      "goal_within2": 0.29261363636363635,
+      "mean_goal_chebyshev": 5.326704545454546,
+      "next_step_accuracy": 0.3664772727272727,
+      "path_available": 0.9971590909090909,
+      "self_target_rows": 0
+    },
+    "submit": {
+      "rows": 132,
+      "exact_goal": 0.1590909090909091,
+      "goal_within2": 0.4393939393939394,
+      "mean_goal_chebyshev": 4.121212121212121,
+      "next_step_accuracy": 0.45454545454545453,
+      "path_available": 1.0,
+      "self_target_rows": 0
+    },
+    "attack": {
+      "rows": 113,
+      "exact_goal": 0.02654867256637168,
+      "goal_within2": 0.23008849557522124,
+      "mean_goal_chebyshev": 5.778761061946903,
+      "next_step_accuracy": 0.35398230088495575,
+      "path_available": 0.9823008849557522,
+      "self_target_rows": 0
+    },
+    "cast_1": {
+      "rows": 367,
+      "exact_goal": 0.0653950953678474,
+      "goal_within2": 0.32697547683923706,
+      "mean_goal_chebyshev": 4.833787465940055,
+      "next_step_accuracy": 0.4141689373297003,
+      "path_available": 0.9782016348773842,
+      "self_target_rows": 7
+    },
+    "cast_0": {
+      "rows": 63,
+      "exact_goal": 0.09523809523809523,
+      "goal_within2": 0.30158730158730157,
+      "mean_goal_chebyshev": 4.0,
+      "next_step_accuracy": 0.47619047619047616,
+      "path_available": 1.0,
+      "self_target_rows": 30
+    },
+    "altar": {
+      "rows": 9,
+      "exact_goal": 0.0,
+      "goal_within2": 0.6666666666666666,
+      "mean_goal_chebyshev": 2.2222222222222223,
+      "next_step_accuracy": 0.7777777777777778,
+      "path_available": 1.0,
+      "self_target_rows": 0
+    },
+    "shop": {
+      "rows": 31,
+      "exact_goal": 0.06451612903225806,
+      "goal_within2": 0.25806451612903225,
+      "mean_goal_chebyshev": 6.451612903225806,
+      "next_step_accuracy": 0.3225806451612903,
+      "path_available": 1.0,
+      "self_target_rows": 0
+    }
+  },
+  "optimizer_updates": 0,
+  "subagents": false
+}

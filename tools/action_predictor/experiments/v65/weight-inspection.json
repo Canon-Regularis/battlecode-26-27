@@ -1,0 +1,46 @@
+{
+  "folds": {
+    "0": {
+      "bias_before": -0.19640307128429413,
+      "bias_after": -0.17032648622989655,
+      "weight_norm_before": 0.3666917085647583,
+      "weight_norm_after": 0.17802245914936066,
+      "weight_change_norm": 0.3507624566555023,
+      "maximum_query_score": -0.09454604238271713,
+      "positive_query_maxima": 0,
+      "candidate_queries": 722
+    },
+    "1": {
+      "bias_before": -0.19617751240730286,
+      "bias_after": -0.1845330446958542,
+      "weight_norm_before": 0.41511210799217224,
+      "weight_norm_after": 0.21528835594654083,
+      "weight_change_norm": 0.3940091133117676,
+      "maximum_query_score": -0.055895108729600906,
+      "positive_query_maxima": 0,
+      "candidate_queries": 734
+    },
+    "2": {
+      "bias_before": -0.196381077170372,
+      "bias_after": -0.19319681823253632,
+      "weight_norm_before": 0.4148750305175781,
+      "weight_norm_after": 0.2515183687210083,
+      "weight_change_norm": 0.38505348563194275,
+      "maximum_query_score": -0.10400795936584473,
+      "positive_query_maxima": 0,
+      "candidate_queries": 739
+    },
+    "3": {
+      "bias_before": -0.19366802275180817,
+      "bias_after": -0.18354949355125427,
+      "weight_norm_before": 0.4324277937412262,
+      "weight_norm_after": 0.2383306920528412,
+      "weight_change_norm": 0.38701361417770386,
+      "maximum_query_score": -0.08785056322813034,
+      "positive_query_maxima": 0,
+      "candidate_queries": 746
+    }
+  },
+  "selected_epoch": 0,
+  "interpretation": "The trained readouts have no positive maximum score on their held fitting queries at epoch16,so actual goal choice abstains. These rejected tensors are not the selected checkpoint. This diagnoses the observed abstention,not semantic strategy or a global capacity limit."
+}

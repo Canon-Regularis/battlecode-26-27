@@ -1,0 +1,30 @@
+{
+  "exploratory_trigger": true,
+  "gains": {
+    "loss_reduction": 0.025694471228496663,
+    "movement_exact": 0.011854360711261669,
+    "movement_joint": 0.002540220152413175
+  },
+  "context_triggers": {
+    "direction_change": false,
+    "near_static_obstacle": false
+  },
+  "regression_guards": {
+    "matched_control": {
+      "loss": true,
+      "movement_exact": true,
+      "movement_joint": true,
+      "macro_f1": true,
+      "targeting": true
+    },
+    "retained_M01": {
+      "loss": true,
+      "movement_exact": true,
+      "movement_joint": true,
+      "macro_f1": false,
+      "targeting": false
+    }
+  },
+  "promising": false,
+  "meaning": "Exploratory repetition allocation only. Original success targets remain unchanged."
+}

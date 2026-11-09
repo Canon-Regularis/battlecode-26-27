@@ -1,0 +1,60 @@
+{
+  "result_sha256": "3729f68de11083a87ba59f63951699b2becbe98b97055a793a5627f8a8760f2d",
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\code_movement_verify.py": "4979d607a8d157fc92c2e6f5b7ee7b187cda798c1addddfab944635062c6068f"
+  },
+  "accounting": {
+    "constant-fold0": {
+      "updates": 2368,
+      "presentations": 574848
+    },
+    "predicted-fold0": {
+      "updates": 2368,
+      "presentations": 574848
+    },
+    "constant-fold1": {
+      "updates": 2432,
+      "presentations": 590720
+    },
+    "predicted-fold1": {
+      "updates": 2432,
+      "presentations": 590720
+    },
+    "constant-fold2": {
+      "updates": 2432,
+      "presentations": 589824
+    },
+    "predicted-fold2": {
+      "updates": 2432,
+      "presentations": 589824
+    },
+    "constant-fold3": {
+      "updates": 2496,
+      "presentations": 609664
+    },
+    "predicted-fold3": {
+      "updates": 2496,
+      "presentations": 609664
+    },
+    "refit-constant": {
+      "updates": 1632,
+      "presentations": 394176
+    },
+    "refit-predicted": {
+      "updates": 1632,
+      "presentations": 394176
+    }
+  },
+  "exact_feature_windows": 8035,
+  "exact_validation_measurements": 72,
+  "exact_forecasts": {
+    "constant/fit": 2945,
+    "constant/evaluation": 699,
+    "predicted/fit": 2945,
+    "predicted/evaluation": 699
+  },
+  "streaming_turns": 64,
+  "unchanged_code_and_goal_forecasts": true,
+  "shared_schedules": true,
+  "seconds": 37.308160400018096
+}

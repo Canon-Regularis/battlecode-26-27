@@ -1,0 +1,37 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\goal_execution_edit.py": "514d3db6f1d1abe90a20b0d3804825082cb5076d96fcd5cb918f99667bb55471",
+    "tools\\action_predictor\\behavior_segments\\goal_execution_edit_predictor.py": "b6a556028af2422a5688c3a787be31714c711fba2381ed53829a08d5922dc39e",
+    "tools\\action_predictor\\behavior_segments\\test_goal_execution_edit.py": "f9751614fb6a13868ede710b82a32820009366e38dcb9739ba85d6e6e32c082b"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v66\\plan.json": "564b560151fa823f4dde4ef770ed3c88f3124e460ad75e87bc67fc3316e5927c",
+    "tools\\action_predictor\\experiments\\v66\\cache.json": "70738f6f447b727e81cb4fade0ba7efee02d2853bf26daeea22d43861f188590",
+    "tools\\action_predictor\\experiments\\v66\\fit.json": "1bb0c36cd871968af310f51456bbe8980a5eecfb093ae8537b72f61ea9bcbcfe",
+    "tools\\action_predictor\\experiments\\v66\\selection.json": "47242503cc7c8790a42fbe096ffce695532441364ed6a19e2ea84e50e86f399c",
+    "tools\\action_predictor\\experiments\\v66\\result.json": "e5d08032e5fab491fcf2e1e99363a0fe13c57542e5f95c8583cefadbfaa40e17",
+    "tools\\action_predictor\\experiments\\v66\\verification.json": "65a14229fcc817061832857ea019663c476a66eb0f0e433df2de48d345af78f6",
+    "tools\\action_predictor\\experiments\\v67\\inspection.json": "866b2549403b46cc654b85690f173e245ec58c8d38844cdcae42b7c647ef0f7c"
+  },
+  "distance_scales": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "zero_radius": [
+    false,
+    true
+  ],
+  "output_scales": [
+    0.5,
+    0.75,
+    1.0
+  ],
+  "diagnostic_allowance": 0.02,
+  "causal_nll_allowance": 0.01,
+  "intervention": "24 direct edits of corresponding V66 goal head weights. Scale first-layer columns128:133 (five absolute/relative distance inputs),optionally zero untrained radius column134,scale final output weight+bias. Leave route-progress column133,availability135,other inputs,V59,V62 goal choices,support and inference unchanged. No optimizer updates or new parameters.",
+  "selection": "Four fitting-game folds. Maximize combined movement count with predicted V62 goals on all original held movement queries. Require supplied-goal diagnostic accuracy no more than2points below original V66 head and predicted-goal NLL no more than0.01 above original head. Tie least squared weight-change norm summed across folds,then deterministic grid order. The unedited head is eligible. Disabled correction is a diagnostic control only,not eligible.",
+  "success": "Selected head must beat V66 original316 and direct318 on unchanged513 evaluation movement queries,with NLL<=direct+0.01 and hindsight diagnostic accuracy loss<=2points. All are required;80percent still411/513. No evaluation-dependent calibration or promotion.",
+  "limits": "Calibration targets observed fitting input shift,not proof of its unique causal role. Uniform distance scaling also changes near-goal responses; zeroing radius does not remove region-distance differences. Hindsight diagnostic remains privileged,teacher-forced/reused research games and one seed remain. No subagents."
+}

@@ -1,0 +1,43 @@
+{
+  "D02_sha256": "fcd8a4a4dc8480033b8045916c3b477a47eaec2953f21943f1d3af4731a78fdc",
+  "maximum_pilot_fits": 8,
+  "conditional_additional_seed_fits": 4,
+  "ranked": [
+    {
+      "rank": 1,
+      "ids": [
+        "E00",
+        "E01"
+      ],
+      "hypothesis": "All personally visible entity details improve action/movement beyond matched zero-entity GRU control; both retrain classifier/representation and preserve ability targeting.",
+      "evidence": "TRAIN direction changes32.95% vscontinuation93.97%; discarded observable entity types/buffs/cooldowns; nearest3 loses56%of sampled visible camps."
+    },
+    {
+      "rank": 2,
+      "hypothesis": "Separate continuation/change destination distributions with predicted gate and recorded change supervision.",
+      "evidence": "Change/continue shared-gradient cosine mean-0.5305, negative12/12; true future direction never input."
+    },
+    {
+      "rank": 3,
+      "ids": [
+        "T00",
+        "T01"
+      ],
+      "hypothesis": "Fresh GRU versus small causal transformer with identical complete earlier observations/actions/gaps, rows, heads and optimizer budget. Start without rich entities; combine only after measured component evidence."
+    },
+    {
+      "rank": 4,
+      "hypothesis": "Natural-frequency sampling vs legacy augmented+weighted loss; separately augmentation-weight correction. Preserve ward recall, not blanket suppression."
+    },
+    {
+      "rank": 5,
+      "hypothesis": "Nonlinear conditional priority mixture using recovered state/history, full-support rare/unseen fallback. Current TRAIN exact25.16%,dev18.92% suggests inadequate fit; classifier is retrained in representation studies."
+    }
+  ],
+  "selection": "Each fit frozen before training; minimum original-development observed joint NLL, improvement0.0001,patience6,max35epochs; no posthoc peak accuracy selection. Preserve every epoch and negative result.",
+  "followup": "After every substantive completed fit obtain FRESH GPT6.1Sol xhigh review with exact user question. No routine pre-fit review requirement under latest user direction. No further fit before addressing justified completed-fit findings.",
+  "immutable_reuse": "Relevant data/feature/checkpoint/code hashes checked; do not repeat unchanged495-game replay reconstruction. Full causal/extraction checks only when inputs/assumptions change, as for the new entity cache.",
+  "original_goal": ">=90%exact joint action+all recorded required parameters in EVERY adequately supported category, consistent across3seeds. All rows retained;43unknown shops remain strict failures; altar/teleport2examples uncertified. No finaltest/generalization claim from reused development.",
+  "reserved": "All75newvalidation and75final-test games sealed. No oldexposedtest,downloads,matches,playing-bot changes or deployment.",
+  "deferred": "Unfitted C01/C02 frozen-classifier-input pilot preserved but deferred by latest user request; zero fits/optimizer steps."
+}

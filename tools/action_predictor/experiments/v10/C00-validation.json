@@ -1,0 +1,583 @@
+{
+  "plan_sha256": "54fc9542f542a5486ac0257832bdf3b07fe123b81f11d432dd39ad55e4ab81ce",
+  "data_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "candidates_sha256": "1eb4d10e4f94a2ed92cb8c4e0920832ccc821c38b7f1dc5f002341b6db594059",
+  "G00_predictions_sha256": "f6ca6a970b05e519d28dc378703a338012718b675806d292d467f043a15f24ea",
+  "rows": 14439,
+  "groups": 5,
+  "libraries": {
+    "algorithmic": {
+      "covered": 12038,
+      "coverage": 0.8337142461389293,
+      "per_family": {
+        "<unknown>": {
+          "support": 0,
+          "covered": 0,
+          "coverage": null,
+          "unexplained": 0
+        },
+        "altar": {
+          "support": 2,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 2
+        },
+        "attack": {
+          "support": 985,
+          "covered": 970,
+          "coverage": 0.9847715736040609,
+          "unexplained": 15
+        },
+        "blocked": {
+          "support": 110,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 110
+        },
+        "cancel": {
+          "support": 2589,
+          "covered": 2589,
+          "coverage": 1.0,
+          "unexplained": 0
+        },
+        "cast_0": {
+          "support": 213,
+          "covered": 202,
+          "coverage": 0.9483568075117371,
+          "unexplained": 11
+        },
+        "cast_1": {
+          "support": 243,
+          "covered": 69,
+          "coverage": 0.2839506172839506,
+          "unexplained": 174
+        },
+        "end": {
+          "support": 4096,
+          "covered": 3777,
+          "coverage": 0.922119140625,
+          "unexplained": 319
+        },
+        "move": {
+          "support": 2362,
+          "covered": 1320,
+          "coverage": 0.558848433530906,
+          "unexplained": 1042
+        },
+        "priority": {
+          "support": 576,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 576
+        },
+        "recall": {
+          "support": 3084,
+          "covered": 3084,
+          "coverage": 1.0,
+          "unexplained": 0
+        },
+        "shop": {
+          "support": 43,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 43
+        },
+        "submit": {
+          "support": 22,
+          "covered": 22,
+          "coverage": 1.0,
+          "unexplained": 0
+        },
+        "teleport": {
+          "support": 2,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 2
+        },
+        "ward": {
+          "support": 112,
+          "covered": 5,
+          "coverage": 0.044642857142857144,
+          "unexplained": 107
+        }
+      },
+      "distinct_outputs": {
+        "0": 329,
+        "4": 283,
+        "5": 1343,
+        "6": 1447,
+        "7": 3979,
+        "8": 2122,
+        "9": 1956,
+        "10": 1364,
+        "11": 926,
+        "12": 323,
+        "13": 157,
+        "14": 103,
+        "15": 37,
+        "16": 58,
+        "17": 11,
+        "18": 1
+      },
+      "per_slot_matches": {
+        "camp_near/greedy_yx": 470,
+        "camp_near/field_yx": 503,
+        "camp_near/field_xy": 504,
+        "camp_hp/greedy_yx": 482,
+        "camp_hp/field_yx": 544,
+        "camp_hp/field_xy": 545,
+        "enemy_near/greedy_yx": 225,
+        "enemy_near/field_yx": 246,
+        "enemy_near/field_xy": 246,
+        "bank/greedy_yx": 618,
+        "bank/field_yx": 738,
+        "bank/field_xy": 736,
+        "home/greedy_yx": 307,
+        "home/field_yx": 318,
+        "home/field_xy": 324,
+        "attack/near": 886,
+        "attack/hp": 934,
+        "attack/fraction": 940,
+        "cast_0/near": 183,
+        "cast_0/hp": 173,
+        "cast_0/fraction": 195,
+        "cast_1/near": 60,
+        "cast_1/hp": 55,
+        "cast_1/fraction": 65,
+        "ward/self": 0,
+        "ward/toward_bank": 5,
+        "submit/bank": 22,
+        "end": 3777,
+        "cancel": 2589,
+        "recall": 3084,
+        "priority/zero": 0
+      },
+      "rescues_beyond_G00": 1516,
+      "blocked_destination_only_diagnostic": 2,
+      "per_group": {
+        "1": {
+          "rows": 2753,
+          "coverage": 0.8478023973846712
+        },
+        "10": {
+          "rows": 3111,
+          "coverage": 0.8363870138219223
+        },
+        "11": {
+          "rows": 2826,
+          "coverage": 0.8368719037508846
+        },
+        "17": {
+          "rows": 3037,
+          "coverage": 0.8350345735923609
+        },
+        "31": {
+          "rows": 2712,
+          "coverage": 0.8115781710914455
+        }
+      }
+    },
+    "simple": {
+      "covered": 12311,
+      "coverage": 0.8526213726712376,
+      "per_family": {
+        "<unknown>": {
+          "support": 0,
+          "covered": 0,
+          "coverage": null,
+          "unexplained": 0
+        },
+        "altar": {
+          "support": 2,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 2
+        },
+        "attack": {
+          "support": 985,
+          "covered": 970,
+          "coverage": 0.9847715736040609,
+          "unexplained": 15
+        },
+        "blocked": {
+          "support": 110,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 110
+        },
+        "cancel": {
+          "support": 2589,
+          "covered": 2589,
+          "coverage": 1.0,
+          "unexplained": 0
+        },
+        "cast_0": {
+          "support": 213,
+          "covered": 202,
+          "coverage": 0.9483568075117371,
+          "unexplained": 11
+        },
+        "cast_1": {
+          "support": 243,
+          "covered": 69,
+          "coverage": 0.2839506172839506,
+          "unexplained": 174
+        },
+        "end": {
+          "support": 4096,
+          "covered": 3777,
+          "coverage": 0.922119140625,
+          "unexplained": 319
+        },
+        "move": {
+          "support": 2362,
+          "covered": 1593,
+          "coverage": 0.674428450465707,
+          "unexplained": 769
+        },
+        "priority": {
+          "support": 576,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 576
+        },
+        "recall": {
+          "support": 3084,
+          "covered": 3084,
+          "coverage": 1.0,
+          "unexplained": 0
+        },
+        "shop": {
+          "support": 43,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 43
+        },
+        "submit": {
+          "support": 22,
+          "covered": 22,
+          "coverage": 1.0,
+          "unexplained": 0
+        },
+        "teleport": {
+          "support": 2,
+          "covered": 0,
+          "coverage": 0.0,
+          "unexplained": 2
+        },
+        "ward": {
+          "support": 112,
+          "covered": 5,
+          "coverage": 0.044642857142857144,
+          "unexplained": 107
+        }
+      },
+      "distinct_outputs": {
+        "0": 329,
+        "4": 283,
+        "5": 1335,
+        "6": 1397,
+        "7": 3897,
+        "8": 1957,
+        "9": 1837,
+        "10": 1265,
+        "11": 1093,
+        "12": 530,
+        "13": 237,
+        "14": 128,
+        "15": 69,
+        "16": 66,
+        "17": 13,
+        "18": 2,
+        "19": 1
+      },
+      "per_slot_matches": {
+        "camp_near/greedy_yx": 470,
+        "camp_near/field_yx": 517,
+        "camp_near/field_xy": 470,
+        "camp_hp/greedy_yx": 482,
+        "camp_hp/field_yx": 548,
+        "camp_hp/field_xy": 482,
+        "enemy_near/greedy_yx": 225,
+        "enemy_near/field_yx": 282,
+        "enemy_near/field_xy": 225,
+        "bank/greedy_yx": 618,
+        "bank/field_yx": 651,
+        "bank/field_xy": 618,
+        "home/greedy_yx": 307,
+        "home/field_yx": 354,
+        "home/field_xy": 307,
+        "attack/near": 886,
+        "attack/hp": 934,
+        "attack/fraction": 940,
+        "cast_0/near": 183,
+        "cast_0/hp": 173,
+        "cast_0/fraction": 195,
+        "cast_1/near": 60,
+        "cast_1/hp": 55,
+        "cast_1/fraction": 65,
+        "ward/self": 0,
+        "ward/toward_bank": 5,
+        "submit/bank": 22,
+        "end": 3777,
+        "cancel": 2589,
+        "recall": 3084,
+        "priority/zero": 0
+      },
+      "rescues_beyond_G00": 1628,
+      "blocked_destination_only_diagnostic": 1,
+      "per_group": {
+        "1": {
+          "rows": 2753,
+          "coverage": 0.8583363603341809
+        },
+        "10": {
+          "rows": 3111,
+          "coverage": 0.8662809386049501
+        },
+        "11": {
+          "rows": 2826,
+          "coverage": 0.86482661004954
+        },
+        "17": {
+          "rows": 3037,
+          "coverage": 0.8465591043793217
+        },
+        "31": {
+          "rows": 2712,
+          "coverage": 0.8252212389380531
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "raw": "213b526318b71ea4f8e5951d108b8e77eaedb51368c4b33874ae51a07dbdc891",
+      "source": "2493a72043ff2b65328572d8b08c8d4e3080d563a032025071c0e30685d7fad6",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\213b526318b71ea4f8e5951d108b8e77eaedb51368c4b33874ae51a07dbdc891\\pre.jsonl": "4a1f36e00af1f9b2043524d9ecf9f2dc8fe01116e372f12a0eed4bbb964b07f4"
+      },
+      "engine": "2.0.0",
+      "rows": 511
+    },
+    {
+      "raw": "0d7cbc1ea5d12541d03aadf95297ae88bd86be6d2104af4d08d4f2c00336397f",
+      "source": "b643b7ddb5032e8f8a33a0e56dfa78258fa9749c406b7f14351acbdec7da269d",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\0d7cbc1ea5d12541d03aadf95297ae88bd86be6d2104af4d08d4f2c00336397f\\pre.jsonl": "b4558e4942941a1186fbecbd3cffc684ba12af9e3db0f7802e5c869f826b8530"
+      },
+      "engine": "2.0.0",
+      "rows": 715
+    },
+    {
+      "raw": "1489e159553b4aced0304fba858ec39266fe6ab8f2e607bd1d411dd1ce8efaa1",
+      "source": "b175c3ddfba9fe1a2e991d98082520cb205640fa1177825a74e4645b2cdb0cfa",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\1489e159553b4aced0304fba858ec39266fe6ab8f2e607bd1d411dd1ce8efaa1\\pre.jsonl": "5ef762e1fee07c3e2059fd1abee9112e11802d8110c0bac04e77d5f934fcbd21"
+      },
+      "engine": "2.0.0",
+      "rows": 291
+    },
+    {
+      "raw": "748a155fe5fe70dee7a65b8293c631abd81bf24805fc7a1099e9b1145f77d7c0",
+      "source": "6cb69d5ec447c6c302bc4eea2c0b6841022c1c5e5bf8aa3da96002ef9fac4e29",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\748a155fe5fe70dee7a65b8293c631abd81bf24805fc7a1099e9b1145f77d7c0\\pre.jsonl": "b5adbd1849b242d2e51c31a84ed6ba52015b9836382477c95167f79a8fbca4f3"
+      },
+      "engine": "2.0.0",
+      "rows": 518
+    },
+    {
+      "raw": "e376369aa8c54f9f38937632e4e80f42d1f443ad1b03499e4bbb7ca1d949a0aa",
+      "source": "bd5b812f01f61ab8d97462b316fa3866fa1f207ac3560b8f70cb0f0e2dc39981",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\e376369aa8c54f9f38937632e4e80f42d1f443ad1b03499e4bbb7ca1d949a0aa\\pre.jsonl": "19d648feb14476955564880c52753f4d98993e9b41ce7c5f6add72082cbdca9c"
+      },
+      "engine": "2.0.0",
+      "rows": 718
+    },
+    {
+      "raw": "4a10e87aed5187146862b5800152a2fde1ca69c85bc805084da96358399a225c",
+      "source": "3d519e381f9e307467e1f1def03849f41ab19bdd398422586fa5164448f1c906",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\4a10e87aed5187146862b5800152a2fde1ca69c85bc805084da96358399a225c\\pre.jsonl": "09633a1b56a3365affa9b1d30cd197ef4cf7f4ee684fc681ffffae3a294376f9"
+      },
+      "engine": "2.0.0",
+      "rows": 536
+    },
+    {
+      "raw": "46cd250e7d311ea71bd6e6984fc3cc194b3c82ad1981bb54d0496d69b0ad3c46",
+      "source": "7078962c528e4de38867606ec837937fb4501b05579e0b192c7d98f8fd251a87",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\46cd250e7d311ea71bd6e6984fc3cc194b3c82ad1981bb54d0496d69b0ad3c46\\pre.jsonl": "61d6b90ce5aa4ca04e06f896888e74573558cb53d7f4d6128d3d5dfb65fd5582"
+      },
+      "engine": "2.0.0",
+      "rows": 625
+    },
+    {
+      "raw": "2bf54e5c110677a4c1fa4352ab31994986afaab7d9f525bc2379d8cca4bdd062",
+      "source": "a421d122d9ebf73481d484cac7f1df06adc8f0813fff27829c169bcefc668a4f",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\2bf54e5c110677a4c1fa4352ab31994986afaab7d9f525bc2379d8cca4bdd062\\pre.jsonl": "ad0f177af92551b7cba4545b9b484ed5912f9704b6a980f38d503e8d66e03586"
+      },
+      "engine": "2.0.0",
+      "rows": 501
+    },
+    {
+      "raw": "d98f7f7b11d54ac46122ccd9b687a82ebf1a63104b52a36fd7691ccc1fb0867f",
+      "source": "d27b0c74adef3be47535ac03154667c30453611d240c7df270888de0ca295a93",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\d98f7f7b11d54ac46122ccd9b687a82ebf1a63104b52a36fd7691ccc1fb0867f\\pre.jsonl": "b4a9f2d75537c2e8b220b45f56ad16d9479d2d131185bab81999c6a2aefe0e85"
+      },
+      "engine": "2.0.0",
+      "rows": 715
+    },
+    {
+      "raw": "895c046b02bc35bcab039da89498c5a531e029acf8e6bfe589da7549f707b4b2",
+      "source": "53ae0ff1d739eefd87aff9d865535e410ee7b78d7f6f97841a232c56d59b9909",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\895c046b02bc35bcab039da89498c5a531e029acf8e6bfe589da7549f707b4b2\\pre.jsonl": "8bee31cd63dc4ec747cb19a33497eaccfac0cd76c218097ecc8c8dab062893ea"
+      },
+      "engine": "2.0.0",
+      "rows": 734
+    },
+    {
+      "raw": "64d2bdf9c7287cc22b924141b1bb84d75bfa90d0a1c55506b94aa9fdc655b08e",
+      "source": "1d2cc7aeff00c99879b8ff902ec8b26816413170f38ef8f3ab4a3aca36449565",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\64d2bdf9c7287cc22b924141b1bb84d75bfa90d0a1c55506b94aa9fdc655b08e\\pre.jsonl": "6ac9932a5c17ff3f44d1e28b7f986d0b800fe952b48b595bfbfb1bf45eab5cae"
+      },
+      "engine": "2.0.0",
+      "rows": 731
+    },
+    {
+      "raw": "ccd105bb21396542d1666926a532fc0c2af069102d341315acd7622d61140a98",
+      "source": "77e6966e3d1502b91ca86558886198a3e3299ed16f1e7ea8ec7504dad9394b32",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\ccd105bb21396542d1666926a532fc0c2af069102d341315acd7622d61140a98\\pre.jsonl": "a74e4ff34bdac989cd0500256fdbe9e899156fe55b7229f5cb37971c24fd47a0"
+      },
+      "engine": "2.0.0",
+      "rows": 444
+    },
+    {
+      "raw": "2efc76771b78a267d4a7d82535a7f4a4d59e649b2d48378b4e44a2e479e100ce",
+      "source": "6f8e7ada0d08c27d9f1da5275cff1391beb639b2532f921ee4c6d559bc579e62",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\2efc76771b78a267d4a7d82535a7f4a4d59e649b2d48378b4e44a2e479e100ce\\pre.jsonl": "3f57f299dbb8f973e24598ae17a05b12559aeb1582a13f4d22dcdc9902cfe715"
+      },
+      "engine": "2.0.0",
+      "rows": 444
+    },
+    {
+      "raw": "f2009d38b647f2c6d00d09b76efbe22070f0bc8ee4cbe342c785cb43e71273e1",
+      "source": "ac36233c95a6ef8939cf5d4918f29afe0cd7a969132cb72988b55be6aa61bb79",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\f2009d38b647f2c6d00d09b76efbe22070f0bc8ee4cbe342c785cb43e71273e1\\pre.jsonl": "c0bb482dd3805fa853b1b61b0147b0a6d41c60b86f78a89e4f0bc7c20becda70"
+      },
+      "engine": "2.0.0",
+      "rows": 482
+    },
+    {
+      "raw": "30d801fb5abc183f0adaf499f577da7f1542eede102e1c8bd6d5fc5d913836f5",
+      "source": "250278094f97faa6fbba36b7bf711b16b168b65a1474dd9d830f50692995c03c",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\30d801fb5abc183f0adaf499f577da7f1542eede102e1c8bd6d5fc5d913836f5\\pre.jsonl": "dc36733cc803b53a50af620620724e402ed3185c1aea888b85fa51ac08dfa19e"
+      },
+      "engine": "2.0.0",
+      "rows": 725
+    },
+    {
+      "raw": "58fcf5d043c58fff897da0040bf2961c33a5553b62ca07d6c3afe3c682cd9437",
+      "source": "1e3511e4569dda5e34cfebf04208bd056bf46e0ffb2e513f69f33f024dd34494",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\58fcf5d043c58fff897da0040bf2961c33a5553b62ca07d6c3afe3c682cd9437\\pre.jsonl": "4f19eb9815d6ac4f241c61c5965c2f17e1db80f7129e45ad9d226dc81c430caf"
+      },
+      "engine": "2.0.0",
+      "rows": 459
+    },
+    {
+      "raw": "d048b3c63611636cfeaa37e57c93b5f0bfc0e0d7c51fa661a49e50aafcae6c8d",
+      "source": "5c0d74c47f8d3b21ef7247ca2cfba2a9ccf88c4388f605fdc07f80e50a4009d9",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\d048b3c63611636cfeaa37e57c93b5f0bfc0e0d7c51fa661a49e50aafcae6c8d\\pre.jsonl": "e7e8515c31dee953de47595d866bc8cc6ead1abd768c2d8fae34135611a7b9a8"
+      },
+      "engine": "2.0.0",
+      "rows": 578
+    },
+    {
+      "raw": "c136bf775b228cd285ec59e2437a13dbd7c8191b21a53ca2f14469fda3a22d5b",
+      "source": "30c7675e76dd7f434af52898a14b32a581d15839d0683ac23c06327cbd386213",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\c136bf775b228cd285ec59e2437a13dbd7c8191b21a53ca2f14469fda3a22d5b\\pre.jsonl": "bb92049c95cf3dc5d0f1bacf97a922951494a141076267a7713e8777dd9a61d2"
+      },
+      "engine": "2.0.0",
+      "rows": 714
+    },
+    {
+      "raw": "6531a13db23a276e8abb21794c46650cf401b5152e0fbe9e85bf919d7f0d12d3",
+      "source": "8a2bea41a885f2bb3660277715e0a96cac0b39bd3dbad9fe65d5ed89e202a3e6",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\6531a13db23a276e8abb21794c46650cf401b5152e0fbe9e85bf919d7f0d12d3\\pre.jsonl": "b43aa8770baff5481981637825dec90f0cfae02d16f4e25bfdd407cc10d13703"
+      },
+      "engine": "2.0.0",
+      "rows": 796
+    },
+    {
+      "raw": "e161b6b5426f0ae569dbfa339a3a6ba588f8006812fc403bcfbcc22363a4ffc6",
+      "source": "6a6e42d21fdf2e1b49431f558946f6125bb3a2f4f3982262002cbdebd73416bf",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\e161b6b5426f0ae569dbfa339a3a6ba588f8006812fc403bcfbcc22363a4ffc6\\pre.jsonl": "e9b2e9a9405aa58ae0cbfa967a21494a3eb06c7cda996bc4c8add4a835da51f6"
+      },
+      "engine": "2.0.0",
+      "rows": 490
+    },
+    {
+      "raw": "675cc775d6158e3bea5937066b954994ce017b54d4a5e9a22df976dff531a432",
+      "source": "8b390e44d9485242947b862a065c6e1ef6cb87837d48dc1268359e5f8172cda5",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\675cc775d6158e3bea5937066b954994ce017b54d4a5e9a22df976dff531a432\\pre.jsonl": "1b24a3f87e0dec0449a756032763aa2e44db238f867bdf914683bf202727c1fd"
+      },
+      "engine": "3.0.0",
+      "rows": 490
+    },
+    {
+      "raw": "4f0fc92e67ac94421958d835f161875b0b78f63a9944ba03311602732988f524",
+      "source": "37f083f0d471fa47eb362963d41719818607d65172e84ee5e612f37aeb1e21c2",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\4f0fc92e67ac94421958d835f161875b0b78f63a9944ba03311602732988f524\\pre.jsonl": "b8718b19e10c38948329e4aba9dcb4349cb0e1c3d633b3005e20c270a8522c8c"
+      },
+      "engine": "3.0.0",
+      "rows": 455
+    },
+    {
+      "raw": "b08b3e4fa1827f86d060e49c7b7523df72348347cf21668eabfc80d91929798b",
+      "source": "ddae036ff9c63a0e16b776717fecc79bf4327c74dd9eb5ba3161d60e5d3b4a4d",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\b08b3e4fa1827f86d060e49c7b7523df72348347cf21668eabfc80d91929798b\\pre.jsonl": "fb0359a887c251c50ba11420227ecd056c26f957dfa4251cd36ca3d2b21e0167"
+      },
+      "engine": "3.0.0",
+      "rows": 714
+    },
+    {
+      "raw": "02930b1f6290d7f786c3eb1006bcbf77b9a153464a1df44e9a60679ecd08bf8b",
+      "source": "6c0b1bcb696d900e9f851d72bbe676ae130bb7cab51e29f72dbef5886ffbbfb1",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\02930b1f6290d7f786c3eb1006bcbf77b9a153464a1df44e9a60679ecd08bf8b\\pre.jsonl": "3f0a2d0bb192b6ce5984c5d20347c16d1dc4711e3c482da83d25fb5354fff76d"
+      },
+      "engine": "3.0.0",
+      "rows": 638
+    },
+    {
+      "raw": "7821e163c66ff783c9fb5e58e2980c8485f075497577af4923e7d4c750ddbf7d",
+      "source": "30c60dda2fa89ec3a687d5ce3af2ad6ebb6afcf6a2265b8e7251e567fe689a2c",
+      "supplements": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\supplement\\7821e163c66ff783c9fb5e58e2980c8485f075497577af4923e7d4c750ddbf7d\\pre.jsonl": "ba6dda729fbbab20e2d4c6781b14c434a70245b7035309d0bb39e3bfbe735a71"
+      },
+      "engine": "3.0.0",
+      "rows": 415
+    }
+  ],
+  "reserved_opened": 0,
+  "shop_assessed": 0,
+  "strict_entity_identity_certified": false
+}

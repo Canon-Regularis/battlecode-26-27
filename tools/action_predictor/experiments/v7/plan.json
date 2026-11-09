@@ -1,0 +1,114 @@
+{
+  "schema": 7,
+  "hypothesis": "Earlier personal observations may improve prediction beyond matched action history; no benefit assumed.",
+  "maximum_substantive_fits": 6,
+  "fits": [
+    {
+      "id": "H01",
+      "seed": 26,
+      "observations": false,
+      "conditional": false
+    },
+    {
+      "id": "H02",
+      "seed": 26,
+      "observations": true,
+      "conditional": false
+    },
+    {
+      "id": "H03",
+      "seed": 27,
+      "observations": false,
+      "conditional": true
+    },
+    {
+      "id": "H04",
+      "seed": 27,
+      "observations": true,
+      "conditional": true
+    },
+    {
+      "id": "H05",
+      "seed": 28,
+      "observations": false,
+      "conditional": true
+    },
+    {
+      "id": "H06",
+      "seed": 28,
+      "observations": true,
+      "conditional": true
+    }
+  ],
+  "base_config": {
+    "id": "M01",
+    "name": "gru-rich-rare-training",
+    "history": 16,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.5,
+    "augment": true,
+    "constrain": true
+  },
+  "baseline_checkpoint_sha256": "906261a160de839a9e536462e84d6c19360b8fd9e584764d70fd0eb80f378936",
+  "train_sha256": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+  "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "benchmark_sha256": "e8bc7413c692c181e82809d458bdd9a78e115d59e61ac3f32ed03d413eba8aea",
+  "prior_studies_lock_sha256": "58fe94c34979da58ec1f3929b2d6f68361f768378cfd67a946dd864891931372",
+  "target_rows": {
+    "train": 433071,
+    "validation": 14439
+  },
+  "train_games": 470,
+  "train_groups": 94,
+  "validation_games": 25,
+  "validation_groups": 5,
+  "history_length": 16,
+  "observation_projection": 32,
+  "gap_fields": [
+    "frame_present",
+    "observation_available",
+    "round_gap_to_next",
+    "own_turn_boundary_to_next",
+    "round_age_to_target"
+  ],
+  "representation": "Retain full whitelisted personal PRE snapshots and supplements for evidence; encode earlier snapshots with the existing 253-field M01 current-observation encoder. This tests history of the existing representation, not a new observation encoder.",
+  "architecture": "Retain M01 current encoder, GRU hidden64, fusion and every prediction head. Both arms widen only GRU input: existing 24 action fields + 32 projected observation fields + 5 common gap fields. Projection is Linear(253,32)+ReLU. Control zeros normalized observation values; same nominal parameters and executed dense computation.",
+  "initialization": "Copy original M01 seeded initial GRU weights into first24 input columns; zero added input columns. Original other weights and shuffle RNG stream preserved. No warm-start from trained weights.",
+  "normalization": "Use retained M01 training mean/std for current and earlier observation features; no validation-fitted statistics.",
+  "chronology": "Use last16 actual earlier own root events from full recorded index, including unsampled turns. Observation PRE < its observed action event <= current prediction PRE < target action event. Same raw game, champion and Fish personal perspective. No current target label in inputs.",
+  "gaps": "Only bot-observable round gaps/ages and own-turn boundaries. No raw replay cursor distances, unseen global action counts, opponent actions or omniscient dynamic state in neural inputs.",
+  "missing": "Keep every target row. Explicit frame-present and observation-available fields; left padding is unavailable. Never concatenate sampled turns as adjacent. Stop before fitting on unexplained recovery, perspective, visibility, order or alignment failure; report missing support instead of dropping targets.",
+  "reuse": "Reuse every required cached training/development-validation snapshot and supplement; recover only additional necessary earlier contexts from those same eligible games.",
+  "training": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "losses": "Unchanged M01 weighted action CE, conditional spatial CE and discrete priority NLL; same support, class weights, gradient clip and optimizer.",
+  "checkpoint": "Minimum original-development-validation observed joint NLL, improvement 0.0001; original35 epoch cap and patience6. Do not select peaks of movement accuracy.",
+  "exploratory_repeat_trigger": "After seed26 pair, repeat matched pairs on27/28 if loss reduction>=2% OR exact/joint movement gain>=1pp OR direction-change/near-obstacle exact movement gain>=3pp with >=200 move rows; AND all regression guards pass. These are exploratory allocation criteria, never substitutes for original success targets.",
+  "exploratory_regression_guards": "Relative to both fresh control and retained M01: loss <=1.01*reference; movement exact/joint no drop>0.5pp; macro F1 no drop>1pp; attack/cast_0/cast_1 coordinate AND family joint accuracy no drop>2pp. All target rows and available-history bins retained.",
+  "original_targets": "Unchanged: macro F1>=0.65; exact movement >=strongest frozen simple baseline+10pp; joint loss>=10% below strongest baseline; no material targeting regression. Report historical frozen references and stronger matched controls separately.",
+  "contexts": {
+    "direction_change": "For actual move labels, nonzero sign(dx,dy) differs from most recent earlier successful own move. Evaluation only, never an input.",
+    "near_obstacle": "A public static blocked/out-of-bounds tile is within Chebyshev distance2 of personal PRE position.",
+    "visible_set_change": "Current personally visible entity set differs from the most recent available earlier personal observation; unavailable is separate.",
+    "history_bins": [
+      "0",
+      "1-3",
+      "4-7",
+      "8-15",
+      "16"
+    ]
+  },
+  "uncertainty": "2000 paired whole-game-group resamples; fixed group draws for both arms. Per-seed results, context supports, available-history lengths and all targeting regressions.",
+  "selection": "Validation only. Retain M01 unless matched evidence supports a replacement without the guards failing. No seed cherry-picking; no success claim unless original targets hold across all three pairs.",
+  "reserved": "All75 new validation and75 final-test games unopened; old exposed test not used. No downloads, matches, deployments, bot changes or PRs."
+}

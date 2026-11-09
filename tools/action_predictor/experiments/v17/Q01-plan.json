@@ -1,0 +1,77 @@
+{
+  "id": "Q01-TRAIN-mean-goal-projection-attribution",
+  "models": [
+    "L01",
+    "L02"
+  ],
+  "new_training_fits": 0,
+  "purpose": "Test incremental dependence/usefulness of variable goal projection channels versus constant offsets, anchored to demonstrated execution collapse. No new architecture, optimizer, checkpoint or policy promotion.",
+  "controls": "Original retained L01/L02 checkpoints and their unchanged decoder, all original14439DEV rows; baseline reproduction before interpreting contrasts.",
+  "contrasts": [
+    "geometry_mean",
+    "uncertainty_mean",
+    "availability_mean",
+    "all_means",
+    "bias_off",
+    "projection_off"
+  ],
+  "reference": "Use all288801 identity-verified natural TRAIN rows during original augmented causal traversal. Per-model/per-latent-component means, no action-label or future-target conditioning. Geometry mean among current-position-known rows, zero geometry kept when position unknown. Logscale means stratified by current-position availability. Availability channel uses unconditional TRAIN mean; only its linear projection contribution is neutralized, never real flags/masks. Each centered contribution has zero TRAIN mean up to declared floating precision.",
+  "mean_preservation": "Keep goal_condition.bias in every mean contrast and preserve the TRAIN mean projected offset. bias_off and full projection_off are separate non-mean-preserving calibration/pathway controls, not interchangeable with mean contrasts.",
+  "inference_modes": {
+    "fixed": "Each contrast changes only current readout from original baseline step/prior/world/history. All shadow posterior updates discarded. These are fixed-state diagnostics, not an autonomous/refiltered policy.",
+    "refilter": "Each contrast has its own forward filter. Predict before reading current answer; after action occurs assimilate that actual recorded action under the contrast likelihood. All current/past personal observations and true gaps retained. No future state, smoothing, oracle type routing or game simulation."
+  },
+  "data": "Existing eligible TRAIN/DEV caches only. No replay extraction/download/495-game audit. Future achieved positions/availability never used for references, selection, forecasting or filter updates.",
+  "metrics": [
+    "Full complete-command exactness, action macroF1/confusion/false positives and observed joint NLL; same original helpers/denominators",
+    "Per-category joint/type/all-true-family/correctly-typed parameters and NLL; paired2000 whole-group draws seed20261106 versus corresponding original model",
+    "Movement continuation/change/startup; recorded-destination probability and first-argmax-tie rank; TV versus original readout",
+    "Component conditional modes, union, current common-wrong dominance bounds, goal weights/diversity; distinguish fixed states from changed causal filter histories",
+    "Unknown-position/context support, partial readiness and successful-move versus blocked-attempt mask rejection separately"
+  ],
+  "TRAIN_limit": "Full original TRAIN baselines retained; TRAIN-derived references and Q00 bounded development sensitivity are not full TRAIN counterfactual-policy scores. Do not claim a matched TRAIN/DEV generalization effect for all contrasts.",
+  "numerical_contract": "Unchanged original model/decoder sources. Baseline integer/semantic prediction arrays exact; observed NLL/type/parameter arithmetic absolute discrepancy<=2e-5, retaining historical failed all-bucket absolute-log check as failed. Mean projected offset discrepancy<=1e-6. All model weights fingerprint-identical before/after. Identity contrast must preserve forward/state.",
+  "interpretation": "Fixed-weight pathway dependence is not information sufficiency, strategic intent, proof of retraining benefit or all-goal-path removal. Five repeatedly reused DEV groups, selected checkpoints, exploratory contrasts; no variant/threshold selected as a replacement and no robustness claim.",
+  "continuation": "Fresh requested Sol6.1xhigh review after complete study. Address findings, continue to the next distinct evidence-driven model experiment automatically; no overall research cap under current user authority.",
+  "scope": "Model-only. Both75-game reserved partitions sealed, no matches/proposed-action game simulations/downloads/bot/runtime/native/SDK/export/deployment. Shops unavailable strict failures; sparse categories/identity/full legality uncertified. PR11 draft/open/unmerged/no-auto-merge/queue.",
+  "sources": {
+    "pathway_inputs.py": "acba4f8ef283020f0b61815f347768ad96a79daa3d9d26a81025522dc8c15f4d",
+    "pathway_protocol.py": "2e7fbf6391a94d06484bf5d1347f9ddb2229f72698bad0ac9e689545cdcbb4f8",
+    "pathway_reference.py": "24c8cf367971a2487e069ae2f7284721b4d81b756ac04b7b00bb00edd8aeef92",
+    "pathway_study.py": "f4cf9b35a55329cd7235d26fd66c8a832513b583ceecdaf03928ce28116d74b3",
+    "pathway_evaluate.py": "1de3554a60a81cee497c65940d2b70e78b5f2137b97db25fe6b4e1aadc770d67",
+    "test_pathway_inputs.py": "b4eeeb2dadf7420da5bdfbc1b5e632cfb8d2bc3340aceeab438f91147a481caa"
+  },
+  "core_model_sources": {
+    "model.py": "718a7af0d65890796a3c152eb1c8c2d51e073cd1755d24b74c832a25e404a768",
+    "data.py": "98915026ab681ab6c2c8cf1a9e44c82001eaed26ae3a4c358d426c6b359a14c1",
+    "inference.py": "854ac9e3bc6e49b4771582dca283b2dfd4b2022d1c887d515712e17e5921d31a"
+  },
+  "upstream_sources": {
+    "reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "entity_set.py": "adda3d96bf5f140b659e772c3112975c7f14443daecb7ac98c48185c28fe5b32",
+    "observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "movement_experts/evaluate.py": "3083e2bbc8bdd15451cf1e5a8a4056dd0ea8b00c121a230642dfa7bf7d612fea",
+    "learned_policy/public_inputs.py": "efb867d96f92b29178a59eceeaa32a15083640c7bc91798a851433a7eaf87e77"
+  },
+  "model_bindings": {
+    "L01": {
+      "checkpoint_sha256": "8221a4b679451995b708b1399f530ce6251847736be1ace49cce9d7fbfa8a2ee",
+      "selected_round": 3,
+      "train_predictions_sha256": "f8654d8eab373b148ba79c0952649b07d81119728477cb4a36875d340b4ad803",
+      "validation_predictions_sha256": "2e7c0b566dd3e01b9a44da9fecd605ae404b5d96f3706518cfaff70d86532f85"
+    },
+    "L02": {
+      "checkpoint_sha256": "5aba95703ab05d7c28477d324956894ea21489a78efa8097b85fd61a3fd41e2e",
+      "selected_round": 3,
+      "train_predictions_sha256": "f53aa40ab103f0bf6771a545fe2299f04b31ea1b2ec6d9f8e093e79f8af5a40e",
+      "validation_predictions_sha256": "b0340c29feffe2d119e4c1be930c9bcc68b61fd2945155c30e44bff0853bd984"
+    }
+  },
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "prior_review_sha256": "8c04811beb96a6e866da1ab872609d1e4ce0f45cf7a5e2a326a25b7e9e220803",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

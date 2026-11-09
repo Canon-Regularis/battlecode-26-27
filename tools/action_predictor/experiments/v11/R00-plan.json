@@ -1,0 +1,9 @@
+{
+  "source_sha256": "92cd073291f1ec921bd2ea02a77c219e6d57f1ccac1707f35180c6af6122affc",
+  "purpose": "Root-cause investigation;pause production training/architecture experiments. Use saved predictions/candidates and identity-verified naturalmask; no unchangedheavyrecovery.",
+  "definitions": "Only fixed-support missing-vs-selection errors form a disjoint partition. Representation/training/semantics are possible overlapping causes, not assignable labels. Coverage is oracle diagnostic, not accuracy.",
+  "sampling": "Natural288801TRAINrows from original470games/94groups vs all14439DEVrows25games/5groups. Original denominators preserved. Also report originalaugmentedTRAIN433071rows. Directstandardization by originalDEVaction,engine,andmovementcontinuationcontext on commoncells is diagnosticonly; disclose missing support.",
+  "movement": "Frozen prospective R01 diagnostic:49eligiblegames(first12TRAINperengine+all25DEV), naturalTRAINselectedrows, originalDEV. Compare nearestcamp/lowestHPcamp/enemy/bank/home objectives, geometric and uniformterrainfield costs, bothyx/xyties, optimumtiesets/progresssets as separateoracles. Also fixed past5move-progress goal ranking (roundgap<=3) from trueearlierownrootencodings, no future smoothing. Currenttruth used only to score. No costthreshold tunedonDEV.",
+  "fit": "Only one bounded R02 capacity probe may be used: existing M01 architecture from scratch,small natural diverse subset, freshgroup-separatedTRAINfold, noDEVcheckpoint selection, no newlarge model. Protocol must be frozen separately before any optimization. Required freshSolxhighreview after completedfit.",
+  "safety": "Reserved75+75sealed;nooldexposedtest,matches/proposedsimulations,downloads,botchanges,deployment. Old artifacts preserved."
+}

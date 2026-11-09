@@ -1,0 +1,52 @@
+{
+  "id": "L02-command-only-retention-gradient",
+  "fits": [
+    "L02"
+  ],
+  "additional_fit_budget": 1,
+  "seed": 20261114,
+  "control": "Retained L01, no control refit",
+  "intervention": "Compute command-loss gradients for retention.weight/bias through the entire eight-node BPTT graph. Compute original command + .05 future-position auxiliary gradients for every other trainable parameter. Before original global clipping, replace only retention gradients with command derivatives. No activation detach, no forward or architectural change.",
+  "unchanged": "Architecture, data and augmentation, initialization, warm M01/P05 components, normalization, actor order/chunk RNG, auxiliary target/weight, decoder, all evaluation denominators/definitions, optimizer LR/weight decay/clipping, seed and original full-DEV NLL checkpoint rule remain L01 settings.",
+  "optimizer_qualification": "Shared global clipping scale can differ because the gradient vector changes; AdamW weight decay still applies to retention. Auxiliary can indirectly affect retention later via learned upstream features/state. The intervention removes its direct parameter derivatives, not every indirect effect.",
+  "initialization": "Fresh seed20261114 from warm M01, not fine-tuning L01. Same constructor and RNG draw order.",
+  "training": {
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "clip": 5,
+    "max_rounds": 35,
+    "patience": 6,
+    "min_improvement": 0.0001,
+    "actor_batch": 32,
+    "unroll": 8,
+    "dropout": "No extra dropout beyond the reused model; complexity controlled by shared execution and weight decay",
+    "checkpoint": "whole original DEV observed command NLL only, auxiliary target loss excluded"
+  },
+  "architecture_sha256": "718a7af0d65890796a3c152eb1c8c2d51e073cd1755d24b74c832a25e404a768",
+  "frozen_design_sha256": "6248fccb0bb9bd78f222a70e38cf99a461f61a2263da8d04fc1357422e6e42fe",
+  "sources": {
+    "retention_protocol.py": "c1e2768eadc190b2fe5d1306da1bf65c1554a73682b42247a3843d572ddafbb6",
+    "retention_routing.py": "58cc5e3d53cd092f26adfc673c45b56ef3172a242648be0b491f127a8c19f723",
+    "retention_fit.py": "5820fe7c8cdac427402cfe623b12982a482916cc7c270bd4a7feff6b28cc0403",
+    "retention_preflight.py": "ce454508e96cacea76ef4ef9b7edc444d3065278aa863a8309dbdb71ce009e39"
+  },
+  "control_checkpoint_sha256": "8221a4b679451995b708b1399f530ce6251847736be1ace49cce9d7fbfa8a2ee",
+  "control_predictions_sha256": {
+    "train": "f8654d8eab373b148ba79c0952649b07d81119728477cb4a36875d340b4ad803",
+    "validation": "2e7c0b566dd3e01b9a44da9fecd605ae404b5d96f3706518cfaff70d86532f85"
+  },
+  "primary": "Full original DEV observed joint command NLL, min improvement .0001, patience6,max35. No checkpoint/threshold selection by accuracy, retention, auxiliary or movement.",
+  "metrics": [
+    "all original DEV and augmented/natural TRAIN complete-command exactness, action macro F1/confusion/false positives",
+    "per-category type/all-true-family/correctly-typed parameters/joint command and NLL",
+    "continuation/change/startup movement, blocked destinations and outcome accounting",
+    "paired 2000 whole-group resamples seed20261106 vs L01 (primary), L00/B00/G00 references",
+    "effective retention/soft age, component execution diversity/opportunities and fixed-distribution bounds",
+    "supplemental matched natural-cadence evaluation under existing definitions"
+  ],
+  "continuation": "Finish one fit and required fresh Sol6.1xhigh review. No automatic repeats or further fits. No promotion unless original category/macro/movement/NLL/targeting and three-seed requirements are satisfied; meaningful single-seed evidence may justify only a separately declared replication budget.",
+  "interpretation": "Matched causal intervention on the optimization graph, not proof of Fish objectives or guaranteed persistence usefulness. One seed and five reused DEV groups; paired intervals are conditional on checkpoint selection.",
+  "safety": "Model training/evaluation only. Both75-game reserved partitions sealed. No matches, replay downloads, bot/runtime/native/SDK/fuel/export/deployment work. Every shop strict failure, unavailable purchase likelihood absent. Preserve sparse-category and identity/legality limitations.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

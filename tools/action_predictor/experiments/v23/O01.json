@@ -1,0 +1,589 @@
+{
+  "source_commit": "f51965a59c6d7f4776188927f8b9122ea59d61cc",
+  "sources": {
+    "tools/action_predictor/__init__.py": "f494a668f8ac64f39b828dbcbb89e2eb7c756482ae9e8e83a798296d53f08896",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/benchmark.py": "58496ae5c52a7333884f9262457b585d43d9d38870e5ab5a9a72396ef4b91c33",
+    "tools/action_predictor/category_study.py": "b615b6cc766bb8d95cacd89cd5d93db8099cfd80ecb6ac228e843d2b2da049d6",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a",
+    "tools/action_predictor/model.py": "98e98cc920e61a35718b2918e753bd41a27bfdf47645f06e9968a1152a8a4625",
+    "tools/action_predictor/more_replays.py": "322ba17770699f260f3aff1117c3eceded5e5eb1728aa2886b2aa865a28cd1ae",
+    "tools/action_predictor/observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools/action_predictor/observation_study.py": "611d5d059ed4aad6958a4197d1b494bf691ec5cae1e36323909c6184666bce53",
+    "tools/action_predictor/observation_validate.py": "7eeadfb30f8ee592481fe3a42754ef26c835fcdbd4f27d0c4e6a3b49fe174cbb",
+    "tools/action_predictor/order_information/__init__.py": "4fdb527a783ae1b4dce55921d6143ac82c2b0ad2a6cbc5ac2475aa8ecd257beb",
+    "tools/action_predictor/order_information/anchored.py": "5a8f18159ab514dc1250f2edccbf34053a3e964bb871248b04f24852d6f6895e",
+    "tools/action_predictor/order_information/data.py": "7c6908413a89a5412519e22c0c7cc91e758f5140d14441f4011df5c0ae01d1ec",
+    "tools/action_predictor/order_information/fit.py": "4510889e0b99cda3db04c71207ff6d505ed2d39e75a13d1c0ad4c9ab8ccc3fdc",
+    "tools/action_predictor/order_information/model.py": "a22f4a458fa27d2593b8fbe6dac507bd87445c4399603764cb5bfe23f4461d4c",
+    "tools/action_predictor/order_information/schema.py": "5d978a3494199c7e42ad9bfcd8843f102d8d9a111a924d045abb8d465471d281",
+    "tools/action_predictor/order_information/schema_asinh.py": "8b65cbc88b258235a4e5706f372bf07fa6489459234de3f47fb07906524188f9",
+    "tools/action_predictor/order_information/test_anchored.py": "9f30081b162b9d9e15c00446ddc0c02a2aaeb40c42593981fb8fbe437cd92866",
+    "tools/action_predictor/order_information/test_asinh.py": "e7c83602e299ccc56ac7999cabcc1f7953c2d6ee650da959abb9f6c995d08e9d",
+    "tools/action_predictor/order_information/test_entrypoint.py": "f05d7f7d72a711fb893c82393939c3e52c004ec532075059a1d860ff20430c5a",
+    "tools/action_predictor/order_information/test_model.py": "165e61d4a40e9684c04d57868bd493b1149a9b5a44d419234723dba81c92385e",
+    "tools/action_predictor/order_information/test_schema.py": "c3e051881c8b6f4ff2abba3af9abcedf36850ebdfcccc44eee5ae211d998ca2b",
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_capacity/__init__.py": "ba5a64840dda1c904872ab83cc528fdad2f3fbd73aa9193c7e0a8140d5543d5c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_capacity/protocol.py": "3cefbbbe1a7e59eb782d89b2ff6bdda9ac1d342c46d96b37a3422ccdef660ba3",
+    "tools/action_predictor/priority_capacity/test_measurement.py": "f55f07acbd61f1884fddf3db8e3847e8d386ed414cf8dabff347e1d8cb5432b9",
+    "tools/action_predictor/priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "tools/action_predictor/priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_regularized/__init__.py": "44fcc7ed57e4ac8c57470c80a61e79cc9f4f343aece55d30b309d62fc6fe8af6",
+    "tools/action_predictor/priority_regularized/experiment.py": "c790232304c35836e164675cf8c2b1a10bc5370ababcec3ed476b5de773b9ca3",
+    "tools/action_predictor/priority_regularized/safety.py": "6b1bce4792e5c63c91d57be0842c0ca506f79e2157fac3ac491abe1fbdf56f6e",
+    "tools/action_predictor/priority_regularized/test_safety.py": "105cad703bd506f5bf999e56b5f417590bf4f429fba79bd2e8b2e27d8170e8da",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_verify.py": "e8a9165dd1c1fa9ca5e9508bde1c891f823df60f3557f0897858da43c191b616",
+    "tools/action_predictor/reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/rich_data.py": "1b1e974da140367ef4400c3b48c1a4d9a45510e30300e29663e401dec2551ccd",
+    "tools/action_predictor/targets.py": "80be59681b0ae233eecee9fec74ceffa1efb6047a7077f51a99bd09cab226ec2",
+    "tools/action_predictor/train.py": "a25e49f54af8c2d29ba236d543131cf1ffaba7225f2317be5f9986d7f381f6cf",
+    "tools/download_replays.py": "3d98260b04982915f5bd0d5ed99a0364d4b5e97471a4613e980527af3d242c83"
+  },
+  "inputs": {
+    "tools/action_predictor/experiments/v19/PC00-completion.json": "447166d435e37387133875f296eb567be5245c5926c42c11b75c96a60e3b900c",
+    "tools/action_predictor/experiments/v22/PC02-completion.json": "71345392889a4232197b471d51b1ecc0ce972af2507d975abb37a6e1ad644817",
+    "tools/action_predictor/experiments/v19/PC00-data-ready.json": "c9d05d1c904ac6fcbbeae2bb1c03e5609ef974dd21c9eca26cd4c1aa335e587d",
+    "tools/action_predictor/experiments/v19/PC00-plan.json": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+    ".cambc/action-predictor/v19/PC00-cohorts/fit.npz": "e4348e643f084c3838c7d60d779fc7ee14a56fea20c06266967453266815292e",
+    ".cambc/action-predictor/v19/PC00-cohorts/same_fit_groups.npz": "3b175a7094bc321a0f5fe720ea9af7214078941e213f954c71c283ff7586a978",
+    ".cambc/action-predictor/v19/PC00-cohorts/held_groups.npz": "759347e10040bb267b3635227399569405cb1775d8b20c4f5cc29e9a21a35418",
+    ".cambc/action-predictor/v21/PC01-cohort.npz": "49fe54283ce37961fff62ca6638235af2cb7898b83d04a70204b920f1c142f83",
+    "tools/action_predictor/experiments/v23/order-cache-ready.json": "8b101f2b4f92a753e38dddf41d5274cd86d72e49054ea73b929b0212af6ca8c2",
+    "tools/action_predictor/experiments/v23/order-asinh-plan.json": "f37a61cc9f97ccb26d6bc79e1f48b241471e0dda7baafe1e37cbaec719281837",
+    "tools/action_predictor/experiments/v23/order-asinh-ready.json": "5fb0dbdcc4ed91929d84e79a85b58f823f9d08b9085a862eb28462cbd39f2962",
+    "tools/action_predictor/experiments/v23/zero-control-plan.json": "e0a8b3d54a8e19612b459891ede876a6e1361cbc60b50b8454328ee949fa993b",
+    "tools/action_predictor/experiments/v23/zero-control-equivalence.json": "7396e1aff5d0f68abd862ca42f531eed8a27ca21a1c67e59cc66b1bd2a687bf4",
+    "tools\\action_predictor\\experiments\\v22\\PC02.json": "5c9c1f2ae9488168c25a2fb032a197a63dd061c5381614fde57ed672b811353e",
+    "tools/action_predictor/experiments/v8/P05.json": "113af18129514fe43df58c35721a50dfafb3ed3a3e07311b3b8a8be466348bce",
+    "tools/action_predictor/experiments/v8/priority-residual-modes-vocabulary.json": "1fd6470d9572ff92eae489616c8a92fbed0b65d22a61084e587ad1fb174d4147",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-0000.pt": "33cab545201067f08bfe5fd5635f42cd29d9ac45363705054c4f1dff8059863a",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0000-raw.npy": "809f9a390cfc20e7da59ba454b7013a1b5c54293aed42f9a27c41cb911dc3dd5",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0000-raw.npy": "276841fe98e5c309f0197cb2c609b440ebcae04fab2ced8ed12bab3a422c7264",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0000-raw.npy": "e806d5ad3040fbbba50bf2f6ea6447a80a08cde4ecb83fb99ffebc302fe6e2b2",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0000-raw.npy": "173910dd5a645acac4af1d8865b3188ad092da11b001660621bcb5c1e6aa3e79",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-0100.pt": "8ee3bb849fc418cce9cfbb97993a12e81d12165b51e1a8106138a5e9b7a7b9e8",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0100-raw.npy": "cd3168e4424e34156e8dba5e404566f44f7a8d1fdefb3679bfe126a86e9f72ac",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0100-raw.npy": "3644f36ee5f2644c453f6870d77c4986c73e657cd12483824334dbf92af0facc",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0100-raw.npy": "d125d8e8f2c89ceabf8cffc5c1803bb77be5a21b565b0c1a89dc1d57b8deb178",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0100-raw.npy": "788db7b5936245e8138e9039ba89ab3be668f052efe8b551f63e0636cda68f59",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-0500.pt": "a267c66ba0f762d69705817cdf1fe731cd7a3131214b036b58aa8663ddfa0e34",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-0500-raw.npy": "02580145c91bb605f5081cc4385cbfd212ba7f1e477fa1d94b98654a9dc42a38",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-0500-raw.npy": "9233752bb1032244ea7a2a3dd55726e38df304a06f05ab59e7c82f7061f160e4",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-0500-raw.npy": "112bed9e0809d4ec25909df034abc0f641b430d039fd0622ce33b3f63b45bc7d",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-0500-raw.npy": "39fc8cf2b180a31dad65478c2e05cbf6fe8a8f08837a3c238a8aa4366976fd3c",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-1000.pt": "836829e4420c96cb91acc28dcda8ab4b75bad2f3e2f4b55f8aa28042dc503b33",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-1000-raw.npy": "b88fd325b5779d9312b9ad21042813773aa9d1045b8c111f470c38f4826a3a62",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-1000-raw.npy": "bd5a15ee59e9502ec05a098c78dd345af4b6635a3fcbf0e9e86941e4cc89b541",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-1000-raw.npy": "a711f0a2c760f232315c6e09a6fa3936631a0b374c61be5a7a7e4819e19c4252",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-1000-raw.npy": "a2d5977808163e8306151509f852eb147e4c7a850a42e91053f032e0dbe498ca",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\step-2000.pt": "6f56a68fab2b477925193e805683b541432c2991dbc4dfd0ba5287fb99953e54",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\broad_fit-step-2000-raw.npy": "981b2215d892a78ffcb9d47777863070df5f0192779cdb753d3e43acdcdcfaf3",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\original_fit-step-2000-raw.npy": "7142339f3780979477d68902a0f085cc688492a43300cc0b187030798cfce203",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\same_fit_groups-step-2000-raw.npy": "6c413c0bd7ff8e1aedc1c738d01d4c3921cef908eb08acbb2f69047262bddcc8",
+    ".cambc\\action-predictor\\v22\\runs\\PC02\\held_groups-step-2000-raw.npy": "e7d15f8030dc2306142e99ca3b7d2634059e0805d81ec1c83de6c66e28fb0458",
+    ".cambc\\action-predictor\\v23\\control-contract\\after-contract-0000.pt": "8daec63dc7b5ab5055e945e0c7e1eb80733173a8b57ed1e3f6a3a65ee112fd9c",
+    ".cambc\\action-predictor\\v23\\control-contract\\after-contract-0100.pt": "fa74a4d1718ade8210a7ec2eb43ba88055826f1bb8300fd95818578ec9d6ccc9",
+    ".cambc\\action-predictor\\v23\\control-contract\\after-contract-0500.pt": "53f6aaf31045b70a3023c97cbfe5192c13c36843870b086634bb1116d6052141",
+    ".cambc\\action-predictor\\v23\\control-contract\\after-contract-1000.pt": "d2968bb01c65684c7c8102b32d2ed5085f471dbebfcea5a21855e248e51b2da3",
+    ".cambc\\action-predictor\\v23\\control-contract\\after-contract-2000.pt": "1cfd7cd9a2860177e9fd5f830678edca0f7c820f3d474ca3f66caa2b7f71a40a",
+    ".cambc\\action-predictor\\v23\\asinh-raw-features.npy": "15f56f98bc3dea78fffda02a74f0e72646fb0654ae9274041a3e7d757cdf6664",
+    ".cambc\\action-predictor\\v23\\asinh-features.npy": "8d03cfd2554176e7a25beff438b268001627ff7eaeeb4f5443fe3dcac1034821",
+    ".cambc\\action-predictor\\v23\\asinh-normalizer.npz": "78cbe40b241b897195a43c5e09e21e2441239ff9351ad99ad0460861eea9375d",
+    ".cambc\\action-predictor\\v23\\index.npy": "49a0d6f4d38653f96e579030c5a49fa36a0a0bd2712a4f74bd1e217e5d5fea48"
+  },
+  "trace": [
+    {
+      "step": 0,
+      "seconds": 0.0015645999810658395,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 1463,
+          "accuracy": 0.2489788972089857,
+          "mean_NLL": 3.0026838736027894,
+          "MAE": 164.8795098706603,
+          "mean_bounded_candidate_rank": 12.091558883594281,
+          "mean_marginalized_explanation_shares": [
+            0.6740709765050774,
+            0.32207605732745864,
+            0.0038529661674622157
+          ],
+          "mean_mode_probability": 0.18773540409119904
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 34,
+          "accuracy": 0.265625,
+          "mean_NLL": 2.8940585720620096,
+          "MAE": 114.2890625,
+          "mean_bounded_candidate_rank": 10.6015625,
+          "mean_marginalized_explanation_shares": [
+            0.6981129435692514,
+            0.30126745955650747,
+            0.000619596874240939
+          ],
+          "mean_mode_probability": 0.20647631119432147
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 25,
+          "accuracy": 0.1953125,
+          "mean_NLL": 3.1479222086554195,
+          "MAE": 175.4296875,
+          "mean_bounded_candidate_rank": 13.2578125,
+          "mean_marginalized_explanation_shares": [
+            0.715412977183899,
+            0.28373536066554295,
+            0.0008516621505582698
+          ],
+          "mean_mode_probability": 0.1914210523678349
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 28,
+          "accuracy": 0.21875,
+          "mean_NLL": 3.051520662793017,
+          "MAE": 174.59375,
+          "mean_bounded_candidate_rank": 14.6484375,
+          "mean_marginalized_explanation_shares": [
+            0.5905873536157957,
+            0.3976986399220827,
+            0.011714006462121403
+          ],
+          "mean_mode_probability": 0.17520604722673389
+        }
+      },
+      "penalty": 0.0
+    },
+    {
+      "step": 100,
+      "seconds": 7.964491299993824,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4023,
+          "accuracy": 0.6846494213750851,
+          "mean_NLL": 1.2859497189495888,
+          "MAE": 48.903335602450646,
+          "mean_bounded_candidate_rank": 2.274336283185841,
+          "mean_marginalized_explanation_shares": [
+            0.6557893296151435,
+            0.3433134651521837,
+            0.0008972052326736287
+          ],
+          "mean_mode_probability": 0.45293721593798836
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 83,
+          "accuracy": 0.6484375,
+          "mean_NLL": 1.3392102769727745,
+          "MAE": 48.3046875,
+          "mean_bounded_candidate_rank": 2.5859375,
+          "mean_marginalized_explanation_shares": [
+            0.6870361225211812,
+            0.3129538126534001,
+            1.006482541816435e-05
+          ],
+          "mean_mode_probability": 0.45541430959193596
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 4.108180913976,
+          "MAE": 197.6328125,
+          "mean_bounded_candidate_rank": 23.921875,
+          "mean_marginalized_explanation_shares": [
+            0.703878072185525,
+            0.29580688807889316,
+            0.0003150397355819977
+          ],
+          "mean_mode_probability": 0.33683664280505043
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 4.145438302862667,
+          "MAE": 190.21875,
+          "mean_bounded_candidate_rank": 27.1015625,
+          "mean_marginalized_explanation_shares": [
+            0.6089308676243848,
+            0.3880758800956861,
+            0.0029932522799291507
+          ],
+          "mean_mode_probability": 0.3372416301379262
+        }
+      },
+      "penalty": 0.049090588535973693
+    },
+    {
+      "step": 500,
+      "seconds": 38.10455589997582,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4765,
+          "accuracy": 0.8109257998638529,
+          "mean_NLL": 0.7516607779425036,
+          "MAE": 25.842409802586793,
+          "mean_bounded_candidate_rank": 1.5641592920353982,
+          "mean_marginalized_explanation_shares": [
+            0.6535642510886059,
+            0.3454049547716677,
+            0.001030794139728713
+          ],
+          "mean_mode_probability": 0.6423698343829443
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 103,
+          "accuracy": 0.8046875,
+          "mean_NLL": 0.8104505917107503,
+          "MAE": 20.5546875,
+          "mean_bounded_candidate_rank": 1.6953125,
+          "mean_marginalized_explanation_shares": [
+            0.6820928167827158,
+            0.31790699412985485,
+            1.8908742873182304e-07
+          ],
+          "mean_mode_probability": 0.6481348254501015
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 22,
+          "accuracy": 0.171875,
+          "mean_NLL": 5.3422067457379505,
+          "MAE": 214.125,
+          "mean_bounded_candidate_rank": 28.09375,
+          "mean_marginalized_explanation_shares": [
+            0.6929278829489194,
+            0.3069372117612884,
+            0.00013490528979223044
+          ],
+          "mean_mode_probability": 0.5180279228255209
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 5.36535337169221,
+          "MAE": 189.2109375,
+          "mean_bounded_candidate_rank": 32.5390625,
+          "mean_marginalized_explanation_shares": [
+            0.583753904507805,
+            0.4161484000393082,
+            9.769545288685464e-05
+          ],
+          "mean_mode_probability": 0.4911779123506826
+        }
+      },
+      "penalty": 0.1452233081237167
+    },
+    {
+      "step": 1000,
+      "seconds": 75.50070550001692,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4888,
+          "accuracy": 0.831858407079646,
+          "mean_NLL": 0.6722497648111158,
+          "MAE": 21.48144996596324,
+          "mean_bounded_candidate_rank": 1.4896187882913547,
+          "mean_marginalized_explanation_shares": [
+            0.6528640256204271,
+            0.3461128194822392,
+            0.001023154897331949
+          ],
+          "mean_mode_probability": 0.6770097487878155
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 108,
+          "accuracy": 0.84375,
+          "mean_NLL": 0.6931265389332975,
+          "MAE": 16.015625,
+          "mean_bounded_candidate_rank": 1.5703125,
+          "mean_marginalized_explanation_shares": [
+            0.6979516801375579,
+            0.302047724679749,
+            5.95182693569261e-07
+          ],
+          "mean_mode_probability": 0.6871445233167437
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 20,
+          "accuracy": 0.15625,
+          "mean_NLL": 5.8359104111000235,
+          "MAE": 197.546875,
+          "mean_bounded_candidate_rank": 31.7578125,
+          "mean_marginalized_explanation_shares": [
+            0.6905896204620282,
+            0.3093522119078355,
+            5.8167630136295635e-05
+          ],
+          "mean_mode_probability": 0.567288063540809
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 23,
+          "accuracy": 0.1796875,
+          "mean_NLL": 5.770079121249632,
+          "MAE": 179.8046875,
+          "mean_bounded_candidate_rank": 34.828125,
+          "mean_marginalized_explanation_shares": [
+            0.5760397970835165,
+            0.41623769775301755,
+            0.007722505163466156
+          ],
+          "mean_mode_probability": 0.5215648880049593
+        }
+      },
+      "penalty": 0.18456991287656063
+    },
+    {
+      "step": 2000,
+      "seconds": 150.23123979999218,
+      "cohorts": {
+        "broad_fit": {
+          "rows": 5876,
+          "exact": 4913,
+          "accuracy": 0.8361130020422056,
+          "mean_NLL": 0.65084300128149,
+          "MAE": 21.08219877467665,
+          "mean_bounded_candidate_rank": 1.4680054458815521,
+          "mean_marginalized_explanation_shares": [
+            0.6518375836808563,
+            0.3471267959531718,
+            0.0010356203659701313
+          ],
+          "mean_mode_probability": 0.684890535234063
+        },
+        "original_fit": {
+          "rows": 128,
+          "exact": 108,
+          "accuracy": 0.84375,
+          "mean_NLL": 0.6774473336372198,
+          "MAE": 11.421875,
+          "mean_bounded_candidate_rank": 1.515625,
+          "mean_marginalized_explanation_shares": [
+            0.6980923337135966,
+            0.3019076660767596,
+            2.0964320841042391e-10
+          ],
+          "mean_mode_probability": 0.6913036387988793
+        },
+        "same_fit_groups": {
+          "rows": 128,
+          "exact": 20,
+          "accuracy": 0.15625,
+          "mean_NLL": 5.988178000972194,
+          "MAE": 204.953125,
+          "mean_bounded_candidate_rank": 29.8671875,
+          "mean_marginalized_explanation_shares": [
+            0.6902918533152625,
+            0.3095413750347887,
+            0.00016677164994872103
+          ],
+          "mean_mode_probability": 0.5785181538959119
+        },
+        "held_groups": {
+          "rows": 128,
+          "exact": 22,
+          "accuracy": 0.171875,
+          "mean_NLL": 5.927402689562566,
+          "MAE": 175.59375,
+          "mean_bounded_candidate_rank": 37.3203125,
+          "mean_marginalized_explanation_shares": [
+            0.5724983548076189,
+            0.4275015790580627,
+            6.613431827857033e-08
+          ],
+          "mean_mode_probability": 0.5267029130216713
+        }
+      },
+      "penalty": 0.1961899898287374
+    }
+  ],
+  "numeric_mean_diagnostic": {
+    "broad_fit": {
+      "rows": 5876,
+      "exact": 3909,
+      "accuracy": 0.6652484683458135,
+      "mean_NLL": 1.1159336114836318,
+      "MAE": 75.66626957113682,
+      "mean_bounded_candidate_rank": 2.1923076923076925,
+      "mean_marginalized_explanation_shares": [
+        0.6492323923678938,
+        0.3499771164782595,
+        0.000790491153844153
+      ],
+      "mean_mode_probability": 0.5934804922166113
+    },
+    "original_fit": {
+      "rows": 128,
+      "exact": 82,
+      "accuracy": 0.640625,
+      "mean_NLL": 1.4029162501231032,
+      "MAE": 61.2109375,
+      "mean_bounded_candidate_rank": 3.4921875,
+      "mean_marginalized_explanation_shares": [
+        0.6974279549308029,
+        0.30257203651453896,
+        8.554657621868728e-09
+      ],
+      "mean_mode_probability": 0.5747316141068484
+    },
+    "same_fit_groups": {
+      "rows": 128,
+      "exact": 17,
+      "accuracy": 0.1328125,
+      "mean_NLL": 6.065533356553567,
+      "MAE": 197.5234375,
+      "mean_bounded_candidate_rank": 31.4921875,
+      "mean_marginalized_explanation_shares": [
+        0.6746944152404613,
+        0.3252701929679904,
+        3.539179154829758e-05
+      ],
+      "mean_mode_probability": 0.5397128651547659
+    },
+    "held_groups": {
+      "rows": 128,
+      "exact": 23,
+      "accuracy": 0.1796875,
+      "mean_NLL": 6.032378876918962,
+      "MAE": 196.9375,
+      "mean_bounded_candidate_rank": 41.5546875,
+      "mean_marginalized_explanation_shares": [
+        0.5795108119136818,
+        0.42048918210688274,
+        5.979435225898451e-09
+      ],
+      "mean_mode_probability": 0.5150662256802312
+    }
+  },
+  "numeric_mean_references": [
+    [
+      -0.05088614299893379,
+      0.06363021582365036,
+      0.007270940113812685,
+      0.15578100085258484,
+      0.014985294081270695,
+      0.16589771211147308
+    ],
+    [
+      -0.0652623400092125,
+      0.02227932959794998,
+      -0.021549208089709282,
+      0.1865827888250351,
+      0.01296752318739891,
+      0.12693913280963898
+    ],
+    [
+      0.17705363035202026,
+      0.2551492154598236,
+      0.2292303740978241,
+      0.15836407244205475,
+      0.008574085310101509,
+      0.4253232181072235
+    ],
+    [
+      0.16645018756389618,
+      0.24759609997272491,
+      0.2193707823753357,
+      0.162739098072052,
+      0.008574085310101509,
+      0.42002883553504944
+    ]
+  ],
+  "lambda_value": 3.029750319831723e-05,
+  "fixed_final_step": 2000,
+  "optimizer_updates": 2000,
+  "trainable_parameters": 247400,
+  "seconds": 151.08034220000263,
+  "gate": {
+    "broad_gain20": true,
+    "both_control_NLL_lower": false,
+    "both_control_exact_not_lower": false,
+    "some_control_gain5": false
+  },
+  "exploratory_gate_passed": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v23\\runs\\O01\\assessment-0000.json": "9eefc7bca779342fa5703d1f0f6337b14856b4652f69ff1c35a1e136e0e1288d",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\assessment-0100.json": "62c8c5e1ec4990285caf6be47b5cc1c04f6b541a037497e501fe964c52a74ee1",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\assessment-0500.json": "705f21c61ec459f3599a67d4f19a2b17ce10029985971ee90ef5b457a29d810c",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\assessment-1000.json": "e1735acb96c68ccfcf03d815c4d6e362661913070deeda893715f756aa9c96b0",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\assessment-2000.json": "709e07561ffba523807be3228cfbc0664dd3d22653ff87e69530c65861144cd3",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-numeric-means-step-2000-predictions.npz": "76bf934ac59d625dabb3beb586882d1d44e7b6b5cf9e726aca73c94e4b1c19e6",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-numeric-means-step-2000-raw.npy": "248e926c834bc33c409d3161e6ae46ed93d8e057f66c1bcf8fb9b193518027e4",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-0000-predictions.npz": "5d0d01bcf37289af054cd852421a9efacb025582e95bdd96d322e69ed472aa04",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-0000-raw.npy": "809f9a390cfc20e7da59ba454b7013a1b5c54293aed42f9a27c41cb911dc3dd5",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-0100-predictions.npz": "937b66c753118abbb39594a1be3ee8d34dd7a2921e6b7076bf2cb7c32dde0237",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-0100-raw.npy": "955b704b3cbb75abbdb6e807f4b496fd12e386ecb3a5b09a08fd4e6c0b395eef",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-0500-predictions.npz": "876be3623c7271a71dc099b93e1632851092c6445582b8056e0d0791cd0176be",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-0500-raw.npy": "0712aad340d44c6a223bc11af567816ee7a90b32297434580cddc53741648f20",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-1000-predictions.npz": "d400dbe61426cbf2637476ee4188e1335bfc9f71a2c07fba4143549943bd9275",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-1000-raw.npy": "1409cb13591fd7e67d8efeeef0b7ef9f469fb2e02c054ef5a7e98d9d04ea0b60",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-2000-predictions.npz": "d8c16b5464fd070f301eba6ebd029dd645fe91164480b285d27983307c1971d8",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\broad_fit-step-2000-raw.npy": "7382f1783daaefe06bcfef9ce34eb1cb28db8cb104e5870b801799ba8990ceb3",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-numeric-means-step-2000-predictions.npz": "710d1790b15a73020f97acc99c5782e80a0a5f79d54c8d48fcf8991423490147",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-numeric-means-step-2000-raw.npy": "5a4b1e022627ae81bd8664e0d636d814aff521bb9437d2c2edaef76cc8d3dc31",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-0000-predictions.npz": "92aa4ed0ad77f889661275f31f4d58fb73c85a22dc6c5b18f8b9d07239627f0c",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-0000-raw.npy": "173910dd5a645acac4af1d8865b3188ad092da11b001660621bcb5c1e6aa3e79",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-0100-predictions.npz": "474c10c3aba05e5c2f1ff4b52e12129e6c1c3cdb157fe54d910b19930d90751e",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-0100-raw.npy": "dbf5131e43affcf0ec8f16fe3146912bc330dd06bbdc1bbde4515ed8b0535a3c",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-0500-predictions.npz": "7d3470cc4e32f9cf930356e57bdf45e5aacdb48f52960a94335f5026f318c175",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-0500-raw.npy": "58138a2a00f6ce91b0b7aabd785c35e68a98ea717e2f512334842b5d796331e2",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-1000-predictions.npz": "c4a8bc7cd51370ecca522b1d621ead5daf42847c37b6244682501406feb2f750",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-1000-raw.npy": "75a467ed469dbf04d146e64c4633b6ac013bc69b4f50804efcbe0ac13ddd3576",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-2000-predictions.npz": "4ab8a507fb356a4c5b6f83e453ee6dbf679b732f0d939fc32e03bb1ea3732544",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\held_groups-step-2000-raw.npy": "5d8ae01717f6cb1ea8318dfe66bafe56a7ad62f6ba7c82d85c9c0dbf8ed2603b",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-numeric-means-step-2000-predictions.npz": "1da010b6687e0cd9f0331d4d516978bec65bbce7e82f2f2753630836cf882ab4",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-numeric-means-step-2000-raw.npy": "0655fd79197ec3211481664e61821bd6a7c640f534d78e9be8106357d4ac318b",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-0000-predictions.npz": "475c4a0ad1786f72ed51b131707ed4b854fd88f996dda737d60432cbae7ba337",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-0000-raw.npy": "276841fe98e5c309f0197cb2c609b440ebcae04fab2ced8ed12bab3a422c7264",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-0100-predictions.npz": "55e836cf464f700e32e610d064d37596290a683851b3351b35a05990f0bef6f2",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-0100-raw.npy": "d074f3c74750ff7604a1b354f70eafd6613fcf3c04f83c0dec3fdbad3ce7d6bf",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-0500-predictions.npz": "7c30265c41c266d2f50b3f8ceb9a61bba708eb8ca8c55c36b52f939c70c3862e",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-0500-raw.npy": "c2faad35f677c57ad2dca0c9f2d3fd35544b6484f0a45d64a41169bd04691f8d",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-1000-predictions.npz": "64a930578a367c28472ce5deb22ce7c2e1bfde1413191509f3a840223425335d",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-1000-raw.npy": "6a0bc179f13ae1baedf4c750c6dbd97e8b4dafe8903ed152708a54129777bf37",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-2000-predictions.npz": "aa12439685606c1aa8ab469561dd513760cce0add0b23617e638e8e6edb69f88",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\original_fit-step-2000-raw.npy": "b1198e183a93a3b36da872cd7507c83485eb9a7a5eb321d7a4451cd280cec73f",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-numeric-means-step-2000-predictions.npz": "5751276f824a6459aeae35f4fefc21b7eb765f5d2b34cf15697d303818f3bd4f",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-numeric-means-step-2000-raw.npy": "28150025be22847b8670f74a1ca480a41c495dea8649e2dcf693c3fd1beca9b1",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-0000-predictions.npz": "9eff2bb889ba3158e54dad4cf2ebf2e26869d5e26057cb3d90bcd2a0f632a303",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-0000-raw.npy": "e806d5ad3040fbbba50bf2f6ea6447a80a08cde4ecb83fb99ffebc302fe6e2b2",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-0100-predictions.npz": "6a35fcb823deabde98c501e678e6c15f3093bcfaeb0fedcc8a5587600366665b",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-0100-raw.npy": "5528c1235440201a309241d05fa41db591170179d306065bc4db22fc7f1ce9f0",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-0500-predictions.npz": "27452e3a2d807036293358287c9ce0b26ad86a74032147c86a569e5ea59404d6",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-0500-raw.npy": "227def668f723cf39d9ee1c3de18c02d9bffe46f3aac299ba497d57ce967ea52",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-1000-predictions.npz": "74bc3771306da9aa566910cbe09fadfeac99ec2d40491b35c8b3f8f991979546",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-1000-raw.npy": "50e7ad9c415cb38f5ea033725c1155a246ffd2fc6ca4bf96b03bab3999270162",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-2000-predictions.npz": "190c549cab81b6ba2ebd86cde6c413139bb3b5f2631ef96056edef439571fe5b",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\same_fit_groups-step-2000-raw.npy": "3b68ed8ecf86e18b600d5fd1057aae9ed2181744d5e801747e0308139d6d06e7",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\step-0000.pt": "7cf0a9dbc66436af29ca4d8c7f18db179439195b769e01a96277a24ad862b854",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\step-0100.pt": "476e64e91871a210276b3455d25bc2b263e36356b5a54d9ef36db4955b8bbab2",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\step-0500.pt": "751f2a26b1fe99032d98bd2254e699bf5fe458a285523446505c718c6ca0b09f",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\step-1000.pt": "8f03f29c1486d35ea91da9272063c31936603b33452fd3fa4f0ec771891e4cd6",
+    ".cambc\\action-predictor\\v23\\runs\\O01\\step-2000.pt": "07da2d06ea416574cdd0a5fc8ccf27f4a2e3e396b17c1d4239bfec3ec15b98b4"
+  },
+  "conditional_diagnostic_only": true,
+  "new_fits": 1,
+  "reserved_opened": 0,
+  "promoted": false,
+  "policy_replaced": false
+}

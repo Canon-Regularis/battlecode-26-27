@@ -1,0 +1,27 @@
+{
+  "scope": "Exact post-fit analysis/visual command accounting; historical entries preserved",
+  "commands": [
+    {
+      "argv": [
+        "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+        ".cambc\\report_priority_P05.py"
+      ],
+      "source_sha256": "1d72d12e5103aafcc0dacecd3c6aa0c1b4e8c5f62fc31047f99e10857a68adba"
+    },
+    {
+      "argv": [
+        "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+        ".cambc\\note_P05_tails.py"
+      ],
+      "source_sha256": "4fee845ef834215e6df49012b65581782889ac8a5ad4b4488d0a37d53fd7498d"
+    },
+    {
+      "argv": [
+        "F:\\Code\\battlecode-26-27\\.venv-action-predictor\\Scripts\\python.exe",
+        ".cambc\\chart_P05.py"
+      ],
+      "source_sha256": "3914a3aa0e11875b7b5c319c3aad28db870e833951192195abb17fe9ae0778ff"
+    }
+  ],
+  "note": "The first two analysis scripts accidentally placed source_sha256 metadata as a third argv element in their ledger entries; actual invocations had no third argument. This receipt records the exact executed commands, with hashes separated. Neither script consumes argv. Chart generation wrote all artifacts then failed cp1252 stdout encoding; valid preserved UTF8 HTML was subsequently loaded directly and previewed/rendered successfully. No refit or metric change occurred."
+}

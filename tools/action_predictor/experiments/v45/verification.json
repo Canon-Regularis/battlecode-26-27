@@ -1,0 +1,21 @@
+{
+  "result_sha256": "5e20f8bc5c7c880486ba2db5f5ae1c15e8d934ab97f67178d8eb76679643d5a4",
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\rare_code_verify.py": "195a603420296d00b60482d27add94427fa600780280b191e8de20714aa4ffdc",
+    "tools\\action_predictor\\behavior_segments\\rare_code_predictor.py": "1d9797933d5331246fbf1c04f6c79d50374b08c971dda7193bd3249ea6a1053f"
+  },
+  "exact_hidden_rows_per_scale": 2945,
+  "exact_selected_forecasts": {
+    "fit": 2945,
+    "evaluation": 699
+  },
+  "analytic_selection_and_weights_reproduced": true,
+  "changed_tensors": {
+    "memory.weight_ih": 3312,
+    "code.weight": 384,
+    "code.bias": 8
+  },
+  "streaming_code_predictions": 32,
+  "original_inputs_unchanged": true,
+  "optimizer_updates": 0
+}

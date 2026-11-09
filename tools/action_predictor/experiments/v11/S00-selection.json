@@ -1,0 +1,3311 @@
+{
+  "plan_sha256": "05a6439b64fb0c267fb81895e7c3fd37c8c7d36feb8bf1988f20402612eaa082",
+  "source_sha256": "06f7e06b583628dac4c370fb2964b78a3a85c2ba5249c0913b211cfa109c03b5",
+  "stats": {
+    "train": {
+      "A00": {
+        "all": {
+          "rows": 288801,
+          "available": 265110,
+          "correct": 239798,
+          "available_misses": 25312,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 15422,
+            "wrong_point_ranks_first_and_fallback_is_used": 9461,
+            "wrong_point_is_selected": 368,
+            "only_G00_correct_but_overridden": 61
+          },
+          "rescuable_G00_errors": 28903,
+          "rescues": 3814,
+          "capture_rate": 0.1319586202124347,
+          "correct_point_top_among_points_on_rescuable": 19236,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.4228130578994751,
+            "0.5": 0.8568520545959473,
+            "0.9": 0.9947583079338074
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.00017409090651199222,
+            "0.5": 0.06738821417093277,
+            "0.9": 0.5517641305923462
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.012600909918546677,
+            "0.5": 0.8824087977409363,
+            "0.9": 0.9998927712440491
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.21050454676151276,
+            "quantiles": {
+              "0.1": -0.49411246180534363,
+              "0.5": -0.18731310963630676,
+              "0.9": -0.001209020847454667
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.17017416656017303,
+            "quantiles": {
+              "0.1": -0.04074711725115776,
+              "0.5": 0.16670048236846924,
+              "0.9": 0.45044559240341187
+            }
+          },
+          "fallback_only_rows": 41662,
+          "fallback_only_mean_gradient": -0.07276597619056702,
+          "wrong_type_on_available_misses": 16185,
+          "correct_type_wrong_arguments_on_available_misses": 9127
+        },
+        "altar": {
+          "rows": 44,
+          "available": 39,
+          "correct": 34,
+          "available_misses": 5,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 5
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 44,
+          "fallback_only_mean_gradient": -0.22018833458423615,
+          "wrong_type_on_available_misses": 5,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "attack": {
+          "rows": 20108,
+          "available": 19848,
+          "correct": 18592,
+          "available_misses": 1256,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 585,
+            "wrong_point_ranks_first_and_fallback_is_used": 586,
+            "wrong_point_is_selected": 82,
+            "only_G00_correct_but_overridden": 3
+          },
+          "rescuable_G00_errors": 1631,
+          "rescues": 439,
+          "capture_rate": 0.2691600245248314,
+          "correct_point_top_among_points_on_rescuable": 1024,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.16480040550231934,
+            "0.5": 0.7661193609237671,
+            "0.9": 0.980832576751709
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.00027526955818757415,
+            "0.5": 0.10270354896783829,
+            "0.9": 0.7986322045326233
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.003772477386519313,
+            "0.5": 0.7591438293457031,
+            "0.9": 0.9971356987953186
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.18129773437976837,
+            "quantiles": {
+              "0.1": -0.4359055459499359,
+              "0.5": -0.1398392915725708,
+              "0.9": -0.0012621100759133697
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.1137576699256897,
+            "quantiles": {
+              "0.1": -0.08923637866973877,
+              "0.5": 0.09288451075553894,
+              "0.9": 0.359732985496521
+            }
+          },
+          "fallback_only_rows": 334,
+          "fallback_only_mean_gradient": -0.14817003905773163,
+          "wrong_type_on_available_misses": 795,
+          "correct_type_wrong_arguments_on_available_misses": 461
+        },
+        "blocked": {
+          "rows": 1906,
+          "available": 208,
+          "correct": 206,
+          "available_misses": 2,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 2
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 1906,
+          "fallback_only_mean_gradient": -0.14678098261356354,
+          "wrong_type_on_available_misses": 2,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cancel": {
+          "rows": 52935,
+          "available": 52935,
+          "correct": 52090,
+          "available_misses": 845,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 694,
+            "wrong_point_ranks_first_and_fallback_is_used": 150,
+            "wrong_point_is_selected": 1,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 874,
+          "rescues": 30,
+          "capture_rate": 0.034324942791762014,
+          "correct_point_top_among_points_on_rescuable": 724,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.8161683082580566,
+            "0.5": 0.9956192970275879,
+            "0.9": 0.9997612833976746
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 8.689783862791955e-05,
+            "0.5": 0.002982440870255232,
+            "0.9": 0.180838480591774
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.2548142671585083,
+            "0.5": 0.9076926708221436,
+            "0.9": 0.9953885674476624
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.08627147972583771,
+            "quantiles": {
+              "0.1": -0.303652286529541,
+              "0.5": -0.010136964730918407,
+              "0.9": -0.00021072267554700375
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.08387772738933563,
+            "quantiles": {
+              "0.1": -5.388259978644783e-06,
+              "0.5": 0.008404910564422607,
+              "0.9": 0.30054596066474915
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 845,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cast_0": {
+          "rows": 3894,
+          "available": 3773,
+          "correct": 3018,
+          "available_misses": 755,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 12,
+            "wrong_point_ranks_first_and_fallback_is_used": 700,
+            "wrong_point_is_selected": 43,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 739,
+          "rescues": 8,
+          "capture_rate": 0.010825439783491205,
+          "correct_point_top_among_points_on_rescuable": 20,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.6330624222755432,
+            "0.5": 0.9219151139259338,
+            "0.9": 0.988290548324585
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 8.757400564718409e-07,
+            "0.5": 8.111301212920807e-06,
+            "0.9": 0.00013584383123088628
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 5.567464995692717e-06,
+            "0.5": 0.00010338542779209092,
+            "0.9": 0.007132623344659805
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.01510910876095295,
+            "quantiles": {
+              "0.1": -0.0016868816455826163,
+              "0.5": -6.306057912297547e-05,
+              "0.9": -3.923688836948713e-06
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.1176520437002182,
+            "quantiles": {
+              "0.1": -0.3456864058971405,
+              "0.5": -0.06997531652450562,
+              "0.9": -0.006398928351700306
+            }
+          },
+          "fallback_only_rows": 169,
+          "fallback_only_mean_gradient": -0.05880439281463623,
+          "wrong_type_on_available_misses": 642,
+          "correct_type_wrong_arguments_on_available_misses": 113
+        },
+        "cast_1": {
+          "rows": 4794,
+          "available": 2501,
+          "correct": 2087,
+          "available_misses": 414,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 2,
+            "wrong_point_ranks_first_and_fallback_is_used": 373,
+            "wrong_point_is_selected": 29,
+            "only_G00_correct_but_overridden": 10
+          },
+          "rescuable_G00_errors": 387,
+          "rescues": 1,
+          "capture_rate": 0.002583979328165375,
+          "correct_point_top_among_points_on_rescuable": 3,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.630196213722229,
+            "0.5": 0.9088292717933655,
+            "0.9": 0.9912699460983276
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.1101333257101942e-06,
+            "0.5": 1.66972640727181e-05,
+            "0.9": 0.00018768219160847366
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 1.700240682112053e-05,
+            "0.5": 0.000210093567147851,
+            "0.9": 0.003532174276188016
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.007800073828548193,
+            "quantiles": {
+              "0.1": -0.0016505980165675282,
+              "0.5": -0.00010319756984245032,
+              "0.9": -5.4507518143509515e-06
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.13640615344047546,
+            "quantiles": {
+              "0.1": -0.3693615794181824,
+              "0.5": -0.08550304174423218,
+              "0.9": -0.007133889012038708
+            }
+          },
+          "fallback_only_rows": 3465,
+          "fallback_only_mean_gradient": -0.07007937878370285,
+          "wrong_type_on_available_misses": 357,
+          "correct_type_wrong_arguments_on_available_misses": 57
+        },
+        "end": {
+          "rows": 80256,
+          "available": 80256,
+          "correct": 78156,
+          "available_misses": 2100,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 761,
+            "wrong_point_ranks_first_and_fallback_is_used": 1336,
+            "wrong_point_is_selected": 3,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 2220,
+          "rescues": 121,
+          "capture_rate": 0.0545045045045045,
+          "correct_point_top_among_points_on_rescuable": 882,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.7828214764595032,
+            "0.5": 0.9951696395874023,
+            "0.9": 0.9997258186340332
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 2.337990008527413e-05,
+            "0.5": 0.0006566303200088441,
+            "0.9": 0.16028152406215668
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.01659335009753704,
+            "0.5": 0.2935187816619873,
+            "0.9": 0.9918642640113831
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.10932953655719757,
+            "quantiles": {
+              "0.1": -0.42849186062812805,
+              "0.5": -0.006306941155344248,
+              "0.9": -0.0001021895877784118
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.09751997888088226,
+            "quantiles": {
+              "0.1": -0.00689736008644104,
+              "0.5": 0.0026779472827911377,
+              "0.9": 0.4239715337753296
+            }
+          },
+          "fallback_only_rows": 6243,
+          "fallback_only_mean_gradient": 0.0,
+          "wrong_type_on_available_misses": 2100,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "move": {
+          "rows": 48286,
+          "available": 40254,
+          "correct": 29015,
+          "available_misses": 11239,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 5389,
+            "wrong_point_ranks_first_and_fallback_is_used": 5678,
+            "wrong_point_is_selected": 153,
+            "only_G00_correct_but_overridden": 19
+          },
+          "rescuable_G00_errors": 11936,
+          "rescues": 764,
+          "capture_rate": 0.06400804289544236,
+          "correct_point_top_among_points_on_rescuable": 6153,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5512815713882446,
+            "0.5": 0.9133709669113159,
+            "0.9": 0.9931044578552246
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.00042716198367998004,
+            "0.5": 0.019952021539211273,
+            "0.9": 0.34325265884399414
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.013873018324375153,
+            "0.5": 0.4688493609428406,
+            "0.9": 0.9757548570632935
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.2084628939628601,
+            "quantiles": {
+              "0.1": -0.5359532237052917,
+              "0.5": -0.13026298582553864,
+              "0.9": -0.003420045366510749
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.14691023528575897,
+            "quantiles": {
+              "0.1": -0.06407910585403442,
+              "0.5": 0.08066534996032715,
+              "0.9": 0.47239845991134644
+            }
+          },
+          "fallback_only_rows": 16336,
+          "fallback_only_mean_gradient": -0.060565415769815445,
+          "wrong_type_on_available_misses": 2762,
+          "correct_type_wrong_arguments_on_available_misses": 8477
+        },
+        "priority": {
+          "rows": 9815,
+          "available": 1729,
+          "correct": 1721,
+          "available_misses": 8,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 8
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 9815,
+          "fallback_only_mean_gradient": -0.09461861848831177,
+          "wrong_type_on_available_misses": 8,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "recall": {
+          "rows": 62903,
+          "available": 62903,
+          "correct": 54318,
+          "available_misses": 8585,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 7969,
+            "wrong_point_ranks_first_and_fallback_is_used": 561,
+            "wrong_point_is_selected": 55,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 11012,
+          "rescues": 2436,
+          "capture_rate": 0.22121322193970214,
+          "correct_point_top_among_points_on_rescuable": 10405,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.365383505821228,
+            "0.5": 0.6999157071113586,
+            "0.9": 0.953069806098938
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.03056488186120987,
+            "0.5": 0.2875506281852722,
+            "0.9": 0.6258125901222229
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.8990369439125061,
+            "0.5": 0.9995856285095215,
+            "0.9": 0.9999679923057556
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.26866304874420166,
+            "quantiles": {
+              "0.1": -0.47353777289390564,
+              "0.5": -0.24601741135120392,
+              "0.9": -0.08894193917512894
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.2574334740638733,
+            "quantiles": {
+              "0.1": 0.07734471559524536,
+              "0.5": 0.24248585104942322,
+              "0.9": 0.45786458253860474
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 8585,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "shop": {
+          "rows": 1204,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 1204,
+          "fallback_only_mean_gradient": -0.001111786812543869,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "submit": {
+          "rows": 435,
+          "available": 435,
+          "correct": 422,
+          "available_misses": 13,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 10,
+            "wrong_point_ranks_first_and_fallback_is_used": 3,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 28,
+          "rescues": 15,
+          "capture_rate": 0.5357142857142857,
+          "correct_point_top_among_points_on_rescuable": 25,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.027994565665721893,
+            "0.5": 0.4257219731807709,
+            "0.9": 0.8989934921264648
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.021784674376249313,
+            "0.5": 0.555893063545227,
+            "0.9": 0.9576727151870728
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.42382654547691345,
+            "0.5": 0.9468173980712891,
+            "0.9": 0.9987249374389648
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.19281639158725739,
+            "quantiles": {
+              "0.1": -0.3355681896209717,
+              "0.5": -0.19658735394477844,
+              "0.9": -0.006500609219074249
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.14012862741947174,
+            "quantiles": {
+              "0.1": -0.012711980380117893,
+              "0.5": 0.12198781222105026,
+              "0.9": 0.3025815784931183
+            }
+          },
+          "fallback_only_rows": 1,
+          "fallback_only_mean_gradient": -0.19450801610946655,
+          "wrong_type_on_available_misses": 13,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "teleport": {
+          "rows": 29,
+          "available": 11,
+          "correct": 11,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 29,
+          "fallback_only_mean_gradient": -0.04964381083846092,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "ward": {
+          "rows": 2192,
+          "available": 218,
+          "correct": 128,
+          "available_misses": 90,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 74,
+            "wrong_point_is_selected": 2,
+            "only_G00_correct_but_overridden": 14
+          },
+          "rescuable_G00_errors": 76,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5729708075523376,
+            "0.5": 0.8631333112716675,
+            "0.9": 0.9863462448120117
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 3.757565082196379e-06,
+            "0.5": 2.2962702132645063e-05,
+            "0.9": 0.0008555535459890962
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 2.8877038857899606e-05,
+            "0.5": 0.00018579883908387274,
+            "0.9": 0.01889563351869583
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.053809672594070435,
+            "quantiles": {
+              "0.1": -0.11125801503658295,
+              "0.5": -0.004970038775354624,
+              "0.9": -0.00028084078803658485
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.12323994189500809,
+            "quantiles": {
+              "0.1": -0.4226544499397278,
+              "0.5": -0.1285465955734253,
+              "0.9": 0.07376644015312195
+            }
+          },
+          "fallback_only_rows": 2116,
+          "fallback_only_mean_gradient": -0.2451891303062439,
+          "wrong_type_on_available_misses": 71,
+          "correct_type_wrong_arguments_on_available_misses": 19
+        }
+      },
+      "A01": {
+        "all": {
+          "rows": 288801,
+          "available": 265110,
+          "correct": 237757,
+          "available_misses": 27353,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 13125,
+            "wrong_point_ranks_first_and_fallback_is_used": 13317,
+            "wrong_point_is_selected": 811,
+            "only_G00_correct_but_overridden": 100
+          },
+          "rescuable_G00_errors": 28903,
+          "rescues": 1892,
+          "capture_rate": 0.06546033283742173,
+          "correct_point_top_among_points_on_rescuable": 15017,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.4872121214866638,
+            "0.5": 0.868661105632782,
+            "0.9": 0.9999771118164062
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 4.2242271902637185e-09,
+            "0.5": 0.024469662457704544,
+            "0.9": 0.42336905002593994
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.0001403758069500327,
+            "0.5": 0.4864053428173065,
+            "0.9": 0.9999998807907104
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.19948938488960266,
+            "quantiles": {
+              "0.1": -0.5105207562446594,
+              "0.5": -0.16176526248455048,
+              "0.9": -5.3540087918690915e-08
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.1281886249780655,
+            "quantiles": {
+              "0.1": -0.048712752759456635,
+              "0.5": 0.0671379566192627,
+              "0.9": 0.39979058504104614
+            }
+          },
+          "fallback_only_rows": 41662,
+          "fallback_only_mean_gradient": -0.08818987011909485,
+          "wrong_type_on_available_misses": 17799,
+          "correct_type_wrong_arguments_on_available_misses": 9554
+        },
+        "altar": {
+          "rows": 44,
+          "available": 39,
+          "correct": 37,
+          "available_misses": 2,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 2
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 44,
+          "fallback_only_mean_gradient": -0.1822897046804428,
+          "wrong_type_on_available_misses": 2,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "attack": {
+          "rows": 20108,
+          "available": 19848,
+          "correct": 18225,
+          "available_misses": 1623,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 97,
+            "wrong_point_ranks_first_and_fallback_is_used": 1445,
+            "wrong_point_is_selected": 80,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 1631,
+          "rescues": 65,
+          "capture_rate": 0.039852851011649294,
+          "correct_point_top_among_points_on_rescuable": 162,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5740324258804321,
+            "0.5": 0.9581673741340637,
+            "0.9": 0.9995953440666199
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.5435319937751046e-06,
+            "0.5": 9.185633825836703e-05,
+            "0.9": 0.06646417081356049
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.00019910401897504926,
+            "0.5": 0.009077706374228,
+            "0.9": 0.43770164251327515
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.045226242393255234,
+            "quantiles": {
+              "0.1": -0.17560651898384094,
+              "0.5": -0.0006792731583118439,
+              "0.9": -5.48781963516376e-06
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.04608771204948425,
+            "quantiles": {
+              "0.1": -0.2008984088897705,
+              "0.5": -0.013494610786437988,
+              "0.9": 0.033880412578582764
+            }
+          },
+          "fallback_only_rows": 334,
+          "fallback_only_mean_gradient": -0.10814360529184341,
+          "wrong_type_on_available_misses": 1050,
+          "correct_type_wrong_arguments_on_available_misses": 573
+        },
+        "blocked": {
+          "rows": 1906,
+          "available": 208,
+          "correct": 205,
+          "available_misses": 3,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 3
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 1906,
+          "fallback_only_mean_gradient": -0.11763610690832138,
+          "wrong_type_on_available_misses": 3,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cancel": {
+          "rows": 52935,
+          "available": 52935,
+          "correct": 52061,
+          "available_misses": 874,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 874,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 874,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.9997953772544861,
+            "0.5": 0.9999800324440002,
+            "0.9": 0.9999983310699463
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.215854195102395e-09,
+            "0.5": 2.4483133298502935e-09,
+            "0.9": 4.746214088413581e-09
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 1.4605785509047564e-05,
+            "0.5": 0.00011692061525536701,
+            "0.9": 0.0011668107472360134
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -2.210982898986913e-07,
+            "quantiles": {
+              "0.1": -4.028729350125104e-08,
+              "0.5": -7.311434124801508e-09,
+              "0.9": -2.273928156881766e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -9.436731488676742e-05,
+            "quantiles": {
+              "0.1": -0.00020456314086914062,
+              "0.5": -1.9848346710205078e-05,
+              "0.9": -1.6689300537109375e-06
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 874,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cast_0": {
+          "rows": 3894,
+          "available": 3773,
+          "correct": 3005,
+          "available_misses": 768,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 697,
+            "wrong_point_is_selected": 70,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 739,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5418582558631897,
+            "0.5": 0.8734384775161743,
+            "0.9": 0.9999929070472717
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 8.688884056695656e-10,
+            "0.5": 4.138421605404119e-09,
+            "0.9": 1.5843355072320264e-08
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 4.1242684822861975e-09,
+            "0.5": 7.178277883213013e-08,
+            "0.9": 0.0002244290808448568
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -3.668126282718731e-07,
+            "quantiles": {
+              "0.1": -4.3230576807218313e-07,
+              "0.5": -3.1826637325593765e-08,
+              "0.9": -3.89883680895764e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.17789910733699799,
+            "quantiles": {
+              "0.1": -0.45814162492752075,
+              "0.5": -0.12656152248382568,
+              "0.9": -7.104873475327622e-06
+            }
+          },
+          "fallback_only_rows": 169,
+          "fallback_only_mean_gradient": -0.050571683794260025,
+          "wrong_type_on_available_misses": 656,
+          "correct_type_wrong_arguments_on_available_misses": 112
+        },
+        "cast_1": {
+          "rows": 4794,
+          "available": 2501,
+          "correct": 2017,
+          "available_misses": 484,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 371,
+            "wrong_point_is_selected": 61,
+            "only_G00_correct_but_overridden": 52
+          },
+          "rescuable_G00_errors": 387,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5816310048103333,
+            "0.5": 0.8390118479728699,
+            "0.9": 0.9999399781227112
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.4960984673351163e-09,
+            "0.5": 6.147109932186368e-09,
+            "0.9": 5.907958211537334e-08
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 8.093437031675421e-09,
+            "0.5": 8.975104748287777e-08,
+            "0.9": 4.3104573705932125e-05
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -6.414484801098297e-07,
+            "quantiles": {
+              "0.1": -8.275891332232277e-07,
+              "0.5": -4.399447917080579e-08,
+              "0.9": -6.1147789054416535e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.19060727953910828,
+            "quantiles": {
+              "0.1": -0.418368935585022,
+              "0.5": -0.16098815202713013,
+              "0.9": -5.989074634271674e-05
+            }
+          },
+          "fallback_only_rows": 3465,
+          "fallback_only_mean_gradient": -0.13002705574035645,
+          "wrong_type_on_available_misses": 430,
+          "correct_type_wrong_arguments_on_available_misses": 54
+        },
+        "end": {
+          "rows": 80256,
+          "available": 80256,
+          "correct": 78036,
+          "available_misses": 2220,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 2220,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 2220,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.9995332360267639,
+            "0.5": 0.9999732375144958,
+            "0.9": 0.9999980926513672
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.2588421416381834e-09,
+            "0.5": 2.8177844502152993e-09,
+            "0.9": 7.189454809264362e-09
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 7.190054930106271e-06,
+            "0.5": 0.00011528813047334552,
+            "0.9": 0.001019586925394833
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -2.0907505415834748e-07,
+            "quantiles": {
+              "0.1": -3.1768342978466535e-07,
+              "0.5": -2.2191319004605248e-08,
+              "0.9": -3.4013241112518244e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.002109781140461564,
+            "quantiles": {
+              "0.1": -0.0004667401371989399,
+              "0.5": -2.6464462280273438e-05,
+              "0.9": -1.7881393432617188e-06
+            }
+          },
+          "fallback_only_rows": 6243,
+          "fallback_only_mean_gradient": 0.0,
+          "wrong_type_on_available_misses": 2220,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "move": {
+          "rows": 48286,
+          "available": 40254,
+          "correct": 28905,
+          "available_misses": 11349,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 4899,
+            "wrong_point_ranks_first_and_fallback_is_used": 5979,
+            "wrong_point_is_selected": 441,
+            "only_G00_correct_but_overridden": 30
+          },
+          "rescuable_G00_errors": 11936,
+          "rescues": 673,
+          "capture_rate": 0.05638404825737266,
+          "correct_point_top_among_points_on_rescuable": 5572,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.4494309723377228,
+            "0.5": 0.8178010582923889,
+            "0.9": 0.9936553835868835
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.0011268575908616185,
+            "0.5": 0.0369129478931427,
+            "0.9": 0.33181032538414
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.04077498987317085,
+            "0.5": 0.37375980615615845,
+            "0.9": 0.9214855432510376
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.2710617482662201,
+            "quantiles": {
+              "0.1": -0.5891513824462891,
+              "0.5": -0.23896203935146332,
+              "0.9": -0.008912529796361923
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.14426268637180328,
+            "quantiles": {
+              "0.1": -0.0657879114151001,
+              "0.5": 0.1167401373386383,
+              "0.9": 0.41501399874687195
+            }
+          },
+          "fallback_only_rows": 16336,
+          "fallback_only_mean_gradient": -0.10207965224981308,
+          "wrong_type_on_available_misses": 2554,
+          "correct_type_wrong_arguments_on_available_misses": 8795
+        },
+        "priority": {
+          "rows": 9815,
+          "available": 1729,
+          "correct": 1725,
+          "available_misses": 4,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 4
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 9815,
+          "fallback_only_mean_gradient": -0.086589016020298,
+          "wrong_type_on_available_misses": 4,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "recall": {
+          "rows": 62903,
+          "available": 62903,
+          "correct": 52978,
+          "available_misses": 9925,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 8123,
+            "wrong_point_ranks_first_and_fallback_is_used": 1646,
+            "wrong_point_is_selected": 156,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 11012,
+          "rescues": 1143,
+          "capture_rate": 0.10379585906284054,
+          "correct_point_top_among_points_on_rescuable": 9266,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.4799535572528839,
+            "0.5": 0.8034605979919434,
+            "0.9": 0.9999802112579346
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 4.133340098633198e-06,
+            "0.5": 0.17807772755622864,
+            "0.9": 0.49946099519729614
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.10337155312299728,
+            "0.5": 0.9999994039535522,
+            "0.9": 1.0000001192092896
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.22282075881958008,
+            "quantiles": {
+              "0.1": -0.4867590367794037,
+              "0.5": -0.2305222749710083,
+              "0.9": -1.1454938430688344e-05
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.20702503621578217,
+            "quantiles": {
+              "0.1": -7.921456926851533e-06,
+              "0.5": 0.22267881035804749,
+              "0.9": 0.4579782783985138
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 9925,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "shop": {
+          "rows": 1204,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 1204,
+          "fallback_only_mean_gradient": -0.0004086556436959654,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "submit": {
+          "rows": 435,
+          "available": 435,
+          "correct": 417,
+          "available_misses": 18,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 6,
+            "wrong_point_ranks_first_and_fallback_is_used": 11,
+            "wrong_point_is_selected": 1,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 28,
+          "rescues": 11,
+          "capture_rate": 0.39285714285714285,
+          "correct_point_top_among_points_on_rescuable": 17,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.08842416852712631,
+            "0.5": 0.7427247762680054,
+            "0.9": 0.9984836578369141
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.0006812532083131373,
+            "0.5": 0.014537664130330086,
+            "0.9": 0.857885479927063
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.025748105719685555,
+            "0.5": 0.7394801378250122,
+            "0.9": 0.9538127183914185
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.10645150393247604,
+            "quantiles": {
+              "0.1": -0.26692235469818115,
+              "0.5": -0.06003902852535248,
+              "0.9": -0.001372021622955799
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.019579095765948296,
+            "quantiles": {
+              "0.1": -0.2170695811510086,
+              "0.5": 0.03561210632324219,
+              "0.9": 0.19335901737213135
+            }
+          },
+          "fallback_only_rows": 1,
+          "fallback_only_mean_gradient": -0.49783170223236084,
+          "wrong_type_on_available_misses": 17,
+          "correct_type_wrong_arguments_on_available_misses": 1
+        },
+        "teleport": {
+          "rows": 29,
+          "available": 11,
+          "correct": 9,
+          "available_misses": 2,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 2
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 29,
+          "fallback_only_mean_gradient": -0.17589423060417175,
+          "wrong_type_on_available_misses": 2,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "ward": {
+          "rows": 2192,
+          "available": 218,
+          "correct": 137,
+          "available_misses": 81,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 74,
+            "wrong_point_is_selected": 2,
+            "only_G00_correct_but_overridden": 5
+          },
+          "rescuable_G00_errors": 76,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.576696515083313,
+            "0.5": 0.9384094476699829,
+            "0.9": 0.9999857544898987
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.7468273494358755e-09,
+            "0.5": 5.7113536122699315e-09,
+            "0.9": 7.498508125536318e-08
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 1.2021084572211294e-08,
+            "0.5": 2.0290900692998548e-07,
+            "0.9": 0.00014757507597096264
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -6.557082087965682e-06,
+            "quantiles": {
+              "0.1": -9.396786481374875e-06,
+              "0.5": -8.659002332933596e-07,
+              "0.9": -8.252387573293163e-08
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.15820705890655518,
+            "quantiles": {
+              "0.1": -0.42330223321914673,
+              "0.5": -0.0615864098072052,
+              "0.9": -1.3768672943115234e-05
+            }
+          },
+          "fallback_only_rows": 2116,
+          "fallback_only_mean_gradient": -0.199993297457695,
+          "wrong_type_on_available_misses": 62,
+          "correct_type_wrong_arguments_on_available_misses": 19
+        }
+      }
+    },
+    "validation": {
+      "A00": {
+        "all": {
+          "rows": 14439,
+          "available": 13138,
+          "correct": 11622,
+          "available_misses": 1516,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 886,
+            "wrong_point_ranks_first_and_fallback_is_used": 571,
+            "wrong_point_is_selected": 53,
+            "only_G00_correct_but_overridden": 6
+          },
+          "rescuable_G00_errors": 1628,
+          "rescues": 135,
+          "capture_rate": 0.08292383292383293,
+          "correct_point_top_among_points_on_rescuable": 1021,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.47592851519584656,
+            "0.5": 0.8917260766029358,
+            "0.9": 0.9956891536712646
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.00013695597590412945,
+            "0.5": 0.033571913838386536,
+            "0.9": 0.44924822449684143
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.0063005294650793076,
+            "0.5": 0.8144988417625427,
+            "0.9": 0.9998443126678467
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.20064929127693176,
+            "quantiles": {
+              "0.1": -0.4830451011657715,
+              "0.5": -0.16505306959152222,
+              "0.9": -0.0011795767350122333
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.146791011095047,
+            "quantiles": {
+              "0.1": -0.07325367629528046,
+              "0.5": 0.1284090280532837,
+              "0.9": 0.4330013692378998
+            }
+          },
+          "fallback_only_rows": 2128,
+          "fallback_only_mean_gradient": -0.09185010194778442,
+          "wrong_type_on_available_misses": 1000,
+          "correct_type_wrong_arguments_on_available_misses": 516
+        },
+        "altar": {
+          "rows": 2,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 2,
+          "fallback_only_mean_gradient": -0.3414580523967743,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "attack": {
+          "rows": 985,
+          "available": 972,
+          "correct": 881,
+          "available_misses": 91,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 38,
+            "wrong_point_ranks_first_and_fallback_is_used": 45,
+            "wrong_point_is_selected": 7,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 98,
+          "rescues": 13,
+          "capture_rate": 0.1326530612244898,
+          "correct_point_top_among_points_on_rescuable": 51,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.43497636914253235,
+            "0.5": 0.7946348190307617,
+            "0.9": 0.9785219430923462
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.00018310414452571422,
+            "0.5": 0.06094673275947571,
+            "0.9": 0.5272999405860901
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.003595788963139057,
+            "0.5": 0.4808383584022522,
+            "0.9": 0.9888558983802795
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.199815571308136,
+            "quantiles": {
+              "0.1": -0.44453734159469604,
+              "0.5": -0.14738786220550537,
+              "0.9": -0.0008648575749248266
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.11373472958803177,
+            "quantiles": {
+              "0.1": -0.10938123613595963,
+              "0.5": 0.09700274467468262,
+              "0.9": 0.4148517847061157
+            }
+          },
+          "fallback_only_rows": 15,
+          "fallback_only_mean_gradient": -0.33873528242111206,
+          "wrong_type_on_available_misses": 64,
+          "correct_type_wrong_arguments_on_available_misses": 27
+        },
+        "blocked": {
+          "rows": 110,
+          "available": 8,
+          "correct": 8,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 110,
+          "fallback_only_mean_gradient": -0.18807092308998108,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cancel": {
+          "rows": 2589,
+          "available": 2589,
+          "correct": 2535,
+          "available_misses": 54,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 37,
+            "wrong_point_ranks_first_and_fallback_is_used": 17,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 54,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 37,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.9608986973762512,
+            "0.5": 0.9955167770385742,
+            "0.9": 0.9992275834083557
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.00016227804007939994,
+            "0.5": 0.0016188784502446651,
+            "0.9": 0.03889984264969826
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.04697219282388687,
+            "0.5": 0.8121821880340576,
+            "0.9": 0.9842585325241089
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.06612884253263474,
+            "quantiles": {
+              "0.1": -0.287933886051178,
+              "0.5": -0.004498426336795092,
+              "0.9": -0.0005419620429165661
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.06424042582511902,
+            "quantiles": {
+              "0.1": -0.002152311848476529,
+              "0.5": 0.003017991781234741,
+              "0.9": 0.28654712438583374
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 54,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cast_0": {
+          "rows": 213,
+          "available": 206,
+          "correct": 152,
+          "available_misses": 54,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 46,
+            "wrong_point_is_selected": 8,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 52,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5006481409072876,
+            "0.5": 0.929943859577179,
+            "0.9": 0.9908928275108337
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 7.185453227975813e-07,
+            "0.5": 6.638850663875928e-06,
+            "0.9": 8.885355055099353e-05
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 2.1133425889274804e-06,
+            "0.5": 0.00010922853834927082,
+            "0.9": 0.004315993282943964
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.010686608031392097,
+            "quantiles": {
+              "0.1": -0.016207728534936905,
+              "0.5": -6.54851901344955e-05,
+              "0.9": -3.682233455037931e-06
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.1568485051393509,
+            "quantiles": {
+              "0.1": -0.49919483065605164,
+              "0.5": -0.061118900775909424,
+              "0.9": -0.006284856703132391
+            }
+          },
+          "fallback_only_rows": 11,
+          "fallback_only_mean_gradient": -0.026677196845412254,
+          "wrong_type_on_available_misses": 46,
+          "correct_type_wrong_arguments_on_available_misses": 8
+        },
+        "cast_1": {
+          "rows": 243,
+          "available": 125,
+          "correct": 92,
+          "available_misses": 33,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 28,
+            "wrong_point_is_selected": 4,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 30,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.6845457553863525,
+            "0.5": 0.9434177875518799,
+            "0.9": 0.9828221797943115
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.1245332416365272e-06,
+            "0.5": 2.1980644305585884e-05,
+            "0.9": 0.0003028968640137464
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 1.053804317052709e-05,
+            "0.5": 0.0005031252512708306,
+            "0.9": 0.004868756514042616
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.001555312192067504,
+            "quantiles": {
+              "0.1": -0.003194518620148301,
+              "0.5": -0.00012070255615981296,
+              "0.9": -6.03877606408787e-06
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.1404307782649994,
+            "quantiles": {
+              "0.1": -0.31534895300865173,
+              "0.5": -0.05522003769874573,
+              "0.9": -0.01216084323823452
+            }
+          },
+          "fallback_only_rows": 174,
+          "fallback_only_mean_gradient": -0.09277039766311646,
+          "wrong_type_on_available_misses": 29,
+          "correct_type_wrong_arguments_on_available_misses": 4
+        },
+        "end": {
+          "rows": 4096,
+          "available": 4096,
+          "correct": 3959,
+          "available_misses": 137,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 53,
+            "wrong_point_ranks_first_and_fallback_is_used": 83,
+            "wrong_point_is_selected": 1,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 139,
+          "rescues": 2,
+          "capture_rate": 0.014388489208633094,
+          "correct_point_top_among_points_on_rescuable": 55,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.9237531423568726,
+            "0.5": 0.9973467588424683,
+            "0.9": 0.9997313618659973
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 2.097807009704411e-05,
+            "0.5": 0.0006504027405753732,
+            "0.9": 0.019226185977458954
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.021909119561314583,
+            "0.5": 0.2278907299041748,
+            "0.9": 0.9594642519950867
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.07749945670366287,
+            "quantiles": {
+              "0.1": -0.2086734175682068,
+              "0.5": -0.004198736511170864,
+              "0.9": -7.598265801789239e-05
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.06008635461330414,
+            "quantiles": {
+              "0.1": -0.008265423588454723,
+              "0.5": 0.0006841421127319336,
+              "0.9": 0.18856801092624664
+            }
+          },
+          "fallback_only_rows": 319,
+          "fallback_only_mean_gradient": 0.0,
+          "wrong_type_on_available_misses": 137,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "move": {
+          "rows": 2362,
+          "available": 1953,
+          "correct": 1330,
+          "available_misses": 623,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 281,
+            "wrong_point_ranks_first_and_fallback_is_used": 318,
+            "wrong_point_is_selected": 24,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 635,
+          "rescues": 18,
+          "capture_rate": 0.028346456692913385,
+          "correct_point_top_among_points_on_rescuable": 299,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.6033907532691956,
+            "0.5": 0.9185991287231445,
+            "0.9": 0.9929542541503906
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.0005079222028143704,
+            "0.5": 0.013350585475564003,
+            "0.9": 0.19394750893115997
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.008156449533998966,
+            "0.5": 0.3377430737018585,
+            "0.9": 0.9551147818565369
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.1908245086669922,
+            "quantiles": {
+              "0.1": -0.5081700682640076,
+              "0.5": -0.11676312983036041,
+              "0.9": -0.00446206983178854
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.10675986111164093,
+            "quantiles": {
+              "0.1": -0.13144323229789734,
+              "0.5": 0.05389028787612915,
+              "0.9": 0.41490817070007324
+            }
+          },
+          "fallback_only_rows": 769,
+          "fallback_only_mean_gradient": -0.0695221945643425,
+          "wrong_type_on_available_misses": 148,
+          "correct_type_wrong_arguments_on_available_misses": 475
+        },
+        "priority": {
+          "rows": 576,
+          "available": 71,
+          "correct": 69,
+          "available_misses": 2,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 2
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 576,
+          "fallback_only_mean_gradient": -0.11979767680168152,
+          "wrong_type_on_available_misses": 2,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "recall": {
+          "rows": 3084,
+          "available": 3084,
+          "correct": 2570,
+          "available_misses": 514,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 477,
+            "wrong_point_ranks_first_and_fallback_is_used": 28,
+            "wrong_point_is_selected": 9,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 612,
+          "rescues": 100,
+          "capture_rate": 0.16339869281045752,
+          "correct_point_top_among_points_on_rescuable": 577,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.4014100432395935,
+            "0.5": 0.7632700800895691,
+            "0.9": 0.9727376103401184
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.018714111298322678,
+            "0.5": 0.22227934002876282,
+            "0.9": 0.5779588222503662
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.9070136547088623,
+            "0.5": 0.9994815587997437,
+            "0.9": 0.9999594688415527
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.2774251699447632,
+            "quantiles": {
+              "0.1": -0.5054556131362915,
+              "0.5": -0.2511862516403198,
+              "0.9": -0.07481905817985535
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.2620755732059479,
+            "quantiles": {
+              "0.1": 0.05977579951286316,
+              "0.5": 0.24865207076072693,
+              "0.9": 0.4835274815559387
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 514,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "shop": {
+          "rows": 43,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 43,
+          "fallback_only_mean_gradient": -0.0009828888578340411,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "submit": {
+          "rows": 22,
+          "available": 22,
+          "correct": 21,
+          "available_misses": 1,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 1,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 3,
+          "rescues": 2,
+          "capture_rate": 0.6666666666666666,
+          "correct_point_top_among_points_on_rescuable": 2,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.07576937228441238,
+            "0.5": 0.18438279628753662,
+            "0.9": 0.7705307006835938
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.1910986602306366,
+            "0.5": 0.8009958267211914,
+            "0.9": 0.8998064398765564
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.5669373869895935,
+            "0.5": 0.9717518091201782,
+            "0.9": 0.9800089597702026
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.24881203472614288,
+            "quantiles": {
+              "0.1": -0.49723756313323975,
+              "0.5": -0.09899276494979858,
+              "0.9": -0.06031421571969986
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.22021065652370453,
+            "quantiles": {
+              "0.1": 0.03589004650712013,
+              "0.5": 0.084371417760849,
+              "0.9": 0.4588669538497925
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 1,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "teleport": {
+          "rows": 2,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 2,
+          "fallback_only_mean_gradient": -0.0019600391387939453,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "ward": {
+          "rows": 112,
+          "available": 12,
+          "correct": 5,
+          "available_misses": 7,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 5,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 2
+          },
+          "rescuable_G00_errors": 5,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.7035878896713257,
+            "0.5": 0.7396770715713501,
+            "0.9": 0.9758214950561523
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 4.685565363615751e-05,
+            "0.5": 0.00015445907774847,
+            "0.9": 0.0026419698260724545
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.00017045543063431978,
+            "0.5": 0.004045790061354637,
+            "0.9": 0.0142982117831707
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.08503489196300507,
+            "quantiles": {
+              "0.1": -0.22734344005584717,
+              "0.5": -0.012533002533018589,
+              "0.9": -0.006008578930050135
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.0931171402335167,
+            "quantiles": {
+              "0.1": -0.288532018661499,
+              "0.5": -0.006711006164550781,
+              "0.9": 0.0585169792175293
+            }
+          },
+          "fallback_only_rows": 107,
+          "fallback_only_mean_gradient": -0.28091177344322205,
+          "wrong_type_on_available_misses": 5,
+          "correct_type_wrong_arguments_on_available_misses": 2
+        }
+      },
+      "A01": {
+        "all": {
+          "rows": 14439,
+          "available": 13138,
+          "correct": 11568,
+          "available_misses": 1570,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 759,
+            "wrong_point_ranks_first_and_fallback_is_used": 771,
+            "wrong_point_is_selected": 36,
+            "only_G00_correct_but_overridden": 4
+          },
+          "rescuable_G00_errors": 1628,
+          "rescues": 69,
+          "capture_rate": 0.04238329238329238,
+          "correct_point_top_among_points_on_rescuable": 828,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5207793116569519,
+            "0.5": 0.88958740234375,
+            "0.9": 0.9999812841415405
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 3.6293588134839183e-09,
+            "0.5": 0.015791473910212517,
+            "0.9": 0.37174925208091736
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 7.751723751425743e-05,
+            "0.5": 0.44409358501434326,
+            "0.9": 0.9999999403953552
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.19246765971183777,
+            "quantiles": {
+              "0.1": -0.5140841007232666,
+              "0.5": -0.1205524355173111,
+              "0.9": -3.574356099989018e-08
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.12249475717544556,
+            "quantiles": {
+              "0.1": -0.05068179965019226,
+              "0.5": 0.04488089680671692,
+              "0.9": 0.4127231538295746
+            }
+          },
+          "fallback_only_rows": 2128,
+          "fallback_only_mean_gradient": -0.09603116661310196,
+          "wrong_type_on_available_misses": 1050,
+          "correct_type_wrong_arguments_on_available_misses": 520
+        },
+        "altar": {
+          "rows": 2,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 2,
+          "fallback_only_mean_gradient": -0.4503244161605835,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "attack": {
+          "rows": 985,
+          "available": 972,
+          "correct": 872,
+          "available_misses": 100,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 6,
+            "wrong_point_ranks_first_and_fallback_is_used": 86,
+            "wrong_point_is_selected": 7,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 98,
+          "rescues": 3,
+          "capture_rate": 0.030612244897959183,
+          "correct_point_top_among_points_on_rescuable": 9,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5915231108665466,
+            "0.5": 0.9535746574401855,
+            "0.9": 0.9995874762535095
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.377876856167859e-06,
+            "0.5": 3.117545566055924e-05,
+            "0.9": 0.06496131420135498
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 8.77270576893352e-05,
+            "0.5": 0.004094553180038929,
+            "0.9": 0.41869857907295227
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.040061261504888535,
+            "quantiles": {
+              "0.1": -0.11635622382164001,
+              "0.5": -0.00021902166190557182,
+              "0.9": -4.820979938813252e-06
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.05707072094082832,
+            "quantiles": {
+              "0.1": -0.24296116828918457,
+              "0.5": -0.013238400220870972,
+              "0.9": 0.053552258759737015
+            }
+          },
+          "fallback_only_rows": 15,
+          "fallback_only_mean_gradient": -0.21132203936576843,
+          "wrong_type_on_available_misses": 71,
+          "correct_type_wrong_arguments_on_available_misses": 29
+        },
+        "blocked": {
+          "rows": 110,
+          "available": 8,
+          "correct": 8,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 110,
+          "fallback_only_mean_gradient": -0.1631479114294052,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cancel": {
+          "rows": 2589,
+          "available": 2589,
+          "correct": 2535,
+          "available_misses": 54,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 54,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 54,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.9998011589050293,
+            "0.5": 0.9999911785125732,
+            "0.9": 0.9999973773956299
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 4.708763934324622e-10,
+            "0.5": 1.6718505468915623e-09,
+            "0.9": 5.046310480594229e-09
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 2.0966064766980708e-05,
+            "0.5": 0.00014690356329083443,
+            "0.9": 0.0006448053172789514
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -1.5803909292344542e-08,
+            "quantiles": {
+              "0.1": -4.4748279748318964e-08,
+              "0.5": -6.027892851534489e-09,
+              "0.9": -1.781107594744924e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -5.670057362294756e-05,
+            "quantiles": {
+              "0.1": -0.0001988589792745188,
+              "0.5": -8.821487426757812e-06,
+              "0.9": -2.580881073299679e-06
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 54,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "cast_0": {
+          "rows": 213,
+          "available": 206,
+          "correct": 153,
+          "available_misses": 53,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 47,
+            "wrong_point_is_selected": 6,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 52,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.47933974862098694,
+            "0.5": 0.939460277557373,
+            "0.9": 0.9999961256980896
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 6.956774045718817e-10,
+            "0.5": 2.978621793658931e-09,
+            "0.9": 1.2002124627485955e-08
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 2.846361146779941e-09,
+            "0.5": 8.122515282593668e-08,
+            "0.9": 0.0002578850253485143
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -2.4492803731845925e-06,
+            "quantiles": {
+              "0.1": -4.794493406734546e-07,
+              "0.5": -3.2206727951233916e-08,
+              "0.9": -3.912923318694084e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.18396982550621033,
+            "quantiles": {
+              "0.1": -0.5206319689750671,
+              "0.5": -0.06053966283798218,
+              "0.9": -3.886222657456528e-06
+            }
+          },
+          "fallback_only_rows": 11,
+          "fallback_only_mean_gradient": -0.033616743981838226,
+          "wrong_type_on_available_misses": 46,
+          "correct_type_wrong_arguments_on_available_misses": 7
+        },
+        "cast_1": {
+          "rows": 243,
+          "available": 125,
+          "correct": 94,
+          "available_misses": 31,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 29,
+            "wrong_point_is_selected": 1,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 30,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5664651989936829,
+            "0.5": 0.7736796140670776,
+            "0.9": 0.9734487533569336
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 3.044226648540871e-09,
+            "0.5": 1.3785939501076427e-08,
+            "0.9": 7.464827689318554e-08
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 1.9856660316008856e-08,
+            "0.5": 8.981800192486844e-08,
+            "0.9": 2.1973669390717987e-06
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -5.104317892801191e-07,
+            "quantiles": {
+              "0.1": -1.5619039004377555e-06,
+              "0.5": -1.656004542383016e-07,
+              "0.9": -1.0105345893407502e-08
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.24998688697814941,
+            "quantiles": {
+              "0.1": -0.43353378772735596,
+              "0.5": -0.22632020711898804,
+              "0.9": -0.026551079005002975
+            }
+          },
+          "fallback_only_rows": 174,
+          "fallback_only_mean_gradient": -0.13018427789211273,
+          "wrong_type_on_available_misses": 27,
+          "correct_type_wrong_arguments_on_available_misses": 4
+        },
+        "end": {
+          "rows": 4096,
+          "available": 4096,
+          "correct": 3957,
+          "available_misses": 139,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 139,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 139,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.99951171875,
+            "0.5": 0.9999678134918213,
+            "0.9": 0.9999982118606567
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 1.26636801045521e-09,
+            "0.5": 3.086159994225568e-09,
+            "0.9": 6.455268763971844e-09
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 6.377284535119543e-06,
+            "0.5": 9.666987898526713e-05,
+            "0.9": 0.0010950332507491112
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -2.1457351806475344e-07,
+            "quantiles": {
+              "0.1": -4.1158310182254354e-07,
+              "0.5": -2.0619907559193962e-08,
+              "0.9": -3.5174831936046758e-09
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.0005926283774897456,
+            "quantiles": {
+              "0.1": -0.00048826931742951274,
+              "0.5": -3.212690353393555e-05,
+              "0.9": -1.7404556729161413e-06
+            }
+          },
+          "fallback_only_rows": 319,
+          "fallback_only_mean_gradient": 0.0,
+          "wrong_type_on_available_misses": 139,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "move": {
+          "rows": 2362,
+          "available": 1953,
+          "correct": 1337,
+          "available_misses": 616,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 264,
+            "wrong_point_ranks_first_and_fallback_is_used": 334,
+            "wrong_point_is_selected": 17,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 635,
+          "rescues": 21,
+          "capture_rate": 0.03307086614173228,
+          "correct_point_top_among_points_on_rescuable": 285,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.49259260296821594,
+            "0.5": 0.8490699529647827,
+            "0.9": 0.9942824244499207
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.0012334161438047886,
+            "0.5": 0.027291035279631615,
+            "0.9": 0.2569155991077423
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.04192144051194191,
+            "0.5": 0.324698269367218,
+            "0.9": 0.9121756553649902
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.26205092668533325,
+            "quantiles": {
+              "0.1": -0.5558645725250244,
+              "0.5": -0.22858257591724396,
+              "0.9": -0.014560324139893055
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.13831515610218048,
+            "quantiles": {
+              "0.1": -0.06586188077926636,
+              "0.5": 0.09647122025489807,
+              "0.9": 0.43464356660842896
+            }
+          },
+          "fallback_only_rows": 769,
+          "fallback_only_mean_gradient": -0.10560840368270874,
+          "wrong_type_on_available_misses": 138,
+          "correct_type_wrong_arguments_on_available_misses": 478
+        },
+        "priority": {
+          "rows": 576,
+          "available": 71,
+          "correct": 71,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 576,
+          "fallback_only_mean_gradient": -0.09654488414525986,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "recall": {
+          "rows": 3084,
+          "available": 3084,
+          "correct": 2514,
+          "available_misses": 570,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 488,
+            "wrong_point_ranks_first_and_fallback_is_used": 77,
+            "wrong_point_is_selected": 5,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 612,
+          "rescues": 43,
+          "capture_rate": 0.07026143790849673,
+          "correct_point_top_among_points_on_rescuable": 531,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5173240303993225,
+            "0.5": 0.8416652679443359,
+            "0.9": 0.9999719262123108
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 5.697421329386998e-06,
+            "0.5": 0.14200517535209656,
+            "0.9": 0.4636106491088867
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.22590136528015137,
+            "0.5": 0.9999995827674866,
+            "0.9": 1.0000007152557373
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.23206758499145508,
+            "quantiles": {
+              "0.1": -0.5409104824066162,
+              "0.5": -0.23654091358184814,
+              "0.9": -2.362258601351641e-05
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.21977470815181732,
+            "quantiles": {
+              "0.1": 1.3291835330164758e-06,
+              "0.5": 0.22838453948497772,
+              "0.9": 0.504170298576355
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 570,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "shop": {
+          "rows": 43,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 43,
+          "fallback_only_mean_gradient": -0.0021417501848191023,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "submit": {
+          "rows": 22,
+          "available": 22,
+          "correct": 21,
+          "available_misses": 1,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 1,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 3,
+          "rescues": 2,
+          "capture_rate": 0.6666666666666666,
+          "correct_point_top_among_points_on_rescuable": 3,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.31572145223617554,
+            "0.5": 0.38225412368774414,
+            "0.9": 0.5219025611877441
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 0.40640807151794434,
+            "0.5": 0.548163890838623,
+            "0.9": 0.6068627834320068
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 0.8469926714897156,
+            "0.5": 0.8867557644844055,
+            "0.9": 0.8872403502464294
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -0.32779955863952637,
+            "quantiles": {
+              "0.1": -0.5152198672294617,
+              "0.5": -0.1999814510345459,
+              "0.9": -0.19150647521018982
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": 0.25407543778419495,
+            "quantiles": {
+              "0.1": 0.11409071832895279,
+              "0.5": 0.13039946556091309,
+              "0.9": 0.44353049993515015
+            }
+          },
+          "fallback_only_rows": 0,
+          "fallback_only_mean_gradient": null,
+          "wrong_type_on_available_misses": 1,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "teleport": {
+          "rows": 2,
+          "available": 0,
+          "correct": 0,
+          "available_misses": 0,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 0,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 0
+          },
+          "rescuable_G00_errors": 0,
+          "rescues": 0,
+          "capture_rate": null,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": null,
+          "correct_group_weight_on_rescuable": null,
+          "correct_group_probability_given_point_branch": null,
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": null,
+            "quantiles": null
+          },
+          "fallback_only_rows": 2,
+          "fallback_only_mean_gradient": -0.00023472309112548828,
+          "wrong_type_on_available_misses": 0,
+          "correct_type_wrong_arguments_on_available_misses": 0
+        },
+        "ward": {
+          "rows": 112,
+          "available": 12,
+          "correct": 6,
+          "available_misses": 6,
+          "miss_partition": {
+            "correct_point_is_top_point_but_fallback_vetoes": 0,
+            "wrong_point_ranks_first_and_fallback_is_used": 5,
+            "wrong_point_is_selected": 0,
+            "only_G00_correct_but_overridden": 1
+          },
+          "rescuable_G00_errors": 5,
+          "rescues": 0,
+          "capture_rate": 0.0,
+          "correct_point_top_among_points_on_rescuable": 0,
+          "fallback_weight_on_rescuable": {
+            "0.1": 0.5528250932693481,
+            "0.5": 0.9737879037857056,
+            "0.9": 0.9924089312553406
+          },
+          "correct_group_weight_on_rescuable": {
+            "0.1": 2.8278988040142394e-09,
+            "0.5": 6.314141209884383e-09,
+            "0.9": 1.8531234502461302e-07
+          },
+          "correct_group_probability_given_point_branch": {
+            "0.1": 1.3993000891332485e-07,
+            "0.5": 5.917389103160531e-07,
+            "0.9": 0.003930289298295975
+          },
+          "correct_group_logit_gradient_on_rescuable": {
+            "mean": -1.2150527254561894e-05,
+            "quantiles": {
+              "0.1": -3.41411359841004e-05,
+              "0.5": -1.4616845191994798e-06,
+              "0.9": -4.49680811698272e-07
+            }
+          },
+          "fallback_logit_gradient_on_rescuable": {
+            "mean": -0.18572229146957397,
+            "quantiles": {
+              "0.1": -0.4471416771411896,
+              "0.5": -0.026207804679870605,
+              "0.9": -0.007590568158775568
+            }
+          },
+          "fallback_only_rows": 107,
+          "fallback_only_mean_gradient": -0.20934997498989105,
+          "wrong_type_on_available_misses": 4,
+          "correct_type_wrong_arguments_on_available_misses": 2
+        }
+      }
+    },
+    "decoder": {
+      "available_misses": 1516,
+      "correct_command_higher_mixture_probability_than_chosen": 571,
+      "fixed_D00_fixes_A00_errors": 542,
+      "fixed_D00_regresses_A00_correct": 125,
+      "fixed_D00_fixes_available_misses": 542,
+      "fixed_D00_remaining_available_misses": 1099,
+      "meaning": "D00isfixednonfittingboundedobservedrepresentationdecoder,notglobalMAPorcompletepurchaseprobability. Strictshopsstillfail. Nochoosingnewdecoderfromthisstudy."
+    }
+  },
+  "epoch_trace": [
+    {
+      "epoch": 1,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6686,
+          "rescuable": 828,
+          "rescues": 0,
+          "capture": 0.0,
+          "nll": 0.5711330322391004,
+          "fallback_rows": 8183
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11512,
+          "rescuable": 1628,
+          "rescues": 3,
+          "capture": 0.0018427518427518428,
+          "nll": 0.6940122454382908,
+          "fallback_rows": 14420
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6687,
+          "rescuable": 828,
+          "rescues": 1,
+          "capture": 0.0012077294685990338,
+          "nll": 0.5655987508399746,
+          "fallback_rows": 8167
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11519,
+          "rescuable": 1628,
+          "rescues": 9,
+          "capture": 0.005528255528255528,
+          "nll": 0.6899835925951163,
+          "fallback_rows": 14399
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6707,
+          "rescuable": 828,
+          "rescues": 21,
+          "capture": 0.025362318840579712,
+          "nll": 0.5601744921002487,
+          "fallback_rows": 8042
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11536,
+          "rescuable": 1628,
+          "rescues": 32,
+          "capture": 0.019656019656019656,
+          "nll": 0.6849827137474405,
+          "fallback_rows": 14144
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6707,
+          "rescuable": 828,
+          "rescues": 20,
+          "capture": 0.024154589371980676,
+          "nll": 0.5602412142843061,
+          "fallback_rows": 8056
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11536,
+          "rescuable": 1628,
+          "rescues": 34,
+          "capture": 0.020884520884520884,
+          "nll": 0.6866028545923276,
+          "fallback_rows": 14198
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6708,
+          "rescuable": 828,
+          "rescues": 20,
+          "capture": 0.024154589371980676,
+          "nll": 0.5599421257959019,
+          "fallback_rows": 8065
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11526,
+          "rescuable": 1628,
+          "rescues": 18,
+          "capture": 0.011056511056511056,
+          "nll": 0.6879950598389739,
+          "fallback_rows": 14247
+        }
+      }
+    },
+    {
+      "epoch": 6,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6720,
+          "rescuable": 828,
+          "rescues": 36,
+          "capture": 0.043478260869565216,
+          "nll": 0.5565539581621847,
+          "fallback_rows": 7923
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11545,
+          "rescuable": 1628,
+          "rescues": 38,
+          "capture": 0.02334152334152334,
+          "nll": 0.6849187371993276,
+          "fallback_rows": 13964
+        }
+      }
+    },
+    {
+      "epoch": 7,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6737,
+          "rescuable": 828,
+          "rescues": 51,
+          "capture": 0.06159420289855073,
+          "nll": 0.5538785489711713,
+          "fallback_rows": 7893
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11558,
+          "rescuable": 1628,
+          "rescues": 56,
+          "capture": 0.0343980343980344,
+          "nll": 0.684880930285093,
+          "fallback_rows": 13920
+        }
+      }
+    },
+    {
+      "epoch": 8,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6735,
+          "rescuable": 828,
+          "rescues": 51,
+          "capture": 0.06159420289855073,
+          "nll": 0.552535093607954,
+          "fallback_rows": 7784
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11569,
+          "rescuable": 1628,
+          "rescues": 66,
+          "capture": 0.04054054054054054,
+          "nll": 0.6837671175918514,
+          "fallback_rows": 13723
+        }
+      }
+    },
+    {
+      "epoch": 9,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6717,
+          "rescuable": 828,
+          "rescues": 36,
+          "capture": 0.043478260869565216,
+          "nll": 0.5556330920478654,
+          "fallback_rows": 7899
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11542,
+          "rescuable": 1628,
+          "rescues": 41,
+          "capture": 0.025184275184275184,
+          "nll": 0.6879279044771717,
+          "fallback_rows": 13930
+        }
+      }
+    },
+    {
+      "epoch": 10,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6754,
+          "rescuable": 828,
+          "rescues": 72,
+          "capture": 0.08695652173913043,
+          "nll": 0.5496967878492446,
+          "fallback_rows": 7730
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11578,
+          "rescuable": 1628,
+          "rescues": 83,
+          "capture": 0.05098280098280098,
+          "nll": 0.6833673017474462,
+          "fallback_rows": 13618
+        }
+      }
+    },
+    {
+      "epoch": 11,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6746,
+          "rescuable": 828,
+          "rescues": 63,
+          "capture": 0.07608695652173914,
+          "nll": 0.5493143657218885,
+          "fallback_rows": 7709
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11577,
+          "rescuable": 1628,
+          "rescues": 85,
+          "capture": 0.05221130221130221,
+          "nll": 0.6838690513588701,
+          "fallback_rows": 13505
+        }
+      }
+    },
+    {
+      "epoch": 12,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6760,
+          "rescuable": 828,
+          "rescues": 77,
+          "capture": 0.0929951690821256,
+          "nll": 0.5472463275313524,
+          "fallback_rows": 7730
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11600,
+          "rescuable": 1628,
+          "rescues": 104,
+          "capture": 0.06388206388206388,
+          "nll": 0.6825294221984343,
+          "fallback_rows": 13567
+        }
+      }
+    },
+    {
+      "epoch": 13,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6758,
+          "rescuable": 828,
+          "rescues": 76,
+          "capture": 0.09178743961352658,
+          "nll": 0.5468455434272701,
+          "fallback_rows": 7628
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11574,
+          "rescuable": 1628,
+          "rescues": 79,
+          "capture": 0.048525798525798525,
+          "nll": 0.6832321185520873,
+          "fallback_rows": 13442
+        }
+      }
+    },
+    {
+      "epoch": 14,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6755,
+          "rescuable": 828,
+          "rescues": 73,
+          "capture": 0.08816425120772947,
+          "nll": 0.5495997056961174,
+          "fallback_rows": 7695
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11579,
+          "rescuable": 1628,
+          "rescues": 83,
+          "capture": 0.05098280098280098,
+          "nll": 0.6866286251788927,
+          "fallback_rows": 13573
+        }
+      }
+    },
+    {
+      "epoch": 15,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6743,
+          "rescuable": 828,
+          "rescues": 57,
+          "capture": 0.06884057971014493,
+          "nll": 0.550221657474395,
+          "fallback_rows": 7748
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11561,
+          "rescuable": 1628,
+          "rescues": 60,
+          "capture": 0.036855036855036855,
+          "nll": 0.6878380241619333,
+          "fallback_rows": 13661
+        }
+      }
+    },
+    {
+      "epoch": 16,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6771,
+          "rescuable": 828,
+          "rescues": 86,
+          "capture": 0.10386473429951691,
+          "nll": 0.5465916913165195,
+          "fallback_rows": 7674
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11590,
+          "rescuable": 1628,
+          "rescues": 94,
+          "capture": 0.05773955773955774,
+          "nll": 0.6846303310873688,
+          "fallback_rows": 13537
+        }
+      }
+    },
+    {
+      "epoch": 17,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6792,
+          "rescuable": 828,
+          "rescues": 112,
+          "capture": 0.13526570048309178,
+          "nll": 0.5421272572193409,
+          "fallback_rows": 7524
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11622,
+          "rescuable": 1628,
+          "rescues": 135,
+          "capture": 0.08292383292383293,
+          "nll": 0.6813114232480121,
+          "fallback_rows": 13255
+        }
+      }
+    },
+    {
+      "epoch": 18,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6760,
+          "rescuable": 828,
+          "rescues": 77,
+          "capture": 0.0929951690821256,
+          "nll": 0.5479591256157011,
+          "fallback_rows": 7703
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11561,
+          "rescuable": 1628,
+          "rescues": 70,
+          "capture": 0.042997542997543,
+          "nll": 0.6879093047856437,
+          "fallback_rows": 13612
+        }
+      }
+    },
+    {
+      "epoch": 19,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6766,
+          "rescuable": 828,
+          "rescues": 84,
+          "capture": 0.10144927536231885,
+          "nll": 0.546332423378192,
+          "fallback_rows": 7619
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11578,
+          "rescuable": 1628,
+          "rescues": 87,
+          "capture": 0.05343980343980344,
+          "nll": 0.6875877821783674,
+          "fallback_rows": 13452
+        }
+      }
+    },
+    {
+      "epoch": 20,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6781,
+          "rescuable": 828,
+          "rescues": 97,
+          "capture": 0.11714975845410629,
+          "nll": 0.5432920199629709,
+          "fallback_rows": 7587
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11589,
+          "rescuable": 1628,
+          "rescues": 94,
+          "capture": 0.05773955773955774,
+          "nll": 0.6851185226747025,
+          "fallback_rows": 13428
+        }
+      }
+    },
+    {
+      "epoch": 21,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6780,
+          "rescuable": 828,
+          "rescues": 96,
+          "capture": 0.11594202898550725,
+          "nll": 0.5433276094674008,
+          "fallback_rows": 7597
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11580,
+          "rescuable": 1628,
+          "rescues": 87,
+          "capture": 0.05343980343980344,
+          "nll": 0.6852338243999381,
+          "fallback_rows": 13480
+        }
+      }
+    },
+    {
+      "epoch": 22,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6818,
+          "rescuable": 828,
+          "rescues": 136,
+          "capture": 0.1642512077294686,
+          "nll": 0.5386488415482198,
+          "fallback_rows": 7399
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11637,
+          "rescuable": 1628,
+          "rescues": 150,
+          "capture": 0.09213759213759214,
+          "nll": 0.6828684281504043,
+          "fallback_rows": 13063
+        }
+      }
+    },
+    {
+      "epoch": 23,
+      "sets": {
+        "train": {
+          "rows": 8192,
+          "joint_correct": 6762,
+          "rescuable": 828,
+          "rescues": 78,
+          "capture": 0.09420289855072464,
+          "nll": 0.546085513342317,
+          "fallback_rows": 7655
+        },
+        "validation": {
+          "rows": 14439,
+          "joint_correct": 11567,
+          "rescuable": 1628,
+          "rescues": 74,
+          "capture": 0.045454545454545456,
+          "nll": 0.6881445682941251,
+          "fallback_rows": 13582
+        }
+      }
+    }
+  ],
+  "input_diagnostics": {
+    "input_clipped_element_fraction": 0.00046935349367977527,
+    "tanh_abs_over_099_fraction": 0.4851188659667969,
+    "local_gradient_pairs": [
+      {
+        "pair": 0,
+        "all_parameter_cosine": -0.9263371229171753,
+        "shared_input_layer_cosine": -0.6282692551612854,
+        "rescusable_loss": 1.434816172995692,
+        "fallback_only_loss": 2.1417258990789465
+      },
+      {
+        "pair": 1,
+        "all_parameter_cosine": -0.9252659678459167,
+        "shared_input_layer_cosine": -0.617023766040802,
+        "rescusable_loss": 1.4398949724286503,
+        "fallback_only_loss": 2.1717188954604807
+      },
+      {
+        "pair": 2,
+        "all_parameter_cosine": -0.9227808713912964,
+        "shared_input_layer_cosine": -0.6189575791358948,
+        "rescusable_loss": 1.4145094836282384,
+        "fallback_only_loss": 2.1840705348870495
+      },
+      {
+        "pair": 3,
+        "all_parameter_cosine": -0.920454740524292,
+        "shared_input_layer_cosine": -0.6295337677001953,
+        "rescusable_loss": 1.4060623818251679,
+        "fallback_only_loss": 2.216929567983594
+      },
+      {
+        "pair": 4,
+        "all_parameter_cosine": -0.9285833835601807,
+        "shared_input_layer_cosine": -0.6556665897369385,
+        "rescusable_loss": 1.3825525458262158,
+        "fallback_only_loss": 2.1975024031604926
+      },
+      {
+        "pair": 5,
+        "all_parameter_cosine": -0.9183223843574524,
+        "shared_input_layer_cosine": -0.611758828163147,
+        "rescusable_loss": 1.417557515016513,
+        "fallback_only_loss": 2.187566276081595
+      },
+      {
+        "pair": 6,
+        "all_parameter_cosine": -0.9278637170791626,
+        "shared_input_layer_cosine": -0.6144295334815979,
+        "rescusable_loss": 1.4475506012542187,
+        "fallback_only_loss": 2.120126177667279
+      },
+      {
+        "pair": 7,
+        "all_parameter_cosine": -0.9132283926010132,
+        "shared_input_layer_cosine": -0.6237449049949646,
+        "rescusable_loss": 1.4318808761381856,
+        "fallback_only_loss": 2.1872559829025953
+      }
+    ],
+    "interpretation": "Samefrozenloss,selectedcheckpoint,evalmode(no dropout),naturalTRAINsample. Conflict/saturationmeasurementsarenotproofwhyoptimizationfailed;nooptimizerupdated."
+  },
+  "checkpoint_bindings": {
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-01.pt": "5db5706bacddaed6f54603de9e95283f261b01beda3d39e803c246426bda5fcb",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-02.pt": "0b930e2dddeafbf5880fa44e9a69f2dc200701809dc5e140e3a67227611b67ae",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-03.pt": "d382f744ac9890b3f720c9221bd82d04fb6f0128bd74a35ea44aaf64cb8df778",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-04.pt": "142401d8681414f1b1d5162a5d76fb113cb039efa3647ad4f01cc9be618d10fc",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-05.pt": "da79bf8e99fa6f8a0d3c2ce6739cd27df526ab451e4a075dbd93a15520faea48",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-06.pt": "ec42b79b7266fda02e3fbe65cc65f63cd98444709e4dbbbcf0a02dc25990e760",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-07.pt": "67eb912c25b2b6697885bbceb9f69a5c98a5ae953dc9bc80f38aba5f119efdf1",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-08.pt": "a1c74add20b41402f23d4651db03428858434b68969c15f8facfa35e92549db3",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-09.pt": "46c61616980357cd7d256c8a7528d2c4fdcbe84436d29c41323297c77252c5c9",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-10.pt": "298656a802c9137ae7bf0aaf3a67b4b0284929d836a6d784e2f9c8c8055b7adc",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-11.pt": "ce76ebdd6de62b352a1c005477174dcfe85aa8ac894369c479359464ea2c5c7f",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-12.pt": "d2381bb4cabb88452f8989db235be2631cc8a5633e97824f6143e788eed34fa6",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-13.pt": "7fba8537287931d6bf83c80864b5aff3f96f0030ba18d7c547badb6d87e400ff",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-14.pt": "923d31c07f594441eb4b37a48101895098cf895efaca41abb895db41ac8cc727",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-15.pt": "dc637b9fa7bdacdeff8a88c6493af58b975bef22e9f208ee0c664dc09c3c1542",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-16.pt": "6768959f025b618aab1de4345b2e1305f0e1f068a3eddc3280a9e5a48a3e32db",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-17.pt": "f94585a081df713f1d884fcfc0d6ae8ef727383f65de812a0eb1286e15e1356c",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-18.pt": "d84d13dd4a5fef0f3c3fed2e670ebdb25536aef0a6d8087e3c45a5f4a1420298",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-19.pt": "d0e2245f4b1e6cb5c836317c04138d2e662f5994b23b7c70eb781ab29ceb4ab6",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-20.pt": "619e7fd7edf528626fc41ff1ccdff4c508ccf023df050d8abc43b0116f9830e6",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-21.pt": "2f5d66c22520a7fb726efef8e118d8e8fdaf388f68cce580b596460065206030",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-22.pt": "96fdc65497f651bc8b089844a916db1031f2432420dd50fd9bc7a32332576105",
+    ".cambc\\action-predictor\\v10\\runs\\A00\\round-23.pt": "92e6843508dd07745ca70e1e2f7a6324c70476f0b4a51fc0dd287b189f67cbcf"
+  },
+  "natural_sample_seed": 20261123,
+  "natural_sample_rows": 8192,
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "original_selected_epoch": 17
+}

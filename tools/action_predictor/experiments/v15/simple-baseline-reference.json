@@ -1,0 +1,240 @@
+{
+  "source_sha256": "531df5f89e8da0cb2921c4c300e729da953c8b784effed4d0478ef102b67ad1c",
+  "validation": {
+    "frequency-frequency": {
+      "macro_f1": 0.03156961713518415,
+      "joint_nll": 2.8387492585787,
+      "strict_full_command_accuracy": 0.28367615485836967,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.2002540220152413,
+        "top3_accuracy": 0.5224386113463166,
+        "top5_accuracy": 0.8187976291278577,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 1.4360711261642676,
+        "penalized_mean_chebyshev_error": 1.4360711261642676
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "frequency-persistence": {
+      "macro_f1": 0.03156961713518415,
+      "joint_nll": 2.6623350175957197,
+      "strict_full_command_accuracy": 0.28367615485836967,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.5520745131244708,
+        "top3_accuracy": 0.7320067739204065,
+        "top5_accuracy": 0.8937341236240475,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 0.6655376799322608,
+        "penalized_mean_chebyshev_error": 0.6655376799322608
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "frequency-nearest": {
+      "macro_f1": 0.03156961713518415,
+      "joint_nll": 2.710760263393692,
+      "strict_full_command_accuracy": 0.28367615485836967,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.48221845893310755,
+        "top3_accuracy": 0.6879762912785775,
+        "top5_accuracy": 0.8734123624047417,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 0.8293818797629128,
+        "penalized_mean_chebyshev_error": 0.8293818797629128
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "frequency-lowest-health": {
+      "macro_f1": 0.03156961713518415,
+      "joint_nll": 2.6300471918606276,
+      "strict_full_command_accuracy": 0.28367615485836967,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.2002540220152413,
+        "top3_accuracy": 0.5224386113463166,
+        "top5_accuracy": 0.8187976291278577,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 1.4360711261642676,
+        "penalized_mean_chebyshev_error": 1.4360711261642676
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "transition-frequency": {
+      "macro_f1": 0.27261308261326384,
+      "joint_nll": 1.835704575701025,
+      "strict_full_command_accuracy": 0.6244892305561327,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.17781541066892464,
+        "exact_accuracy": 0.2002540220152413,
+        "top3_accuracy": 0.5224386113463166,
+        "top5_accuracy": 0.8187976291278577,
+        "joint_top3_accuracy": 0.4635901778154107,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 1.4360711261642676,
+        "penalized_mean_chebyshev_error": 1.4360711261642676
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "transition-persistence": {
+      "macro_f1": 0.27261308261326384,
+      "joint_nll": 1.6592903347180445,
+      "strict_full_command_accuracy": 0.683357573239144,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.5033869602032176,
+        "exact_accuracy": 0.5520745131244708,
+        "top3_accuracy": 0.7320067739204065,
+        "top5_accuracy": 0.8937341236240475,
+        "joint_top3_accuracy": 0.6549534292972058,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 0.6655376799322608,
+        "penalized_mean_chebyshev_error": 0.6655376799322608
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "transition-nearest": {
+      "macro_f1": 0.27261308261326384,
+      "joint_nll": 1.707715580516016,
+      "strict_full_command_accuracy": 0.6725535009349678,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.43734123624047416,
+        "exact_accuracy": 0.48221845893310755,
+        "top3_accuracy": 0.6879762912785775,
+        "top5_accuracy": 0.8734123624047417,
+        "joint_top3_accuracy": 0.6130397967823878,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 0.8293818797629128,
+        "penalized_mean_chebyshev_error": 0.8293818797629128
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    },
+    "transition-lowest-health": {
+      "macro_f1": 0.27261308261326384,
+      "joint_nll": 1.6270025089829523,
+      "strict_full_command_accuracy": 0.6303760648244339,
+      "move": {
+        "support": 2362,
+        "joint_accuracy": 0.17781541066892464,
+        "exact_accuracy": 0.2002540220152413,
+        "top3_accuracy": 0.5224386113463166,
+        "top5_accuracy": 0.8187976291278577,
+        "joint_top3_accuracy": 0.4635901778154107,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 2362,
+        "mean_chebyshev_error": 1.4360711261642676,
+        "penalized_mean_chebyshev_error": 1.4360711261642676
+      },
+      "blocked": {
+        "support": 110,
+        "joint_accuracy": 0.0,
+        "exact_accuracy": 0.03636363636363636,
+        "top3_accuracy": 0.17272727272727273,
+        "top5_accuracy": 0.2818181818181818,
+        "joint_top3_accuracy": 0.0,
+        "unassessable_coordinates": 0,
+        "destination_error_coverage": 110,
+        "mean_chebyshev_error": 2.1363636363636362,
+        "penalized_mean_chebyshev_error": 2.1363636363636362
+      }
+    }
+  },
+  "interpretation": "Retained ORIGINAL DEV controls, no new fitting/decoding. Exact_accuracy is recorded-family conditional; joint_accuracy includes predicted action. Ignore legacy invalid_commands fields because blocked mask rejections were conflated. No old exposed test or reserved partition used.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

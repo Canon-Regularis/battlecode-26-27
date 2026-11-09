@@ -1,0 +1,151 @@
+{
+  "result_sha256": "19214d39c2b0edb19627efcaa4e9dc86222e9ebbd1a0f55a2692d1e329868dd2",
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\code_weight_verify.py": "788a34d9ef9aaa7cd11fd20080c170d5e0d45ec5a0e12d31860bd90cf9906e2f",
+    "tools\\action_predictor\\behavior_segments\\code_weight_predictor.py": "2353749724ab56aa57ac80a9271b8da412194985fef211e3473abad7948e4fa8"
+  },
+  "accounting": {
+    "lr0.0003-fold0": {
+      "updates": 1152,
+      "observed_presentations": 213408,
+      "clipped_updates": 22
+    },
+    "lr0.0003-fold1": {
+      "updates": 1152,
+      "observed_presentations": 211968,
+      "clipped_updates": 2
+    },
+    "lr0.0003-fold2": {
+      "updates": 1152,
+      "observed_presentations": 211680,
+      "clipped_updates": 20
+    },
+    "lr0.0003-fold3": {
+      "updates": 1152,
+      "observed_presentations": 211104,
+      "clipped_updates": 5
+    },
+    "lr0.001-fold0": {
+      "updates": 1152,
+      "observed_presentations": 213408,
+      "clipped_updates": 31
+    },
+    "lr0.001-fold1": {
+      "updates": 1152,
+      "observed_presentations": 211968,
+      "clipped_updates": 8
+    },
+    "lr0.001-fold2": {
+      "updates": 1152,
+      "observed_presentations": 211680,
+      "clipped_updates": 29
+    },
+    "lr0.001-fold3": {
+      "updates": 1152,
+      "observed_presentations": 211104,
+      "clipped_updates": 10
+    },
+    "stage1-refit": {
+      "updates": 1536,
+      "observed_presentations": 282720,
+      "clipped_updates": 18
+    },
+    "stage2-fold0": {
+      "updates": 384,
+      "observed_presentations": 35568,
+      "clipped_updates": 78
+    },
+    "stage2-fold1": {
+      "updates": 384,
+      "observed_presentations": 35328,
+      "clipped_updates": 60
+    },
+    "stage2-fold2": {
+      "updates": 384,
+      "observed_presentations": 35280,
+      "clipped_updates": 54
+    },
+    "stage2-fold3": {
+      "updates": 384,
+      "observed_presentations": 35184,
+      "clipped_updates": 45
+    },
+    "stage3-dropout-fold0": {
+      "updates": 1152,
+      "observed_presentations": 213408,
+      "clipped_updates": 4
+    },
+    "stage3-dropout-fold1": {
+      "updates": 1152,
+      "observed_presentations": 211968,
+      "clipped_updates": 0
+    },
+    "stage3-dropout-fold2": {
+      "updates": 1152,
+      "observed_presentations": 211680,
+      "clipped_updates": 3
+    },
+    "stage3-dropout-fold3": {
+      "updates": 1152,
+      "observed_presentations": 211104,
+      "clipped_updates": 1
+    },
+    "stage3-smooth_decay-fold0": {
+      "updates": 1152,
+      "observed_presentations": 213408,
+      "clipped_updates": 14
+    },
+    "stage3-smooth_decay-fold1": {
+      "updates": 1152,
+      "observed_presentations": 211968,
+      "clipped_updates": 2
+    },
+    "stage3-smooth_decay-fold2": {
+      "updates": 1152,
+      "observed_presentations": 211680,
+      "clipped_updates": 16
+    },
+    "stage3-smooth_decay-fold3": {
+      "updates": 1152,
+      "observed_presentations": 211104,
+      "clipped_updates": 1
+    },
+    "stage3-combined-fold0": {
+      "updates": 1152,
+      "observed_presentations": 213408,
+      "clipped_updates": 1
+    },
+    "stage3-combined-fold1": {
+      "updates": 1152,
+      "observed_presentations": 211968,
+      "clipped_updates": 0
+    },
+    "stage3-combined-fold2": {
+      "updates": 1152,
+      "observed_presentations": 211680,
+      "clipped_updates": 2
+    },
+    "stage3-combined-fold3": {
+      "updates": 1152,
+      "observed_presentations": 211104,
+      "clipped_updates": 1
+    },
+    "stage2-refit": {
+      "updates": 0,
+      "observed_presentations": 0,
+      "clipped_updates": 0
+    }
+  },
+  "exact_cached_map_windows": 256,
+  "exact_stage1_validation_checkpoints": 192,
+  "exact_stage2_validation_checkpoints": 36,
+  "exact_stage3_validation_checkpoints": 288,
+  "exact_final_forecasts": {
+    "fit": 2945,
+    "evaluation": 699
+  },
+  "streaming_predictions": 32,
+  "target_checks_reproduced": true,
+  "original_inputs_preserved": true,
+  "seconds": 85.57656120002503
+}

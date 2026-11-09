@@ -1,0 +1,180 @@
+{
+  "results": {
+    "all": {
+      "rows": 433071,
+      "library_covered": 380135,
+      "Q_global_mode_correct": 338820,
+      "reachable_union": 380158,
+      "unreachable": 52913,
+      "family_mode_union_upper_diagnostic": 380443,
+      "per_category": {
+        "<unknown>": {
+          "rows": 0,
+          "library": 0,
+          "reachable_union": 0
+        },
+        "altar": {
+          "rows": 1663,
+          "library": 1579,
+          "reachable_union": 1579
+        },
+        "attack": {
+          "rows": 22761,
+          "library": 22592,
+          "reachable_union": 22592
+        },
+        "blocked": {
+          "rows": 10065,
+          "library": 5244,
+          "reachable_union": 5244
+        },
+        "cancel": {
+          "rows": 73108,
+          "library": 73108,
+          "reachable_union": 73108
+        },
+        "cast_0": {
+          "rows": 4674,
+          "library": 4554,
+          "reachable_union": 4554
+        },
+        "cast_1": {
+          "rows": 8273,
+          "library": 5518,
+          "reachable_union": 5518
+        },
+        "end": {
+          "rows": 110233,
+          "library": 110233,
+          "reachable_union": 110233
+        },
+        "move": {
+          "rows": 71945,
+          "library": 62751,
+          "reachable_union": 62774
+        },
+        "priority": {
+          "rows": 14816,
+          "library": 3727,
+          "reachable_union": 3727
+        },
+        "recall": {
+          "rows": 79748,
+          "library": 79748,
+          "reachable_union": 79748
+        },
+        "shop": {
+          "rows": 17273,
+          "library": 0,
+          "reachable_union": 0
+        },
+        "submit": {
+          "rows": 7076,
+          "library": 7068,
+          "reachable_union": 7068
+        },
+        "teleport": {
+          "rows": 594,
+          "library": 301,
+          "reachable_union": 301
+        },
+        "ward": {
+          "rows": 10842,
+          "library": 3712,
+          "reachable_union": 3712
+        }
+      }
+    },
+    "natural": {
+      "rows": 288801,
+      "library_covered": 270053,
+      "Q_global_mode_correct": 244361,
+      "reachable_union": 270063,
+      "unreachable": 18738,
+      "family_mode_union_upper_diagnostic": 270121,
+      "per_category": {
+        "<unknown>": {
+          "rows": 0,
+          "library": 0,
+          "reachable_union": 0
+        },
+        "altar": {
+          "rows": 44,
+          "library": 43,
+          "reachable_union": 43
+        },
+        "attack": {
+          "rows": 20108,
+          "library": 19967,
+          "reachable_union": 19967
+        },
+        "blocked": {
+          "rows": 1906,
+          "library": 1012,
+          "reachable_union": 1012
+        },
+        "cancel": {
+          "rows": 52935,
+          "library": 52935,
+          "reachable_union": 52935
+        },
+        "cast_0": {
+          "rows": 3894,
+          "library": 3784,
+          "reachable_union": 3784
+        },
+        "cast_1": {
+          "rows": 4794,
+          "library": 3274,
+          "reachable_union": 3274
+        },
+        "end": {
+          "rows": 80256,
+          "library": 80256,
+          "reachable_union": 80256
+        },
+        "move": {
+          "rows": 48286,
+          "library": 42268,
+          "reachable_union": 42278
+        },
+        "priority": {
+          "rows": 9815,
+          "library": 2416,
+          "reachable_union": 2416
+        },
+        "recall": {
+          "rows": 62903,
+          "library": 62903,
+          "reachable_union": 62903
+        },
+        "shop": {
+          "rows": 1204,
+          "library": 0,
+          "reachable_union": 0
+        },
+        "submit": {
+          "rows": 435,
+          "library": 435,
+          "reachable_union": 435
+        },
+        "teleport": {
+          "rows": 29,
+          "library": 11,
+          "reachable_union": 11
+        },
+        "ward": {
+          "rows": 2192,
+          "library": 749,
+          "reachable_union": 749
+        }
+      }
+    }
+  },
+  "meaning": "Points plus global Q mode give the actual hard-decoder oracle ceiling when only nonnegative mixture weights change. Any off-point command with lower Q than its global mode is dominated regardless of weights. Union with every family mode is only a looser diagnostic, not achieved accuracy or exact reachability. Conditional-family parameters still use every family mode.",
+  "source_sha256": "87da5caedeef6a10de157cc54f5e9055d67273e63456b5e15967a92aad0e756b",
+  "inputs_sha256": "6c9442160c82882025dc5a52a12dc8e1a4ea902864b612e1a68adfbe40699eee",
+  "probabilities_sha256": "37af7dfab02981381256cbec2bc2f6a6ac03853072b5327082d21f6e5d29ef3b",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

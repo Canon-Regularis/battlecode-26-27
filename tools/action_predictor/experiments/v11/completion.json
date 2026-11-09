@@ -1,0 +1,40 @@
+{
+  "sources": {
+    "tools\\action_predictor\\diagnosis\\addendum.py": "09152687da37ee2d8cb561f497b1f91622c447bfd5dfe99aaf8c08384bc3fad5",
+    "tools\\action_predictor\\diagnosis\\capacity.py": "b8b8b574e0c2ae28fab5a72d4565d48cfec0c343f60284ab1732b651e8ccc516",
+    "tools\\action_predictor\\diagnosis\\movement.py": "3a5f988eaa81bce660f7327c627e9de33f10d60b24bf833a8ee6f51ce1027c7d",
+    "tools\\action_predictor\\diagnosis\\saved.py": "92cd073291f1ec921bd2ea02a77c219e6d57f1ccac1707f35180c6af6122affc",
+    "tools\\action_predictor\\diagnosis\\summary.py": "29bd41a0ab51ce3d62ab8936e2be492810401fcdb37274c504be4dce2676bb90",
+    "tools\\action_predictor\\diagnosis\\__init__.py": "a660cf6931f869d5260b4b2699605bcbe674e55dcd0f8a3956d2c7287421b0c1"
+  },
+  "files": {
+    "tools\\action_predictor\\experiments\\v11\\R00-plan.json": "06835092dd4d5b271b4ac898fd796fa284575c1ef20c7fb21552491584111fbc",
+    "tools\\action_predictor\\experiments\\v11\\R00-saved.json": "b78e7ba12d12052bd0d626c502cf5b0075057337825f8f9682b87066732bc593",
+    "tools\\action_predictor\\experiments\\v11\\R00-summary.json": "2794d6e07f3bc78b2acf74de08b3286288833e2ce6991bc42203d45fad3bdeb6",
+    "tools\\action_predictor\\experiments\\v11\\R01-movement.json": "d71a2ff5b3979851f88e97ee73a9a68a78b5e4404c4cf9ab3a26dba04ae337d7",
+    "tools\\action_predictor\\experiments\\v11\\R02-plan.json": "1a584e28786afc292b129c54ff367636a59a509e8cb7801ecc54acdb9266c6d7",
+    "tools\\action_predictor\\experiments\\v11\\R02-capacity.json": "5c0b3ef72532940586303c43ee1b9cc32b5b988dcfa3e03ac7743f805240a0de",
+    "tools\\action_predictor\\experiments\\v11\\R02-review.md": "50961374e85ac259617b3988855345ba731c9d47d8cb5398c3c333cd9ff3d7d9",
+    "tools\\action_predictor\\experiments\\v11\\R02-review-addendum.json": "33764d7d748ccdf4105da5cd8a479b3e7db899f2bb8d4db250ee63983e258ac5"
+  },
+  "local_files": {
+    ".cambc\\action-predictor\\v11\\R01-row-diagnostics.jsonl": "96db8d9e8a87265a7467f2874279755c543902f9b42ed1dcc392e6471cd12018",
+    ".cambc\\action-predictor\\v11\\R02-capacity\\final.pt": "35da57b384f7f2cce4f95da337a4bcb2bff8aff8227b35bf59cd8c386bf8df63",
+    ".cambc\\action-predictor\\v11\\R02-capacity\\row-indices.npz": "87a1720ea5616232c5f13a408bf6656638bb918649fa537bc42d8d8de36f4a46",
+    ".cambc\\action-predictor\\v11\\R02-capacity\\fit-predictions.npz": "d06a9e675a4af5a6084382749893d4cdf6a3af7e424e67a3478b004861cc22bb",
+    ".cambc\\action-predictor\\v11\\R02-capacity\\held_group-predictions.npz": "0dc2998e677f368b53941897400596e54bfa096b9f0849986d0e7673b2872b55",
+    ".cambc\\action-predictor\\v11\\R02-capacity\\seen_group-predictions.npz": "3b9708f97b754e0aab2171017a3269d1b9a3943c58899d3ec81739b84efbc4d1"
+  },
+  "commands": [
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.saved",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.movement",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.capacity",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.addendum",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.summary"
+  ],
+  "capacity_fit_count": 1,
+  "capacity_updates": 2000,
+  "production_fits": 0,
+  "reserved_opened": 0,
+  "notes": "Do not rerun completedcapacityfit or unchangedaudits;immutableproducer guards preserve outputs. Freshpostfitreview reproduced finalpredictions;reportingcorrections additive. No model promotion."
+}

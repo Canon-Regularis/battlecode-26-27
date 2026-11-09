@@ -1,0 +1,89 @@
+{
+  "partitions": {
+    "fit": {
+      "rows": 65465,
+      "streams": 218,
+      "groups": 40,
+      "windows16": 2171,
+      "windows32": 1085,
+      "input_keys": [
+        "x",
+        "history",
+        "observations",
+        "history_gaps",
+        "priority_inputs",
+        "root_gap",
+        "actor_start"
+      ],
+      "causal_probe_rows": 1536,
+      "max_decoder_nll_error": 0.0,
+      "backward_without_optimizer": {
+        "A": {
+          "finite": true,
+          "nonzero_tensors": 34
+        },
+        "B": {
+          "finite": true,
+          "nonzero_tensors": 34
+        },
+        "C": {
+          "finite": true,
+          "nonzero_tensors": 34
+        }
+      }
+    },
+    "tuning": {
+      "rows": 15298,
+      "streams": 47,
+      "groups": 10,
+      "windows16": 547,
+      "windows32": 273,
+      "input_keys": [
+        "x",
+        "history",
+        "observations",
+        "history_gaps",
+        "priority_inputs",
+        "root_gap",
+        "actor_start"
+      ]
+    },
+    "assessment": {
+      "rows": 16389,
+      "streams": 54,
+      "groups": 10,
+      "windows16": 560,
+      "windows32": 280,
+      "input_keys": [
+        "x",
+        "history",
+        "observations",
+        "history_gaps",
+        "priority_inputs",
+        "root_gap",
+        "actor_start"
+      ]
+    },
+    "legacy": {
+      "rows": 14439,
+      "streams": 128,
+      "groups": 5,
+      "windows16": 0,
+      "windows32": 0,
+      "input_keys": [
+        "x",
+        "history",
+        "observations",
+        "history_gaps",
+        "priority_inputs",
+        "root_gap",
+        "actor_start"
+      ],
+      "causal_probe_rows": 1536,
+      "max_decoder_nll_error": 0.0
+    }
+  },
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "interpretation": "Construction and causal/likelihood proof only; no movement quality or strategy conclusion."
+}

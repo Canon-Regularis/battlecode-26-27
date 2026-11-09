@@ -1,0 +1,20 @@
+{
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v20\\PD00-comparison.json": "6ce06028da15f486cc87131c393b9ddce1095f10d96b06ff15a410e790b46ea5",
+    "tools\\action_predictor\\experiments\\v20\\PD00-plan.json": "c6ffcce00f5b8bf99c918521ab6abbcd9e3a6c97fe53ce08df28657090dbecb5",
+    "tools\\action_predictor\\experiments\\v20\\PD00-REPORT.md": "420b027d9797bf84f51a49cd83b1d4d46a8c8109121528f03aa691d824efff99",
+    "tools\\action_predictor\\experiments\\v20\\PD00.json": "e12000f8f793580a0140c532c7138d2f8049bb0683f320eededdad7fb070e760",
+    "tools\\action_predictor\\priority_diagnosis\\compare.py": "f2b2ef5a881ba80876d718f8c391e92627d8d0b0aa0390188f2a9fd1dd910510",
+    "tools\\action_predictor\\priority_diagnosis\\trajectory.py": "c893cc790ef9184c44ac6d9119fd521c00a5fc1c972955ecb903947b7ab074ba",
+    "tools\\action_predictor\\priority_diagnosis\\__init__.py": "8c37ff4b1127d97ed99f37ef49875c40222629d41734b28ad77fc9d6a438d5ef"
+  },
+  "exact_selected_epoch_modes": true,
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "command": [
+    "python -m tools.action_predictor.priority_diagnosis.trajectory",
+    "python -m tools.action_predictor.priority_diagnosis.compare"
+  ],
+  "original_checkpoint_selection_unchanged": true,
+  "scope": "Read-only in-sample original P05 TRAIN trajectory; no claim of independent PC00 reviewer coverage."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "P04",
+  "seed": 26,
+  "use_inputs": false,
+  "hypothesis": "Do the39 recovered causal priority channels improve the P03 multimodal head? No benefit assumed.",
+  "sources_sha256": "2e127b2f397055a49a88fa58a80d6209f24a3587b7525d90bb07fcabf0d20951",
+  "parent_plan_sha256": "1258587c8b9444d9067c6ae4038f08f8ef1e2c49a74baf460b20c2aa2f02f2c0",
+  "P03_report_sha256": "b82e9bc61a0c4b52f9820e6a92994056ce85fc889d6a600997b928019936a85f",
+  "P03_review_sha256": "6cee10fdeab0f04e089dfc2d260c1b1fbe2f9df48814124b682ca8dd8c083829",
+  "evaluation_addendum_sha256": "d5a3339c9b0165d9f20073b14bee82d33655874a422ecc0875ba29b6b28ab2af",
+  "training": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "rows": {
+    "train": 433071,
+    "validation": 14439
+  },
+  "comparison": "Same87528parameter head, training-only518value vocabulary, initialization, M01 fallback warmstart, seed26, context128, normalizedextra39, data/groups, loss, sampler, optimizer, compute path and checkpoint rule as P03. ONLY zero all normalized extra39 channels within head.forward.",
+  "implementation": "Reuse immutable P03 data/predict helpers and exact fit function after declared ID/artifact-name/use_inputs substitutions; verify canonical source equivalence. Original P03 sources/checkpoints/reports remain unchanged.",
+  "checkpoint": "Original observed full-development joint NLL, minimum improvement0.0001, patience6, max35epochs; epochzero reported but not selectable. No exact-accuracy selection.",
+  "budget": "ONE substantive P04 control fit only; code/protocol proof reviewed before optimizer, completed fit freshly reviewed before any subsequent study or repeat.",
+  "exploratory_input_gate": "P03 at least5 percentage points higher exact priority than P04, lower priority NLL and higher joint priority correctness, identical nonpriority paths. This only supports proposing separately preregistered matched head-seed repeats; original goals/guards unchanged.",
+  "reporting": "Compare both arms against P01/P02/frequency/M01; show exact/joint/NLL, completecategoryPRF/support/FP, rare/unseen/missing/outside-window/history-length/tail errors, paired whole-group uncertainty, parameter/compute counts. No causal contribution claim before measured control.",
+  "ultimate_goal": "All immutable category-wise90%, original macroF1/movement/loss/targeting guards and three-seed requirements remain unchanged. Shops retain unassessed strict failures. Frozen priority actions cap joint at343/576.",
+  "reserved": "Both75-game partitions sealed; old exposed test unused; no downloads/matches/botchanges/deployments/PR from this runner.",
+  "replication": "No auto-repeat. Any later matched head-seed repeats keep the same frozen M01 representation and cannot certify independent full-GRU training or category-wide reliability."
+}

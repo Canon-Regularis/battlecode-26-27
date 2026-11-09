@@ -1,0 +1,47 @@
+"""Record P04 correctness checks or bind its completed pre-fit evidence."""
+from pathlib import Path
+import sys,json,subprocess,inspect
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor import priority_modes_control as control
+from tools.action_predictor import priority_modes_fit as treatment
+from tools.action_predictor.more_replays import frozen,sha
+from tools.action_predictor.category_study import WORK,REPORTS
+assert inspect.getsource(control.fit)==control.canonical_treatment_fit()
+mode=sys.argv[1]
+if mode=='tests':
+    names=('test_priority_inputs','test_priority_verify','test_priority_head','test_priority_dependencies_v3','test_priority_entry_v3','test_priority_modes','test_priority_modes_control')
+    argv=[sys.executable,'-m','unittest',*['tools.action_predictor.'+n for n in names],'-v']
+    result=subprocess.run(argv,cwd=root,text=True,capture_output=True)
+    path=REPORTS/'priority-modes-control-test-output.txt';assert not path.exists();path.write_text(result.stdout+result.stderr,encoding='utf-8')
+    assert result.returncode==0,result.stdout+result.stderr
+    frozen(REPORTS/'priority-modes-control-tests.json',dict(argv=argv,returncode=result.returncode,output_sha256=sha(path),test_source_hashes={n:sha(root/'tools/action_predictor'/(n+'.py')) for n in names}))
+    generator=root/'.cambc/build_priority_modes_control.py'
+    assert sha(generator)=='1130197ac59ef2b0906834d826e149fcb766ac92394fd02ade187e0fdd902b45'
+    frozen(REPORTS/'priority-modes-control-generation.json',dict(argv=[sys.executable,str(generator)],source_sha256=sha(generator),
+        parent_fit_sha256=sha(treatment.__file__),parent_roundtrip_sha256=sha(root/'tools/action_predictor/priority_modes_roundtrip.py'),
+        control_fit_sha256=sha(control.__file__),control_roundtrip_sha256=sha(root/'tools/action_predictor/priority_modes_control_roundtrip.py'),canonical_fit_equivalent=True))
+    (REPORTS/'priority-modes-control-generation-source.txt').write_bytes(generator.read_bytes())
+    with (WORK/'commands.jsonl').open('a') as stream:
+        stream.write(json.dumps(dict(argv=[sys.executable,str(generator)],source_sha256=sha(generator),already_executed=True))+'\n')
+        stream.write(json.dumps(dict(argv=argv,returncode=result.returncode,output_sha256=sha(path)))+'\n')
+    print(path.read_text(encoding='utf-8'))
+elif mode=='finish':
+    control.verify_protocol();prefit=control.read(control.PREFIT)
+    assert prefit['plan_sha256']==sha(control.PLAN) and prefit['sources_sha256']==sha(control.SOURCES)
+    assert prefit['roundtrip_sha256']==sha(REPORTS/'priority-modes-control-initial-roundtrip.json')
+    assert prefit['initial_rows_compared']==447510 and prefit['initial_maximum_difference']==0 and prefit['optimizer_loop_canonical_equivalent']
+    assert not (WORK/'runs/P04').exists() and not (REPORTS/'P04.json').exists()
+    tests=control.read(REPORTS/'priority-modes-control-tests.json');assert tests['returncode']==0
+    assert tests['output_sha256']==sha(REPORTS/'priority-modes-control-test-output.txt')
+    for name,digest in tests['test_source_hashes'].items():assert sha(root/'tools/action_predictor'/(name+'.py'))==digest
+    for name,key in [('priority_modes_control.py','control_fit_sha256'),('priority_modes_control_roundtrip.py','control_roundtrip_sha256')]:
+        assert sha(root/'tools/action_predictor'/name)==control.read(REPORTS/'priority-modes-control-generation.json')[key]
+    frozen(REPORTS/'priority-modes-control-prefit-completion.json',dict(plan_sha256=sha(control.PLAN),sources_sha256=sha(control.SOURCES),prefit_sha256=sha(control.PREFIT),
+        tests_sha256=sha(REPORTS/'priority-modes-control-tests.json'),generation_sha256=sha(REPORTS/'priority-modes-control-generation.json'),
+        trainable_parameters=87528,frozen_parameters=104160,inactive_extra_column_weights=39*521,retained_input_dimension=167,
+        source_sha256=sha(__file__),new_optimizer_steps=0,reserved_games_opened=0))
+    (REPORTS/'priority-modes-control-prefit-check-source.txt').write_bytes(Path(__file__).read_bytes())
+    print((REPORTS/'priority-modes-control-prefit-completion.json').read_text())
+else:raise ValueError(mode)
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve()),mode],source_sha256=sha(__file__)))+'\n')

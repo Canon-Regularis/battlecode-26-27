@@ -1,0 +1,18 @@
+# Current research after G00
+
+E01's fresh completed-fit review is now approved for execution and negative-result reporting only. It is not promoted or repeated. The older INDEX.md, CHECKPOINTS.md and COMMANDS.md are immutable historical snapshots; use this index and the E01 addenda for current status.
+
+G00, the unrestricted two-expert movement control, selects epoch1 of7 by the frozen observed-joint-loss rule. It has11,510/14,439 exact complete commands (79.7147%),38more than P05. Joint movement improves1,287→1,318/2,362 (54.49%→55.80%); blocked improves1→8/110. All classifier decisions, priority values and nonmovement argument paths are unchanged.
+
+This is a small warm-start, single-seed development gain, not the requested reliability result. Movement destination exactness is60.71%, top3/top5 is87.68%/94.88%, mean Chebyshev error0.598cells. Continuing destinations remain93.49% exact versus P05's93.82%; direction changes rise23.92%→26.86%. Training changes remain only36.62% exact. Macro F1 stays0.63239; observed jointNLL0.726556 is less than1% below P05. All original targets remain binding and unmet.
+
+- [Complete G00 results](G00-REPORT.md), [all metrics](G00.json), [per-category PRF](G00-per-category.csv), [confusion](G00-confusion.csv), [paired uncertainty and prospective guards](G00-analysis.json).
+- [G00 frozen protocol](G00-plan.json) records both planned arms before fitting: same two warm-start GRU experts and learned gate. G01 alone adds directional support partition and recorded continuation/change auxiliary supervision. This is an architecture/support/supervision package; the actual next direction is never an inference input.
+- Prior direction is recovered from existing causal candidate inputs. All71,824training and2,356development eligible sign labels agree with frozen evidence. The121training and6development moves without prior history remain included; all10,065training and110development blocked attempts use the unrestricted mixture and remain included.
+- [Causal serving and saved-checkpoint reproduction](G00-causal-roundtrip.json): all8development prediction arrays reproduced;95raw PRE cases across25games, including26actual proposed movement cases. Maximum single-row versus batch probability error7.30e-7. This uses the retained fitter inference function for array reproduction, not an independent implementation of mixture mathematics.
+- [Prepared-input serving costs](G00-serving.json) separately report CPU latency and honest process memory. Frozen P05 priority remains part of the complete predictor.
+- [Current comparison table](comparison-v3.csv), [E01 approved review](E01-review.json), [E01 checkpoint addendum](CHECKPOINTS-E01-ADDENDUM.md), [E01 command addendum](COMMANDS-E01-ADDENDUM.md), [prior entity pair](INDEX.md).
+
+G00 preserves every epoch and the selected checkpoint locally under .cambc/action-predictor/v9/runs/G00. It is available as the strongest current strict-accuracy point estimate, while P05/M01 remain retained references. No certified replacement or deployment exists. Its fresh completed-fit review is pending. G01 has not fitted; it requires that review first. The planned repeat gate requires5points joint-movement gain over BOTH control and P05, lower loss and prospective continuation/target/ward protections; no automatic repeats.
+
+All43shop rows remain unassessed strict failures. Altar/teleport each have2examples and remain uncertified. Three-seed confirmation is absent. Both75-game reserved partitions remain sealed; no matches, further downloads, playing-bot changes or deployment. The PR remains draft/unmerged with auto-merge and merge queues disabled.

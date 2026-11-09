@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Actual local terrain evidence improves movement destination ranking beyond a matched center-only residual, with the reviewed backbone frozen.",
+  "motivation": "The reviewed V37 audit found 839 primary incorrect alternative pairs with identical destination terrain but different surrounding terrain already in the grid. This is not causal attribution or an accuracy ceiling. V6 already tested map CNNs and failed targeting guards; this contrast isolates a movement-only residual and freezes the shared backbone.",
+  "reference": "Reviewed V36 R00 round08; no checkpoint switching or R01 warm start.",
+  "control": "N00: candidate20 and frozen shared context128, plus center terrain repeated over a 3x3 patch with the same crop-availability mask as treatment.",
+  "treatment": "N01: identical parameters and initialization, but actual 3x3 in-map/blocked-in-map terrain from existing candidate grid. No new observations, entities, outcomes or future targets.",
+  "architecture": "Frozen139292 base parameters; trainable5697 residual parameters: Linear47to32 plus Linear128to32, tanh, Linear32to1 initialized zero. Add only to movement tile logits before original support mixture. Preserve other-family and raw special-logit formulas.",
+  "population": "Exact V36 all1085 contiguous fitting windows,34720rows,40groups; no selection on audit errors or labels.",
+  "budget": "Paired residual seed27;8passes,277760presentations,272optimizercalls each; identical32-root/up-to32-lane batches, reset/detach8, full-row NLL denominator, AdamWlr.0003decay.01clip5. Finalpass8only. Combined7200seconds; no repeats/extensions/restarts.",
+  "acceptance": "All V36 behavioral allocation conditions must pass against BOTH matched N00 and original frozen R00 reference. This includes complete movement/change gains, continuation protection, coordinate and within-alternative NLL gains, full-command/macro/targeting/false-positive guards and group-deletion signs.",
+  "scope": "Fitting-only residual-learning comparison. Passing only supports a separately reviewed transfer study. No generalization, strategy, playing-strength or promotion claim; original reference/category90/reliability/three-seed and data limitations remain.",
+  "review": "Sol xhigh for code/prefit; negative training results reviewed by Astra high. Separate actual review required before each arm; no fitting yet."
+}

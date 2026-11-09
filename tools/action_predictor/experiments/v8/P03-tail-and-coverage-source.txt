@@ -1,0 +1,53 @@
+"""Post-hoc error/coverage diagnostics from already measured P03 predictions."""
+from pathlib import Path
+import sys,json
+import numpy as np
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor.priority_modes_fit import verify_protocol,read
+from tools.action_predictor.priority_fit_v3 import VAL
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import frozen,sha
+from tools.action_predictor import reliable_train as rt
+from tools.action_predictor.observation_metrics import correctness
+verify_protocol();analysis=read(REPORTS/'P03-analysis.json');info=read(REPORTS/'P03.json')
+assert analysis['fit_report_sha256']==sha(REPORTS/'P03.json')
+def arrays(p):
+    with np.load(p) as z:return {k:z[k] for k in z.files}
+raw=arrays(VAL);features=arrays(WORK/'priority-validation.npz')
+mask=raw['y']==rt.LABELS.index('priority');indices=np.flatnonzero(mask)
+models={name:arrays(WORK/'runs'/name/'validation-predictions.npz') for name in ('P01','P02','P03')}
+assert sha(WORK/'runs/P03/validation-predictions.npz')==info['predictions_sha256']
+tails={};groups=[]
+for name,pred in models.items():
+    error=np.abs(pred['priority'][mask].astype(np.int64)-raw['priority'][mask].astype(np.int64))
+    tails[name]=dict(error_over_1000=int((error>1000).sum()),nonzero_target_wrong_sign=int(((np.sign(pred['priority'][mask])!=np.sign(raw['priority'][mask]))&(raw['priority'][mask]!=0)).sum()),maximum=int(error.max()))
+pred=models['P03'];_,joint=correctness(raw,pred)
+for group in np.unique(raw['group']):
+    selected=mask&(raw['group']==group)
+    groups.append(dict(group=int(group),support=int(selected.sum()),type_correct=int((selected&(pred['prediction']==raw['y'])).sum()),models={name:dict(exact=int((p['priority'][selected]==raw['priority'][selected]).sum()),joint=int(correctness(raw,p)[1][selected].sum())) for name,p in models.items()}))
+error=np.abs(pred['priority'][mask].astype(np.int64)-raw['priority'][mask].astype(np.int64))
+cases=[]
+for local in np.argsort(-error,kind='stable')[:20]:
+    row=int(indices[local]);v=features['values'][row]
+    cases.append(dict(row=row,group=int(raw['group'][row]),round=int(raw['round'][row]),target=int(raw['priority'][row]),prediction=int(pred['priority'][row]),absolute_error=int(error[local]),
+        personal_PRE_current=int(v[0]),personal_PRE_scheduled=int(v[2]),last_earlier_argument=int(v[4]) if v[5] else None,last_round_gap=int(v[6]),last_outside16=bool(features['last_outside_window'][row])))
+payload=dict(scope='Post-hoc objective error diagnostics; thresholds below are diagnostic only, never success criteria or inference inputs.',
+    fit_report_sha256=sha(REPORTS/'P03.json'),analysis_sha256=sha(REPORTS/'P03-analysis.json'),source_sha256=sha(__file__),
+    tail_errors=tails,groups=groups,largest_errors=cases,
+    unseen_values=dict(support=4,exact=0,joint=0,P03_nll=analysis['priority_strata']['unseen_value']['models']['P03']['nll'],P02_nll=analysis['priority_strata']['unseen_value']['models']['P02']['nll']),
+    rare_training_values=analysis['priority_strata']['training_count_1_19'],frequent_training_values=analysis['priority_strata']['training_count_100_plus'],
+    fallback_nonvocabulary_forecasts=analysis['fallback_gate']['nonvocabulary_forecasts'],
+    interpretation='Aggregate priority gains coexist with a worse maximum error and zero exact rare/unseen values. Full-support likelihood alone does not establish unseen-value predictive quality. No replacement or restored-input attribution.',
+    joint_correct_needed_for90=519,remaining_priority_joint_gap=519-analysis['metrics']['P03']['priority_joint'],frozen_type_ceiling=343,reserved_games_opened=0)
+frozen(REPORTS/'P03-tail-and-coverage-amendment.json',payload)
+(REPORTS/'P03-tail-and-coverage-source.txt').write_bytes(Path(__file__).read_bytes())
+lines=['# P03 tail and coverage amendment','',payload['interpretation'],'',
+    f"Priority joint correctness is57/576 (9.90%); at least519 is required, a gap of462. Frozen action decisions cap this branch at343/576.", '',
+    f"Maximum absolute priority error rises from P02's{tails['P02']['maximum']} to P03's{tails['P03']['maximum']}. Errors over1000: P02{tails['P02']['error_over_1000']}, P03{tails['P03']['error_over_1000']}. These are post-hoc diagnostic summaries, not new success criteria.", '',
+    'All four unseen-value rows remain wrong; their mean NLL worsens from8.14918 (P02) to11.80325 (P03). All65 rows whose targets appear1–19 times in augmented training remain in evaluation and get zero exact predictions; their NLL is8.03333 versus7.63282 for the frequency baseline. Of96 exact predictions,88 concern values seen at least100 times in training.', '',
+    'The learned fallback has full probability support, but none of the576 priority argmax forecasts is outside the training vocabulary. The supporting normalization/unseen-decoder tests establish capability, not actual unseen-value accuracy.', '',
+    'Per-group counts and20 largest errors with personal-PRE current/scheduled/earlier values are in the JSON. Recorded targets and error signs appear only in diagnostics, never inference inputs. No reserved games were opened.']
+(REPORTS/'P03-TAIL-NOTE.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps({k:payload[k] for k in ('tail_errors','groups','remaining_priority_joint_gap')},indent=2))

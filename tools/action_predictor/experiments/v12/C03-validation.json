@@ -1,0 +1,808 @@
+{
+  "plan_sha256": "467b109e7c5551b591fae58dd1ea767f2564915ec13280bd5fe9379e0a9aee74",
+  "arguments_sha256": "274adf5ed729919f1822dbeb22d83bab270c4f1a02f2e196e4c63e06e9b59575",
+  "data_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "candidates_sha256": "36eaecd7a3b60663b0fe1ae05f130caced8931c8bec3b69c5c8b60c1b558fc3c",
+  "indices_sha256": "4b1456b362a018225897843baa151e0d83d503cdfb393fc155231ba72dcb81d9",
+  "G00_prediction_sha256": "f6ca6a970b05e519d28dc378703a338012718b675806d292d467f043a15f24ea",
+  "result": {
+    "covered": 13371,
+    "union_with_G00": 13371,
+    "missing": 1068,
+    "rescues_beyond_G00": 1861,
+    "per_family": {
+      "<unknown>": {
+        "rows": 0,
+        "library_covered": 0,
+        "union_with_G00": 0,
+        "union_rate": null
+      },
+      "altar": {
+        "rows": 2,
+        "library_covered": 2,
+        "union_with_G00": 2,
+        "union_rate": 1.0
+      },
+      "attack": {
+        "rows": 985,
+        "library_covered": 976,
+        "union_with_G00": 976,
+        "union_rate": 0.9908629441624366
+      },
+      "blocked": {
+        "rows": 110,
+        "library_covered": 55,
+        "union_with_G00": 55,
+        "union_rate": 0.5
+      },
+      "cancel": {
+        "rows": 2589,
+        "library_covered": 2589,
+        "union_with_G00": 2589,
+        "union_rate": 1.0
+      },
+      "cast_0": {
+        "rows": 213,
+        "library_covered": 206,
+        "union_with_G00": 206,
+        "union_rate": 0.9671361502347418
+      },
+      "cast_1": {
+        "rows": 243,
+        "library_covered": 165,
+        "union_with_G00": 165,
+        "union_rate": 0.6790123456790124
+      },
+      "end": {
+        "rows": 4096,
+        "library_covered": 4096,
+        "union_with_G00": 4096,
+        "union_rate": 1.0
+      },
+      "move": {
+        "rows": 2362,
+        "library_covered": 2032,
+        "union_with_G00": 2032,
+        "union_rate": 0.8602878916172735
+      },
+      "priority": {
+        "rows": 576,
+        "library_covered": 109,
+        "union_with_G00": 109,
+        "union_rate": 0.1892361111111111
+      },
+      "recall": {
+        "rows": 3084,
+        "library_covered": 3084,
+        "union_with_G00": 3084,
+        "union_rate": 1.0
+      },
+      "shop": {
+        "rows": 43,
+        "library_covered": 0,
+        "union_with_G00": 0,
+        "union_rate": 0.0
+      },
+      "submit": {
+        "rows": 22,
+        "library_covered": 22,
+        "union_with_G00": 22,
+        "union_rate": 1.0
+      },
+      "teleport": {
+        "rows": 2,
+        "library_covered": 0,
+        "union_with_G00": 0,
+        "union_rate": 0.0
+      },
+      "ward": {
+        "rows": 112,
+        "library_covered": 35,
+        "union_with_G00": 35,
+        "union_rate": 0.3125
+      }
+    },
+    "rows": 14439,
+    "groups": 5,
+    "old_support_missing": 1301,
+    "old_missing_recovered": 236,
+    "old_support_lost": 3,
+    "per_source_matches": {
+      "camp_near/greedy_yx": 468,
+      "camp_near/field_yx": 515,
+      "camp_near/field_xy": 468,
+      "camp_hp/greedy_yx": 481,
+      "camp_hp/field_yx": 546,
+      "camp_hp/field_xy": 481,
+      "enemy_near/greedy_yx": 225,
+      "enemy_near/field_yx": 282,
+      "enemy_near/field_xy": 225,
+      "bank/greedy_yx": 615,
+      "bank/field_yx": 649,
+      "bank/field_xy": 615,
+      "home/greedy_yx": 307,
+      "home/field_yx": 354,
+      "home/field_xy": 307,
+      "attack/near": 886,
+      "attack/hp": 934,
+      "attack/fraction": 940,
+      "cast_0/near": 183,
+      "cast_0/hp": 173,
+      "cast_0/fraction": 195,
+      "cast_1/near": 60,
+      "cast_1/hp": 55,
+      "cast_1/fraction": 65,
+      "ward/self": 0,
+      "ward/toward_bank": 5,
+      "submit/bank": 22,
+      "end": 4096,
+      "cancel": 2589,
+      "recall": 3084,
+      "priority/P05": 109,
+      "head/move": 1440,
+      "head/blocked": 1183,
+      "head/attack": 943,
+      "head/cast_0": 193,
+      "head/cast_1": 146,
+      "head/ward": 24,
+      "head/submit": 22,
+      "head/altar": 2,
+      "head/teleport": 0,
+      "attempt/continue1": 1196,
+      "attempt/continue2": 12,
+      "attempt/prior_blocked": 45,
+      "attempt/camp2": 0,
+      "attempt/bank2": 3,
+      "ward2/camp": 2,
+      "ward2/enemy": 4,
+      "ward2/bank": 3,
+      "ward2/continue": 17,
+      "ground0/camp": 0,
+      "ground0/enemy": 0,
+      "ground0/continue": 0,
+      "ground1/camp": 10,
+      "ground1/enemy": 9,
+      "ground1/continue": 34,
+      "attack/nearest_lock": 4,
+      "attack/weakest_lock": 4
+    },
+    "distinct_outputs": {
+      "2": 329,
+      "6": 465,
+      "7": 5834,
+      "8": 34,
+      "9": 163,
+      "10": 356,
+      "11": 412,
+      "12": 479,
+      "13": 505,
+      "14": 619,
+      "15": 769,
+      "16": 891,
+      "17": 897,
+      "18": 751,
+      "19": 646,
+      "20": 470,
+      "21": 303,
+      "22": 211,
+      "23": 145,
+      "24": 88,
+      "25": 46,
+      "26": 16,
+      "27": 6,
+      "28": 1,
+      "29": 3
+    },
+    "same31_P05_replacement_on_identical_rows": {
+      "old_union": 13138,
+      "new_union": 13176,
+      "priority_covered_old": 0,
+      "priority_covered_new": 109
+    },
+    "full_original_split_priority_replacement": {
+      "rows": 14439,
+      "old_union": 13138,
+      "new_union": 13176,
+      "per_family": {
+        "<unknown>": {
+          "rows": 0,
+          "old_union": 0,
+          "new_union": 0
+        },
+        "altar": {
+          "rows": 2,
+          "old_union": 0,
+          "new_union": 0
+        },
+        "attack": {
+          "rows": 985,
+          "old_union": 972,
+          "new_union": 972
+        },
+        "blocked": {
+          "rows": 110,
+          "old_union": 8,
+          "new_union": 8
+        },
+        "cancel": {
+          "rows": 2589,
+          "old_union": 2589,
+          "new_union": 2589
+        },
+        "cast_0": {
+          "rows": 213,
+          "old_union": 206,
+          "new_union": 206
+        },
+        "cast_1": {
+          "rows": 243,
+          "old_union": 125,
+          "new_union": 125
+        },
+        "end": {
+          "rows": 4096,
+          "old_union": 4096,
+          "new_union": 4096
+        },
+        "move": {
+          "rows": 2362,
+          "old_union": 1953,
+          "new_union": 1953
+        },
+        "priority": {
+          "rows": 576,
+          "old_union": 71,
+          "new_union": 109
+        },
+        "recall": {
+          "rows": 3084,
+          "old_union": 3084,
+          "new_union": 3084
+        },
+        "shop": {
+          "rows": 43,
+          "old_union": 0,
+          "new_union": 0
+        },
+        "submit": {
+          "rows": 22,
+          "old_union": 22,
+          "new_union": 22
+        },
+        "teleport": {
+          "rows": 2,
+          "old_union": 0,
+          "new_union": 0
+        },
+        "ward": {
+          "rows": 112,
+          "old_union": 12,
+          "new_union": 12
+        }
+      }
+    },
+    "full_original_split_parameter_bridge_diagnostic": {
+      "covered": 2897,
+      "union_with_G00": 11861,
+      "missing": 2578,
+      "rescues_beyond_G00": 351,
+      "per_family": {
+        "<unknown>": {
+          "rows": 0,
+          "library_covered": 0,
+          "union_with_G00": 0,
+          "union_rate": null
+        },
+        "altar": {
+          "rows": 2,
+          "library_covered": 2,
+          "union_with_G00": 2,
+          "union_rate": 1.0
+        },
+        "attack": {
+          "rows": 985,
+          "library_covered": 943,
+          "union_with_G00": 943,
+          "union_rate": 0.9573604060913705
+        },
+        "blocked": {
+          "rows": 110,
+          "library_covered": 24,
+          "union_with_G00": 24,
+          "union_rate": 0.21818181818181817
+        },
+        "cancel": {
+          "rows": 2589,
+          "library_covered": 0,
+          "union_with_G00": 2535,
+          "union_rate": 0.9791425260718424
+        },
+        "cast_0": {
+          "rows": 213,
+          "library_covered": 193,
+          "union_with_G00": 193,
+          "union_rate": 0.9061032863849765
+        },
+        "cast_1": {
+          "rows": 243,
+          "library_covered": 146,
+          "union_with_G00": 146,
+          "union_rate": 0.6008230452674898
+        },
+        "end": {
+          "rows": 4096,
+          "library_covered": 0,
+          "union_with_G00": 3957,
+          "union_rate": 0.966064453125
+        },
+        "move": {
+          "rows": 2362,
+          "library_covered": 1434,
+          "union_with_G00": 1434,
+          "union_rate": 0.607112616426757
+        },
+        "priority": {
+          "rows": 576,
+          "library_covered": 109,
+          "union_with_G00": 109,
+          "union_rate": 0.1892361111111111
+        },
+        "recall": {
+          "rows": 3084,
+          "library_covered": 0,
+          "union_with_G00": 2472,
+          "union_rate": 0.8015564202334631
+        },
+        "shop": {
+          "rows": 43,
+          "library_covered": 0,
+          "union_with_G00": 0,
+          "union_rate": 0.0
+        },
+        "submit": {
+          "rows": 22,
+          "library_covered": 22,
+          "union_with_G00": 22,
+          "union_rate": 1.0
+        },
+        "teleport": {
+          "rows": 2,
+          "library_covered": 0,
+          "union_with_G00": 0,
+          "union_rate": 0.0
+        },
+        "ward": {
+          "rows": 112,
+          "library_covered": 24,
+          "union_with_G00": 24,
+          "union_rate": 0.21428571428571427
+        }
+      },
+      "meaning": "Conditional-coordinate observed-representation oracle only; not all are resolved executable entity commands; utilities absent. No model chosen-family gate. No achieved accuracy claim."
+    }
+  },
+  "bindings": [
+    {
+      "raw": "213b526318b71ea4f8e5951d108b8e77eaedb51368c4b33874ae51a07dbdc891",
+      "rows": 511,
+      "shard_sha256": "df912b7e661b9604e546d370c346a48c6d4aff9e897b61747be6beb4f6132025",
+      "targets_sha256": "95b0af639c5fb2adfc8042ab97667a3a712abd06f2758abd26beab7bb29fafe4",
+      "abstention_reasons": {
+        "unavailable_entity": 312,
+        "observable_readiness_or_resource": 4182,
+        "unavailable_model_coordinate": 183,
+        "missing_position_or_outside_public_map": 5
+      },
+      "entity_resolution": {
+        "not_required": 7116,
+        "unique_visible": 836,
+        "ground_position": 270
+      }
+    },
+    {
+      "raw": "0d7cbc1ea5d12541d03aadf95297ae88bd86be6d2104af4d08d4f2c00336397f",
+      "rows": 715,
+      "shard_sha256": "0b4c5cdf6a23a72bda44be9c8415ea21b140ee0d626ce5aadc8d35ba42c9b77b",
+      "targets_sha256": "9befb409303270dff67485f260c9a22dc53c3984f7bd1d44fafcd6a19ed6ff40",
+      "abstention_reasons": {
+        "unavailable_entity": 692,
+        "observable_readiness_or_resource": 5429,
+        "missing_position_or_outside_public_map": 13,
+        "unavailable_model_coordinate": 63
+      },
+      "entity_resolution": {
+        "not_required": 10378,
+        "unique_visible": 1208,
+        "ground_position": 198
+      }
+    },
+    {
+      "raw": "1489e159553b4aced0304fba858ec39266fe6ab8f2e607bd1d411dd1ce8efaa1",
+      "rows": 291,
+      "shard_sha256": "8142007ec0531511825e0b771ac2d34f5478b1cada4efb71bce197cc6d1517aa",
+      "targets_sha256": "d7e8b8c4830f8c166c9033834ea38e8b813650787490d00b76c9d6cecc88d72d",
+      "abstention_reasons": {
+        "unavailable_entity": 234,
+        "observable_readiness_or_resource": 1933,
+        "missing_position_or_outside_public_map": 8
+      },
+      "entity_resolution": {
+        "not_required": 4407,
+        "unique_visible": 564,
+        "ground_position": 259
+      }
+    },
+    {
+      "raw": "748a155fe5fe70dee7a65b8293c631abd81bf24805fc7a1099e9b1145f77d7c0",
+      "rows": 518,
+      "shard_sha256": "25f66566177867124264f6b0a87af83f1f855903050112050404c142961e1627",
+      "targets_sha256": "9fce7caa848992a787823826313277ba7d0f17518065598ec4f6c8fe25d25569",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 2832,
+        "unavailable_entity": 731,
+        "missing_position_or_outside_public_map": 4,
+        "unavailable_model_coordinate": 263
+      },
+      "entity_resolution": {
+        "not_required": 5994,
+        "unique_visible": 608,
+        "ground_position": 148
+      }
+    },
+    {
+      "raw": "e376369aa8c54f9f38937632e4e80f42d1f443ad1b03499e4bbb7ca1d949a0aa",
+      "rows": 718,
+      "shard_sha256": "ea89a59e87e6311eca4521d11ab2b2e15f716bb7fc137ade9e21d3764b2d4695",
+      "targets_sha256": "3ec2ac6ac391c04a442792644df4578a1e5e45dbef89ce7dca4d80b1e2f81312",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 5031,
+        "unavailable_entity": 738,
+        "unavailable_model_coordinate": 6
+      },
+      "entity_resolution": {
+        "not_required": 9786,
+        "unique_visible": 1212,
+        "ground_position": 270
+      }
+    },
+    {
+      "raw": "4a10e87aed5187146862b5800152a2fde1ca69c85bc805084da96358399a225c",
+      "rows": 536,
+      "shard_sha256": "815b7fec2cf85e7f94733994d6ef943f90ce3ab0b6caa43a487bea180726c9a0",
+      "targets_sha256": "6df2219c50c2c877c4e9b1fa779949e1a978f09a14eee82d55457622b4205be6",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 3563,
+        "unavailable_entity": 566,
+        "unavailable_model_coordinate": 217,
+        "missing_position_or_outside_public_map": 3
+      },
+      "entity_resolution": {
+        "not_required": 7211,
+        "unique_visible": 832,
+        "ground_position": 227
+      }
+    },
+    {
+      "raw": "46cd250e7d311ea71bd6e6984fc3cc194b3c82ad1981bb54d0496d69b0ad3c46",
+      "rows": 625,
+      "shard_sha256": "95ee6eed8f71715e832e3764d6b7710998438d9bc2405cb40a2bdfe5dfc8374c",
+      "targets_sha256": "adf1a0f25f76b639aa69237be721f660c5ff289f22d33bd536752c4f226e9768",
+      "abstention_reasons": {
+        "unavailable_entity": 750,
+        "observable_readiness_or_resource": 4060,
+        "missing_position_or_outside_public_map": 4,
+        "unavailable_model_coordinate": 37
+      },
+      "entity_resolution": {
+        "not_required": 8556,
+        "unique_visible": 1008,
+        "ground_position": 249
+      }
+    },
+    {
+      "raw": "2bf54e5c110677a4c1fa4352ab31994986afaab7d9f525bc2379d8cca4bdd062",
+      "rows": 501,
+      "shard_sha256": "06fd6329046f644f42a5418199877af9f9179076c5e887881d84246975b5ddee",
+      "targets_sha256": "791cea095450c855c37002dcd181f54ab9deb22433c6af5030086fd7b53e9512",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 4684,
+        "unavailable_entity": 252,
+        "missing_position_or_outside_public_map": 27,
+        "unavailable_model_coordinate": 4
+      },
+      "entity_resolution": {
+        "not_required": 7682,
+        "unique_visible": 756,
+        "ground_position": 189
+      }
+    },
+    {
+      "raw": "d98f7f7b11d54ac46122ccd9b687a82ebf1a63104b52a36fd7691ccc1fb0867f",
+      "rows": 715,
+      "shard_sha256": "7624b83718ba1a2ffaaae186f8f20ea269423d80e5655dc7553c853336fc8281",
+      "targets_sha256": "faa81212b0f5879a1e269fe873dd4190bf47dc16238881a7c0e7495a96a1bf20",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 4646,
+        "unavailable_entity": 859,
+        "unavailable_model_coordinate": 63
+      },
+      "entity_resolution": {
+        "not_required": 9109,
+        "unique_visible": 1324,
+        "ground_position": 197
+      }
+    },
+    {
+      "raw": "895c046b02bc35bcab039da89498c5a531e029acf8e6bfe589da7549f707b4b2",
+      "rows": 734,
+      "shard_sha256": "f3101a2fc56fa5fca4eb308e22ca52e79d57d53ce9cafd3525bddb8cf377188c",
+      "targets_sha256": "34561a6b38ddada2f50b58fc015c96970caa5c6ddffd6b246d5cd6731250fb19",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 5660,
+        "unavailable_entity": 703,
+        "unavailable_model_coordinate": 28
+      },
+      "entity_resolution": {
+        "not_required": 10249,
+        "unique_visible": 1201,
+        "ground_position": 177,
+        "personal_api_target_hypothesis": 2
+      }
+    },
+    {
+      "raw": "64d2bdf9c7287cc22b924141b1bb84d75bfa90d0a1c55506b94aa9fdc655b08e",
+      "rows": 731,
+      "shard_sha256": "28eda63ba0ae82d0ef2e3e33d9aedffc6ce151bc02d185d22235f5143ae7366f",
+      "targets_sha256": "15d2438b7ebeee691ad8d4b284d8682ce1d21f96565baa2d14f17f67e2e054da",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 6789,
+        "unavailable_entity": 375,
+        "missing_position_or_outside_public_map": 13
+      },
+      "entity_resolution": {
+        "not_required": 11247,
+        "unique_visible": 1180,
+        "ground_position": 278
+      }
+    },
+    {
+      "raw": "ccd105bb21396542d1666926a532fc0c2af069102d341315acd7622d61140a98",
+      "rows": 444,
+      "shard_sha256": "cc84fe911aef5d62b10fa19cc27296981611ece142da288dad7bb6f170fb672c",
+      "targets_sha256": "07d0e67ce71b770ee45faf00f31ef5523d589ae45a22aa18fc3b925848776a67",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 2832,
+        "unavailable_entity": 509,
+        "unavailable_model_coordinate": 180,
+        "missing_position_or_outside_public_map": 1
+      },
+      "entity_resolution": {
+        "not_required": 5511,
+        "unique_visible": 677,
+        "ground_position": 131
+      }
+    },
+    {
+      "raw": "2efc76771b78a267d4a7d82535a7f4a4d59e649b2d48378b4e44a2e479e100ce",
+      "rows": 444,
+      "shard_sha256": "4d0ee6078d19268409b0407ba33e3963e8c9090b0d04238584c1a795322200ce",
+      "targets_sha256": "1e2c0fa726f122cfd545f17a343fc3ad54ca8be6acd7ac76f94c1d4302754640",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 2925,
+        "unavailable_entity": 398,
+        "unavailable_model_coordinate": 486,
+        "missing_position_or_outside_public_map": 4
+      },
+      "entity_resolution": {
+        "not_required": 6354,
+        "unique_visible": 708,
+        "ground_position": 195
+      }
+    },
+    {
+      "raw": "f2009d38b647f2c6d00d09b76efbe22070f0bc8ee4cbe342c785cb43e71273e1",
+      "rows": 482,
+      "shard_sha256": "50f67869ad87000580a73e31ffbaf7546262636bae13aea257d659d106038bab",
+      "targets_sha256": "938727eb83dcfb5aec3945922465898c54bf65d8c6d59936c9bd6c054419110c",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 3690,
+        "unavailable_entity": 481,
+        "missing_position_or_outside_public_map": 3
+      },
+      "entity_resolution": {
+        "not_required": 6808,
+        "unique_visible": 716,
+        "ground_position": 189
+      }
+    },
+    {
+      "raw": "30d801fb5abc183f0adaf499f577da7f1542eede102e1c8bd6d5fc5d913836f5",
+      "rows": 725,
+      "shard_sha256": "e22ee7c3b673f5a332a7f765ae5cbc2ee604547ef661c9ca70996acebcb8e119",
+      "targets_sha256": "2291e0c2a78674aeb9711b69849ed8c585552582a848a892482c15d9864cbdbb",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 5566,
+        "unavailable_entity": 688,
+        "missing_position_or_outside_public_map": 6,
+        "unavailable_model_coordinate": 65
+      },
+      "entity_resolution": {
+        "not_required": 11127,
+        "unique_visible": 1316,
+        "ground_position": 238
+      }
+    },
+    {
+      "raw": "58fcf5d043c58fff897da0040bf2961c33a5553b62ca07d6c3afe3c682cd9437",
+      "rows": 459,
+      "shard_sha256": "a7e3e2941e4f188dcb4a7143aa36dcba073e86ef4c919ad2737923784c9fed5a",
+      "targets_sha256": "cb486e2165767e439ddfe90b33601544a6f8e3e0c3b832407638b7b1d7b5be6c",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 3784,
+        "unavailable_entity": 328,
+        "missing_position_or_outside_public_map": 11,
+        "unavailable_model_coordinate": 54
+      },
+      "entity_resolution": {
+        "not_required": 6253,
+        "unique_visible": 880,
+        "ground_position": 257
+      }
+    },
+    {
+      "raw": "d048b3c63611636cfeaa37e57c93b5f0bfc0e0d7c51fa661a49e50aafcae6c8d",
+      "rows": 578,
+      "shard_sha256": "99f3c74a811d29e1bd72696f8806a0ef60f138f4d3870379b3e2a34983a802cd",
+      "targets_sha256": "c84af811a1affa6fd06f9007647574211fd24f67deffab3a61a6e21b417e593a",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 4215,
+        "unavailable_entity": 615,
+        "unavailable_model_coordinate": 108
+      },
+      "entity_resolution": {
+        "not_required": 8128,
+        "unique_visible": 856,
+        "ground_position": 202
+      }
+    },
+    {
+      "raw": "c136bf775b228cd285ec59e2437a13dbd7c8191b21a53ca2f14469fda3a22d5b",
+      "rows": 714,
+      "shard_sha256": "ebbca16ef5b02f11c0b68f5819dfe00169e0aaac10182dfbeed2395f066a16bd",
+      "targets_sha256": "b76bdf2371011d42a044ec556294cdd7357e215dc230ec15a8c94c510b9ae5c2",
+      "abstention_reasons": {
+        "unavailable_entity": 798,
+        "observable_readiness_or_resource": 5043,
+        "unavailable_model_coordinate": 81,
+        "missing_position_or_outside_public_map": 2
+      },
+      "entity_resolution": {
+        "not_required": 9010,
+        "unique_visible": 1206,
+        "ground_position": 230,
+        "personal_api_target_hypothesis": 6
+      }
+    },
+    {
+      "raw": "6531a13db23a276e8abb21794c46650cf401b5152e0fbe9e85bf919d7f0d12d3",
+      "rows": 796,
+      "shard_sha256": "f166eb4a7eb88d20bfc85346c421855fdc472775bd8813ed2db0e4c99c460275",
+      "targets_sha256": "1e8a8d42f45940e4a50ba3e14efea71fdf7746b19f988af576d01a7ef0b927a8",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 6105,
+        "unavailable_entity": 757,
+        "unavailable_model_coordinate": 52
+      },
+      "entity_resolution": {
+        "not_required": 11569,
+        "unique_visible": 1317,
+        "ground_position": 288,
+        "personal_api_target_hypothesis": 2
+      }
+    },
+    {
+      "raw": "e161b6b5426f0ae569dbfa339a3a6ba588f8006812fc403bcfbcc22363a4ffc6",
+      "rows": 490,
+      "shard_sha256": "4fd7fd154cfb0f0eb2c8e69dde37c5b879204725a2afff9a631824d9847d4cdc",
+      "targets_sha256": "5ec50ff93bd97ff6a8636ad362a5a4fa547acb68c7c66e9f88454edf8ae369cb",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 3372,
+        "unavailable_entity": 400,
+        "unavailable_model_coordinate": 387,
+        "missing_position_or_outside_public_map": 11
+      },
+      "entity_resolution": {
+        "not_required": 6546,
+        "unique_visible": 882,
+        "ground_position": 207,
+        "personal_api_target_hypothesis": 6
+      }
+    },
+    {
+      "raw": "675cc775d6158e3bea5937066b954994ce017b54d4a5e9a22df976dff531a432",
+      "rows": 490,
+      "shard_sha256": "df1127925e62cfecafb14acc9b7e86e65a4c979dbd7918a224392ba646022f86",
+      "targets_sha256": "442250f28c96f52b23f4c265b7b328b1c482275854b8c416144d130597259602",
+      "abstention_reasons": {
+        "observable_readiness_or_resource": 3256,
+        "unavailable_entity": 441,
+        "unavailable_model_coordinate": 432
+      },
+      "entity_resolution": {
+        "not_required": 6972,
+        "unique_visible": 809,
+        "ground_position": 258,
+        "personal_api_target_hypothesis": 4
+      }
+    },
+    {
+      "raw": "4f0fc92e67ac94421958d835f161875b0b78f63a9944ba03311602732988f524",
+      "rows": 455,
+      "shard_sha256": "fee28e4d9d8e42708d1c306a71a59e43dfc2d0d5cd3f5f8373d7310301f9ee66",
+      "targets_sha256": "3385e088d5daca36d09164e561f5e0445faf13171a33701bc936bdda327fde09",
+      "abstention_reasons": {
+        "unavailable_entity": 332,
+        "observable_readiness_or_resource": 3659,
+        "unavailable_model_coordinate": 72
+      },
+      "entity_resolution": {
+        "not_required": 6146,
+        "unique_visible": 688,
+        "ground_position": 166
+      }
+    },
+    {
+      "raw": "b08b3e4fa1827f86d060e49c7b7523df72348347cf21668eabfc80d91929798b",
+      "rows": 714,
+      "shard_sha256": "800d7e51eea5ff97b35bf7bfc9efe7e254bcd3d28a47f2f3a2ff246684cd1524",
+      "targets_sha256": "a414197251244982eb8963c54186d9c3818d1c50676e8bef7945889dbaccb6fa",
+      "abstention_reasons": {
+        "unavailable_entity": 478,
+        "observable_readiness_or_resource": 5961,
+        "unavailable_model_coordinate": 207
+      },
+      "entity_resolution": {
+        "not_required": 11025,
+        "unique_visible": 1192,
+        "ground_position": 271
+      }
+    },
+    {
+      "raw": "02930b1f6290d7f786c3eb1006bcbf77b9a153464a1df44e9a60679ecd08bf8b",
+      "rows": 638,
+      "shard_sha256": "0179e4f91e11f1a9c1c89a2032006b1a981e2dd1309ef5fb7856dece7c67b4da",
+      "targets_sha256": "6cfe45f40d5186a721a55f707a8492c518970a8daa689ed0947471e8377f7e5a",
+      "abstention_reasons": {
+        "unavailable_entity": 217,
+        "observable_readiness_or_resource": 6142,
+        "unavailable_model_coordinate": 1
+      },
+      "entity_resolution": {
+        "not_required": 8499,
+        "unique_visible": 1536,
+        "ground_position": 464,
+        "personal_api_target_hypothesis": 4
+      }
+    },
+    {
+      "raw": "7821e163c66ff783c9fb5e58e2980c8485f075497577af4923e7d4c750ddbf7d",
+      "rows": 415,
+      "shard_sha256": "322d1488f7c21b131e454cd9416c5dac02c90ccaf42a2747e5bbf9fd855e2fbe",
+      "targets_sha256": "c1da3326ea05f73caae11ab23ab3d436855efd5ef04a5475749315bd6661124a",
+      "abstention_reasons": {
+        "unavailable_entity": 325,
+        "observable_readiness_or_resource": 3372,
+        "unavailable_model_coordinate": 63
+      },
+      "entity_resolution": {
+        "not_required": 6389,
+        "unique_visible": 776,
+        "ground_position": 124
+      }
+    }
+  ],
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "shop_assessed": 0,
+  "strict_entity_identity_certified": false
+}

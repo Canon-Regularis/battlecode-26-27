@@ -1,0 +1,171 @@
+{
+  "arm": "E00",
+  "result_sha256": "2959c335946fdd9d0ced3d8dca09b726c20673b8ace3596471264c637ee484ef",
+  "source_sha256": "d142f919d57e70751d44218d51d6bc066b54535468c377791c72256aa0c5c339",
+  "selected_round": 6,
+  "selected_updates": 10456,
+  "completed_updates": 20910,
+  "summary": {
+    "complete": 12117,
+    "rows": 14439,
+    "macro_f1": 0.5969669131306066,
+    "joint_nll": 0.636830450902762,
+    "movement": {
+      "move": {
+        "rows": 2362,
+        "complete": 1343
+      },
+      "continue": {
+        "rows": 1198,
+        "complete": 1048
+      },
+      "change": {
+        "rows": 1158,
+        "complete": 292
+      },
+      "startup": {
+        "rows": 6,
+        "complete": 3
+      },
+      "blocked": {
+        "rows": 110,
+        "complete": 2
+      }
+    },
+    "categories": {
+      "<unknown>": {
+        "support": 0,
+        "complete": 0,
+        "conditional_accuracy": null,
+        "type_f1": null
+      },
+      "altar": {
+        "support": 2,
+        "complete": 0,
+        "conditional_accuracy": 1.0,
+        "type_f1": 0.0
+      },
+      "attack": {
+        "support": 985,
+        "complete": 900,
+        "conditional_accuracy": 0.9563451776649746,
+        "type_f1": 0.9181773640372366
+      },
+      "blocked": {
+        "support": 110,
+        "complete": 2,
+        "conditional_accuracy": 0.20909090909090908,
+        "type_f1": 0.3973509933774834
+      },
+      "cancel": {
+        "support": 2589,
+        "complete": 2521,
+        "conditional_accuracy": null,
+        "type_f1": 0.9581908019764348
+      },
+      "cast_0": {
+        "support": 213,
+        "complete": 151,
+        "conditional_accuracy": 0.9107981220657277,
+        "type_f1": 0.8396946564885496
+      },
+      "cast_1": {
+        "support": 243,
+        "complete": 73,
+        "conditional_accuracy": 0.5473251028806584,
+        "type_f1": 0.5365853658536586
+      },
+      "end": {
+        "support": 4096,
+        "complete": 3985,
+        "conditional_accuracy": null,
+        "type_f1": 0.972900390625
+      },
+      "move": {
+        "support": 2362,
+        "complete": 1343,
+        "conditional_accuracy": 0.6007620660457239,
+        "type_f1": 0.9250053112385809
+      },
+      "priority": {
+        "support": 576,
+        "complete": 119,
+        "conditional_accuracy": 0.4305555555555556,
+        "type_f1": 0.5597104945717732
+      },
+      "recall": {
+        "support": 3084,
+        "complete": 3004,
+        "conditional_accuracy": null,
+        "type_f1": 0.9148774173899802
+      },
+      "shop": {
+        "support": 43,
+        "complete": 0,
+        "conditional_accuracy": null,
+        "type_f1": 0.9032258064516129
+      },
+      "submit": {
+        "support": 22,
+        "complete": 19,
+        "conditional_accuracy": 1.0,
+        "type_f1": 0.4318181818181818
+      },
+      "teleport": {
+        "support": 2,
+        "complete": 0,
+        "conditional_accuracy": 0.0,
+        "type_f1": 0.0
+      },
+      "ward": {
+        "support": 112,
+        "complete": 0,
+        "conditional_accuracy": 0.22321428571428573,
+        "type_f1": 0.0
+      }
+    }
+  },
+  "comparisons": {
+    "H01": {
+      "complete_gain": 2,
+      "movement_gains": {
+        "move": 8,
+        "continue": 3,
+        "change": 5,
+        "startup": 0,
+        "blocked": -4
+      },
+      "joint_nll_delta": 0.00030432369039734564,
+      "macro_f1_delta": -0.0007576330998066982,
+      "numerical_guards": {
+        "joint_move_gain_at_least24": false,
+        "joint_change_gain_at_least12": false,
+        "lower_full_DEV_NLL": false,
+        "continuation_loss_at_most_half_point": true
+      },
+      "targeting_guards": {
+        "attack": {
+          "delta_percentage_points": 0.0,
+          "passes_two_point_guard": true
+        },
+        "cast_0": {
+          "delta_percentage_points": 0.0,
+          "passes_two_point_guard": true
+        },
+        "cast_1": {
+          "delta_percentage_points": -1.2345679012345734,
+          "passes_two_point_guard": true
+        }
+      },
+      "remaining_gate": "Inspect every original category and all stronger retained comparisons; these numerical guards alone do not certify the full gate, reliability, three-seed robustness or strategy."
+    }
+  },
+  "reference_hashes": {
+    "H01": "e38e005636eb27acc48c41860e694b1b78bb9bcb2559ca7b8dd76f783540375b"
+  },
+  "stronger_comparisons": "Full result JSON includes paired G00/L02/JP02 comparisons; E01 includes E00.",
+  "limits": "Five repeatedly reused DEV groups, single seed, observed earlier actions; no autonomous strategy or untouched-test evidence.",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false
+}

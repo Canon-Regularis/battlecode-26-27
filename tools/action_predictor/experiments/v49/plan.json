@@ -1,0 +1,43 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\expanded_code_fit.py": "133ae9c7e8db5d438745e6c453b5f0ba62b145a8550c3ab0ad766740663b98c9",
+    "tools\\action_predictor\\behavior_segments\\test_expanded_code_fit.py": "8ecf62da9c54d1bd629d85b52c64c4ca9bba66f2a85f09e7736b88ed4df498e9"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v49\\assembly-plan.json": "e7eccdeab799cb98a69d01dd9c884befc7f5480dadcc685ac7aa99c43e74080a",
+    "tools\\action_predictor\\experiments\\v49\\data.json": "b104456c1da568c12f1813899874c595082f8ba11699b185e73dac454534277c",
+    "tools\\action_predictor\\experiments\\v49\\parity.json": "9d643e45d7b51209cf64bb4907546bdc3cead54a4d791f8182834b474075940c",
+    "tools\\action_predictor\\experiments\\v49\\cache.json": "57e28435bf8fdaaf391bf313b8b10f02a49a805e8ce910eec4b0aa66bc28ea0d",
+    ".cambc\\action-predictor\\v49\\labels.json": "99770a19eae344c7c8fd2b85ba2549cd1b59cd1c0f3422f697d275414f51d1b0",
+    "tools\\action_predictor\\experiments\\v46\\selection.json": "cc0659e7ee05e2510d66ab7828991be3a0e704cace5a9de63a9370e5314ace32",
+    "tools\\action_predictor\\experiments\\v46\\refit.json": "af2d48dc888bb229087cacec058073abe62475a30278625c4fe5226dec1f17f6",
+    ".cambc\\action-predictor\\v46\\selected.pt": "1b4e0072fb7c8cf18f645f2da404011cd5c6567ed3a930f576211967740489fa",
+    ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold0\\epoch-096.pt": "29d36f2437e03650aeff4f6837ede55469c9e809103a70e37258f58fc557a844",
+    ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold1\\epoch-096.pt": "baa130a5697f8a83d324a5b853d9c4ed35b20244c7ae2f77587d2dba7546cbf0",
+    ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold2\\epoch-096.pt": "d856b1f5b51f7e2dfd80123aa71173ea1c43e7a80bbf9923ea29c3f7e78b95b0",
+    ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold3\\epoch-096.pt": "17e7acf6ad18feec965f04a7ea5ce9671cb6ec3db164e801e8f9a554db775946"
+  },
+  "fold_initial": {
+    "0": ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold0\\epoch-096.pt",
+    "1": ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold1\\epoch-096.pt",
+    "2": ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold2\\epoch-096.pt",
+    "3": ".cambc\\action-predictor\\v46\\tuning\\lr0.0003-fold3\\epoch-096.pt"
+  },
+  "full_initial": ".cambc\\action-predictor\\v46\\selected.pt",
+  "seed": 49001,
+  "learning_rates": [
+    0.0001,
+    0.0003
+  ],
+  "epochs": 32,
+  "evaluate_every": 4,
+  "batch_windows": 16,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "tuning_seconds_cap": 1800,
+  "refit_seconds_cap": 600,
+  "target_accuracy": 0.85,
+  "objective": "Same context/GRU/code weights and unweighted observed-query CE asV46. Warm start from the corresponding V46fold or full-fit checkpoint, fresh optimizer. All1607eligible windows in the same32fitting groups are available; no map or head architecture changes.",
+  "selection": "Each fold trains on all expanded windows from the other24games. Validation uses only the original64windows of its eight held fitting games. Choose pooled correct count, then NLL, earliest epoch, then learning rate. Include zero further epochs. Refit selected configuration on all expanded fitting windows; evaluate one selected checkpoint on unchanged original queries.",
+  "limitations": "This follow-up follows the exposed V48 evaluation result. Evaluation is reused research, not independent certification. Frozen code meanings and schema; original labels/rows retained exactly. No new evaluation-game reconstruction, label-driven window selection, subagents or playing-bot edits."
+}

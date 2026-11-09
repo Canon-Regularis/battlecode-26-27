@@ -1,0 +1,199 @@
+{
+  "selected": "history5_ridge10",
+  "results": {
+    "fit": {
+      "summary": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.21932899349023535,
+        "movement_nll": 1.7878294988877188,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.902759938382198,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.7256366723259763
+      },
+      "codes": {
+        "accuracy": 0.7256366723259763,
+        "per_code": {
+          "0": {
+            "rows": 1743,
+            "predicted": 1272,
+            "correct": 1196,
+            "recall": 0.6861732644865175,
+            "precision": 0.940251572327044,
+            "f1": 0.7933665008291874
+          },
+          "2": {
+            "rows": 370,
+            "predicted": 520,
+            "correct": 274,
+            "recall": 0.7405405405405405,
+            "precision": 0.5269230769230769,
+            "f1": 0.6157303370786517
+          },
+          "3": {
+            "rows": 58,
+            "predicted": 93,
+            "correct": 48,
+            "recall": 0.8275862068965517,
+            "precision": 0.5161290322580645,
+            "f1": 0.6357615894039735
+          },
+          "4": {
+            "rows": 676,
+            "predicted": 668,
+            "correct": 552,
+            "recall": 0.8165680473372781,
+            "precision": 0.8263473053892215,
+            "f1": 0.8214285714285714
+          },
+          "6": {
+            "rows": 52,
+            "predicted": 156,
+            "correct": 39,
+            "recall": 0.75,
+            "precision": 0.25,
+            "f1": 0.375
+          },
+          "7": {
+            "rows": 46,
+            "predicted": 236,
+            "correct": 28,
+            "recall": 0.6086956521739131,
+            "precision": 0.11864406779661017,
+            "f1": 0.19858156028368795
+          }
+        },
+        "balanced_recall": 0.7382606185724668,
+        "macro_f1": 0.573311426504012,
+        "minimum_recall": 0.6086956521739131
+      },
+      "unseen_codes": [],
+      "checks": {
+        "supported_recall": true,
+        "supported_precision": true,
+        "complete_code_coverage": true,
+        "code_accuracy": true,
+        "movement_accuracy": true,
+        "movement_nll": true,
+        "goal_within2": true,
+        "goal_error": true
+      },
+      "passed": true
+    },
+    "evaluation": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.23196881091617932,
+        "movement_nll": 1.779278242390523,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.17346938775510204,
+        "mean_goal_error": 3.306122448979592,
+        "goal_nll": 5.360010928037215,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.6509298998569385
+      },
+      "codes": {
+        "accuracy": 0.6509298998569385,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 334,
+            "correct": 302,
+            "recall": 0.6666666666666666,
+            "precision": 0.9041916167664671,
+            "f1": 0.7674714104193139
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 112,
+            "correct": 37,
+            "recall": 0.6851851851851852,
+            "precision": 0.33035714285714285,
+            "f1": 0.4457831325301205
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 27,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 116,
+            "correct": 99,
+            "recall": 0.6265822784810127,
+            "precision": 0.853448275862069,
+            "f1": 0.7226277372262774
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 49,
+            "correct": 11,
+            "recall": 0.55,
+            "precision": 0.22448979591836735,
+            "f1": 0.3188405797101449
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 61,
+            "correct": 6,
+            "recall": 0.5454545454545454,
+            "precision": 0.09836065573770492,
+            "f1": 0.16666666666666666
+          }
+        },
+        "balanced_recall": 0.4391269536839157,
+        "macro_f1": 0.3459127895075033,
+        "minimum_recall": 0.0
+      },
+      "unseen_codes": [
+        5
+      ],
+      "checks": {
+        "supported_recall": false,
+        "supported_precision": false,
+        "complete_code_coverage": false,
+        "code_accuracy": true,
+        "movement_accuracy": true,
+        "movement_nll": true,
+        "goal_within2": true,
+        "goal_error": true
+      },
+      "passed": false
+    }
+  },
+  "seconds": 33.71999949996825,
+  "selection_sha256": "e8fcf8207edd8237b241ddc7296ae9813408ff0ce558fb2d8a47cbbf1f2ff494",
+  "bindings": {
+    ".cambc\\action-predictor\\v45\\evaluation-predictions.json": "67e51a4f14ae18168d4ab594d9048b9be1a1608da09ef49ac87b2dbf8d2e6d2e",
+    ".cambc\\action-predictor\\v45\\fit-predictions.json": "8735c92dcb50e1df8beed79a554ba713b3e4b38733dfc52de2aa841cd4cc909d",
+    ".cambc\\action-predictor\\v45\\fitting-hidden.npz": "bd9120d75979e611e3a48587106250570c0ea3d001f12984c369240caa12d797",
+    ".cambc\\action-predictor\\v45\\fitting-identities.json": "9cc78b12f918404d2b5faca344b3f3d003749c2261657a691375c77ab65a49b2",
+    ".cambc\\action-predictor\\v45\\selected.pt": "ac15a7b27c3b8f3ac6d31d060c0bbbfca8d42ef3dda10ec1865672c384ba13f9"
+  },
+  "changed_tensors": {
+    "memory.weight_ih": 3312,
+    "code.weight": 384,
+    "code.bias": 8
+  },
+  "optimizer_updates": 0,
+  "analytic_head_fits": 41,
+  "passed": false,
+  "original_checkpoint_unchanged": true
+}

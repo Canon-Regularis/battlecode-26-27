@@ -1,0 +1,8 @@
+{
+  "before_training": true,
+  "macro_f1": "Unweighted F1 across all fourteen named actions, including zero for absent rare classes; unknown reserved label excluded.",
+  "history": "Utility-event unset coordinates are zeroed before model encoding; no current/future event in history.",
+  "baseline_probability": "Heuristic point prediction gets fixed .9 mass and .1 train-frequency mixture. Action/offset counts use fixed positive pseudocounts.",
+  "destination_error": "Report decoded-label error plus mean over all movement rows with 16-cell penalty for undecodable predictions.",
+  "no_claim": "A partially observed joint likelihood is not a full original-command likelihood; full engine illegal-action rate is not certified."
+}

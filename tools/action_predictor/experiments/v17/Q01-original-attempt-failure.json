@@ -1,0 +1,12 @@
+{
+  "original_protocol": "Q01-plan.json, original numerical contract unchanged and retained",
+  "execution_commit": "94fc01e371208a3989930fba300ed355e9713a4e",
+  "L01": {"session":85852,"exit":1,"failed_check":"normalization_error <= 2e-6","value":0.00000474293672514392},
+  "L02": {"session":13588,"exit":1,"failed_check":"normalization_error <= 2e-6","value":0.000005264555979156427},
+  "preceding_checks": "All14439 rows seen exactly once and model-weight fingerprint unchanged passed before normalization assertion in each original run.",
+  "artifact_retention_error": "The original producer checked normalization before archiving forecast arrays. Those first-attempt arrays existed only in process memory and were lost at the failed assertion. Do not claim they were preserved or hash-validated. Original code, protocol, references, empty attempted directories and failure traces remain. No fitted weights/checkpoints were lost or changed.",
+  "recovery": "Versioned v2 producer retains all primary forecasts and worst-case numerical snapshots before checks, preserves the original2e-6 criterion as PASS/FAIL, diagnoses valid versus padded rows, and independently checks float64 mixture arithmetic. No primary model/data/reference/decoder or policy-quality targets changed. Reuse both completed TRAIN reference artifacts; no repeated replay audit or fitting.",
+  "interpretation": "Cause of the normalization discrepancy is not yet established. Do not attribute policy errors to it or silently relax the failed criterion.",
+  "new_fits":0,
+  "reserved_opened":0
+}

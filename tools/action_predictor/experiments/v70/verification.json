@@ -1,0 +1,72 @@
+{
+  "result_sha256": "0b78c49507bd9b31c8e34c868978476fe5e128406e1f8fbedad1b1a0639d0179",
+  "source_sha256": "13b0f740b3e9822ec575fbd8264851002bd3043f7405bca7ad56059139643f26",
+  "fold_measurements": 40,
+  "optimizer_updates_accounted": 12416,
+  "matched_sampling": true,
+  "selected_weights_exact": true,
+  "all_summaries_reproduced": true,
+  "goal_inputs_reconstructed": true,
+  "raw_fitting_window_probes": 8,
+  "raw_probe_max_abs_error": {
+    "context": 4.917383193969727e-07,
+    "baseline": 3.814697265625e-06,
+    "goal": 7.450580596923828e-08
+  },
+  "raw_probe_predictions_exact": true,
+  "streaming_turns": 192,
+  "active_streaming_queries": 42,
+  "absent_goal_streaming_queries": 30,
+  "final_fold_weight_change_norms": {
+    "blind/fold0": {
+      "layers.0.weight": 7.728969573974609,
+      "layers.0.bias": 0.47089463472366333,
+      "layers.2.weight": 0.938802182674408,
+      "layers.2.bias": 0.051483578979969025
+    },
+    "blind/fold1": {
+      "layers.0.weight": 7.41646671295166,
+      "layers.0.bias": 0.4819214940071106,
+      "layers.2.weight": 0.943342387676239,
+      "layers.2.bias": 0.023577002808451653
+    },
+    "blind/fold2": {
+      "layers.0.weight": 7.416171550750732,
+      "layers.0.bias": 0.4827124774456024,
+      "layers.2.weight": 0.9931722283363342,
+      "layers.2.bias": 0.028020376339554787
+    },
+    "blind/fold3": {
+      "layers.0.weight": 7.669677734375,
+      "layers.0.bias": 0.4754449129104614,
+      "layers.2.weight": 0.9450663328170776,
+      "layers.2.bias": 0.05713549256324768
+    },
+    "goal/fold0": {
+      "layers.0.weight": 8.48210620880127,
+      "layers.0.bias": 0.49859705567359924,
+      "layers.2.weight": 1.0102747678756714,
+      "layers.2.bias": 0.03683717921376228
+    },
+    "goal/fold1": {
+      "layers.0.weight": 8.583829879760742,
+      "layers.0.bias": 0.49552279710769653,
+      "layers.2.weight": 0.9867008924484253,
+      "layers.2.bias": 0.02599198929965496
+    },
+    "goal/fold2": {
+      "layers.0.weight": 8.678079605102539,
+      "layers.0.bias": 0.4780455529689789,
+      "layers.2.weight": 1.1430892944335938,
+      "layers.2.bias": 0.014353277161717415
+    },
+    "goal/fold3": {
+      "layers.0.weight": 8.80424690246582,
+      "layers.0.bias": 0.4763021767139435,
+      "layers.2.weight": 1.113409399986267,
+      "layers.2.bias": 0.02882320247590542
+    }
+  },
+  "optimizer_replays": 0,
+  "seconds": 55.115118900022935
+}

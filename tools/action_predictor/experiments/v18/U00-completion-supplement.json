@@ -1,0 +1,18 @@
+{
+  "original_completion_sha256": "7d7d17c54fdf6ae7fee1307732e057102e2fa8cbaa8e4a0ebec62b2fca915059",
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v18\\initial-comparison.json": "cfba566ba222374aa73052b96f520e51183624282817dce50d9846d8535e520a",
+    "tools\\action_predictor\\experiments\\v18\\preflight-original-failure.json": "8b27245964e781fdf3a8c8e95a407d2b53dcf1ec83bb791914028f172ba9c780",
+    "tools\\action_predictor\\experiments\\v18\\U00-diagnosis.json": "f04f69121da9b9f61be9ada25323ecbd8cc24ceef377c4440c193cc46abde6ae",
+    "tools\\action_predictor\\learned_policy\\test_pathway_inputs_v2.py": "345b85aa75fe091e2412a0a6203d708d554dcdf35cd6cc05d338b0b62e89ae5b",
+    "tools\\action_predictor\\experiments\\v17\\Q01-review-followup.json": "8321649d067eee94715fad3b89336d9f19f0a70d6588de4f957491b68ba355c5"
+  },
+  "additional_test_command": ".venv-action-predictor/Scripts/python.exe -m unittest tools.action_predictor.goal_readout.test_model tools.action_predictor.goal_readout.test_decoder_interface",
+  "additional_test_result": "7 test executions passed:3 base tests execute twice because their class is imported into the interface test module, plus1 new adapter parity test. This is4distinct readout contracts, not7independent tests. Separate3nondegenerate replacement tests also passed.",
+  "diagnosis_reproduction": "Read-only inline producer is in the parent thread immediately before this supplement. It consumes only original y/py/priority/group, V7 direction, natural mask and bound saved L02/U00 predictions. Calls unchanged correctness and paired_categories; no neural inference, fit, checkpoint selection or dropped rows.",
+  "timing_qualification": "562.206s measured after loading includes249.416s round time (optimization plus DEV NLL), final full TRAIN/DEV decoding, serialization and bookkeeping. Neither is pure optimization or total experiment/production serving cost.",
+  "original_failure_retained": true,
+  "epoch0_not_retrospectively_selected": true,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

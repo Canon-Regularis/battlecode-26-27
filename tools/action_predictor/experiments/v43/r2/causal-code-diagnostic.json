@@ -1,0 +1,33 @@
+{
+  "kind": "Postfit fitting-only causal-input diagnostic, no optimizer updates or selection",
+  "discovery_sha256": "bb158920426c6d45c492b6dd66827beb2f22a0e665b879c0d518204300ba5ab9",
+  "rows": 2870,
+  "previous_descriptor_nearest_code_accuracy": 0.7369337979094077,
+  "balanced_accuracy": 0.6838503358141925,
+  "recalls": {
+    "0": 0.801056338028169,
+    "2": 0.415041782729805,
+    "3": 0.7857142857142857,
+    "4": 0.7503805175038052,
+    "6": 0.76,
+    "7": 0.5909090909090909
+  },
+  "predicted_counts": {
+    "0": 1561,
+    "7": 92,
+    "4": 610,
+    "2": 253,
+    "5": 86,
+    "6": 139,
+    "1": 73,
+    "3": 56
+  },
+  "neural_fitting_predicted_counts": {
+    "0": 2943,
+    "4": 2
+  },
+  "neural_evaluation_predicted_counts": {
+    "0": 699
+  },
+  "qualification": "Previous descriptor ends at current PRE and excludes current-turn actions. Different denominator excludes unavailable prefixes. Agreement with hindsight labels is not objective validity or generalization."
+}

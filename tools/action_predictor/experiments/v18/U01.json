@@ -1,0 +1,90 @@
+{
+  "identifier": "U01",
+  "dynamic": true,
+  "source_commit": "e1441a5409e1c336d58719f2bb9f0566b7a8d778",
+  "selected_round": 3,
+  "trace": [
+    {
+      "round": 1,
+      "train_command_nll": 0.6398797344675705,
+      "DEV_command_nll": 0.6721650401565181,
+      "updates": 1739,
+      "seconds": 29.12605970003642
+    },
+    {
+      "round": 2,
+      "train_command_nll": 0.6380086664797354,
+      "DEV_command_nll": 0.6889399766608654,
+      "updates": 3488,
+      "seconds": 27.979411499982234
+    },
+    {
+      "round": 3,
+      "train_command_nll": 0.6371261965813221,
+      "DEV_command_nll": 0.6652533106591141,
+      "updates": 5227,
+      "seconds": 28.061057499959134
+    },
+    {
+      "round": 4,
+      "train_command_nll": 0.6364730608810576,
+      "DEV_command_nll": 0.6670397523125856,
+      "updates": 6970,
+      "seconds": 27.720377599995118
+    },
+    {
+      "round": 5,
+      "train_command_nll": 0.6359117276143822,
+      "DEV_command_nll": 0.6802038435388643,
+      "updates": 8712,
+      "seconds": 27.737478900002316
+    },
+    {
+      "round": 6,
+      "train_command_nll": 0.635498849888523,
+      "DEV_command_nll": 0.6705606838210176,
+      "updates": 10455,
+      "seconds": 27.529747999971732
+    },
+    {
+      "round": 7,
+      "train_command_nll": 0.6350858427674682,
+      "DEV_command_nll": 0.6719705825621888,
+      "updates": 12196,
+      "seconds": 27.753175399964675
+    },
+    {
+      "round": 8,
+      "train_command_nll": 0.6348626617803724,
+      "DEV_command_nll": 0.676777357451434,
+      "updates": 13937,
+      "seconds": 28.022594000038225
+    },
+    {
+      "round": 9,
+      "train_command_nll": 0.6344759848535063,
+      "DEV_command_nll": 0.6672425932334187,
+      "updates": 15678,
+      "seconds": 28.1231201000046
+    }
+  ],
+  "selected_updates": 5227,
+  "completed_updates": 15678,
+  "trainable_parameters": 13662,
+  "resident_parameters": 104928,
+  "frozen_parameters_unchanged": true,
+  "initial_state_sha256": "cb173a28c83d4fd57b7d023a43852d34e07e787289efe9bf2d2433164102cbf8",
+  "checkpoint_sha256": "c9927f4c288d6252e7204bc2eeaa6f7564618a15d54ef55453b06ccdbb50f9f5",
+  "predictions_sha256": {
+    "train": "1df9545b291fb4b4cffeb90f29ca1aad1973c405c22d863910b8f6652a2b2a6f",
+    "validation": "8d9b95773932f39f8935187c57dd3354e94b56e35229c87fdceca77e21d8f0c8"
+  },
+  "protocol_sha256": "5eb07edf1a23528084383e2d734a8f0dd6ddabb909aed643d81e2548283eb16f",
+  "upstream_receipt_sha256": "f06e795a1df27fa8aba8d6121882c55a3b694a2f7159005673b4c0c1b480b12d",
+  "seconds": 563.6473600000027,
+  "timing_scope": "After loading through optimization, DEV selection, final inference and serialization; not pure optimization time or full experiment cost.",
+  "new_fits": 1,
+  "reserved_opened": 0,
+  "promoted": false,
+  "three_seed_confirmed": false
+}

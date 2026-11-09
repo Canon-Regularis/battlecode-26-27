@@ -1,0 +1,66 @@
+"""Derive P04 reporting from preserved P03 analysis, with explicit pair direction."""
+from pathlib import Path
+import json,hashlib
+root=Path(__file__).resolve().parent.parent
+reports=root/'tools/action_predictor/experiments/v8'
+source=reports/'P03-analysis-source.txt'
+assert hashlib.sha256(source.read_bytes()).hexdigest()==json.loads((reports/'P03-analysis.json').read_text())['source_sha256']
+s=source.read_text(encoding='utf-8').replace('P03','P04')
+s=s.replace('from tools.action_predictor.priority_modes_fit import verify_protocol,PLAN,SOURCES,VOCAB,read,head','from tools.action_predictor.priority_modes_control import verify_protocol,PLAN,SOURCES,VOCAB,read,head')
+s=s.replace('priority-absolute-modes-code-approval.json','priority-modes-control-code-approval.json')
+start=s.index('plan=verify_protocol();');end=s.index("info=read(REPORTS/'P04.json')")
+prefix='''plan=verify_protocol();approval=read(REPORTS/'priority-modes-control-code-approval.json')
+assert approval['completion_sha256']==sha(REPORTS/'priority-modes-control-prefit-completion.json')
+completion=read(REPORTS/'priority-modes-control-prefit-completion.json')
+assert completion['prefit_sha256']==approval['prefit_sha256'] and completion['plan_sha256']==sha(PLAN)
+parent_approval=read(REPORTS/'priority-absolute-modes-code-approval.json')
+assert parent_approval['evaluation_addendum_sha256']==sha(REPORTS/'priority-absolute-modes-evaluation-addendum.json')
+addendum=read(REPORTS/'priority-absolute-modes-evaluation-addendum.json')
+assert addendum['plan_sha256']==sha(REPORTS/'priority-absolute-modes-plan.json')
+assert addendum['baseline_report_sha256']==sha(REPORTS/'priority-frequency-baseline.json')
+assert addendum['baseline_plan_sha256']==sha(REPORTS/'priority-frequency-baseline-plan.json')
+baseline_info=read(REPORTS/'priority-frequency-baseline.json')
+assert addendum['baseline_predictions_sha256']==baseline_info['predictions_sha256']==sha(baseline_info['predictions_path'])
+'''
+s=s[:start]+prefix+s[end:]
+assert "for name in ('P01','P02'):" in s
+s=s.replace("for name in ('P01','P02'):","for name in ('P01','P02','P03'):")
+s=s.replace("unassessed_correct_type_shops=int((~wrong&shop).sum()))","unassessed_correct_type_shops=int((~wrong&shop).sum()),priority_errors_over1000=int((error>1000).sum()),priority_wrong_sign=int(((np.sign(forecast['priority'][priority])!=np.sign(target[priority]))&(target[priority]!=0)).sum()))")
+marker="vocab=read(VOCAB);frequency="
+assert marker in s
+pair='''active=models['P03'];active_joint=joints['P03']
+matched_pair=dict(priority_exact_delta=ci(sums((active['priority']==target).astype(float)-(pred['priority']==target),priority),counts),
+    priority_joint_delta=ci(sums(active_joint.astype(float)-joint,priority),counts),
+    priority_loss_relative_reduction=ci(sums(pred['param_nll']-active['param_nll'],priority),sums(pred['param_nll'],priority)),
+    full_joint_loss_relative_reduction=ci(sums(pred['nll']-active['nll'],np.ones(len(y),bool)),sums(pred['nll'],np.ones(len(y),bool))),
+    fixes=int((active_joint&~joint).sum()),regressions=int((~active_joint&joint).sum()))
+common_epochs=[]
+for path in sorted(directory.glob('epoch-*.pt')):
+    state=torch.load(path,weights_only=True,map_location='cpu')
+    assert torch.count_nonzero(state['head']['linear.weight'][:,128:])==0
+    other=WORK/'runs/P03'/path.name
+    if other.exists():
+        previous=torch.load(other,weights_only=True,map_location='cpu')
+        assert torch.equal(state['rng'],previous['rng'])
+        common_epochs.append(state['epoch'])
+assert read(directory/'epoch-zero.json')==read(WORK/'runs/P03/epoch-zero.json')
+'''
+s=s.replace(marker,pair+marker)
+line=next(line for line in s.splitlines() if line.startswith('exploratory=bool('))
+s=s.replace(line,"active_metrics=metrics['P03']\nexploratory=bool((active_metrics['priority_exact']-m['priority_exact'])/576>=.05 and active_metrics['priority_joint']>m['priority_joint'] and active_metrics['priority_nll']<m['priority_nll'])")
+s=s.replace("role='Absolute integer modes plus learned logistic fallback; output-design package, not an input-isolation result'","role='Matched zeroed-recovered-input control for P03; same multimodal output and frozen M01 representation'")
+s=s.replace('priority_strata=strata,paired_group_comparisons=paired,groups=',"priority_strata=strata,paired_group_comparisons=paired,P03_minus_P04=matched_pair,common_epoch_shuffle_rngs_equal=sorted(common_epochs),control_extra_column_weights_zero=True,epoch_zero_matches_P03=True,groups=")
+s=s.replace("'# P04: multimodal absolute priority output'","'# P04: matched priority-input control'")
+s=s.replace('Exploratory follow-up gate met:','Exploratory recovered-input follow-up gate met:')
+s=s.replace("Head parameters {info['trainable_parameters']} versus336 for the logistic head (260.5x); frozen M01 parameters {info['frozen_baseline_parameters']}","Matched P03/P04 head parameters {info['trainable_parameters']} each; P04 masks20319 extra-column weights; frozen M01 parameters {info['frozen_baseline_parameters']}")
+s=s.replace("pp='unassessed' if r['true_family_parameter_accuracy'] is None else", "pp=('unassessed' if r['action']=='shop' else 'N/A') if r['true_family_parameter_accuracy'] is None else")
+marker="(REPORTS/'P04-REPORT.md').write_text"
+addition='''lines += ['',f"P03 minus P04 exact-priority change: {(active_metrics['priority_exact']-m['priority_exact'])/576*100:.3f} percentage points; joint-priority change: {(active_metrics['priority_joint']-m['priority_joint'])/576*100:.3f} points. Priority-loss reduction: {100*(1-active_metrics['priority_nll']/m['priority_nll']):.3f}%.",
+    'The JSON P03_minus_P04 field has the treatment-minus-control direction. Other paired comparisons use candidate P04 minus the named comparator. Initial scores match exactly, shared completed-epoch shuffle RNGs match, and every saved control extra-column weight remains zero.',
+    'This comparison tests the39 direct recovered channels under a fixed M01 representation. Any later head-seed repeats would not establish independent full-GRU training or all-category reliability.']
+'''
+assert marker in s;s=s.replace(marker,addition+marker)
+s=s.replace("dict(P04=m,exploratory_gate=exploratory,paired=paired)","dict(P04=m,P03_minus_P04=matched_pair,exploratory_input_gate=exploratory)")
+destination=root/'.cambc/report_priority_P04.py';assert not destination.exists()
+destination.write_text(s,encoding='utf-8');compile(s,str(destination),'exec')
+print(json.dumps(dict(source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),generated_sha256=hashlib.sha256(destination.read_bytes()).hexdigest(),destination=str(destination)),indent=2))

@@ -1,0 +1,289 @@
+{
+  "DEV": {
+    "U00": {
+      "strict_correct": 12033,
+      "joint_accuracy": 0.8333679617702057,
+      "joint_nll": 0.665297502308926,
+      "macro_f1": 0.6099514967829431
+    },
+    "U01": {
+      "strict_correct": 12029,
+      "joint_accuracy": 0.8330909342752268,
+      "joint_nll": 0.6652533106591141,
+      "macro_f1": 0.6099298507233906
+    }
+  },
+  "failure_partition": {
+    "U00": {
+      "wrong_types": 1293,
+      "wrong_arguments_after_correct_type": 1072,
+      "correctly_typed_unavailable_shop_arguments": 41
+    },
+    "U01": {
+      "wrong_types": 1293,
+      "wrong_arguments_after_correct_type": 1076,
+      "correctly_typed_unavailable_shop_arguments": 41
+    }
+  },
+  "dynamic_minus_mean": {
+    "rows": 14439,
+    "rescues": 4,
+    "regressions": 8,
+    "paired95": {
+      "joint_accuracy": {
+        "low": -0.0007811390427495679,
+        "high": 0.00013479813978567456,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.0014149288472550259,
+        "high": 0.0008440931246357364,
+        "valid_draws": 2000
+      },
+      "joint_nll": {
+        "low": -0.00015840746492112867,
+        "high": 8.060062916748212e-05,
+        "valid_draws": 2000
+      }
+    },
+    "group_net": {
+      "1": -3,
+      "10": 0,
+      "11": 0,
+      "17": 1,
+      "31": -2
+    }
+  },
+  "sampling_comparisons": {
+    "train": {
+      "all": {
+        "L02": {
+          "rows": 433071,
+          "strict_correct": 342810,
+          "NLL": 0.6451806109162607,
+          "continue": {
+            "rows": 36368,
+            "conditional": 34276,
+            "joint": 33422,
+            "conditional_NLL": 0.39634107053989226,
+            "joint_NLL": 0.5015842918363644
+          },
+          "change": {
+            "rows": 35456,
+            "conditional": 12413,
+            "joint": 11314,
+            "conditional_NLL": 1.6429807166742822,
+            "joint_NLL": 1.8335317410078444
+          }
+        },
+        "U01": {
+          "rows": 433071,
+          "strict_correct": 343497,
+          "NLL": 0.6371174896884209,
+          "continue": {
+            "rows": 36368,
+            "conditional": 33878,
+            "joint": 33097,
+            "conditional_NLL": 0.4215117876502801,
+            "joint_NLL": 0.521879641629965
+          },
+          "change": {
+            "rows": 35456,
+            "conditional": 12892,
+            "joint": 11820,
+            "conditional_NLL": 1.6060148201091047,
+            "joint_NLL": 1.7952400477478467
+          }
+        },
+        "U00": {
+          "rows": 433071,
+          "strict_correct": 343455,
+          "NLL": 0.6373554231265137,
+          "continue": {
+            "rows": 36368,
+            "conditional": 33868,
+            "joint": 33089,
+            "conditional_NLL": 0.4222214060747294,
+            "joint_NLL": 0.5222393429114789
+          },
+          "change": {
+            "rows": 35456,
+            "conditional": 12864,
+            "joint": 11797,
+            "conditional_NLL": 1.6061289837576125,
+            "joint_NLL": 1.7950637411707673
+          }
+        }
+      },
+      "natural": {
+        "L02": {
+          "rows": 288801,
+          "strict_correct": 247646,
+          "NLL": 0.5198070933788105,
+          "continue": {
+            "rows": 25918,
+            "conditional": 24489,
+            "joint": 23910,
+            "conditional_NLL": 0.40847580067058653,
+            "joint_NLL": 0.5132706143897398
+          },
+          "change": {
+            "rows": 22279,
+            "conditional": 6297,
+            "joint": 5755,
+            "conditional_NLL": 1.819499811311669,
+            "joint_NLL": 1.9977962437830188
+          }
+        },
+        "U01": {
+          "rows": 288801,
+          "strict_correct": 247840,
+          "NLL": 0.519318225148834,
+          "continue": {
+            "rows": 25918,
+            "conditional": 24198,
+            "joint": 23680,
+            "conditional_NLL": 0.43389561353236966,
+            "joint_NLL": 0.5321793042107004
+          },
+          "change": {
+            "rows": 22279,
+            "conditional": 6623,
+            "joint": 6065,
+            "conditional_NLL": 1.7815205133708807,
+            "joint_NLL": 1.9618675741911105
+          }
+        },
+        "U00": {
+          "rows": 288801,
+          "strict_correct": 247810,
+          "NLL": 0.5194061701796019,
+          "continue": {
+            "rows": 25918,
+            "conditional": 24193,
+            "joint": 23679,
+            "conditional_NLL": 0.43462157924485273,
+            "joint_NLL": 0.532540984787353
+          },
+          "change": {
+            "rows": 22279,
+            "conditional": 6604,
+            "joint": 6049,
+            "conditional_NLL": 1.781256570409574,
+            "joint_NLL": 1.961352726954428
+          }
+        }
+      }
+    },
+    "validation": {
+      "all": {
+        "L02": {
+          "rows": 14439,
+          "strict_correct": 12064,
+          "NLL": 0.6565666911395093,
+          "continue": {
+            "rows": 1198,
+            "conditional": 1121,
+            "joint": 1089,
+            "conditional_NLL": 0.4397928895761503,
+            "joint_NLL": 0.5589738086298207
+          },
+          "change": {
+            "rows": 1158,
+            "conditional": 304,
+            "joint": 273,
+            "conditional_NLL": 1.9000232476798982,
+            "joint_NLL": 2.1342081156123385
+          }
+        },
+        "U01": {
+          "rows": 14439,
+          "strict_correct": 12029,
+          "NLL": 0.6652533106591141,
+          "continue": {
+            "rows": 1198,
+            "conditional": 1099,
+            "joint": 1065,
+            "conditional_NLL": 0.4707958259462738,
+            "joint_NLL": 0.590207876737085
+          },
+          "change": {
+            "rows": 1158,
+            "conditional": 318,
+            "joint": 285,
+            "conditional_NLL": 1.8682564515813491,
+            "joint_NLL": 2.1119011760768136
+          }
+        },
+        "U00": {
+          "rows": 14439,
+          "strict_correct": 12033,
+          "NLL": 0.665297502308926,
+          "continue": {
+            "rows": 1198,
+            "conditional": 1099,
+            "joint": 1065,
+            "conditional_NLL": 0.4713103593138975,
+            "joint_NLL": 0.5903902237811973
+          },
+          "change": {
+            "rows": 1158,
+            "conditional": 321,
+            "joint": 288,
+            "conditional_NLL": 1.8681388532836152,
+            "joint_NLL": 2.1114379204584477
+          }
+        }
+      }
+    }
+  },
+  "allocation": {
+    "checks": {
+      "command_NLL_lower": true,
+      "change_conditional_NLL_lower": false,
+      "change_conditional_gain_at_least_01": false,
+      "change_joint_not_lower": false,
+      "continuation_conditional_drop_within_005": true,
+      "overall_strict_not_lower": false,
+      "attack_cast_conditional_drop_within_02": true
+    },
+    "passes_all": false,
+    "change_conditional_accuracy_difference": -0.002590673575129543,
+    "continuation_conditional_accuracy_difference": 0.0,
+    "targeting_differences": {
+      "attack": -0.0010152284263958977,
+      "cast_0": 0.0,
+      "cast_1": 0.0
+    },
+    "meaning": "Original pre-fit exploratory allocation criterion versus matched U00 only. Not original success, promotion, robustness or strategic-intent certification."
+  },
+  "fixed_weight_sensitivity": {
+    "semantic_mode_changes": 24,
+    "strict_correct": 12029,
+    "NLL": 0.6653446673192881,
+    "rescues": 8,
+    "regressions": 8,
+    "unknown_position_semantic_changes": 0
+  },
+  "ranked_findings": [
+    "Demonstrated configuration limits: fixed P05 integer modes109/576, shop arguments unavailable, and U01 common-wrong movement bound1518/2362 below1541 point target under frozen distributions/state.",
+    "No meaningful benefit from the tested dynamic projection channel in the matched frozen-upstream readout experiment. Small aggregate NLL difference has a paired interval spanning zero; exact DEV direction changes and complete commands do not improve.",
+    "Small TRAIN gains do not transfer to DEV in this comparison. This does not isolate group shift, optimization, redundant information or forecaster quality.",
+    "Fixed-weight mean replacement changes24command modes but has8rescues/8regressions. Dependence is measurable; useful strategic-goal conditioning is not established.",
+    "Representation/history sufficiency, latent strategy identity, goal-proxy quality and policy-version inconsistencies remain unresolved. No hidden-intent or irreducibility claim."
+  ],
+  "next": "Fresh independent Solxhigh challenge before choosing a distinct next experiment. No promotion/repeated seeds or more current-geometry/retention variants justified here.",
+  "bindings": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v18\\U00-evaluation-v2.json": "f947c38aba1a68e39beed7622cee24c5654ae7e35b178eb65a1fe2f7d6df9d81",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v18\\U01-evaluation-v2.json": "a4f1423e94d5e4e218113a667e6e034793129f6d2909d6ec37d6d9b6f4822c82",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v18\\U01-diagnosis-v2.json": "8175faa573220e1dbe97df5b1321f9ad67a61c300961eff42ff780f832bd1fb5",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v18\\U01-sensitivity.json": "91856971da14a828ff4f3962c615d65e81c3d7bb8f8a9a78119addbb332d9cf6",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v18\\U01-allocation.json": "b4040681e2d5cdb8ed3439822e501f589ad05cdde0806b4ca4b1ef90534c0b74",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v18\\U01-pair-contract.json": "e62e7ed1bfd47c76c5a19551edfda6acd8246a13614cdf27342cbd3fb6039e34"
+  },
+  "source_sha256": "7fd59d7f041012cff816a38ee9788f98e750fe7894bcb5e94658225c0ba2ea18",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false,
+  "three_seed_confirmed": false
+}

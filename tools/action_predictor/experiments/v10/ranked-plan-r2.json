@@ -1,0 +1,16 @@
+{
+  "phase": "after TRAIN-only C01/C02 support measurements",
+  "completed_training": ["A00", "A01"],
+  "completed_non_fitting": ["C00", "D00", "posthoc matched G00 probability decoder", "A01 review corrections", "C01 TRAIN", "C02 TRAIN"],
+  "additional_fits_allocated": 0,
+  "additional_DEV_library_evaluations_allocated": 0,
+  "reason": "C01 frozen category support gate fails for movement, ground casts, ward, priority and attack/cast0 preservation, even after C02 attempted-move semantics correction. Support, not additional selector capacity, is the next bottleneck.",
+  "ranked": [
+    {"rank": 1, "task": "TRAIN causal objective/goal geometry for ground casts and ward placements; inspect available ward state before coverage-memory hypotheses; meaningful conditional priority formulas/scoring, not all-seen-value enumeration"},
+    {"rank": 2, "task": "Historical SDK attempt/range/replanning semantics, including attempts after movement unavailable; retain destinations/outcomes and unavailable history"},
+    {"rank": 3, "task": "When support justifies it, prospectively allocate matched architecture/descriptor and decoder comparisons; include G00 probability-only control and original category guards, not aggregate accuracy alone"},
+    {"rank": 4, "task": "Forward causal persistent goal filter over genuine ordered personal evidence, explicit gaps and unavailable memory; separate from support/sampling/decoder changes"}
+  ],
+  "targets": "Original every-supported-category90%,macro.65,movement.6520745131,10%NLLimprovement,attack/castguard.02,three-seed requirements unchanged and unmet.",
+  "preservation": "All historical code,reports,checkpoints,frequencyprep preserved. Reserved75new-validation+75final-testsealed; no oldexposedtesttuning,matches,downloads,botchanges,deployment,defaultpush or merge. PR11 DRAFTonly."
+}

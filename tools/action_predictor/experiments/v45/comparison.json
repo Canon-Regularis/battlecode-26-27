@@ -1,0 +1,201 @@
+{
+  "original": {
+    "accuracy": 0.648068669527897,
+    "per_code": {
+      "0": {
+        "rows": 453,
+        "predicted": 699,
+        "correct": 453,
+        "recall": 1.0,
+        "precision": 0.648068669527897,
+        "f1": 0.7864583333333334
+      },
+      "2": {
+        "rows": 54,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "3": {
+        "rows": 1,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "4": {
+        "rows": 158,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "5": {
+        "rows": 2,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "6": {
+        "rows": 20,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "7": {
+        "rows": 11,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      }
+    },
+    "balanced_recall": 0.14285714285714285,
+    "macro_f1": 0.11235119047619048,
+    "minimum_recall": 0.0
+  },
+  "previous_edit": {
+    "accuracy": 0.7396280400572246,
+    "per_code": {
+      "0": {
+        "rows": 453,
+        "predicted": 612,
+        "correct": 445,
+        "recall": 0.9823399558498896,
+        "precision": 0.7271241830065359,
+        "f1": 0.8356807511737089
+      },
+      "2": {
+        "rows": 54,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "3": {
+        "rows": 1,
+        "predicted": 1,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "4": {
+        "rows": 158,
+        "predicted": 86,
+        "correct": 72,
+        "recall": 0.45569620253164556,
+        "precision": 0.8372093023255814,
+        "f1": 0.5901639344262295
+      },
+      "5": {
+        "rows": 2,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "6": {
+        "rows": 20,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "7": {
+        "rows": 11,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      }
+    },
+    "balanced_recall": 0.2054337369116479,
+    "macro_f1": 0.20369209794284832,
+    "minimum_recall": 0.0
+  },
+  "new_edit": {
+    "accuracy": 0.6509298998569385,
+    "per_code": {
+      "0": {
+        "rows": 453,
+        "predicted": 334,
+        "correct": 302,
+        "recall": 0.6666666666666666,
+        "precision": 0.9041916167664671,
+        "f1": 0.7674714104193139
+      },
+      "2": {
+        "rows": 54,
+        "predicted": 112,
+        "correct": 37,
+        "recall": 0.6851851851851852,
+        "precision": 0.33035714285714285,
+        "f1": 0.4457831325301205
+      },
+      "3": {
+        "rows": 1,
+        "predicted": 27,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "4": {
+        "rows": 158,
+        "predicted": 116,
+        "correct": 99,
+        "recall": 0.6265822784810127,
+        "precision": 0.853448275862069,
+        "f1": 0.7226277372262774
+      },
+      "5": {
+        "rows": 2,
+        "predicted": 0,
+        "correct": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "6": {
+        "rows": 20,
+        "predicted": 49,
+        "correct": 11,
+        "recall": 0.55,
+        "precision": 0.22448979591836735,
+        "f1": 0.3188405797101449
+      },
+      "7": {
+        "rows": 11,
+        "predicted": 61,
+        "correct": 6,
+        "recall": 0.5454545454545454,
+        "precision": 0.09836065573770492,
+        "f1": 0.16666666666666666
+      }
+    },
+    "balanced_recall": 0.4391269536839157,
+    "macro_f1": 0.3459127895075033,
+    "minimum_recall": 0.0
+  },
+  "goal_choices_changed_vs_original": 0,
+  "goal_choices_changed_vs_previous": 0,
+  "bindings": {
+    ".cambc\\action-predictor\\v44\\selected-evaluation.json": "37c617632429ade3573d7ff92eab750e489fa6997c2420dd5223621942509bd1",
+    ".cambc\\action-predictor\\v45\\evaluation-predictions.json": "67e51a4f14ae18168d4ab594d9048b9be1a1608da09ef49ac87b2dbf8d2e6d2e",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\evaluation-predictions.json": "6a01cf2d70f0b4e158b25f4ffefddca974156248592013103e97c490b6762bcd"
+  }
+}

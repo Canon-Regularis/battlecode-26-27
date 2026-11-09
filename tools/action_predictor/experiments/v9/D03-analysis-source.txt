@@ -1,0 +1,29 @@
+﻿import json
+from pathlib import Path
+from tools.action_predictor.more_replays import sha,frozen
+from tools.action_predictor.fundamental_audit import BASE,REPORTS,WORK,arrays
+from tools.action_predictor import reliable_train as rt
+from tools.action_predictor.observation_metrics import correctness
+import numpy as np
+source=Path('.cambc/report_D03_context.py').resolve();v7=REPORTS.parent/'v7/data-ready.json';ready=json.loads(v7.read_text());inputs={str(source):sha(source),str(v7.resolve()):sha(v7)}
+freq=json.loads((REPORTS.parent/'v8/entry-audit.json').read_text())['training_frequencies'];inputs[str((REPORTS.parent/'v8/entry-audit.json').resolve())]=sha(REPORTS.parent/'v8/entry-audit.json')
+c=np.array([freq['augmented'][x] for x in rt.LABELS]);weight=(c.max()/np.maximum(c,1))**.5;weight=np.minimum(weight,20);weight/=np.dot(c,weight)/c.sum();effective=c*weight/(c*weight).sum()
+weights={name:dict(natural=freq['natural'][name]/sum(freq['natural'].values()),augmented=float(c[i]/c.sum()),class_weight=float(weight[i]),weighted_action_mass=float(effective[i])) for i,name in enumerate(rt.LABELS)}
+contexts={}
+for split,rawpath,predpath in [('train',BASE/'combined-train.npz',WORK/'D02-P05-train.npz'),('validation',BASE.parent/'v4/validation.npz',BASE.parent/'v8/runs/P05/validation-predictions.npz')]:
+ with np.load(rawpath) as z:y=z['y']
+ pred=arrays(predpath);inputs[str(predpath)]=sha(predpath);d={}
+ for name in ('direction','near_obstacle','visible_change','available','gaps'):
+  path=BASE.parent/'v7'/(split+'-'+name+'.npy');assert sha(path)==ready['files'][path.name];inputs[str(path)]=sha(path);d[name]=np.load(path)
+ print(split, {k:dict(shape=list(v.shape),unique=np.unique(v)[:12].tolist()) for k,v in d.items() if k!='gaps'})
+ mask=y==rt.LABELS.index('move')
+ # Frozen direction/obstacle/change flags are diagnostics only; no target-derived inputs.
+ with np.load(rawpath) as z:py=z['py']
+ exact=(pred['coordinate']==py)&(py<289)
+ rows={}
+ for direction,code in [('continuing',2),('direction_change',3)]:
+  for obstacle in (0,1):
+   selected=mask&(d['direction']==code)&(d['near_obstacle']==obstacle);n=int(selected.sum());rows[direction+'_obstacle_'+str(obstacle)]=dict(support=n,exact=float(exact[selected].mean()) if n else None)
+ contexts[split]=rows
+frozen(REPORTS/'D03-context-and-weights.json',dict(source_sha256=sha(source),inputs=inputs,action_mass=weights,movement=contexts,scope='Post-D02 diagnostic only; no fitting, checkpoint choice or causal input changes. Natural and augmented counts from preserved audited frequencies; original weights applied algebraically. Obstacle flags are frozen V7 diagnostic context. No hard action rule or hidden-state assertion.',reserved_opened=0))
+print('Ward shares',weights['ward']);print('Movement contexts',contexts)

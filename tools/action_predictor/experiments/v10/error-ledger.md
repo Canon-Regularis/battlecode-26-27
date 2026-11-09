@@ -1,0 +1,12 @@
+V10 additive error ledger
+
+- C00 initial extraction failed before candidate output: mistakenly expected target-shard `py` and `priority`; V7 target shards contain x/history/y/round/group only. Original C00-plan.json preserved; C00-plan-r1.json binds corrected study. Reproducible failure log local .cambc/v10-train.log. No optimizer or DEV result existed at correction.
+- C00 terrain fields underperform equal-slot geometric control: TRAIN move coverage58.30%vs68.42%; DEV55.88%vs67.44%. These compare libraries with different diversity/ties, not an isolated pathfinding effect. Field connectivity/corner/occupancy/threat/replan semantics need historical SDK investigation before expensive planner learning. Engine-produced first-step masks are used; uniform eight-neighbour fields are explicitly hypotheses, not verified historical engine routes.
+- C00 support omissions: ground-target casts absent; priorityzero and wardself have zero TRAIN matches; position-dependent early return drops utility candidates. No command enumeration, hidden entities, oracle campgroup, or duplicated move outcomes used to compensate.
+- A00 support union ceilings and uncaptured opportunities recorded in A00-analysis.json. Further fitting cannot fix missing support; this is not a data irreducibility claim.
+- A00 achieves narrow recall-driven improvement; macro/move/all-category/three-seed targets fail. Ward/cast regressions retained. All23rounds retained,round17selected by NLL and patience6.
+- A00 hard routing differs from stochastic mixture objective. D00 is a separately specified no-fit bounded decoder diagnostic; original A00 and A01 hard decoder remain fixed for the scorer comparison.
+- Original C00 emitter boundary received transaction_label but never read it; new serving uses compact PRE-only supplement. Original receipt's stronger boundary statement is qualified in A00-review-response.md.
+- G00/A00/A01 alltruefamily parameter accuracy must not be inferred from a joint-only decoder's unused argument fields. Correctlytyped parameter accuracy, action PRF and complete-command correctness remain separate.
+- Full legality, exact ambiguous entity identity and complete shop argument likelihood remain unassessed. Blocked forecast mask rejections are not illegal successful moves.
+- No current result certifies90%for any sparse category or original goal. All5DEVgroups repeatedly reused, confidence intervals conditional on checkpoint selection. Reserved75new-validation+75finaltest sealed; oldexposedtest not fresh.

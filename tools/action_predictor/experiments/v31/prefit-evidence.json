@@ -1,0 +1,30 @@
+{
+  "source_commit": "4e69ac5db432b430d36f67d53b0561e0ec9893c6",
+  "tests": {
+    "count": 26,
+    "passed": true,
+    "modules": [
+      "entity_movement.test_model",
+      "entity_movement.test_entry",
+      "segment_policy.test_filter",
+      "segment_policy.test_model",
+      "segment_policy.test_history",
+      "segment_policy.test_hierarchy_entry",
+      "segment_grounding.test_memory"
+    ]
+  },
+  "actual_TRAIN_probe": {
+    "rows": 32,
+    "selection": "First node of first32 retained TRAIN actor sequences",
+    "entity_padding_width": 47,
+    "trainable_parameters_each": 159867,
+    "finite_loss_both": true,
+    "mean_initial_NLL_each": 0.32862285126752977,
+    "identical_decoded_commands": true,
+    "backward_completed": true,
+    "optimizer_updates": 0,
+    "scope": "Interface/initialization smoke test, not performance or full population evidence"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

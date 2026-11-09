@@ -1,0 +1,19 @@
+{
+  "verdict": "APPROVE",
+  "reviewed_head": "83eb265",
+  "review_task_id": "node:delegated-task:command%3Amcp%3Af5f199c3-d88e-464c-b423-4c127fef8ba3%3Adelegate-task%3Acadence-probe-prefit-review-20261109-r1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "protocol_sha256": "45c623972b591d39c814a52c6a7fbe86c12c5ab60cda03f6bd5f92685f37c14b",
+  "findings": [],
+  "verification": [
+    "19 permitted tests passed, including synthetic optimizer parity, ordering, denominators, detachment and fail-closed behavior.",
+    "92 source hashes and91inputbindings match.",
+    "1085candidates and exact256selectedwindows independently reconstructed:8192distinctrows,40groups,642changes,677continuations,resetalignment and retainedcategories.16schedules reproduce.",
+    "Fresh A initialization matches139292parameters; updateboundaries,evaluationthresholds,review/budgetgates implement contract.",
+    "CorrectedV34summaries,original/r2forecasts,observedlosses/modes,pair-countAUC and ninecross-batchfloatdiscrepancies independently reproduce."
+  ],
+  "scope": "Implementation eligible for U00 after binding this actual review. U01 requires fresh U00 postfit review. No fit-result, further-fit or promotion approval.",
+  "actual_data_optimizer_updates": 0,
+  "new_fits": 0
+}

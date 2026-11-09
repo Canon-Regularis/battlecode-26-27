@@ -1,0 +1,76 @@
+{
+  "results": {
+    "all_moves": {
+      "rows": 2362,
+      "conditional_correct": 1411,
+      "complete_correct": 1335,
+      "component_mode_oracle": 1667,
+      "available_mode_misses": 256,
+      "top_weight_correct_but_mixture_wrong": 49,
+      "correct_mode_only_in_lower_weight_heads": 207,
+      "correctly_typed_available_mode_misses": 222,
+      "typed_top_weight_correct_but_mixture_wrong": 42,
+      "typed_correct_mode_only_in_lower_weight_heads": 180,
+      "common_wrong_modes": 345,
+      "frozen_reweighting_upper_bound": 2017,
+      "mean_maximum_component_TV": 0.44008409847016733,
+      "mean_distinct_modes": 1.552497883149873
+    },
+    "change": {
+      "rows": 1158,
+      "conditional_correct": 325,
+      "complete_correct": 287,
+      "component_mode_oracle": 537,
+      "available_mode_misses": 212,
+      "top_weight_correct_but_mixture_wrong": 18,
+      "correct_mode_only_in_lower_weight_heads": 194,
+      "correctly_typed_available_mode_misses": 186,
+      "typed_top_weight_correct_but_mixture_wrong": 13,
+      "typed_correct_mode_only_in_lower_weight_heads": 173,
+      "common_wrong_modes": 297,
+      "frozen_reweighting_upper_bound": 861,
+      "mean_maximum_component_TV": 0.4077611838553039,
+      "mean_distinct_modes": 1.6329879101899827
+    },
+    "continue": {
+      "rows": 1198,
+      "conditional_correct": 1083,
+      "complete_correct": 1045,
+      "component_mode_oracle": 1126,
+      "available_mode_misses": 43,
+      "top_weight_correct_but_mixture_wrong": 31,
+      "correct_mode_only_in_lower_weight_heads": 12,
+      "correctly_typed_available_mode_misses": 35,
+      "typed_top_weight_correct_but_mixture_wrong": 29,
+      "typed_correct_mode_only_in_lower_weight_heads": 6,
+      "common_wrong_modes": 48,
+      "frozen_reweighting_upper_bound": 1150,
+      "mean_maximum_component_TV": 0.47311144916366377,
+      "mean_distinct_modes": 1.474958263772955
+    }
+  },
+  "parity": {
+    "prior_max_error": 0.0,
+    "type_max_error": 0.0,
+    "conditional_mode_mismatches": 0,
+    "target_logp_max_error": 9.992007221626409e-16
+  },
+  "bindings": {
+    ".cambc\\action-predictor\\v30\\H01-component-analysis\\logprior.npy": "4b67d5becf444de4e23b8d7c7ec1c2313726081427b075f8cb4b5e0054fd6d7b",
+    ".cambc\\action-predictor\\v30\\H01-component-analysis\\movement.npy": "b7c42eceec4226f68c652053dd48178d107a42b2f97e1714dbecc82202454a67",
+    ".cambc\\action-predictor\\v30\\H01-component-analysis\\types.npy": "50f5bf35f3c258c823c95f6dcda5a6909491d3582663c9e82a3cda6d17236dd1",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\validation-raw\\prior.npy": "a1a0562dd3ad0705efe22f012dd34807341abc4b4ab021e286dbd7350bc23516",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\validation-raw\\type_logp.npy": "bd86ae822f61b8388e3cfccdd2ee6baeb18a901a25173c6c41a25b637b48671d",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\validation-raw\\family_coordinate.npy": "d491901efbb21ff24fd4159f9402abd544b6ac11ddd948affb310cf703dcdd57",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\validation-raw\\prediction.npy": "5eda0b2f29b87d4140b8baf572f4b7cbbe70af9465480ef3b8e64c03fe8044b5",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\validation-raw\\conditional_move_target_logp.npy": "69eec08f4fa1d8232ebc59f4a5c4f1cb39fc70064fa66f9fdecd5455765c69df",
+    "tools\\action_predictor\\experiments\\v30\\H01.json": "e38e005636eb27acc48c41860e694b1b78bb9bcb2559ca7b8dd76f783540375b",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\round-06.pt": "d5f104718a93a630b6d66ef1a3143c569f4f38196b6cc46d432eb748ac69ea63",
+    "tools\\action_predictor\\experiments\\v30\\H01-component-analysis-plan.json": "1848fc77a75ffea5697455be8fabcde8419d82ec118a41851093f69f4743997b",
+    "tools\\action_predictor\\segment_policy\\component_analysis.py": "71b28e4337dc3e3d9cbb12e80c2481a719c10ca0eee506b6b30bfb4f1970c983"
+  },
+  "scope": "New diagnostics from a causal fixed-checkpoint refilter, not an oracle policy, replacement variant or new fit. Component-mode presence is not sufficient for a mixture decision, and absence from every component mode is not alone an impossibility proof. Common-wrong certification fixes emissions/current encoded evidence; it does not constrain retrained models or establish observation insufficiency.",
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0
+}

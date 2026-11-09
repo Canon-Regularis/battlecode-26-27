@@ -1,0 +1,72 @@
+"""D01 additive measured TRAIN semantics report; no predictive features or fit."""
+from pathlib import Path
+from collections import Counter
+import sys,json
+import numpy as np
+root=Path(__file__).resolve().parent.parent;sys.path.insert(0,str(root))
+from tools.action_predictor.event_semantics import PLAN,sources
+from tools.action_predictor.priority_fit_v3 import REPORTS,BASE,read,log
+from tools.action_predictor.more_replays import sha,frozen
+report=read(REPORTS/'D01.json');assert report['plan_sha256']==sha(PLAN)
+assert read(PLAN)['source_hashes']==report['source_hashes']==sources()
+seen=np.zeros(433071,dtype=bool)
+for item in report['bindings']:
+    start=item['offset'];stop=start+item['rows'];assert 0<=start<stop<=len(seen) and not seen[start:stop].any()
+    seen[start:stop]=True
+assert seen.all()
+totals=Counter()
+for data in report['statistics'].values():totals.update(data)
+with np.load(BASE/'combined-train.npz') as z:labels=z['y']
+from tools.action_predictor import reliable_train as rt
+for i,name in enumerate(rt.LABELS):assert totals['target/'+name]==int((labels==i).sum())
+previous=read(REPORTS/'A01-state-and-generalization-diagnostic.json')['training_contingency']['per_action']
+for name in ('end','cancel','priority','recall','ward'):
+    for key,before in [('equal','known_equal'),('different','known_different'),('unknown','unknown')]:
+        assert totals['target_priority_relation/'+name+'/'+key]==previous[name][before]
+
+static={}
+for path,expected in report['static_source_hashes'].items():
+    assert sha(path)==expected
+    if Path(path).name in ('PanelChrome-DRtW3oWL.js','index-B7p3Cpbd.js'):
+        text=Path(path).read_text(encoding='utf-8')
+        needles=['Yielded=0','FuelExhausted=1','Error=2'] if Path(path).name.startswith('PanelChrome') else ['finishTurn(e=F.Yielded)','endTurn(e){for(this.setPriority(e)','cancelChannel(){this.check(this.wasmExports.Game_Action_CancelChannel']
+        static[path]=dict(sha256=expected,evidence=[])
+        for needle in needles:
+            offset=text.find(needle);assert offset>=0
+            static[path]['evidence'].append(dict(needle=needle,offset=offset,snippet=text[max(0,offset-50):offset+240]))
+probe_table=[]
+for probe in report['probes']:
+    assert sha(probe['query_path'])==probe['query_sha256'] and sha(probe['output_path'])==probe['output_sha256']
+    for row in probe['data']['rows']:
+        assert row['pre_header']['phase']==10 and row['pre_header']['currentChampion']==row['actor']
+        after=row['post_header'];step=after['step']
+        probe_table.append(dict(engine=probe['engine'],kind=step['kind'],actor=row['actor'],pre=row['pre'],event=row['event'],before=row['before'],after=row['after'],post_phase=after['phase'],reason=step.get('endTurnReason'),automatic_headers_observed=sum(h['step']['substep']>0 for h in row['following'])))
+result=dict(report_sha256=sha(REPORTS/'D01.json'),plan_sha256=sha(PLAN),source_sha256=sha(__file__),static_evidence=static,totals=dict(sorted(totals.items())),probes=probe_table,
+    row_alignment_verified=True,all433071_labels_verified=True,A01_priority_relation_counts_reproduced=True,
+    conclusions=['The pinned codec names end reason0 Yielded. The extractor historical completeness name explicit_end does not establish whether the bot explicitly called end_turn; origin remains unassessed. Frozen membership/labels are unchanged.',
+    'Root substep0 phase10 champion events are separate from automatic substeps. Header phase AFTER the target, current target kind/reason and POST channel changes are diagnostic labels/evidence, forbidden as predictor inputs.',
+    'A priority setter and following end are separate recorded inputs. A frequent observed sequence is not a legality constraint. Use any PRE priority/channel cue only as a separately tested soft input.',
+    'Current SDK4 and visualiser wrapper show API names and compound operations, but cannot establish historical engine2/3 bot caller behavior. Engine-specific recorded PRE/POST probes are kept as narrower direct evidence.',
+    'No predictor, accuracy, strategy or generalization improvement is measured by this diagnostic. The P05 failed gate and all original targets remain binding.'],
+    new_features=0,new_optimizer_steps=0,new_prediction_families=0,reserved_behavior_opened=0)
+frozen(REPORTS/'D01-analysis.json',result)
+(REPORTS/'D01-analysis-source.txt').write_bytes(Path(__file__).read_bytes())
+lines=['# D01: TRAIN event and channel semantics','','This is a read-only diagnostic, not a model improvement. It preserves all433,071 training rows/470games/94groups; no development behavior or reserved contents were inspected. Original prediction studies remain unchanged.','',
+       '## Recorded roots and terminal reasons','', '| Engine | End roots | Cancel roots | Priority roots | End reason0 | Rollovers | Bot errors |','|---|---:|---:|---:|---:|---:|---:|']
+for engine,data in report['statistics'].items():lines.append(f"| {engine} | {data.get('root/end',0)} | {data.get('root/cancel',0)} | {data.get('root/priority',0)} | {data.get('terminal_reason/end/0',0)} | {data.get('root/rollover',0)} | {data.get('root/error',0)} |")
+lines+=['','Reason0 is named **Yielded** by the hash-pinned decoder. The frozen reader calls completed turns `explicit_end`; this historical name is not proof of explicit bot API-call origin. Yielding on a normal return and explicit calling cannot be distinguished from reason0 alone. No frozen strings, labels or completeness filters were changed.','',
+        '## Personally observed target PRE channels','', '| Recorded target | Channel0 | Channel1 | Channel2 | Channel3 | Channel4 | Unavailable |','|---|---:|---:|---:|---:|---:|---:|']
+for name in ('end','cancel','priority','recall','ward'):
+    values=[totals['target_channel/'+name+'/'+str(c)] for c in (0,1,2,3,4)]+[totals['target_channel/'+name+'/unknown']]
+    lines.append('| '+name+' | '+' | '.join(map(str,values))+' |')
+lines+=['','Channels are observed PRE scalars with availability checked; this table describes recorded behavior, not allowable-action rules or intent. Previous-action counts use the full own index, exact actor/event order and true turn identity; sampled turns are never joined as adjacent frames.','',
+        '## Eight recorded PRE/POST probes','', '| Engine | Root kind | PRE→event | PRE channel→POST | PRE priority→scheduled POST | Header phase after |','|---|---:|---|---|---|---:|']
+for p in probe_table:lines.append(f"| {p['engine']} | {p['kind']} | {p['pre']}→{p['event']} | {p['before'].get('channelType')}→{p['after'].get('channelType')} | {p['before'].get('priority')}→{p['after'].get('nextPriority')} | {p['post_phase']} |")
+lines+=['','Each engine uses the first retained TRAIN target of end/priority/recall/cancel in its first TRAIN game, selected by recorded category, never prediction correctness. Probes restore MAIN and advance recorded events only. Up to24 following headers are diagnostic evidence, not predictor inputs. No action, branch, match or bot is executed.','',
+        '## Implications for the next experiment','',
+        'Keep end/cancel/priority as their original recorded categories. Do not use target header phase, kind, end reason, POST channel or a future event to construct inputs. Do not force end after priority, cancel for every channel, or a type from current/scheduled equality. Any observed PRE cue requires a separate soft-input comparison with the same target rows and frozen parameter paths. Current channel identity is already encoded in M01; a new experiment must not claim it was entirely absent.','',
+        'Root/effect counts, actual next-root classes after priority, PRE priority relations, engine-specific examples, all input hashes and missing-value counts are in the JSON reports. The static wrapper shows a visualiser compound endTurn(priority) method, but this does not prove how historical Fish bots called the engine. All caller-origin ambiguity remains explicit.','',
+        'No prediction result changes. P05 retains109exact/71joint priorities, fails its125exact continuation gate and triggers no repeats. The original90%joint-per-category/three-seed goal, original macro-F1/movement/loss/targeting guards, all43 unassessed shops and both75-game sealed partitions remain unchanged. Fresh Solxhigh review is required before the next model implementation.']
+(REPORTS/'D01-REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+with (root/'.cambc/action-predictor/v8/commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps(dict(target_channel={name:{str(c):totals['target_channel/'+name+'/'+str(c)] for c in (0,1,2,3,4,'unknown')} for name in ('end','cancel','priority')},priority_next={k:v for k,v in totals.items() if k.startswith('priority_next')},automatic={k:v for k,v in totals.items() if k.startswith('effect_kind_phase')}),indent=2))

@@ -1,0 +1,27 @@
+{
+  "verdict": "APPROVE",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "review_task_id": "node:delegated-task:command%3Amcp%3Af5f199c3-d88e-464c-b423-4c127fef8ba3%3Adelegate-task%3Aentity-movement-e00-postfit-review-20261108",
+  "delivery": "Completed delegated review delivered to parent thread",
+  "result_sha256": "2959c335946fdd9d0ced3d8dca09b726c20673b8ace3596471264c637ee484ef",
+  "checkpoint_sha256": "d0d26196bf95153f52dbc2964c0cde2884a42653023fdb213ef833139b9096c0",
+  "findings": [],
+  "scope": "Valid completed matched control. Frozen E01 may execute; no performance/strategy promotion or future result approval.",
+  "verified_by_reviewer": {
+    "source_bindings": 90,
+    "input_bindings": 50,
+    "final_bindings": 298,
+    "causal_DEV_probe_rows": 1536,
+    "archived_gradient_samples": 84,
+    "coverage_rounds": 12
+  },
+  "limitations": [
+    "Below strongerJP02/L02 movement and continuation, higherNLL/lowermacroF1 versusJP02",
+    "cast_1 conditional regression exceeds2pointguard againstL02/JP02/G00",
+    "Ward0/112complete; no strategy improvement"
+  ],
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false
+}

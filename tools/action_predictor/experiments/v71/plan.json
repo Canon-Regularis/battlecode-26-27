@@ -1,0 +1,37 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\shared_execution_edit.py": "f8efd37a6b28646b1f3a15398d7c33f5b1a54f755e39abd27636c35474e59700",
+    "tools\\action_predictor\\behavior_segments\\shared_execution_edit_predictor.py": "2c8656e03817656d56c388ee1dbe07583dcf9f160cca4020878aa29b8d38079e",
+    "tools\\action_predictor\\behavior_segments\\test_shared_execution_edit.py": "9f981fa314ec571a4e729dd29379d818a3b0a39721704d0627393fadfd3c19b7"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v70\\plan.json": "abfd070d2fd760f0387739b284122fb3fc46c75bf994ba94ad5c089cdc6ca5da",
+    "tools\\action_predictor\\experiments\\v70\\cache.json": "9e57b0727b6d4a9d17b79825dddd3d1b005a8b98df458bcba4c7657774e1d690",
+    "tools\\action_predictor\\experiments\\v70\\fit.json": "c021b1a0321e2190fda03507f500f6b31c62c09ed3f947398e48008e6e4d4021",
+    "tools\\action_predictor\\experiments\\v70\\selection.json": "76da70c4e08d874fea7c490bbcaf6fa2eec8f759dcf00809a0a90ef980e53789",
+    "tools\\action_predictor\\experiments\\v70\\result.json": "0b78c49507bd9b31c8e34c868978476fe5e128406e1f8fbedad1b1a0639d0179",
+    "tools\\action_predictor\\experiments\\v70\\verification.json": "c2e3a47c32c217863487f5cd1ea8de2e0ea87114b119e13d75d309b073e0ed77",
+    "tools\\action_predictor\\experiments\\v70\\weight-inspection.json": "d96018eb28c4e1f8643eadedd5df3c8992f8486f27da610b45eab7df7edef7d2",
+    "tools\\action_predictor\\experiments\\v70\\weight-debug.json": "5aabfb9f3431724f317637421219c5a98723685c6ef01e07c867357c0771bbaf"
+  },
+  "goal_scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "output_scales": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+  ],
+  "nll_allowance": 0.01,
+  "cohort_allowance": 0.01,
+  "intervention": "20 direct weight edits of V70 goal head. Scale first-layer goal/availability/utility columns128:137 and final output weight. Keep output bias unchanged:its shared scalar cancels in softmax. No zero-scale candidate; executor always runs and keeps goal inputs. All other weights,inputs,selector and support unchanged. No optimizer updates.",
+  "selection": "Four matching held fitting-game folds,all1997 movement rows. Require NLL<=direct+0.01 and neither goal-present nor absent accuracy loses>1point vs original V70. Maximize correct,then minimize NLL,then minimize summed squared weight edit; deterministic grid tie. Unedited eligible. One selected edit applied to full checkpoint,then fixed513 evaluation.",
+  "success": "Beat V70 original311 and direct318 on fixed513;NLL<=direct+0.01;neither cohort loses>2points vs direct. All required. No evaluation-dependent edits or automatic promotion.",
+  "motivation": "Fitting validation has54rescues and45regressions vsdirect;median original logit gap0.219and0.182respectively. Goal masking changes fitting-validation correct1246to1245. This motivates testing correction/goal strength; it does not prove overcorrection is causal.",
+  "limits": "Repeatedly exposed research groups,existing selector and in-sample training goals,one seed. Calibration does not establish strategy or solve objective quality. No subagents."
+}

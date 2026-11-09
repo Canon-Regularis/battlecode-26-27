@@ -1,0 +1,465 @@
+{
+  "per_family": {
+    "<unknown>": {
+      "rows": 0,
+      "old_union": 0,
+      "new_union": 0,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 0
+    },
+    "altar": {
+      "rows": 2,
+      "old_union": 0,
+      "new_union": 2,
+      "old_missing_recovered": 2,
+      "support_lost": 0,
+      "remaining_missing": 0
+    },
+    "attack": {
+      "rows": 985,
+      "old_union": 972,
+      "new_union": 976,
+      "old_missing_recovered": 4,
+      "support_lost": 0,
+      "remaining_missing": 9
+    },
+    "blocked": {
+      "rows": 110,
+      "old_union": 8,
+      "new_union": 55,
+      "old_missing_recovered": 47,
+      "support_lost": 0,
+      "remaining_missing": 55
+    },
+    "cancel": {
+      "rows": 2589,
+      "old_union": 2589,
+      "new_union": 2589,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 0
+    },
+    "cast_0": {
+      "rows": 213,
+      "old_union": 206,
+      "new_union": 206,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 7
+    },
+    "cast_1": {
+      "rows": 243,
+      "old_union": 125,
+      "new_union": 165,
+      "old_missing_recovered": 40,
+      "support_lost": 0,
+      "remaining_missing": 78
+    },
+    "end": {
+      "rows": 4096,
+      "old_union": 4096,
+      "new_union": 4096,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 0
+    },
+    "move": {
+      "rows": 2362,
+      "old_union": 1953,
+      "new_union": 2032,
+      "old_missing_recovered": 82,
+      "support_lost": 3,
+      "remaining_missing": 330
+    },
+    "priority": {
+      "rows": 576,
+      "old_union": 71,
+      "new_union": 109,
+      "old_missing_recovered": 38,
+      "support_lost": 0,
+      "remaining_missing": 467
+    },
+    "recall": {
+      "rows": 3084,
+      "old_union": 3084,
+      "new_union": 3084,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 0
+    },
+    "shop": {
+      "rows": 43,
+      "old_union": 0,
+      "new_union": 0,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 43
+    },
+    "submit": {
+      "rows": 22,
+      "old_union": 22,
+      "new_union": 22,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 0
+    },
+    "teleport": {
+      "rows": 2,
+      "old_union": 0,
+      "new_union": 0,
+      "old_missing_recovered": 0,
+      "support_lost": 0,
+      "remaining_missing": 2
+    },
+    "ward": {
+      "rows": 112,
+      "old_union": 12,
+      "new_union": 35,
+      "old_missing_recovered": 23,
+      "support_lost": 0,
+      "remaining_missing": 77
+    }
+  },
+  "lost_support_rows": [
+    {
+      "index": 1510,
+      "true_action": "move",
+      "recorded_coordinate": 145,
+      "old_matching_sources": [
+        "camp_near/greedy_yx",
+        "camp_near/field_yx",
+        "camp_near/field_xy",
+        "camp_hp/greedy_yx",
+        "camp_hp/field_yx",
+        "camp_hp/field_xy",
+        "bank/greedy_yx",
+        "bank/field_xy"
+      ],
+      "new_same_destination_sources": [
+        "camp_near/greedy_yx",
+        "camp_near/field_yx",
+        "camp_near/field_xy",
+        "camp_hp/greedy_yx",
+        "camp_hp/field_yx",
+        "camp_hp/field_xy",
+        "bank/greedy_yx",
+        "bank/field_xy"
+      ],
+      "new_same_destination_actions": [
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked"
+      ],
+      "explanation": "Matching attempted destination retained but forecast as blocked, not move"
+    },
+    {
+      "index": 6577,
+      "true_action": "move",
+      "recorded_coordinate": 128,
+      "old_matching_sources": [
+        "camp_near/greedy_yx",
+        "camp_near/field_yx",
+        "camp_near/field_xy",
+        "camp_hp/field_yx",
+        "bank/greedy_yx",
+        "bank/field_yx",
+        "bank/field_xy"
+      ],
+      "new_same_destination_sources": [
+        "camp_near/greedy_yx",
+        "camp_near/field_yx",
+        "camp_near/field_xy",
+        "camp_hp/field_yx",
+        "bank/greedy_yx",
+        "bank/field_yx",
+        "bank/field_xy",
+        "ward/toward_bank",
+        "head/move"
+      ],
+      "new_same_destination_actions": [
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "blocked",
+        "ward",
+        "blocked"
+      ],
+      "explanation": "Inspect source availability; no inferred hidden cause"
+    },
+    {
+      "index": 6884,
+      "true_action": "move",
+      "recorded_coordinate": 160,
+      "old_matching_sources": [
+        "bank/greedy_yx",
+        "bank/field_yx",
+        "bank/field_xy"
+      ],
+      "new_same_destination_sources": [
+        "bank/greedy_yx",
+        "bank/field_yx",
+        "bank/field_xy",
+        "ward/toward_bank",
+        "head/move",
+        "head/blocked"
+      ],
+      "new_same_destination_actions": [
+        "blocked",
+        "blocked",
+        "blocked",
+        "ward",
+        "blocked",
+        "blocked"
+      ],
+      "explanation": "Inspect source availability; no inferred hidden cause"
+    }
+  ],
+  "per_source_on_old_missing": {
+    "camp_near/greedy_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "camp_near/field_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "camp_near/field_xy": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "camp_hp/greedy_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "camp_hp/field_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "camp_hp/field_xy": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "enemy_near/greedy_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "enemy_near/field_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "enemy_near/field_xy": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "bank/greedy_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "bank/field_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "bank/field_xy": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "home/greedy_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "home/field_yx": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "home/field_xy": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "attack/near": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "attack/hp": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "attack/fraction": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cast_0/near": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cast_0/hp": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cast_0/fraction": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cast_1/near": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cast_1/hp": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cast_1/fraction": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "ward/self": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "ward/toward_bank": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "submit/bank": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "end": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "cancel": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "recall": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "priority/P05": {
+      "matches_on_old_missing": 38,
+      "unique_recovery": 38
+    },
+    "head/move": {
+      "matches_on_old_missing": 35,
+      "unique_recovery": 11
+    },
+    "head/blocked": {
+      "matches_on_old_missing": 42,
+      "unique_recovery": 12
+    },
+    "head/attack": {
+      "matches_on_old_missing": 4,
+      "unique_recovery": 0
+    },
+    "head/cast_0": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "head/cast_1": {
+      "matches_on_old_missing": 27,
+      "unique_recovery": 14
+    },
+    "head/ward": {
+      "matches_on_old_missing": 17,
+      "unique_recovery": 6
+    },
+    "head/submit": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "head/altar": {
+      "matches_on_old_missing": 2,
+      "unique_recovery": 2
+    },
+    "head/teleport": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "attempt/continue1": {
+      "matches_on_old_missing": 62,
+      "unique_recovery": 40
+    },
+    "attempt/continue2": {
+      "matches_on_old_missing": 12,
+      "unique_recovery": 0
+    },
+    "attempt/prior_blocked": {
+      "matches_on_old_missing": 32,
+      "unique_recovery": 27
+    },
+    "attempt/camp2": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "attempt/bank2": {
+      "matches_on_old_missing": 3,
+      "unique_recovery": 0
+    },
+    "ward2/camp": {
+      "matches_on_old_missing": 2,
+      "unique_recovery": 1
+    },
+    "ward2/enemy": {
+      "matches_on_old_missing": 4,
+      "unique_recovery": 2
+    },
+    "ward2/bank": {
+      "matches_on_old_missing": 2,
+      "unique_recovery": 0
+    },
+    "ward2/continue": {
+      "matches_on_old_missing": 12,
+      "unique_recovery": 2
+    },
+    "ground0/camp": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "ground0/enemy": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "ground0/continue": {
+      "matches_on_old_missing": 0,
+      "unique_recovery": 0
+    },
+    "ground1/camp": {
+      "matches_on_old_missing": 5,
+      "unique_recovery": 3
+    },
+    "ground1/enemy": {
+      "matches_on_old_missing": 8,
+      "unique_recovery": 4
+    },
+    "ground1/continue": {
+      "matches_on_old_missing": 15,
+      "unique_recovery": 6
+    },
+    "attack/nearest_lock": {
+      "matches_on_old_missing": 4,
+      "unique_recovery": 0
+    },
+    "attack/weakest_lock": {
+      "matches_on_old_missing": 4,
+      "unique_recovery": 0
+    }
+  },
+  "invariants": {
+    "P05_priority_proposed_all_14439_rows": true,
+    "end_proposed_all_14439_rows": true,
+    "no_destination_duplicated_under_both_outcomes": true,
+    "shop_strict_matches": 0
+  },
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "source_sha256": "062293fc9e73ed0114cbba54f29f6e5261d5b232bb0101dc70fda3bcbb3602b3"
+}

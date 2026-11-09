@@ -1,0 +1,36 @@
+"""A01 measured rare/unseen cases plus post-hoc TRAIN-only type contingency."""
+from pathlib import Path
+import sys,json
+import numpy as np
+root=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(root))
+from tools.action_predictor import priority_anchor_baselines as study
+from tools.action_predictor.priority_fit_v3 import BASE,VAL
+from tools.action_predictor.category_study import WORK,REPORTS
+from tools.action_predictor.more_replays import frozen,sha
+from tools.action_predictor import reliable_train as rt
+study.verify_protocol();report=study.read(REPORTS/'A01.json')
+def arrays(path):
+    with np.load(path) as z:return {k:z[k] for k in z.files}
+train_y=arrays(BASE/'combined-train.npz')['y'];train_values=arrays(WORK/'priority-train.npz')['values']
+known=(train_values[:,1]==1)&(train_values[:,3]==1);differs=known&(train_values[:,0]!=train_values[:,2])
+table={label:dict(support=int((train_y==i).sum()),known_equal=int(((train_y==i)&known&~differs).sum()),known_different=int(((train_y==i)&differs).sum()),unknown=int(((train_y==i)&~known).sum())) for i,label in enumerate(rt.LABELS)}
+raw=arrays(VAL);values=arrays(WORK/'priority-validation.npz')['values'];mask=raw['y']==rt.LABELS.index('priority')
+freq=study.read(study.PRIORS)['priors']['global_frequency']['prior']['values']
+simple=arrays(WORK/'anchor-baselines/latest_minus_copy.npz');p03=arrays(WORK/'runs/P03/validation-predictions.npz')
+cases=[]
+for row in np.flatnonzero(mask&~np.isin(raw['priority'],freq)):
+    cases.append(dict(row=int(row),group=int(raw['group'][row]),round=int(raw['round'][row]),target=int(raw['priority'][row]),
+        negative_latest_prediction=int(simple['priority'][row]),P03_prediction=int(p03['priority'][row]),predicted_action=rt.LABELS[int(simple['prediction'][row])],
+        exact=bool(simple['priority'][row]==raw['priority'][row]),joint=bool(simple['priority'][row]==raw['priority'][row] and simple['prediction'][row]==raw['y'][row]),
+        PRE_current=int(values[row,0]),PRE_scheduled=int(values[row,2]),last_earlier_argument=int(values[row,4]) if values[row,5] else None))
+selected=('current_minus_copy','scheduled_minus_copy','latest_minus_copy','latest_plus_residual')
+payload=dict(A01_report_sha256=sha(REPORTS/'A01.json'),A01_analysis_sha256=sha(REPORTS/'A01-analysis.json'),source_sha256=sha(__file__),
+    training_contingency=dict(scope='Post-hoc exploratory TRAIN-only descriptive counts, not a new model, legal mask or success criterion',feature='Own personal-PRE current priority differs from scheduled priority, with both availability bits',rows=len(train_y),per_action=table),
+    unseen_cases=cases,rare_unseen_tradeoffs={name:{label:report['metrics'][name]['priority_strata'][label] for label in ('unseen_value','training_count_1_19')} for name in selected},
+    interpretation='One unseen and five rare complete commands from negative copying coexist with poor overall exactness and high NLL. No per-row target-aware routing or baseline adoption. TRAIN-only state contingency motivates a future separately preregistered action-input hypothesis, not a constraint or fit.',
+    new_optimizer_steps=0,reserved_games_opened=0)
+frozen(REPORTS/'A01-state-and-generalization-diagnostic.json',payload)
+(REPORTS/'A01-state-diagnostic-source.txt').write_bytes(Path(__file__).read_bytes())
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print(json.dumps(payload['training_contingency'],indent=2))

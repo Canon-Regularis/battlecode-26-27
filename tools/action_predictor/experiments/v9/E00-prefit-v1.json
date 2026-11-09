@@ -1,0 +1,6 @@
+{
+  "plan_sha256": "c4aefdd1393d87fd04f87249e9fabd6eea235ed478387c25eb2c91e1f5a11011",
+  "output_sha256": "da3d40fe3ffa15cf4854c76f97e11fb633a585992f89ec5e6f79b1167775949a",
+  "optimizer_steps": 0,
+  "reason": "Strict frozen-priority probability check caught 2.384e-7 float32 discrepancy caused by running its linear head on only supervised rows. The corrected runner preserves original256-row GEMM shape before row selection. No metric tolerance or benchmark changed; original failed pre-fit plan/sources/output preserved."
+}

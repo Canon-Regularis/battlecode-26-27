@@ -1,0 +1,44 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\joint_movement_weights.py": "5f1fe95e7f35f65d667eb22dc8d2fc1198c707ae92cd844859d67711a30daff0",
+    "tools\\action_predictor\\behavior_segments\\joint_movement_fit.py": "0c869b66dd9715f2503ef5f24add3bdc1362c9134d184ff5634df046d7c93dab",
+    "tools\\action_predictor\\behavior_segments\\joint_movement_predictor.py": "b356770cbc9458b52008fae49de40158b9e344cdb282a8e9287cf85f4ddecdbe",
+    "tools\\action_predictor\\behavior_segments\\joint_movement_verify.py": "8e0ae40508c2384f083e14cdb74e5f9f6c52baf7a30045bd03c461ca68bc5cdc",
+    "tools\\action_predictor\\behavior_segments\\test_joint_movement.py": "8dd986e62355f704b1566661ad5a2422df6898cfb4089814b59beb10f0f1bd11"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v52\\plan.json": "218cdec07d68f453aee2e59ebcb6d317f487910b4323af8a4e5c0777857b9b2f",
+    "tools\\action_predictor\\experiments\\v52\\cache.json": "ff9e555b597d35195ca69115cc046a21fe9254a01fcf6ac1e2dbbbb2a2a30fd1",
+    "tools\\action_predictor\\experiments\\v52\\selection.json": "24d678b4e88e1898afabefbe7cb60f6d2792ac9f9246aac9a18b90ebe9088626",
+    "tools\\action_predictor\\experiments\\v52\\refit.json": "23865d78929f158f1db36e95b9b5e53b516e04e6a14a1d2b386f4eaba5ddba24",
+    "tools\\action_predictor\\experiments\\v52\\result.json": "b8e183c12824a69538b9fc25ba8ae00ce2db8e3c2e60fcd78850c556e7023b1b",
+    "tools\\action_predictor\\experiments\\v52\\verification.json": "8d50d79b419644ec2819a6145b752095a7b0a1f36e2878474dcba67725e2418b"
+  },
+  "fold_backbones": [
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold0\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold1\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold2\\epoch-024.pt",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold3\\epoch-024.pt"
+  ],
+  "full_backbone": ".cambc\\action-predictor\\v49\\selected.pt",
+  "seed": 54001,
+  "learning_rate": 0.0003,
+  "distillation_weights": [
+    0.2,
+    1.0
+  ],
+  "epochs": 32,
+  "evaluate_every": 8,
+  "batch_windows": 16,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "tuning_seconds_cap": 1800,
+  "refit_seconds_cap": 600,
+  "target_accuracy": 0.8,
+  "code_accuracy_allowance": 0.01,
+  "trainable_parameters": 24293,
+  "architecture": "Unchanged V49 backbone plus V52 geometry correction. Start each fold from matching V49 backbone and V52 selected predicted-code head; full refit from matching full checkpoints. Update existing context,GRU,base movement and correction weights. Map encoder,code readout, code embedding and goal-query/readout weights stay frozen. No new features or layers.",
+  "objective": "Mean supported movement CE over actual movement rows plus coefficient times mean code KL over observed rows to the frozen matching V49 teacher. Hindsight codes used for validation metrics only. Full32-turn recurrence,original masks/resets,identical schedules across configurations.",
+  "selection": "Four fitting-game folds; train all expanded windows from other24games,validate original 64windows of held8games. Retain candidates whose pooled inferred-code correct count loses at most1percentage point vs warm start. Maximize movement correct count,then minimize movement NLL,then earlier epoch,then smaller distillation weight. Include epoch0. Refit one chosen setting; assess it once on unchanged513 movement and699 code queries.",
+  "limitations": "Target80percent is not guaranteed. Repeatedly exposed research data,teacher-forced history,original backbone/discovery fitting-group exposure,inferred codes,sparse goals and conditional movement only. Goal forecasts may change through recurrent inputs despite frozen goal weights; report them. No evaluation-gradient updates,subagents or playing-bot changes."
+}

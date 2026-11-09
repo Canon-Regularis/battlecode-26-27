@@ -1,0 +1,17 @@
+{
+  "attempts": [
+    {
+      "stage": "source generation",
+      "failure": "PowerShell rejected an inline Python command with nested quoting before Python executed. No source/weights/output were changed by that command.",
+      "repair": "Use an explicit versioned source builder file with constant interpreter invocation. Builder then completed."
+    },
+    {
+      "stage": "unit prerequisite",
+      "failure": "Test fixture read the UTF8 review JSON using Windows default cp1252, causing eleven setup errors before review fault validation. The model/filter tests passed; this was not a successful gate-fault test.",
+      "repair": "Explicit UTF8 for fixture review reads. Do not freeze or fit until all tests pass."
+    }
+  ],
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0
+}

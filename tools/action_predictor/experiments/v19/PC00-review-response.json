@@ -1,0 +1,16 @@
+{
+  "review_sha256": "cb3f52d6bea7ac53e595cf40c507e42f1b26ac06e9ec9ecb2fa7009b58705810",
+  "review_link": "<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v19-pc00-actual-priority-capacity-review-20261108>",
+  "verdict": "Measurements reproduce; no promotion; execution-control correction required.",
+  "findings": {
+    "execution_control": "Accepted. Original failure paths and uncommitted execution remain disclosed. New priority_broad runner enforces source bytes in HEAD, checked prerequisite commands and preflight before optimizer creation. Negative-path tests call no model/optimizer. Historical PC00 is unchanged.",
+    "smallset_capacity": "Accepted. Reviewer reports 128x168 input matrix rank128,72target labels and48singletons. This permits arbitrary-label interpolation on these rows; pass proves optimization of this sample only. New broad protocol verifies ranks and removes the unrestricted128row interpolation setting.",
+    "control_interpretation": "Accepted. Both warm head and encoder saw controls before new optimization.7rescues/22regressions samefit controls;6/22 heldgroups; no isolated group-shift penalty or definitive information/forgetting diagnosis.",
+    "original_full_data_failure": "Accepted. Do not blame loss dilution: no other-head gradient competes and Adam rescales gradients. PD00 independently shows original fitting continues through8epochs while historical DEV loss worsens; this is separate later evidence, outside PC00 review.",
+    "joint_objective": "Accepted. Conditional value diagnostics alone cannot justify replacement. Future integration must recompute normalized joint probabilities and families; original benchmark/category/three-seed goals remain binding."
+  },
+  "next_experiment": "PC01: same warm head, frozen inputs, exact anchors, 2000fullbatchmean updates and optimizer settings; broaden fit to5876natural priority rows in actual55fitgroups, excluding both unchangedcontrols. Population only treatment; total row presentations grow, coverage/diversity not separately identified.",
+  "deferred_analysis": "Frozen PC00 parameter-block attribution was announced but not implemented or run; defer in favor of reviewer-recommended broader cohort.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

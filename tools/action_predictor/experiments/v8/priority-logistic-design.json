@@ -1,0 +1,54 @@
+{
+  "hypothesis": "Recovering omitted causal priority inputs may improve integer prediction; no benefit assumed.",
+  "fits": [
+    {
+      "id": "P01",
+      "seed": 26,
+      "use_inputs": false
+    },
+    {
+      "id": "P02",
+      "seed": 26,
+      "use_inputs": true
+    }
+  ],
+  "replication": "Do not auto-repeat. After both individually reviewed seed26 fits, preregister seed27/28 matched repeats if measured benefit and original guards justify them. No claim of three-seed consistency before repeats.",
+  "architecture": "Frozen M01 context128 and every action/spatial path. Matched Linear(167,2) logistic priority heads,336 trainable parameters each;39 extra fields:7 current/latest values+masks/gap and16x2 earlier argument/mask. Control zeroes normalized extra channels.",
+  "initialization": "Both warm-start identical M01 priority weights/bias; added columns zero; preserve shuffle RNG. No shared-model fine-tuning.",
+  "normalization": "Retained M01 normalization for original paths; float64 mean/sample std of all433071 TRAIN recovered input rows only, floor0.01, storedfloat32. No validation-fitted statistics.",
+  "losses": "Original integer-bin logistic NLL only for priority rows, SUM divided by FULL minibatch length. Frozen action/spatial terms have zero gradients and are omitted from backprop, but all terms retained for checkpoint/evaluation joint NLL.",
+  "training": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "checkpoint": "Minimum unweighted observed joint NLL over all14439 validation rows; improvement0.0001, patience6,35epoch cap. Same rule botharms; no selection on exact accuracy. Epoch0 is reported only, not a candidate.",
+  "rows": {
+    "train": 433071,
+    "validation": 14439
+  },
+  "sampler": "Original augmented full-row random permutation, batch256; no class/sample changes.",
+  "accounting": "Replace only priority forecasts and priority conditional NLL in frozen M01 predictions; keep action/coordinate/ability paths identical. Retain all rows,43shopsunassessed, all categories and originalguards. Parameter-only priority joint ceiling343/576.",
+  "inputs": {
+    "train_sha256": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+    "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+    "recovered_ready_sha256": "717333dad4d0d46100976932c9db31cbf632fe22bb01daf2ff9cd449068cc43b",
+    "baseline_sha256": "906261a160de839a9e536462e84d6c19360b8fd9e584764d70fd0eb80f378936"
+  },
+  "success_definition_sha256": "ebc678d209b91d73eef4e56550c8e16328e3391b880d3a91eb63aac4f8b42e06",
+  "code": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_fit.py": "8a8f021982f3430639b01a33d044592ccdaf5b33a0658f115b66747cd43584da",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_predictor.py": "1d24ab9615a783c01c56d3d036ed5a8a5faf5cbba6c0117f7df0fe56a57b5917",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_roundtrip.py": "ca1130c3d5ea7e83b5b4ebe07bc3a0e7c1760a88291a4e65aa0c686799c0ee0d",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\test_priority_head.py": "aff89d55611bf21dbacd2254ea89ba2315e923cfeab210c777b57489112e02a8"
+  },
+  "review": "Code/design approval bound to exact hashes required before fit. Exactly one fit per command; fresh requested Sol xhigh review after every completed fit before another command. Failed/resumed states retained.",
+  "reserved": "75newval+75finaltest sealed, oldtestunused; no matches/botchanges/downloads/deployments/PR from this runner."
+}

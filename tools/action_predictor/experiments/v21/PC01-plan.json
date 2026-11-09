@@ -1,0 +1,71 @@
+{
+  "id": "PC01-broad-natural-P05",
+  "source_commit": "76fc4d0c36dc56b278b5cb1f8d9ad56708a77e78",
+  "sources": {
+    "tools/action_predictor/priority_broad/__init__.py": "567f090b6f2ed5fad48810984b88502121e32e6cd123de6f7909037c5a2630df",
+    "tools/action_predictor/priority_broad/experiment.py": "8a53098e4af116f8b7d8507c82643c3a276f69e93ac9705a23795489466802fd",
+    "tools/action_predictor/priority_broad/guard.py": "50bf2bdce1da3198474a315bb1e21e039c26b1223150c997ee2acc66ea0296ea",
+    "tools/action_predictor/priority_broad/test_guard.py": "e90d651d92099377c43ea157d946f2faa05b43c5344c10c16d557bfa7bf0f69c",
+    "tools/action_predictor/priority_capacity/data.py": "c18b37e7cf70cff0ecedbf57c8da556ffb8b84b5c2ddfc5e3949990c30872b04",
+    "tools/action_predictor/priority_capacity/measurement.py": "87507fa595feaa8a0ff2b04505124fbbe9b968a3be1dcc17ac0ef663bf3cf299",
+    "tools/action_predictor/priority_residual_modes.py": "4c5602b8ca5143e6f4349722cc31ac206e5fd415884882fd1a4c0a7a3419a223",
+    "tools/action_predictor/priority_modes.py": "e2986de4b8cbc249668776de3a5d764e4005862900852e489a056df96832dd69",
+    "tools/action_predictor/priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "tools/action_predictor/reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools/action_predictor/audit.py": "e6e623e74bd1fa568f9d7638142734380faa800b197abedbe1e1e40daf564d0d",
+    "tools/action_predictor/data.py": "5067d453cf7756c8d85d96d6ba4ac164e5d97ea373a68a842fc9755d66e39c0a"
+  },
+  "inputs": {
+    ".cambc\\action-predictor\\v8\\priority-context\\ec2ec627d3c5e621\\train.npy": "8e27fe1e499555823ed141db1c968dad342a0e4a15819589b6c94bde6584da02",
+    ".cambc\\action-predictor\\v8\\priority-context\\ec2ec627d3c5e621\\extra-normalization.npz": "1007f9e7dfad65fc8cc008fee06e37f6859b1a3c548938871784a72bb49dd7ac",
+    ".cambc\\action-predictor\\v8\\priority-train.npz": "7847b7c9252c3443f517c30a082be05ffe8b244b586eead55b262bd385a6de2b",
+    ".cambc\\action-predictor\\v5\\combined-train.npz": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+    ".cambc\\action-predictor\\v9\\frequency\\natural-mask.npy": "09217d8fc3d5673d980c8b8a4434861aa26dddb37e506bbfa22cbaafc0e525bd",
+    ".cambc\\action-predictor\\v11\\R02-capacity\\row-indices.npz": "87a1720ea5616232c5f13a408bf6656638bb918649fa537bc42d8d8de36f4a46",
+    ".cambc\\action-predictor\\v9\\runs\\G00\\train-predictions.npz": "00c975b5165e2d0f36ad3925e272edce1f23bc984e234a1cc5ad7929cfc62b5e",
+    ".cambc\\action-predictor\\v8\\runs\\P05\\model.pt": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+    "tools\\action_predictor\\experiments\\v8\\priority-context-ready-v3.json": "de6944c055b5a7d0c834fd4451c2b2f0e92f66692a362622813046f9e13441ba",
+    "tools\\action_predictor\\experiments\\v8\\priority-data-ready.json": "717333dad4d0d46100976932c9db31cbf632fe22bb01daf2ff9cd449068cc43b",
+    "tools\\action_predictor\\experiments\\v8\\priority-residual-modes-vocabulary.json": "1fd6470d9572ff92eae489616c8a92fbed0b65d22a61084e587ad1fb174d4147",
+    "tools\\action_predictor\\experiments\\v11\\R02-plan.json": "1a584e28786afc292b129c54ff367636a59a509e8cb7801ecc54acdb9266c6d7"
+  },
+  "initial_checkpoint_sha256": "5ee8cf27532ce205a385c83c4cb77b4af4e5f15f18649b7eebe3021d4d6737aa",
+  "parent_protocol_sha256": "c78f908a6062e2837d3dfc077cc468ff6352085d8b59a1a1ffb3d548d587d8b8",
+  "hypothesis": "Does broader natural TRAIN coverage improve the same head fitting and prevent the PC00 control collapse? Changes training population only; coverage and diversity are not separately isolated. Chunk accumulation changes finite precision only.",
+  "cohort": {
+    "rows": 5876,
+    "fit_groups": 55,
+    "absolute_labels": 430,
+    "available_residual_labels": 560,
+    "rule": "All natural priority rows from PC00 actual fit groups, minus both controls. Original128fit rows are included; no row selected by model error."
+  },
+  "exposure": "Frozen encoder AND warm head, normalization and vocabulary previously saw controls. Held out only from NEW optimization, not untouched full-policy generalization.",
+  "model": "Same actual P05 absolute/residual/logistic head, original 128D frozen M01 contexts, 39 normalized causal channels and exact int64 anchors. No new architecture/vocabulary.",
+  "training": {
+    "seed": 20261120,
+    "updates": 2000,
+    "full_batch_rows": 5876,
+    "chunks": 256,
+    "loss": "Sum normalized integer NLL over chunks divided by5876; accumulate all gradients before ONE optimizer step per update. No resampling.",
+    "optimizer": "AdamW",
+    "lr_first1000": 0.003,
+    "lr_last1000": 0.001,
+    "weight_decay": 0,
+    "gradient_clip": 5,
+    "threads": 4
+  },
+  "assessment_steps": [
+    0,
+    100,
+    500,
+    1000,
+    2000
+  ],
+  "assessment": "All broad fit rows, original128fit rows, same two unchanged128controls. Exact,NLL,MAE,bounded candidate rank and marginalized explanation shares. Fixed final2000; no checkpoint/threshold selection, DEV lookup or promotion.",
+  "interpretation": "Compare broad fitting and control changes against saved PC00. Broader population is the named treatment, not one isolated data mechanism. Diagnostic-only; no full-policy replacement. Any subsequent integrated prediction must re-decode normalized joint command probabilities.",
+  "continuation": "Fresh Solxhigh review after fit; follow fitting/transfer evidence. Neither fit success nor failure establishes observation sufficiency. Original full benchmark/per-category/three-seed targets remain binding.",
+  "constraints": "EligibleTRAINonly; both75-game partitions sealed. No DEV payloads, matches, downloads, bot/runtime/deployment. All old artifacts preserved.",
+  "new_fits_allocated": 1,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

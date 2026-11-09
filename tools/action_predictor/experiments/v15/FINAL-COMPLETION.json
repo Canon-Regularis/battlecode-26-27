@@ -1,0 +1,35 @@
+{
+  "prior_inventory_sha256": "85ec1e4b735e09ea088835ccc74de4ed2db7327f3f9d4ee7235803349e3e991e",
+  "new_reports": {
+    "X00-REVIEW.md": "738fc88d7c5d60bb3d77cbfbbd305d2bf583308d53573085c141d59d1cab37c6",
+    "X00-review-response.json": "422dbe75868a10be91e0ed64bbb5dcace8754620ee75e3faad4182c00bc60fcd",
+    "X00-final-review-addendum.json": "b6e2a69f8e406a916adc77f7d6abdf7ccc52bc35d9292d9529006207364891d4",
+    "FINAL-HANDOFF.md": "c7898a7f70b24979209157182a6f50da5ab5b22e83e19b795f238d559bcaa3d9"
+  },
+  "new_source_sha256": "e9f2ded8fa025a56abf9016df5f965d6d48fe81534ad7cc23e78c4fb4ad9e3bc",
+  "commands": [
+    {
+      "command": "python -m tools.action_predictor.movement_experts.roundtrip X00",
+      "status": "recorded failed original probability preflight"
+    },
+    {
+      "command": "python -m tools.action_predictor.movement_experts.roundtrip_diagnostic X00",
+      "status": "completed numerical attribution; original threshold remains failed"
+    },
+    {
+      "command": "python -m tools.action_predictor.movement_experts.final_addendum",
+      "status": "completed saved-output reporting correction, no inference/fit"
+    }
+  ],
+  "fit_budget": {
+    "allocated": 2,
+    "completed": 2,
+    "extra": 0,
+    "seed_repeats": 0
+  },
+  "review_status": "Fresh xhigh aftereachfit; X00 finalreview validnegative, small reporting follow-up independently matched reviewer counts. No newreviewneeded for reporting-only correction.",
+  "qualification": "Completion of bounded research, not original policy-accuracy goals. No model promoted. Ward original4fitprotocol incomplete atuserdirection.",
+  "new_fits": 0,
+  "new_inference": 0,
+  "reserved_opened": 0
+}

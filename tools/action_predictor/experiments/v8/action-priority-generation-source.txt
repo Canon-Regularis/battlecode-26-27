@@ -1,0 +1,40 @@
+from pathlib import Path
+root=Path(__file__).resolve().parent.parent;directory=root/'tools/action_predictor'
+s=(directory/'priority_residual_roundtrip.py').read_text()
+s=s.replace('from .priority_residual_predictor import PriorityResidualPredictor','from .action_priority_predictor import ActionPriorityPredictor')
+s=s.replace('from .priority_residual_fit import verify_protocol,head,read,PLAN,SOURCES,VOCAB,log','from .action_priority_fit import verify_protocol,head,read,PLAN,SOURCES,log,PRIORITY\nfrom .priority_residual_fit import head as priority_head,VOCAB\nfrom .action_priority_head import classifier_features\nfrom unittest.mock import patch')
+s=s.replace('def run(identifier=None):','def run(identifier=None,use_inputs=False):')
+s=s.replace("assert identifier=='P05';info=read(REPORTS/'P05.json');directory=WORK/'runs/P05'","assert identifier in ('C01','C02');use_inputs=identifier=='C02';info=read(REPORTS/(identifier+'.json'));directory=WORK/'runs'/identifier")
+s=s.replace("'priority-outputs.npy'","'action-logits.npy'").replace("['priority_outputs_sha256']","['action_logits_sha256']")
+s=s.replace('reference=head(base.priority)',"reference=head(base.action,use_inputs);priority_reference=priority_head(base.priority);priority_reference.load_state_dict(torch.load(PRIORITY/'model.pt',weights_only=True)['head_state'])")
+s=s.replace("predictor=PriorityResidualPredictor(BASE/'runs/M01/model.pt',norm,vocab,checkpoint,actor=turn['actor'])","predictor=ActionPriorityPredictor(BASE/'runs/M01/model.pt',norm,vocab,PRIORITY/'model.pt',use_inputs,checkpoint,actor=turn['actor'])")
+s=s.replace('maximum=0.;cases=0','maximum=0.;cases=0;forced_cases=0')
+s=s.replace('            for key in expected:',"            expected['classifier_features']=classifier_features(expected['extra'],expected['priority_values'])\n            for key in expected:")
+s=s.replace("logits,context=base(expected['x'],expected['history']);family=logits.argmax(-1)","_,context=base(expected['x'],expected['history']);logits=reference(context,expected['classifier_features']);family=logits.argmax(-1)")
+s=s.replace("expected_raw=reference(context,expected['extra'])","expected_raw=priority_reference(context,expected['extra'])")
+s=s.replace('reference.candidate_log_masses(expected_raw,', 'priority_reference.candidate_log_masses(expected_raw,')
+s=s.replace('reference.integer(expected_raw,', 'priority_reference.integer(expected_raw,')
+old="""                saved_candidates,saved_logp=reference.candidate_log_masses(saved_raw,expected['priority_values'])
+                assert torch.equal(candidates,saved_candidates)
+                maximum=max(maximum,float((saved_logp.exp()-actual_logp.exp()).abs().max()))
+"""
+assert old in s
+s=s.replace(old,"                maximum=max(maximum,float((saved_raw.softmax(-1)-output['action']).abs().max()))\n")
+needle='            cases+=1'
+forced="""            # Force each spatial prediction without changing model weights or using y.
+            for name in SPATIAL:
+                forced=torch.full_like(logits,-100.);code=rt.LABELS.index(name);forced[:,code]=100.
+                with patch.object(predictor.classifier,'forward',return_value=forced):
+                    rerouted=predictor.distributions(actual)
+                with torch.no_grad():
+                    wanted=base.parameter_logits(context,expected['grid'],expected['valid'],torch.tensor([code]),expected['rules']).softmax(-1)
+                error=float((rerouted['coordinate']-wanted).abs().max());maximum=max(maximum,error)
+                assert error<2e-6 and torch.equal(rerouted['priority_raw'],output['priority_raw'])
+                forced_cases+=1
+"""
+assert s.count(needle)==1;s=s.replace(needle,forced+needle)
+s=s.replace("('P05-inference-roundtrip.json' if identifier else 'priority-residual-modes-initial-roundtrip.json')","((identifier+'-inference-roundtrip.json') if identifier else ('action-priority-initial-'+('treatment' if use_inputs else 'control')+'-roundtrip.json'))")
+s=s.replace('inputs_exact=True,probability_maximum_error=maximum','inputs_exact=True,forced_spatial_family_cases=forced_cases,priority_argument_checkpoint_sha256=sha(PRIORITY/\'model.pt\'),probability_maximum_error=maximum')
+s=s.replace('Mode-head causal inference/input/probability','Classifier and frozen-argument causal inference/input/probability')
+s=s.replace('tools.action_predictor.priority_residual_roundtrip','tools.action_predictor.action_priority_roundtrip')
+target=directory/'action_priority_roundtrip.py';assert not target.exists();target.write_text(s,encoding='utf-8',newline='\n')

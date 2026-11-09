@@ -1,0 +1,1074 @@
+{
+  "results": {
+    "fit": {
+      "all": {
+        "rows": 128,
+        "steps": {
+          "0": {
+            "exact": 34,
+            "accuracy": 0.265625,
+            "mean_NLL": 2.8940585720620096,
+            "mean_bounded_candidate_rank": 10.6015625,
+            "mean_target_probability_source_shares": [
+              0.6981129435692514,
+              0.30126745955650747,
+              0.000619596874240939
+            ]
+          },
+          "100": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.04908675110882339,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6151377982641095,
+              0.384862061999436,
+              1.3973645467648774e-07
+            ]
+          },
+          "500": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.004614375202846273,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6087470005167132,
+              0.3912529638348115,
+              3.564847557213563e-08
+            ]
+          },
+          "1000": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.0015547710089234184,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6033747460400313,
+              0.3966252328634688,
+              2.1096499825642513e-08
+            ]
+          },
+          "2000": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.0008775595442073122,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6022588279726712,
+              0.39774114502606417,
+              2.700126448740357e-08
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": 0.6619692978011956,
+            "high": 0.8043610816542948,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": -3.0772554754218024,
+            "high": -2.713800722983363,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "absolute_seen_in_new_fit": {
+        "rows": 128,
+        "steps": {
+          "0": {
+            "exact": 34,
+            "accuracy": 0.265625,
+            "mean_NLL": 2.8940585720620096,
+            "mean_bounded_candidate_rank": 10.6015625,
+            "mean_target_probability_source_shares": [
+              0.6981129435692514,
+              0.30126745955650747,
+              0.000619596874240939
+            ]
+          },
+          "100": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.04908675110882339,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6151377982641095,
+              0.384862061999436,
+              1.3973645467648774e-07
+            ]
+          },
+          "500": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.004614375202846273,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6087470005167132,
+              0.3912529638348115,
+              3.564847557213563e-08
+            ]
+          },
+          "1000": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.0015547710089234184,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6033747460400313,
+              0.3966252328634688,
+              2.1096499825642513e-08
+            ]
+          },
+          "2000": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.0008775595442073122,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6022588279726712,
+              0.39774114502606417,
+              2.700126448740357e-08
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": 0.6619692978011956,
+            "high": 0.8043610816542948,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": -3.0772554754218024,
+            "high": -2.713800722983363,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "absolute_not_seen_in_new_fit": {
+        "rows": 0,
+        "steps": {
+          "0": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "100": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "500": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "1000": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "2000": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          },
+          "NLL": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        }
+      },
+      "some_absolute_or_residual_label_seen_in_new_fit": {
+        "rows": 128,
+        "steps": {
+          "0": {
+            "exact": 34,
+            "accuracy": 0.265625,
+            "mean_NLL": 2.8940585720620096,
+            "mean_bounded_candidate_rank": 10.6015625,
+            "mean_target_probability_source_shares": [
+              0.6981129435692514,
+              0.30126745955650747,
+              0.000619596874240939
+            ]
+          },
+          "100": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.04908675110882339,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6151377982641095,
+              0.384862061999436,
+              1.3973645467648774e-07
+            ]
+          },
+          "500": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.004614375202846273,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6087470005167132,
+              0.3912529638348115,
+              3.564847557213563e-08
+            ]
+          },
+          "1000": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.0015547710089234184,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6033747460400313,
+              0.3966252328634688,
+              2.1096499825642513e-08
+            ]
+          },
+          "2000": {
+            "exact": 128,
+            "accuracy": 1.0,
+            "mean_NLL": 0.0008775595442073122,
+            "mean_bounded_candidate_rank": 1.0,
+            "mean_target_probability_source_shares": [
+              0.6022588279726712,
+              0.39774114502606417,
+              2.700126448740357e-08
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": 0.6619692978011956,
+            "high": 0.8043610816542948,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": -3.0772554754218024,
+            "high": -2.713800722983363,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "neither_point_label_seen_in_new_fit": {
+        "rows": 0,
+        "steps": {
+          "0": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "100": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "500": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "1000": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          },
+          "2000": {
+            "exact": 0,
+            "accuracy": null,
+            "mean_NLL": null,
+            "mean_bounded_candidate_rank": null,
+            "mean_target_probability_source_shares": null
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          },
+          "NLL": {
+            "low": null,
+            "high": null,
+            "valid_draws": 0
+          }
+        }
+      }
+    },
+    "same_fit_groups": {
+      "all": {
+        "rows": 128,
+        "steps": {
+          "0": {
+            "exact": 25,
+            "accuracy": 0.1953125,
+            "mean_NLL": 3.1479222086554195,
+            "mean_bounded_candidate_rank": 13.2578125,
+            "mean_target_probability_source_shares": [
+              0.715412977183899,
+              0.28373536066554295,
+              0.0008516621505582698
+            ]
+          },
+          "100": {
+            "exact": 14,
+            "accuracy": 0.109375,
+            "mean_NLL": 5.22011774712924,
+            "mean_bounded_candidate_rank": 22.9296875,
+            "mean_target_probability_source_shares": [
+              0.712082731413703,
+              0.2873058651122788,
+              0.0006114034740178857
+            ]
+          },
+          "500": {
+            "exact": 14,
+            "accuracy": 0.109375,
+            "mean_NLL": 6.277577481672601,
+            "mean_bounded_candidate_rank": 24.1015625,
+            "mean_target_probability_source_shares": [
+              0.7172772346575951,
+              0.28195181394154306,
+              0.0007709514008619597
+            ]
+          },
+          "1000": {
+            "exact": 11,
+            "accuracy": 0.0859375,
+            "mean_NLL": 6.8214658050244585,
+            "mean_bounded_candidate_rank": 25.015625,
+            "mean_target_probability_source_shares": [
+              0.7182321408910814,
+              0.2809141748347936,
+              0.000853684274125124
+            ]
+          },
+          "2000": {
+            "exact": 10,
+            "accuracy": 0.078125,
+            "mean_NLL": 7.119177711187673,
+            "mean_bounded_candidate_rank": 25.5234375,
+            "mean_target_probability_source_shares": [
+              0.718291652773216,
+              0.2808061828761734,
+              0.0009021643506109454
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.19130434782608696,
+            "high": -0.04132231404958678,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 3.29090442567551,
+            "high": 4.670475865994683,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "absolute_seen_in_new_fit": {
+        "rows": 83,
+        "steps": {
+          "0": {
+            "exact": 18,
+            "accuracy": 0.21686746987951808,
+            "mean_NLL": 2.7789069834879947,
+            "mean_bounded_candidate_rank": 7.192771084337349,
+            "mean_target_probability_source_shares": [
+              0.8045778313675985,
+              0.19510120409428486,
+              0.00032096453811655227
+            ]
+          },
+          "100": {
+            "exact": 13,
+            "accuracy": 0.1566265060240964,
+            "mean_NLL": 4.143279572541378,
+            "mean_bounded_candidate_rank": 11.783132530120483,
+            "mean_target_probability_source_shares": [
+              0.8450831342515235,
+              0.15461137960252383,
+              0.000305486145952818
+            ]
+          },
+          "500": {
+            "exact": 13,
+            "accuracy": 0.1566265060240964,
+            "mean_NLL": 5.23141644268658,
+            "mean_bounded_candidate_rank": 14.987951807228916,
+            "mean_target_probability_source_shares": [
+              0.8427664533145504,
+              0.15655306719563122,
+              0.000680479489818647
+            ]
+          },
+          "1000": {
+            "exact": 11,
+            "accuracy": 0.13253012048192772,
+            "mean_NLL": 5.777307235429866,
+            "mean_bounded_candidate_rank": 16.819277108433734,
+            "mean_target_probability_source_shares": [
+              0.839937843580074,
+              0.15911195065218897,
+              0.0009502057677372564
+            ]
+          },
+          "2000": {
+            "exact": 10,
+            "accuracy": 0.12048192771084337,
+            "mean_NLL": 6.073086468552469,
+            "mean_bounded_candidate_rank": 17.843373493975903,
+            "mean_target_probability_source_shares": [
+              0.8378357795664547,
+              0.1610540282755197,
+              0.001110192158025645
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.2,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 2.3916285886759985,
+            "high": 4.3049177500868225,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "absolute_not_seen_in_new_fit": {
+        "rows": 45,
+        "steps": {
+          "0": {
+            "exact": 7,
+            "accuracy": 0.15555555555555556,
+            "mean_NLL": 3.828550290630894,
+            "mean_bounded_candidate_rank": 24.444444444444443,
+            "mean_target_probability_source_shares": [
+              0.5509533572450749,
+              0.44721613834141916,
+              0.0018305044135063261
+            ]
+          },
+          "100": {
+            "exact": 1,
+            "accuracy": 0.022222222222222223,
+            "mean_NLL": 7.20628593581352,
+            "mean_bounded_candidate_rank": 43.48888888888889,
+            "mean_target_probability_source_shares": [
+              0.4667708772906127,
+              0.5320534717191603,
+              0.0011756509902267878
+            ]
+          },
+          "500": {
+            "exact": 1,
+            "accuracy": 0.022222222222222223,
+            "mean_NLL": 8.207163398024598,
+            "mean_bounded_candidate_rank": 40.91111111111111,
+            "mean_target_probability_source_shares": [
+              0.48581934246809994,
+              0.5132428357173358,
+              0.0009378218145640692
+            ]
+          },
+          "1000": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 8.747358277832264,
+            "mean_bounded_candidate_rank": 40.13333333333333,
+            "mean_target_probability_source_shares": [
+              0.4937527337091614,
+              0.5055716105493756,
+              0.0006756557414627465
+            ]
+          },
+          "2000": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 9.04863489204816,
+            "mean_bounded_candidate_rank": 39.68888888888889,
+            "mean_target_probability_source_shares": [
+              0.4977991522434641,
+              0.501682379139601,
+              0.000518468616934944
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.2702702702702703,
+            "high": -0.060590909090909174,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 4.51416254676609,
+            "high": 5.959718924488662,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "some_absolute_or_residual_label_seen_in_new_fit": {
+        "rows": 101,
+        "steps": {
+          "0": {
+            "exact": 23,
+            "accuracy": 0.22772277227722773,
+            "mean_NLL": 2.802695812190513,
+            "mean_bounded_candidate_rank": 7.782178217821782,
+            "mean_target_probability_source_shares": [
+              0.725965632094413,
+              0.27366502971047524,
+              0.0003693381951120661
+            ]
+          },
+          "100": {
+            "exact": 14,
+            "accuracy": 0.13861386138613863,
+            "mean_NLL": 4.2892172380472875,
+            "mean_bounded_candidate_rank": 13.188118811881187,
+            "mean_target_probability_source_shares": [
+              0.7183658520712934,
+              0.28125614624948947,
+              0.00037800167921718867
+            ]
+          },
+          "500": {
+            "exact": 14,
+            "accuracy": 0.13861386138613863,
+            "mean_NLL": 5.363653661364344,
+            "mean_bounded_candidate_rank": 15.772277227722773,
+            "mean_target_probability_source_shares": [
+              0.7238089367463673,
+              0.2754928809673285,
+              0.0006981822863043509
+            ]
+          },
+          "1000": {
+            "exact": 11,
+            "accuracy": 0.10891089108910891,
+            "mean_NLL": 5.9089092828846255,
+            "mean_bounded_candidate_rank": 17.26732673267327,
+            "mean_target_probability_source_shares": [
+              0.7243801001172631,
+              0.2746978628920422,
+              0.0009220369906951853
+            ]
+          },
+          "2000": {
+            "exact": 10,
+            "accuracy": 0.09900990099009901,
+            "mean_NLL": 6.205128574833938,
+            "mean_bounded_candidate_rank": 18.07920792079208,
+            "mean_target_probability_source_shares": [
+              0.7241130847372486,
+              0.27483280992058007,
+              0.0010541053421715407
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.22002631578947368,
+            "high": -0.038461538461538464,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 2.641726232872403,
+            "high": 4.224729925549103,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "neither_point_label_seen_in_new_fit": {
+        "rows": 27,
+        "steps": {
+          "0": {
+            "exact": 2,
+            "accuracy": 0.07407407407407407,
+            "mean_NLL": 4.439324654690811,
+            "mean_bounded_candidate_rank": 33.74074074074074,
+            "mean_target_probability_source_shares": [
+              0.6759382310371616,
+              0.32140585794190735,
+              0.0026559110209311058
+            ]
+          },
+          "100": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 8.702375207028398,
+            "mean_bounded_candidate_rank": 59.370370370370374,
+            "mean_target_probability_source_shares": [
+              0.688579205990866,
+              0.3099362949323431,
+              0.0014844990767908632
+            ]
+          },
+          "500": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 9.69632955023312,
+            "mean_bounded_candidate_rank": 55.25925925925926,
+            "mean_target_probability_source_shares": [
+              0.6928438305477438,
+              0.30611300765990096,
+              0.0010431617923552367
+            ]
+          },
+          "1000": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 10.235103165621618,
+            "mean_bounded_candidate_rank": 54.0,
+            "mean_target_probability_source_shares": [
+              0.695234219341291,
+              0.3041677861761976,
+              0.000597994482511191
+            ]
+          },
+          "2000": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 10.538398554584976,
+            "mean_bounded_candidate_rank": 53.370370370370374,
+            "mean_target_probability_source_shares": [
+              0.6965151850559081,
+              0.3031510224508,
+              0.0003337924932916813
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.1935483870967742,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 5.280975606284617,
+            "high": 7.045809068008808,
+            "valid_draws": 2000
+          }
+        }
+      }
+    },
+    "held_groups": {
+      "all": {
+        "rows": 128,
+        "steps": {
+          "0": {
+            "exact": 28,
+            "accuracy": 0.21875,
+            "mean_NLL": 3.051520662793017,
+            "mean_bounded_candidate_rank": 14.6484375,
+            "mean_target_probability_source_shares": [
+              0.5905873536157957,
+              0.3976986399220827,
+              0.011714006462121403
+            ]
+          },
+          "100": {
+            "exact": 15,
+            "accuracy": 0.1171875,
+            "mean_NLL": 5.358951754560581,
+            "mean_bounded_candidate_rank": 26.3203125,
+            "mean_target_probability_source_shares": [
+              0.5721234857236519,
+              0.4216059051247878,
+              0.006270609151560509
+            ]
+          },
+          "500": {
+            "exact": 14,
+            "accuracy": 0.109375,
+            "mean_NLL": 6.397084323393127,
+            "mean_bounded_candidate_rank": 26.875,
+            "mean_target_probability_source_shares": [
+              0.5699469228286029,
+              0.42464932847831016,
+              0.005403748693086871
+            ]
+          },
+          "1000": {
+            "exact": 13,
+            "accuracy": 0.1015625,
+            "mean_NLL": 6.941867722590672,
+            "mean_bounded_candidate_rank": 27.09375,
+            "mean_target_probability_source_shares": [
+              0.569288731341848,
+              0.4267742267553489,
+              0.003937041902803425
+            ]
+          },
+          "2000": {
+            "exact": 12,
+            "accuracy": 0.09375,
+            "mean_NLL": 7.241176026709798,
+            "mean_bounded_candidate_rank": 27.3125,
+            "mean_target_probability_source_shares": [
+              0.5686417899818891,
+              0.42909776315012194,
+              0.0022604468679891443
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.20689655172413793,
+            "high": -0.05425313059033995,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 3.6173385505835105,
+            "high": 4.726640199073956,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "absolute_seen_in_new_fit": {
+        "rows": 70,
+        "steps": {
+          "0": {
+            "exact": 20,
+            "accuracy": 0.2857142857142857,
+            "mean_NLL": 2.6177559702159834,
+            "mean_bounded_candidate_rank": 7.728571428571429,
+            "mean_target_probability_source_shares": [
+              0.7104000469783456,
+              0.28944758490725137,
+              0.000152368114403061
+            ]
+          },
+          "100": {
+            "exact": 13,
+            "accuracy": 0.18571428571428572,
+            "mean_NLL": 3.951030617748035,
+            "mean_bounded_candidate_rank": 11.242857142857142,
+            "mean_target_probability_source_shares": [
+              0.7626310111715476,
+              0.23732102620554757,
+              4.796262290452044e-05
+            ]
+          },
+          "500": {
+            "exact": 12,
+            "accuracy": 0.17142857142857143,
+            "mean_NLL": 4.974168892534668,
+            "mean_bounded_candidate_rank": 13.885714285714286,
+            "mean_target_probability_source_shares": [
+              0.7528146009003347,
+              0.24697137666696475,
+              0.00021402243270051075
+            ]
+          },
+          "1000": {
+            "exact": 11,
+            "accuracy": 0.15714285714285714,
+            "mean_NLL": 5.494493312479211,
+            "mean_bounded_candidate_rank": 14.971428571428572,
+            "mean_target_probability_source_shares": [
+              0.7479821374222944,
+              0.2516945131766891,
+              0.00032334940101679834
+            ]
+          },
+          "2000": {
+            "exact": 10,
+            "accuracy": 0.14285714285714285,
+            "mean_NLL": 5.776465843906111,
+            "mean_bounded_candidate_rank": 15.542857142857143,
+            "mean_target_probability_source_shares": [
+              0.744858800339787,
+              0.2547489339592471,
+              0.00039226570096607906
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.26582278481012656,
+            "high": -0.03611815683787797,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 2.580219917099323,
+            "high": 3.7878857436129785,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "absolute_not_seen_in_new_fit": {
+        "rows": 58,
+        "steps": {
+          "0": {
+            "exact": 8,
+            "accuracy": 0.13793103448275862,
+            "mean_NLL": 3.575029774523919,
+            "mean_bounded_candidate_rank": 23.0,
+            "mean_target_probability_source_shares": [
+              0.44598582714375273,
+              0.5283464649399832,
+              0.025667707916264226
+            ]
+          },
+          "100": {
+            "exact": 2,
+            "accuracy": 0.034482758620689655,
+            "mean_NLL": 7.058166919679174,
+            "mean_bounded_candidate_rank": 44.51724137931034,
+            "mean_target_probability_source_shares": [
+              0.34220061018308756,
+              0.6440186900273187,
+              0.0137806997895936
+            ]
+          },
+          "500": {
+            "exact": 2,
+            "accuracy": 0.034482758620689655,
+            "mean_NLL": 8.114396050291266,
+            "mean_bounded_candidate_rank": 42.55172413793103,
+            "mean_target_probability_source_shares": [
+              0.3492445527420303,
+              0.6390882358368303,
+              0.011667211421139377
+            ]
+          },
+          "1000": {
+            "exact": 2,
+            "accuracy": 0.034482758620689655,
+            "mean_NLL": 8.688698907207952,
+            "mean_bounded_candidate_rank": 41.724137931034484,
+            "mean_target_probability_source_shares": [
+              0.3536242757275162,
+              0.6380773293502826,
+              0.00829839492220108
+            ]
+          },
+          "2000": {
+            "exact": 2,
+            "accuracy": 0.034482758620689655,
+            "mean_NLL": 9.008929695610803,
+            "mean_bounded_candidate_rank": 41.51724137931034,
+            "mean_target_probability_source_shares": [
+              0.35596608782580513,
+              0.6395187638977293,
+              0.004515148276465257
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.19696969696969696,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 4.627002360799977,
+            "high": 6.183893856782486,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "some_absolute_or_residual_label_seen_in_new_fit": {
+        "rows": 98,
+        "steps": {
+          "0": {
+            "exact": 25,
+            "accuracy": 0.25510204081632654,
+            "mean_NLL": 2.7669745982551768,
+            "mean_bounded_candidate_rank": 8.66326530612245,
+            "mean_target_probability_source_shares": [
+              0.5914332229816779,
+              0.40840035984293627,
+              0.00016641717538580083
+            ]
+          },
+          "100": {
+            "exact": 15,
+            "accuracy": 0.15306122448979592,
+            "mean_NLL": 4.311251426816664,
+            "mean_bounded_candidate_rank": 14.510204081632653,
+            "mean_target_probability_source_shares": [
+              0.5696121307291786,
+              0.43017928831723656,
+              0.00020858095358469272
+            ]
+          },
+          "500": {
+            "exact": 14,
+            "accuracy": 0.14285714285714285,
+            "mean_NLL": 5.325113346085937,
+            "mean_bounded_candidate_rank": 16.70408163265306,
+            "mean_target_probability_source_shares": [
+              0.5669816051987763,
+              0.4325679637219326,
+              0.00045043107929087427
+            ]
+          },
+          "1000": {
+            "exact": 13,
+            "accuracy": 0.1326530612244898,
+            "mean_NLL": 5.851255951414893,
+            "mean_bounded_candidate_rank": 17.714285714285715,
+            "mean_target_probability_source_shares": [
+              0.5661865895628482,
+              0.43332133296796427,
+              0.0004920774691876884
+            ]
+          },
+          "2000": {
+            "exact": 12,
+            "accuracy": 0.12244897959183673,
+            "mean_NLL": 6.1382103570167095,
+            "mean_bounded_candidate_rank": 18.255102040816325,
+            "mean_target_probability_source_shares": [
+              0.565358686477515,
+              0.43417469925500285,
+              0.0004666142674825735
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.22681583880037487,
+            "high": -0.04650624461670976,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 2.7760215143374705,
+            "high": 4.018483469150892,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "neither_point_label_seen_in_new_fit": {
+        "rows": 30,
+        "steps": {
+          "0": {
+            "exact": 3,
+            "accuracy": 0.1,
+            "mean_NLL": 3.981037806949962,
+            "mean_bounded_candidate_rank": 34.2,
+            "mean_target_probability_source_shares": [
+              0.5878241803539139,
+              0.36273968818062857,
+              0.0494361314654577
+            ]
+          },
+          "100": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 8.781439491857384,
+            "mean_bounded_candidate_rank": 64.9,
+            "mean_target_probability_source_shares": [
+              0.5803272453722637,
+              0.3935995200294549,
+              0.026073234598281512
+            ]
+          },
+          "500": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 9.898856182596614,
+            "mean_bounded_candidate_rank": 60.1,
+            "mean_target_probability_source_shares": [
+              0.5796336270860365,
+              0.39878178668247616,
+              0.021584586231487134
+            ]
+          },
+          "1000": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 10.504532841764881,
+            "mean_bounded_candidate_rank": 57.733333333333334,
+            "mean_target_probability_source_shares": [
+              0.5794223944865808,
+              0.40538701312747105,
+              0.01519059238594817
+            ]
+          },
+          "2000": {
+            "exact": 0,
+            "accuracy": 0.0,
+            "mean_NLL": 10.844197214373889,
+            "mean_bounded_candidate_rank": 56.9,
+            "mean_target_probability_source_shares": [
+              0.5793665947628444,
+              0.41251310520751155,
+              0.00812030002964394
+            ]
+          }
+        },
+        "final_minus_initial_paired_group95": {
+          "accuracy": {
+            "low": -0.20689655172413793,
+            "high": 0.0,
+            "valid_draws": 2000
+          },
+          "NLL": {
+            "low": 6.1127703672139315,
+            "high": 7.567900916260985,
+            "valid_draws": 2000
+          }
+        }
+      }
+    }
+  },
+  "fit_absolute_values": 72,
+  "fit_available_residual_values": 78,
+  "bindings": {
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-0000-predictions.npz": "610d67bb20d520a8f19d0050b4069b3f114969a027266d7c75450ff47dac7050",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-0100-predictions.npz": "baeb1a45de3ccb4af7d3aa719e02d7da402b8dff42f4e3001c3d8bfa48aa5d18",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-0500-predictions.npz": "4113b99ac3b5f57c801a3a5a188db51862022ea59ca2068f6d3c6b05c41ca1f4",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-1000-predictions.npz": "d10bfa00c34d250a6088182739a7adcfb07e0d92d28aa3e371160a99523ab3b2",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\fit-step-2000-predictions.npz": "8bcdb6a3d460c05a2f14f08a286b0d39526ef2cbf061166fbe7ac3b4f84c0d7a",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-0000-predictions.npz": "19f799048f7ab6cb9036365d1945995df5f6ea8e98fb67d4fc6c78c4dddf81a2",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-0100-predictions.npz": "29990529373b35c08fbc4162c602bdc62df4ff13472431c27b9ab5e4a10dbb01",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-0500-predictions.npz": "ff162edf1f37b6277d272a481c17213e71ce3d6ed03bbb5e748a5c86329488a8",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-1000-predictions.npz": "a1f66bd6a3bbff42cd70a02d2b80dc624c38878fa20cb9e271f16c05628e7f3c",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\same_fit_groups-step-2000-predictions.npz": "49154a7bf24b9351d879e8568be4c2adc4c9033ca703a1469e4c3e900ce276dc",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-0000-predictions.npz": "5c37bf4b2f032b57e7c123826ffe0827cdf7ac53cc2c412c5af0ade4b9131ab1",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-0100-predictions.npz": "e606706ac86b5203166398bcedbed1748b5f21ed7985b0c96b76dca594d7e408",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-0500-predictions.npz": "cb08799d1d3b66284563cf38476cc3cfa49034e53b1bd80756a9255dc99cdc7d",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-1000-predictions.npz": "57b217fa37b2719a91a2f98bf7c4aef9bebe56436cdb859a95d5c5de26d96a48",
+    ".cambc\\action-predictor\\v19\\runs\\PC00\\held_groups-step-2000-predictions.npz": "c7f77bcc5b1af82e4fa4169e746a5fe5dd1550fed8977947733796df4b252efe"
+  },
+  "source_sha256": "ab3be62aba17b5e0ae16b87d888e900406410d41681d3314abfffe2f12285f07",
+  "fit_sha256": "df7ac3e050e7fcfe9f0a3372168ccb44a68852e24080b38db94cef5edd1f0dee",
+  "qualification": "Post-fit exploratory label-coverage strata; all original128rows per cohort remain in all. These labels are derived from the new microfit only, not prior P05/encoder exposure. Both encoder and warm head previously saw controls. Fine-tuning forgetting, output-label coverage, representation and transfer are not isolated causes. Paired group intervals conditional on fixed cohorts, one seed and prior exposure, not untouched full-policy uncertainty. Candidate rank is bounded, not full integer support rank.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

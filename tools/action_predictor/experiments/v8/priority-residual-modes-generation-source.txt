@@ -1,0 +1,36 @@
+"""Development-time source copy with explicit substitutions; never execute fits."""
+from pathlib import Path
+root=Path(__file__).resolve().parent.parent
+source=root/'tools/action_predictor'
+old=(source/'priority_modes_fit.py').read_text()
+body=old[old.index('def fit():'):]
+body=body.replace('priority-absolute-modes-code-approval.json','priority-residual-modes-code-approval.json')
+body=body.replace("'P03'","'P05'").replace('runs/P03','runs/P05').replace('P03.json','P05.json').replace("print('P03'","print('P05'")
+body=body.replace("branch=head(model.priority);settings=", "train_values=torch.from_numpy(values['train']);branch=head(model.priority);settings=")
+assert body.count("predict(branch,contexts['validation'],extra['validation'],raw,baseline)")==3
+body=body.replace("predict(branch,contexts['validation'],extra['validation'],raw,baseline)","predict(branch,contexts['validation'],extra['validation'],raw,baseline,values['validation'])")
+body=body.replace('branch.log_mass(out,train_priority[chosen])','branch.log_mass(out,train_priority[chosen],train_values[chosen])')
+body=body.replace('frozen-M01-priority-absolute-modes-v1','frozen-M01-priority-anchored-modes-v1')
+body=body.replace('tools.action_predictor.priority_modes_fit','tools.action_predictor.priority_residual_fit')
+entry=source/'priority_residual_fit.py'
+assert 'def fit():' not in entry.read_text()
+with entry.open('a',newline='\n') as stream:stream.write('\n\n'+body)
+
+roundtrip=(source/'priority_modes_roundtrip.py').read_text()
+roundtrip=roundtrip.replace('priority_modes_predictor import PriorityModesPredictor','priority_residual_predictor import PriorityResidualPredictor')
+roundtrip=roundtrip.replace('priority_modes_fit import','priority_residual_fit import')
+roundtrip=roundtrip.replace('PriorityModesPredictor(', 'PriorityResidualPredictor(')
+roundtrip=roundtrip.replace("vocab['values'],vocab['counts'],checkpoint",'vocab,checkpoint')
+roundtrip=roundtrip.replace("extra_raw=flatten(z['values'],z['history'])","extra_raw=flatten(z['values'],z['history']);priority_values=torch.from_numpy(z['values'])")
+roundtrip=roundtrip.replace("expected=dict(x=data['x']", "expected=dict(priority_values=priority_values[index:index+1],x=data['x']")
+roundtrip=roundtrip.replace('reference.candidate_log_masses(expected_raw)',"reference.candidate_log_masses(expected_raw,expected['priority_values'])")
+roundtrip=roundtrip.replace("predictor.head.candidate_log_masses(output['priority_raw'])","predictor.head.candidate_log_masses(output['priority_raw'],actual['priority_values'])")
+roundtrip=roundtrip.replace('reference.integer(expected_raw)',"reference.integer(expected_raw,expected['priority_values'])")
+roundtrip=roundtrip.replace('reference.candidate_log_masses(saved_raw)',"reference.candidate_log_masses(saved_raw,expected['priority_values'])")
+roundtrip=roundtrip.replace("'P03'","'P05'").replace('runs/P03','runs/P05').replace('P03.json','P05.json').replace('P03-inference','P05-inference')
+roundtrip=roundtrip.replace('priority-absolute-modes-initial-roundtrip','priority-residual-modes-initial-roundtrip')
+roundtrip=roundtrip.replace('Global mixture mode, using training-derived values plus unrestricted rounded fallback mean','Global absolute/causally shifted residual mixture mode; duplicate masses summed, unrestricted floor/ceiling fallback candidates')
+roundtrip=roundtrip.replace('tools.action_predictor.priority_modes_roundtrip','tools.action_predictor.priority_residual_roundtrip')
+assert 'PriorityModesPredictor' not in roundtrip and 'P03' not in roundtrip
+target=source/'priority_residual_roundtrip.py'
+assert not target.exists();target.write_text(roundtrip,newline='\n')

@@ -1,0 +1,32 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\full_movement_weights.py": "874e154e1765df6236331751e0180d107ee30ef0729eb0e574b32fdcdda8d999",
+    "tools\\action_predictor\\behavior_segments\\full_movement_fit.py": "129f7baab37bba8304f53182377b5f75e6f2a92fa6207a7051a8739282547064",
+    "tools\\action_predictor\\behavior_segments\\full_movement_predictor.py": "a40b6fb02c1c207ebb3e8ef450619c4bb96e4b356a7a1dd86ba1363fd6e33ebc",
+    "tools\\action_predictor\\behavior_segments\\full_movement_verify.py": "09abae001048d1e102e6416c2e49c4f2d7f4c91a67dafc26c7b001219c59f08d",
+    "tools\\action_predictor\\behavior_segments\\test_full_movement.py": "fd687d49e14a4257bbb5ff33e5c353fc974143b2d8a78018c9c2c39264304fb3"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v55\\plan.json": "1bc504eecec56bd9308164d74d5e38cc44a224a73e36f7225d88fc8c787ab81d",
+    "tools\\action_predictor\\experiments\\v55\\selection.json": "7070acf9731e8af5609161b19f62e3da0dfc837afe2e8f52c88d7939bf135873",
+    "tools\\action_predictor\\experiments\\v55\\refit.json": "1b85ca1f87a65f242c93215bd12f71768f9c47f96e4a10cf06d693f4751af397",
+    "tools\\action_predictor\\experiments\\v55\\result.json": "730de7dc65735fa31c468b7a68b5444c4de3952c6ddc81fe7fd58459ad10f02b",
+    "tools\\action_predictor\\experiments\\v55\\verification.json": "737b67cd69d9f84f1f5e628cc8d91a804c56debbbfc5f3ab11f56f20f1c927c4"
+  },
+  "seed": 56001,
+  "epochs": 2,
+  "learning_rate": 0.0003,
+  "batch_windows": 8,
+  "coefficient": 1.0,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "tuning_seconds_cap": 3600,
+  "refit_seconds_cap": 1200,
+  "target_accuracy": 0.8,
+  "code_accuracy_allowance": 0.01,
+  "trainable_parameters": 46821,
+  "intervention": "Same V49/V52 neural architecture and features; warm start each fold/full model from its corresponding selected V54 weights plus V55 bias. Update map encoder,context,GRU, base movement and geometry correction. Freeze code readout,code embeddings and goal-query/readout weights. A complete32-turn window forward/backward is freed before the next window; accumulate8windows with their common movement and observed-row denominators before one optimizer update.",
+  "objective": "Supported movement CE plus code KL to the frozen matching warm-start teacher with weight1. All1607 existing fitting windows retained; four whole-game folds train other24games and validate the original64windows in held8games. No future/code labels in inputs. Full personal PRE/maps re-encoded for every window, with original masking and reset semantics.",
+  "selection": "Evaluate epochs0,1,2. Choose most pooled correct moves among candidates losing at most 1percentage point of inferred-code accuracy vs warm start; then lowest movementNLL,earliest epoch. Refit one setting on all fitting windows; assess selected checkpoint once on unchanged research queries.",
+  "limitations": "This also changes batch size/update cadence relative to V54; it does not isolate map weights as a unique cause. Previously exposed groups,inherited fitting-group exposure,observed command history,inferred codes,sparse goals and conditional movement. Frozen goal weights do not guarantee unchanged goal outputs when encoder states change. No subagents or promotion."
+}

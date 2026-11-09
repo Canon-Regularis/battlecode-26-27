@@ -1,0 +1,24 @@
+{
+  "files": {
+    "tools\\action_predictor\\diagnosis\\selection.py": "06f7e06b583628dac4c370fb2964b78a3a85c2ba5249c0913b211cfa109c03b5",
+    "tools\\action_predictor\\diagnosis\\selection_inputs.py": "f9756a3f0740e22fc5532e01d2f0ec7ebea77e08443c5c8dd544c241057d960f",
+    "tools\\action_predictor\\experiments\\v11\\S00-plan.json": "05a6439b64fb0c267fb81895e7c3fd37c8c7d36feb8bf1988f20402612eaa082",
+    "tools\\action_predictor\\experiments\\v11\\S00-selection.json": "10ff8067ddb2f44ed06ea4de84b32565530621163cc5e7fdd0e8986f84654ff3",
+    "tools\\action_predictor\\experiments\\v11\\S01-plan.json": "58de03fa02e633badca2789628e1da26c42921de041e32f3e60dc68f807c01f5",
+    "tools\\action_predictor\\experiments\\v11\\S01-routing-inputs.json": "fc1297976581c8c6b85150d0222943aa638060f51361058ead7dc2e061f2f00f",
+    "tools\\action_predictor\\experiments\\v11\\WHY-SELECTION-FAILS.md": "ca68f2e36a1a9becc61bac503c32fafd583b033680bf8eaec79645c8ebedfa72"
+  },
+  "reused_evidence": {
+    "R00_summary_sha256": "2794d6e07f3bc78b2acf74de08b3286288833e2ce6991bc42203d45fad3bdeb6",
+    "A00_completion_sha256": "1ca0af0d4a4b31e501951ae5b01b1ea99b7e717a07dae076ed5da7d70b294f4d",
+    "D00_report_sha256": "0914a3fc3fdf36be6ad01e11290cc658f4a83cd4d967449b0e4ad6c0ef310efc"
+  },
+  "commands": [
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.selection",
+    ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.diagnosis.selection_inputs"
+  ],
+  "verification": "Cachedfullpredictionsandcommand-groupdecode agreement;independentDEVdictionaryveto counts;exactroutingsignaturetest. Nooptimizer/no newfits/no heavyunchangedreplayaudit.",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "original_selected_epoch": 17
+}

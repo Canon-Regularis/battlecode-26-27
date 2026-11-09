@@ -1,0 +1,32 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\weight_edit.py": "65c7153697350f4c28040750870fd9aa1af576f5663dcba35f5c553468738a0e",
+    "tools\\action_predictor\\behavior_segments\\test_weight_edit.py": "d5966eb9bec84cd2a021c0c0978a4e1a87706b3a145675278f95df5dc830a55d"
+  },
+  "input_bindings": {
+    "tools\\action_predictor\\experiments\\v43\\r2\\protocol.json": "ef2568f0cf63221c0c3fdebf84be4015fa0bbc2d11bf419414119c0020c5a277",
+    "tools\\action_predictor\\experiments\\v43\\r2\\discovery.json": "bb158920426c6d45c492b6dd66827beb2f22a0e665b879c0d518204300ba5ab9",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\final.pt": "cff5b402f93c71980d5d21dcf778a3e69fd038b665923dbf055c3711e01aa49b",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\fit-predictions.json": "bc7b1b8a7d2b677064019694865fc26fefa4dda23ab67ede7eb2b512f546d9b7",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\evaluation-predictions.json": "6a01cf2d70f0b4e158b25f4ffefddca974156248592013103e97c490b6762bcd"
+  },
+  "candidates": {
+    "history_x5": [
+      5.0,
+      0.0
+    ],
+    "prior_half": [
+      1.0,
+      0.5
+    ],
+    "combined": [
+      5.0,
+      0.5
+    ]
+  },
+  "seconds_cap": 600,
+  "edits": "Multiply only GRU input weights for23previous-descriptor values by5; or add-half-log-fitting-frequency correction to active code biases; or both. Leave unavailable classes unchanged. No masks, recurrent weights or other tensors are edited.",
+  "selection": "Evaluate all3on fitting groups only. Among candidates passing every fitting guard select highest balanced code recall, then highest code accuracy, then name. If none pass, select the same ranking across all3as a diagnostic only. Evaluate only that selected candidate on evaluation groups once. Never switch after evaluation.",
+  "guards": "Balanced code recall +10pp minimum; code accuracy loss<=2pp; movement accuracy loss<=1pp; movementNLL increase<=0.01; goalwithin2 loss<=2pp; goalerror increase<=0.25tiles. All required in each split.",
+  "scope": "Postfit manual weight editing authorized by user. Same preexposed research groups and hindsight code labels. No gradient descent, optimizer state reuse, model promotion or runtime modification. Original checkpoint preserved."
+}

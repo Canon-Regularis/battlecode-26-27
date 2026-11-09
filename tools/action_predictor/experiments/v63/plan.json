@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\planner_readout_fit.py": "f820c7402fb4e4a9338c942b394ed900511ae35d041cf9327fba5d94ef4b0358",
+    "tools\\action_predictor\\behavior_segments\\planner_readout_predictor.py": "4084084559df91dc215e3f03184da1592e474a5849033d6b370fbea5a0e0e7b9",
+    "tools\\action_predictor\\behavior_segments\\test_planner_readout.py": "4848480693a8b2ea35d0148334685bb5fc6d1dbdf30992c4923ca2aa78e7a06b"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v62\\plan.json": "1e3fed8c8263360da6a1699043b7af1e1b51ce6035186d419d77059fea93a083",
+    "tools\\action_predictor\\experiments\\v62\\selection.json": "ed0a30f379b2eb44daf9693d74834f10c53f3499fe8a026819fd868bd52d724a",
+    "tools\\action_predictor\\experiments\\v62\\result.json": "963b2122ffa8eb7b0e68cecdf0eca782382227418e410e7d55c470b317adc757",
+    "tools\\action_predictor\\experiments\\v62\\verification.json": "f657471597908d376e7376cb16aedc80a3c4ed0a5c74fe7bffa6fdc02ff1d611"
+  },
+  "seed": 63001,
+  "epochs": 16,
+  "lr": 0.003,
+  "batch": 64,
+  "utility_weight": 0.1,
+  "temperature": 4.0,
+  "cap": 900,
+  "minimum_activation": 0.1,
+  "oracle": {
+    "fitting_rows": 1997,
+    "available_correct_outputs": 1598
+  },
+  "intervention": "Only existing final output weight64 and bias1 train. Warm start matching V61 heads edited by V62 selected scale/shift. Hidden layer,V59 inputs,movement outputs,candidate routes and retention rules fixed. No architecture changes.",
+  "loss": "Soft choice over candidate routes and abstain, with temperature4 scores and minus log candidate count for candidate logits; abstain logit0. Movement label log likelihood of matching emitted route,plus0.1 per-query mean squared original four-turn utility error where labels available. Uncovered moves have zero selector gradient. This differentiable surrogate is not identical to hard retained-goal inference.",
+  "selection": "Train original canonical fitting windows from other24games with matching fold representations. Evaluate epochs0,4,8,12,16 on held8games. Maximize actual hard combined movement count with positive/nonnegative utility and at least10percent active goals; then earlier epoch. One selected full refit on canonical fitting windows. No evaluation selection.",
+  "success": "Exceed both V62 combined and V59 direct movement on unchanged513queries with positive goal utility and at least10percent activity. Report80percent target separately. No promotion merely from combined improvement.",
+  "limits": "Only canonical fitting windows in this bounded diagnostic. Existing output coverage is a conditional oracle bound,not achievable policy accuracy or a global architectural ceiling. Preexposed groups, inherited fold exposure, teacher-forced history, proxy utilities and no playing-strength evidence. No subagents."
+}

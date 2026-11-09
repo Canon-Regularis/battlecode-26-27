@@ -1,0 +1,34 @@
+from pathlib import Path
+from unittest.mock import patch
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+from tools.action_predictor import priority_residual_fit as entry
+from tools.action_predictor import priority_residual_roundtrip as roundtrip
+from tools.action_predictor.priority_fit_v3 import read,write,REPORTS,WORK,log
+from tools.action_predictor.more_replays import sha
+
+assert not (WORK/'runs/P05').exists()
+results=[]
+def rejected(name,operation,guard):
+    try:operation()
+    except AssertionError:pass
+    else:raise AssertionError(name+' accepted corrupted binding')
+    guard.assert_not_called();results.append(name)
+
+with patch.object(entry,'source_hashes',return_value={'invalid':'source'}),patch.object(entry,'data') as guard:
+    rejected('fit_rejects_changed_source',entry.fit,guard)
+with patch.object(entry,'vocabulary',return_value={'invalid':'TRAIN prior'}),patch.object(entry,'data') as guard:
+    rejected('fit_rejects_changed_vocabulary',entry.fit,guard)
+original_sha=entry.sha
+def changed_sha(path):
+    return '0'*64 if Path(path)==WORK/'priority-train.npz' else original_sha(path)
+with patch.object(entry,'sha',side_effect=changed_sha),patch.object(entry,'data') as guard:
+    rejected('fit_rejects_priority_data_binding',entry.fit,guard)
+with patch.object(entry,'source_hashes',return_value={'invalid':'source'}),patch.object(roundtrip,'load_base') as guard:
+    rejected('standalone_roundtrip_rejects_before_model_loading',roundtrip.run,guard)
+assert not (WORK/'runs/P05').exists()
+log([sys.executable,str(Path(__file__))])
+destination=REPORTS/'priority-residual-modes-entry-rejections-source.txt'
+assert not destination.exists();destination.write_bytes(Path(__file__).read_bytes())
+write(REPORTS/'priority-residual-modes-entry-rejections.json',dict(checks=results,passed=True,source_sha256=sha(destination),new_optimizer_steps=0,run_directory_absent=True,launcher_note='First invocation failed before imports: tools absent from script sys.path; corrected helper inserts repo root. No model/data reads or optimizer steps in failed invocation.'))
+print('Four actual-entry corrupt-binding checks passed; no fit started')

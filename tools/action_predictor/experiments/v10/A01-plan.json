@@ -1,0 +1,28 @@
+{
+  "id": "A01",
+  "source_sha256": "58ac8d182e80b853697549ba4ca9d690cc0a9b5ffa4c87ea2da1d4359cc4465d",
+  "hypothesis": "Shared candidate-conditioned scoring learns command-specific relative geometry and visible target attributes, beyond A00 global slot scoring. Same frozenC00simple support, alloriginalrows, sampler,seed,optimizer,loss,history,G00fallback,harddecoder,checkpoint rule. Not a route to all-category90% under current support.",
+  "review_sha256": "290a21285849d8646e3f3753c285767f1b834fd64f8fb16e3f635a13d1461235",
+  "analysis_sha256": "4808953c8fec18931a83069756a6ab8e0fddef427eaa73eac5c1e8e35aaa7f97",
+  "roundtrip_sha256": "e4ab7b595ad2a5283c672f034d04cabddb8c31444875e20cba562d0ca351f54a",
+  "D00_sha256": "0914a3fc3fdf36be6ad01e11290cc658f4a83cd4d967449b0e4ad6c0ef310efc",
+  "descriptors": "44causal channels:20frozen PRE grid channels at emitted coordinate (relative offset,terrain,movementmask,visible category distances/counts/HP,altar distance,previous move);15actiononehot;6objective categories;3planner tie categories. Nonspatial grid channels0. No IDs/currentlabels/futureoutcome. No new objectives or actions. Descriptors for missing candidates zero.",
+  "architecture": "global445->32tanh/dropout.1;candidate44->32;sharedtanh(context+candidate)->scalar;separatefallbackscalar;initialized pointbias-4,fallback4,zero output weights;fixed cached input scaling, no descriptor fit normalization",
+  "training": {
+    "seed": 20261107,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch": 512,
+    "gradient_clip": 5,
+    "max_rounds": 35,
+    "patience": 6,
+    "improvement": 0.0001,
+    "selection": "minimum full originalDEVobservedjointNLL",
+    "loss": "same A00marginalcommandlikelihood;no intent labels",
+    "rows": 433071
+  },
+  "decoder": "A00originalhardroute held fixed regardless D00diagnostic; actionselection trainable. Boundedsupport ceiling table in A00analysis, no sparsecategory certification.",
+  "budget": "Second and final pilot in originalC00budget. No repeat seeds unless original A00prospective promising trigger passes AND postfitreview supports allocation. Further support/persistence fits require separately frozen justified budget.",
+  "promotion": "Original success targets binding, all43DEVshops strictfailure,altar/teleport2each uncertified. CompareG00,A00,originalsimplemovement. FreshSolxhighreview immediately after completion."
+}

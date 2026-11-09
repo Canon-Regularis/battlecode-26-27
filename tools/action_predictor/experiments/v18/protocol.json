@@ -1,0 +1,76 @@
+{
+  "id": "V18-frozen-upstream-readout",
+  "arms": {
+    "U00": false,
+    "U01": true
+  },
+  "seed": 20261114,
+  "upstream": "One fixed L02 selected checkpoint. All forecaster, representations, latent context, prior and posterior filtering remain common and frozen. Cache each PRE before assimilating that recorded action. No future-position supervision or answer enters the readout inputs. Filtering uses the frozen baseline likelihood, not trained readouts.",
+  "contrast": "U00 replaces only projection relative-world geometry with the defined per-component natural TRAIN mean, zero when current position unknown. U01 retains dynamic causal predicted geometry. Current predicted uncertainty/availability, latent contexts, bias and every other input are identical. Other geometry pathways remain common.",
+  "architecture": "No new scorer. Copies of the existing action/query/candidate/family/offset/special heads and five-channel goal_condition projection. Initialization weights exactly identical between arms; only dynamic flag differs. All other weights frozen.",
+  "objective": "Original unweighted observed complete-command marginalized NLL, no auxiliary loss because upstream is fixed. Duplicate latent explanations marginalized, joint MAP uses original GoalPolicy.decode. Shop argument likelihood absent, strict failure.",
+  "training": {
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "clip": 5,
+    "max_rounds": 35,
+    "patience": 6,
+    "min_improvement": 0.0001,
+    "checkpoint": "Original full14439DEV command NLL",
+    "order": "Same seeded original sequence chunks,32actors x8selectednodes; flatten real rows into one readout update. No upstream BPTT or sampled adjacency.",
+    "epochs": "Every433071TRAIN row once per round; augmented and natural-membership scores separate. Same maximum allowance/rng/order in both arms."
+  },
+  "allocation": "Two matched fits in this diagnostic study, fresh Sol xhigh after EACH fit. No repeats/promotion without prospective new budget and meaningful category benefit. This is no global research stopping rule. Complete matched contrast even if control alone is negative unless a correctness/access/resource blocker appears.",
+  "metrics": [
+    "strict complete commands and every category PRF/confusion/type and joint FP",
+    "observed command/type/argument NLL with absent shop argument likelihood explicit",
+    "all-true-family versus correctly typed parameters, matched targeting regressions",
+    "move/blocked continuation/change/startup, history/position availability",
+    "true destination rank/probability, component diversity/common-wrong bound",
+    "augmented/natural TRAIN, DEV,2000paired whole-group draws seed20261106",
+    "direct U01-U00 plus retained L02/L01/B00/G00 complete-predictor comparisons"
+  ],
+  "continuation": "Exploratory allocation criterion, separate from original success targets: dynamic versus mean must lower DEV command NLL and conditional change NLL, gain at least .01 absolute conditional change accuracy with no joint-change loss, no continuation conditional drop beyond .005, no overall strict-count loss and no attack/cast conditional targeting drop beyond original .02 guard. Report all differences regardless; one seed cannot certify robustness. Original goals remain binding. This comparison does not recover intent or certify a fully retrained persistent policy. TRAIN-only benefit suggests transfer failure; neither benefit leaves forecasts/optimization and executor limitations unresolved. No retrospective thresholds/checkpoint choice.",
+  "original_targets": {
+    "each_supported_category_joint": 0.9,
+    "macro_F1": 0.65,
+    "movement_joint": 0.6520745131244708,
+    "target_regression_max": 0.02,
+    "NLL": "10% lower than strongest relevant baseline",
+    "seeds": 3
+  },
+  "constraints": "Both75-game reservations sealed; all originalDEV rows; no matches, downloads, bot/runtime work or deployment. PR11DRAFT/open/unmerged/noauto-merge/queue. Sparse categories, identity ambiguity, full legality/calibration remain uncertified.",
+  "sources": {
+    "__init__.py": "2148f406808a12bef345c8a0a6407ac8212ffeadb71694d7ca73f2654103675c",
+    "protocol.py": "cf36fe9a6c7764442e66c2865213675fdd516fc241392376cd01006b8acd36a9",
+    "model.py": "be1b051cf603d6e646e42a24999ba7f7406ce0086742ce32e152292bb4abab6f",
+    "cache.py": "d037b431a7c863895c33b795d2be39e1d8d22d3cbb3403bbee2c5ef87a3622ef",
+    "data.py": "0a03baec44a58005e4cd04fe62a7aedd70d0364d02bb5fcb9a7020cb821bc644",
+    "inference.py": "97f2964729cff233ff4895c0132744b669c4e20bb43bb01844e7be193cdb0c46",
+    "fit.py": "dc4f4a2fee67e29ae906318c6cbd6a645979ab9a81041975c047439fcebd89f3",
+    "preflight.py": "bbafd6793d3f6befb698b133b8573ca2e57ea9519bd8897389f663a1e176f9fa",
+    "evaluate.py": "9afac99a68f7336f774bdf1b15d5437fb42c49adcae9b6c0cdc082a04c0b4b99",
+    "test_model.py": "8775199b1242508a3598e58c6f89a28a58a82a5ef48fe6aae08bb605a5107d07"
+  },
+  "bindings": {
+    ".cambc\\action-predictor\\v16\\runs\\L02\\round-03.pt": "5aba95703ab05d7c28477d324956894ea21489a78efa8097b85fd61a3fd41e2e",
+    "tools\\action_predictor\\experiments\\v16\\policy-input-bindings.json": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+    "tools\\action_predictor\\experiments\\v16\\L02-completion.json": "6715604ab6d3850b87fc0689d377065eb5632a92bd057e011ef4b93215374f33",
+    "tools\\action_predictor\\experiments\\v16\\L02.json": "f2b6760107c0490e94d36b90b9e0d202e9e9499783602ae45c02419307d17c85",
+    "tools\\action_predictor\\experiments\\v17\\Q01-L02-reference.json": "269eb8151bdcff64a38b218c9a2687f0b1aa1ab5bb4923f2a95c85e63dd6127b",
+    "tools\\action_predictor\\experiments\\v17\\Q01-review-response.json": "6bce41f5a6feb4cc9beaaeb8797a41c781dc06543f4d7ebd75b7865fbb5509ca",
+    "tools\\action_predictor\\learned_policy\\model.py": "718a7af0d65890796a3c152eb1c8c2d51e073cd1755d24b74c832a25e404a768",
+    "tools\\action_predictor\\learned_policy\\data.py": "98915026ab681ab6c2c8cf1a9e44c82001eaed26ae3a4c358d426c6b359a14c1",
+    "tools\\action_predictor\\learned_policy\\inference.py": "854ac9e3bc6e49b4771582dca283b2dfd4b2022d1c887d515712e17e5921d31a",
+    "tools\\action_predictor\\learned_policy\\pathway_reference.py": "24c8cf367971a2487e069ae2f7284721b4d81b756ac04b7b00bb00edd8aeef92",
+    "tools\\action_predictor\\learned_policy\\pathway_inputs.py": "acba4f8ef283020f0b61815f347768ad96a79daa3d9d26a81025522dc8c15f4d",
+    "tools\\action_predictor\\reliable_model.py": "98736b1f0942f70282e36f24a8034b10d5bc3377782f5af74fd3f3d732de9698",
+    "tools\\action_predictor\\reliable_train.py": "cf4ff3bd98985d211c312df9766d6aea6905995ad784bf5e9848ab27bff945ca",
+    "tools\\action_predictor\\movement_experts\\evaluate.py": "3083e2bbc8bdd15451cf1e5a8a4056dd0ea8b00c121a230642dfa7bf7d612fea",
+    "tools\\action_predictor\\observation_metrics.py": "9e23625198e1e3876fdffcc18505f59563f4c9f176a64d6bed95e4ec5a4649bb",
+    "tools\\action_predictor\\learned_policy\\analysis.py": "3d414a8b411e2335c765260d528d13048465d2b483e73333a28491a01b747f85",
+    ".cambc\\action-predictor\\v9\\frequency\\natural-mask.npy": "09217d8fc3d5673d980c8b8a4434861aa26dddb37e506bbfa22cbaafc0e525bd"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,67 @@
+﻿{
+  "thread": {
+    "threadId": "thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v21-pc01-broad-priority-postfit-review-20261108",
+    "projectId": "b799910c-0e3c-47bc-a21c-c2e3e1dba78e",
+    "title": "PC01 broad priority fitting and control failure: independent review",
+    "link": "<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v21-pc01-broad-priority-postfit-review-20261108>",
+    "createdBy": "agent",
+    "creationSource": "mcp",
+    "status": "completed",
+    "latestRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v21-pc01-broad-priority-postfit-review-20261108:ordinal:1",
+    "activeRunId": null,
+    "providerInstanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "runtimeMode": "full-access",
+    "interactionMode": "default",
+    "linkedPullRequest": null,
+    "pullRequests": [],
+    "titleRegeneration": null,
+    "branch": null,
+    "worktreePath": null,
+    "parentThreadId": "mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891",
+    "relationshipToParent": "subagent",
+    "runCount": 1,
+    "itemCount": 90,
+    "pendingRequestCount": 0,
+    "archived": false,
+    "settled": false,
+    "settledAt": null,
+    "snoozed": false,
+    "snoozedUntil": null,
+    "createdAt": "2026-11-08T06:16:15.942Z",
+    "updatedAt": "2026-11-08T06:25:01.217Z"
+  },
+  "recentRuns": [
+    {
+      "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v21-pc01-broad-priority-postfit-review-20261108:ordinal:1",
+      "ordinal": 1,
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "requestedAt": "2026-11-08T06:16:15.944Z",
+      "startedAt": "2026-11-08T06:16:16.407Z",
+      "completedAt": "2026-11-08T06:25:01.217Z"
+    }
+  ],
+  "items": [
+    {
+      "position": 88,
+      "visibility": "local",
+      "sourceThreadId": "thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v21-pc01-broad-priority-postfit-review-20261108",
+      "itemId": "turn-item:provider:codex:native-item:msg_09ee74dbcf5e4d40016af0159c76b487d29c602ff0eb0c1513",
+      "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A22cf9f30-b02b-4db9-bfaf-725c974133bd%253Adelegate-task%253Afish-v21-pc01-broad-priority-postfit-review-20261108:ordinal:1",
+      "messageId": "message:provider:codex:native-item:msg_09ee74dbcf5e4d40016af0159c76b487d29c602ff0eb0c1513",
+      "createdBy": "agent",
+      "creationSource": "provider",
+      "type": "assistant_message",
+      "status": "completed",
+      "title": null,
+      "text": "**PC01’s measurements reproduce. It is a valid negative transfer result; I found no probability, anchor, cohort-construction or optimizer-step defect that overturns it. I found three remaining execution-hardening defects.**\n\nI could not retrieve the [parent thread](<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/mcp:launch:c4185c930eca174d8d1afc1306852295d17ffddccc8ef520a6713bb41d411891>): the reader returned `thread_not_found`. This review therefore covers the supplied brief, local sources, artifacts and saved prior reviews—not the full conversation.\n\nThe ranked findings are:\n\n1. **High interpretation limit — broader fitting did not produce demonstrated transfer improvement.**\n\n   Broad-fit exactness increases **1,463→4,898/5,876**, while both controls lose **12/128** exact predictions against the warm start.\n\n   Relative to PC00’s final checkpoint, PC01 gains only **3 and 4 control exacts**. The paired whole-group accuracy intervals include zero:\n\n   - Same-group control: **−5.00 to +9.63 percentage points**.\n   - Held-group control: **−4.17 to +10.94 percentage points**.\n\n   Meanwhile, mean NLL worsens by **1.801 and 1.531 nats**, with positive paired intervals in both cohorts.\n\n   Thus, “broader coverage slightly improves transfer” would overstate the evidence. The defensible conclusion is that **broader coverage did not prevent deterioration**, despite substantially better fitting. The current report mostly respects this.\n\n2. **High interpretation limit — the failure involves discrimination as well as confidence, and its cause remains unidentified.**\n\n   Mean bounded candidate rank deteriorates **13.26→40.04** and **14.65→46.12** on the controls. This is more than an increase in loss caused by sharper probabilities.\n\n   I also performed exploratory, read-only swaps between initial and final parameter blocks:\n\n   - Final context weights alone: control NLL **8.452 / 8.031**.\n   - Final 39-channel weights alone: **6.731 / 7.726**.\n   - Final bias alone: **3.798 / 3.721**.\n   - Complete final head: **8.920 / 8.773**.\n   - Initial head: **3.148 / 3.052**.\n\n   Both learned input-weight blocks can contribute to deterioration. Their interactions matter: these substitutions **do not predict the outcome of training either block alone**.\n\n   Broad label support rules out “no represented explanation exists” for these controls. It does not establish adequate conditional coverage, useful feature geometry, observation sufficiency or a specific forgetting mechanism. Likewise, rank **156/5,876** removes unrestricted whole-cohort affine interpolation; it does not prove an architectural capacity ceiling.\n\n3. **High interpretation limit — PC01 does not explain original P05’s failure or satisfy the policy objective.**\n\n   PD00 confirms continued original TRAIN fitting through epoch 8 while historical DEV loss worsens. That contradicts “optimization stopped learning,” but does not identify the remedy.\n\n   PC01 still changes several conditions relative to original P05 training. Its contrast with PC00 isolates the named population treatment under the newer optimization contract—not the cause of original P05’s weak performance.\n\n   Conditional integer improvements also leave action typing and complete-command selection unresolved. Any eventual integration must recompute normalized joint probabilities and winning families. Original category, movement, likelihood, targeting and three-seed requirements remain unmet.\n\n4. **Medium engineering defect — the committed-source gate has incomplete coverage and removable checks.**\n\n   [source_paths()](/F:/Code/battlecode-26-27/tools/action_predictor/priority_broad/experiment.py:27) omits imported project code, including `priority_capacity/protocol.py`, and the prerequisite `priority_capacity/test_measurement.py`. Consequently, the gate can accept edits to those files without checking their bytes against the execution commit.\n\n   I verified that these inspected omitted modules currently match the fit commit. **This is a prospective loophole, not evidence of contaminated PC01 execution.**\n\n   Additionally, mandatory data, cohort, preflight and optimizer checks use Python `assert`. These disappear under `python -O` or `PYTHONOPTIMIZE`; even the final source recheck at [line 173](/F:/Code/battlecode-26-27/tools/action_predictor/priority_broad/experiment.py:173) is inside an assertion.\n\n   Before another fit, bind the relevant executable dependency closure and prerequisite test sources, and use explicit exceptions for mandatory checks—or explicitly reject optimized Python. Test these through the real entrypoint with an optimizer-construction tripwire.\n\n5. **Medium engineering defect — raw-output preservation still depends on successful measurement.**\n\n   In [assessment](/F:/Code/battlecode-26-27/tools/action_predictor/priority_broad/experiment.py:198), `measure()` runs before raw outputs are appended, and the raw archive is written only after the entire cohort succeeds.\n\n   A measurement exception therefore leaves the checkpoint but loses the already computed raw arrays. This resembles the historical archive-after-check failure pattern, although **all completed PC01 arrays are present**.\n\n   Save each cohort’s raw outputs before measurement, then assess the saved outputs. Add an injected measurement-failure test that verifies the archive survives.\n\nMy independent verification reproduced:\n\n- **All 31,300 PC01 predictions** across four cohorts and five checkpoints.\n- Neural outputs **bit-for-bit**, with **zero integer-mode or candidate-rank mismatches**.\n- Independent NumPy probability arithmetic: maximum NLL difference **3.16×10⁻¹³**; explanation-share difference **7.11×10⁻¹⁵**.\n- All **84 PC01 completion bindings**, declared source hashes against commit `76fc4d0`, exact cohort reconstruction, normalization, targets and anchors.\n- Identical PC00/PC01 initial head, optimizer, RNG and shared prediction archives.\n- **2,000 optimizer counters**, **207,816 parameters**, and source-confirmed full-population accumulation before one update.\n- All reported paired intervals and rescue/regression counts.\n- PD00’s bound inputs, eight checkpoints, prediction summaries and historical DEV scalars; natural TRAIN **2,228 rescues / 532 regressions**, positive net across all 94 groups.\n- All **five existing contract tests**.\n\nThe earlier fallback, generator, B00 accounting, degenerate-test and lost-array incidents belong in the historical ledger. They should not be relabelled as unresolved defects invalidating PC01.\n\n**My single recommended next experiment is a matched, warm-start-regularized PC01 contrast.**\n\nReuse the same 5,876 rows, inputs, vocabulary, anchors, initialization, seed, optimizer schedule, accumulation and fixed 2,000-update endpoint. Change only the objective by adding an explicit penalty toward the initial P05 weights and bias:\n\n`mean integer NLL + λ × squared parameter displacement from warm P05`\n\nFreeze one strength prospectively; do not tune it on either control cohort. Compare against both the warm start and saved PC01 using fitting gains, control exactness, NLL, bounded ranks and paired group intervals.\n\nThis tests whether useful fitting can coexist with transfer when parameter drift is constrained. **Merely recovering warm-start control scores by suppressing learning would not count as improvement.** A positive result would support this optimization intervention; a negative result would still not prove insufficient observations or justify a larger model.\n\nI made no file edits, commits, training or optimizer updates, downloads, reserved accesses, simulations or PR changes. The shared checkout advanced during review to `9332052`; all 84 PC01 bindings still matched. Later PD01/PD02 work is outside this review.\n\nPR https://github.com/Canon-Regularis/battlecode-26-27/pull/11 — **supplied last-verified** remote head `3d10b9e501e701d1c2149a958a3382b474da8bc0`; DRAFT/open/unmerged, auto-merge/queue null, **0 checks / 0 reviews**. No live PR verification performed.",
+      "textTruncated": false,
+      "nextTextOffset": null,
+      "updatedAt": "2026-11-08T06:25:01.097Z"
+    }
+  ],
+  "nextPosition": 88,
+  "hasMore": false
+}

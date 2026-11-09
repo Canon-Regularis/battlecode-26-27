@@ -1,0 +1,20 @@
+{
+  "original_test_commit": "1c3b0b2",
+  "original_command": "python -m unittest tools.action_predictor.relational_priority.test_entrypoint -v",
+  "original_exit_code": 1,
+  "original_result": "All injected faults stopped before optimizer construction. Three expected-message assertions mismatched the actual rejection prefixes; the full suite reported three failures.",
+  "original_transcript": ".cambc/action-predictor/v24/review-entrypoint-tests.txt",
+  "original_transcript_sha256": "3a507dd89028992651e287de53d548b64da80ec313ffd5e4e3e6b73065f46e3b",
+  "corrected_test_commit": "c128ab4cfa17b4104e37dcd75f7335be36a523eb",
+  "corrected_command": "python -m unittest tools.action_predictor.relational_priority.test_entrypoint.EntrypointContracts.test_actual_treatment_entrypoint_rejects_inadequate_review_before_optimizer -v",
+  "corrected_exit_code": 0,
+  "corrected_result": "Six actual-entrypoint review mutations rejected before optimizer construction: empty messages, wrong checkpoint in original task, stale review, wrong requested effort, wrong execution-source scope, response bound to another review.",
+  "corrected_transcript": ".cambc/action-predictor/v24/review-entrypoint-tests-v2.txt",
+  "corrected_transcript_sha256": "4da95706100d5e0c1d7ff51f1b46a215fb0ed64f59629191e73ed9c7a7b97e8d",
+  "positive_gate": "source_gate(); require_control_review('RC01', commit) passed at c128ab4, with 46 committed executable sources and seven bound review inputs; no optimizer constructed.",
+  "scope": "No fitted weights or forecasts changed. The actual fitter must still rerun every normal prerequisite before its optimizer. Corrected checks do not imply RC01 approval or policy promotion.",
+  "historical_source_qualification": "The reviewed RC00 completion retains original execution-source hashes. fit.py and test_entrypoint.py have since advanced prospectively for this safeguard correction. Original executed bytes remain at fd304067b1cad39cb7f74aff844098597f06fff5, and the review scope binds those original hashes. Do not claim all original source hashes equal current working files after this correction.",
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0
+}

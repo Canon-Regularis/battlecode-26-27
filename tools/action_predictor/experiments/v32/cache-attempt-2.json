@@ -1,0 +1,10 @@
+{
+  "status": "failed_before_first_game_result",
+  "source_commit": "3fa539a",
+  "plan": "cache-plan-r2.json",
+  "failure": "Compact selected label dictionary omits priority integer; comparing header priority604 to absent label field incorrectly failed parity.",
+  "correction": "Compare selected integer arguments to hash-bound canonical TRAIN priority array in selected row order, as the existing V30 label audit does. Preserve revised source under cache-plan-r3.json.",
+  "new_training_rows": 0,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

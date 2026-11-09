@@ -1,0 +1,13 @@
+{
+  "comparisons": {
+    "likelihood": {
+      "declared_selection": 0,
+      "implemented_selection": 0
+    },
+    "ranking": {
+      "declared_selection": 0,
+      "implemented_selection": 0
+    }
+  },
+  "explanation": "The reused selection helper also enforces NLL<=epoch0+0.01,which is stricter than the declared direct-reference guard. Recomputing selection with only the declared guards chooses the same epoch0 in both arms. No weights,training,results or source bindings were altered."
+}

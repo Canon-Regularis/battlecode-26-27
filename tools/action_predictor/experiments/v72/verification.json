@@ -1,0 +1,37 @@
+{
+  "result_sha256": "8680ecde0d18194ea54811e46bb9067910351f0c5fe5af4fc692d7a2ec086792",
+  "source_sha256": "76997f02a2d465769d3baa6ff2a32b9ee1a7f3d199c0765488658868f9ac7788",
+  "fold_measurements": 24,
+  "optimizer_updates_accounted": 4656,
+  "only64_weights_trainable": true,
+  "all_other_weights_preserved": true,
+  "selected_weights_exact": true,
+  "all_forecasts_reproduced": true,
+  "matched_sampling": true,
+  "final_readout_weight_changes": {
+    "likelihood/fold0": 0.11455456167459488,
+    "likelihood/fold1": 0.11714272946119308,
+    "likelihood/fold2": 0.12715843319892883,
+    "likelihood/fold3": 0.12757134437561035,
+    "likelihood/full": 0.0,
+    "ranking/fold0": 0.34061744809150696,
+    "ranking/fold1": 0.30953821539878845,
+    "ranking/fold2": 0.3308146297931671,
+    "ranking/fold3": 0.35023409128189087,
+    "ranking/full": 0.0
+  },
+  "streaming": {
+    "likelihood": {
+      "turns": 96,
+      "active": 21,
+      "absent": 15
+    },
+    "ranking": {
+      "turns": 96,
+      "active": 21,
+      "absent": 15
+    }
+  },
+  "optimizer_replays": 0,
+  "seconds": 68.23164050001651
+}

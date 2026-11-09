@@ -1,0 +1,59 @@
+"""Additive P05 adverse-stratum diagnostic; no fitting or predictive routing."""
+from pathlib import Path
+import sys,math
+import numpy as np
+root=Path(__file__).resolve().parent.parent;sys.path.insert(0,str(root))
+from tools.action_predictor.priority_residual_fit import verify_protocol
+from tools.action_predictor.priority_fit_v3 import REPORTS,WORK,VAL,read,log
+from tools.action_predictor.more_replays import sha,frozen
+from tools.action_predictor import reliable_train as rt
+verify_protocol();analysis=read(REPORTS/'P05-analysis.json')
+with np.load(VAL) as z:y=z['y'];target=z['priority'].astype(np.int64)
+paths={name:WORK/'runs'/name/'validation-predictions.npz' for name in ('P03','P05')}
+paths['negative_latest_copy']=WORK/'anchor-baselines/latest_minus_copy.npz'
+pred={};joint={};bindings={}
+for name,path in paths.items():
+    expected=read(REPORTS/(name+'.json'))['predictions_sha256'] if name!='negative_latest_copy' else read(REPORTS/'A01.json')['metrics']['latest_minus_copy']['predictions_sha256']
+    assert sha(path)==expected
+    with np.load(path) as z:pred[name]=z['priority'].astype(np.int64);joint[name]=z['prediction']==y
+    bindings[name]=expected
+mask=y==rt.LABELS.index('priority');nonzero=mask&(target!=0)
+frequency=read(REPORTS/'priority-residual-modes-vocabulary.json');counts=dict(zip(frequency['absolute'],frequency['absolute_counts']))
+count=np.array([counts.get(int(t),0) for t in target]);rare=mask&(count>0)&(count<20);unseen=mask&(count==0)
+wrong={name:nonzero&(np.sign(p)!=np.sign(target)) for name,p in pred.items()}
+bins={}
+for label,lo,hi in [('1_10',1,10),('11_99',11,99),('100_499',100,499),('500_plus',500,np.inf)]:
+    selected=nonzero&(np.abs(target)>=lo)&(np.abs(target)<=hi)
+    bins[label]=dict(support=int(selected.sum()),models={name:dict(wrong_sign=int((wrong[name]&selected).sum()),zero_forecasts=int(((p==0)&selected).sum())) for name,p in pred.items()})
+def exact(name,selected):return selected&(pred[name]==target)
+case_lists={}
+for label,selected in [('rare',rare),('unseen',unseen)]:
+    p=exact('P05',selected);baseline=exact('negative_latest_copy',selected)
+    case_lists[label]=dict(support=int(selected.sum()),P05_exact_rows=np.flatnonzero(p).tolist(),baseline_exact_rows=np.flatnonzero(baseline).tolist(),shared_exact_rows=np.flatnonzero(p&baseline).tolist(),P05_only_rows=np.flatnonzero(p&~baseline).tolist(),baseline_only_rows=np.flatnonzero(baseline&~p).tolist())
+outside=mask&~np.isin(pred['P05'],frequency['absolute'])
+result=dict(analysis_sha256=sha(REPORTS/'P05-analysis.json'),fit_report_sha256=sha(REPORTS/'P05.json'),source_sha256=sha(__file__),bindings=bindings,
+    exploratory_gate_failed=True,missed_exact_threshold=dict(required=125,observed=109,shortfall=16,gain_over_P03=13,gain_percentage_points=100*13/576,required_additional=29,repeats_triggered=False),
+    wrong_sign_definition='Nonzero recorded priority and different np.sign forecast; includes zero forecasts. Historical definition retained.',
+    wrong_sign_change=dict(P03=int(wrong['P03'].sum()),P05=int(wrong['P05'].sum()),fixed=int((wrong['P03']&~wrong['P05']).sum()),introduced=int((wrong['P05']&~wrong['P03']).sum())),
+    exploratory_target_magnitude_bins=bins,rare_unseen_case_comparison=case_lists,
+    nonabsolute_forecasts=dict(support=int(outside.sum()),exact=int((outside&(pred['P05']==target)).sum()),wrong=int((outside&(pred['P05']!=target)).sum())),
+    remaining_per_category={r['action']:dict(support=r['support'],correct=r['joint_correct'],required_for90=math.ceil(.9*r['support']),additional_needed=max(0,math.ceil(.9*r['support'])-r['joint_correct'])) for r in analysis['per_category'] if r['support']},
+    interpretation='Descriptive saved-prediction comparison, no per-row oracle/routing or new family. P05 unseen success row10829 is also solved by the preserved simple negative-copy baseline. Twenty-one of22 outside-absolute-vocabulary forecasts are wrong. Positive intervals and lower loss do not replace the missed gate or three-seed/untouched evidence.',
+    original_targets_unchanged=True,three_seed_confirmed=False,all_category_goal_met=False,new_optimizer_steps=0,reserved_games_opened=0)
+assert result['wrong_sign_change']['P05']==92 and result['nonabsolute_forecasts']==dict(support=22,exact=1,wrong=21)
+frozen(REPORTS/'P05-tail-and-gate-note.json',result)
+(REPORTS/'P05-tail-note-source.txt').write_bytes(Path(__file__).read_bytes())
+(REPORTS/'P05-TAIL-NOTE.md').write_text('''# P05: missed gate and adverse outcomes
+
+P05 improves exact priority values to109/576 and complete priority commands to71/576. Its fixed exactness gate required125; it misses by16 and triggers no repeats. Every other exploratory check passes, but cannot substitute for the failed criterion. Original reliability goals remain unmet.
+
+Wrong-sign forecasts increase81→92: the JSON separates fixes, newly introduced errors, zero forecasts and descriptive target-magnitude bins. Errors above1000 decrease12→4, while the maximum remains1489. Lower MAE144.566 and median error5 do not erase these failures.
+
+The one unseen-value success is row10829, already solved by A01 negative copying. All four unseen cases remain in the analysis. P05 produces22 forecasts outside the absolute TRAIN vocabulary; only one is exact,21 are wrong. Full support and dynamic-point coverage establish representational capability, not reliable extrapolation.
+
+The paired five-group exact-gain interval is0.913–4.457 percentage points; joint gain1.708–3.951points. These are pointwise, conditional on selected checkpoints and reused development groups, with no independent three-seed confirmation. They cannot replace the fixed five-point continuation gate. No per-row routing combines successes from different methods.
+
+All43 shops remain unassessed strict failures. Priority type correctness still caps parameter-only work at59.55%. Action, movement and targeting paths remain unchanged. Next work must separately address action discrimination and the other category gaps; no hypothetical experiment or replacement is approved by this report.
+''',encoding='utf-8')
+log([sys.executable,str(Path(__file__).resolve()),'source_sha256='+sha(__file__)])
+print(result['wrong_sign_change']);print(case_lists)

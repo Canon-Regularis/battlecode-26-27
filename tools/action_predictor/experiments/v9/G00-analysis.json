@@ -1,0 +1,262 @@
+{
+  "report_sha256": "613b2c7f6799fe72e9b75544c61e132dad129b1107973e2e92921e03547f67ae",
+  "source_sha256": "01b1ce145b0e9271cbbc5da307945b54c599dbe845cc1d4a4ad54b418c329d1b",
+  "failure_accounting": {
+    "wrong_types": 1627,
+    "wrong_parameters_after_correct_type": 1260,
+    "correct_type_missing_shop_arguments": 42,
+    "strict_failures": 2929
+  },
+  "prospective_guards": {
+    "P05": {
+      "no_strict_regression": true,
+      "continuation_exact_drop_at_most_half_point": true,
+      "direction_change_joint_not_worse": true,
+      "attack_cast_parameters_and_joint_unchanged": true,
+      "lower_joint_nll": true
+    }
+  },
+  "rare_action_protection": {
+    "ward_type_correct": 35,
+    "ward_joint_correct": 7,
+    "ward_type_FP": 282,
+    "recall_to_ward": 257,
+    "ward_type_precision": 0.11041009463722397,
+    "passed": true
+  },
+  "priority": {
+    "all": {
+      "support": 576,
+      "parameter_exact": 109,
+      "joint_correct": 71,
+      "parameter_nll": 3.531226634979248
+    },
+    "rare": {
+      "support": 65,
+      "parameter_exact": 6,
+      "joint_correct": 6,
+      "parameter_nll": 6.904688835144043
+    },
+    "unseen": {
+      "support": 4,
+      "parameter_exact": 1,
+      "joint_correct": 1,
+      "parameter_nll": 8.763325691223145
+    }
+  },
+  "category_uncertainty": {
+    "altar": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "groups_with_support": 2
+    },
+    "attack": {
+      "joint_accuracy": {
+        "low": 0.8657968313140727,
+        "high": 0.9118572927597062,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "blocked": {
+      "joint_accuracy": {
+        "low": 0.046357615894039736,
+        "high": 0.13043478260869565,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.046296296296296294,
+        "high": 0.10294117647058823,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cancel": {
+      "joint_accuracy": {
+        "low": 0.9688176699870074,
+        "high": 0.987732342007435,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cast_0": {
+      "joint_accuracy": {
+        "low": 0.6768558951965066,
+        "high": 0.7766497461928934,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "cast_1": {
+      "joint_accuracy": {
+        "low": 0.3537117903930131,
+        "high": 0.4259927797833935,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "end": {
+      "joint_accuracy": {
+        "low": 0.9574311023622047,
+        "high": 0.973876953125,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "move": {
+      "joint_accuracy": {
+        "low": 0.5297297098272687,
+        "high": 0.5876245847176079,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.00673551863493489,
+        "high": 0.017834394904458598,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "priority": {
+      "joint_accuracy": {
+        "low": 0.09925558312655088,
+        "high": 0.13870967741935483,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "recall": {
+      "joint_accuracy": {
+        "low": 0.7743703776041667,
+        "high": 0.8316695352839931,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "shop": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "submit": {
+      "joint_accuracy": {
+        "low": 0.7941176470588235,
+        "high": 1.0,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    },
+    "teleport": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "groups_with_support": 1
+    },
+    "ward": {
+      "joint_accuracy": {
+        "low": 0.014492753623188406,
+        "high": 0.15555555555555556,
+        "valid_draws": 2000
+      },
+      "joint_gain_vs_P05": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "groups_with_support": 5
+    }
+  },
+  "exploratory_seed_trigger": false,
+  "seed_trigger_scope": "Only after G01; must beat BOTH G00 and P05. No automatic repeats. Warm-start seeds cannot establish independent full-model generalization.",
+  "original_targets": {
+    "macro_f1_at_least_065": false,
+    "movement_gain_vs_simple": 0.0550381033022862,
+    "movement_gain_at_least_ten_points": false,
+    "loss_reduction_vs_P05": 0.005948286983705309,
+    "all_category_90_certified": false,
+    "three_seed_confirmed": false
+  },
+  "legality": {
+    "move": {
+      "predicted_support": 2277,
+      "mask_rejections": 0
+    },
+    "blocked": {
+      "predicted_support": 97,
+      "mask_rejections": 95
+    },
+    "legacy_partial": {
+      "assessed": 7084,
+      "invalid": 112,
+      "rate": 0.015810276679841896,
+      "all_command_fraction": 0.007756769859408546,
+      "full_engine_illegal_action_rate": null,
+      "meaning": "Partial observable violations: exact personal movement mask; other families readiness/resource checks only. Does not certify complete legality."
+    },
+    "full_engine_legality": null,
+    "meaning": "Successful move-mask rejections separated from blocked-attempt forecasts; blocked mask rejection can be correct outcome prediction."
+  },
+  "reserved_opened": 0
+}

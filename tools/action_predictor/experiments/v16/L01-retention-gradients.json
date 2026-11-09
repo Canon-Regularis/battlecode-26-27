@@ -1,0 +1,233 @@
+{
+  "results": {
+    "initial": {
+      "rows": 192,
+      "actions": {
+        "move": 30,
+        "ward": 7,
+        "recall": 33,
+        "end": 52,
+        "shop": 12,
+        "cast_1": 4,
+        "cancel": 30,
+        "priority": 6,
+        "cast_0": 1,
+        "attack": 9,
+        "submit": 3,
+        "blocked": 2,
+        "altar": 1,
+        "teleport": 2
+      },
+      "mean_retention": 0.8833642770575049,
+      "gradients": {
+        "command_d_effective_retention": {
+          "mean": -1.1940339102747832e-05,
+          "mean_absolute": 5.509209678922674e-05,
+          "positive": 75,
+          "negative": 112,
+          "zero": 5
+        },
+        "auxiliary_d_effective_retention": {
+          "mean": 0.059772344048724335,
+          "mean_absolute": 0.10282288075571462,
+          "positive": 129,
+          "negative": 63,
+          "zero": 0
+        },
+        "command_d_retention_bias": {
+          "mean": -6.631709519836789e-07,
+          "mean_absolute": 2.7097419564298114e-06,
+          "positive": 75,
+          "negative": 112,
+          "zero": 5
+        },
+        "auxiliary_d_retention_bias": {
+          "mean": 0.001318791545041972,
+          "mean_absolute": 0.008570539444660475,
+          "positive": 129,
+          "negative": 63,
+          "zero": 0
+        }
+      },
+      "total_bias_gradient_decreases_retention": 128,
+      "weights_unchanged": true
+    },
+    "round1": {
+      "rows": 192,
+      "actions": {
+        "move": 30,
+        "ward": 7,
+        "recall": 33,
+        "end": 52,
+        "shop": 12,
+        "cast_1": 4,
+        "cancel": 30,
+        "priority": 6,
+        "cast_0": 1,
+        "attack": 9,
+        "submit": 3,
+        "blocked": 2,
+        "altar": 1,
+        "teleport": 2
+      },
+      "mean_retention": 0.3156052849558881,
+      "gradients": {
+        "command_d_effective_retention": {
+          "mean": -0.00019943310295017413,
+          "mean_absolute": 0.00238906575591767,
+          "positive": 95,
+          "negative": 97,
+          "zero": 0
+        },
+        "auxiliary_d_effective_retention": {
+          "mean": 0.008169692198862322,
+          "mean_absolute": 0.03472831221127611,
+          "positive": 105,
+          "negative": 87,
+          "zero": 0
+        },
+        "command_d_retention_bias": {
+          "mean": -5.296906309421672e-05,
+          "mean_absolute": 0.0003713625436004171,
+          "positive": 94,
+          "negative": 93,
+          "zero": 5
+        },
+        "auxiliary_d_retention_bias": {
+          "mean": 0.0007297668166355245,
+          "mean_absolute": 0.002713385628102073,
+          "positive": 103,
+          "negative": 84,
+          "zero": 5
+        }
+      },
+      "total_bias_gradient_decreases_retention": 102,
+      "weights_unchanged": true
+    },
+    "selected": {
+      "rows": 192,
+      "actions": {
+        "move": 30,
+        "ward": 7,
+        "recall": 33,
+        "end": 52,
+        "shop": 12,
+        "cast_1": 4,
+        "cancel": 30,
+        "priority": 6,
+        "cast_0": 1,
+        "attack": 9,
+        "submit": 3,
+        "blocked": 2,
+        "altar": 1,
+        "teleport": 2
+      },
+      "mean_retention": 0.36931320017149777,
+      "gradients": {
+        "command_d_effective_retention": {
+          "mean": -0.0004872870638763074,
+          "mean_absolute": 0.0027936149837584426,
+          "positive": 101,
+          "negative": 91,
+          "zero": 0
+        },
+        "auxiliary_d_effective_retention": {
+          "mean": 0.007365373020244685,
+          "mean_absolute": 0.040690361479695035,
+          "positive": 97,
+          "negative": 95,
+          "zero": 0
+        },
+        "command_d_retention_bias": {
+          "mean": -0.00010467951318990765,
+          "mean_absolute": 0.00031929240463301117,
+          "positive": 97,
+          "negative": 86,
+          "zero": 9
+        },
+        "auxiliary_d_retention_bias": {
+          "mean": 3.707659378946295e-05,
+          "mean_absolute": 0.002751966123387853,
+          "positive": 93,
+          "negative": 90,
+          "zero": 9
+        }
+      },
+      "total_bias_gradient_decreases_retention": 92,
+      "weights_unchanged": true
+    }
+  },
+  "artifact_sha256": "8c7f85f69c541c0b523edb05e16b7ae5dd99b7d8bf376c7a31c084f07aa7dbfc",
+  "checkpoint_bindings": {
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v16\\runs\\L01\\round-01.pt": "27921c6a6baef568e5063e932b286f368dc22f4f52fd0e588fe14822c968a6ea",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v16\\runs\\L01\\round-03.pt": "8221a4b679451995b708b1399f530ce6251847736be1ace49cce9d7fbfa8a2ee"
+  },
+  "selected_groups": [
+    {
+      "raw": "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c",
+      "group": "01a1a76e-86ae-733e-a150-704c38ea0f36",
+      "engine": "2.0.0"
+    },
+    {
+      "raw": "0ccad082f7ece25e2865c81683398d9eb959ddc64de61d378ed89908ff96bb90",
+      "group": "01a1a78a-001c-75ce-9dfd-ae52c863185e",
+      "engine": "2.0.0"
+    },
+    {
+      "raw": "a1a72e102153c6dbf42d34ff7f336ebd4f0daa3279ad6334031651714d21914c",
+      "group": "01a1a7a5-7794-7073-8001-0fb675efc877",
+      "engine": "2.0.0"
+    },
+    {
+      "raw": "370f407d6afa2a3b2e98668888cba282cda95a651a84f4fb6cd4b60c2c8f167e",
+      "group": "01a1a7b7-ca8e-76ea-9deb-35357c8e6682",
+      "engine": "2.0.0"
+    },
+    {
+      "raw": "4b8bd9d74fba86fa1fa92112ddded3b1b549e6aca58b616f40e103b14e80ab3b",
+      "group": "01a1a7e5-926b-7576-9259-70625cf34750",
+      "engine": "2.0.0"
+    },
+    {
+      "raw": "d3fa12eab19621b73601d27e905cef27c86abcfb794c1ccb8977a3065d0e420e",
+      "group": "01a1a7f7-dc07-78b7-9c79-4ba16539520e",
+      "engine": "2.0.0"
+    },
+    {
+      "raw": "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c",
+      "group": "01a1a8ca-6cfc-7aca-a360-a49138f436d6",
+      "engine": "3.0.0"
+    },
+    {
+      "raw": "41034a4e1640d95dc58bbd909dff2cca092661bfec3c3d79fb120088f8e26077",
+      "group": "01a1a8d3-9747-7867-a3eb-e7469f8e3c0b",
+      "engine": "3.0.0"
+    },
+    {
+      "raw": "9b800142aa635f80595fdb507faaedbc80d89e4d4104a6e001e7100581138696",
+      "group": "01a1a8dc-bc87-7d86-94fe-715cae3f1d65",
+      "engine": "3.0.0"
+    },
+    {
+      "raw": "aa51123e36b4b0fd05867dbb973e5d409258649c9c7b4b699cc386e323de1ff1",
+      "group": "01a1a8e5-e3f9-786b-947f-6c399da9488b",
+      "engine": "3.0.0"
+    },
+    {
+      "raw": "56facc0d6a9c844a4a174c4c49b36ce9725812d86050dceb1b4049e8a5c94b57",
+      "group": "01a1a8ef-b076-7d18-b6e2-48b4b00cb8bf",
+      "engine": "3.0.0"
+    },
+    {
+      "raw": "e13243adca8e6110f1290c89babe90c25ba1156192f79fb9a3a2a39e07356d70",
+      "group": "01a1a8f8-3500-7e58-8265-0c4326f7e91f",
+      "engine": "3.0.0"
+    }
+  ],
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "plan_sha256": "cd7d96cf4ec6930eb515e2513365a21bee77420af9714e4508fe535d6799094d",
+  "source_sha256": "3024434d68df373833dc826f608deced7a480cd9c8ebe3497d2f99dd73c9302b",
+  "qualification": "Bounded early-trajectory TRAIN local derivatives at frozen weights. Earlier state detached; not full training gradient, optimizer update, proof of information insufficiency or definitive cause of learned forgetting. Initial model is an arithmetic/loss probe, not a third fit.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,17 @@
+# V54: joint recurrent and movement weight updates
+
+The user's 80% direct-movement target remains unmet. This weight-only update improves evaluation movement from **226/513 (44.05%) to 227/513 (44.25%)** and lowers NLL from 1.5504 to 1.5080. Inferred-code accuracy remains 573/699 (81.97%). This is a small research improvement, not evidence of strategy or readiness to replace the playing bot.
+
+V52 still made substantial fitting errors: 6,240/12,318 expanded fitting moves correct (50.66%). V54 therefore allows movement loss to update the existing context projection, recurrent memory, base movement head and geometry correction together: **24,293 parameters**. The map encoder, code readout, code embedding and goal-query/readout weights stay fixed. Architecture, inputs, masks, supports and 32-turn resets are unchanged. The failed V53 destination edits are not used.
+
+The objective is mean supported movement cross entropy plus code KL to the frozen matching warm-start V49 predictions on observed queries. Two KL coefficients, 0.2 and 1.0, run for 32 epochs with AdamW at 0.0003. Four whole-game fitting folds train all expanded windows from the other 24 games and validate only the original 64 windows of their eight held games. Each starts with its matching V49 recurrent weights and V52 movement correction. Validation candidates losing more than one percentage point of inferred-code accuracy are excluded. Selection then prefers movement correct count, NLL and earlier duration; epoch zero is eligible.
+
+The selected setting is **KL 0.2, epoch 8**: 912/1,997 fitting-validation moves, compared with the warm-start 908/1,997. Validation inferred-code correctness is 2,422/2,945, down nine from 2,431; it passes the frozen retention guard. Full fitting refit completes **808 updates / 98,544 movement presentations**. Expanded in-sample movement is 6,541/12,318 (53.10%), which is not an evaluation result.
+
+On evaluation, the new model rescues 39 V52 errors and introduces 38, net +1. Code and movement-NLL guards pass, but the 80% target requires at least 411/513 correct moves; this model remains **184 short**. Endpoint within-two and exact accuracy remain 51/98 and 15/98, although goal likelihood changes slightly because its recurrent inputs changed. Frozen goal weights do not imply identical goal outputs.
+
+Parent verification reproduces all 40 validation measurements, the selection, every schedule/denominator/update count, finite optimizer states and frozen tensors. All 3,644 original fitting/evaluation forecasts reproduce exactly, and 32 streaming turns match. The causal/cache/gradient tests pass. No subagents or delegated reviews were used.
+
+The opt-in loader is `JointMovementPredictor`; its checkpoint is `.cambc/action-predictor/v54/selected.pt`. Original weights and the playing bot are preserved. Evidence lives in the frozen plan, selection, refit, result, comparison and verification artifacts. Subsequent experiments must retain this result rather than present an in-sample score or selectively chosen evaluation checkpoint as attainment of the target.
+
+These are repeatedly exposed research groups with inherited fitting-group exposure, inferred codes, observed past commands, selected availability and conditional movement labels. Category, full-command, reliability and multi-seed requirements remain unmet. No verified Fish-intent, generalization certification or playing-strength claim follows.

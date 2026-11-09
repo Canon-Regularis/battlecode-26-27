@@ -1,0 +1,19 @@
+{
+  "stage": "TRAIN-only preparatory zero-reference sensitivity; not the full mean-preserving attribution experiment, and no policy-quality/accuracy claim.",
+  "summary": "192 known-position early TRAIN contexts from12groups per model. Baseline semantic-mode parity0mismatches and weights unchanged. Geometry-off changes conditional move mode0times L01/1time L02; full observed command modes1/0. Other projection channels/bias can matter. Does not establish useful geometry or its absence on full benchmark.",
+  "limitations": [
+    "All192 contexts have known position, so availability projection input is constant1. Combined uncertainty/availability removal removes that constant offset as well.",
+    "Zero references also remove feature means. Need TRAIN-derived mean-preserving separate geometry, uncertainty and availability tests.",
+    "Fixed-state shadow readout only; original baseline posterior advances after actualcommands. No altered posterior is propagated.",
+    "Conditional move distribution measured on all sampled contexts regardless of actual/predicted family. No deployment or complete-command accuracy claim."
+  ],
+  "launch_failure": "Direct script invocation initially lacked repository root in sys.path; no plan/data/model changes occurred before import failure. Corrected invocation used python -c runpy.run_path from root; same sourcebytes. Future canonical module invocation works from root.",
+  "reproduce": ".venv-action-predictor/Scripts/python.exe -m tools.action_predictor.learned_policy.pathway_probe",
+  "original_successful_invocation": ".venv-action-predictor/Scripts/python.exe -u -c import-runpy-run_path-from-repository-root",
+  "source_sha256": "33ed3fef250b3afe04b22e7afe104afb9ff9a8465b6d3b9bba559255f00fd70f",
+  "original_source": ".cambc\\action-predictor\\v17\\Q00-pathway-probe.py",
+  "records_path": ".cambc\\action-predictor\\v17\\Q00-records.json",
+  "records_sha256": "f0554c6d51a3caf564f379a7c7ca4d9a65c92de1db87636a33d428453f973540",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

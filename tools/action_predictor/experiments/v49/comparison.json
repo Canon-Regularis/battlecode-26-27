@@ -1,0 +1,458 @@
+{
+  "bindings": {
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\evaluation-predictions.json": "6a01cf2d70f0b4e158b25f4ffefddca974156248592013103e97c490b6762bcd",
+    ".cambc\\action-predictor\\v44\\selected-evaluation.json": "37c617632429ade3573d7ff92eab750e489fa6997c2420dd5223621942509bd1",
+    ".cambc\\action-predictor\\v45\\evaluation-predictions.json": "67e51a4f14ae18168d4ab594d9048b9be1a1608da09ef49ac87b2dbf8d2e6d2e",
+    ".cambc\\action-predictor\\v48\\evaluation-predictions.json": "3cc7f31ea31dabd56640270f8287f5695ad79f6a95bba6653d449f833ce86976",
+    ".cambc\\action-predictor\\v49\\evaluation-predictions.json": "ae8dcb74fc5fe1fcee5eb61a7c2461b3da96117ff208466db4bd86e1fa421eae"
+  },
+  "comparisons": {
+    "S01": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.21832358674463936,
+        "movement_nll": 1.7826981503828692,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.17346938775510204,
+        "mean_goal_error": 3.306122448979592,
+        "goal_nll": 5.358915616054924,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.648068669527897
+      },
+      "codes": {
+        "accuracy": 0.648068669527897,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 699,
+            "correct": 453,
+            "recall": 1.0,
+            "precision": 0.648068669527897,
+            "f1": 0.7864583333333334
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          }
+        },
+        "balanced_recall": 0.14285714285714285,
+        "macro_f1": 0.11235119047619048,
+        "minimum_recall": 0.0
+      },
+      "rescued": 164,
+      "regressed": 44,
+      "changed_goal_choices": 3
+    },
+    "V44": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.23391812865497075,
+        "movement_nll": 1.7792272190717693,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.17346938775510204,
+        "mean_goal_error": 3.306122448979592,
+        "goal_nll": 5.3598596830757295,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.7396280400572246
+      },
+      "codes": {
+        "accuracy": 0.7396280400572246,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 612,
+            "correct": 445,
+            "recall": 0.9823399558498896,
+            "precision": 0.7271241830065359,
+            "f1": 0.8356807511737089
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 1,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 86,
+            "correct": 72,
+            "recall": 0.45569620253164556,
+            "precision": 0.8372093023255814,
+            "f1": 0.5901639344262295
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          }
+        },
+        "balanced_recall": 0.2054337369116479,
+        "macro_f1": 0.20369209794284832,
+        "minimum_recall": 0.0
+      },
+      "rescued": 97,
+      "regressed": 41,
+      "changed_goal_choices": 3
+    },
+    "V45": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.23196881091617932,
+        "movement_nll": 1.779278242390523,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.17346938775510204,
+        "mean_goal_error": 3.306122448979592,
+        "goal_nll": 5.360010928037215,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.6509298998569385
+      },
+      "codes": {
+        "accuracy": 0.6509298998569385,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 334,
+            "correct": 302,
+            "recall": 0.6666666666666666,
+            "precision": 0.9041916167664671,
+            "f1": 0.7674714104193139
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 112,
+            "correct": 37,
+            "recall": 0.6851851851851852,
+            "precision": 0.33035714285714285,
+            "f1": 0.4457831325301205
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 27,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 116,
+            "correct": 99,
+            "recall": 0.6265822784810127,
+            "precision": 0.853448275862069,
+            "f1": 0.7226277372262774
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 49,
+            "correct": 11,
+            "recall": 0.55,
+            "precision": 0.22448979591836735,
+            "f1": 0.3188405797101449
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 61,
+            "correct": 6,
+            "recall": 0.5454545454545454,
+            "precision": 0.09836065573770492,
+            "f1": 0.16666666666666666
+          }
+        },
+        "balanced_recall": 0.4391269536839157,
+        "macro_f1": 0.3459127895075033,
+        "minimum_recall": 0.0
+      },
+      "rescued": 136,
+      "regressed": 18,
+      "changed_goal_choices": 3
+    },
+    "V48": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.27485380116959063,
+        "movement_nll": 1.7884626988081904,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.385922410050217,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.7896995708154506
+      },
+      "codes": {
+        "accuracy": 0.7896995708154506,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 492,
+            "correct": 405,
+            "recall": 0.8940397350993378,
+            "precision": 0.823170731707317,
+            "f1": 0.8571428571428571
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 61,
+            "correct": 31,
+            "recall": 0.5740740740740741,
+            "precision": 0.5081967213114754,
+            "f1": 0.5391304347826087
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 1,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 140,
+            "correct": 114,
+            "recall": 0.7215189873417721,
+            "precision": 0.8142857142857143,
+            "f1": 0.7651006711409396
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 5,
+            "correct": 2,
+            "recall": 0.1,
+            "precision": 0.4,
+            "f1": 0.16
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          }
+        },
+        "balanced_recall": 0.32709039950216917,
+        "macro_f1": 0.3316248518666294,
+        "minimum_recall": 0.0
+      },
+      "rescued": 30,
+      "regressed": 9,
+      "changed_goal_choices": 0
+    },
+    "V49": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.26120857699805067,
+        "movement_nll": 1.8019184374902215,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.3895154534554,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.8197424892703863
+      },
+      "codes": {
+        "accuracy": 0.8197424892703863,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 487,
+            "correct": 409,
+            "recall": 0.9028697571743929,
+            "precision": 0.839835728952772,
+            "f1": 0.8702127659574468
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 55,
+            "correct": 33,
+            "recall": 0.6111111111111112,
+            "precision": 0.6,
+            "f1": 0.6055045871559633
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 138,
+            "correct": 120,
+            "recall": 0.759493670886076,
+            "precision": 0.8695652173913043,
+            "f1": 0.8108108108108109
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 19,
+            "correct": 11,
+            "recall": 0.55,
+            "precision": 0.5789473684210527,
+            "f1": 0.5641025641025641
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          }
+        },
+        "balanced_recall": 0.40335350559594,
+        "macro_f1": 0.4072329611466836,
+        "minimum_recall": 0.0
+      },
+      "rescued": 0,
+      "regressed": 0,
+      "changed_goal_choices": 0
+    }
+  },
+  "target_correct": 595,
+  "actual_correct": 573,
+  "added_optimizer_updates": 21752,
+  "groups": {
+    "01a1a637-448c-7beb-986a-4cc264d1deb7": {
+      "rows": 82,
+      "correct": 74
+    },
+    "01a1a7a5-7794-7073-8001-0fb675efc877": {
+      "rows": 83,
+      "correct": 49
+    },
+    "01a1a8ca-6cfc-7aca-a360-a49138f436d6": {
+      "rows": 96,
+      "correct": 80
+    },
+    "01a1a8ef-b076-7d18-b6e2-48b4b00cb8bf": {
+      "rows": 95,
+      "correct": 77
+    },
+    "01a1aa2f-8318-7f46-8e51-77cadbf791ef": {
+      "rows": 79,
+      "correct": 55
+    },
+    "01a1ae5e-abaa-75cd-8515-ab921035e653": {
+      "rows": 92,
+      "correct": 79
+    },
+    "20e8d21c-08a9-41fa-940a-32d1fa6f856d": {
+      "rows": 81,
+      "correct": 75
+    },
+    "c786009a-6afa-42d9-b0a8-14ac001fa18b": {
+      "rows": 91,
+      "correct": 84
+    }
+  }
+}

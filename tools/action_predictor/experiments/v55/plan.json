@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\movement_bias_edit.py": "1238e89ecbc2cf4a8fbd71b572f8ffc9cef241f82c8242b9e929c0e5006c1719",
+    "tools\\action_predictor\\behavior_segments\\movement_bias_predictor.py": "7ec8f3a0cc4b6daf5297515257f57a1ab2a89484a3833792c8c302ac1e5d49b2",
+    "tools\\action_predictor\\behavior_segments\\test_movement_bias.py": "e03509f6bf6b354ec2712e193563d0a4842fe73ec690a76c5d9fd9bf3b7290eb"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v54\\plan.json": "cae51d8e5f7700cbc559de2141e29e3cc7cf04e71629f947066cbb94aeb3ebf9",
+    "tools\\action_predictor\\experiments\\v54\\selection.json": "ca5f7768ad7231c9f5e82772c48db13ed4aa85d6e3d97054c158f5b8f2ed1613",
+    "tools\\action_predictor\\experiments\\v54\\refit.json": "aa48257a82a0716796921040bbca70c0607cce857f13d36f16ca6f746f94a582",
+    "tools\\action_predictor\\experiments\\v54\\result.json": "fa1321e57268207cde63354cc39c8503c7950485cbf135cf201a77c9a88423fa",
+    "tools\\action_predictor\\experiments\\v54\\verification.json": "5f65b514352a52b6e0b5aaea5beab08bbe6d914b285108e441722bd8505e9499"
+  },
+  "bounds": [
+    0.1,
+    0.3,
+    0.6
+  ],
+  "step": 0.02,
+  "passes": 4,
+  "seconds_cap": 600,
+  "target_accuracy": 0.8,
+  "intervention": "Edit only nine entries of the existing base movement bias, starting at selected V54 weights. At each coordinate evaluate a fixed0.02 grid within the bound. Prefer fitting correct count,then NLL,then smaller absolute bias. Four passes,ascending direction order,including stay. No new layers or feature/support/decoder changes; no model optimizer updates.",
+  "selection": "Each fitting fold calibrates its matching V54 selected checkpoint on all other24games and scores original held64windows. Select pooled correct count,then NLL,then smaller bound. Identity eligible. Refit one selected bound on full fitting data. No evaluation-dependent choice.",
+  "limits": "Repeatedly exposed research games and inherited backbone/fold exposure. This tests a bounded direction correction,not strategy or a guarantee of80percent. Code and goals must remain unchanged. No subagents or runtime promotion."
+}

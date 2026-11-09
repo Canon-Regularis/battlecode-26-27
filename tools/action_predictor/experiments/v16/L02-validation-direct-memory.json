@@ -1,0 +1,53 @@
+{
+  "results": {
+    "all": {
+      "rows": 14439,
+      "noninitial": 14311,
+      "direct_per_root_gate_quantiles": [
+        0.7762334942817688,
+        0.9813649654388428,
+        0.986763060092926,
+        0.9908690452575684,
+        0.9939828515052795,
+        0.9966613054275513
+      ],
+      "direct_log_per_root_gate_quantiles": [
+        -0.2533019185066223,
+        -0.018810898065567017,
+        -0.013325322419404984,
+        -0.009172926191240549,
+        -0.006035339320078492,
+        -0.0033443220891058445
+      ],
+      "effective_retention_quantiles": [
+        0.0,
+        0.8632877171039581,
+        0.9846591949462891,
+        0.9904699921607971,
+        0.9939576864242554,
+        0.9966612458229065
+      ],
+      "exact_decay_age_feature_quantiles": [
+        0.0,
+        12.02468490600586,
+        24.1669979095459,
+        36.07248306274414,
+        55.5736000061035,
+        98.07147979736328
+      ],
+      "zero_effective_retention_noninitial": 0,
+      "direct_gates_where_effective_underflowed": null,
+      "world_held_without_current_position": 325
+    }
+  },
+  "artifact_sha256": "5ab0c2ac15604acc2bfea761756519b45765b2c0aec747d2720caee58702a716",
+  "checkpoint_sha256": "5aba95703ab05d7c28477d324956894ea21489a78efa8097b85fd61a3fd41e2e",
+  "archived_goals_sha256": "6e246e947d6f0c600d50ffa1286be0fa5878a74cbc843aaa7ca35cec6556388d",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "source_sha256": "b8135901e709d2e3b8365331ca1698de750363d5fd6eea8b682b38233c50d271",
+  "archived_world_max_difference": 0.0,
+  "archived_retention_max_difference": 0.0,
+  "qualification": "Direct sigmoid/logsigmoid before gap exponentiation, no inversion of underflowed effective retention. Exact forward decay-age feature is not the lifetime of all recurrent information: absent current position can preserve old world coordinates with blend1, and old memory also reaches new forecasts through attention. Initial-row gate is unused; direct per-root summaries exclude it. TRAIN in-sample, original augmented traversal.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

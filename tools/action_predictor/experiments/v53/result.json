@@ -1,0 +1,58 @@
+{
+  "refit_sha256": "84651e9f5f8e841aae2f93955b4be8819de03ddd7b75ffc783a20647928233c8",
+  "results": {
+    "fit": {
+      "rows": 2945,
+      "movement_rows": 1997,
+      "goal_rows": 369,
+      "movement_accuracy": 0.49424136204306457,
+      "movement_nll": 1.4405611710801056,
+      "goal_within2": 0.5365853658536586,
+      "goal_exact": 0.17073170731707318,
+      "mean_goal_error": 3.7262872628726287,
+      "goal_nll": 4.472325870661232,
+      "astar_movement_accuracy": 0.11367050575863796,
+      "code_accuracy": 0.8495755517826825
+    },
+    "evaluation": {
+      "rows": 699,
+      "movement_rows": 513,
+      "goal_rows": 98,
+      "movement_accuracy": 0.4405458089668616,
+      "movement_nll": 1.550404509387867,
+      "goal_within2": 0.5102040816326531,
+      "goal_exact": 0.19387755102040816,
+      "mean_goal_error": 3.336734693877551,
+      "goal_nll": 4.989936685987881,
+      "astar_movement_accuracy": 0.08187134502923976,
+      "code_accuracy": 0.8197424892703863
+    }
+  },
+  "comparisons": {
+    "fit": {
+      "rows": 369,
+      "within2_rescues": 12,
+      "within2_regressions": 13
+    },
+    "evaluation": {
+      "rows": 98,
+      "within2_rescues": 2,
+      "within2_regressions": 3
+    }
+  },
+  "checks": {
+    "within2": false,
+    "exact": true,
+    "mean_error": false,
+    "nll": true,
+    "astar": true
+  },
+  "all_checks_pass": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v53\\selected.pt": "d3387f6bd966634ba78a044ccfeef4f37fe0bbd36f369bb43d3b95e8be6bb5fd",
+    ".cambc\\action-predictor\\v53\\fit-predictions.json": "337f2fb55d1bb8a7913ff32919ec1857cb34043bbc1cd00622cabb0d83a9257e",
+    ".cambc\\action-predictor\\v53\\evaluation-predictions.json": "0a5eea5c9426a87ddfaa380274aebf9aed5fb7e2ac15e191b134dd880654ee43"
+  },
+  "seconds": 26.21379240002716,
+  "promoted": false
+}

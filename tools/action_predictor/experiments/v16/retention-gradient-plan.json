@@ -1,0 +1,10 @@
+{
+  "purpose": "Test local pressure of command NLL versus .05future-position auxiliary on the learned retention gate; no optimizer or new fit.",
+  "selection": "Eligible TRAIN only: first6distinct groups per engine, first actor stream per chosen game, first64selected decisions. Probe first16available-goal noninitial known-position rows after8prefix decisions per stream. No action-label-based case selection.",
+  "checkpoints": "Exact seed20261114 initial persistent model (unfitted), saved L01round1, selected L01checkpoint. Identical forward actual-action history per model; no backward-smoothed state.",
+  "derivative": "Current-step partial gradients w.r.t. effective gap retention and retention bias, holding earlier state detached. Positive derivative means gradient descent would locally decrease retention. Auxiliary multiplied by frozen.05. Not the full8nodeBPTT gradient or a causal attribution of training trajectory.",
+  "interpretation": "Future achieved position is a receding-horizon forecast target, not true persistent intent. Gradient evidence may support or reject a local forgetting-pressure hypothesis; do not infer that all persistent policies fail.",
+  "source_sha256": "3024434d68df373833dc826f608deced7a480cd9c8ebe3497d2f99dd73c9302b",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

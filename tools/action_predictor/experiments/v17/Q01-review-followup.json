@@ -1,0 +1,15 @@
+{
+  "response_sha256": "6bce41f5a6feb4cc9beaaeb8797a41c781dc06543f4d7ebd75b7865fbb5509ca",
+  "original_test_sha256": "b4eeeb2dadf7420da5bdfbc1b5e632cfb8d2bc3340aceeab438f91147a481caa",
+  "new_test_sha256": "345b85aa75fe091e2412a0a6203d708d554dcdf35cd6cc05d338b0b62e89ae5b",
+  "tests": {
+    "v2_tests_passed": 3,
+    "nondegenerate_examples": 8,
+    "examples_per_position_availability_stratum": 4,
+    "known_skipped_geometry_uncertainty_and_availability_only_mutants_rejected": true
+  },
+  "command": ".venv-action-predictor/Scripts/python.exe -m unittest tools.action_predictor.learned_policy.test_pathway_inputs_v2 tools.action_predictor.goal_readout.test_model",
+  "combined_tests_passed": 6,
+  "new_fits": 0,
+  "reserved_opened": 0
+}

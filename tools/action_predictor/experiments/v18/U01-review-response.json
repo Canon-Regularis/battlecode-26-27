@@ -1,0 +1,42 @@
+{
+  "reviewed_head": "5e193eed9f3afd40d60d4c8d6fbaf31f79644d54",
+  "verdict": "Valid negative result; primary command counts, error partition, sensitivity and movement bound reproduced. No new implementation defect overturns them. Interpretation and research priorities corrected below.",
+  "responses": [
+    {
+      "id": "U01-R1",
+      "finding": "R02 used a different single-logistic head and representation, not P05.",
+      "outcome": "Accepted. R02's3/128 cannot diagnose P05 trainability/capacity/information. Source inspection confirms R02 trained all original heads, but omitted the recovered exact priority state/history inputs that P05 consumes. The next diagnostic must use actual P05 architecture, inputs and probability arithmetic."
+    },
+    {
+      "id": "U01-R2",
+      "finding": "Almost all tiny net NLL improvement comes from priority typing, while movement loss worsens.",
+      "outcome": "Accepted. Surface the existing decomposition: totalU01-U00 loss-0.638083nats, priority-0.630671nats (about98.8% of net), movement+0.322783nats. These are arithmetic contributions with offsets, not causal attribution. No demonstrated benefit from this named geometry channel; neither benefit nor equivalence established."
+    },
+    {
+      "id": "U01-R3",
+      "finding": "Fixed priority modes impose a hard current-configuration limit; typing also deteriorated.",
+      "outcome": "Accepted.45/576joint and109/576conditional mode exactness remain distinct. The fixed value model cannot reach the category target under perfect type selection. Priority typing separately contributes about68% of U01's net NLL regression versus L02. No more geometry/retention variants can remove the frozen value limit."
+    },
+    {
+      "id": "U01-R4",
+      "finding": "A poor mixture-mean endpoint does not diagnose the entire goal forecaster.",
+      "outcome": "Accepted.6.819versus5.788tiles concerns the prior-mean point forecast only. Components may contain useful alternatives; achieved position is a variable-horizon/selectively available proxy, not intent. Forecaster quality, proxy choice, redundancy, optimization, representation/history and transfer remain unresolved competing explanations. This supersedes any stronger 'forecaster is poor/the cause' wording in briefs or commentary."
+    },
+    {
+      "id": "U01-R5",
+      "finding": "Current mixture reweighting cannot remove844common-wrong destinations.",
+      "outcome": "Preserve the exact scope:1518/2362conditional upper bound under fixed component distributions and past state, below1541point target. Not an architecture/data ceiling, hidden-intent proof or exhaustion of algorithmic approaches."
+    }
+  ],
+  "resolved_error_ledger": [
+    "A00 fallback probability mismatch repaired in later probability-consistent policies.",
+    "Demonstrated generator omissions remain preserved in historical libraries; later libraries corrected mechanisms without promoting coverage as achieved accuracy.",
+    "B00 chosen-command versus conditional-coordinate comparison corrected in V18 versioned evaluators.",
+    "Degenerate Q01/V18 replacement tests replaced additively with nondegenerate algebra and mutation checks.",
+    "Original Q01 producer lost arrays before archive; failure retained and versioned recovery used. Historical numerical-normalization qualification remains; unused helper is not an active decoder repair."
+  ],
+  "next": "Prepare one bounded P05 capacity-and-transfer diagnostic on eligible TRAIN cohorts with frozen M01 contexts, recovered causal priority inputs and exact int64 anchors. Verify trainability/optimizer inclusion, support, gradients, exact values, NLL, bounded-candidate ranks and explanation contributions. Controls are held out only from new head optimization; previously trained encoder/head exposure must be explicit. No architecture change or fresh full-policy generalization claim. Any later full-policy replacement must re-decode normalized joint probabilities.",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false
+}

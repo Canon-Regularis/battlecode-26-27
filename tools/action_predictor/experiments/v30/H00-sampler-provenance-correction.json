@@ -1,0 +1,10 @@
+{
+  "original_report_sha256": "198d2d645accf73c325c9d87242247221366829c00bb066dc29d0e3cb0894f92",
+  "correct_sampler_path": "tools\\action_predictor\\learned_policy\\data.py",
+  "correct_sampler_sha256": "98915026ab681ab6c2c8cf1a9e44c82001eaed26ae3a4c358d426c6b359a14c1",
+  "original_field_wrong_sha256": "6b22eec1a85abc33a3617945e21ae6a465328c96478e5c7388cbfce88bffdaf0",
+  "cause": "Producer used a forward-slash string replacement against a Windows __file__ path, so its sampler-source field hashed the producer instead. Schedule arrays, RNG checks, optimizer counters and measurements are unaffected; original artifact preserved.",
+  "reproduction": "Read the sampler hash from the frozen V30 protocol sources map and verify the actual learned_policy/data.py bytes.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

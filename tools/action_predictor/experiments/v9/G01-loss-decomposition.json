@@ -1,0 +1,29 @@
+{
+  "report_sha256": "4d681c8ba1a8a07dc0fdac9cf9dddbd373c05a1c48d0e8383a83dcb7ff7d7932",
+  "source_sha256": "64455051c8ef85883d1a244920d5eff065d271fd39fb22a7dfe456aa12385a48",
+  "splits": {
+    "train": {
+      "eligible_move_support": 71824,
+      "selected_checkpoint_mixture_move_nll": 0.9898243709186506,
+      "gate_BCE": 0.436186675663131,
+      "within_partition_destination_NLL": 0.553637692267797,
+      "decomposition_max_error": 4.76837158203125e-07,
+      "extra_auxiliary_weight": 0.05,
+      "effective_gate_coefficient_on_eligible_rows": 1.05,
+      "scope": "Selected checkpoint, all eligible true move rows. G01 directional support makes primary NLL = gateBCE+within-partition NLL; auxiliary adds0.05gateBCE. G00 unrestricted mixture has no such semantic decomposition or gate supervision. Means are per eligible row, not the full-minibatch training denominator."
+    },
+    "validation": {
+      "eligible_move_support": 2356,
+      "selected_checkpoint_mixture_move_nll": 1.1506620931652105,
+      "gate_BCE": 0.4997399275663127,
+      "within_partition_destination_NLL": 0.650922162430135,
+      "decomposition_max_error": 4.76837158203125e-07,
+      "extra_auxiliary_weight": 0.05,
+      "effective_gate_coefficient_on_eligible_rows": 1.05,
+      "scope": "Selected checkpoint, all eligible true move rows. G01 directional support makes primary NLL = gateBCE+within-partition NLL; auxiliary adds0.05gateBCE. G00 unrestricted mixture has no such semantic decomposition or gate supervision. Means are per eligible row, not the full-minibatch training denominator."
+    }
+  },
+  "interpretation": "Architecture/support/optimization and extra gate weighting package; not proof that a new independent auxiliary task alone helped. No future-direction input, oracle routing or checkpoint reselection.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

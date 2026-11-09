@@ -1,0 +1,19 @@
+{
+  "purpose": "Diagnose learned sequential policy without changing the two-fit design, support, checkpoints, thresholds or seeds.",
+  "contexts": [
+    "natural vs augmented TRAIN",
+    "DEV original whole groups",
+    "each action",
+    "move continuation/change/startup",
+    "true-root gap 1/2-16/>16",
+    "goal-target availability for diagnostic only",
+    "historical engine (confounded by groups)"
+  ],
+  "goals": "Prior entropy/usage and within-row world-goal separation; world-goal expected distance, effective root-gap retention, goal-forecast NLL and support. These measure state behavior, NOT Fish intent or strategic success.",
+  "comparisons": "G00 and available B00/S00/X00; L01 directly vs L00. 2000 paired whole-group bootstrap draws seed20261106, fixed14named-action macro. Alltrue-family vs correctlytyped parameter and joint accuracy separate. Empty denominator null.",
+  "deployment": "Teacher-forced replay filtering after earlier actual Fish commands differs from closed-loop own-action filtering. SDK dispatch tracing is not a match, legality certification or playing-strength evaluation.",
+  "prospective_interventions": "After selected L01, optional fixed-output sensitivity: reset persistent state and zero goal_condition projection independently, without retraining/checkpoint selection. Interpret as dependence under distribution change, not causal identification of Fish intent. Do not automatically run more fits.",
+  "likelihood": "Normalized observed representation, spatial mixture/latent modes marginalized consistently for MAP and likelihood; shop is a marginalized type bucket with unavailable arguments and strict failure.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

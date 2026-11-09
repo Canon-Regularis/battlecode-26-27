@@ -1,0 +1,74 @@
+{
+  "plan_sha256": "9200c1030af932fb9669010af1dd1ac03a04b08ac16dbc1f2a9e8ed77c4caa4a",
+  "bindings": {
+    ".cambc\\action-predictor\\v53\\rows.pt": "6b978ab55e2c4cf4170b33f38c4f18a0bf6decf34790840b4d600f0597e7a3fa",
+    ".cambc\\action-predictor\\v53\\identities.json": "e9d7ec8acf510b0e0f7157a53588f219c668cefdc774b5b7270ef1ae20ce1e67",
+    ".cambc\\action-predictor\\v53\\full-shared.pt": "a83850788da0c2ab5eb1110f758144b6980f4a5ec9a3a4e5041b03ad6e600ebf",
+    ".cambc\\action-predictor\\v53\\fold0-shared.pt": "3abd51624b85626c4c21fc0f1fd1bc019a55d155aaeb280710db180a8da8183f",
+    ".cambc\\action-predictor\\v53\\fold1-shared.pt": "cbf596190972a5eeb0e70bd0994782078cd91dd1837d673802ac0d29d6fbbba7",
+    ".cambc\\action-predictor\\v53\\fold2-shared.pt": "2041d353a4a235c758ca450cc8be1bce9a5de341fa5415604b7a32b116b138e9",
+    ".cambc\\action-predictor\\v53\\fold3-shared.pt": "c618470f86d05cc3c940385af8f123bd4393287987b2a8015c9157ee8759965b"
+  },
+  "rows": 2099,
+  "original_labels_exact": 369,
+  "maximum_factored_logit_error": 9.5367431640625e-07,
+  "weight_statistics": {
+    "query.weight": {
+      "shape": [
+        16,
+        64
+      ],
+      "norm": 2.4960434436798096,
+      "minimum": -0.15031634271144867,
+      "maximum": 0.15196867287158966
+    },
+    "query.bias": {
+      "shape": [
+        16
+      ],
+      "norm": 0.27879568934440613,
+      "minimum": -0.1290913075208664,
+      "maximum": 0.12473239004611969
+    },
+    "goal.0.weight": {
+      "shape": [
+        16,
+        48,
+        1,
+        1
+      ],
+      "norm": 2.551567316055298,
+      "minimum": -0.22943297028541565,
+      "maximum": 0.19696226716041565
+    },
+    "goal.0.bias": {
+      "shape": [
+        16
+      ],
+      "norm": 0.34852907061576843,
+      "minimum": -0.11055593937635422,
+      "maximum": 0.1955195963382721
+    },
+    "goal.2.weight": {
+      "shape": [
+        1,
+        16,
+        1,
+        1
+      ],
+      "norm": 0.8007060885429382,
+      "minimum": -0.3092176914215088,
+      "maximum": 0.25808095932006836
+    },
+    "goal.2.bias": {
+      "shape": [
+        1
+      ],
+      "norm": 0.049309197813272476,
+      "minimum": 0.049309197813272476,
+      "maximum": 0.049309197813272476
+    }
+  },
+  "common_bias_cannot_change_softmax_or_argmax": true,
+  "fitting_only": true
+}

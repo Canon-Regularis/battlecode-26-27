@@ -1,0 +1,65 @@
+{
+  "result_sha256": "3d10e27983ef9133e1cb09d8d7d5fc11ae9354e89cc1ac93e95026002730ec6a",
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\expanded_code_verify.py": "4fdba030b6cf2f7b029e33f8afee9a852768f049f41e8a3637a247d5e8829904",
+    "tools\\action_predictor\\behavior_segments\\expanded_code_predictor.py": "57a5b339d31f42a4f0f69396507e505e3440947c9e911c6dafed22312c111a66"
+  },
+  "exact_expanded_windows": 1607,
+  "exact_original_windows": 256,
+  "all_frozen_labels_reproduced": true,
+  "exact_validation_measurements": 72,
+  "accounting": {
+    "lr0.0001-fold0": {
+      "updates": 2368,
+      "observed_presentations": 425856,
+      "clipped_updates": 41
+    },
+    "lr0.0001-fold1": {
+      "updates": 2400,
+      "observed_presentations": 433568,
+      "clipped_updates": 18
+    },
+    "lr0.0001-fold2": {
+      "updates": 2400,
+      "observed_presentations": 435392,
+      "clipped_updates": 41
+    },
+    "lr0.0001-fold3": {
+      "updates": 2496,
+      "observed_presentations": 450176,
+      "clipped_updates": 27
+    },
+    "lr0.0003-fold0": {
+      "updates": 2368,
+      "observed_presentations": 425856,
+      "clipped_updates": 55
+    },
+    "lr0.0003-fold1": {
+      "updates": 2400,
+      "observed_presentations": 433568,
+      "clipped_updates": 35
+    },
+    "lr0.0003-fold2": {
+      "updates": 2400,
+      "observed_presentations": 435392,
+      "clipped_updates": 53
+    },
+    "lr0.0003-fold3": {
+      "updates": 2496,
+      "observed_presentations": 450176,
+      "clipped_updates": 41
+    },
+    "refit": {
+      "updates": 2424,
+      "observed_presentations": 436248,
+      "clipped_updates": 49
+    }
+  },
+  "exact_final_forecasts": {
+    "fit": 2945,
+    "evaluation": 699
+  },
+  "original_inputs_preserved": true,
+  "streaming_predictions": 32,
+  "seconds": 134.78528939996613
+}

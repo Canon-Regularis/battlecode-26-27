@@ -1,0 +1,11 @@
+{
+  "stage": "TRAIN input preparation before any fitting or DEV evaluation",
+  "error": "KeyError: grid is not a file in the v7 target shard",
+  "cause": "v7 target shards contain x/history/y/round/group, not the frozen rich spatial grid",
+  "correction": "Reconstruct the reviewed personal candidate_grid with the complete earlier actual own last-move displacement, quantize float16, then require full candidate-descriptor equality against the immutable rich NPZ grid during probability preparation",
+  "superseding_protocol": "protocol-r2.json",
+  "completed_game_input_receipts": 0,
+  "new_fits": 0,
+  "DEV_evaluations": 0,
+  "reserved_opened": 0
+}

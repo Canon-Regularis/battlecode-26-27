@@ -1,0 +1,1077 @@
+{
+  "results": {
+    "train": {
+      "all": [
+        {
+          "action": "<unknown>",
+          "support": 0,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            },
+            "G00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            },
+            "S00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "altar",
+          "support": 1663,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.3576051153400655,
+              "type_nll": 0.24615479137568433,
+              "observed_argument_nll": 0.11145032385580617
+            },
+            "G00": {
+              "observed_joint_nll": 0.3576051153400655,
+              "type_nll": 0.24615479137568433,
+              "observed_argument_nll": 0.11145032385580617
+            },
+            "S00": {
+              "observed_joint_nll": 0.3576051153400655,
+              "type_nll": 0.24615479137568433,
+              "observed_argument_nll": 0.11145032385580617
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "attack",
+          "support": 22761,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.30338897896778466,
+              "type_nll": 0.1998000642927284,
+              "observed_argument_nll": 0.10358891465257729
+            },
+            "G00": {
+              "observed_joint_nll": 0.30338897896778466,
+              "type_nll": 0.1998000642927284,
+              "observed_argument_nll": 0.10358891465257729
+            },
+            "S00": {
+              "observed_joint_nll": 0.30338897896778466,
+              "type_nll": 0.1998000642927284,
+              "observed_argument_nll": 0.10358891465257729
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "blocked",
+          "support": 10065,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 4.157735429977131,
+              "type_nll": 1.2872982309458247,
+              "observed_argument_nll": 2.870437199031306
+            },
+            "G00": {
+              "observed_joint_nll": 3.7105183375515396,
+              "type_nll": 1.2872982309458247,
+              "observed_argument_nll": 2.423220106217616
+            },
+            "S00": {
+              "observed_joint_nll": 4.179104487477073,
+              "type_nll": 1.2872982309458247,
+              "observed_argument_nll": 2.8918062565312477
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": null,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cancel",
+          "support": 73108,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.05743648008480288,
+              "type_nll": 0.05743648008480288,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.05743648008480288,
+              "type_nll": 0.05743648008480288,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.05743648008480288,
+              "type_nll": 0.05743648008480288,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cast_0",
+          "support": 4674,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.6056456052243833,
+              "type_nll": 0.45942631934178046,
+              "observed_argument_nll": 0.14621928810109613
+            },
+            "G00": {
+              "observed_joint_nll": 0.6056456052243833,
+              "type_nll": 0.45942631934178046,
+              "observed_argument_nll": 0.14621928810109613
+            },
+            "S00": {
+              "observed_joint_nll": 0.6056456052243833,
+              "type_nll": 0.45942631934178046,
+              "observed_argument_nll": 0.14621928810109613
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cast_1",
+          "support": 8273,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 1.8589615191236435,
+              "type_nll": 0.553968923354439,
+              "observed_argument_nll": 1.3049925962357154
+            },
+            "G00": {
+              "observed_joint_nll": 1.8589615191236435,
+              "type_nll": 0.553968923354439,
+              "observed_argument_nll": 1.3049925962357154
+            },
+            "S00": {
+              "observed_joint_nll": 1.8589615191236435,
+              "type_nll": 0.553968923354439,
+              "observed_argument_nll": 1.3049925962357154
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "end",
+          "support": 110233,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.0854577083049547,
+              "type_nll": 0.0854577083049547,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.0854577083049547,
+              "type_nll": 0.0854577083049547,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.0854577083049547,
+              "type_nll": 0.0854577083049547,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "move",
+          "support": 71945,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 1.410771197370165,
+              "type_nll": 0.26131730541672143,
+              "observed_argument_nll": 1.1494538919534436
+            },
+            "G00": {
+              "observed_joint_nll": 1.252651194088518,
+              "type_nll": 0.26131730541672143,
+              "observed_argument_nll": 0.991333888611887
+            },
+            "S00": {
+              "observed_joint_nll": 1.4083817469231155,
+              "type_nll": 0.26131730541672143,
+              "observed_argument_nll": 1.1470644415063938
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": null,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "priority",
+          "support": 14816,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 3.645857425577552,
+              "type_nll": 0.7188069193659605,
+              "observed_argument_nll": 2.9270505071341084
+            },
+            "G00": {
+              "observed_joint_nll": 3.645857425577552,
+              "type_nll": 0.7188069193659605,
+              "observed_argument_nll": 2.9270505071341084
+            },
+            "S00": {
+              "observed_joint_nll": 3.645857425577552,
+              "type_nll": 0.7188069193659605,
+              "observed_argument_nll": 2.9270505071341084
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "recall",
+          "support": 79748,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.4536428650954192,
+              "type_nll": 0.4536428650954192,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.4536428650954192,
+              "type_nll": 0.4536428650954192,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.4536428650954192,
+              "type_nll": 0.4536428650954192,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "shop",
+          "support": 17273,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.08933581548126877,
+              "type_nll": 0.08933581548126877,
+              "observed_argument_nll": null
+            },
+            "G00": {
+              "observed_joint_nll": 0.08933581548126877,
+              "type_nll": 0.08933581548126877,
+              "observed_argument_nll": null
+            },
+            "S00": {
+              "observed_joint_nll": 0.08933581548126877,
+              "type_nll": 0.08933581548126877,
+              "observed_argument_nll": null
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": "absent, never correct or zero-imputed"
+        },
+        {
+          "action": "submit",
+          "support": 7076,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.21301769121223277,
+              "type_nll": 0.20311307930491,
+              "observed_argument_nll": 0.009904612065869905
+            },
+            "G00": {
+              "observed_joint_nll": 0.21301769121223277,
+              "type_nll": 0.20311307930491,
+              "observed_argument_nll": 0.009904612065869905
+            },
+            "S00": {
+              "observed_joint_nll": 0.21301769121223277,
+              "type_nll": 0.20311307930491,
+              "observed_argument_nll": 0.009904612065869905
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "teleport",
+          "support": 594,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 1.8647775082952447,
+              "type_nll": 0.22080106550638692,
+              "observed_argument_nll": 1.6439764364763643
+            },
+            "G00": {
+              "observed_joint_nll": 1.8647775082952447,
+              "type_nll": 0.22080106550638692,
+              "observed_argument_nll": 1.6439764364763643
+            },
+            "S00": {
+              "observed_joint_nll": 1.8647775082952447,
+              "type_nll": 0.22080106550638692,
+              "observed_argument_nll": 1.6439764364763643
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "ward",
+          "support": 10842,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 3.8579350832346027,
+              "type_nll": 1.2922711236706648,
+              "observed_argument_nll": 2.565663958211622
+            },
+            "G00": {
+              "observed_joint_nll": 3.8579350832346027,
+              "type_nll": 1.2922711236706648,
+              "observed_argument_nll": 2.565663958211622
+            },
+            "S00": {
+              "observed_joint_nll": 3.8579350832346027,
+              "type_nll": 1.2922711236706648,
+              "observed_argument_nll": 2.565663958211622
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        }
+      ],
+      "natural": [
+        {
+          "action": "<unknown>",
+          "support": 0,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            },
+            "G00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            },
+            "S00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "altar",
+          "support": 44,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.4308309370376678,
+              "type_nll": 0.3279583309512501,
+              "observed_argument_nll": 0.1028726062768354
+            },
+            "G00": {
+              "observed_joint_nll": 0.4308309370376678,
+              "type_nll": 0.3279583309512501,
+              "observed_argument_nll": 0.1028726062768354
+            },
+            "S00": {
+              "observed_joint_nll": 0.4308309370376678,
+              "type_nll": 0.3279583309512501,
+              "observed_argument_nll": 0.1028726062768354
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "attack",
+          "support": 20108,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.2837128210297668,
+              "type_nll": 0.18300170646992592,
+              "observed_argument_nll": 0.10071111446623665
+            },
+            "G00": {
+              "observed_joint_nll": 0.2837128210297668,
+              "type_nll": 0.18300170646992592,
+              "observed_argument_nll": 0.10071111446623664
+            },
+            "S00": {
+              "observed_joint_nll": 0.2837128210297668,
+              "type_nll": 0.18300170646992592,
+              "observed_argument_nll": 0.10071111446623665
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "blocked",
+          "support": 1906,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 3.906201702170422,
+              "type_nll": 1.1384717946617602,
+              "observed_argument_nll": 2.767729907508662
+            },
+            "G00": {
+              "observed_joint_nll": 3.6075864096190724,
+              "type_nll": 1.1384717946617602,
+              "observed_argument_nll": 2.469114616153623
+            },
+            "S00": {
+              "observed_joint_nll": 3.872701192882694,
+              "type_nll": 1.1384717946617602,
+              "observed_argument_nll": 2.734229398220934
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": null,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cancel",
+          "support": 52935,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.0602438695427351,
+              "type_nll": 0.0602438695427351,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.0602438695427351,
+              "type_nll": 0.0602438695427351,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.0602438695427351,
+              "type_nll": 0.0602438695427351,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cast_0",
+          "support": 3894,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.5927405827629953,
+              "type_nll": 0.4380800428799344,
+              "observed_argument_nll": 0.1546605422084399
+            },
+            "G00": {
+              "observed_joint_nll": 0.5927405827629953,
+              "type_nll": 0.4380800428799344,
+              "observed_argument_nll": 0.1546605422084399
+            },
+            "S00": {
+              "observed_joint_nll": 0.5927405827629953,
+              "type_nll": 0.4380800428799344,
+              "observed_argument_nll": 0.1546605422084399
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cast_1",
+          "support": 4794,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 1.8743274863733583,
+              "type_nll": 0.5942563906730856,
+              "observed_argument_nll": 1.2800710967653914
+            },
+            "G00": {
+              "observed_joint_nll": 1.8743274863733583,
+              "type_nll": 0.5942563906730856,
+              "observed_argument_nll": 1.2800710967653914
+            },
+            "S00": {
+              "observed_joint_nll": 1.8743274863733583,
+              "type_nll": 0.5942563906730856,
+              "observed_argument_nll": 1.2800710967653914
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "end",
+          "support": 80256,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.08336461921670175,
+              "type_nll": 0.08336461921670177,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.08336461921670177,
+              "type_nll": 0.08336461921670177,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.08336461921670175,
+              "type_nll": 0.08336461921670177,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "move",
+          "support": 48286,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 1.3290376089388727,
+              "type_nll": 0.24356617724556504,
+              "observed_argument_nll": 1.0854714316933076
+            },
+            "G00": {
+              "observed_joint_nll": 1.285083080673909,
+              "type_nll": 0.24356617724556504,
+              "observed_argument_nll": 1.041516903400704
+            },
+            "S00": {
+              "observed_joint_nll": 1.3325974205474551,
+              "type_nll": 0.24356617724556504,
+              "observed_argument_nll": 1.0890312433018903
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": null,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "priority",
+          "support": 9815,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 3.739974593691114,
+              "type_nll": 0.7320485926605874,
+              "observed_argument_nll": 3.007926002821173
+            },
+            "G00": {
+              "observed_joint_nll": 3.739974593691114,
+              "type_nll": 0.7320485926605874,
+              "observed_argument_nll": 3.007926002821173
+            },
+            "S00": {
+              "observed_joint_nll": 3.739974593691114,
+              "type_nll": 0.7320485926605874,
+              "observed_argument_nll": 3.007926002821173
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "recall",
+          "support": 62903,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.5135267058488936,
+              "type_nll": 0.5135267058488936,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.5135267058488936,
+              "type_nll": 0.5135267058488936,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.5135267058488936,
+              "type_nll": 0.5135267058488936,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "shop",
+          "support": 1204,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.08583192340007492,
+              "type_nll": 0.08583192340007492,
+              "observed_argument_nll": null
+            },
+            "G00": {
+              "observed_joint_nll": 0.08583192340007492,
+              "type_nll": 0.08583192340007492,
+              "observed_argument_nll": null
+            },
+            "S00": {
+              "observed_joint_nll": 0.08583192340007492,
+              "type_nll": 0.08583192340007492,
+              "observed_argument_nll": null
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": "absent, never correct or zero-imputed"
+        },
+        {
+          "action": "submit",
+          "support": 435,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.1985865209067318,
+              "type_nll": 0.18788735412075264,
+              "observed_argument_nll": 0.010699166381350267
+            },
+            "G00": {
+              "observed_joint_nll": 0.1985865209067318,
+              "type_nll": 0.18788735412075264,
+              "observed_argument_nll": 0.010699166381350267
+            },
+            "S00": {
+              "observed_joint_nll": 0.1985865209067318,
+              "type_nll": 0.18788735412075264,
+              "observed_argument_nll": 0.010699166381350267
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "teleport",
+          "support": 29,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 2.041269710351681,
+              "type_nll": 0.21413889855692356,
+              "observed_argument_nll": 1.8271308112247238
+            },
+            "G00": {
+              "observed_joint_nll": 2.041269710351681,
+              "type_nll": 0.21413889855692356,
+              "observed_argument_nll": 1.8271308112247238
+            },
+            "S00": {
+              "observed_joint_nll": 2.041269710351681,
+              "type_nll": 0.21413889855692356,
+              "observed_argument_nll": 1.8271308112247238
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "ward",
+          "support": 2192,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 3.8603236851465965,
+              "type_nll": 1.2673498177527023,
+              "observed_argument_nll": 2.592973867186556
+            },
+            "G00": {
+              "observed_joint_nll": 3.8603236851465965,
+              "type_nll": 1.2673498177527023,
+              "observed_argument_nll": 2.592973867186556
+            },
+            "S00": {
+              "observed_joint_nll": 3.8603236851465965,
+              "type_nll": 1.2673498177527023,
+              "observed_argument_nll": 2.592973867186556
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        }
+      ]
+    },
+    "validation": {
+      "all": [
+        {
+          "action": "<unknown>",
+          "support": 0,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            },
+            "G00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            },
+            "S00": {
+              "observed_joint_nll": null,
+              "type_nll": null,
+              "observed_argument_nll": null
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "altar",
+          "support": 2,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 2.426201105117798,
+              "type_nll": 2.4252282977104187,
+              "observed_argument_nll": 0.0009728143340765882
+            },
+            "G00": {
+              "observed_joint_nll": 2.426201105117798,
+              "type_nll": 2.4252282977104187,
+              "observed_argument_nll": 0.0009728143340765882
+            },
+            "S00": {
+              "observed_joint_nll": 2.426201105117798,
+              "type_nll": 2.4252282977104187,
+              "observed_argument_nll": 0.0009728143340765882
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "attack",
+          "support": 985,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.3479027742215788,
+              "type_nll": 0.2418097822547072,
+              "observed_argument_nll": 0.10609299141302717
+            },
+            "G00": {
+              "observed_joint_nll": 0.3479027742215788,
+              "type_nll": 0.2418097822547072,
+              "observed_argument_nll": 0.10609299141302717
+            },
+            "S00": {
+              "observed_joint_nll": 0.3479027742215788,
+              "type_nll": 0.2418097822547072,
+              "observed_argument_nll": 0.10609299141302717
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "blocked",
+          "support": 110,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 4.489233424590731,
+              "type_nll": 1.4852419280277736,
+              "observed_argument_nll": 3.003991496562958
+            },
+            "G00": {
+              "observed_joint_nll": 4.084982145916332,
+              "type_nll": 1.4852419280277736,
+              "observed_argument_nll": 2.5997402369976044
+            },
+            "S00": {
+              "observed_joint_nll": 4.4925343379462985,
+              "type_nll": 1.4852419280277736,
+              "observed_argument_nll": 3.007292409918525
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": null,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cancel",
+          "support": 2589,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.07423103337447091,
+              "type_nll": 0.07423103337447091,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.07423103337447091,
+              "type_nll": 0.07423103337447091,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.07423103337447091,
+              "type_nll": 0.07423103337447091,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cast_0",
+          "support": 213,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.8352787451733323,
+              "type_nll": 0.6364119569095318,
+              "observed_argument_nll": 0.19886679006448046
+            },
+            "G00": {
+              "observed_joint_nll": 0.8352787451733323,
+              "type_nll": 0.6364119569095318,
+              "observed_argument_nll": 0.19886679006448046
+            },
+            "S00": {
+              "observed_joint_nll": 0.8352787451733323,
+              "type_nll": 0.6364119569095318,
+              "observed_argument_nll": 0.19886679006448046
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "cast_1",
+          "support": 243,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 2.1388488858037555,
+              "type_nll": 0.8225767283389367,
+              "observed_argument_nll": 1.316272153429477
+            },
+            "G00": {
+              "observed_joint_nll": 2.1388488858037555,
+              "type_nll": 0.8225767283389367,
+              "observed_argument_nll": 1.316272153429477
+            },
+            "S00": {
+              "observed_joint_nll": 2.1388488858037555,
+              "type_nll": 0.8225767283389367,
+              "observed_argument_nll": 1.316272153429477
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "end",
+          "support": 4096,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.10737288226754556,
+              "type_nll": 0.10737288226754556,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.10737288226754556,
+              "type_nll": 0.10737288226754556,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.10737288226754556,
+              "type_nll": 0.10737288226754556,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "move",
+          "support": 2362,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 1.4508915097583581,
+              "type_nll": 0.25897745670810435,
+              "observed_argument_nll": 1.1919140530502539
+            },
+            "G00": {
+              "observed_joint_nll": 1.4095811415573103,
+              "type_nll": 0.25897745670810435,
+              "observed_argument_nll": 1.1506036847870567
+            },
+            "S00": {
+              "observed_joint_nll": 1.4480935957360213,
+              "type_nll": 0.25897745670810435,
+              "observed_argument_nll": 1.1891161390279168
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": null,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "priority",
+          "support": 576,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 4.683632825604743,
+              "type_nll": 1.1524061640042822,
+              "observed_argument_nll": 3.531226668455121
+            },
+            "G00": {
+              "observed_joint_nll": 4.683632825604743,
+              "type_nll": 1.1524061640042822,
+              "observed_argument_nll": 3.531226668455121
+            },
+            "S00": {
+              "observed_joint_nll": 4.683632825604743,
+              "type_nll": 1.1524061640042822,
+              "observed_argument_nll": 3.531226668455121
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "recall",
+          "support": 3084,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.5973247919777679,
+              "type_nll": 0.5973247919777679,
+              "observed_argument_nll": 0.0
+            },
+            "G00": {
+              "observed_joint_nll": 0.5973247919777679,
+              "type_nll": 0.5973247919777679,
+              "observed_argument_nll": 0.0
+            },
+            "S00": {
+              "observed_joint_nll": 0.5973247919777679,
+              "type_nll": 0.5973247919777679,
+              "observed_argument_nll": 0.0
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "shop",
+          "support": 43,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.08499124260284525,
+              "type_nll": 0.08499124260284525,
+              "observed_argument_nll": null
+            },
+            "G00": {
+              "observed_joint_nll": 0.08499124260284525,
+              "type_nll": 0.08499124260284525,
+              "observed_argument_nll": null
+            },
+            "S00": {
+              "observed_joint_nll": 0.08499124260284525,
+              "type_nll": 0.08499124260284525,
+              "observed_argument_nll": null
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": "absent, never correct or zero-imputed"
+        },
+        {
+          "action": "submit",
+          "support": 22,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 0.28365002964644437,
+              "type_nll": 0.2828829757583497,
+              "observed_argument_nll": 0.000767052440251477
+            },
+            "G00": {
+              "observed_joint_nll": 0.28365002964644437,
+              "type_nll": 0.2828829757583497,
+              "observed_argument_nll": 0.000767052440251477
+            },
+            "S00": {
+              "observed_joint_nll": 0.28365002964644437,
+              "type_nll": 0.2828829757583497,
+              "observed_argument_nll": 0.000767052440251477
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "teleport",
+          "support": 2,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 4.577420234680176,
+              "type_nll": 0.2583498330786824,
+              "observed_argument_nll": 4.31907045841217
+            },
+            "G00": {
+              "observed_joint_nll": 4.577420234680176,
+              "type_nll": 0.2583498330786824,
+              "observed_argument_nll": 4.31907045841217
+            },
+            "S00": {
+              "observed_joint_nll": 4.577420234680176,
+              "type_nll": 0.2583498330786824,
+              "observed_argument_nll": 4.31907045841217
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        },
+        {
+          "action": "ward",
+          "support": 112,
+          "losses": {
+            "X00": {
+              "observed_joint_nll": 4.248322018555233,
+              "type_nll": 1.552490201911756,
+              "observed_argument_nll": 2.6958318251584257
+            },
+            "G00": {
+              "observed_joint_nll": 4.248322018555233,
+              "type_nll": 1.552490201911756,
+              "observed_argument_nll": 2.6958318251584257
+            },
+            "S00": {
+              "observed_joint_nll": 4.248322018555233,
+              "type_nll": 1.552490201911756,
+              "observed_argument_nll": 2.6958318251584257
+            }
+          },
+          "nonmovement_loss_exactly_unchanged": true,
+          "shop_argument_likelihood": null
+        }
+      ]
+    }
+  },
+  "diagnostic_inputs": {
+    ".cambc\\action-predictor\\v7\\train-direction.npy": "97a4ca1b39099b49d4e283ba824ef1421cf73de39645f043a9a3173b4cd66546",
+    ".cambc\\action-predictor\\v7\\train-available.npy": "9b7176ac86c4ace82151d3bf9642ab4b35c381d46d5529e7fe8b0e0e56cd5961",
+    ".cambc\\action-predictor\\v7\\train-near_obstacle.npy": "4d46a6a987d71dba6b04a8599874245a1036217da50437f7aae28c8c84342f07",
+    ".cambc\\action-predictor\\v7\\validation-direction.npy": "6e6cb5f2b9619137082c75fa086bfcfa1122833a1bf6f58e89e777130a8dbbcb",
+    ".cambc\\action-predictor\\v7\\validation-available.npy": "fa204f9d94d697efc8cd0a11de795d95112cae3f5d9db7d07e3cdcfc5177dfed",
+    ".cambc\\action-predictor\\v7\\validation-near_obstacle.npy": "38e37fde4747caf9cf3fca58ed24c078ba1df4c01a564c6484eb46b2125eb7b1"
+  },
+  "V7_receipt_sha256": "9c15ce360db03f07601e9f07798454502d018e11bf8a0e85b0e044d056c8749a",
+  "prediction_archives_sha256": {
+    "train": {
+      "X00": "ff1861409e4c90c01651b3c74c88b4744c1a88f3ba894df9f78e3eb1eec6f314",
+      "G00": "00c975b5165e2d0f36ad3925e272edce1f23bc984e234a1cc5ad7929cfc62b5e",
+      "S00": "e1faa5588c70f83e7450fef62299a4dcbdd0ad8346fb54fbd8f751ee37004d45"
+    },
+    "validation": {
+      "X00": "494ed6d5194fd772a2c0e9a07b4fa2a3e57a2c0d6528c7df400048d74197ecf1",
+      "G00": "f6ca6a970b05e519d28dc378703a338012718b675806d292d467f043a15f24ea",
+      "S00": "0d292bbecff78310d9ec5adc21062c34e6db0ed3b69e18152b7131e8b11b940c"
+    }
+  },
+  "fit_report_sha256": "f867248468e7da47361004b3fb608d8fbdcbf209ebeb7abfbc3bc59b0f9714d7",
+  "completion_sha256": "3286540829c6e57e04eae0d14b77753b1decd019efd5b1a39079cec5fca29c94",
+  "source_sha256": "45745ed3e667a7d35e6b081abc3af36bd6dab2dd870e004fd1fcd2e5711ea5ea",
+  "command": "python -m tools.action_predictor.movement_experts.loss_supplement X00",
+  "interpretation": "Additive S00 review correction; original category tables/receipts unchanged. All/natural sampling separated; observed loss only, no shop-argument likelihood. Six unchanged diagnostic arrays verified by their original V7 receipt, no extraction or inference rerun.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

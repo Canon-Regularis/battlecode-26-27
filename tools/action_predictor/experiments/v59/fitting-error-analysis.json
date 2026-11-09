@@ -1,0 +1,26 @@
+{
+  "cohorts": {
+    "no_prior_move": {
+      "rows": 484,
+      "correct": 213,
+      "errors": 271
+    },
+    "repeat": {
+      "rows": 6761,
+      "correct": 6459,
+      "errors": 302
+    },
+    "change": {
+      "rows": 5073,
+      "correct": 1415,
+      "errors": 3658
+    }
+  },
+  "bindings": {
+    "tools\\action_predictor\\experiments\\v59\\refit.json": "2644cd00a44ec3ff97e5779b30869e4ac9c7f9ca48cefd7d42a02d15075f1c51",
+    "tools\\action_predictor\\experiments\\v58\\cache.json": "768a460ec4f1a532580e887d321b9dcb85216908abe3e4b99d1fc40d4343152d",
+    ".cambc\\action-predictor\\v58\\full.pt": "ba9800fd46c070b6d6daf71614a307541c928b31b1725a7f3d5f37e4ad4a731a"
+  },
+  "definition": "Latest executed move before current own turn within current32turn window; repeat/change classified from current label only for diagnosis. Saved final fitting predictions, no new forecasts/optimization. No evaluation rows.",
+  "formula": "last=argmax(command_heading[...,1]); available=max(command_heading[...,1])>0; repeat=available and label==last; change=available and label!=last; no_prior_move=not available"
+}

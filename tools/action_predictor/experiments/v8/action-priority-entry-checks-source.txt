@@ -1,0 +1,48 @@
+from pathlib import Path
+import sys,json
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+from unittest.mock import patch
+import torch
+from tools.action_predictor import action_priority_fit as entry
+from tools.action_predictor import action_priority_roundtrip as roundtrip
+from tools.action_predictor import reliable_train as rt
+from tools.action_predictor.priority_fit_v3 import REPORTS,WORK,write,read
+from tools.action_predictor.more_replays import sha
+from tools.action_predictor.action_priority_head import ActionPriorityHead
+
+assert not any((WORK/'runs'/name).exists() for name in ('C01','C02'))
+checks=[]
+def rejected(name,call,guard):
+    try:call()
+    except AssertionError:pass
+    else:raise AssertionError(name+' did not reject')
+    guard.assert_not_called();checks.append(name)
+with patch.object(entry,'sources',return_value={'bad':'source'}),patch.object(entry,'data') as guard:
+    rejected('changed_source_before_fitter_data',lambda:entry.fit('C01'),guard)
+original_weights=entry.weights
+def bad_weights(y,balance):
+    counts,w=original_weights(y,balance);w=w.clone();w[0]+=1;return counts,w
+with patch.object(entry,'weights',side_effect=bad_weights),patch.object(entry,'data') as guard:
+    rejected('changed_TRAIN_weights_before_fitter_data',lambda:entry.fit('C01'),guard)
+original_sha=entry.sha
+for name,path in [('P05_predictions',entry.PRIORITY/'validation-predictions.npz'),('normalization',entry.context_directory()/'extra-normalization.npz')]:
+    def changed_sha(candidate,target=path):return '0'*64 if Path(candidate)==target else original_sha(candidate)
+    with patch.object(entry,'sha',side_effect=changed_sha),patch.object(entry,'data') as guard:
+        rejected('changed_'+name+'_before_fitter_data',lambda:entry.fit('C01'),guard)
+swapped=list(rt.LABELS);a=swapped.index('priority');b=swapped.index('recall');swapped[a],swapped[b]=swapped[b],swapped[a]
+with patch.object(rt,'LABELS',swapped),patch.object(entry,'data') as guard:
+    rejected('runtime_label_swap_before_fitter_data',lambda:entry.fit('C01'),guard)
+with patch.object(entry,'sources',return_value={'bad':'source'}),patch.object(roundtrip,'load_base') as guard:
+    rejected('standalone_roundtrip_source_before_model',roundtrip.run,guard)
+
+old=torch.nn.Linear(128,15);control=ActionPriorityHead(old,False);treatment=ActionPriorityHead(old,True)
+state=control.state_dict();state['extra.weight']=torch.ones_like(state['extra.weight'])
+control.load_state_dict(state);treatment.load_state_dict(state)
+x=torch.ones(1,128);features=torch.ones(1,41)
+assert torch.equal(control(x,features),old(x)) and not torch.equal(treatment(x,features),old(x))
+checks.append('nonzero_loaded_extra_weights_masked_only_in_control')
+assert not any((WORK/'runs'/name).exists() for name in ('C01','C02'))
+snapshot=REPORTS/'action-priority-entry-checks-source.txt';assert not snapshot.exists();snapshot.write_bytes(Path(__file__).read_bytes())
+write(REPORTS/'action-priority-entry-checks.json',dict(checks=checks,passed=True,source_sha256=sha(snapshot),new_optimizer_steps=0,new_fits=0,scope='Six actual-entry corrupt-binding rejections and one synthetic loaded-head masking check; no synthetic checkpoint or approval file created'))
+with (WORK/'commands.jsonl').open('a') as stream:stream.write(json.dumps(dict(argv=[sys.executable,str(Path(__file__).resolve())],source_sha256=sha(__file__)))+'\n')
+print('Seven entry/masking checks passed; no classifier fit started')

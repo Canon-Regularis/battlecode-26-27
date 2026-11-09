@@ -1,0 +1,40 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\map_trajectory_weights.py": "55802f998874d5e09d2871c9453dca4cabcd714a29530cc1176b45b4403919c8",
+    "tools\\action_predictor\\behavior_segments\\map_trajectory_fit.py": "06b31610426a0385803b8159ddf109c01eaec93efca897fab976dbab765d82e4",
+    "tools\\action_predictor\\behavior_segments\\map_trajectory_predictor.py": "145137b293e82f4e45fa9e7f76f4ffe2e1f17510b81ce3ddcf9fb42b1c2cdb30",
+    "tools\\action_predictor\\behavior_segments\\test_map_trajectory.py": "781117984a79df48f66bea241009ba8175082e2b141aa78b778d32907a70b52b"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v59\\plan.json": "bf1884e84ee99aa01e83f7560cff21a2053e517d4fa8f3128c3fda02aba84848",
+    "tools\\action_predictor\\experiments\\v59\\selection.json": "dd54f12d446fb9c0dc72cf4b974cd1ab64b813aca73924c8ca72bd27db2c4a6f",
+    "tools\\action_predictor\\experiments\\v59\\refit.json": "2644cd00a44ec3ff97e5779b30869e4ac9c7f9ca48cefd7d42a02d15075f1c51",
+    "tools\\action_predictor\\experiments\\v59\\result.json": "e5c7bf1a46eed0e858f070ddfee2c105b411c46475d11ea40fcfb79a98f746a6",
+    "tools\\action_predictor\\experiments\\v59\\verification.json": "4f764c5a7e350ae8c0d6359a0d5db7f2987a178fd893382f99de95d8075da83d",
+    "tools\\action_predictor\\experiments\\v63\\plan.json": "75b6816fec02f22b480c2238a9e6f20369135856fd09a61cb11a60212caa9369",
+    "tools\\action_predictor\\experiments\\v63\\result.json": "cb6cfa1d12d34e66f7eeda0c5a4b3334ecc8f6a1de81814859f1ccb5bb75747f",
+    "tools\\action_predictor\\experiments\\v63\\verification.json": "87f0ea6038137d73189466797cae3fa2d1b2ec5c298aafacd05894fd9b0b0ab3",
+    "tools\\action_predictor\\experiments\\v62\\plan.json": "1e3fed8c8263360da6a1699043b7af1e1b51ce6035186d419d77059fea93a083",
+    "tools\\action_predictor\\experiments\\v62\\selection.json": "ed0a30f379b2eb44daf9693d74834f10c53f3499fe8a026819fd868bd52d724a",
+    "tools\\action_predictor\\experiments\\v62\\result.json": "963b2122ffa8eb7b0e68cecdf0eca782382227418e410e7d55c470b317adc757",
+    "tools\\action_predictor\\experiments\\v62\\verification.json": "f657471597908d376e7376cb16aedc80a3c4ed0a5c74fe7bffa6fdc02ff1d611"
+  },
+  "seed": 64001,
+  "epochs": 2,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "batch_windows": 8,
+  "coefficient": 1.0,
+  "code_accuracy_allowance": 0.01,
+  "minimum_activation": 0.1,
+  "trainable_parameters": 48097,
+  "tuning_seconds_cap": 3600,
+  "refit_seconds_cap": 1200,
+  "assessment_seconds_cap": 600,
+  "intervention": "Warm start corresponding selected V59 weights. Update existing map encoder,context,GRU,base movement and geometry/heading/command corrections. Freeze code head,embeddings,old goal readout and V62 objective head. No new parameters or features. Unlike V56,this starts after signed trajectory features and V59 adaptation.",
+  "objective": "Original supported movement CE plus code KL to matching selected V59 teacher. Full personal PRE/maps re-encoded. Batch8 complete32turn windows,common actual movement/observed denominators,one update per batch. All1607 expanded fitting windows; four fitting-game folds,held canonical64windows.",
+  "selection": "Epochs0,1,2 on held fitting groups only. Select highest combined planner movement count with at most1point code loss,nonnegative progress utility and at least10percent goal activity; then direct movement NLL,earlier epoch. Same V62 head edits and retention rules across all checkpoints. One full selected refit. Stop incomplete budget without selecting partial results.",
+  "success": "Combined evaluation movement must exceed V62 and V59 direct,with positive utility and at least10percent active goals; code loses at most1point and direct movement NLL worsens at most0.01.80percent requires411of513 original movement queries. No evaluation-dependent selection or promotion.",
+  "limits": "Preexposed research games,inherited fold exposure,teacher-forced past commands,inferred code/objective labels,conditional movement. Encoder changes can change code and goals despite frozen heads. Training tests full-map adaptation plus smaller batches,not isolated map causality. No autonomous rollout/strategy proof,no subagents."
+}

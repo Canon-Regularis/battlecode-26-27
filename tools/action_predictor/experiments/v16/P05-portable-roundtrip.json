@@ -1,0 +1,25 @@
+{
+  "original_DEV_rows": 14439,
+  "exact_priority_modes": true,
+  "true_priority_support": 576,
+  "conditional_integer_correct": 109,
+  "max_context_difference": 7.62939453125e-06,
+  "max_mode_logp_difference": 3.3302729216533322e-06,
+  "max_true_priority_nll_difference": 2.969257949736459e-06,
+  "bindings": {
+    ".cambc\\action-predictor\\v8\\priority-validation.npz": "f15ca9bc263f7068ec6dd0107fb1d166cb637e22939d3afef6b29ba178228696",
+    ".cambc\\action-predictor\\v8\\priority-context\\ec2ec627d3c5e621\\validation.npy": "95e05f2b7e38e113cddc3ef43e68b16c83a05384a6064d044d96100851fdd0be",
+    ".cambc\\action-predictor\\v13\\validation-modes.npy": "d89ab7cb72ddaaa816af117b33883698456b55f2f4ec95ac49d24a6825204478",
+    ".cambc\\action-predictor\\v13\\validation-mode-logq.npy": "59a4be998a6eeae38e9f547971a0afea2f929a66b1136dbb1c9b8da5057d4714",
+    ".cambc\\action-predictor\\v14\\validation-type-logp.npy": "85098ed520de5ea38e13fa4a899b4d602cb3b6ac4390db18895128aa1669ca35",
+    ".cambc\\action-predictor\\v9\\runs\\G00\\validation-predictions.npz": "f6ca6a970b05e519d28dc378703a338012718b675806d292d467f043a15f24ea",
+    ".cambc\\action-predictor\\v16\\exports\\P05\\priority.json": "e426db9d53c77e7b2b02e2e9c05fcbf7dd000fa13ab4bd6cef67565a0bdbea55",
+    ".cambc\\action-predictor\\v16\\exports\\P05\\priority.npz": "cce85ca43e9d9e93a09425366232e5c7a508a3b9d82846087ab9fec3b4a50c0a"
+  },
+  "source_sha256": "f389755bcc5249922f897135fdbc260ad9e5ded532a563c73c4d2ec4777806fc",
+  "portable_priority_sha256": "0558350d22659dad35e926c83b98caddcc65b91f6a70991f03b40120fe428166",
+  "portable_operators_sha256": "590bae78e0b72c426ab8ae23e5256ef6d1e4d41e027fdeef8e770720095dc9a4",
+  "meaning": "All original DEV integer modes and modeled probabilities for a new numerical port of the retained P05, not new model quality or a new replay/engine audit. Exact integer anchors/vocabularies retained. Host NumPy, not WASI execution.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

@@ -1,0 +1,17 @@
+{
+  "original_protocol_sha256": "5eb07edf1a23528084383e2d734a8f0dd6ddabb909aed643d81e2548283eb16f",
+  "failure": "Original preflight stopped on its first decode batch with KeyError world. The unused returned goal diagnostics required by GoalPolicy.decode were absent from the readout-only step. Initial/U00 attempt directory retained; no fit, optimizer or saved forecast archive existed.",
+  "repair": "Parameter-free adapter supplies explicit None for unused world/known/retain decoder return fields. Original GoalPolicy.decode arithmetic and all trained heads, inputs, priors, loss, initialized tensors, masks, budgets and metrics unchanged. No claimed values for those unavailable diagnostics.",
+  "reuse": "The completed common upstream cache is unaffected and retained without regeneration.",
+  "new_paths": "initial-v2/<arm> and preflight-v2.json; original initial/U00 untouched.",
+  "fit_entry": "goal_readout.fit_interface installs the parameter-free subclass in the unchanged registered fit runner, after asserting the v2 preflight passed.",
+  "sources": {
+    "decoder_interface.py": "82248102006b3e9faee7b68e533b7899c2357c875ccb9920dd81327675cc5f0e",
+    "interface_protocol.py": "bc8b0787daf76d24a404fc5b75b364b3e102cbb20b8657fc226bcad7a0707df4",
+    "preflight_v2.py": "27ef1fff4fa72c4588fa0f6dbfebdb69401ffcf681e647507a8a28106fa60f4d",
+    "fit_interface.py": "e2b7adc198004d78deb4eb10120b5d0f059b47a954b687b5093c54ebd28c9e29",
+    "test_decoder_interface.py": "736ff909c3ae985e60d176d5bb8a05d2186179cac8ce47282af544a81af32cd4"
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

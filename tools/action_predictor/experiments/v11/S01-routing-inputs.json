@@ -1,0 +1,27 @@
+{
+  "source_sha256": "f9756a3f0740e22fc5532e01d2f0ec7ebea77e08443c5c8dd544c241057d960f",
+  "plan_sha256": "58de03fa02e633badca2789628e1da26c42921de041e32f3e60dc68f807c01f5",
+  "natural_rows": 288801,
+  "available_support_rows": 265110,
+  "missing_support_rows": 23691,
+  "unique_routing_signatures": 264778,
+  "repeated_signature_groups": 332,
+  "rows_in_repeats": 664,
+  "groups_with_empty_intersection_of_correct_routings": 0,
+  "additional_unavoidable_errors_from_exact_routing_input_collisions": 0,
+  "interpretation": "This is an upper-bound consistencydiagnosticofspecifiedroutinginputsandaliaspattern. Full evidence/intent/policycontradictionsnotestablished. Mostlyuniqueinputsneitherproveinformation sufficiency nor explainremainingrankingerrors.",
+  "independent_DEV_veto_check": {
+    "vetoes": 886,
+    "strictly_top_correct_point": 886,
+    "non_strict_ties_or_no_other_points": 0
+  },
+  "initial_fallback_prior": {
+    "min": 0.991023810799115,
+    "median": 0.9966565896133196,
+    "max": 1.0,
+    "formula": "1/(1+available_point_slots*exp(-8));biases4/-4",
+    "causality": "Conservativeinitializationisdemonstrated;noablationestablishesitscausalcontribution."
+  },
+  "new_fits": 0,
+  "reserved_opened": 0
+}

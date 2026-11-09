@@ -1,0 +1,14 @@
+{
+  "source_sha256": "06f7e06b583628dac4c370fb2964b78a3a85c2ba5249c0913b211cfa109c03b5",
+  "purpose": "Why does selection fail when correctcommandalreadyavailable? Nooptimizer,refit,architecturechange,newcandidates orreplayrecovery. Previousproductiontrainingpausepersists.",
+  "analyses": [
+    "Exact command-group ranking/fallback partition using savedTRAIN/DEVA00/A01scores",
+    "Actualmixtureprobability versus hardchosencommand using existingDEVG00candidateprobabilities and fixedD00",
+    "Analytic same-loss logit gradients on all storedscores;gradient directions are local diagnostics,notcauses bythemselves",
+    "All23savedA00epochs on fixed8192naturalTRAINsample andalloriginalDEV;descriptiveonly,noalternatecheckpointselected",
+    "Local8pairedgradientmeasurements betweenrescuable andfallback-onlynaturalTRAINstrata,512rowspersubset;nooptimizer",
+    "Tanh saturation/clippingonfixedsample;descriptivenotproofofoptimizerfailure"
+  ],
+  "selection": "Currentanswers onlyfor scoring/conditionaldiagnostics;nevermodelinput. Initialweightsderivedfromfrozenbias4/-4. Originalround17remainsselected. Bothreservedpartitionssealed. No oldexposedtest.",
+  "new_fits": 0
+}

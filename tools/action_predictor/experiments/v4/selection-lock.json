@@ -1,0 +1,89 @@
+{
+  "winner": {
+    "id": "E06",
+    "name": "gru-rich-rare-training",
+    "history": 16,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.5,
+    "augment": true,
+    "constrain": true
+  },
+  "stateless": {
+    "id": "E02",
+    "name": "stateless-rich-spatial",
+    "history": 0,
+    "rich": true,
+    "spatial": true,
+    "balance": 0.0,
+    "augment": false
+  },
+  "references": {
+    "loss": "E02",
+    "movement": "frequency-persistence",
+    "targeting": {
+      "attack": "frequency-lowest-health",
+      "cast_0": "frequency-lowest-health",
+      "cast_1": "E05"
+    }
+  },
+  "checkpoints": {
+    "E01": "2fa15f664d9022bc382c2b1c606903a1d5dde3b0de905afa9e8b1047a2d8a3f5",
+    "E02": "6049892bac484014f27e3556a941eb49760a92ee729c3ec3cb0c46d43f9a18d4",
+    "E03": "a183a3e5c8dc687b388502586534169d10f4d9c3aed08b65b10f199ad9984dfe",
+    "E04": "7c747063e24bd10e238fdf494c51342c3118287cb7742f4274c0de0d3d7805bf",
+    "E05": "e171a41a8f1796c3a411d9a8da132777ec4ed70648b7232c04d54a403849f7cb",
+    "E06": "55c9cb983abab2aedffb6d3b78fd2e61653496ff090cd5118b97be03b45e00b7"
+  },
+  "validation_gates": {
+    "E03": {
+      "passed": {
+        "macro_f1": false,
+        "movement": false,
+        "joint_loss": true,
+        "targeting": false
+      },
+      "passed_count": 1,
+      "movement_gain": 0.019898391193903464,
+      "joint_loss_reduction": 0.14724817277135915,
+      "targeting_drops": {
+        "attack": 0.04670050761421318,
+        "cast_0": 0.107981220657277,
+        "cast_1": 0.053497942386831254
+      }
+    },
+    "E04": {
+      "passed": {
+        "macro_f1": false,
+        "movement": false,
+        "joint_loss": true,
+        "targeting": false
+      },
+      "passed_count": 1,
+      "movement_gain": 0.01651143099068586,
+      "joint_loss_reduction": 0.1277654863281168,
+      "targeting_drops": {
+        "attack": 0.03857868020304567,
+        "cast_0": 0.0938967136150235,
+        "cast_1": 0.04526748971193412
+      }
+    },
+    "E06": {
+      "passed": {
+        "macro_f1": false,
+        "movement": false,
+        "joint_loss": true,
+        "targeting": false
+      },
+      "passed_count": 1,
+      "movement_gain": 0.03302286198137172,
+      "joint_loss_reduction": 0.16501157365455688,
+      "targeting_drops": {
+        "attack": 0.007106598984771617,
+        "cast_0": 0.028169014084507005,
+        "cast_1": -0.020576131687242816
+      }
+    }
+  },
+  "policy": "No test data read. Configurations chosen once from seed26 validation; repetitions cannot change selection."
+}

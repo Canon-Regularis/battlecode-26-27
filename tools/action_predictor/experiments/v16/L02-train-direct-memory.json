@@ -1,0 +1,99 @@
+{
+  "results": {
+    "all": {
+      "rows": 433071,
+      "noninitial": 430563,
+      "direct_per_root_gate_quantiles": [
+        0.40533918142318726,
+        0.9806563258171082,
+        0.9864022135734558,
+        0.9906618595123291,
+        0.9938616633415223,
+        0.997840166091919
+      ],
+      "direct_log_per_root_gate_quantiles": [
+        -0.903031051158905,
+        -0.01953317131847143,
+        -0.013691132888197899,
+        -0.009382016491144896,
+        -0.006157288467511536,
+        -0.0021621095947921276
+      ],
+      "effective_retention_quantiles": [
+        0.0,
+        0.9428608417510986,
+        0.9846531748771667,
+        0.9903677701950073,
+        0.9938291907310486,
+        0.9978402256965637
+      ],
+      "exact_decay_age_feature_quantiles": [
+        0.0,
+        14.444530010223389,
+        26.36997413635254,
+        37.53640365600586,
+        54.328805923461914,
+        138.84429931640625
+      ],
+      "zero_effective_retention_noninitial": 9,
+      "direct_gates_where_effective_underflowed": [
+        0.621328592300415,
+        0.6802857518196106,
+        0.7276257872581482,
+        0.7762743234634399,
+        0.8244723320007324,
+        0.8399080038070679
+      ],
+      "world_held_without_current_position": 8237
+    },
+    "natural": {
+      "rows": 288801,
+      "noninitial": 286822,
+      "direct_per_root_gate_quantiles": [
+        0.6397292017936707,
+        0.9812914133071899,
+        0.9866647124290466,
+        0.9908628463745117,
+        0.9940094947814941,
+        0.9976293444633484
+      ],
+      "direct_log_per_root_gate_quantiles": [
+        -0.4467102587223053,
+        -0.018885756842792034,
+        -0.013425002340227365,
+        -0.009179126238450408,
+        -0.0060084855882450924,
+        -0.0023735116701573133
+      ],
+      "effective_retention_quantiles": [
+        0.0,
+        0.9200308918952942,
+        0.9846464395523071,
+        0.9904749989509583,
+        0.9939777255058289,
+        0.9976292848587036
+      ],
+      "exact_decay_age_feature_quantiles": [
+        0.0,
+        16.232479095458984,
+        27.289772033691406,
+        38.37995910644531,
+        55.38011169433594,
+        114.29935455322266
+      ],
+      "zero_effective_retention_noninitial": 0,
+      "direct_gates_where_effective_underflowed": null,
+      "world_held_without_current_position": 6386
+    }
+  },
+  "artifact_sha256": "792da6bc2fe6927af007e97548219657d11966decd514333b2f52b41cf2d9147",
+  "checkpoint_sha256": "5aba95703ab05d7c28477d324956894ea21489a78efa8097b85fd61a3fd41e2e",
+  "archived_goals_sha256": "5d92945c8900a1ce2979737ede4028440e5ae7d1df10f51148b462aec4a952c7",
+  "input_receipt_sha256": "1f518321569a6a79487a409e6079d4007f758cc15c118a98eb047fe55e592bad",
+  "source_sha256": "b8135901e709d2e3b8365331ca1698de750363d5fd6eea8b682b38233c50d271",
+  "archived_world_max_difference": 0.0,
+  "archived_retention_max_difference": 0.0,
+  "qualification": "Direct sigmoid/logsigmoid before gap exponentiation, no inversion of underflowed effective retention. Exact forward decay-age feature is not the lifetime of all recurrent information: absent current position can preserve old world coordinates with blend1, and old memory also reaches new forecasts through attention. Initial-row gate is unused; direct per-root summaries exclude it. TRAIN in-sample, original augmented traversal.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

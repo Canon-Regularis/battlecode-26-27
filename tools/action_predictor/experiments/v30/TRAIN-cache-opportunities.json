@@ -1,0 +1,63 @@
+{
+  "selection": "First eligible TRAIN game per engine in canonical job order, no target-label or outcome selection",
+  "games": [
+    {
+      "engine": "2.0.0",
+      "group": "01a1a76e-86ae-733e-a150-704c38ea0f36",
+      "payload_sha256": "6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c",
+      "counts": {
+        "unavailable_own_roots": 16336,
+        "available_personal_PRE_roots": 3397,
+        "selected_roots": 737,
+        "additional_already_cached_roots": 2660,
+        "currently_unknown_identity_entries": 428916,
+        "known_entity_tokens": 39870,
+        "known_camp_tokens": 34422,
+        "known_dead_tokens": 0,
+        "reobserved_identity_tokens": 39444,
+        "reobserved_after_absence": 1305
+      },
+      "available_contiguous_run_count": 143,
+      "maximum_available_run": 74,
+      "roots_in_runs_at_least16": 3397,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c\\receipt.json": "9cf9c89f61fc11bbdd62a6d61548fb6c3b1aa6e7a925f226b65e062a6fcbdb6f",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c\\frames.jsonl.gz": "fb4f6e073d0cafe7c345938b64c9ba94b73d63fccd93da87abf8d9b614289a24",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\6569974a559651b0dcd672b50d3319c293f252a12742ef4d02dd1546b1b5ae2c\\index.jsonl": "ffcfb1313bea205c548bcc9e2fe7f6bee384db12dc2a597bd788c48d71ed6f4a"
+      },
+      "interpretation": "Available PRE plus recorded index command is a potential new eligible demonstration row, not yet an independently validated full command label or new training dataset. Entity identity keys are audit-only; no index enters a learned feature."
+    },
+    {
+      "engine": "3.0.0",
+      "group": "01a1a8ca-6cfc-7aca-a360-a49138f436d6",
+      "payload_sha256": "a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c",
+      "counts": {
+        "unavailable_own_roots": 26065,
+        "available_personal_PRE_roots": 3212,
+        "selected_roots": 735,
+        "additional_already_cached_roots": 2477,
+        "known_entity_tokens": 22955,
+        "known_camp_tokens": 15275,
+        "known_dead_tokens": 0,
+        "currently_unknown_identity_entries": 179401,
+        "reobserved_identity_tokens": 22774,
+        "reobserved_after_absence": 867
+      },
+      "available_contiguous_run_count": 135,
+      "maximum_available_run": 56,
+      "roots_in_runs_at_least16": 3209,
+      "bindings": {
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c\\receipt.json": "cd1be97f1cd4c67c8833709cae3784dcc7f9b07f399ffeda0301760d75c5fd32",
+        "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v7\\games\\a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c\\frames.jsonl.gz": "ccafc347ce6010bd481edc367aa2f6d64d6fbbb9e5881716fe33912a45e73136",
+        "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\replay-evaluation\\micro-expanded-v1.5\\extracted\\a6b8eb880dd99d6adbade7a52f8dd6b1d92b69c90539b040e2f6d31b2aa9637c\\index.jsonl": "a1746614cb4446fba356cf27df90e0fe01cd71f4748b421874385d9cbeacaede"
+      },
+      "interpretation": "Available PRE plus recorded index command is a potential new eligible demonstration row, not yet an independently validated full command label or new training dataset. Entity identity keys are audit-only; no index enters a learned feature."
+    }
+  ],
+  "jobs_sha256": "80c61417faed19ebcb8f8f59db35ba0588d7862ff68dfa3eff58f7de4aab14ba",
+  "source_sha256": "3386920c1ab6f9690b84233bde58a9d46ea49ef8e2fa5323b8de7ac79974fa35",
+  "next": "Verify exact label/parameter construction and within-stream identity alignment before any expanded-data or grounded-objective fit. Keep the current H00/H01 frozen comparison unchanged.",
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "engine_queries": 0
+}

@@ -1,0 +1,393 @@
+{
+  "report_sha256": "b4e449dd5dfaf26e5a5f4ee16e8a0b33e6d5cc4c5b12c19170a4872a9ec626a7",
+  "plan_sha256": "bcf0aa622634acd3be9e0e344eba84d094a6a5b48671930274e1781910f12b9b",
+  "source_sha256": "5639e33e2251b9ec678f139f0c6341b8464bc7387ee5adae5e5f9fb25fa2943e",
+  "static_evidence": {
+    "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\asset-cache-5\\cd8f45ac1d5caafb57059504159ca451af47388d35d405c81625fe18281c764d\\visualiser\\assets\\index-B7p3Cpbd.js": {
+      "sha256": "929d681873bcaab6c1c3eb4bb24c753a1ae5f73d8e1b4a36909197eac351ae0a",
+      "evidence": [
+        {
+          "needle": "finishTurn(e=F.Yielded)",
+          "offset": 376619,
+          "snippet": "smExports.Game_Action_SetPriority(this.handle,e))}finishTurn(e=F.Yielded){this.check(this.wasmExports.Game_Runner_EndTurn(this.handle,e))}endTurn(e){for(this.setPriority(e),this.finishTurn(F.Yielded);[I.ChampionEndTurn,I.ChampionStartTurn].includes(this.header().phase);)this.step()}move(e)"
+        },
+        {
+          "needle": "endTurn(e){for(this.setPriority(e)",
+          "offset": 376707,
+          "snippet": "s.wasmExports.Game_Runner_EndTurn(this.handle,e))}endTurn(e){for(this.setPriority(e),this.finishTurn(F.Yielded);[I.ChampionEndTurn,I.ChampionStartTurn].includes(this.header().phase);)this.step()}move(e){return this.check(this.wasmExports.Game_Action_Move(this.handle,e.x,e.y,this.engine.out"
+        },
+        {
+          "needle": "cancelChannel(){this.check(this.wasmExports.Game_Action_CancelChannel",
+          "offset": 377446,
+          "snippet": "_Action_SubmitGems(this.handle,this.position(e)))}cancelChannel(){this.check(this.wasmExports.Game_Action_CancelChannel(this.handle))}sell(e){this.check(this.wasmExports.Game_Action_Sell(this.handle,e))}buyItem(e,t=1){this.check(this.wasmExports.Game_Action_BuyItem(this.handle,e,t))}buyCon"
+        }
+      ]
+    },
+    "C:\\Users\\Subhan\\.t3\\worktrees\\starter-python\\t3-e88e3f9a\\.cambc\\asset-cache-5\\cd8f45ac1d5caafb57059504159ca451af47388d35d405c81625fe18281c764d\\visualiser\\assets\\PanelChrome-DRtW3oWL.js": {
+      "sha256": "f4d42ccf4a3cc2ed5da94b496a2dc4da286e3e1d034fc95265be92a86e67a9fa",
+      "evidence": [
+        {
+          "needle": "Yielded=0",
+          "offset": 41372,
+          "snippet": "ampion:e.entity.index}),Qn=function(e){return e[e.Yielded=0]=`Yielded`,e[e.FuelExhausted=1]=`FuelExhausted`,e[e.Error=2]=`Error`,e}({}),$n=function(e){return e[e.Yielded=0]=`Yielded`,e[e.FuelExhausted=1]=`FuelExhausted`,e[e.Error=2]=`Error`,e}({}),er=e=>e.kind===8||e.kind===26||e.kind===27"
+        },
+        {
+          "needle": "FuelExhausted=1",
+          "offset": 41397,
+          "snippet": "n=function(e){return e[e.Yielded=0]=`Yielded`,e[e.FuelExhausted=1]=`FuelExhausted`,e[e.Error=2]=`Error`,e}({}),$n=function(e){return e[e.Yielded=0]=`Yielded`,e[e.FuelExhausted=1]=`FuelExhausted`,e[e.Error=2]=`Error`,e}({}),er=e=>e.kind===8||e.kind===26||e.kind===27,tr=function(e){return e["
+        },
+        {
+          "needle": "Error=2",
+          "offset": 41434,
+          "snippet": "Yielded`,e[e.FuelExhausted=1]=`FuelExhausted`,e[e.Error=2]=`Error`,e}({}),$n=function(e){return e[e.Yielded=0]=`Yielded`,e[e.FuelExhausted=1]=`FuelExhausted`,e[e.Error=2]=`Error`,e}({}),er=e=>e.kind===8||e.kind===26||e.kind===27,tr=function(e){return e[e.Initial=0]=`Initial`,e[e.CampRespaw"
+        }
+      ]
+    }
+  },
+  "totals": {
+    "own_turns/complete": 2280899,
+    "priority_next_same_turn/blocked": 4445,
+    "priority_next_same_turn/cancel": 669,
+    "priority_next_same_turn/end": 45802,
+    "priority_next_same_turn/recall": 223952,
+    "priority_next_same_turn/ward": 11199,
+    "root/altar": 1690,
+    "root/attack": 541025,
+    "root/blocked": 52646,
+    "root/cancel": 1500731,
+    "root/cast": 243810,
+    "root/end": 2280899,
+    "root/move": 1390489,
+    "root/priority": 286067,
+    "root/recall": 1776476,
+    "root/shop": 34628,
+    "root/submit": 11435,
+    "root/teleport": 1037,
+    "root/ward": 62591,
+    "root_header_phase/altar/10": 1690,
+    "root_header_phase/attack/10": 541025,
+    "root_header_phase/blocked/10": 52646,
+    "root_header_phase/cancel/10": 1500731,
+    "root_header_phase/cast/10": 243810,
+    "root_header_phase/end/13": 2280899,
+    "root_header_phase/move/10": 1390489,
+    "root_header_phase/priority/10": 286067,
+    "root_header_phase/recall/10": 1776476,
+    "root_header_phase/shop/10": 34628,
+    "root_header_phase/submit/10": 11435,
+    "root_header_phase/teleport/10": 1037,
+    "root_header_phase/ward/10": 62591,
+    "target/altar": 1663,
+    "target/attack": 22761,
+    "target/blocked": 10065,
+    "target/cancel": 73108,
+    "target/cast_0": 4674,
+    "target/cast_1": 8273,
+    "target/end": 110233,
+    "target/move": 71945,
+    "target/priority": 14816,
+    "target/recall": 79748,
+    "target/shop": 17273,
+    "target/submit": 7076,
+    "target/teleport": 594,
+    "target/ward": 10842,
+    "target_channel/altar/0": 1663,
+    "target_channel/attack/0": 22761,
+    "target_channel/blocked/0": 10065,
+    "target_channel/cancel/1": 73075,
+    "target_channel/cancel/2": 33,
+    "target_channel/cast_0/0": 4674,
+    "target_channel/cast_1/0": 8273,
+    "target_channel/end/0": 14570,
+    "target_channel/end/1": 86179,
+    "target_channel/end/2": 8814,
+    "target_channel/end/4": 670,
+    "target_channel/move/0": 71945,
+    "target_channel/priority/0": 13179,
+    "target_channel/priority/1": 576,
+    "target_channel/priority/2": 1017,
+    "target_channel/priority/4": 44,
+    "target_channel/recall/0": 79748,
+    "target_channel/shop/0": 17273,
+    "target_channel/submit/0": 7076,
+    "target_channel/teleport/0": 594,
+    "target_channel/ward/0": 10842,
+    "target_previous_same_turn/cancel/none": 73061,
+    "target_previous_same_turn/cancel/priority": 47,
+    "target_previous_same_turn/end/attack": 178,
+    "target_previous_same_turn/end/blocked": 99,
+    "target_previous_same_turn/end/cast": 184,
+    "target_previous_same_turn/end/move": 3736,
+    "target_previous_same_turn/end/none": 14327,
+    "target_previous_same_turn/end/priority": 3697,
+    "target_previous_same_turn/end/recall": 79656,
+    "target_previous_same_turn/end/shop": 1291,
+    "target_previous_same_turn/end/submit": 6176,
+    "target_previous_same_turn/end/teleport": 552,
+    "target_previous_same_turn/end/ward": 337,
+    "target_previous_same_turn/priority/altar": 266,
+    "target_previous_same_turn/priority/attack": 2635,
+    "target_previous_same_turn/priority/blocked": 26,
+    "target_previous_same_turn/priority/cancel": 1,
+    "target_previous_same_turn/priority/cast": 774,
+    "target_previous_same_turn/priority/move": 8004,
+    "target_previous_same_turn/priority/none": 1074,
+    "target_previous_same_turn/priority/recall": 92,
+    "target_previous_same_turn/priority/shop": 1000,
+    "target_previous_same_turn/priority/submit": 900,
+    "target_previous_same_turn/priority/teleport": 42,
+    "target_previous_same_turn/priority/ward": 2,
+    "target_previous_same_turn/recall/altar": 1015,
+    "target_previous_same_turn/recall/attack": 13129,
+    "target_previous_same_turn/recall/blocked": 6894,
+    "target_previous_same_turn/recall/cancel": 598,
+    "target_previous_same_turn/recall/cast": 2392,
+    "target_previous_same_turn/recall/move": 37105,
+    "target_previous_same_turn/recall/none": 154,
+    "target_previous_same_turn/recall/priority": 8437,
+    "target_previous_same_turn/recall/ward": 10024,
+    "target_previous_same_turn/ward/altar": 54,
+    "target_previous_same_turn/ward/attack": 574,
+    "target_previous_same_turn/ward/blocked": 930,
+    "target_previous_same_turn/ward/cancel": 271,
+    "target_previous_same_turn/ward/cast": 207,
+    "target_previous_same_turn/ward/move": 6934,
+    "target_previous_same_turn/ward/none": 67,
+    "target_previous_same_turn/ward/priority": 1766,
+    "target_previous_same_turn/ward/shop": 39,
+    "target_priority_relation/cancel/different": 47,
+    "target_priority_relation/cancel/equal": 73061,
+    "target_priority_relation/end/different": 14816,
+    "target_priority_relation/end/equal": 95417,
+    "target_priority_relation/priority/equal": 14816,
+    "target_priority_relation/recall/different": 11026,
+    "target_priority_relation/recall/equal": 68722,
+    "target_priority_relation/ward/different": 1918,
+    "target_priority_relation/ward/equal": 8924,
+    "terminal_reason/end/0": 2280899
+  },
+  "probes": [
+    {
+      "engine": "v2_0_0",
+      "kind": 16,
+      "actor": 4,
+      "pre": "183:8",
+      "event": "184:0",
+      "before": {
+        "known": 15,
+        "channelType": 1,
+        "channelTimer": 4,
+        "roundFlags": 1040,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "after": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 1299,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "post_phase": 10,
+      "reason": null,
+      "automatic_headers_observed": 0
+    },
+    {
+      "engine": "v2_0_0",
+      "kind": 11,
+      "actor": 4,
+      "pre": "185:0",
+      "event": "186:0",
+      "before": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3350,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "after": {
+        "known": 15,
+        "channelType": 1,
+        "channelTimer": 5,
+        "roundFlags": 3412,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "post_phase": 10,
+      "reason": null,
+      "automatic_headers_observed": 0
+    },
+    {
+      "engine": "v2_0_0",
+      "kind": 8,
+      "actor": 4,
+      "pre": "186:0",
+      "event": "187:0",
+      "before": {
+        "known": 15,
+        "channelType": 1,
+        "channelTimer": 5,
+        "roundFlags": 3412,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "after": {
+        "known": 15,
+        "channelType": 1,
+        "channelTimer": 5,
+        "roundFlags": 3412,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "post_phase": 13,
+      "reason": 0,
+      "automatic_headers_observed": 7
+    },
+    {
+      "engine": "v2_0_0",
+      "kind": 9,
+      "actor": 3,
+      "pre": "1957:0",
+      "event": "1958:0",
+      "before": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3348,
+        "priority": 503,
+        "nextPriority": 503
+      },
+      "after": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3348,
+        "priority": 503,
+        "nextPriority": -497
+      },
+      "post_phase": 10,
+      "reason": null,
+      "automatic_headers_observed": 0
+    },
+    {
+      "engine": "v3_0_0",
+      "kind": 9,
+      "actor": 3,
+      "pre": "32:0",
+      "event": "33:0",
+      "before": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3094,
+        "priority": 0,
+        "nextPriority": 0
+      },
+      "after": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3094,
+        "priority": 0,
+        "nextPriority": -4
+      },
+      "post_phase": 10,
+      "reason": null,
+      "automatic_headers_observed": 0
+    },
+    {
+      "engine": "v3_0_0",
+      "kind": 8,
+      "actor": 3,
+      "pre": "33:0",
+      "event": "34:0",
+      "before": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3094,
+        "priority": 0,
+        "nextPriority": -4
+      },
+      "after": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 3094,
+        "priority": 0,
+        "nextPriority": -4
+      },
+      "post_phase": 13,
+      "reason": 0,
+      "automatic_headers_observed": 7
+    },
+    {
+      "engine": "v3_0_0",
+      "kind": 11,
+      "actor": 3,
+      "pre": "367:0",
+      "event": "368:0",
+      "before": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 1049,
+        "priority": -4,
+        "nextPriority": -4
+      },
+      "after": {
+        "known": 15,
+        "channelType": 1,
+        "channelTimer": 5,
+        "roundFlags": 1112,
+        "priority": -4,
+        "nextPriority": -4
+      },
+      "post_phase": 10,
+      "reason": null,
+      "automatic_headers_observed": 0
+    },
+    {
+      "engine": "v3_0_0",
+      "kind": 16,
+      "actor": 0,
+      "pre": "547:8",
+      "event": "548:0",
+      "before": {
+        "known": 15,
+        "channelType": 1,
+        "channelTimer": 4,
+        "roundFlags": 1040,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "after": {
+        "known": 15,
+        "channelType": 0,
+        "channelTimer": 0,
+        "roundFlags": 1299,
+        "priority": -3,
+        "nextPriority": -3
+      },
+      "post_phase": 10,
+      "reason": null,
+      "automatic_headers_observed": 0
+    }
+  ],
+  "row_alignment_verified": true,
+  "all433071_labels_verified": true,
+  "A01_priority_relation_counts_reproduced": true,
+  "conclusions": [
+    "The pinned codec names end reason0 Yielded. The extractor historical completeness name explicit_end does not establish whether the bot explicitly called end_turn; origin remains unassessed. Frozen membership/labels are unchanged.",
+    "Root substep0 phase10 champion events are separate from automatic substeps. Header phase AFTER the target, current target kind/reason and POST channel changes are diagnostic labels/evidence, forbidden as predictor inputs.",
+    "A priority setter and following end are separate recorded inputs. A frequent observed sequence is not a legality constraint. Use any PRE priority/channel cue only as a separately tested soft input.",
+    "Current SDK4 and visualiser wrapper show API names and compound operations, but cannot establish historical engine2/3 bot caller behavior. Engine-specific recorded PRE/POST probes are kept as narrower direct evidence.",
+    "No predictor, accuracy, strategy or generalization improvement is measured by this diagnostic. The P05 failed gate and all original targets remain binding."
+  ],
+  "new_features": 0,
+  "new_optimizer_steps": 0,
+  "new_prediction_families": 0,
+  "reserved_behavior_opened": 0
+}

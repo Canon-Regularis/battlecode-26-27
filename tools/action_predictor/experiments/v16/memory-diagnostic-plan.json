@@ -1,0 +1,9 @@
+{
+  "purpose": "Determine whether the selected persistent model actually retains goal state; no extra fitting or semantic objective labels.",
+  "quantities": "Effective gap retention, inferred per-root continuation weight and exact recurrence soft_age_i=r_i*(soft_age_previous+actual_root_gap). L00age zero by construction. Predictive-prior argmax changes are not Fish objective switches.",
+  "diagnostic_strata": "Soft expected age0,positive<=16,16..64,>64actualownroots, using original history/target horizon scales for reporting only. No strategy thresholds or checkpoint selection.",
+  "interpretation": "World-coordinate stability and state ages establish implementation behavior, not information usefulness or strategic intent. Per-context performance associations are descriptive; latent state indices are not identified across fits.",
+  "source_sha256": "91642e55c6b0c3eaf9754019f15edb4f6ade713c17ef57e08eeea1a9c6171e96",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

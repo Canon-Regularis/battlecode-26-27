@@ -1,0 +1,125 @@
+{
+  "plan_sha256": "4724ae11ce26ca5c62f3df18f405179ffd975002f9ba549c7307377ea74ac493",
+  "sources_sha256": "7301787093e240effda9aef89a7ba4a4a76b9f29281f5f9f26ad78675a3f993d",
+  "priors_sha256": "951560706d79cc01f63f779091c4cb2e38ddad92430d241bdb1193deefc2d17e",
+  "training_only_metrics": {
+    "global_frequency": {
+      "exact": 629,
+      "support": 14816,
+      "mean_nll": 4.999834618203502,
+      "mean_absolute_error": 281.1117035637149,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "current_plus_copy": {
+      "exact": 0,
+      "support": 14816,
+      "mean_nll": 11.105937074345652,
+      "mean_absolute_error": 568.2549946004319,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "current_plus_residual": {
+      "exact": 1219,
+      "support": 14816,
+      "mean_nll": 4.824669330875611,
+      "mean_absolute_error": 568.6386339092873,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "current_minus_copy": {
+      "exact": 519,
+      "support": 14816,
+      "mean_nll": 9.87567266285336,
+      "mean_absolute_error": 193.85677645788337,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "current_minus_residual": {
+      "exact": 604,
+      "support": 14816,
+      "mean_nll": 5.2901793914208906,
+      "mean_absolute_error": 195.8825593952484,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "scheduled_plus_copy": {
+      "exact": 0,
+      "support": 14816,
+      "mean_nll": 11.105937074345652,
+      "mean_absolute_error": 568.2549946004319,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "scheduled_plus_residual": {
+      "exact": 1219,
+      "support": 14816,
+      "mean_nll": 4.824669330875611,
+      "mean_absolute_error": 568.6386339092873,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "scheduled_minus_copy": {
+      "exact": 519,
+      "support": 14816,
+      "mean_nll": 9.87567266285336,
+      "mean_absolute_error": 193.85677645788337,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "scheduled_minus_residual": {
+      "exact": 604,
+      "support": 14816,
+      "mean_nll": 5.2901793914208906,
+      "mean_absolute_error": 195.8825593952484,
+      "available_support": 14816,
+      "missing_support": 0
+    },
+    "latest_plus_copy": {
+      "exact": 0,
+      "support": 14816,
+      "mean_nll": 11.04714458951443,
+      "mean_absolute_error": 568.2605291576674,
+      "available_support": 14688,
+      "missing_support": 128
+    },
+    "latest_plus_residual": {
+      "exact": 1205,
+      "support": 14816,
+      "mean_nll": 4.806705059080897,
+      "mean_absolute_error": 568.6559125269979,
+      "available_support": 14688,
+      "missing_support": 128
+    },
+    "latest_minus_copy": {
+      "exact": 519,
+      "support": 14816,
+      "mean_nll": 9.82453882223056,
+      "mean_absolute_error": 193.8623110151188,
+      "available_support": 14688,
+      "missing_support": 128
+    },
+    "latest_minus_residual": {
+      "exact": 604,
+      "support": 14816,
+      "mean_nll": 5.277678170737025,
+      "mean_absolute_error": 195.83706803455723,
+      "available_support": 14688,
+      "missing_support": 128
+    }
+  },
+  "training_roundtrip": {
+    "cases": 6,
+    "games": 2,
+    "engines": [
+      "2.0.0",
+      "3.0.0"
+    ],
+    "split": "training_only",
+    "selection": "First/middle/last target of first eligible training game per engine",
+    "inputs_exact": true,
+    "forecasts_exact": true
+  },
+  "new_development_evaluations": 0,
+  "new_optimizer_steps": 0
+}

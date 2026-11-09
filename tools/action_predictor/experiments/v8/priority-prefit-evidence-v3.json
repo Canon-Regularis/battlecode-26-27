@@ -1,0 +1,51 @@
+{
+  "sources": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_fit_v3.py": "ec2ec627d3c5e621823e255cc0e07a23247e22b76264fd5c4f402a4d02b9482e",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_head.py": "f2e02e5febbb2ee904728881a2fdcc4590796f45a455bd09096b2b9a23468aee",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_predictor.py": "1d24ab9615a783c01c56d3d036ed5a8a5faf5cbba6c0117f7df0fe56a57b5917",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_roundtrip_v3.py": "58cfe4180d7aec74e5e1b1fe6f5b9a48d7f109f2edf6a7462d8351724bc22359",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\test_priority_head.py": "aff89d55611bf21dbacd2254ea89ba2315e923cfeab210c777b57489112e02a8",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\priority_dependencies_v3.py": "c9f6c37af39684c6bd0406c9b4698b1957878a3687f774d05f81133115339914",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\test_priority_dependencies_v3.py": "118741f35acb0b5c2bd105197220c1a09b70af18e0f017e973ba261aed1c497e",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\test_priority_entry_v3.py": "997267d03784e3711a7b12bff904349fc7cc3053d93e436c874ffe623955f2fe"
+  },
+  "dependencies_sha256": "27df021f538d3ddb5c84b01bdc95ce4ddbdb9adfaa1090ff153002bd1eccc38d",
+  "design_sha256": "e1ef2bfbe54164560fec2e200a6888d30419eed2e5630a7e0b4dd20757a30b6e",
+  "context_ready_sha256": "de6944c055b5a7d0c834fd4451c2b2f0e92f66692a362622813046f9e13441ba",
+  "context_parity_sha256": "1ec09787fe7c4f5b0053ea43e1187d8407e6fc57894aa327a6952266cc7c867f",
+  "roundtrip_sha256": "1fc01808498a69979d2c992073918210b39bc586574c636a8702ba201aab7c41",
+  "prior_v2_evidence_sha256": "81b852656a0cf5192bb49551f5c508ea2913529af5173ce27e4deeaa63222316",
+  "R12": "Live runtime/checkpoint/reviewed labels agree exactly; dataset and5receipt label metadata hashed; integration swap rejects before fullgate",
+  "R10": "Standalone roundtrip and contextauditor gate dependencies/input bindings before model/data consumption; source manifest spans roottools plus originallocked sources, including imported downloader",
+  "labels": [
+    "<unknown>",
+    "altar",
+    "attack",
+    "blocked",
+    "cancel",
+    "cast_0",
+    "cast_1",
+    "end",
+    "move",
+    "priority",
+    "recall",
+    "shop",
+    "submit",
+    "teleport",
+    "ward"
+  ],
+  "label_metadata": {
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v8\\audit-amendment-01.json": "71f755e7e305c3d34703aa88d06a70e84af97c4fb2303f240ef284509e39416e",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\data\\dataset.json": "831eb535feb9bc5995cd4c0da64bcfcad99e5f8066feb219c198ecb0ff2c6275",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v4\\benchmark.json": "e8bc7413c692c181e82809d458bdd9a78e115d59e61ac3f32ed03d413eba8aea",
+    "F:\\Code\\battlecode-26-27\\tools\\action_predictor\\experiments\\v8\\success-definition.json": "ebc678d209b91d73eef4e56550c8e16328e3391b880d3a91eb63aac4f8b42e06",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\validation-data.json": "f3bb6fc366d2234b5b86a36cb5014617f63762cd307c614fd17f488f2ae6f55b",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\train-data.json": "2389a34d1f6f7fd238369aa312624e2ccdd2b76ce79096b8d03409b4f95df48d",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v4\\train-aug-data.json": "9c5b0ae0700362e7a202ad768888698413cfa739aa19a104c69336a82f08cb0c",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\train-data.json": "45f39128cc208411bd94971355ad4a995dff1fac706e647d8a900aa508fdd0ad",
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v5\\train-aug-data.json": "391f3d68f086e9be5b7c072dce866c65519024c59b9cd235a3ef22eae17c2b46"
+  },
+  "tests": "15 focused checks passed",
+  "new_fits": 0,
+  "code_approval_present": false
+}

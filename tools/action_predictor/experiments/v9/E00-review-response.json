@@ -1,0 +1,26 @@
+{
+  "review_sha256": "836f735a78f62e49c640dfed590de2d93a5e107e6e356976643a3cd714d83a8c",
+  "measured_ward_regression": {
+    "P05": {
+      "type_false_positives": 282,
+      "recall_to_ward": 257,
+      "correct_types": 35
+    },
+    "E00": {
+      "type_false_positives": 362,
+      "recall_to_ward": 322,
+      "correct_types": 40
+    }
+  },
+  "decisions": [
+    "No E00 promotion or repeats; retain P05/M01. Narrow existing ward guards are insufficient to establish acceptable discrimination.",
+    "E01 fit source, losses and fixed criteria stay unchanged; new matched analysis computes E01-E00 category/direction paired uncertainty and explicit ward false positives.",
+    "Subsequent new classifier experiments need prospectively frozen false-positive/precision and joint-category protections; no retrospective change to this pair.",
+    "Nominal trainable233566,total545800 parameters; zero-entity control has inactive input-dependent weights. Buffs are aggregated, not losslessly represented.",
+    "Existing zero-error raw/cache roundtrip establishes causal input and routing parity. Reviewer independently reproduced all eight saved E00 arrays; zero roundtrip error alone is not independent saved-probability reproduction.",
+    "Measure prepared-input CPU model-kernel latency, parameter bytes and honest process memory for P05/E00/E01 after training is idle.",
+    "After this pair prioritize recorded-change supervised causal gating and sampling/weighting comparisons; no repeated single-logistic priority fits."
+  ],
+  "new_fits_in_response": 0,
+  "reserved_opened": 0
+}

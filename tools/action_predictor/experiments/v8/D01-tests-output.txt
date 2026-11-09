@@ -1,0 +1,17 @@
+.venv-action-predictor/Scripts/python.exe : test_automatic_cancel_is_not_root_cancel 
+(tools.action_predictor.test_event_semantics.EventSemanticsTests.test_automatic_cancel_is_not_root_cancel) ... ok
+At line:2 char:1
++ .venv-action-predictor/Scripts/python.exe -m unittest tools.action_pr ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_automatic_..._cancel) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_exact_prior_event_and_actor 
+(tools.action_predictor.test_event_semantics.EventSemanticsTests.test_exact_prior_event_and_actor) ... ok
+test_yield_rollover_error_stay_distinct 
+(tools.action_predictor.test_event_semantics.EventSemanticsTests.test_yield_rollover_error_stay_distinct) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

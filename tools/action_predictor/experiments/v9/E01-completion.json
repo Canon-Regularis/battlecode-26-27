@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "E01-plan.json": "0247dc9159e0b7389ddb1a63ed2c4b424458a3272b30ddece8c0028022a252aa",
+    "E01.json": "46f5475b461b611be4330160dbd4970fd37abd6dfdfaaaf881834f42f555457d",
+    "E01-analysis.json": "443a45335f3d0af409a4710743c603d8210bd63b86760376b9924b56b6d072eb",
+    "E01-per-category.csv": "0689df01bf1d2cff488484521aceb7199f6281261104a32133404c5f174ee831",
+    "E01-confusion.csv": "50c031239075fcca1b5ba870c7ff5f154c135b3bf11e3b531c9caac3db62db13",
+    "E01-matched-comparison-v2.json": "c7aafd672ec3daf2f5ef333d22f6a9cf6fedc320740c9985f2f3d2a34e008634",
+    "E01-matched-categories-v2.csv": "263a27cb7373c0944ecc7c458f36767348e5f1984226a007d45ad79424f627db",
+    "E01-matched-analysis-v2-source.txt": "a4b6bf9adec2b1258d46cfbb3c9e960cc31d0150d303e6b714d80c6effbad669",
+    "E01-causal-inference-roundtrip.json": "4176e82b06be3aa8f76786908fde1f39c8d2b261b222037c365dbf81b45271ca",
+    "E01-attention-checks.json": "e3d9241e35173b19051270f18d20062c20872bdf41c67d7a51929ed33737e6c7",
+    "E01-serving.json": "ee581d912746fa8612d07b1f35d02b4226eb72671d8bd1f69fc3aa99ef4564f3",
+    "E00-serving.json": "0bcf2f9ec92bb44bab80f6e1d3d62cd21adee2aa0da61845de12730b8cd6889d",
+    "P05-serving.json": "a4d515ec9e7bca2d1a504633f2644471ba1e38d7a608145a0f0c244eb6306870",
+    "E00-review.json": "836f735a78f62e49c640dfed590de2d93a5e107e6e356976643a3cd714d83a8c",
+    "E00-review-response.json": "d3a0ac009933c5028259af6a777d440dae4835f5ca8b2913f47c609edfb06a81",
+    "comparison-v2.csv": "0317b866b594d9842dc351dd956b1ed94402ed7e1ad6b4e6b5f0075e71840c15",
+    "INDEX.md": "6045446885fdd86ec6f5dd7d22a58d9a116e4c359f845ad1fdea731a3751e1a1",
+    "E01-run-output.txt": "45a17ee975e84e4d7a322d9d0e4633e121c9279c1cc209cb129bd26b22707298",
+    "E01-full-roundtrip-output.txt": "e81a87d57c3a427b1b2732e8c2c92eb23cca949cace56c8afd67e1299b2798b0",
+    "E01-pair-analysis-v2-output.txt": "0b940dd9a624c4185de228a5445e16cb43b8b65da3dc61fa3dd4cc319ab97ede",
+    "V9-pair-index-source.txt": "52b51baf0b0a8dfa4b9d381c2f608f154d248aa8b857184bd93ebe04106d85aa"
+  },
+  "substantive_fit": "E01 only:11epochs,18612updates,selectedepoch5 by frozen loss rule",
+  "fitting_source_matches_E00": true,
+  "matched_result": "24fewer joint correct than E00;35fewer than P05; no promotion or identical repeats",
+  "diagnostic_parameter_amendment": "V2 nulls unavailable purchase/no-required parameters and states assessed parameter support. All joint rows/counts unchanged; V1 preserved.",
+  "reserved_opened": 0,
+  "review_pending": "FreshGPT6.1Solxhigh after this completed training experiment"
+}

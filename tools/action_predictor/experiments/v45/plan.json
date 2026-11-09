@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\rare_code_edit.py": "4bd714590481086d8129be143e5cff3f54a57b57a69b8423c6f57d17f2ba16f4",
+    "tools\\action_predictor\\behavior_segments\\test_rare_code_edit.py": "4eba16ae448a5d9b614fca82d193a697d828c483ce01a56f2e304861443d1436"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v43\\r2\\protocol.json": "ef2568f0cf63221c0c3fdebf84be4015fa0bbc2d11bf419414119c0020c5a277",
+    "tools\\action_predictor\\experiments\\v43\\r2\\discovery.json": "bb158920426c6d45c492b6dd66827beb2f22a0e665b879c0d518204300ba5ab9",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\final.pt": "cff5b402f93c71980d5d21dcf778a3e69fd038b665923dbf055c3711e01aa49b",
+    "tools\\action_predictor\\experiments\\v44\\result.json": "e2ffbc9edc49163141912da2274a53798f010d11e1ff9f7d5d584b30ffdc6174",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\fit-predictions.json": "bc7b1b8a7d2b677064019694865fc26fefa4dda23ab67ede7eb2b512f546d9b7",
+    ".cambc\\action-predictor\\v43\\r2\\S01-run\\evaluation-predictions.json": "6a01cf2d70f0b4e158b25f4ffefddca974156248592013103e97c490b6762bcd"
+  },
+  "history_scales": [
+    1.0,
+    5.0
+  ],
+  "ridge_values": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "seconds_cap": 900,
+  "selection": "Ten analytic head edits; four whole-group folds inside existing fitting groups. Maximize minimum supported-class recall, then macro-F1, then accuracy, then name. Refit selected head on all fitting queries; publish selection before evaluation. Backbone was previously fitted on these groups, so folds validate head calibration only.",
+  "objective": "Class-balanced squared error to one-hot labels; hidden normalization per training fold; positive ridge; unpenalized intercept; fixed logit scale4. Fold normalization into code.weight/bias. No gradient descent or optimizer. Only code head and optionally23GRU history columns change.",
+  "requirements": "All fitting-supported evaluation codes: recall>=.25 and precision>=.10. Overall code accuracy loss<=.05, movement accuracy loss<=.01, movementNLL increase<=.01, goalwithin2 loss<=.02 and mean goalerror increase<=.25 vs original S01. No claim of zero misses; any unseen evaluation code prevents complete coverage.",
+  "scope": "Previously exposed research data; inferred hindsight labels. No subagents, playing-bot edits, new replay payloads, or automatic promotion. Original and V44 checkpoints preserved."
+}

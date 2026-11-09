@@ -1,0 +1,12 @@
+{
+  "origin": "Frozen analysis-plan.json controls, made precise after LP-03; registered while L01 training, before selected L01 evaluation.",
+  "treatments": {
+    "waypoint_uncertainty_projection_off": "Zero goal_condition.weight AND bias. Removes the predicted relative-waypoint/logscale/availability projection only. Latent goal embeddings, goal-conditioned entity attention, proposals and goal mixture remain.",
+    "persistent_goal_state_reset": "Set persistent=False at inference: reset remembered goal belief/world/soft age at each sampled decision. Original bounded action/observation histories, latent embeddings, current goal forecasts and goal-conditioned execution remain."
+  },
+  "evaluation": "Selected frozen L01 checkpoint only; independently re-filter actual earlier recorded actions forward under each intervention, then decode same normalized distribution. All original DEV rows; compare L01 and L00/G00. No future smoothing, optimizer, threshold/checkpoint selection or model promotion.",
+  "interpretation": "Sensitivity to these particular pathways under an inference-time distribution change, not causal identification of Fish intent, all-goal removal, matched retraining or autonomous rollout strength.",
+  "source_sha256": "0f4d6f7c68617f9919de46d0c1c2b45873f9f72c9740b6b601b5ded57e15f6a7",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

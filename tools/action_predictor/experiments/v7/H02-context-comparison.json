@@ -1,0 +1,4736 @@
+{
+  "overall": {
+    "observations": {
+      "rows": 14439,
+      "group_support": {
+        "1": 2753,
+        "10": 3111,
+        "11": 2826,
+        "17": 3037,
+        "31": 2712
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 985,
+        "blocked": 110,
+        "cancel": 2589,
+        "cast_0": 213,
+        "cast_1": 243,
+        "end": 4096,
+        "move": 2362,
+        "priority": 576,
+        "recall": 3084,
+        "shop": 43,
+        "submit": 22,
+        "teleport": 2,
+        "ward": 112
+      },
+      "joint_nll": 0.8446938991546631,
+      "joint_accuracy": 0.790359443174735,
+      "macro_f1": 0.6142499183479373,
+      "parameters": {
+        "move": {
+          "support": 2362,
+          "exact_accuracy": 0.6143099068585944,
+          "joint_accuracy": 0.5453005927180355
+        },
+        "blocked": {
+          "support": 110,
+          "exact_accuracy": 0.14545454545454545,
+          "joint_accuracy": 0.045454545454545456
+        },
+        "attack": {
+          "support": 985,
+          "exact_accuracy": 0.9583756345177665,
+          "joint_accuracy": 0.8893401015228426
+        },
+        "cast_0": {
+          "support": 213,
+          "exact_accuracy": 0.9154929577464789,
+          "joint_accuracy": 0.7934272300469484
+        },
+        "cast_1": {
+          "support": 243,
+          "exact_accuracy": 0.5761316872427984,
+          "joint_accuracy": 0.3991769547325103
+        },
+        "ward": {
+          "support": 112,
+          "exact_accuracy": 0.21428571428571427,
+          "joint_accuracy": 0.08928571428571429
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8181818181818182
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 2,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 14439,
+      "group_support": {
+        "1": 2753,
+        "10": 3111,
+        "11": 2826,
+        "17": 3037,
+        "31": 2712
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 985,
+        "blocked": 110,
+        "cancel": 2589,
+        "cast_0": 213,
+        "cast_1": 243,
+        "end": 4096,
+        "move": 2362,
+        "priority": 576,
+        "recall": 3084,
+        "shop": 43,
+        "submit": 22,
+        "teleport": 2,
+        "ward": 112
+      },
+      "joint_nll": 0.8669702410697937,
+      "joint_accuracy": 0.7867580857400097,
+      "macro_f1": 0.6193941521566504,
+      "parameters": {
+        "move": {
+          "support": 2362,
+          "exact_accuracy": 0.6024555461473328,
+          "joint_accuracy": 0.5427603725656224
+        },
+        "blocked": {
+          "support": 110,
+          "exact_accuracy": 0.18181818181818182,
+          "joint_accuracy": 0.02727272727272727
+        },
+        "attack": {
+          "support": 985,
+          "exact_accuracy": 0.9604060913705583,
+          "joint_accuracy": 0.8741116751269036
+        },
+        "cast_0": {
+          "support": 213,
+          "exact_accuracy": 0.9061032863849765,
+          "joint_accuracy": 0.7136150234741784
+        },
+        "cast_1": {
+          "support": 243,
+          "exact_accuracy": 0.588477366255144,
+          "joint_accuracy": 0.411522633744856
+        },
+        "ward": {
+          "support": 112,
+          "exact_accuracy": 0.21428571428571427,
+          "joint_accuracy": 0.044642857142857144
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.9090909090909091
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 2,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.001903483019383314,
+        "high": 0.009237547075961028,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.020018880781493276,
+        "high": 0.020147863349177175,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.0008396305625524292,
+        "high": 0.024593967517401394,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.013600700893008156,
+        "high": 0.020068317677198966,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.0792079207920792,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "blocked_joint": {
+        "low": -0.015873015873015872,
+        "high": 0.0875,
+        "valid_draws": 2000
+      },
+      "attack_exact": {
+        "low": -0.0077821011673151474,
+        "high": 0.00424628450106157,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.0034129692832765013,
+        "high": 0.03296703296703296,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.020725388601036232,
+        "valid_draws": 2000
+      },
+      "cast_0_joint": {
+        "low": 0.034831300038124346,
+        "high": 0.1515151515151515,
+        "valid_draws": 2000
+      },
+      "cast_1_exact": {
+        "low": -0.03474903474903479,
+        "high": 0.015545463619123465,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.037656903765690364,
+        "high": 0.01731601731601734,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": -0.022222222222222227,
+        "high": 0.023622047244094502,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": -0.010323285522187364,
+        "high": 0.09734513274336283,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "submit_joint": {
+        "low": -0.4166666666666667,
+        "high": 0.07407407407407407,
+        "valid_draws": 2000
+      },
+      "altar_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "altar_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": 0.01645021298131988,
+        "high": 0.03715765805460225,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "history_0": {
+    "observations": {
+      "rows": 6,
+      "group_support": {
+        "1": 1,
+        "10": 1,
+        "11": 0,
+        "17": 1,
+        "31": 3
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 2,
+        "end": 0,
+        "move": 4,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 1.7970176935195923,
+      "joint_accuracy": 0.5,
+      "macro_f1": 0.08928571428571429,
+      "parameters": {
+        "move": {
+          "support": 4,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.5
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 2,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.5
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 6,
+      "group_support": {
+        "1": 1,
+        "10": 1,
+        "11": 0,
+        "17": 1,
+        "31": 3
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 2,
+        "end": 0,
+        "move": 4,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 1.7118396759033203,
+      "joint_accuracy": 0.5,
+      "macro_f1": 0.1183673469387755,
+      "parameters": {
+        "move": {
+          "support": 4,
+          "exact_accuracy": 0.75,
+          "joint_accuracy": 0.5
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 2,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.5
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.29999999999999993,
+        "high": 0.6666666666666667,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.058750773036487326,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.5,
+        "high": 0.0,
+        "valid_draws": 1983
+      },
+      "move_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1983
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": -1.0,
+        "high": 1.0,
+        "valid_draws": 1855
+      },
+      "cast_1_joint": {
+        "low": -1.0,
+        "high": 1.0,
+        "valid_draws": 1855
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.42460942116442624,
+        "high": 0.11896182158357316,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "history_1-3": {
+    "observations": {
+      "rows": 17,
+      "group_support": {
+        "1": 3,
+        "10": 3,
+        "11": 0,
+        "17": 1,
+        "31": 10
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 4,
+        "move": 5,
+        "priority": 6,
+        "recall": 1,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 1
+      },
+      "joint_nll": 1.6976515054702759,
+      "joint_accuracy": 0.35294117647058826,
+      "macro_f1": 0.23826966684109543,
+      "parameters": {
+        "move": {
+          "support": 5,
+          "exact_accuracy": 0.6,
+          "joint_accuracy": 0.4
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 17,
+      "group_support": {
+        "1": 3,
+        "10": 3,
+        "11": 0,
+        "17": 1,
+        "31": 10
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 4,
+        "move": 5,
+        "priority": 6,
+        "recall": 1,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 1
+      },
+      "joint_nll": 2.1242666244506836,
+      "joint_accuracy": 0.29411764705882354,
+      "macro_f1": 0.1842403628117914,
+      "parameters": {
+        "move": {
+          "support": 5,
+          "exact_accuracy": 0.6,
+          "joint_accuracy": 0.4
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.2857142857142857,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.00436507936507935,
+        "high": 0.10714285714285712,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1980
+      },
+      "move_joint": {
+        "low": -0.3333333333333333,
+        "high": 1.0,
+        "valid_draws": 1980
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1391
+      },
+      "ward_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1391
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.2164315180594858,
+        "high": 0.30252191824943775,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "history_4-7": {
+    "observations": {
+      "rows": 20,
+      "group_support": {
+        "1": 6,
+        "10": 2,
+        "11": 5,
+        "17": 3,
+        "31": 4
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 6,
+        "cast_0": 1,
+        "cast_1": 0,
+        "end": 6,
+        "move": 4,
+        "priority": 0,
+        "recall": 3,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.37446197867393494,
+      "joint_accuracy": 0.8,
+      "macro_f1": 0.3183673469387755,
+      "parameters": {
+        "move": {
+          "support": 4,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.75
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 20,
+      "group_support": {
+        "1": 6,
+        "10": 2,
+        "11": 5,
+        "17": 3,
+        "31": 4
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 6,
+        "cast_0": 1,
+        "cast_1": 0,
+        "end": 6,
+        "move": 4,
+        "priority": 0,
+        "recall": 3,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.3231011629104614,
+      "joint_accuracy": 0.85,
+      "macro_f1": 0.25357142857142856,
+      "parameters": {
+        "move": {
+          "support": 4,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.75
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.25,
+        "high": 0.1428571428571428,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.047619047619047616,
+        "high": 0.07142857142857145,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1844
+      },
+      "move_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1844
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1311
+      },
+      "cast_0_joint": {
+        "low": 1.0,
+        "high": 1.0,
+        "valid_draws": 1311
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -1.059968579838091,
+        "high": 0.2702893776152864,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "history_8-15": {
+    "observations": {
+      "rows": 69,
+      "group_support": {
+        "1": 11,
+        "10": 6,
+        "11": 13,
+        "17": 19,
+        "31": 20
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 3,
+        "blocked": 0,
+        "cancel": 15,
+        "cast_0": 1,
+        "cast_1": 1,
+        "end": 17,
+        "move": 15,
+        "priority": 0,
+        "recall": 17,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.41380229592323303,
+      "joint_accuracy": 0.8985507246376812,
+      "macro_f1": 0.4524322660098522,
+      "parameters": {
+        "move": {
+          "support": 15,
+          "exact_accuracy": 0.8,
+          "joint_accuracy": 0.6666666666666666
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 3,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "cast_0": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "cast_1": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 69,
+      "group_support": {
+        "1": 11,
+        "10": 6,
+        "11": 13,
+        "17": 19,
+        "31": 20
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 3,
+        "blocked": 0,
+        "cancel": 15,
+        "cast_0": 1,
+        "cast_1": 1,
+        "end": 17,
+        "move": 15,
+        "priority": 0,
+        "recall": 17,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.4728074073791504,
+      "joint_accuracy": 0.8985507246376812,
+      "macro_f1": 0.45473204955963575,
+      "parameters": {
+        "move": {
+          "support": 15,
+          "exact_accuracy": 0.8,
+          "joint_accuracy": 0.6666666666666666
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 3,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "cast_0": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "cast_1": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.03703703703703698,
+        "high": 0.0357360627177699,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.005952380952380987,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1837
+      },
+      "attack_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1837
+      },
+      "cast_0_exact": {
+        "low": 1.0,
+        "high": 1.0,
+        "valid_draws": 1341
+      },
+      "cast_0_joint": {
+        "low": 1.0,
+        "high": 1.0,
+        "valid_draws": 1341
+      },
+      "cast_1_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1311
+      },
+      "cast_1_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1311
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.013723410953967674,
+        "high": 0.33879140103935934,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "history_16": {
+    "observations": {
+      "rows": 14327,
+      "group_support": {
+        "1": 2732,
+        "10": 3099,
+        "11": 2808,
+        "17": 3013,
+        "31": 2675
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 982,
+        "blocked": 110,
+        "cancel": 2568,
+        "cast_0": 211,
+        "cast_1": 240,
+        "end": 4069,
+        "move": 2334,
+        "priority": 570,
+        "recall": 3063,
+        "shop": 43,
+        "submit": 22,
+        "teleport": 2,
+        "ward": 111
+      },
+      "joint_nll": 0.8460146188735962,
+      "joint_accuracy": 0.7904655545473581,
+      "macro_f1": 0.6142593636395309,
+      "parameters": {
+        "move": {
+          "support": 2334,
+          "exact_accuracy": 0.6126820908311911,
+          "joint_accuracy": 0.5445586975149957
+        },
+        "blocked": {
+          "support": 110,
+          "exact_accuracy": 0.14545454545454545,
+          "joint_accuracy": 0.045454545454545456
+        },
+        "attack": {
+          "support": 982,
+          "exact_accuracy": 0.9582484725050916,
+          "joint_accuracy": 0.8890020366598778
+        },
+        "cast_0": {
+          "support": 211,
+          "exact_accuracy": 0.9146919431279621,
+          "joint_accuracy": 0.7914691943127962
+        },
+        "cast_1": {
+          "support": 240,
+          "exact_accuracy": 0.575,
+          "joint_accuracy": 0.3958333333333333
+        },
+        "ward": {
+          "support": 111,
+          "exact_accuracy": 0.21621621621621623,
+          "joint_accuracy": 0.09009009009009009
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8181818181818182
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 2,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 14327,
+      "group_support": {
+        "1": 2732,
+        "10": 3099,
+        "11": 2808,
+        "17": 3013,
+        "31": 2675
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 982,
+        "blocked": 110,
+        "cancel": 2568,
+        "cast_0": 211,
+        "cast_1": 240,
+        "end": 4069,
+        "move": 2334,
+        "priority": 570,
+        "recall": 3063,
+        "shop": 43,
+        "submit": 22,
+        "teleport": 2,
+        "ward": 111
+      },
+      "joint_nll": 0.8677819967269897,
+      "joint_accuracy": 0.7868360438333217,
+      "macro_f1": 0.619521994007021,
+      "parameters": {
+        "move": {
+          "support": 2334,
+          "exact_accuracy": 0.6002570694087404,
+          "joint_accuracy": 0.5419880034275921
+        },
+        "blocked": {
+          "support": 110,
+          "exact_accuracy": 0.18181818181818182,
+          "joint_accuracy": 0.02727272727272727
+        },
+        "attack": {
+          "support": 982,
+          "exact_accuracy": 0.960285132382892,
+          "joint_accuracy": 0.8737270875763747
+        },
+        "cast_0": {
+          "support": 211,
+          "exact_accuracy": 0.909952606635071,
+          "joint_accuracy": 0.7203791469194313
+        },
+        "cast_1": {
+          "support": 240,
+          "exact_accuracy": 0.5875,
+          "joint_accuracy": 0.4083333333333333
+        },
+        "ward": {
+          "support": 111,
+          "exact_accuracy": 0.21621621621621623,
+          "joint_accuracy": 0.04504504504504504
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.9090909090909091
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 2,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.0016318108929313394,
+        "high": 0.009187482055699081,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.019818154031206903,
+        "high": 0.019926017328740664,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.0008456659619450191,
+        "high": 0.02611625947767482,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.014137163439489018,
+        "high": 0.021286660359507992,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.0792079207920792,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "blocked_joint": {
+        "low": -0.015873015873015872,
+        "high": 0.0875,
+        "valid_draws": 2000
+      },
+      "attack_exact": {
+        "low": -0.007797270955165692,
+        "high": 0.004264392324093813,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.0034364261168384758,
+        "high": 0.03311867525298984,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": -0.01005025125628145,
+        "high": 0.020725388601036232,
+        "valid_draws": 2000
+      },
+      "cast_0_joint": {
+        "low": 0.01729978354978352,
+        "high": 0.1515151515151515,
+        "valid_draws": 2000
+      },
+      "cast_1_exact": {
+        "low": -0.04166666666666663,
+        "high": 0.016260162601626105,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.03891050583657585,
+        "high": 0.017467248908296984,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": -0.022222222222222227,
+        "high": 0.024193548387096753,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": -0.010326271666477855,
+        "high": 0.0990990990990991,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "submit_joint": {
+        "low": -0.4166666666666667,
+        "high": 0.07407407407407407,
+        "valid_draws": 2000
+      },
+      "altar_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "altar_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": 0.015775808516679368,
+        "high": 0.036608820331223035,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "direction_change": {
+    "observations": {
+      "rows": 1158,
+      "group_support": {
+        "1": 198,
+        "10": 248,
+        "11": 216,
+        "17": 268,
+        "31": 228
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 1158,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 2.2837088108062744,
+      "joint_accuracy": 0.24006908462867013,
+      "macro_f1": 0.06584197924980048,
+      "parameters": {
+        "move": {
+          "support": 1158,
+          "exact_accuracy": 0.2815198618307427,
+          "joint_accuracy": 0.24006908462867013
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 1158,
+      "group_support": {
+        "1": 198,
+        "10": 248,
+        "11": 216,
+        "17": 268,
+        "31": 228
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 1158,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 2.2611207962036133,
+      "joint_accuracy": 0.22711571675302245,
+      "macro_f1": 0.06619886137958428,
+      "parameters": {
+        "move": {
+          "support": 1158,
+          "exact_accuracy": 0.2607944732297064,
+          "joint_accuracy": 0.22711571675302245
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.005395024660021882,
+        "high": 0.03166666666666665,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.000971721153672625,
+        "high": 0.00025474297744032537,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.0066225165562914245,
+        "high": 0.03916211293260469,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.005395024660021882,
+        "high": 0.03166666666666665,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.015170264135919265,
+        "high": -0.005345924194675597,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "same_direction": {
+    "observations": {
+      "rows": 1198,
+      "group_support": {
+        "1": 259,
+        "10": 281,
+        "11": 216,
+        "17": 260,
+        "31": 182
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 1198,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.6946353912353516,
+      "joint_accuracy": 0.8414023372287145,
+      "macro_f1": 0.06719717064544652,
+      "parameters": {
+        "move": {
+          "support": 1198,
+          "exact_accuracy": 0.9373956594323873,
+          "joint_accuracy": 0.8414023372287145
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 1198,
+      "group_support": {
+        "1": 259,
+        "10": 281,
+        "11": 216,
+        "17": 260,
+        "31": 182
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 1198,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.6773192286491394,
+      "joint_accuracy": 0.8489148580968281,
+      "macro_f1": 0.06782739400012526,
+      "parameters": {
+        "move": {
+          "support": 1198,
+          "exact_accuracy": 0.9332220367278798,
+          "joint_accuracy": 0.8489148580968281
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.03142626913779212,
+        "high": 0.015280135823429575,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.0011286971425337605,
+        "high": -0.00018363448164092355,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.007009345794392607,
+        "high": 0.015397910980474525,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.03142626913779212,
+        "high": 0.015280135823429575,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.0678150973566447,
+        "high": 0.018696245882143803,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "no_previous_move": {
+    "observations": {
+      "rows": 6,
+      "group_support": {
+        "1": 1,
+        "10": 1,
+        "11": 0,
+        "17": 1,
+        "31": 3
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 6,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 1.7258397340774536,
+      "joint_accuracy": 0.3333333333333333,
+      "macro_f1": 0.06493506493506493,
+      "parameters": {
+        "move": {
+          "support": 6,
+          "exact_accuracy": 0.3333333333333333,
+          "joint_accuracy": 0.3333333333333333
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 6,
+      "group_support": {
+        "1": 1,
+        "10": 1,
+        "11": 0,
+        "17": 1,
+        "31": 3
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 6,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 1.7232335805892944,
+      "joint_accuracy": 0.3333333333333333,
+      "macro_f1": 0.06493506493506493,
+      "parameters": {
+        "move": {
+          "support": 6,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.3333333333333333
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.3,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.4667266795485825,
+        "high": 0.08510578526703105,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "zero_displacement": {
+    "observations": {
+      "rows": 0,
+      "group_support": {
+        "1": 0,
+        "10": 0,
+        "11": 0,
+        "17": 0,
+        "31": 0
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 0,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": null,
+      "joint_accuracy": null,
+      "macro_f1": null,
+      "parameters": {
+        "move": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 0,
+      "group_support": {
+        "1": 0,
+        "10": 0,
+        "11": 0,
+        "17": 0,
+        "31": 0
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 0,
+        "move": 0,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": null,
+      "joint_accuracy": null,
+      "macro_f1": null,
+      "parameters": {
+        "move": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "macro_f1": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "move_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "move_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      }
+    }
+  },
+  "near_static_obstacle": {
+    "observations": {
+      "rows": 7898,
+      "group_support": {
+        "1": 1811,
+        "10": 1467,
+        "11": 1047,
+        "17": 1985,
+        "31": 1588
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 427,
+        "blocked": 66,
+        "cancel": 1471,
+        "cast_0": 99,
+        "cast_1": 132,
+        "end": 2136,
+        "move": 1378,
+        "priority": 372,
+        "recall": 1701,
+        "shop": 19,
+        "submit": 22,
+        "teleport": 2,
+        "ward": 71
+      },
+      "joint_nll": 0.9792349338531494,
+      "joint_accuracy": 0.7646239554317549,
+      "macro_f1": 0.6065448796587435,
+      "parameters": {
+        "move": {
+          "support": 1378,
+          "exact_accuracy": 0.5878084179970973,
+          "joint_accuracy": 0.5224963715529753
+        },
+        "blocked": {
+          "support": 66,
+          "exact_accuracy": 0.12121212121212122,
+          "joint_accuracy": 0.045454545454545456
+        },
+        "attack": {
+          "support": 427,
+          "exact_accuracy": 0.9508196721311475,
+          "joint_accuracy": 0.8688524590163934
+        },
+        "cast_0": {
+          "support": 99,
+          "exact_accuracy": 0.9090909090909091,
+          "joint_accuracy": 0.7474747474747475
+        },
+        "cast_1": {
+          "support": 132,
+          "exact_accuracy": 0.5303030303030303,
+          "joint_accuracy": 0.36363636363636365
+        },
+        "ward": {
+          "support": 71,
+          "exact_accuracy": 0.22535211267605634,
+          "joint_accuracy": 0.08450704225352113
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8181818181818182
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 2,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 7898,
+      "group_support": {
+        "1": 1811,
+        "10": 1467,
+        "11": 1047,
+        "17": 1985,
+        "31": 1588
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 427,
+        "blocked": 66,
+        "cancel": 1471,
+        "cast_0": 99,
+        "cast_1": 132,
+        "end": 2136,
+        "move": 1378,
+        "priority": 372,
+        "recall": 1701,
+        "shop": 19,
+        "submit": 22,
+        "teleport": 2,
+        "ward": 71
+      },
+      "joint_nll": 1.0032442808151245,
+      "joint_accuracy": 0.7614585971131932,
+      "macro_f1": 0.6197042258265544,
+      "parameters": {
+        "move": {
+          "support": 1378,
+          "exact_accuracy": 0.56966618287373,
+          "joint_accuracy": 0.5108853410740203
+        },
+        "blocked": {
+          "support": 66,
+          "exact_accuracy": 0.13636363636363635,
+          "joint_accuracy": 0.0
+        },
+        "attack": {
+          "support": 427,
+          "exact_accuracy": 0.9508196721311475,
+          "joint_accuracy": 0.8665105386416861
+        },
+        "cast_0": {
+          "support": 99,
+          "exact_accuracy": 0.898989898989899,
+          "joint_accuracy": 0.6868686868686869
+        },
+        "cast_1": {
+          "support": 132,
+          "exact_accuracy": 0.5454545454545454,
+          "joint_accuracy": 0.4015151515151515
+        },
+        "ward": {
+          "support": 71,
+          "exact_accuracy": 0.23943661971830985,
+          "joint_accuracy": 0.04225352112676056
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.9090909090909091
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 2,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.0010066691833395813,
+        "high": 0.006986167388570608,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.025372202602326865,
+        "high": 0.008636591353462064,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.010038574691252179,
+        "high": 0.027942501383079302,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.0017659762316462257,
+        "high": 0.023174971031286185,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.047619047619047616,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "blocked_joint": {
+        "low": 0.0,
+        "high": 0.1076923076923077,
+        "valid_draws": 2000
+      },
+      "attack_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.022271714922048935,
+        "high": 0.026666666666666616,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": -0.021052631578947323,
+        "high": 0.04210526315789476,
+        "valid_draws": 2000
+      },
+      "cast_0_joint": {
+        "low": 0.0,
+        "high": 0.1188118811881188,
+        "valid_draws": 2000
+      },
+      "cast_1_exact": {
+        "low": -0.06666666666666665,
+        "high": 0.03508771929824561,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.0903225806451613,
+        "high": 0.0357142857142857,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": -0.06060606060606058,
+        "high": 0.047619047619047616,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": -0.03508771929824561,
+        "high": 0.125,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "submit_joint": {
+        "low": -0.4166666666666667,
+        "high": 0.07407407407407407,
+        "valid_draws": 2000
+      },
+      "altar_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "altar_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": 0.01064214243552053,
+        "high": 0.04520561767821907,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "away_from_static_obstacle": {
+    "observations": {
+      "rows": 6212,
+      "group_support": {
+        "1": 886,
+        "10": 1606,
+        "11": 1698,
+        "17": 982,
+        "31": 1040
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 558,
+        "blocked": 44,
+        "cancel": 1118,
+        "cast_0": 114,
+        "cast_1": 111,
+        "end": 1641,
+        "move": 984,
+        "priority": 195,
+        "recall": 1383,
+        "shop": 23,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 41
+      },
+      "joint_nll": 0.7120460271835327,
+      "joint_accuracy": 0.813586606567933,
+      "macro_f1": 0.5924938359396277,
+      "parameters": {
+        "move": {
+          "support": 984,
+          "exact_accuracy": 0.6514227642276422,
+          "joint_accuracy": 0.5772357723577236
+        },
+        "blocked": {
+          "support": 44,
+          "exact_accuracy": 0.18181818181818182,
+          "joint_accuracy": 0.045454545454545456
+        },
+        "attack": {
+          "support": 558,
+          "exact_accuracy": 0.96415770609319,
+          "joint_accuracy": 0.9050179211469535
+        },
+        "cast_0": {
+          "support": 114,
+          "exact_accuracy": 0.9210526315789473,
+          "joint_accuracy": 0.8333333333333334
+        },
+        "cast_1": {
+          "support": 111,
+          "exact_accuracy": 0.6306306306306306,
+          "joint_accuracy": 0.44144144144144143
+        },
+        "ward": {
+          "support": 41,
+          "exact_accuracy": 0.1951219512195122,
+          "joint_accuracy": 0.0975609756097561
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 6212,
+      "group_support": {
+        "1": 886,
+        "10": 1606,
+        "11": 1698,
+        "17": 982,
+        "31": 1040
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 558,
+        "blocked": 44,
+        "cancel": 1118,
+        "cast_0": 114,
+        "cast_1": 111,
+        "end": 1641,
+        "move": 984,
+        "priority": 195,
+        "recall": 1383,
+        "shop": 23,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 41
+      },
+      "joint_nll": 0.7353690266609192,
+      "joint_accuracy": 0.8092401802962009,
+      "macro_f1": 0.5748275739721124,
+      "parameters": {
+        "move": {
+          "support": 984,
+          "exact_accuracy": 0.6483739837398373,
+          "joint_accuracy": 0.5873983739837398
+        },
+        "blocked": {
+          "support": 44,
+          "exact_accuracy": 0.25,
+          "joint_accuracy": 0.06818181818181818
+        },
+        "attack": {
+          "support": 558,
+          "exact_accuracy": 0.967741935483871,
+          "joint_accuracy": 0.8799283154121864
+        },
+        "cast_0": {
+          "support": 114,
+          "exact_accuracy": 0.9122807017543859,
+          "joint_accuracy": 0.7368421052631579
+        },
+        "cast_1": {
+          "support": 111,
+          "exact_accuracy": 0.6396396396396397,
+          "joint_accuracy": 0.42342342342342343
+        },
+        "ward": {
+          "support": 41,
+          "exact_accuracy": 0.17073170731707318,
+          "joint_accuracy": 0.04878048780487805
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.004860878310425698,
+        "high": 0.01443464314354459,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": 0.005796225351411888,
+        "high": 0.031151654381243232,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.0117647058823529,
+        "high": 0.02570694087403591,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.026890756302520913,
+        "high": 0.015424164524421635,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.16666666666666666,
+        "high": 0.0,
+        "valid_draws": 1999
+      },
+      "blocked_joint": {
+        "low": -0.044444444444444446,
+        "high": 0.0,
+        "valid_draws": 1999
+      },
+      "attack_exact": {
+        "low": -0.013539651837524147,
+        "high": 0.008113590263691628,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.0063409541031602835,
+        "high": 0.044117647058823595,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.029126213592232997,
+        "valid_draws": 2000
+      },
+      "cast_0_joint": {
+        "low": 0.04958677685950419,
+        "high": 0.17757009345794394,
+        "valid_draws": 2000
+      },
+      "cast_1_exact": {
+        "low": -0.06060606060606066,
+        "high": 0.03252032520325199,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.03296703296703296,
+        "high": 0.06194690265486724,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": 0.0,
+        "high": 0.08695652173913043,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": 0.0,
+        "high": 0.08695652173913043,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": 0.020218089524074556,
+        "high": 0.04129731554060034,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "unknown_position": {
+    "observations": {
+      "rows": 329,
+      "group_support": {
+        "1": 56,
+        "10": 38,
+        "11": 81,
+        "17": 70,
+        "31": 84
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 319,
+        "move": 0,
+        "priority": 9,
+        "recall": 0,
+        "shop": 1,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.11947636306285858,
+      "joint_accuracy": 0.9696048632218845,
+      "macro_f1": 0.16417393248379164,
+      "parameters": {
+        "move": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 329,
+      "group_support": {
+        "1": 56,
+        "10": 38,
+        "11": 81,
+        "17": 70,
+        "31": 84
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 0,
+        "end": 319,
+        "move": 0,
+        "priority": 9,
+        "recall": 0,
+        "shop": 1,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 0.08038605749607086,
+      "joint_accuracy": 0.9696048632218845,
+      "macro_f1": 0.16417393248379164,
+      "parameters": {
+        "move": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.02742232027946312,
+        "high": 0.03699443154250941,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "move_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -1.2051403821009314,
+        "high": -0.06554751319510044,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "visible_set_changed": {
+    "observations": {
+      "rows": 2304,
+      "group_support": {
+        "1": 310,
+        "10": 487,
+        "11": 520,
+        "17": 567,
+        "31": 420
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 1,
+        "attack": 99,
+        "blocked": 24,
+        "cancel": 841,
+        "cast_0": 26,
+        "cast_1": 19,
+        "end": 216,
+        "move": 157,
+        "priority": 174,
+        "recall": 695,
+        "shop": 16,
+        "submit": 7,
+        "teleport": 1,
+        "ward": 28
+      },
+      "joint_nll": 1.1503900289535522,
+      "joint_accuracy": 0.7408854166666666,
+      "macro_f1": 0.5995440481238479,
+      "parameters": {
+        "move": {
+          "support": 157,
+          "exact_accuracy": 0.535031847133758,
+          "joint_accuracy": 0.45222929936305734
+        },
+        "blocked": {
+          "support": 24,
+          "exact_accuracy": 0.20833333333333334,
+          "joint_accuracy": 0.041666666666666664
+        },
+        "attack": {
+          "support": 99,
+          "exact_accuracy": 0.9595959595959596,
+          "joint_accuracy": 0.8383838383838383
+        },
+        "cast_0": {
+          "support": 26,
+          "exact_accuracy": 0.8076923076923077,
+          "joint_accuracy": 0.46153846153846156
+        },
+        "cast_1": {
+          "support": 19,
+          "exact_accuracy": 0.6842105263157895,
+          "joint_accuracy": 0.42105263157894735
+        },
+        "ward": {
+          "support": 28,
+          "exact_accuracy": 0.07142857142857142,
+          "joint_accuracy": 0.03571428571428571
+        },
+        "submit": {
+          "support": 7,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8571428571428571
+        },
+        "altar": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 2304,
+      "group_support": {
+        "1": 310,
+        "10": 487,
+        "11": 520,
+        "17": 567,
+        "31": 420
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 1,
+        "attack": 99,
+        "blocked": 24,
+        "cancel": 841,
+        "cast_0": 26,
+        "cast_1": 19,
+        "end": 216,
+        "move": 157,
+        "priority": 174,
+        "recall": 695,
+        "shop": 16,
+        "submit": 7,
+        "teleport": 1,
+        "ward": 28
+      },
+      "joint_nll": 1.2285075187683105,
+      "joint_accuracy": 0.7309027777777778,
+      "macro_f1": 0.599572836617965,
+      "parameters": {
+        "move": {
+          "support": 157,
+          "exact_accuracy": 0.4840764331210191,
+          "joint_accuracy": 0.36942675159235666
+        },
+        "blocked": {
+          "support": 24,
+          "exact_accuracy": 0.20833333333333334,
+          "joint_accuracy": 0.041666666666666664
+        },
+        "attack": {
+          "support": 99,
+          "exact_accuracy": 0.9696969696969697,
+          "joint_accuracy": 0.8484848484848485
+        },
+        "cast_0": {
+          "support": 26,
+          "exact_accuracy": 0.8076923076923077,
+          "joint_accuracy": 0.5
+        },
+        "cast_1": {
+          "support": 19,
+          "exact_accuracy": 0.5789473684210527,
+          "joint_accuracy": 0.47368421052631576
+        },
+        "ward": {
+          "support": 28,
+          "exact_accuracy": 0.17857142857142858,
+          "joint_accuracy": 0.03571428571428571
+        },
+        "submit": {
+          "support": 7,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 1.0
+        },
+        "altar": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.0004965243296921606,
+        "high": 0.018118735543562137,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.031131034602865038,
+        "high": 0.025164413416242093,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.018117897727272736,
+        "high": 0.09090909090909088,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": 0.027957658779576584,
+        "high": 0.12865497076023397,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.07692307692307691,
+        "high": 0.16666666666666663,
+        "valid_draws": 2000
+      },
+      "blocked_joint": {
+        "low": -0.07692307692307693,
+        "high": 0.16666666666666666,
+        "valid_draws": 2000
+      },
+      "attack_exact": {
+        "low": -0.026797889610389623,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.06603773584905659,
+        "high": 0.04467621100164181,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1999
+      },
+      "cast_0_joint": {
+        "low": -0.21428571428571425,
+        "high": 0.1875,
+        "valid_draws": 1999
+      },
+      "cast_1_exact": {
+        "low": -0.1333333333333333,
+        "high": 0.28,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.375,
+        "high": 0.18181818181818177,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": -0.2571428571428571,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1972
+      },
+      "submit_joint": {
+        "low": -1.0,
+        "high": 0.0,
+        "valid_draws": 1972
+      },
+      "altar_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1314
+      },
+      "altar_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1314
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": 0.029847807767566903,
+        "high": 0.1088379022330942,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "visible_set_unchanged": {
+    "observations": {
+      "rows": 12129,
+      "group_support": {
+        "1": 2442,
+        "10": 2623,
+        "11": 2306,
+        "17": 2469,
+        "31": 2289
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 1,
+        "attack": 886,
+        "blocked": 86,
+        "cancel": 1748,
+        "cast_0": 187,
+        "cast_1": 222,
+        "end": 3880,
+        "move": 2201,
+        "priority": 402,
+        "recall": 2389,
+        "shop": 27,
+        "submit": 15,
+        "teleport": 1,
+        "ward": 84
+      },
+      "joint_nll": 0.7861534357070923,
+      "joint_accuracy": 0.7999010635666585,
+      "macro_f1": 0.604464785638308,
+      "parameters": {
+        "move": {
+          "support": 2201,
+          "exact_accuracy": 0.6201726487960019,
+          "joint_accuracy": 0.5520218082689686
+        },
+        "blocked": {
+          "support": 86,
+          "exact_accuracy": 0.12790697674418605,
+          "joint_accuracy": 0.046511627906976744
+        },
+        "attack": {
+          "support": 886,
+          "exact_accuracy": 0.9582392776523702,
+          "joint_accuracy": 0.8950338600451467
+        },
+        "cast_0": {
+          "support": 187,
+          "exact_accuracy": 0.93048128342246,
+          "joint_accuracy": 0.839572192513369
+        },
+        "cast_1": {
+          "support": 222,
+          "exact_accuracy": 0.5675675675675675,
+          "joint_accuracy": 0.3963963963963964
+        },
+        "ward": {
+          "support": 84,
+          "exact_accuracy": 0.2619047619047619,
+          "joint_accuracy": 0.10714285714285714
+        },
+        "submit": {
+          "support": 15,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8
+        },
+        "altar": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 12129,
+      "group_support": {
+        "1": 2442,
+        "10": 2623,
+        "11": 2306,
+        "17": 2469,
+        "31": 2289
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 1,
+        "attack": 886,
+        "blocked": 86,
+        "cancel": 1748,
+        "cast_0": 187,
+        "cast_1": 222,
+        "end": 3880,
+        "move": 2201,
+        "priority": 402,
+        "recall": 2389,
+        "shop": 27,
+        "submit": 15,
+        "teleport": 1,
+        "ward": 84
+      },
+      "joint_nll": 0.7978752851486206,
+      "joint_accuracy": 0.7975100997609036,
+      "macro_f1": 0.6139891506647395,
+      "parameters": {
+        "move": {
+          "support": 2201,
+          "exact_accuracy": 0.6106315311222171,
+          "joint_accuracy": 0.5552021808268969
+        },
+        "blocked": {
+          "support": 86,
+          "exact_accuracy": 0.1744186046511628,
+          "joint_accuracy": 0.023255813953488372
+        },
+        "attack": {
+          "support": 886,
+          "exact_accuracy": 0.9593679458239278,
+          "joint_accuracy": 0.8769751693002258
+        },
+        "cast_0": {
+          "support": 187,
+          "exact_accuracy": 0.9197860962566845,
+          "joint_accuracy": 0.7433155080213903
+        },
+        "cast_1": {
+          "support": 222,
+          "exact_accuracy": 0.5900900900900901,
+          "joint_accuracy": 0.40540540540540543
+        },
+        "ward": {
+          "support": 84,
+          "exact_accuracy": 0.2261904761904762,
+          "joint_accuracy": 0.047619047619047616
+        },
+        "submit": {
+          "support": 15,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8666666666666667
+        },
+        "altar": {
+          "support": 1,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.0028923229485166013,
+        "high": 0.008979246082168602,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.027967277655758016,
+        "high": 0.01967304495696376,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.0034202650705429383,
+        "high": 0.0242587601078168,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.0201162270898525,
+        "high": 0.014318706697459604,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.10909090909090907,
+        "high": -0.01010101010101011,
+        "valid_draws": 2000
+      },
+      "blocked_joint": {
+        "low": 0.0,
+        "high": 0.07272727272727272,
+        "valid_draws": 2000
+      },
+      "attack_exact": {
+        "low": -0.007255139056831839,
+        "high": 0.004672897196261627,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.0012360939431397266,
+        "high": 0.03340292275574119,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.023391812865497075,
+        "valid_draws": 2000
+      },
+      "cast_0_joint": {
+        "low": 0.05641025641025643,
+        "high": 0.1595092024539877,
+        "valid_draws": 2000
+      },
+      "cast_1_exact": {
+        "low": -0.05882352941176461,
+        "high": 0.012711864406779627,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.041456174438687377,
+        "high": 0.02966101694915252,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": 0.0,
+        "high": 0.06306306306306306,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": -0.013718483224141353,
+        "high": 0.12631578947368421,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "submit_joint": {
+        "low": -0.3083333333333333,
+        "high": 0.125,
+        "valid_draws": 2000
+      },
+      "altar_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "altar_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": 0.006278569539294843,
+        "high": 0.025665855185296814,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "visible_history_unavailable": {
+    "observations": {
+      "rows": 6,
+      "group_support": {
+        "1": 1,
+        "10": 1,
+        "11": 0,
+        "17": 1,
+        "31": 3
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 2,
+        "end": 0,
+        "move": 4,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 1.7970176935195923,
+      "joint_accuracy": 0.5,
+      "macro_f1": 0.08928571428571429,
+      "parameters": {
+        "move": {
+          "support": 4,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.5
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 2,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.5
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "control": {
+      "rows": 6,
+      "group_support": {
+        "1": 1,
+        "10": 1,
+        "11": 0,
+        "17": 1,
+        "31": 3
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 0,
+        "blocked": 0,
+        "cancel": 0,
+        "cast_0": 0,
+        "cast_1": 2,
+        "end": 0,
+        "move": 4,
+        "priority": 0,
+        "recall": 0,
+        "shop": 0,
+        "submit": 0,
+        "teleport": 0,
+        "ward": 0
+      },
+      "joint_nll": 1.7118396759033203,
+      "joint_accuracy": 0.5,
+      "macro_f1": 0.1183673469387755,
+      "parameters": {
+        "move": {
+          "support": 4,
+          "exact_accuracy": 0.75,
+          "joint_accuracy": 0.5
+        },
+        "blocked": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "attack": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_0": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "cast_1": {
+          "support": 2,
+          "exact_accuracy": 0.5,
+          "joint_accuracy": 0.5
+        },
+        "ward": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.29999999999999993,
+        "high": 0.6666666666666667,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.058750773036487326,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.5,
+        "high": 0.0,
+        "valid_draws": 1983
+      },
+      "move_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1983
+      },
+      "blocked_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "blocked_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "attack_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_0_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "cast_1_exact": {
+        "low": -1.0,
+        "high": 1.0,
+        "valid_draws": 1855
+      },
+      "cast_1_joint": {
+        "low": -1.0,
+        "high": 1.0,
+        "valid_draws": 1855
+      },
+      "ward_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "ward_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "joint_loss_reduction": {
+        "low": -0.42460942116442624,
+        "high": 0.11896182158357316,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "new_own_turn": {
+    "observations": {
+      "rows": 4090,
+      "group_support": {
+        "1": 831,
+        "10": 831,
+        "11": 800,
+        "17": 831,
+        "31": 797
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 309,
+        "blocked": 1,
+        "cancel": 2573,
+        "cast_0": 7,
+        "cast_1": 38,
+        "end": 791,
+        "move": 218,
+        "priority": 121,
+        "recall": 4,
+        "shop": 26,
+        "submit": 0,
+        "teleport": 1,
+        "ward": 1
+      },
+      "joint_nll": 0.5839096903800964,
+      "joint_accuracy": 0.8775061124694377,
+      "macro_f1": 0.467316188755266,
+      "parameters": {
+        "move": {
+          "support": 218,
+          "exact_accuracy": 0.6376146788990825,
+          "joint_accuracy": 0.4908256880733945
+        },
+        "blocked": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "attack": {
+          "support": 309,
+          "exact_accuracy": 0.970873786407767,
+          "joint_accuracy": 0.9158576051779935
+        },
+        "cast_0": {
+          "support": 7,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.42857142857142855
+        },
+        "cast_1": {
+          "support": 38,
+          "exact_accuracy": 0.7105263157894737,
+          "joint_accuracy": 0.5
+        },
+        "ward": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 4090,
+      "group_support": {
+        "1": 831,
+        "10": 831,
+        "11": 800,
+        "17": 831,
+        "31": 797
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 0,
+        "attack": 309,
+        "blocked": 1,
+        "cancel": 2573,
+        "cast_0": 7,
+        "cast_1": 38,
+        "end": 791,
+        "move": 218,
+        "priority": 121,
+        "recall": 4,
+        "shop": 26,
+        "submit": 0,
+        "teleport": 1,
+        "ward": 1
+      },
+      "joint_nll": 0.5607661604881287,
+      "joint_accuracy": 0.8797066014669926,
+      "macro_f1": 0.48444557905265045,
+      "parameters": {
+        "move": {
+          "support": 218,
+          "exact_accuracy": 0.573394495412844,
+          "joint_accuracy": 0.42201834862385323
+        },
+        "blocked": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "attack": {
+          "support": 309,
+          "exact_accuracy": 0.9773462783171522,
+          "joint_accuracy": 0.9093851132686084
+        },
+        "cast_0": {
+          "support": 7,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.7142857142857143
+        },
+        "cast_1": {
+          "support": 38,
+          "exact_accuracy": 0.5789473684210527,
+          "joint_accuracy": 0.5
+        },
+        "ward": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        },
+        "submit": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "altar": {
+          "support": 0,
+          "exact_accuracy": null,
+          "joint_accuracy": null
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": -0.010348977135980708,
+        "high": 0.006698214520189498,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.040111982226496035,
+        "high": 0.016699833430423028,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": 0.03296703296703296,
+        "high": 0.09225092250922506,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": 0.027472527472527486,
+        "high": 0.09842519685039364,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1314
+      },
+      "blocked_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1314
+      },
+      "attack_exact": {
+        "low": -0.02033898305084747,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.014184397163120588,
+        "high": 0.03728813559322042,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1999
+      },
+      "cast_0_joint": {
+        "low": -0.8,
+        "high": 0.6666666666666667,
+        "valid_draws": 1999
+      },
+      "cast_1_exact": {
+        "low": 0.02857142857142858,
+        "high": 0.25,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.09999999999999998,
+        "high": 0.13157894736842113,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1314
+      },
+      "ward_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1314
+      },
+      "submit_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "submit_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_exact": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "altar_joint": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": -0.09839270071329853,
+        "high": -0.01036545091240626,
+        "valid_draws": 2000
+      }
+    }
+  },
+  "same_own_turn": {
+    "observations": {
+      "rows": 10343,
+      "group_support": {
+        "1": 1921,
+        "10": 2279,
+        "11": 2026,
+        "17": 2205,
+        "31": 1912
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 676,
+        "blocked": 109,
+        "cancel": 16,
+        "cast_0": 206,
+        "cast_1": 203,
+        "end": 3305,
+        "move": 2140,
+        "priority": 455,
+        "recall": 3080,
+        "shop": 17,
+        "submit": 22,
+        "teleport": 1,
+        "ward": 111
+      },
+      "joint_nll": 0.9472650289535522,
+      "joint_accuracy": 0.7560669051532437,
+      "macro_f1": 0.5661454497907161,
+      "parameters": {
+        "move": {
+          "support": 2140,
+          "exact_accuracy": 0.6121495327102804,
+          "joint_accuracy": 0.5509345794392523
+        },
+        "blocked": {
+          "support": 109,
+          "exact_accuracy": 0.14678899082568808,
+          "joint_accuracy": 0.045871559633027525
+        },
+        "attack": {
+          "support": 676,
+          "exact_accuracy": 0.9526627218934911,
+          "joint_accuracy": 0.8772189349112426
+        },
+        "cast_0": {
+          "support": 206,
+          "exact_accuracy": 0.912621359223301,
+          "joint_accuracy": 0.8058252427184466
+        },
+        "cast_1": {
+          "support": 203,
+          "exact_accuracy": 0.5517241379310345,
+          "joint_accuracy": 0.3793103448275862
+        },
+        "ward": {
+          "support": 111,
+          "exact_accuracy": 0.21621621621621623,
+          "joint_accuracy": 0.09009009009009009
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.8181818181818182
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "control": {
+      "rows": 10343,
+      "group_support": {
+        "1": 1921,
+        "10": 2279,
+        "11": 2026,
+        "17": 2205,
+        "31": 1912
+      },
+      "per_action_support": {
+        "<unknown>": 0,
+        "altar": 2,
+        "attack": 676,
+        "blocked": 109,
+        "cancel": 16,
+        "cast_0": 206,
+        "cast_1": 203,
+        "end": 3305,
+        "move": 2140,
+        "priority": 455,
+        "recall": 3080,
+        "shop": 17,
+        "submit": 22,
+        "teleport": 1,
+        "ward": 111
+      },
+      "joint_nll": 0.9875644445419312,
+      "joint_accuracy": 0.7501691965580586,
+      "macro_f1": 0.563602396002752,
+      "parameters": {
+        "move": {
+          "support": 2140,
+          "exact_accuracy": 0.6051401869158879,
+          "joint_accuracy": 0.5551401869158878
+        },
+        "blocked": {
+          "support": 109,
+          "exact_accuracy": 0.1834862385321101,
+          "joint_accuracy": 0.027522935779816515
+        },
+        "attack": {
+          "support": 676,
+          "exact_accuracy": 0.9526627218934911,
+          "joint_accuracy": 0.8579881656804734
+        },
+        "cast_0": {
+          "support": 206,
+          "exact_accuracy": 0.9029126213592233,
+          "joint_accuracy": 0.7135922330097088
+        },
+        "cast_1": {
+          "support": 203,
+          "exact_accuracy": 0.5911330049261084,
+          "joint_accuracy": 0.39408866995073893
+        },
+        "ward": {
+          "support": 111,
+          "exact_accuracy": 0.21621621621621623,
+          "joint_accuracy": 0.04504504504504504
+        },
+        "submit": {
+          "support": 22,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.9090909090909091
+        },
+        "altar": {
+          "support": 2,
+          "exact_accuracy": 1.0,
+          "joint_accuracy": 0.0
+        },
+        "teleport": {
+          "support": 1,
+          "exact_accuracy": 0.0,
+          "joint_accuracy": 0.0
+        }
+      }
+    },
+    "paired_intervals": {
+      "joint_accuracy": {
+        "low": 0.0010550546710147435,
+        "high": 0.01206651794767788,
+        "valid_draws": 2000
+      },
+      "macro_f1": {
+        "low": -0.09240306887103045,
+        "high": 0.039966975207992084,
+        "valid_draws": 2000
+      },
+      "move_exact": {
+        "low": -0.0028829752785781725,
+        "high": 0.017703349282296554,
+        "valid_draws": 2000
+      },
+      "move_joint": {
+        "low": -0.01962494548626248,
+        "high": 0.011961722488038284,
+        "valid_draws": 2000
+      },
+      "blocked_exact": {
+        "low": -0.0792079207920792,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "blocked_joint": {
+        "low": -0.015873015873015872,
+        "high": 0.08860759493670886,
+        "valid_draws": 2000
+      },
+      "attack_exact": {
+        "low": -0.0075987841945288626,
+        "high": 0.006749142292260248,
+        "valid_draws": 2000
+      },
+      "attack_joint": {
+        "low": -0.003039513677811634,
+        "high": 0.034946236559139754,
+        "valid_draws": 2000
+      },
+      "cast_0_exact": {
+        "low": 0.0,
+        "high": 0.021164021164021163,
+        "valid_draws": 2000
+      },
+      "cast_0_joint": {
+        "low": 0.06302521008403361,
+        "high": 0.14210526315789473,
+        "valid_draws": 2000
+      },
+      "cast_1_exact": {
+        "low": -0.0547945205479452,
+        "high": -0.025906735751295318,
+        "valid_draws": 2000
+      },
+      "cast_1_joint": {
+        "low": -0.03500000000000003,
+        "high": 0.005507237094914265,
+        "valid_draws": 2000
+      },
+      "ward_exact": {
+        "low": -0.022727272727272735,
+        "high": 0.023622047244094502,
+        "valid_draws": 2000
+      },
+      "ward_joint": {
+        "low": -0.010427989130434787,
+        "high": 0.09734513274336283,
+        "valid_draws": 2000
+      },
+      "submit_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 2000
+      },
+      "submit_joint": {
+        "low": -0.4166666666666667,
+        "high": 0.07407407407407407,
+        "valid_draws": 2000
+      },
+      "altar_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "altar_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1836
+      },
+      "teleport_exact": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "teleport_joint": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_draws": 1344
+      },
+      "joint_loss_reduction": {
+        "low": 0.032838696232971976,
+        "high": 0.050280679162506635,
+        "valid_draws": 2000
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "common_tensor_count": 42,
+  "common_tensor_mismatches": [],
+  "normalization_and_config_identical": true,
+  "optimizer_settings_identical": true,
+  "initial_optimizer_state_empty": true,
+  "initial_numpy_rng_identical": true,
+  "initial_torch_rng_identical": false,
+  "completed_common_rounds": [
+    {
+      "round": 1,
+      "H00_updates": 1747,
+      "H01_updates": 1747,
+      "numpy_rng_equal": true
+    },
+    {
+      "round": 2,
+      "H00_updates": 3484,
+      "H01_updates": 3484,
+      "numpy_rng_equal": true
+    },
+    {
+      "round": 3,
+      "H00_updates": 5226,
+      "H01_updates": 5226,
+      "numpy_rng_equal": true
+    },
+    {
+      "round": 4,
+      "H00_updates": 6969,
+      "H01_updates": 6969,
+      "numpy_rng_equal": true
+    }
+  ],
+  "bindings": {
+    ".cambc\\action-predictor\\v30\\runs\\H00\\initial.pt": "6cf5ce4817bc73e4546c64791b62de4d38b36b17fb60a279ec25451a0534d670",
+    ".cambc\\action-predictor\\v30\\runs\\H01\\initial.pt": "7121a91457b66886aae12dc95dbe9ee3f070e688f34688d5fffacbdf72a05839"
+  },
+  "source_sha256": "5eac6ba14479877c1b561d181a8783b159fafcb690a26e24f29f0c1d23de7c3e",
+  "scope": "Actual initial checkpoints and already completed common schedules. Architecture-specific tensors and final Torch RNG differ by architecture; common tensors and NumPy sampling must match. No dropout/Torch random sampling in either frozen training loop. This is not output equality, performance, or identical realized gradient influence.",
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0
+}

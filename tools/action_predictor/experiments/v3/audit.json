@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "bundles_verified": 170,
+  "unique_payloads": 170,
+  "cross_split_duplicate_payloads": 0,
+  "within_split_duplicate_payloads": 0,
+  "decisions_verified": {
+    "train": 73568,
+    "validation": 14439,
+    "test": 15604
+  },
+  "turns_verified": {
+    "train": 20480,
+    "validation": 4096,
+    "test": 4416
+  },
+  "whole_groups_verified": 34,
+  "checks": [
+    "Actual unzipped replay SHA256, not ZIP container or claimed identity",
+    "Every PRE cursor strictly precedes its recorded root; actor/phase/label ownership",
+    "Every saved feature equals PRE-only whitelist encoding, every label equals recorded event",
+    "Exact sequence boundaries and chronological action order; no future label inputs",
+    "Original reserved games excluded; original whole-group partitions preserved"
+  ],
+  "limitation": "Snapshot provenance relies on hash-verified prior extraction and its read-before-replayNext implementation; no new game simulation."
+}

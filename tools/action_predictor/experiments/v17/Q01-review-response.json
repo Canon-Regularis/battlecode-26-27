@@ -1,0 +1,37 @@
+{
+  "review_thread": "<t3-thread://v2/7309f52a-c52b-4287-b6af-6acae8ea63d1/thread:delegated-task:command%3Amcp%3A22cf9f30-b02b-4db9-bfaf-725c974133bd%3Adelegate-task%3Afish-v17-q01-goal-attribution-review-20261108>",
+  "review_model": "gpt-6.1-sol",
+  "reasoning_effort": "xhigh",
+  "reviewed_head": "e2bcbdc67c22254525cb717fb5804c5d3fe26c5b",
+  "verdict": "Counts and107completion bindings independently reproduced. Weak measured projection dependence is established; its cause remains unidentified. No promotion or future-fit approval.",
+  "responses": [
+    {
+      "finding": "The existing executor already scores tiles with learned query-candidate interactions; weak dependence is not proof of an injection bottleneck.",
+      "action": "Accepted. Supersedes the stronger 'demonstrated weak injection path' wording in frozen Q01-REPORT.md and the old research-log entry. The finding is weak measured dependence through this trained projection. No new scorer architecture is justified yet. The next comparison reuses the existing readout.",
+      "status": "corrected additively"
+    },
+    {
+      "finding": "Independently trainable upstream forecasters/filtering confound a dynamic-versus-mean geometry comparison.",
+      "action": "Accepted. Freeze a prospectively named L02 upstream checkpoint, its representations, forecasts, priors and baseline causal filtering for both arms. Train only identical copies of the existing execution readout and conditioning projection. This is a readout probe, not independently retrained persistent-policy evidence.",
+      "status": "next protocol requirement"
+    },
+    {
+      "finding": "Original tests use references equal to the only example in each stratum; skipped geometry/uncertainty replacements still pass.",
+      "action": "Retain the hash-bound original test file. Add test_pathway_inputs_v2.py with four unequal examples per availability stratum, nonzero perturbation assertions, independently reconstructed contexts, explicit mutation rejection and state/mean preservation.",
+      "status": "new tests added; execution receipt follows separately"
+    },
+    {
+      "finding": "Predicted achieved-position forecasts are not proven to contain incremental useful command information.",
+      "action": "Accepted. Evaluate TRAIN fitting and DEV transfer using command NLL, exact conditional/joint direction changes, rank/probability, continuation and category guards. Positive results would concern this causal channel, not Fish intent; negative results would not reject strategic goals.",
+      "status": "interpretation and next protocol requirement"
+    },
+    {
+      "finding": "Original producer lost forecast arrays; recovery cannot establish byte identity with lost arrays.",
+      "action": "Keep failure/recovery provenance and original failed criterion. Claim only recovery-baseline parity against older retained archives. Later numerical helper work at bc6e22c/bec8bcd is outside this review and does not change retained predictors or Q01's failed check.",
+      "status": "preserved"
+    }
+  ],
+  "new_fits": 0,
+  "reserved_opened": 0,
+  "promoted": false
+}

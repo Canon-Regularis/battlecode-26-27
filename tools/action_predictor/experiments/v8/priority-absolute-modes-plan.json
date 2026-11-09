@@ -1,0 +1,41 @@
+{
+  "id": "P03",
+  "seed": 26,
+  "use_inputs": true,
+  "hypothesis": "A multimodal integer output may improve exact priority over single-logistic P02; benefit is not assumed.",
+  "sources_sha256": "315700fca54a1c3794af22b391aea360f68fca6b017379c3fa9124b5e2394649",
+  "vocabulary_sha256": "1ffd225d385248cb4fffc5341cfcd1588f43a5a9ceeec8365994a998ec5e3acb",
+  "legacy_manifest_sha256": "27df021f538d3ddb5c84b01bdc95ce4ddbdb9adfaa1090ff153002bd1eccc38d",
+  "context_ready_sha256": "de6944c055b5a7d0c834fd4451c2b2f0e92f66692a362622813046f9e13441ba",
+  "success_definition_sha256": "ebc678d209b91d73eef4e56550c8e16328e3391b880d3a91eb63aac4f8b42e06",
+  "P02_report_sha256": "ecddce3cf0a2266b2dd31d0644919932c18c175f450b1595a7874f69f4e07f7e",
+  "baseline_predictions_sha256": "b5f8bf4f7ab19b7bdf83a980895c7c767b0586416d3b6ebca9208b6c0cf075c4",
+  "train_sha256": "39386010575ad30add064fdae750680f34cfcc732c4fd00fb657875ff4c61ffb",
+  "validation_sha256": "01a15e1e10f68922334a5367bb825c8ef9bbe228ae7a9e86e92aae9609b204ed",
+  "rows": {
+    "train": 433071,
+    "validation": 14439
+  },
+  "architecture": "Linear(167,K+3): K training-only exact absolute-value point masses, one mixture fallback weight, two learned logistic parameters. Same frozen M01 context and causal39 extra channels; no hidden-layer or GRU change.",
+  "normalization": "Reuse original train-only M01 and V3 recovered-input normalization unchanged.",
+  "initialization": "Mode weights zero, bias log(.95*training_frequency); fallback gate .05; fallback location/scale warm-start M01, extra columns zero. Preserve RNG so seed26 shuffles match P01/P02.",
+  "distribution": "Normalized categorical mixture over K integer point masses and a normalized integer-bin logistic fallback over all integers; stable float64 log masses, no label/range clipping. Decode global maximum over vocabulary union rounded fallback location.",
+  "loss": "Unweighted observed priority NLL SUM divided by FULL minibatch length, same frozen action/spatial loss accounting; no augmentation, sampling or class-weight changes.",
+  "training": {
+    "max_epochs": 35,
+    "patience": 6,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "history_hidden": 64,
+    "gradient_clip": 1.0,
+    "threads": 4
+  },
+  "checkpoint": "Original observed full-development joint NLL, minimum improvement0.0001, patience6, max35epochs; epochzero reported but not selectable. No exact-accuracy selection.",
+  "compute": "Compute gradients only for priority rows, with original full-minibatch denominator. Linear outputs K+3 versus2; report trainable parameters, calls/updates, supervised examples, epochs and elapsed time. No automatic repeats.",
+  "exploratory_progress_gate": "At least5 percentage points higher exact priority than P02, lower priority NLL, positive joint-priority change, and identical nonpriority paths. Exploratory next-study criterion only, not replacement or original success threshold.",
+  "ultimate_goal": "All immutable category-wise90%, original macroF1/movement/loss/targeting guards and three-seed requirements remain unchanged. Shops retain unassessed strict failures. Frozen priority actions cap joint at343/576.",
+  "budget": "ONE substantive fit P03 only. Fresh pre-fit review and bound approval required; fresh review after fit. No immediate repeat or residual-branch test authorized by this plan.",
+  "reserved": "Both75-game partitions sealed; old exposed test unused; no downloads/matches/botchanges/deployments/PR from this runner."
+}

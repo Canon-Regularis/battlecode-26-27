@@ -1,0 +1,7 @@
+{
+  "kind": "posthoc diagnostic, not a frozen primary treatment",
+  "purpose": "Separate learned score ranking from DEV hard-command gain obtainable by predicting no wards.",
+  "rule": "Replace P(ward) by fixed natural TRAIN prior2192/288801 and proportionally renormalize nonward types, retain original conditional heads; same hierarchical decoder. No threshold/model selection. Compare fixed archived T00 commands and observed loss.",
+  "rows": "All original TRAIN433071 andDEV14439, naturalTRAIN separately. No exclusions, no reserved data.",
+  "new_fits": 0
+}

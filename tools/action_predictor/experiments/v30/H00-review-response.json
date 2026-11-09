@@ -1,0 +1,29 @@
+{
+  "review_bindings": {
+    "tools\\action_predictor\\experiments\\v30\\H00-review.json": "284e251eca3508913b5ada4b3b4c3565ef42599a183db9453ab97a0078e1509c",
+    "tools\\action_predictor\\experiments\\v30\\H00-review-delegation.json": "e9a4d1f42f351814d16ccb7a8cddf254d0d59acef68c6b2f6d9400979fca3f10",
+    "tools\\action_predictor\\experiments\\v30\\H00-review-delegation-launch.json": "3636ac0c0aac796f1a3ce719f9d89997bd51b14d7fa4de691857a343832d5f13",
+    "tools\\action_predictor\\experiments\\v30\\H00-review-request.json": "51dc92f8ae42dc667f19a5c52eb49bbe69226b32d6cba4578b3af417e759f500"
+  },
+  "reviewed_checkpoint_sha256": "6be14700c51bb5f181ae4d5caeddc3acad5de7d74669f9b6b975b4429890b587",
+  "findings_resolved": {
+    "history_path": true,
+    "exit_timepoint": true,
+    "combined_architecture_attribution": true,
+    "sequence_limits": true,
+    "review_entry_gate": true
+  },
+  "implementation": {
+    "tools\\action_predictor\\segment_policy\\history_filter.py": "dc527da440a8711c9d9915056082d4ee514bb2afac1ac55c86a3932bb648df25",
+    "tools\\action_predictor\\segment_policy\\history_model.py": "438c524bb8259ad9704c14ad7d4eba4b0dc260340b5f1916aa3a4c9bb678d40b",
+    "tools\\action_predictor\\segment_policy\\history_inference.py": "443f92bbeb4a42fc1adb629f42c699c14a5de9af6b7b4bb4c78a25a2c3a46e14",
+    "tools\\action_predictor\\segment_policy\\hierarchy_assessment.py": "bf496d8594988ed1216e7077640d3b9683f7e4d751e451e96dd68900f4e4477c",
+    "tools\\action_predictor\\segment_policy\\test_history.py": "649e4cb43583a580a48915e4fbbbdbdd2ded9609511743c9a36bcbadb18fe499",
+    "tools\\action_predictor\\segment_policy\\test_hierarchy_entry.py": "282c79cdc0ab89d1d602b136b506402351d452d7b724d7adaba0e55c0a6a5fd0"
+  },
+  "interpretation": "Parent response to actual fresh review, not reviewer-authored certification or future-result approval. Live preflight verifies code, matching contract and tests before optimizer construction.",
+  "parameter_correction": "Expanding all64initial/12transition/4hazard outputs by21would add1680weights, not1616. Initial64x21columns alwayszeroonreset are omitted; only16x21=336dynamics weights added.",
+  "evidence_limits": "H00 valid negative; no HSMM result yet. The contrast measures a combined architecture. Only163TRAINruns/3202rows reach16roots; DEVmax15and27.3%resets;8nodeBPTT limits temporalcredit. States can alternate similar execution despite nonselftransitions.",
+  "new_fits": 0,
+  "reserved_opened": 0
+}

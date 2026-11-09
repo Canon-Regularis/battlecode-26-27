@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\shared_readout_fit.py": "56c8472874ad09c151f7cf422d9708a4aea396ae7946db88dde8b5eb7de8b985",
+    "tools\\action_predictor\\behavior_segments\\shared_readout_predictor.py": "087e445746aec67bbacec5449c61b2045558f0dd30bd7eb4f48fc52197c31d13",
+    "tools\\action_predictor\\behavior_segments\\test_shared_readout.py": "6f946ffa39f09de708de98bfc6c987fc3123293b66bf2effbc6366ac3e6cfcca"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v70\\plan.json": "abfd070d2fd760f0387739b284122fb3fc46c75bf994ba94ad5c089cdc6ca5da",
+    "tools\\action_predictor\\experiments\\v70\\cache.json": "9e57b0727b6d4a9d17b79825dddd3d1b005a8b98df458bcba4c7657774e1d690",
+    "tools\\action_predictor\\experiments\\v70\\fit.json": "c021b1a0321e2190fda03507f500f6b31c62c09ed3f947398e48008e6e4d4021",
+    "tools\\action_predictor\\experiments\\v70\\selection.json": "76da70c4e08d874fea7c490bbcaf6fa2eec8f759dcf00809a0a90ef980e53789",
+    "tools\\action_predictor\\experiments\\v70\\result.json": "0b78c49507bd9b31c8e34c868978476fe5e128406e1f8fbedad1b1a0639d0179",
+    "tools\\action_predictor\\experiments\\v70\\verification.json": "c2e3a47c32c217863487f5cd1ea8de2e0ea87114b119e13d75d309b073e0ed77",
+    "tools\\action_predictor\\experiments\\v70\\weight-inspection.json": "d96018eb28c4e1f8643eadedd5df3c8992f8486f27da610b45eab7df7edef7d2"
+  },
+  "seed": 72001,
+  "epochs": 8,
+  "every": 4,
+  "lr": 0.003,
+  "batch": 128,
+  "clip": 5.0,
+  "anchor": 0.1,
+  "margin": 0.25,
+  "fit_seconds_cap": 600,
+  "intervention": "Freeze all V70 feature/goal/backbone weights. Optimize only64 final movement readout weights from each matching selected V70 goal checkpoint. Keep shared output bias fixed. Likelihood control:meanCE plus0.1sum((w-w0)^2). Ranking treatment adds meanReLU(0.25+max_supported_wrong_logit-gold_logit). Singleton support contributes zero hinge. No new parameters or runtime branches. Adam,no weight decay.",
+  "matched": "Same starting weights,rows,permutations,batches,optimizer,8passes and checkpoints0/4/8. All12318fitting movements,whole-game folds,no future-goal inputs. Frozen hidden activations are cached before weight fitting.",
+  "selection": "Select each arm independently by highest count on1997canonical held fitting movements,subject to NLL<=V59direct+0.01 and neither active/absent cohort loses>1point vs V70 initial. Tie lowerNLL,then earlier epoch. Epoch0 eligible. One full refit per arm. No evaluation selection.",
+  "success": "Ranking must exceed V70original311,V59direct318,and matchedlikelihood on unchanged513moves;NLL<=direct+0.01;neither goal-present/absent loses>2points vsdirect. All required.80percent requires411/513. No promotion.",
+  "interpretation": "Tests whether a ranking-sensitive64weight readout update improves decisions; declining likelihood alone did not. It does not establish an objective mismatch as the causal bottleneck. Reused games,inherited exposure,in-sample selector predictions,one seed,observed histories remain. No subagents."
+}
