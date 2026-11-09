@@ -1,0 +1,46 @@
+{
+  "checkpoint_sha256": "511a36f1b3f265319677ef1ca9d2dd1fee87f407486c0678e9dba83f3428b326",
+  "parameters": 274,
+  "nonzero_coefficients": 189,
+  "weight_norm": 0.6509850025177002,
+  "bias": -0.07847493141889572,
+  "largest_normalized_coefficients": [
+    {
+      "index": 262,
+      "coefficient": -0.3076396882534027
+    },
+    {
+      "index": 94,
+      "coefficient": 0.18348124623298645
+    },
+    {
+      "index": 271,
+      "coefficient": -0.13946226239204407
+    },
+    {
+      "index": 97,
+      "coefficient": 0.108131542801857
+    },
+    {
+      "index": 251,
+      "coefficient": -0.09994935244321823
+    },
+    {
+      "index": 116,
+      "coefficient": 0.09917359054088593
+    },
+    {
+      "index": 79,
+      "coefficient": -0.0989382266998291
+    },
+    {
+      "index": 109,
+      "coefficient": 0.09622029215097427
+    }
+  ],
+  "finite": true,
+  "updates": 864,
+  "clipped_updates": 0,
+  "gradient_norm_max": 4.23349142074585,
+  "meaning": "Coefficients act on standardized/clipped correlated features; magnitude is not a causal attribution. Index262 is baseline conditional movement log probability,271 is V59 entropy; indices below253 are canonical PRE fields. Both expert checkpoints stay frozen."
+}
