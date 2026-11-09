@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\universal_execution_fit.py": "8c3469a75413dbec9cd84c46f7fc0bb2e21b0666caff54aeb997063cd270888d",
+    "tools\\action_predictor\\behavior_segments\\universal_execution_predictor.py": "bb42ca558e83f27a0da652fa90cdffc726d683a9509168902572dee2c3be413d",
+    "tools\\action_predictor\\behavior_segments\\test_universal_execution.py": "2a0507e6a4c3238327d9f58d8c9cf811e7c62c4a80672ab0b3daf100de4a65f7"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v67\\plan.json": "c52508f8250fb4a62f5f108a01a9ebc52a0d41399fea7324a28542ddbb60478e",
+    "tools\\action_predictor\\experiments\\v67\\cache.json": "d47e1529bc1dd23b5e94765daccd57f33a34e688280b8dbf8fbeecd9b4020013",
+    "tools\\action_predictor\\experiments\\v67\\selection.json": "f342e7fa0817595bb9a105f9c24e8b6c68389b7625a65443634bd63e87790427",
+    "tools\\action_predictor\\experiments\\v67\\result.json": "3670e80005bd7755d997f0301472d471e4cf704178a780ea5a8fc576ad65221f",
+    "tools\\action_predictor\\experiments\\v67\\verification.json": "b5f90c30f1ff1700922b19c9a11247d2709ef363ea41a89c9dba2f4295ca22b0",
+    "tools\\action_predictor\\experiments\\v66\\plan.json": "564b560151fa823f4dde4ef770ed3c88f3124e460ad75e87bc67fc3316e5927c",
+    "tools\\action_predictor\\experiments\\v66\\cache.json": "70738f6f447b727e81cb4fade0ba7efee02d2853bf26daeea22d43861f188590",
+    "tools\\action_predictor\\experiments\\v66\\fit.json": "1bb0c36cd871968af310f51456bbe8980a5eecfb093ae8537b72f61ea9bcbcfe",
+    "tools\\action_predictor\\experiments\\v66\\verification.json": "65a14229fcc817061832857ea019663c476a66eb0f0e433df2de48d345af78f6"
+  },
+  "seed": 66001,
+  "epochs": 16,
+  "every": 4,
+  "lr": 0.001,
+  "batch": 128,
+  "clip": 5.0,
+  "fit_seconds_cap": 600,
+  "intervention": "Freeze V59 and calibrated V67 goal executor/selector. Fresh 8833-parameter goal-blind residual learns all 12318 expanded fitting movement roots once per epoch, with no future-goal eligibility or horizon duplication. At inference use this fallback only when no current goal is selected. Keep active-goal outputs unchanged.",
+  "selection": "Four existing fitting-game folds. Train on expanded other24games; score hybrid predicted-goal execution on all1997 canonical held fitting moves. Select highest count among epochs0,4,8,12,16 with NLL<=initial+0.01; then lowest NLL,then earliest epoch. Epoch0 eligible. One full refit. No evaluation selection.",
+  "success": "On unchanged513 evaluation moves require improvement over calibrated317 and direct318, movement NLL<=direct+0.01, and exact preservation of active-goal predictions.80percent requires411/513. No automatic promotion.",
+  "interpretation": "This changes training coverage/weighting and inference coverage together; it is not a clean architecture-only contrast. Fallback learning is execution,not evidence of long-term strategy. Reused research groups,one seed,observed past actions,inferred goals and inherited fold exposure remain limitations. No subagents."
+}
