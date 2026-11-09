@@ -1,0 +1,61 @@
+{
+  "result_sha256": "fbcc658175298ae20c825c50856475cd5f10d03f00d81d80e1e779b3b73823d2",
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\destination_weight_verify.py": "5653564c8d3a7bd54fdfc980cfb4c3db1874ecd1581b492350e71520ea0ff898"
+  },
+  "reconstructed_goals": 2099,
+  "original_labels_exact": 369,
+  "exact_validation_measurements": 40,
+  "accounting": {
+    "lr0.0003-fold0": {
+      "updates": 1600,
+      "presentations": 25472
+    },
+    "lr0.0003-fold1": {
+      "updates": 1552,
+      "presentations": 24608
+    },
+    "lr0.0003-fold2": {
+      "updates": 1584,
+      "presentations": 25328
+    },
+    "lr0.0003-fold3": {
+      "updates": 1584,
+      "presentations": 25344
+    },
+    "lr0.001-fold0": {
+      "updates": 1600,
+      "presentations": 25472
+    },
+    "lr0.001-fold1": {
+      "updates": 1552,
+      "presentations": 24608
+    },
+    "lr0.001-fold2": {
+      "updates": 1584,
+      "presentations": 25328
+    },
+    "lr0.001-fold3": {
+      "updates": 1584,
+      "presentations": 25344
+    },
+    "refit": {
+      "updates": 2112,
+      "presentations": 33584
+    }
+  },
+  "changed_tensors": [
+    "query.weight",
+    "query.bias",
+    "goal.0.weight",
+    "goal.0.bias",
+    "goal.2.weight"
+  ],
+  "code_and_direct_movement_unchanged": true,
+  "exact_forecasts": {
+    "fit": 2945,
+    "evaluation": 699
+  },
+  "streaming_turns": 32,
+  "seconds": 61.849441699974705
+}

@@ -1,0 +1,65 @@
+{
+  "result_sha256": "fbcc658175298ae20c825c50856475cd5f10d03f00d81d80e1e779b3b73823d2",
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\destination_weight_parity.py": "c871ed4efb277fafd8a061fc43db8862531ccf3cc65905c8ee20d2a7195dc030"
+  },
+  "full_network_selected_fold_parity": [
+    {
+      "fold": 0,
+      "exact_predictions": 77,
+      "nll_absolute_difference": 3.328571107630296e-08
+    },
+    {
+      "fold": 1,
+      "exact_predictions": 67,
+      "nll_absolute_difference": 6.227350191068126e-09
+    },
+    {
+      "fold": 2,
+      "exact_predictions": 122,
+      "nll_absolute_difference": 2.9313760308014025e-09
+    },
+    {
+      "fold": 3,
+      "exact_predictions": 103,
+      "nll_absolute_difference": 1.2731089071849055e-08
+    }
+  ],
+  "goal_distance_from_current": {
+    "original": {
+      "near": {
+        "rows": 52,
+        "within2": 50,
+        "exact": 15,
+        "mean_error": 1.0192307692307692
+      },
+      "far": {
+        "rows": 46,
+        "within2": 1,
+        "exact": 0,
+        "mean_error": 5.934782608695652
+      }
+    },
+    "edited": {
+      "near": {
+        "rows": 52,
+        "within2": 47,
+        "exact": 19,
+        "mean_error": 1.0384615384615385
+      },
+      "far": {
+        "rows": 46,
+        "within2": 3,
+        "exact": 0,
+        "mean_error": 5.934782608695652
+      }
+    }
+  },
+  "current_position_predictions_on_goal_rows": {
+    "original": 82,
+    "edited": 36
+  },
+  "changed_goal_choices_on_all699_queries": 374,
+  "seconds": 6.350694100023247,
+  "qualification": "Postfit descriptive diagnostics only; no new optimization or checkpoint selection."
+}
