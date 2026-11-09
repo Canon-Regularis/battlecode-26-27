@@ -1,0 +1,165 @@
+{
+  "refit_sha256": "721ad6d869f266fbbcbfb230985aa095b9348bb339e9b66a6c98459e5677a868",
+  "results": {
+    "fit": {
+      "summary": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.22383575363044567,
+        "movement_nll": 1.8233766610107842,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.944153030390339,
+        "astar_movement_accuracy": 0.028542814221331998,
+        "code_accuracy": 0.8539898132427843
+      },
+      "codes": {
+        "accuracy": 0.8539898132427843,
+        "per_code": {
+          "0": {
+            "rows": 1743,
+            "predicted": 1900,
+            "correct": 1647,
+            "recall": 0.9449225473321858,
+            "precision": 0.8668421052631579,
+            "f1": 0.9041998353005765
+          },
+          "2": {
+            "rows": 370,
+            "predicted": 308,
+            "correct": 263,
+            "recall": 0.7108108108108108,
+            "precision": 0.8538961038961039,
+            "f1": 0.775811209439528
+          },
+          "3": {
+            "rows": 58,
+            "predicted": 17,
+            "correct": 15,
+            "recall": 0.25862068965517243,
+            "precision": 0.8823529411764706,
+            "f1": 0.4
+          },
+          "4": {
+            "rows": 676,
+            "predicted": 696,
+            "correct": 577,
+            "recall": 0.8535502958579881,
+            "precision": 0.8290229885057471,
+            "f1": 0.8411078717201166
+          },
+          "6": {
+            "rows": 52,
+            "predicted": 24,
+            "correct": 13,
+            "recall": 0.25,
+            "precision": 0.5416666666666666,
+            "f1": 0.34210526315789475
+          },
+          "7": {
+            "rows": 46,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          }
+        },
+        "balanced_recall": 0.5029840572760262,
+        "macro_f1": 0.5438706966030192,
+        "minimum_recall": 0.0
+      },
+      "target_met": true
+    },
+    "evaluation": {
+      "summary": {
+        "rows": 699,
+        "movement_rows": 513,
+        "goal_rows": 98,
+        "movement_accuracy": 0.27485380116959063,
+        "movement_nll": 1.7884626988081904,
+        "goal_within2": 0.5204081632653061,
+        "goal_exact": 0.15306122448979592,
+        "mean_goal_error": 3.326530612244898,
+        "goal_nll": 5.385922410050217,
+        "astar_movement_accuracy": 0.01949317738791423,
+        "code_accuracy": 0.7896995708154506
+      },
+      "codes": {
+        "accuracy": 0.7896995708154506,
+        "per_code": {
+          "0": {
+            "rows": 453,
+            "predicted": 492,
+            "correct": 405,
+            "recall": 0.8940397350993378,
+            "precision": 0.823170731707317,
+            "f1": 0.8571428571428571
+          },
+          "2": {
+            "rows": 54,
+            "predicted": 61,
+            "correct": 31,
+            "recall": 0.5740740740740741,
+            "precision": 0.5081967213114754,
+            "f1": 0.5391304347826087
+          },
+          "3": {
+            "rows": 1,
+            "predicted": 1,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "4": {
+            "rows": 158,
+            "predicted": 140,
+            "correct": 114,
+            "recall": 0.7215189873417721,
+            "precision": 0.8142857142857143,
+            "f1": 0.7651006711409396
+          },
+          "5": {
+            "rows": 2,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          },
+          "6": {
+            "rows": 20,
+            "predicted": 5,
+            "correct": 2,
+            "recall": 0.1,
+            "precision": 0.4,
+            "f1": 0.16
+          },
+          "7": {
+            "rows": 11,
+            "predicted": 0,
+            "correct": 0,
+            "recall": 0.0,
+            "precision": 0.0,
+            "f1": 0.0
+          }
+        },
+        "balanced_recall": 0.32709039950216917,
+        "macro_f1": 0.3316248518666294,
+        "minimum_recall": 0.0
+      },
+      "target_met": false
+    }
+  },
+  "target_met": false,
+  "seconds": 23.9183716000407,
+  "bindings": {
+    ".cambc\\action-predictor\\v48\\selected.pt": "e481bfb387f8c62a1e5567cb63b7767bf13dc6081f44246453a48f7f67787cdd",
+    ".cambc\\action-predictor\\v48\\fit-predictions.json": "05f9aaef92641d894a9983815fbfcfba91f81ceef02d415c630f9d82c4534eda",
+    ".cambc\\action-predictor\\v48\\evaluation-predictions.json": "3cc7f31ea31dabd56640270f8287f5695ad79f6a95bba6653d449f833ce86976"
+  },
+  "qualification": "One final fixed-architecture checkpoint selected by fitting folds; preexposed research evaluation. Inferred-label accuracy only, no claim of verified intent, playing strength or promotion."
+}
