@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\planner_margin_fit.py": "23ca554f1eb2af3e04f53e97498004450241875769e707a6a360fce211e51d3f",
+    "tools\\action_predictor\\behavior_segments\\planner_margin_predictor.py": "7315fba08ae5e4ee6caba5d312a1c989bd1838bd0b3902fc936d5efb70717b55",
+    "tools\\action_predictor\\behavior_segments\\test_planner_margin.py": "1c0c0f7c8d863050ea5999076efe20abb50fa1d65a4639e8b666fee283daac18"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v63\\plan.json": "75b6816fec02f22b480c2238a9e6f20369135856fd09a61cb11a60212caa9369",
+    "tools\\action_predictor\\experiments\\v63\\cache.json": "6624d68328db60e1a2f7efd5110b14f5569971d71d376549c3e9489604b5609f",
+    "tools\\action_predictor\\experiments\\v63\\selection.json": "0fdf45a4eb4c5f7a2c423352add5919cffba7762a54447ef4ae022b3e6ece589",
+    "tools\\action_predictor\\experiments\\v63\\result.json": "cb6cfa1d12d34e66f7eeda0c5a4b3334ecc8f6a1de81814859f1ccb5bb75747f",
+    "tools\\action_predictor\\experiments\\v63\\verification.json": "87f0ea6038137d73189466797cae3fa2d1b2ec5c298aafacd05894fd9b0b0ab3"
+  },
+  "seed": 65001,
+  "epochs": 16,
+  "lr": 0.003,
+  "batch": 64,
+  "utility_weight": 0.1,
+  "margin": 0.2,
+  "cap": 300,
+  "minimum_activation": 0.1,
+  "intervention": "Existing65parameter readout only,warm start V62-edited matching V61 heads using verified V63 caches. Replace soft aggregate-choice loss with latent maximum margin: best correct-output candidate/abstention must beat best incorrect-output candidate/abstention by0.2. Candidate score tanh; abstention score0. Margin exceeds fixed0.15 retention tolerance. Retention-aware hard inference still selects checkpoints.",
+  "loss": "Movement queries with at least one correct available output and at least one incorrect output contribute ReLU(0.2+best_wrong_score-best_correct_score),averaged over all movement rows so uncovered rows contribute zero. Nonmovement rows have no movement loss. Same0.1 progress-utility regularizer. Hindsight selects a correct-output latent candidate only inside training loss,never inference.",
+  "selection": "Four matching fitting-game folds; canonical other24game windows train and held8game windows validate. Epochs0,4,8,12,16. Highest combined movement count with nonnegative utility and10percent activity; then earliest epoch. One full refit selected duration. No evaluation-dependent choice. Fixed300second fitting/refit cap.",
+  "scope": "Follows failed V63 surrogate and runs independently of pending V64 map adaptation. No new inputs/architecture. Fixed-output oracle coverage remains1598/1997 fitting moves. Hard margin does not guarantee learned ranking,retention behavior or generalization. Repeatedly exposed research evaluation,teacher-forced history,inferred goals,no autonomous strategy proof."
+}

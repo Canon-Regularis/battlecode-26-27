@@ -1,0 +1,14 @@
+{
+  "command": ".venv-action-predictor/Scripts/python.exe -m unittest tools.action_predictor.behavior_segments.test_planner_readout tools.action_predictor.behavior_segments.test_planner_margin tools.action_predictor.behavior_segments.test_map_trajectory tools.action_predictor.behavior_segments.test_map_trajectory_engine tools.action_predictor.behavior_segments.test_trajectory_movement tools.action_predictor.behavior_segments.test_objective_policy -v",
+  "tests": 12,
+  "exit_code": 0,
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\test_planner_readout.py": "4848480693a8b2ea35d0148334685bb5fc6d1dbdf30992c4923ca2aa78e7a06b",
+    "tools\\action_predictor\\behavior_segments\\test_planner_margin.py": "1c0c0f7c8d863050ea5999076efe20abb50fa1d65a4639e8b666fee283daac18",
+    "tools\\action_predictor\\behavior_segments\\test_map_trajectory.py": "781117984a79df48f66bea241009ba8175082e2b141aa78b778d32907a70b52b",
+    "tools\\action_predictor\\behavior_segments\\test_map_trajectory_engine.py": "c3695abe2143f23aed566357b766ded8375aa8f2fe27508034c35ef17f2bef8c",
+    "tools\\action_predictor\\behavior_segments\\test_trajectory_movement.py": "672f3e9a0b0a7a1b7ce36256de3c956c940fa9bfcffbdca4d782d2fab1cee168",
+    "tools\\action_predictor\\behavior_segments\\test_objective_policy.py": "4b5853ee4d7748cea858ba5965ceea3b2f2b620aa9a9192c2c8fc203fc72f1e9"
+  },
+  "notes": "Observed parent test run. Includes exact synthetic common-denominator AdamW parity,causality,frozen tensors,readout gradients and retained-goal behavior. A scalar-conversion warning in a test assertion did not affect results. No delegated review."
+}
