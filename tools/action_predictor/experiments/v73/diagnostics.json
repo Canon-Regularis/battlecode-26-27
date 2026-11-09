@@ -1,0 +1,30 @@
+{
+  "fitting_only": true,
+  "selector_prediction_quality": {
+    "insample": {
+      "candidate_rows": 42959,
+      "raw_utility_mse": 0.3271035707452109,
+      "training_active_movements": 7239
+    },
+    "crossfit": {
+      "candidate_rows": 42959,
+      "raw_utility_mse": 0.5696081316713085,
+      "training_active_movements": 7003
+    }
+  },
+  "executor_weight_changes": {
+    "insample": {
+      "layers.0.weight": 9.770944595336914,
+      "layers.0.bias": 0.5975558161735535,
+      "layers.2.weight": 1.336521863937378,
+      "layers.2.bias": 0.07611286640167236
+    },
+    "crossfit": {
+      "layers.0.weight": 8.01726245880127,
+      "layers.0.bias": 0.5122564435005188,
+      "layers.2.weight": 1.0348632335662842,
+      "layers.2.bias": 0.019974518567323685
+    }
+  },
+  "interpretation": "Raw utility error before fixed calibration compares same-size selectors including/excluding each fitting game. This is a training-input diagnostic,not evidence of evaluation or strategic improvement."
+}

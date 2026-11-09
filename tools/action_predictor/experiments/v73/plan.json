@@ -1,0 +1,38 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\crossfit_goals.py": "39275e21b7718ee75d3578ca9180882051ddcdf4a7e92d5393e42ca7d82e2b39",
+    "tools\\action_predictor\\behavior_segments\\crossfit_goals_fit.py": "5bf7791bc270816eb66f39d35a7638281d4ebc926fec95e27c2c63113aab0bae",
+    "tools\\action_predictor\\behavior_segments\\crossfit_goals_predictor.py": "f9c0d56ede9a500310130fe42eab4a348630ce817c4c2b3bedb4792f814de5a5",
+    "tools\\action_predictor\\behavior_segments\\test_crossfit_goals.py": "3025000385181b7c414ff26e8eb12d566136218404b0e0296e7b35a203fcf00d"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v70\\plan.json": "abfd070d2fd760f0387739b284122fb3fc46c75bf994ba94ad5c089cdc6ca5da",
+    "tools\\action_predictor\\experiments\\v70\\cache.json": "9e57b0727b6d4a9d17b79825dddd3d1b005a8b98df458bcba4c7657774e1d690",
+    "tools\\action_predictor\\experiments\\v70\\fit.json": "c021b1a0321e2190fda03507f500f6b31c62c09ed3f947398e48008e6e4d4021",
+    "tools\\action_predictor\\experiments\\v70\\selection.json": "76da70c4e08d874fea7c490bbcaf6fa2eec8f759dcf00809a0a90ef980e53789",
+    "tools\\action_predictor\\experiments\\v70\\result.json": "0b78c49507bd9b31c8e34c868978476fe5e128406e1f8fbedad1b1a0639d0179",
+    "tools\\action_predictor\\experiments\\v70\\verification.json": "c2e3a47c32c217863487f5cd1ea8de2e0ea87114b119e13d75d309b073e0ed77",
+    "tools\\action_predictor\\experiments\\v61\\plan.json": "9628019c9e08aacaf37c0c4fe9aa9f3e50fe3d397fd7f8932a40e57e66044a87",
+    "tools\\action_predictor\\experiments\\v61\\cache.json": "6c29799fb1809ddaf911e4cf136930dd3a2c1d4636119192875b4a6ac1d9aad1",
+    "tools\\action_predictor\\experiments\\v61\\selection.json": "a3e476e0d9eeda778008a482df9e2562ef4004d70dc6bfcf6af29a3142008986"
+  },
+  "seed": 70001,
+  "epochs": 16,
+  "every": 4,
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "batch": 128,
+  "clip": 5.0,
+  "executor_seconds_cap": 600,
+  "selector_seed": 73001,
+  "selector_epochs": 12,
+  "selector_lr": 0.001,
+  "selector_batch": 256,
+  "selector_seconds_cap": 900,
+  "goal_architecture": "Fresh660-64-1 tanh utility head.648 deterministic current geometry/observed-heading/prior-command features plus12candidate features. NO learned backbone,state/code,normalizer,pretrained weights,game identity or current/future action input in goal prediction. Existing four-turn replay progress targets supervise training only. Fixed12passes,no selector selection on excluded groups. Fixed legacy readout scale0.5/shift-0.25 and retention0.15;not recalibrated.",
+  "crossfit": "Four existing8game folds. For each outer held fold,train pair-excluded heads on16games. Treatment goals for training groupG use a head excluding both outer andG. Size-matched in-sample control excludes outer and the next other fold cyclically,thus includesG. Validation uses the24game head excluding outer for BOTH arms. Six pair-excluded heads are shared between symmetric jobs because raw features and initialization are identical.",
+  "refit": "For full executor refit,treatment goals use24game heads excluding their own groupfold;control uses a24game head excluding nextfold and includes its group. Both inference arms use the same32fitting-game head. No original evaluation group enters any selector/executor training. All11selectors start fresh and their group membership is archived.",
+  "executor": "Unchanged V70 shared executor,8897parameters,matching seed70001/initialization/rows/sampling/optimizer/checkpoints. Both train all12318movement rows;only goal predictions differ. V59 frozen. Select each arm among0/4/8/12/16 by highest canonical held movement count withNLL<=initial+0.01,then NLL,earlier epoch. No evaluation selection.",
+  "success": "Crossfit must exceed size-matched insample and direct318 on fixed513evaluation moves,NLL<=direct+0.01,and neither shared evaluation goal-present/absent cohort loses>2points vsdirect. All required.80percent requires411/513. No automatic promotion.",
+  "scope": "This tests cross-fitting within a NEW deterministic-feature selector family with matched controls. It does not isolate cross-fitting against legacy V70 because goal features change. Goal-model updates genuinely exclude predicted training groups;executor backbone still has inherited historical exposure. Recipes,research partitions and source schemas are previously exposed,not fresh certification. No goal mixtures,latent plans,autonomous rollout or subagents."
+}
