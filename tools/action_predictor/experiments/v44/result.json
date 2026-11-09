@@ -1,0 +1,57 @@
+{
+  "selection_sha256": "1955aa7824be5b77ac5a21f3eac6dde0cf504ff1e65f4a24ed844fa7acca006b",
+  "selected": "combined",
+  "evaluation_summary": {
+    "rows": 699,
+    "movement_rows": 513,
+    "goal_rows": 98,
+    "movement_accuracy": 0.23391812865497075,
+    "movement_nll": 1.7792272190717693,
+    "goal_within2": 0.5204081632653061,
+    "goal_exact": 0.17346938775510204,
+    "mean_goal_error": 3.306122448979592,
+    "goal_nll": 5.3598596830757295,
+    "astar_movement_accuracy": 0.01949317738791423,
+    "code_accuracy": 0.7396280400572246
+  },
+  "evaluation_codes": {
+    "accuracy": 0.7396280400572246,
+    "balanced_recall": 0.2054337369116479,
+    "recalls": {
+      "0": 0.9823399558498896,
+      "4": 0.45569620253164556,
+      "6": 0.0,
+      "3": 0.0,
+      "2": 0.0,
+      "7": 0.0,
+      "5": 0.0
+    },
+    "predicted_counts": {
+      "0": 612,
+      "4": 86,
+      "3": 1
+    }
+  },
+  "evaluation_guards": {
+    "code_balance": false,
+    "code_accuracy": true,
+    "movement_accuracy": true,
+    "movement_nll": true,
+    "goal_within2": true,
+    "goal_error": true
+  },
+  "passed": false,
+  "seconds": 33.163233900035266,
+  "optimizer_updates": 0,
+  "original_inputs_unchanged": true,
+  "bindings": {
+    ".cambc\\action-predictor\\v44\\combined-fit.json": "9cd29777d0c6c618d55a1b5db81cd4e64ab16fd7371e97ab17d68391b9695115",
+    ".cambc\\action-predictor\\v44\\combined.pt": "898362ebea315038a5b24dd9c32cc7891abeda67054dc4c54e1c8b52c5314721",
+    ".cambc\\action-predictor\\v44\\history_x5-fit.json": "9cecaa3621f77261b1f1ffe67bf4d572e150f8bff336521e3955072ab71671b4",
+    ".cambc\\action-predictor\\v44\\history_x5.pt": "f3f7667be9d434aaca53f56347b4198b3469d8501ab81bfa4bd6482ad29dd4e4",
+    ".cambc\\action-predictor\\v44\\prior_half-fit.json": "3b7108c761f4a201310a6c1e3c9f24512fa8b7f2aedbbd47ebe266d5d6f4e6a3",
+    ".cambc\\action-predictor\\v44\\prior_half.pt": "32df1d27a176372eb4cc9cd52e0f598992eeb3e3f1d48250d4de3136563fcc25",
+    ".cambc\\action-predictor\\v44\\selected-evaluation.json": "37c617632429ade3573d7ff92eab750e489fa6997c2420dd5223621942509bd1"
+  },
+  "qualification": "Manual weight-edit pilot on preexposed groups. Code accuracy is agreement with inferred labels, not verified intent or goal-location accuracy. No runtime promotion."
+}

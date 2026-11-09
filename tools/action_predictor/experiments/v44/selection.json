@@ -1,0 +1,142 @@
+{
+  "plan_sha256": "6dd48e740a3fe85ca58e25cee40337081c7e6a698cddba619b612ba2a24a1a5c",
+  "fit_results": {
+    "history_x5": {
+      "summary": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.2198297446169254,
+        "movement_nll": 1.7879377181194518,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.902645289413328,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.6546689303904923
+      },
+      "codes": {
+        "accuracy": 0.6546689303904923,
+        "balanced_recall": 0.21499480593549178,
+        "recalls": {
+          "2": 0.0,
+          "0": 0.9896729776247849,
+          "7": 0.0,
+          "4": 0.30029585798816566,
+          "6": 0.0,
+          "3": 0.0
+        },
+        "predicted_counts": {
+          "0": 2662,
+          "4": 283
+        }
+      },
+      "guards": {
+        "code_balance": false,
+        "code_accuracy": true,
+        "movement_accuracy": true,
+        "movement_nll": true,
+        "goal_within2": true,
+        "goal_error": true
+      },
+      "eligible": false,
+      "changed_tensors": [
+        "memory.weight_ih"
+      ]
+    },
+    "prior_half": {
+      "summary": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.21832749123685527,
+        "movement_nll": 1.7883938498716685,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.898342833609439,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.6016977928692699
+      },
+      "codes": {
+        "accuracy": 0.6016977928692699,
+        "balanced_recall": 0.17568867077671524,
+        "recalls": {
+          "2": 0.010810810810810811,
+          "0": 0.9959839357429718,
+          "7": 0.0,
+          "4": 0.047337278106508875,
+          "6": 0.0,
+          "3": 0.0
+        },
+        "predicted_counts": {
+          "0": 2884,
+          "4": 44,
+          "2": 11,
+          "3": 6
+        }
+      },
+      "guards": {
+        "code_balance": false,
+        "code_accuracy": true,
+        "movement_accuracy": true,
+        "movement_nll": true,
+        "goal_within2": true,
+        "goal_error": true
+      },
+      "eligible": false,
+      "changed_tensors": [
+        "code.bias"
+      ]
+    },
+    "combined": {
+      "summary": {
+        "rows": 2945,
+        "movement_rows": 1997,
+        "goal_rows": 369,
+        "movement_accuracy": 0.22083124687030545,
+        "movement_nll": 1.7879755325656446,
+        "goal_within2": 0.5392953929539296,
+        "goal_exact": 0.14363143631436315,
+        "mean_goal_error": 3.7886178861788617,
+        "goal_nll": 4.9026856835941635,
+        "astar_movement_accuracy": 0.028042063094641963,
+        "code_accuracy": 0.6852292020373515
+      },
+      "codes": {
+        "accuracy": 0.6852292020373515,
+        "balanced_recall": 0.24071646298245,
+        "recalls": {
+          "2": 0.010810810810810811,
+          "0": 0.9793459552495697,
+          "7": 0.0,
+          "4": 0.4541420118343195,
+          "6": 0.0,
+          "3": 0.0
+        },
+        "predicted_counts": {
+          "0": 2502,
+          "4": 433,
+          "2": 4,
+          "3": 6
+        }
+      },
+      "guards": {
+        "code_balance": false,
+        "code_accuracy": true,
+        "movement_accuracy": true,
+        "movement_nll": true,
+        "goal_within2": true,
+        "goal_error": true
+      },
+      "eligible": false,
+      "changed_tensors": [
+        "memory.weight_ih",
+        "code.bias"
+      ]
+    }
+  },
+  "selected": "combined",
+  "fit_eligible": false,
+  "qualification": "Frozen fitting-only selection, written before selected evaluation inference."
+}

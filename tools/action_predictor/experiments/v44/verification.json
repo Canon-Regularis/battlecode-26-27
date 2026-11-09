@@ -1,0 +1,26 @@
+{
+  "source_sha256": "0098ec69b33adaa184e153d834e709c16511da6751348a3d5e87c680a589d859",
+  "loader_sha256": "0f00a85ad6226b0f7b180514cfb73ce1aa585b2832611fb36e7f99efdaff5f3e",
+  "result_sha256": "e2ffbc9edc49163141912da2274a53798f010d11e1ff9f7d5d584b30ffdc6174",
+  "exact_edits": {
+    "history_x5": {
+      "memory.weight_ih": 3312
+    },
+    "prior_half": {
+      "code.bias": 6
+    },
+    "combined": {
+      "memory.weight_ih": 3312,
+      "code.bias": 6
+    }
+  },
+  "all_other_weights_unchanged": true,
+  "original_inputs_unchanged": true,
+  "no_optimizer_state_in_edited_files": true,
+  "selected_forecasts_exact": {
+    "fit": 2945,
+    "evaluation": 699
+  },
+  "guards_reproduced": true,
+  "optimizer_updates": 0
+}
