@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\code_head_calibration.py": "6edd877f8dfaaa39818ac21096cce360aae4a43ac6db6b4cbddc1f53f858a574",
+    "tools\\action_predictor\\behavior_segments\\test_code_head_calibration.py": "b6523511a93e610414c0f793b2880083296e7189115a04352d5bf9aa4fa5d0e0"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v49\\plan.json": "79e2ec7a7c78f467a935f4b3354940b8b69cb85f91efdb600a391790bc25da7b",
+    "tools\\action_predictor\\experiments\\v49\\selection.json": "1641d01819cc052c015c7381b90eb72d662d5fadb9a5e84e72115cdad149fdf0",
+    "tools\\action_predictor\\experiments\\v49\\refit.json": "260a7b202e9228cb95ae56d5955f4134c6bf40784c9adf223c4d80e4e987fda2",
+    "tools\\action_predictor\\experiments\\v49\\result.json": "3d10e27983ef9133e1cb09d8d7d5fc11ae9354e89cc1ac93e95026002730ec6a",
+    ".cambc\\action-predictor\\v49\\selected.pt": "5d0cc661e118a8e87c6bdaf56bb374c2c3e668a276396e13b096a4a78a880c23",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold0\\epoch-024.pt": "02ca4460279c28d61daf0a4e67b2da944ae5d8f9ba1ce6746fe0662eb5f10b14",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold1\\epoch-024.pt": "96a05d5e417a31ad09ab3d920c153d8c689f3bc57d4d2ea8a2a5e236ecb01487",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold2\\epoch-024.pt": "c1da2a1816d8293da78db0ab38344509ae179d09dda21321b7b3ba50137c4e62",
+    ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold3\\epoch-024.pt": "a59c679b7f4a38fa2d741fe49275466126d9a64d68611b185abf65061c2f0087"
+  },
+  "fold_checkpoints": {
+    "0": ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold0\\epoch-024.pt",
+    "1": ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold1\\epoch-024.pt",
+    "2": ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold2\\epoch-024.pt",
+    "3": ".cambc\\action-predictor\\v49\\tuning\\lr0.0003-fold3\\epoch-024.pt"
+  },
+  "regularizations": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "seconds_cap": 600,
+  "target_accuracy": 0.85,
+  "fitting": "Collect original2945canonical fitting-query logits from matching V49held-game checkpoints. For each regularizer, fit affine8by8logit map on three fold cohorts and score the fourth. CE plus summed squared distance from identity; rows for classes absent in fitting remain identity. Select pooled correct count, then NLL, then strongest regularization. Identity is eligible.",
+  "final": "Fit selected calibration to all fitting-fold logits, then compose into existing code.weight and code.bias. All other tensors fixed. Publish selection before one outer evaluation. If identity wins, preserve previous forecasts and perform no new outer inference.",
+  "limits": "Nested calibration uses already exposed fitting-fold logits; those base models were fitted using other groups, so this is conditional calibration validation rather than fully independent nested model validation. Follows exposed V49 evaluation; no untouched-test claim. No evaluation labels used for calibration, architecture changes, subagents or promotion."
+}
