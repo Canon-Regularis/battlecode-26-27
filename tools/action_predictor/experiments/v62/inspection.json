@@ -1,0 +1,55 @@
+{
+  "weights": {
+    "net.0.weight": {
+      "shape": [
+        64,
+        68
+      ],
+      "norm": 6.609224796295166,
+      "minimum": -0.9392057657241821,
+      "maximum": 0.5963701605796814
+    },
+    "net.0.bias": {
+      "shape": [
+        64
+      ],
+      "norm": 0.5641282200813293,
+      "minimum": -0.14695189893245697,
+      "maximum": 0.14352835714817047
+    },
+    "net.2.weight": {
+      "shape": [
+        1,
+        64
+      ],
+      "norm": 0.87919682264328,
+      "minimum": -0.21307234466075897,
+      "maximum": 0.2768097221851349
+    },
+    "net.2.bias": {
+      "shape": [
+        1
+      ],
+      "norm": 0.10403470695018768,
+      "minimum": 0.10403470695018768,
+      "maximum": 0.10403470695018768
+    }
+  },
+  "fitting_candidate_quantiles": [
+    -0.8734428882598877,
+    -0.22716471552848816,
+    0.06417113542556763,
+    0.3610975742340088,
+    0.9259870052337646
+  ],
+  "fitting_maximum_quantiles": [
+    -0.5241979956626892,
+    0.020867008715867996,
+    0.26874619722366333,
+    0.5647302269935608,
+    0.9259870052337646
+  ],
+  "positive_scores": 20643,
+  "scores": 33845,
+  "interpretation": "Readout has positive bias and many positive fitting scores. This motivates testing calibration,not a causal diagnosis or evidence weights are defective."
+}
