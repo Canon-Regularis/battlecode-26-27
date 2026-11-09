@@ -1,0 +1,42 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\goal_execution.py": "2af49ade98f1d849af21fd69a31e2b6117ddb0451941d0898e2b6c86e8448f15",
+    "tools\\action_predictor\\behavior_segments\\goal_execution_fit.py": "33c81e4c1c6d723a9dfdf1a0f22acb17ea2b42cbb5bdabb471f4e21206abf1c2",
+    "tools\\action_predictor\\behavior_segments\\goal_execution_predictor.py": "8b59f1c0862af09289c31ca247918c68bd135ce3b93ddb65ea32db6e1d909371",
+    "tools\\action_predictor\\behavior_segments\\test_goal_execution.py": "4eb99a18e18a639a47590accefdde3a49860f6b8f6b869bbf7d8594101e6cee2"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v59\\plan.json": "bf1884e84ee99aa01e83f7560cff21a2053e517d4fa8f3128c3fda02aba84848",
+    "tools\\action_predictor\\experiments\\v59\\selection.json": "dd54f12d446fb9c0dc72cf4b974cd1ab64b813aca73924c8ca72bd27db2c4a6f",
+    "tools\\action_predictor\\experiments\\v59\\refit.json": "2644cd00a44ec3ff97e5779b30869e4ac9c7f9ca48cefd7d42a02d15075f1c51",
+    "tools\\action_predictor\\experiments\\v59\\result.json": "e5c7bf1a46eed0e858f070ddfee2c105b411c46475d11ea40fcfb79a98f746a6",
+    "tools\\action_predictor\\experiments\\v59\\verification.json": "4f764c5a7e350ae8c0d6359a0d5db7f2987a178fd893382f99de95d8075da83d",
+    "tools\\action_predictor\\experiments\\v60\\plan.json": "25cd59c6c72309d60342c759d0f0af8bb5ef7f052148ac966a58bf39ae8706f9",
+    "tools\\action_predictor\\experiments\\v60\\cache.json": "9b280a97cd66c3174b3804ec324af83d1d0fe8c7ac0b11e8cc3032dea586f7c4",
+    "tools\\action_predictor\\experiments\\v60\\verification.json": "4bc621960e26249cc82f14675e2b0c0498afb8df5731be3db855b31a89985b1e",
+    "tools\\action_predictor\\experiments\\v62\\plan.json": "1e3fed8c8263360da6a1699043b7af1e1b51ce6035186d419d77059fea93a083",
+    "tools\\action_predictor\\experiments\\v62\\selection.json": "ed0a30f379b2eb44daf9693d74834f10c53f3499fe8a026819fd868bd52d724a",
+    "tools\\action_predictor\\experiments\\v62\\result.json": "963b2122ffa8eb7b0e68cecdf0eca782382227418e410e7d55c470b317adc757",
+    "tools\\action_predictor\\experiments\\v62\\verification.json": "f657471597908d376e7376cb16aedc80a3c4ed0a5c74fe7bffa6fdc02ff1d611"
+  },
+  "seed": 66001,
+  "horizons": [
+    2,
+    4,
+    8
+  ],
+  "epochs": 16,
+  "every": 4,
+  "lr": 0.001,
+  "batch": 128,
+  "clip": 5.0,
+  "fit_seconds_cap": 900,
+  "assessment_seconds_cap": 600,
+  "architecture": "Freeze V59 and V62 objective head. Add shared per-move136-64-1 tanh residual with zero output initialization (8833 parameters).128 existing local/state features plus8 supplied-goal geometry features. Control zeros goal features; matched parameter shapes,initial tensors,sampling,rows,optimizer and checkpoint opportunities.",
+  "goals": "Training goals are validated achieved PRE positions2,4,8 own turns ahead within existing32turn windows. Require endpoints observed/alive and integrated intervening executed walking to agree with every available observed position. No new replay restoration. Goals are achieved destinations,not internal Fish intent. Distinct horizon examples have equal weight; roots can repeat across horizons.",
+  "selection": "Four fitting-game folds,all expanded other24game examples train; canonical held8game examples validate. Independently choose each arm by highest conditional movement count,then lowest NLL,then earliest epoch among0,4,8,12,16. Identical opportunities and matched initialization. One full refit per arm. No evaluation-guided selection.",
+  "diagnostic": "Compare goal-conditioned,goal-blind control,V59 direct,and existing routing on identical supplied future goals. Future goals are intentional hindsight information ONLY in this labeled diagnostic. Require goal arm at least3points above both control and routing,lower NLL than control,and positive gain on endpoints>=3tiles away. Report horizons and unique-query averages. This is NOT deployable or strategic accuracy.",
+  "causal": "Use frozen V62 current-input predicted objectives and retention decisions. Both execution heads receive identical current state and selected goal; control masks goal features. No selected goal means unchanged V59 direct fallback. Runtime never receives replay future goals. Compare all513 movement queries with V62 routing,V59 direct and matched control; report activity,overrides and paired changes.",
+  "success": "Causal goal executor must exceed both V62 and V59 direct and matched control,without movementNLL worsening>0.01 vs direct. Goal choices and inferred-code outputs stay exact.80percent is separate and requires411/513. Diagnostic gains alone do not permit promotion.",
+  "limits": "Bounded first execution experiment,not value learning or autonomous RL. No true outcome rewards,learned termination or simulator rollouts. Point goals in training versus region goals at inference are a transfer limitation. Preexposed research groups,inherited fitting-fold exposure,teacher-forced histories,no verified intent or playing-strength claim. No subagents."
+}
