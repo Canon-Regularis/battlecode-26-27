@@ -1,0 +1,21 @@
+{
+  "fitting_only_weights_and_activations": true,
+  "details": {
+    "blind": {
+      "centered_supported_residual_rms": 0.6112207770347595,
+      "output_weight_norm": 1.1270252466201782,
+      "output_shared_bias": -0.045409202575683594,
+      "goal_columns_decay_only_max_error": 2.436339855194092e-06,
+      "steps": 1552
+    },
+    "goal": {
+      "centered_supported_residual_rms": 0.6909290552139282,
+      "output_weight_norm": 1.3179031610488892,
+      "output_shared_bias": -0.03188228979706764,
+      "goal_columns_decay_only_max_error": 0.6574541926383972,
+      "steps": 1552
+    }
+  },
+  "goal_vs_blind_evaluation_prediction_differences": 30,
+  "interpretation": "A shared scalar output bias cancels in softmax; raw residual RMS includes such common shifts,so centered RMS is more relevant. Blind goal-column changes are decay only. Goal-arm changes substantially exceed decay,so this is not a disconnected-goal bug. These facts do not prove goal information is correct or useful out of sample."
+}

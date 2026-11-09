@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\shared_goal_execution.py": "b13286225713fa14bf402279d2e0f6de948cb0ad88fc1abac5e4f59e496b2aa4",
+    "tools\\action_predictor\\behavior_segments\\shared_goal_execution_fit.py": "4f482bd6f50d3cc43cf0d3d5670a6c1e1c8dd9e0824591f2e94ac5a416fa4054",
+    "tools\\action_predictor\\behavior_segments\\shared_goal_execution_predictor.py": "42c94af2c6e9a19c4ed28cc2691f89bb0864cecbf0980abf531c4f60c1bff212",
+    "tools\\action_predictor\\behavior_segments\\test_shared_goal_execution.py": "9785f7ebd799dc755e07c19682af9dbd25e57de915762357d6d0c899224e7c40"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v69\\plan.json": "997cbb3edf1a5e35f3e6dfd2ad85937ca51f5c0c323f4376889d4e345ec86381",
+    "tools\\action_predictor\\experiments\\v69\\cache.json": "0f567b0bd384bd82a272ef539632a5b96dedbb8c99f6584063074c8ffaaf755a",
+    "tools\\action_predictor\\experiments\\v69\\fit.json": "424a9708990c0b4f28c978df7e74f2ffeea59b76d20649f333cf60eadfe8f6b8",
+    "tools\\action_predictor\\experiments\\v69\\result.json": "6460b7995089ab8771724f6beb410e61c7384a4e1bccae5393b19ea6d525c96b",
+    "tools\\action_predictor\\experiments\\v69\\verification.json": "f5aac1edee068b2f2143025162923cf429d15adadbc353e97c8e4e359c6ea3f4",
+    "tools\\action_predictor\\experiments\\v67\\plan.json": "c52508f8250fb4a62f5f108a01a9ebc52a0d41399fea7324a28542ddbb60478e",
+    "tools\\action_predictor\\experiments\\v67\\cache.json": "d47e1529bc1dd23b5e94765daccd57f33a34e688280b8dbf8fbeecd9b4020013",
+    "tools\\action_predictor\\experiments\\v67\\result.json": "3670e80005bd7755d997f0301472d471e4cf704178a780ea5a8fc576ad65221f",
+    "tools\\action_predictor\\experiments\\v67\\verification.json": "b5f90c30f1ff1700922b19c9a11247d2709ef363ea41a89c9dba2f4295ca22b0"
+  },
+  "seed": 70001,
+  "epochs": 16,
+  "every": 4,
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "batch": 128,
+  "clip": 5.0,
+  "fit_seconds_cap": 600,
+  "architecture": "One137-64-1 tanh residual on every supported movement.128 existing causal local/state features,8 goal geometry fields including availability,plus selected predicted utility (bounded model score,not calibrated confidence).8897 parameters. Zero initial residual. Goal-blind matched arm zeros all9 goal fields. Same initialization,rows,permutations,loss,optimizer and checkpoints.",
+  "population": "All12318 expanded fitting movements once per epoch. No achieved-future-goal inputs or horizon filtering. Both goal-present and goal-absent rows train shared weights. V59 backbone and V62 selector frozen. Absence zeros all goal fields,executor still runs.",
+  "goals": "Run the frozen matched V62 selector on current observations and causal V59 states,retaining its identity through every observed/nonobserved turn exactly as runtime. Each outer fold uses only its training-group model. Training goals are in-sample predictions from that frozen training-group model; validation goals exclude the held groups. No inner cross-fitting; inherited fold exposure remains. Future labels never directly supply executor inputs.",
+  "selection": "Four existing fitting-game folds; expanded other24games train,canonical held movements validate. Independently choose each arm among0,4,8,12,16 by highest correct count subject to movementNLL<=initial+0.01; tie NLL then earlier epoch. All1997 held movements. One full refit per selected arm. No evaluation selection.",
+  "success": "Goal arm must beat direct318/513 and matched blind on fixed513 evaluation moves; NLL<=direct+0.01; neither goal-present nor absent cohort accuracy may lose>2points vs direct. Goal identities unchanged. All required.80percent requires411/513. No automatic promotion.",
+  "diagnostics": "Read selected/final weights and fitting activations: per-input-group norms,changes,gradient finiteness,saturation,residual magnitude,and fitting-only goal ablation. These diagnostics cannot select alternative evaluation weights or justify repeats.",
+  "limits": "Shared execution is not outcome-value learning or demonstrated strategy. Preexposed research groups,inherited fitting exposure,in-sample training predictions,one paired seed,observed past commands,inferred goals. No subagents."
+}

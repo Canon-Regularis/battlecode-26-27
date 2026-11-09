@@ -1,0 +1,45 @@
+{
+  "probes": [
+    {
+      "fold": 0,
+      "rows": 22,
+      "max_abs_error": {
+        "context": 4.76837158203125e-07,
+        "baseline": 3.814697265625e-06,
+        "goal": 5.960464477539063e-08
+      },
+      "changed_baseline_predictions": 0
+    },
+    {
+      "fold": 1,
+      "rows": 15,
+      "max_abs_error": {
+        "context": 4.917383193969727e-07,
+        "baseline": 3.814697265625e-06,
+        "goal": 7.450580596923828e-08
+      },
+      "changed_baseline_predictions": 0
+    },
+    {
+      "fold": 2,
+      "rows": 7,
+      "max_abs_error": {
+        "context": 4.172325134277344e-07,
+        "baseline": 3.814697265625e-06,
+        "goal": 7.450580596923828e-08
+      },
+      "changed_baseline_predictions": 0
+    },
+    {
+      "fold": 3,
+      "rows": 15,
+      "max_abs_error": {
+        "context": 3.5762786865234375e-07,
+        "baseline": 3.814697265625e-06,
+        "goal": 4.470348358154297e-08
+      },
+      "changed_baseline_predictions": 0
+    }
+  ],
+  "explanation": "Cached batched V59 and single-window inference differ only in floating point state/logit arithmetic; geometry and selected goal identity are exact. This probe is read-only; no training or selection changes."
+}

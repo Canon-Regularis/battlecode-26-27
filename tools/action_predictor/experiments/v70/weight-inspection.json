@@ -1,0 +1,117 @@
+{
+  "bindings": {
+    ".cambc\\action-predictor\\v70\\full.pt": "a9f63e396dc48084c20bc8f3ebec609d1c401b6482ec068259fba7a5a1d42398",
+    ".cambc\\action-predictor\\v70\\blind-selected.pt": "fda53f8e0124a09960daaadd75144aa44a690e2eb86c67fee8c53f615eb91a11",
+    ".cambc\\action-predictor\\v70\\goal-selected.pt": "d38a36fcbc987e832c1dfdf8fdc71249e2b64c72acabd008d1f53d3c5dde4d34"
+  },
+  "weights": {
+    "blind": {
+      "selected_epoch": 16,
+      "weight_changes": {
+        "layers.0.weight": 8.729936599731445,
+        "layers.0.bias": 0.5573651194572449,
+        "layers.2.weight": 1.1270252466201782,
+        "layers.2.bias": 0.045409202575683594
+      },
+      "input_group_weight_norms": {
+        "state_code": 6.194217205047607,
+        "geometry": 7.4392290115356445,
+        "observed_heading": 1.6937116384506226,
+        "command_heading": 2.5352418422698975,
+        "goal_geometry": 1.0106607675552368,
+        "availability": 0.40745028853416443,
+        "utility": 0.40838390588760376
+      },
+      "goal_column_weight_changes": [
+        0.006174575537443161,
+        0.0059095206670463085,
+        0.005894103087484837,
+        0.006283787079155445,
+        0.005775311961770058,
+        0.0059842076152563095,
+        0.005843793973326683,
+        0.006381563376635313,
+        0.006395814940333366
+      ],
+      "supported_saturation_fraction": 0.07195192575454712,
+      "supported_residual_rms": 3.8464770317077637,
+      "fitting_normal": {
+        "rows": 12318,
+        "correct": 8271,
+        "nll_sum": 11694.398004324055
+      },
+      "fitting_goal_masked": {
+        "rows": 12318,
+        "correct": 8271,
+        "nll_sum": 11694.398004324055
+      },
+      "fitting_goal_ablation_changed_predictions": 0
+    },
+    "goal": {
+      "selected_epoch": 16,
+      "weight_changes": {
+        "layers.0.weight": 10.203673362731934,
+        "layers.0.bias": 0.5172654390335083,
+        "layers.2.weight": 1.3179031610488892,
+        "layers.2.bias": 0.03188228979706764
+      },
+      "input_group_weight_norms": {
+        "state_code": 6.687952041625977,
+        "geometry": 7.508896827697754,
+        "observed_heading": 1.6200605630874634,
+        "command_heading": 2.55680251121521,
+        "goal_geometry": 3.954059600830078,
+        "availability": 1.303036093711853,
+        "utility": 2.55071759223938
+      },
+      "goal_column_weight_changes": [
+        1.6197088956832886,
+        1.5856070518493652,
+        0.8451377749443054,
+        0.8296184539794922,
+        0.8555285334587097,
+        1.8862370252609253,
+        1.5835741758346558,
+        1.1013232469558716,
+        2.446904420852661
+      ],
+      "supported_saturation_fraction": 0.08267246931791306,
+      "supported_residual_rms": 3.532121419906616,
+      "fitting_normal": {
+        "rows": 12318,
+        "correct": 8300,
+        "nll_sum": 11502.259445160276
+      },
+      "fitting_goal_masked": {
+        "rows": 12318,
+        "correct": 8254,
+        "nll_sum": 11669.795398135318
+      },
+      "fitting_goal_ablation_changed_predictions": 162
+    }
+  },
+  "training_goal_min": [
+    -2.59375,
+    -2.4375,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "training_goal_max": [
+    2.71875,
+    2.71875,
+    2.75,
+    2.0,
+    2.0,
+    1.0,
+    0.30000001192092896,
+    1.0,
+    0.5395997762680054
+  ],
+  "evaluation_used": false,
+  "interpretation": "Norms and activations describe learned computation,not semantic neuron labels or proof of strategic learning. Ablation uses fitting rows only and does not select new weights."
+}
