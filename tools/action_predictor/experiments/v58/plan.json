@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\command_heading_audit.py": "5c82a58eb3f076de9a1a180142081c7e97d0455fda6d02c389dd5acf2c3a2cca",
+    "tools\\action_predictor\\behavior_segments\\command_movement.py": "66a11c77e28d87db10a89b58dea54493001b3b2c1b41875ffa183aae67735dea",
+    "tools\\action_predictor\\behavior_segments\\command_movement_fit.py": "b2d8fb50307d365acecfa14c44c8c0561cf2b44e48fbad32458ef82eafd46be9",
+    "tools\\action_predictor\\behavior_segments\\command_movement_predictor.py": "97951b874dd6bc99ba62e2094a40cf63328d2917989453987b90f1a298269edc",
+    "tools\\action_predictor\\behavior_segments\\command_movement_verify.py": "7fd1852ee5ea5b13ecf989e1ab9ed7f0468b2e6e553e8d56c834f20f45916f1a",
+    "tools\\action_predictor\\behavior_segments\\test_command_movement.py": "595279a4bdb5a9d2e912572bc29c64c81ed5401e9467a1574cd7485ad2d0023d"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v57\\plan.json": "125e1a880bba81c4aeccdafd748c135c254f3c95bd8740cac88680f9b28e9839",
+    "tools\\action_predictor\\experiments\\v57\\cache.json": "88b9d797b1251fb521b9088774165f088493dc0f2ab7f067793af3a74fb0dcc2",
+    "tools\\action_predictor\\experiments\\v57\\selection.json": "f76b25eba9329ab29790cc0f854a973ac7380f8ea64d30787c0e27a81c3a9e71",
+    "tools\\action_predictor\\experiments\\v57\\refit.json": "aa42618a548b1209545bf12e1e840afa205416cf4ac47ef4315ba8d3cabd64c0",
+    "tools\\action_predictor\\experiments\\v57\\result.json": "f8148a874e735b1b3e975d73af925c321be9a0512d59cff36f5f0eda7b556409",
+    "tools\\action_predictor\\experiments\\v57\\verification.json": "0ebe3db34761938b5ec9217a21ca45ee97c99f7aef39be67f261d0c5b5edfafd",
+    "tools\\action_predictor\\experiments\\v58\\command-history-audit.json": "2902a602e8495ddfb5a85c68dd2e27341a7de6b38c520a9a050cfbcbaa556f99"
+  },
+  "seed": 58001,
+  "hidden": [
+    0,
+    16
+  ],
+  "epochs": 32,
+  "evaluate_every": 8,
+  "learning_rate": 0.003,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "batch_windows": 64,
+  "tuning_seconds_cap": 900,
+  "refit_seconds_cap": 300,
+  "target_accuracy": 0.8,
+  "intervention": "Freeze V57 and add a zero-initialized 456 or1048 parameter movement correction. Eight candidate features: cosine/sign match to last prior executed move, also divided by age in own turns; cosine/sign match to previous-turn net movement, also multiplied by net-length/path-length. Only complete previous own turns inside current32turn window. Original signed direction was omitted from the descriptor. Observed previous commands already supply original history; runtime explicitly requires previous_moves after the first query.",
+  "selection": "Four fitting-game folds and same original held64windows. Start from matched V55 plus selected V57 head. Select most pooled correct movements,then NLL,earlier epoch,smaller head among0,8,16,24,32. One full refit then unchanged513evaluationmoves. No evaluation gradients or evaluation-dependent checkpoint choices.",
+  "limits": "New causal history representation,not pure existing-weight editing. Teacher-forced past commands,preexposed research groups, inherited fold exposure and conditional movement. No verified intent,autonomous strategy or promotion."
+}

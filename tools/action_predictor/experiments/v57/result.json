@@ -1,0 +1,51 @@
+{
+  "refit_sha256": "aa42618a548b1209545bf12e1e840afa205416cf4ac47ef4315ba8d3cabd64c0",
+  "results": {
+    "fit": {
+      "rows": 2945,
+      "movement_rows": 1997,
+      "goal_rows": 369,
+      "movement_accuracy": 0.614922383575363,
+      "movement_nll": 1.1348557432217576,
+      "goal_within2": 0.5392953929539296,
+      "goal_exact": 0.14363143631436315,
+      "mean_goal_error": 3.7913279132791327,
+      "goal_nll": 4.947725957648218,
+      "astar_movement_accuracy": 0.028542814221331998,
+      "code_accuracy": 0.8455008488964346
+    },
+    "evaluation": {
+      "rows": 699,
+      "movement_rows": 513,
+      "goal_rows": 98,
+      "movement_accuracy": 0.580896686159844,
+      "movement_nll": 1.3245708230323727,
+      "goal_within2": 0.5204081632653061,
+      "goal_exact": 0.15306122448979592,
+      "mean_goal_error": 3.326530612244898,
+      "goal_nll": 5.390344313212803,
+      "astar_movement_accuracy": 0.01949317738791423,
+      "code_accuracy": 0.8197424892703863
+    }
+  },
+  "comparisons": {
+    "fit": {
+      "rows": 1997,
+      "rescues": 290,
+      "regressions": 97
+    },
+    "evaluation": {
+      "rows": 513,
+      "rescues": 93,
+      "regressions": 24
+    }
+  },
+  "target_met": false,
+  "bindings": {
+    ".cambc\\action-predictor\\v57\\selected.pt": "1e2bbb24af86fa6b2225bb1ee11d805db4ce058f1ec697ef472ae3a0fee69b1b",
+    ".cambc\\action-predictor\\v57\\fit-predictions.json": "c587be058a1917766eec26feeaf42a767d19b68aa8c06139e5080fb56e16d17c",
+    ".cambc\\action-predictor\\v57\\evaluation-predictions.json": "13dc11c3013fefe9454881c2c0256eb9073c954a5a98875d4324c44a0694ba46"
+  },
+  "seconds": 26.1521408999688,
+  "promoted": false
+}

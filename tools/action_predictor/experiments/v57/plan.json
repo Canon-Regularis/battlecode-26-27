@@ -1,0 +1,35 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\heading_movement.py": "acbcbba9f0eb2453758e9cce1cfb82a93e9bdee4f668cb8b43dea20d261b3319",
+    "tools\\action_predictor\\behavior_segments\\heading_movement_fit.py": "eeaeac0ce2392dee0cf0ba1b2105e63ed2b0313f310cdbdb86087f5793c86e34",
+    "tools\\action_predictor\\behavior_segments\\heading_movement_predictor.py": "d7743be74067bf3ae2f84198de58c440fb3573e059de8ca4d9ff44d7df34e473",
+    "tools\\action_predictor\\behavior_segments\\heading_movement_verify.py": "15051344aafabdb60a0dbd26293cf094054f01d08384395575b74be377466b82",
+    "tools\\action_predictor\\behavior_segments\\test_heading_movement.py": "ed088d9300b5b4f82a134c89863b714c6f6ff5cd4fabfc323e07ea3eaeaa9a65"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v55\\plan.json": "1bc504eecec56bd9308164d74d5e38cc44a224a73e36f7225d88fc8c787ab81d",
+    "tools\\action_predictor\\experiments\\v55\\selection.json": "7070acf9731e8af5609161b19f62e3da0dfc837afe2e8f52c88d7939bf135873",
+    "tools\\action_predictor\\experiments\\v55\\refit.json": "1b85ca1f87a65f242c93215bd12f71768f9c47f96e4a10cf06d693f4751af397",
+    "tools\\action_predictor\\experiments\\v55\\result.json": "730de7dc65735fa31c468b7a68b5444c4de3952c6ddc81fe7fd58459ad10f02b",
+    "tools\\action_predictor\\experiments\\v55\\verification.json": "737b67cd69d9f84f1f5e628cc8d91a804c56debbbfc5f3ab11f56f20f1c927c4",
+    "tools\\action_predictor\\experiments\\v56\\plan.json": "e21700a2144672810760f0eb4df3114851cdaf7780e0d5e081ce8138249b2708",
+    "tools\\action_predictor\\experiments\\v56\\verification.json": "43de375d0297576cffbd646ff22abac25269417d6fd3290bd2a95ea290b6b940"
+  },
+  "seed": 57001,
+  "hidden": [
+    0,
+    16
+  ],
+  "epochs": 32,
+  "evaluate_every": 8,
+  "learning_rate": 0.003,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "batch_windows": 64,
+  "tuning_seconds_cap": 900,
+  "refit_seconds_cap": 300,
+  "target_accuracy": 0.8,
+  "intervention": "Freeze V55 and add a zero-initialized candidate-heading residual with 228 or 980 parameters. Four features: cosine and sign-match with displacement from last observed PRE position, each also divided by elapsed rounds. Coefficients depend on frozen recurrent state48 and soft code8. Missing PRE retains last position, observed absent position clears it. Actor changes and32turn window resets clear it. Nonincreasing round produces zero features. No current/future command or inferred goal used.",
+  "selection": "Four fitting-game folds; all expanded windows in other24games for training, original64windows in held8games for selection. Compare epochs0,8,16,24,32; maximize pooled correct movements, then minimize NLL, then earlier epoch and smaller head. One selected full refit and unchanged513movement query assessment. No evaluation gradients or test-dependent checkpoint selection.",
+  "limits": "New explicit causal feature, not a pure existing-weight edit. Previously exposed research data, inherited fold backbone exposure, observed command history, conditional movement only. No verified intent, strategy or playing-strength claim. No subagents or promotion."
+}

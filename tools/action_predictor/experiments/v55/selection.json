@@ -1,0 +1,43 @@
+{
+  "plan_sha256": "1bc504eecec56bd9308164d74d5e38cc44a224a73e36f7225d88fc8c787ab81d",
+  "selected": {
+    "bound": 0.6,
+    "rows": 1997,
+    "correct": 938,
+    "nll": 1.5107501968146313
+  },
+  "candidates": [
+    {
+      "bound": 0.0,
+      "rows": 1997,
+      "correct": 912,
+      "nll": 1.496728249757239
+    },
+    {
+      "bound": 0.1,
+      "rows": 1997,
+      "correct": 918,
+      "nll": 1.4992515627057832
+    },
+    {
+      "bound": 0.3,
+      "rows": 1997,
+      "correct": 913,
+      "nll": 1.514470044475204
+    },
+    {
+      "bound": 0.6,
+      "rows": 1997,
+      "correct": 938,
+      "nll": 1.5107501968146313
+    }
+  ],
+  "bindings": {
+    ".cambc\\action-predictor\\v55\\calibration.json": "e9981c46c9de60aa596653c9fd43c37d8fbe5819d1f3898b396e62a336852bc6",
+    ".cambc\\action-predictor\\v55\\fold0-logits.pt": "c0a44805ea6b61be21a8ff792d32d10f172e207fa67ee587171110902cc5b454",
+    ".cambc\\action-predictor\\v55\\fold1-logits.pt": "2ba24e6ef7be801523625b75607cb0041b2cb14fe624529bb0b2b3b4c9fc9614",
+    ".cambc\\action-predictor\\v55\\fold2-logits.pt": "bc935ed60aaf587f397b600714289303bdef4b150d64b6f522b2e6d919f06a98",
+    ".cambc\\action-predictor\\v55\\fold3-logits.pt": "fcbebad50bd9daa02303c5be9313ee980886accc873d6607442f93a99e22f5af"
+  },
+  "outer_evaluation_used": false
+}

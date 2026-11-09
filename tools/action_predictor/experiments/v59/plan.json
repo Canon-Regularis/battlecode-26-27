@@ -1,0 +1,33 @@
+{
+  "sources": {
+    "tools\\action_predictor\\behavior_segments\\trajectory_movement_weights.py": "eab8a43cc0708c59714b87efedfc323d16bc346e6238e83c2af4c058cac3235f",
+    "tools\\action_predictor\\behavior_segments\\trajectory_movement_fit.py": "422a12102c68f796cb19cb1da28dc567e21519bce3c1219778aa5cb364dabbe1",
+    "tools\\action_predictor\\behavior_segments\\trajectory_movement_predictor.py": "0851002e127e3e86f8932de228b69b8e87efadd8bb660556653b8ed17b198e3b",
+    "tools\\action_predictor\\behavior_segments\\trajectory_movement_verify.py": "74cdde9c3d153676f2ba9d6963fac76f367fc23114d7fd8fc29297b8ae819c63",
+    "tools\\action_predictor\\behavior_segments\\test_trajectory_movement.py": "672f3e9a0b0a7a1b7ce36256de3c956c940fa9bfcffbdca4d782d2fab1cee168"
+  },
+  "inputs": {
+    "tools\\action_predictor\\experiments\\v58\\plan.json": "909c58d3f55ebc877e864b4a2f83c6d7d228659876d22795737065c3ab718604",
+    "tools\\action_predictor\\experiments\\v58\\cache.json": "768a460ec4f1a532580e887d321b9dcb85216908abe3e4b99d1fc40d4343152d",
+    "tools\\action_predictor\\experiments\\v58\\selection.json": "378a734f1d0df7bb06a784ada7ee8a3bfc4bffeb8cc261bbc66628dea72c7f38",
+    "tools\\action_predictor\\experiments\\v58\\refit.json": "57103aada85412b4a81d6f9f818e064c7168a633bff45d85ab7aec12535be145",
+    "tools\\action_predictor\\experiments\\v58\\result.json": "22aabdecab8d558f25415251b57991e3c599d74b519c6c33e032720a20641daa",
+    "tools\\action_predictor\\experiments\\v58\\verification.json": "ece22d501814d7b006d92bada6b4985edfbfc97602949f9115d0802c65b3fb77"
+  },
+  "seed": 59001,
+  "coefficient": 1.0,
+  "epochs": 16,
+  "evaluate_every": 4,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "clip": 5.0,
+  "batch_windows": 16,
+  "trainable_parameters": 25569,
+  "tuning_seconds_cap": 900,
+  "refit_seconds_cap": 300,
+  "target_accuracy": 0.8,
+  "code_accuracy_allowance": 0.01,
+  "intervention": "No new architecture or inputs. Start from matched V58 checkpoint and update existing context,GRU,base movement, geometry correction,observed-heading and prior-command correction weights together. Map encoder,code readout/embedding, goal query/readout stay frozen. Movement CE plus code KL coefficient1 to matching V55 code predictions.",
+  "selection": "Four fitting-game folds; all expanded other24game windows for training and original held64windows for validation. Choose most pooled correct movements subject to at most1point code loss,then NLL,earlier epoch. Epoch0 eligible. One full refit then unchanged513evaluationmoves. No evaluation-guided weight updates or checkpoint selection.",
+  "limits": "Previously exposed research games,inherited fold exposure,actual past commands,inferred codes and conditional movement. Goal outputs may change via recurrent features despite frozen goal weights. No subagents or promotion."
+}
