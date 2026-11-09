@@ -1,0 +1,916 @@
+{
+  "baseline": {
+    "rows": 14439,
+    "complete": 12137,
+    "accuracy": 0.8405706766396565,
+    "macro_f1": 0.62004805600384,
+    "categories": {
+      "<unknown>": {
+        "rows": 0,
+        "complete": 0,
+        "conditional_correct": 0
+      },
+      "altar": {
+        "rows": 2,
+        "complete": 0,
+        "conditional_correct": 2
+      },
+      "attack": {
+        "rows": 985,
+        "complete": 891,
+        "conditional_correct": 943
+      },
+      "blocked": {
+        "rows": 110,
+        "complete": 4,
+        "conditional_correct": 22
+      },
+      "cancel": {
+        "rows": 2589,
+        "complete": 2542,
+        "conditional_correct": 2589
+      },
+      "cast_0": {
+        "rows": 213,
+        "complete": 158,
+        "conditional_correct": 192
+      },
+      "cast_1": {
+        "rows": 243,
+        "complete": 71,
+        "conditional_correct": 144
+      },
+      "end": {
+        "rows": 4096,
+        "complete": 3964,
+        "conditional_correct": 4096
+      },
+      "move": {
+        "rows": 2362,
+        "complete": 1364,
+        "conditional_correct": 1428
+      },
+      "priority": {
+        "rows": 576,
+        "complete": 131,
+        "conditional_correct": 248
+      },
+      "recall": {
+        "rows": 3084,
+        "complete": 2992,
+        "conditional_correct": 3084
+      },
+      "shop": {
+        "rows": 43,
+        "complete": 0,
+        "conditional_correct": null
+      },
+      "submit": {
+        "rows": 22,
+        "complete": 20,
+        "conditional_correct": 22
+      },
+      "teleport": {
+        "rows": 2,
+        "complete": 0,
+        "conditional_correct": 0
+      },
+      "ward": {
+        "rows": 112,
+        "complete": 0,
+        "conditional_correct": 27
+      }
+    },
+    "movement_type_false_positives": 195
+  },
+  "hybrid": {
+    "rows": 14439,
+    "complete": 12115,
+    "accuracy": 0.8390470254172727,
+    "macro_f1": 0.62004805600384,
+    "categories": {
+      "<unknown>": {
+        "rows": 0,
+        "complete": 0,
+        "conditional_correct": 0
+      },
+      "altar": {
+        "rows": 2,
+        "complete": 0,
+        "conditional_correct": 2
+      },
+      "attack": {
+        "rows": 985,
+        "complete": 891,
+        "conditional_correct": 943
+      },
+      "blocked": {
+        "rows": 110,
+        "complete": 4,
+        "conditional_correct": 22
+      },
+      "cancel": {
+        "rows": 2589,
+        "complete": 2542,
+        "conditional_correct": 2589
+      },
+      "cast_0": {
+        "rows": 213,
+        "complete": 158,
+        "conditional_correct": 192
+      },
+      "cast_1": {
+        "rows": 243,
+        "complete": 71,
+        "conditional_correct": 144
+      },
+      "end": {
+        "rows": 4096,
+        "complete": 3964,
+        "conditional_correct": 4096
+      },
+      "move": {
+        "rows": 2362,
+        "complete": 1342,
+        "conditional_correct": 1398
+      },
+      "priority": {
+        "rows": 576,
+        "complete": 131,
+        "conditional_correct": 248
+      },
+      "recall": {
+        "rows": 3084,
+        "complete": 2992,
+        "conditional_correct": 3084
+      },
+      "shop": {
+        "rows": 43,
+        "complete": 0,
+        "conditional_correct": null
+      },
+      "submit": {
+        "rows": 22,
+        "complete": 20,
+        "conditional_correct": 22
+      },
+      "teleport": {
+        "rows": 2,
+        "complete": 0,
+        "conditional_correct": 0
+      },
+      "ward": {
+        "rows": 112,
+        "complete": 0,
+        "conditional_correct": 27
+      }
+    },
+    "movement_type_false_positives": 195
+  },
+  "rescues": 119,
+  "regressions": 141,
+  "eligible_queries": 6884,
+  "located_eligible_queries": 6557,
+  "routed_predicted_moves": 2220,
+  "changed_commands": 450,
+  "groups": [
+    {
+      "group": 1,
+      "rows": 2753,
+      "baseline": 2404,
+      "hybrid": 2397,
+      "rescues": 19,
+      "regressions": 26
+    },
+    {
+      "group": 10,
+      "rows": 3111,
+      "baseline": 2631,
+      "hybrid": 2628,
+      "rescues": 28,
+      "regressions": 31
+    },
+    {
+      "group": 11,
+      "rows": 2826,
+      "baseline": 2397,
+      "hybrid": 2391,
+      "rescues": 20,
+      "regressions": 26
+    },
+    {
+      "group": 17,
+      "rows": 3037,
+      "baseline": 2481,
+      "hybrid": 2481,
+      "rescues": 30,
+      "regressions": 30
+    },
+    {
+      "group": 31,
+      "rows": 2712,
+      "baseline": 2224,
+      "hybrid": 2218,
+      "rescues": 22,
+      "regressions": 28
+    }
+  ],
+  "cohorts": {
+    "eligible": {
+      "baseline": {
+        "rows": 6557,
+        "complete": 5139,
+        "accuracy": 0.7837425651974989,
+        "macro_f1": 0.5382129496425674,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 1
+          },
+          "attack": {
+            "rows": 738,
+            "complete": 677,
+            "conditional_correct": 710
+          },
+          "blocked": {
+            "rows": 14,
+            "complete": 1,
+            "conditional_correct": 2
+          },
+          "cancel": {
+            "rows": 2589,
+            "complete": 2542,
+            "conditional_correct": 2589
+          },
+          "cast_0": {
+            "rows": 27,
+            "complete": 15,
+            "conditional_correct": 22
+          },
+          "cast_1": {
+            "rows": 176,
+            "complete": 33,
+            "conditional_correct": 99
+          },
+          "end": {
+            "rows": 632,
+            "complete": 504,
+            "conditional_correct": 632
+          },
+          "move": {
+            "rows": 2158,
+            "complete": 1288,
+            "conditional_correct": 1341
+          },
+          "priority": {
+            "rows": 126,
+            "complete": 21,
+            "conditional_correct": 93
+          },
+          "recall": {
+            "rows": 65,
+            "complete": 58,
+            "conditional_correct": 65
+          },
+          "shop": {
+            "rows": 25,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 1
+          },
+          "teleport": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 4,
+            "complete": 0,
+            "conditional_correct": 0
+          }
+        },
+        "movement_type_false_positives": 176
+      },
+      "hybrid": {
+        "rows": 6557,
+        "complete": 5117,
+        "accuracy": 0.7803873722739058,
+        "macro_f1": 0.5382129496425674,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 1
+          },
+          "attack": {
+            "rows": 738,
+            "complete": 677,
+            "conditional_correct": 710
+          },
+          "blocked": {
+            "rows": 14,
+            "complete": 1,
+            "conditional_correct": 2
+          },
+          "cancel": {
+            "rows": 2589,
+            "complete": 2542,
+            "conditional_correct": 2589
+          },
+          "cast_0": {
+            "rows": 27,
+            "complete": 15,
+            "conditional_correct": 22
+          },
+          "cast_1": {
+            "rows": 176,
+            "complete": 33,
+            "conditional_correct": 99
+          },
+          "end": {
+            "rows": 632,
+            "complete": 504,
+            "conditional_correct": 632
+          },
+          "move": {
+            "rows": 2158,
+            "complete": 1266,
+            "conditional_correct": 1311
+          },
+          "priority": {
+            "rows": 126,
+            "complete": 21,
+            "conditional_correct": 93
+          },
+          "recall": {
+            "rows": 65,
+            "complete": 58,
+            "conditional_correct": 65
+          },
+          "shop": {
+            "rows": 25,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 1
+          },
+          "teleport": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 4,
+            "complete": 0,
+            "conditional_correct": 0
+          }
+        },
+        "movement_type_false_positives": 176
+      }
+    },
+    "fallback": {
+      "baseline": {
+        "rows": 7882,
+        "complete": 6998,
+        "accuracy": 0.8878457244354225,
+        "macro_f1": 0.5573390571442595,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 1
+          },
+          "attack": {
+            "rows": 247,
+            "complete": 214,
+            "conditional_correct": 233
+          },
+          "blocked": {
+            "rows": 96,
+            "complete": 3,
+            "conditional_correct": 20
+          },
+          "cancel": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_0": {
+            "rows": 186,
+            "complete": 143,
+            "conditional_correct": 170
+          },
+          "cast_1": {
+            "rows": 67,
+            "complete": 38,
+            "conditional_correct": 45
+          },
+          "end": {
+            "rows": 3464,
+            "complete": 3460,
+            "conditional_correct": 3464
+          },
+          "move": {
+            "rows": 204,
+            "complete": 76,
+            "conditional_correct": 87
+          },
+          "priority": {
+            "rows": 450,
+            "complete": 110,
+            "conditional_correct": 155
+          },
+          "recall": {
+            "rows": 3019,
+            "complete": 2934,
+            "conditional_correct": 3019
+          },
+          "shop": {
+            "rows": 18,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 21,
+            "complete": 20,
+            "conditional_correct": 21
+          },
+          "teleport": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 108,
+            "complete": 0,
+            "conditional_correct": 27
+          }
+        },
+        "movement_type_false_positives": 19
+      },
+      "hybrid": {
+        "rows": 7882,
+        "complete": 6998,
+        "accuracy": 0.8878457244354225,
+        "macro_f1": 0.5573390571442595,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 1
+          },
+          "attack": {
+            "rows": 247,
+            "complete": 214,
+            "conditional_correct": 233
+          },
+          "blocked": {
+            "rows": 96,
+            "complete": 3,
+            "conditional_correct": 20
+          },
+          "cancel": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_0": {
+            "rows": 186,
+            "complete": 143,
+            "conditional_correct": 170
+          },
+          "cast_1": {
+            "rows": 67,
+            "complete": 38,
+            "conditional_correct": 45
+          },
+          "end": {
+            "rows": 3464,
+            "complete": 3460,
+            "conditional_correct": 3464
+          },
+          "move": {
+            "rows": 204,
+            "complete": 76,
+            "conditional_correct": 87
+          },
+          "priority": {
+            "rows": 450,
+            "complete": 110,
+            "conditional_correct": 155
+          },
+          "recall": {
+            "rows": 3019,
+            "complete": 2934,
+            "conditional_correct": 3019
+          },
+          "shop": {
+            "rows": 18,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 21,
+            "complete": 20,
+            "conditional_correct": 21
+          },
+          "teleport": {
+            "rows": 1,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 108,
+            "complete": 0,
+            "conditional_correct": 27
+          }
+        },
+        "movement_type_false_positives": 19
+      }
+    },
+    "changes": {
+      "baseline": {
+        "rows": 1158,
+        "complete": 272,
+        "accuracy": 0.23488773747841105,
+        "macro_f1": 0.06800258564964447,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "attack": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "blocked": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cancel": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_0": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_1": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "end": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "move": {
+            "rows": 1158,
+            "complete": 272,
+            "conditional_correct": 304
+          },
+          "priority": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "recall": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "shop": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "teleport": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          }
+        },
+        "movement_type_false_positives": 0
+      },
+      "hybrid": {
+        "rows": 1158,
+        "complete": 269,
+        "accuracy": 0.23229706390328153,
+        "macro_f1": 0.06800258564964447,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "attack": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "blocked": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cancel": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_0": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_1": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "end": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "move": {
+            "rows": 1158,
+            "complete": 269,
+            "conditional_correct": 297
+          },
+          "priority": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "recall": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "shop": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "teleport": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          }
+        },
+        "movement_type_false_positives": 0
+      }
+    },
+    "continuations": {
+      "baseline": {
+        "rows": 1198,
+        "complete": 1089,
+        "accuracy": 0.9090150250417363,
+        "macro_f1": 0.07009232264334306,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "attack": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "blocked": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cancel": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_0": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_1": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "end": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "move": {
+            "rows": 1198,
+            "complete": 1089,
+            "conditional_correct": 1121
+          },
+          "priority": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "recall": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "shop": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "teleport": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          }
+        },
+        "movement_type_false_positives": 0
+      },
+      "hybrid": {
+        "rows": 1198,
+        "complete": 1070,
+        "accuracy": 0.8931552587646077,
+        "macro_f1": 0.07009232264334306,
+        "categories": {
+          "<unknown>": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "altar": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "attack": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "blocked": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cancel": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_0": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "cast_1": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "end": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "move": {
+            "rows": 1198,
+            "complete": 1070,
+            "conditional_correct": 1098
+          },
+          "priority": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "recall": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "shop": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": null
+          },
+          "submit": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "teleport": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          },
+          "ward": {
+            "rows": 0,
+            "complete": 0,
+            "conditional_correct": 0
+          }
+        },
+        "movement_type_false_positives": 0
+      }
+    }
+  },
+  "paired95_accuracy_difference": [
+    -0.0023071377072819035,
+    -0.0006026516673362796
+  ],
+  "improved": false,
+  "nonmovement_outcomes_unchanged": true,
+  "probability_metrics": null,
+  "promoted": false,
+  "new_fits": 0,
+  "optimizer_updates": 0,
+  "reserved_opened": 0,
+  "plan_sha256": "8a3c10b9edfd39ff3cf82aa832d5d8966db14858cda3e3618a44d7b10a05f561",
+  "forecast_sha256": "f36f36ea1365fed45acbcac27f21c9df9c8f64b7116288368d04dd7a19f6ac8f",
+  "bindings": {
+    "F:\\Code\\battlecode-26-27\\.cambc\\action-predictor\\v74\\hybrid.npz": "9ab44ebff2e5c406f61fa4e3a0fac6942ce80ade7d5d98024104b77ca32d900f"
+  }
+}
